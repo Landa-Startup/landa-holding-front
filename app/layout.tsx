@@ -1,5 +1,6 @@
+import Footer from '@/components/Footer';
 import './globals.css';
-import { Navbar } from '@/components/Navbar';
+import Navbar from '@/components/Navbar';
 
 export default function RootLayout({
   children,
@@ -12,9 +13,10 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <div className="flex items-center flex-col p-8 space-y-10 min-h-screen">
+        <div className="flex items-center flex-col min-h-screen">
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

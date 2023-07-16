@@ -1,35 +1,26 @@
-'use client';
+import Image from 'next/image';
+import React from 'react';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
-export function Navbar() {
-  const currentRoute = usePathname();
-
+export default function Navbar() {
   return (
-    <div className="navbar bg-base-100">
-      <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">nextjs-starter</a>
+    <div className="w-[840.50px] h-[64.50px] justify-end items-center inline-flex left-[120] absolute z-10">
+      <div className="w-[144.50px] h-[64.50px] justify-end items-end gap-0.5 inline-flex">
+        <Image
+          src={'static/images/Logo.svg'}
+          alt="Logo"
+          width={500}
+          height={500}
+        />
+        <div className="w-[93px] h-[15px] text-stone-500 text-xl font-normal tracking-widest">
+          LANDA
+        </div>
       </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal p-0">
-          <li>
-            <Link
-              href="/"
-              className={currentRoute === '/' ? 'active' : undefined}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/about"
-              className={currentRoute === '/about' ? 'active' : undefined}
-            >
-              About
-            </Link>
-          </li>
-        </ul>
+      <div className="justify-center items-center gap-[60px] inline-flex">
+        <div className="text-stone-500 text-xl font-medium">HOME </div>
+        <div className="text-stone-100 text-xl font-medium">ABOUT</div>
+        <div className="text-stone-100 text-xl font-medium">CONTACT</div>
+        <div className="text-stone-100 text-xl font-medium">MAGAZINE</div>
+        <div className="text-stone-100 text-xl font-medium">WORK WITH US</div>
       </div>
     </div>
   );
