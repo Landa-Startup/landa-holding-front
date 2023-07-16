@@ -14,7 +14,7 @@ export default function LandaHoldingPriority({ title }: { title: string }) {
           Landa Holding Priority
         </span>
       </div>
-      <div className="self-stretch justify-start items-start gap-6 inline-flex">
+      <div className="self-stretch justify-start items-start gap-6 flex flex-row">
         <div className="w-[361px] h-[168px] relative border border-stone-500">
           <LandaHoldingPriorityCard
             title="Platform based on AI and VR"

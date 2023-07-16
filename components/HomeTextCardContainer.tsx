@@ -11,12 +11,9 @@ export default function HomeTextCardContainer({
 }) {
   return (
     <div>
-      <TextCard text={text} />
-      <ImageCard title={title} />
-      <div className="w-[219px] h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 bg-stone-500 justify-center items-center inline-flex">
-        <div className="text-center text-white text-2xl font-normal">
-          Visit Now{' '}
-        </div>
+      <div className="flex flex-row justify-around bg-stone-100 py-10">
+        <TextCard text={text} />
+        <ImageCard title={title} />
       </div>
     </div>
   );

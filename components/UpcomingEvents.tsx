@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function UpcomingEvents() {
   return (
-    <div className="w-[1440px] h-[405px] relative bg-stone-100">
+    <div className="w-[1440px] h-[405px] relative bg-neutral-200">
       <div className="left-[185px] top-[29px] absolute text-neutral-800 text-[40px] font-normal">
         UPCOMING EVENT
       </div>
@@ -72,7 +72,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <div className="h-[38px] px-[50px] py-2.5 bg-stone-500 flex-col justify-between items-center inline-flex">
+          <div className="w-[180px] h-[38px] px-[50px] bg-stone-500 flex-col justify-between items-center inline-flex">
             <div className="text-neutral-50 text-2xl font-medium">REGISTER</div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 export default function ContactUs() {
@@ -5,9 +6,12 @@ export default function ContactUs() {
     <div className="w-[1440px] h-[644px] relative bg-neutral-50">
       <div className="w-[598px] h-[644px] left-[761px] top-0 absolute">
         <div className="left-[51px] top-[67px] absolute flex-col justify-center items-center gap-10 inline-flex">
-          <img
+          <Image
             className="w-16 h-[95px]"
             src="https://via.placeholder.com/64x95"
+            alt='testalt'
+            width={500}
+            height={500}
           />
           <img
             className="w-[98px] h-[99px]"
@@ -91,7 +95,7 @@ export default function ContactUs() {
             Send Massage
           </div>
         </div>
-        <div className="w-[255px] h-[51px] left-[77px] top-0 absolute text-center text-neutral-800 text-[32px] font-medium tracking-[11.20px]">
+        <div className="h-[51px] left-[77px] top-0 absolute text-center text-neutral-800 text-[32px] font-medium tracking-[11.20px]">
           CONTACT US
         </div>
       </div>
