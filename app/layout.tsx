@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 
@@ -15,6 +16,7 @@ export default function RootLayout({
         <div className="flex items-center flex-col p-8 space-y-10 min-h-screen]">
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-export default function TextCard() {
+export default function TextCard({ text }: { text: string }) {
   return (
-    <div>TextCard</div>
-  )
+    <div className="w-[491px] text-black text-xl font-normal leading-[30px]">
+      {text}
+      <br />
+    </div>
+  );
 }
