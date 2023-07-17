@@ -3,13 +3,13 @@ import React from 'react';
 
 export default function ContactUs() {
   return (
-    <div className="w-[1440px] h-[644px] relative bg-neutral-50">
+    <div className="h-[644px] relative bg-neutral-50">
       <div className="w-[598px] h-[644px] left-[761px] top-0 absolute">
         <div className="left-[51px] top-[67px] absolute flex-col justify-center items-center gap-10 inline-flex">
           <Image
             className="w-16 h-[95px]"
             src="https://via.placeholder.com/64x95"
-            alt='testalt'
+            alt="testalt"
             width={500}
             height={500}
           />
@@ -90,7 +90,7 @@ export default function ContactUs() {
           </div>
         </div>
         <div className="w-[180px] h-[50px] left-[116px] top-[395px] absolute">
-          <div className="w-[180px] h-[50px] left-0 top-0 absolute bg-stone-500" />
+          <div className="w-[180px] h-[50px] left-0 top-0 absolute bg-[#AA8453]" />
           <div className="w-28 h-5 left-[34px] top-[14px] absolute text-center text-white text-xl font-medium">
             Send Massage
           </div>
