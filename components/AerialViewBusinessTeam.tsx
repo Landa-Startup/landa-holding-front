@@ -4,8 +4,12 @@ import React from 'react';
 export default function AerialViewBusinessTeam() {
   return (
     <div
-      style={{ backgroundImage: "url('/static/images/Office.png')" }}
-      className="w-[1440px] h-[598px] bg-black bg-opacity-40 backdrop-blur-[10px]"
+      style={{
+        backgroundImage: "url('/static/images/Office.png')",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
+      className="h-[598px] bg-black bg-opacity-40 brightness-75"
     >
       <div className="text-center py-5">
         <span className="text-white text-xl font-normal tracking-[7px]">
@@ -18,7 +22,7 @@ export default function AerialViewBusinessTeam() {
       </div>
       <div className="w-[1006px] h-[380px] relative bg-neutral-500 bg-opacity-60 mx-auto">
         <div className="left-[416px] top-[316px] absolute justify-start items-start gap-[19px] inline-flex">
-          <div className="w-[15px] h-[15px] bg-stone-500 rounded-full" />
+          <div className="w-[15px] h-[15px] bg-[#AA8453] rounded-full" />
           <div className="w-[15px] h-[15px] rounded-full border border-white" />
           <div className="w-[15px] h-[15px] rounded-full border border-white" />
           <div className="w-[15px] h-[15px] rounded-full border border-white" />
@@ -38,7 +42,7 @@ export default function AerialViewBusinessTeam() {
             src="https://via.placeholder.com/108x104"
             width={500}
             height={500}
-            alt='Avatar'
+            alt="Avatar"
           />
           <div className="h-[42px] flex-col justify-center items-start gap-[3px] inline-flex">
             <div className=" h-[21px] text-white text-xl font-medium">

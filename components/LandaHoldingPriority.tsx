@@ -2,51 +2,51 @@ import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
 import Image from 'next/image';
 
-export default function LandaHoldingPriority({ title }: { title: string }) {
+export default function LandaHoldingPriority() {
   return (
-    <div className="w-[1440px] h-[613px] px-[120px] pt-[66px] pb-[78px] bg-white flex-col justify-start items-start gap-[35px] inline-flex">
+    <div className="w-full h-[613px] px-28 pt-[66px] pb-[78px] bg-white flex-col justify-start items-start gap-[35px] inline-flex">
       <div>
         <span className="text-black text-base font-normal tracking-[5.60px]">
-          OUR SERVICES
+          Landa Holding
           <br />
         </span>
         <span className="text-black text-[40px] font-normal tracking-widest">
-          Landa Holding Priority
+          Priority
         </span>
       </div>
-      <div className="self-stretch justify-start items-start gap-6 flex flex-row">
-        <div className="w-[361px] h-[168px] relative border border-stone-500">
+      <div className="">
+        <div className="grid grid-cols-4 gap-5 place-items-center w-[1295px]">
           <LandaHoldingPriorityCard
             title="Platform based on AI and VR"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/vr-glasses 2.png"
           />
           <LandaHoldingPriorityCard
             title="Agriculture"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/system 2.png"
           />
           <LandaHoldingPriorityCard
             title="Renewable Energy"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/online-shop 1.png"
           />
           <LandaHoldingPriorityCard
             title="The Environment"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/planet-earth 1.png"
           />
           <LandaHoldingPriorityCard
             title="Entertainment"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/ai 2.png"
           />
           <LandaHoldingPriorityCard
             title="Biomedical Engineering"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/man 2.png"
           />
           <LandaHoldingPriorityCard
             title="Services for Teenagers"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/process 2.png"
           />
           <LandaHoldingPriorityCard
             title="Tourism services"
-            image="https://via.placeholder.com/60x60"
+            image="/static/images/world 2.png"
           />
         </div>
       </div>

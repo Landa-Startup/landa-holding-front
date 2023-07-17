@@ -4,14 +4,18 @@ import React from 'react';
 export default function Hero() {
   return (
     <div
-      style={{ backgroundImage: "url('/static/images/businessman.png')" }}
+      style={{
+        backgroundImage: "url('/static/images/businessman.png')",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
       className="h-[850px] relative"
     >
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="w-[557px] h-11 text-center text-white text-[32px] font-normal tracking-[11.20px]">
           Landa Holding
         </div>
-        <div className="w-[689px] h-[71px] text-right text-neutral-50 text-opacity-95 text-[64px] font-normal tracking-[6.40px]">
+        <div className="h-[71px] font-gilda text-right text-neutral-50 text-opacity-95 text-[64px] font-normal tracking-[6.40px]">
           Acceleration Center
           <br />
         </div>
