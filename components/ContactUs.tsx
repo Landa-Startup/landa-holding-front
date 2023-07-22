@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 export default function ContactUs() {
+  // TODO: use daisyUI for styling
   return (
     <div className="h-[644px] relative bg-neutral-50">
       <div className="w-[598px] h-[644px] left-[761px] top-0 absolute">

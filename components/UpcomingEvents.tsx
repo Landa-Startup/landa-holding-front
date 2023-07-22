@@ -6,6 +6,7 @@ export default function UpcomingEvents() {
       <div className="left-[185px] top-[29px] absolute text-neutral-800 text-[40px] font-normal">
         UPCOMING EVENT
       </div>
+      {/* TODO: create commponent for show repeated parts. because codes are almost same and just written few times */}
       <div className="pr-[53px] left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
         <div className="self-stretch items-center gap-[625px] inline-flex justify-between">
           <div className="justify-start items-center gap-[69px] flex">
