@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Location() {
   return (
-    <div>
+    <div className='self-center'>
 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 <rect width="50" height="50" fill="url(#pattern1)"/>
 <defs>

@@ -1,7 +1,7 @@
 import React from 'react';
-import Phone from '../Icons/IconPhone';
-import Email from '../Icons/IconEmail';
-import Location from '../Icons/IconLocation';
+import Phone from '../icons/IconPhone';
+import Email from '../icons/IconEmail';
+import Location from '../icons/IconLocation';
 
 export default function ContactUsDescription() {
   return (
@@ -18,16 +18,16 @@ export default function ContactUsDescription() {
       <Phone/>
       <ul className='mx-4'>
         <li>Phone Call</li>
-        <li><a href="tel:+14165577622">Canada: +1 (416) 557-7622</a></li>
-        <li><a href="tel:02188030167">Tehran: 02188030167</a></li>
-        <li><a href="tel:03131311914">Isfahan: 03131311914</a></li>
+        <li><a className='text-[#AA8453]' href="tel:+14165577622">Canada: +1 (416) 557-7622</a></li>
+        <li><a className='text-[#AA8453]' href="tel:02188030167">Tehran: 02188030167</a></li>
+        <li><a className='text-[#AA8453]' href="tel:03131311914">Isfahan: 03131311914</a></li>
       </ul>
       </div>
       <div className='flex my-3'>
       <Email/>
       <ul className='mx-4'>
       <li>Email info</li>
-      <li><a href="mailto:info@landaholding.com">info@landaholding.com</a></li>
+      <li><a className='text-[#AA8453]' href="mailto:info@landaholding.com">info@landaholding.com</a></li>
       </ul>
       </div>
 
