@@ -1,5 +1,7 @@
-**نکات مهم قبل از شروع پروژه:**
-git flow نصب بشه و در موردش مطالعه بشه
-component ها با حرف بزرگ شروع بشن
-قراردادهای کامیت زدن از آدرس زیر مطالعه بشه
-https://www.conventionalcommits.org/en/v1.0.0/
+TODO:
+- use lower case for app/* folders like: magazine instead of Magazine
+- use dash for app/* folders like: business-partners instead of BusinessPartners
+- move texts to lang folder
+- پوشه components افتضاحه. باید تغییر کنه
+    example: HomeTextCardContainer.tsx -> components/home/HomeTextCardContainer.tsx
+    

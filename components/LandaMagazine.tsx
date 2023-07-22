@@ -3,6 +3,7 @@ import LandaMagazineCard from './LandaMagazineCard';
 
 export default function LandaMagazine() {
   return (
+    // TODO: create commponent for show repeated parts. because codes are almost same and just written few times
     <div>
       <div className="w-[1440px] h-[884px] relative bg-neutral-800">
     <div className="w-[1362px] h-[666px] left-[38px] top-[73px] absolute">
