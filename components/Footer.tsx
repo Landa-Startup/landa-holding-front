@@ -5,8 +5,13 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <div>
+<<<<<<< HEAD
       <div className="fix bottom-0 w-[1440px] relative bg-neutral-800">
         <div className="w-[1440px] h-[0px] left-0 top-[341px] absolute border border-white"></div>
+=======
+      <div className="h-[381px] relative bg-neutral-800">
+        <div className="w-full h-[0px] left-0 top-[341px] absolute border border-white"></div>
+>>>>>>> ba77424732ef1d38be420ca0255add612bc11fa3
         <CopyRight />
         <div className="left-[172px] top-[68px] absolute justify-start items-start gap-[84px] inline-flex">
           <div className="flex-col justify-start items-start gap-2.5 inline-flex">
