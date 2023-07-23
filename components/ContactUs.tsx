@@ -4,6 +4,7 @@ import React from 'react';
 export default function ContactUs() {
   return (
     <div className="h-[644px] relative bg-neutral-50">
+      {/* TODO: show images with javascript map */}
       <div className="flex-col absolute right-20 top-10">
         <Image
           className="grayscale"
