@@ -12,9 +12,9 @@ export default function page() {
   <div>
     <Hero/>
     <div className='grid grid-row w-screen'>
-      <div className='grid grid-cols-3 divide-x-8 divide-red-900 h-[884px] bg-neutral-500'>
-        <div className='bg-neutral-100'><MagazineStartUps/></div>
-        <div className='col-span-2 bg-neutral-800'>
+      <div className='grid grid-cols-5 divide-x-2 divide-neutral-400 h-[884px] bg-neutral-500'>
+        <div className='col-span-2 bg-neutral-100'><MagazineStartUps/></div>
+        <div className='col-span-3 bg-neutral-100'>
           <MagazineModernPost/>
         </div>  
 
