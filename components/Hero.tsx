@@ -12,14 +12,14 @@ export default function Hero() {
       className="h-[850px] relative"
     >
       <div className="flex flex-col items-center justify-center h-screen">
-        <div className="w-[557px] h-11 text-center text-white text-[32px] font-normal tracking-[11.20px]">
+        <div className="w-[557px] h-11 text-center text-white text-3xl font-normal tracking-[11.20px] font-condensed">
           Landa Holding
         </div>
-        <div className="h-[71px] font-gilda text-right text-neutral-50 text-opacity-95 text-[64px] font-normal tracking-[6.40px]">
+        <div className="h-20 font-gilda text-right text-neutral-50 text-opacity-95 text-6xl font-normal tracking-[6.40px]">
           Acceleration Center
           <br />
         </div>
-        <div className="w-[572px] text-center text-neutral-50 text-opacity-95 text-base font-normal leading-[30px] pt-[42px]">
+        <div className="w-[572px] text-center font-barlow text-neutral-50 text-opacity-95 text-base font-normal leading-8 pt-10">
           Landa Holding is an international investment company active in Iran
           and Canada.
           <br />
@@ -36,7 +36,7 @@ export default function Hero() {
           width={500}
           height={500}
         />
-        <div className="w-12 h-12 rounded-full border border-white flex justify-center items-center absolute left-[40px] bottom-[76px]">
+        <div className="w-12 h-12 rounded-full border border-white flex justify-center items-center absolute left-10 bottom-[76px]">
           <div className="w-4 h-4 border-b-2 border-r-2 transform rotate-45"></div>
         </div>
       </div>

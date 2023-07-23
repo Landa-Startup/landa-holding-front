@@ -22,10 +22,10 @@ export default function LatestStartupsCard({
         height={500}
       />
       <div className="w-[298px] h-[0px] left-0 top-[321px] absolute border border-neutral-800"></div>
-      <div className="left-[26px] top-[280px] absolute text-neutral-800 text-2xl font-normal">
+      <div className="left-[26px] top-[280px] absolute text-neutral-800 text-2xl font-normal font-gilda">
         LANDA TRIP
       </div>
-      <div className="w-[366px] left-[16px] top-[336px] absolute text-neutral-800 text-base font-normal">
+      <div className="w-[366px] left-[16px] top-[336px] absolute text-neutral-800 text-base font-normal font-barlow">
         Landa trip is an innovative start-up company that creates, promotes, and
         runs useful educational courses for all interested people and
         businesses.
