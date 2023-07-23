@@ -126,7 +126,7 @@ export default function ContactUs() {
           </div>
         </div>
         <div className="w-[180px] h-[50px] left-[116px] top-[395px] absolute">
-          <div className="w-[180px] h-[50px] left-0 top-0 absolute bg-[#AA8453]" />
+          <button className="w-[180px] h-[50px] left-0 top-0 absolute bg-primary" />
           <div className="w-28 h-5 left-[34px] top-[14px] absolute text-center text-white text-xl font-medium font-condensed">
             Send Massage
           </div>

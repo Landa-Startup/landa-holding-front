@@ -1,6 +1,7 @@
 import React from 'react';
 import CopyRight from './CopyRight';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -59,30 +60,53 @@ export default function Footer() {
               <br />
             </div>
             <div className="flex-col justify-center items-center gap-2 flex">
-              <div className="text-neutral-400 text-base font-normal">Home</div>
-              <div className="text-neutral-400 text-base font-normal">
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
+                Home
+              </Link>
+              <Link
+                href={'/about'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 About
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/contact'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Contact
-              </div>
+              </Link>
             </div>
           </div>
           <div className="pb-3 flex-col justify-start items-start gap-4 inline-flex">
             <div className="text-white text-xl font-medium">Forms</div>
             <div className="self-stretch flex-col justify-start items-start gap-2 inline-flex">
-              <div className="text-neutral-400 text-base font-normal">
+              <Link
+                href={'/startups'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Startups
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Center of Investor
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Center of Entrepreneurs
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Our business partners
-              </div>
+              </Link>
             </div>
           </div>
           <div className="flex-col justify-start items-start gap-2.5 inline-flex">

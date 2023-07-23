@@ -27,11 +27,11 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <div className="h-11 px-14 py-1 bg-primary flex-col justify-between items-center inline-flex">
+          <button className="h-11 px-14 py-1 bg-primary flex-col justify-between items-center inline-flex">
             <div className="text-neutral-50 text-2xl font-medium font-condensed">
               REGISTER
             </div>
-          </div>
+          </button>
         </div>
         <div className="self-stretch justify-start items-center gap-[650px] inline-flex">
           <div className="w-[307px] justify-start items-start gap-16 flex">
@@ -52,11 +52,11 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <div className="h-11 px-12 py-1 bg-primary flex-col justify-between items-center inline-flex">
+          <button className="h-11 px-12 py-1 bg-primary flex-col justify-between items-center inline-flex">
             <div className="text-neutral-50 text-2xl font-medium font-condensed">
               REGISTER
             </div>
-          </div>
+          </button>
         </div>
         <div className="self-stretch justify-start items-center gap-[672px] inline-flex">
           <div className="justify-start items-center gap-16 flex">
@@ -77,11 +77,11 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <div className="h-11 px-14 py-1 bg-primary flex-col justify-between items-center inline-flex">
+          <button className="h-11 px-14 py-1 bg-primary flex-col justify-between items-center inline-flex">
             <div className="text-neutral-50 text-2xl font-medium font-condensed">
               REGISTER
             </div>
-          </div>
+          </button>
         </div>
       </div>
       <div className="w-16 h-[313.88px] left-[121px] top-[52px] absolute">

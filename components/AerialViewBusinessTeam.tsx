@@ -22,10 +22,10 @@ export default function AerialViewBusinessTeam() {
       </div>
       <div className="w-[1006px] h-[380px] relative bg-neutral-500 bg-opacity-60 mx-auto">
         <div className="left-[416px] top-[316px] absolute justify-start items-start gap-[19px] inline-flex">
-          <div className="w-[15px] h-[15px] bg-[#AA8453] rounded-full" />
-          <div className="w-[15px] h-[15px] rounded-full border border-white" />
-          <div className="w-[15px] h-[15px] rounded-full border border-white" />
-          <div className="w-[15px] h-[15px] rounded-full border border-white" />
+          <button className="w-[15px] h-[15px] bg-primary rounded-full" />
+          <button className="w-[15px] h-[15px] rounded-full border border-white" />
+          <button className="w-[15px] h-[15px] rounded-full border border-white" />
+          <button className="w-[15px] h-[15px] rounded-full border border-white" />
         </div>
         <div className="w-[794px] p-2.5 left-[78px] top-[147px] absolute justify-center items-center gap-2.5 inline-flex">
           <div className="w-[722px] text-stone-100 text-xl font-medium leading-7 font-barlow">

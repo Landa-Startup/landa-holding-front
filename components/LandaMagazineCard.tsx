@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default function LandaMagazineCard({
@@ -13,7 +14,7 @@ export default function LandaMagazineCard({
   date: string;
 }) {
   return (
-    <div className="w-[391px] h-[476px]">
+    <Link className="w-[391px] h-[476px]" href={'/'}>
       <Image src={image} alt={image} width={500} height={500} />
       <div className="w-[46px] h-[84px] px-1 py-2.5 border border-white flex-col justify-start items-center gap-[15px] inline-flex absolute top-6">
         <div className="w-[31px] h-[17px] text-white text-[15px] font-normal font-gilda">
@@ -31,6 +32,6 @@ export default function LandaMagazineCard({
           {title}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

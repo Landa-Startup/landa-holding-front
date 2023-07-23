@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default function Hero() {
@@ -36,9 +37,12 @@ export default function Hero() {
           width={500}
           height={500}
         />
-        <div className="w-12 h-12 rounded-full border border-white flex justify-center items-center absolute left-10 bottom-[76px]">
+        <Link
+          className="w-12 h-12 rounded-full border border-white flex justify-center items-center absolute left-10 bottom-28"
+          href={'#LandaHolding'}
+        >
           <div className="w-4 h-4 border-b-2 border-r-2 transform rotate-45"></div>
-        </div>
+        </Link>
       </div>
     </div>
   );
