@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function ContactUsForm() {
+  
+  function onSubmit(){
+    
+  }
   return (
     <div>
       <h2 className="text-5xl font-light text-center">Get in touch</h2>
