@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <div>
-      <div className="w-[1440px] h-[381px] relative bg-neutral-800">
+      <div className="fix bottom-0 w-[1440px] relative bg-neutral-800">
         <div className="w-[1440px] h-[0px] left-0 top-[341px] absolute border border-white"></div>
         <CopyRight />
         <div className="left-[172px] top-[68px] absolute justify-start items-start gap-[84px] inline-flex">

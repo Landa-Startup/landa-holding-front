@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div
       style={{ backgroundImage: "url('/static/images/businessman.png')" }}
-      className="h-[850px] relative"
+      className="h-[850px] w-screen relative"
     >
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="w-[557px] h-11 text-center text-white text-[32px] font-normal tracking-[11.20px]">
