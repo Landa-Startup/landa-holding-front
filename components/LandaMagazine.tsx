@@ -74,11 +74,11 @@ export default function LandaMagazine() {
             </button>
           </div>
         </div>
-        <div className="w-[223px] h-[57px] py-3.5 bg-primary justify-center items-center gap-2.5 inline-flex absolute bottom-8 ">
+        <button className="w-[223px] h-[57px] py-3.5 bg-primary justify-center items-center gap-2.5 inline-flex absolute bottom-8 ">
           <div className="text-white text-xl font-medium tracking-wide font-condensed">
             Read MORE
           </div>
-        </div>
+        </button>
       </div>
     </div>
   );

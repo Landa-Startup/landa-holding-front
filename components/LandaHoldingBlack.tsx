@@ -35,7 +35,7 @@ export default function LandaHoldingBalck() {
           <br />
         </span>
       </div>
-      <div className="left-[1176px] top-[472px] absolute justify-start items-center gap-4 inline-flex">
+      <button className="left-[1176px] top-[472px] absolute justify-start items-center gap-4 inline-flex">
         <div className="text-stone-100 text-3xl font-normal leading-5 tracking-wider font-condensed">
           More
         </div>
@@ -54,8 +54,8 @@ export default function LandaHoldingBalck() {
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </div>
-      </div>
-      <div className="left-[392px] top-[469px] absolute justify-start items-center gap-4 inline-flex">
+      </button>
+      <button className="left-[392px] top-[469px] absolute justify-start items-center gap-4 inline-flex">
         <div className="text-stone-100 text-3xl font-normal leading-6 tracking-wider font-condensed">
           More
         </div>
@@ -74,7 +74,7 @@ export default function LandaHoldingBalck() {
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </div>
-      </div>
+      </button>
       <div className="w-[434px] h-[278px] left-[147px] top-[160px] absolute">
         <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow mt-4">
           <li>Global Investment Opportunities within Your Reach.</li>

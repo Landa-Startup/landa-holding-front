@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default function LatestStartupsCard({
@@ -11,7 +12,10 @@ export default function LatestStartupsCard({
   description: string;
 }) {
   return (
-    <div className="w-[391px] h-[468px] relative border border-black">
+    <Link
+      className="w-[391px] h-[468px] relative border border-black hover:shadow-xl"
+      href={'/startups/' + title}
+    >
       <div className="w-[391px] h-[468px] left-0 top-0 absolute" />
       <div className="w-[391px] h-[468px] left-0 top-0 absolute" />
       <Image
@@ -23,12 +27,10 @@ export default function LatestStartupsCard({
       />
       <div className="w-[298px] h-[0px] left-0 top-[321px] absolute border border-neutral-800"></div>
       <div className="left-[26px] top-[280px] absolute text-neutral-800 text-2xl font-normal font-gilda">
-        LANDA TRIP
+        {title}
       </div>
       <div className="w-[366px] left-[16px] top-[336px] absolute text-neutral-800 text-base font-normal font-barlow">
-        Landa trip is an innovative start-up company that creates, promotes, and
-        runs useful educational courses for all interested people and
-        businesses.
+        {description}
       </div>
       <div className="left-[298px] top-[411px] absolute bg-neutral-800 justify-start items-start gap-2.5 inline-flex">
         <div className="w-10 h-10 border border-neutral-800" />
@@ -45,6 +47,6 @@ export default function LatestStartupsCard({
           <path d="M5 12h14M12 5l7 7-7 7" />
         </svg>
       </div>
-    </div>
+    </Link>
   );
 }
