@@ -5,7 +5,12 @@ module.exports = {
     extend: {
       fontFamily: {
         gilda: ['Gilda Display', 'serif'],
-        gilda: ['Barlow', 'serif'],
+        barlow: ['Barlow', 'serif'],
+        condensed: ['Barlow', 'serif'],
+      },
+      colors: {
+        primary: '#AA8453',
+        whiteGold: '#F8F5F0',
       },
     },
   },
