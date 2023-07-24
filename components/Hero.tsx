@@ -5,12 +5,8 @@ import React from 'react';
 export default function Hero() {
   return (
     <div
-      style={{
-        backgroundImage: "url('/static/images/businessman.png')",
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-      }}
-      className="h-[850px] relative"
+      style={{ backgroundImage: "url('/static/images/businessman.png')" }}
+      className="w-screen h-[850px] relative"
     >
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="w-[557px] h-11 text-center text-white text-3xl font-normal tracking-[11.20px] font-condensed">
