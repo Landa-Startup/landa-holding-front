@@ -1,26 +1,40 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default function Navbar() {
   return (
-    <div className="w-[840.50px] h-[64.50px] justify-end items-center inline-flex left-[120] absolute z-10">
-      <div className="w-[144.50px] h-[64.50px] justify-end items-end gap-0.5 inline-flex">
+    <div className="justify-end items-center inline-flex z-10 absolute mt-9 ml-32">
+      <Link className="w-36 h-16 justify-end items-end gap-0.5 inline-flex" href={"/"}>
         <Image
           src={'static/images/Logo.svg'}
           alt="Logo"
           width={500}
           height={500}
         />
-        <div className="w-[93px] h-[15px] text-stone-500 text-xl font-normal tracking-widest">
+        <div className="w-[93px] h-[15px] text-primary text-xl font-bold tracking-widest">
           LANDA
         </div>
-      </div>
-      <div className="justify-center items-center gap-[60px] inline-flex">
-        <div className="text-stone-500 text-xl font-medium">HOME </div>
-        <div className="text-stone-100 text-xl font-medium">ABOUT</div>
-        <div className="text-stone-100 text-xl font-medium">CONTACT</div>
-        <div className="text-stone-100 text-xl font-medium">MAGAZINE</div>
-        <div className="text-stone-100 text-xl font-medium">WORK WITH US</div>
+      </Link>
+      <div className="justify-center items-center gap-14 inline-flex font-condensed ml-36">
+        <Link className="text-primary text-xl font-medium" href={'/'}>
+          HOME{' '}
+        </Link>
+        <Link className="text-stone-100 text-xl font-medium" href={'/about'}>
+          ABOUT
+        </Link>
+        <Link className="text-stone-100 text-xl font-medium" href={'contact'}>
+          CONTACT
+        </Link>
+        <Link className="text-stone-100 text-xl font-medium" href={'/magazine'}>
+          MAGAZINE
+        </Link>
+        <Link
+          className="text-stone-100 text-xl font-medium"
+          href={'/StartupsForm'}
+        >
+          WORK WITH US
+        </Link>
       </div>
     </div>
   );
