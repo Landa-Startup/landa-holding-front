@@ -9,9 +9,9 @@ export default function AerialViewBusinessTeam() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[598px] bg-black bg-opacity-40 brightness-75"
+      className="h-[598px] bg-black bg-opacity-40"
     >
-      <div className="text-center py-5">
+      <div className="text-center py-5 font-condensed">
         <span className="text-white text-xl font-normal tracking-[7px]">
           Landa Holding
           <br />
@@ -22,13 +22,13 @@ export default function AerialViewBusinessTeam() {
       </div>
       <div className="w-[1006px] h-[380px] relative bg-neutral-500 bg-opacity-60 mx-auto">
         <div className="left-[416px] top-[316px] absolute justify-start items-start gap-[19px] inline-flex">
-          <div className="w-[15px] h-[15px] bg-[#AA8453] rounded-full" />
-          <div className="w-[15px] h-[15px] rounded-full border border-white" />
-          <div className="w-[15px] h-[15px] rounded-full border border-white" />
-          <div className="w-[15px] h-[15px] rounded-full border border-white" />
+          <button className="w-[15px] h-[15px] bg-primary rounded-full" />
+          <button className="w-[15px] h-[15px] rounded-full border border-white" />
+          <button className="w-[15px] h-[15px] rounded-full border border-white" />
+          <button className="w-[15px] h-[15px] rounded-full border border-white" />
         </div>
         <div className="w-[794px] p-2.5 left-[78px] top-[147px] absolute justify-center items-center gap-2.5 inline-flex">
-          <div className="w-[722px] text-stone-100 text-xl font-medium leading-7">
+          <div className="w-[722px] text-stone-100 text-xl font-medium leading-7 font-barlow">
             Landa Holding provides comprehensive information on investment
             strategies, business creation, and entrepreneurial methods. Its
             informative approaches in various economic and managerial fields
@@ -39,19 +39,19 @@ export default function AerialViewBusinessTeam() {
         <div className="left-[66px] top-[23px] absolute justify-start items-center gap-[13px] inline-flex">
           <Image
             className="w-[108px] h-[104px] border"
-            src="https://via.placeholder.com/108x104"
+            src="/static/images/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg"
             width={500}
             height={500}
             alt="Avatar"
           />
           <div className="h-[42px] flex-col justify-center items-start gap-[3px] inline-flex">
-            <div className=" h-[21px] text-white text-xl font-medium">
+            <div className=" h-[21px] text-white text-xl font-medium font-barlow">
               Morteza Jafari
             </div>
-            <div className=" h-[18px] text-white text-base font-normal">
+            <div className=" h-[18px] text-white text-base font-normal font-barlow">
               Founder of IRimmigration
             </div>
-            <div className="h-[18px] text-white text-[15px] font-normal">
+            <div className="h-[18px] text-white text-[15px] font-normal font-gilda">
               Investor
             </div>
           </div>

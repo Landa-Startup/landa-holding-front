@@ -10,9 +10,27 @@
 }
 @font-face {
   font-family: 'Barlow';
-  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf') format('truetype');
+  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Condensed';
+  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Make scroll behavior smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make images not draggable */
+img {
+  pointer-events: none;
 }
 
 /* Customize scrollbar */
