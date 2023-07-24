@@ -9,26 +9,24 @@ export default function LandaHoldingPriorityCard({
   image: string;
 }) {
   return (
-    <div>
-      <div className="w-[361px] h-[168px] relative border border-stone-500">
-        <Image
-          className="w-[120px] h-[120px] left-[254px] top-[62px] absolute"
-          src={image}
-          alt={image}
-          width={500}
-          height={500}
-        />
-        <Image
-          className="w-[60px] h-[60px] left-[17px] top-[13px] absolute"
-          src={image}
-          alt={image}
-          width={500}
-          height={500}
-        />
-        <div className="w-[238px] p-2.5 left-[62px] top-[62px] absolute justify-center items-center gap-2.5 inline-flex">
-          <div className="w-[197px] text-center text-black text-2xl font-normal">
-            {title}
-          </div>
+    <div className="w-[290px] h-[168px] relative border border-primary">
+      <Image
+        className="w-[70px] h-[70px] left-[210px] top-[90px] absolute opacity-25"
+        src={image}
+        alt=""
+        width={500}
+        height={500}
+      />
+      <Image
+        className="w-[50px] h-[50px] left-[11px] top-[7px] absolute"
+        src={image}
+        alt=""
+        width={500}
+        height={500}
+      />
+      <div className="w-[238px] p-2.5 left-[61px] top-[72px] absolute justify-center items-center gap-2.5 inline-flex">
+        <div className="w-[197px] flex items-center text-black text-2xl font-normal font-gilda">
+          {title}
         </div>
       </div>
     </div>

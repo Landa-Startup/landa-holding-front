@@ -2,7 +2,17 @@
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        gilda: ['Gilda Display', 'serif'],
+        barlow: ['Barlow', 'serif'],
+        condensed: ['Barlow', 'serif'],
+      },
+      colors: {
+        primary: '#AA8453',
+        whiteGold: '#F8F5F0',
+      },
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
