@@ -24,34 +24,42 @@ export default function Footer() {
               <br />
             </div>
             <div className="w-[126px] h-[22px] flex flex-row">
-              <Image
-                className="w-5 h-5 mr-3"
-                src="/static/images/aa99d9333028a3e533d91d20dbd6b9a8.png"
-                alt="social"
-                width={50}
-                height={50}
-              />
-              <Image
-                className="w-5 h-5 mr-3"
-                src="/static/images/5080b1e2fa01acd810ef0bba4824f40b.png"
-                alt="social"
-                width={50}
-                height={50}
-              />
-              <Image
-                className="w-5 h-5 mr-3"
-                src="/static/images/f70234cc786c7b06e04167b970124d28.png"
-                alt="social"
-                width={50}
-                height={50}
-              />
-              <Image
-                className="w-5 h-5"
-                src="/static/images/e8564f775d3908177afc07583d4b2a33.png"
-                alt="social"
-                width={50}
-                height={50}
-              />
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5 mr-3"
+                  src="/static/images/aa99d9333028a3e533d91d20dbd6b9a8.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5 mr-3"
+                  src="/static/images/5080b1e2fa01acd810ef0bba4824f40b.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5 mr-3"
+                  src="/static/images/f70234cc786c7b06e04167b970124d28.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5"
+                  src="/static/images/e8564f775d3908177afc07583d4b2a33.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
             </div>
           </div>
           <div className="flex-col justify-start items-start inline-flex">

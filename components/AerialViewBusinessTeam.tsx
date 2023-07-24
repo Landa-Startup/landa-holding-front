@@ -37,6 +37,7 @@ export default function AerialViewBusinessTeam() {
           </div>
         </div>
         <div className="left-[66px] top-[23px] absolute justify-start items-center gap-[13px] inline-flex">
+          {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
           <Image
             className="w-[108px] h-[104px] border"
             src="/static/images/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg"
