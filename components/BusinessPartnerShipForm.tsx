@@ -2,8 +2,24 @@
 import React from 'react';
 import { useState } from 'react';
 import {useForm} from 'react-hook-form'
+
+interface FormData {
+  fullName: string,
+  email: string,
+  streetAddress: string,
+  companyName: string,
+  phoneNumber: string,
+  countryOfeEsidence: string,
+  streetAddressLine2: string,
+  investmentCeiling: string,
+  birthTime:Date,
+  provinceOfResidence: string,
+  zipCode:number,
+  yourPositionInTeam: string,
+}
+
 export default function BusinessPartnerShiphtmlform() {
-  const initialFormData = {
+  const initialFormData:FormData = {
     fullName: "",
     email: "",
     streetAddress: "",
@@ -12,99 +28,110 @@ export default function BusinessPartnerShiphtmlform() {
     countryOfeEsidence: "",
     streetAddressLine2: "",
     investmentCeiling:"",
-    birthTime:Date,
+    birthTime:new Date(),
     provinceOfResidence:"",
-    zipCode:Number,
+    zipCode:0,
     yourPositionInTeam:"",
-
 
   };
 
-  interface Info {
-    fullName: string,
-    email: string,
-    streetAddress: string,
-    companyName: string,
-    phoneNumber: string,
-    countryOfeEsidence: string,
-    streetAddressLine2: string,
-    investmentCeiling: string,
-    birthTime:Date,
-    provinceOfResidence: string,
-    zipCode:number,
-    yourPositionInTeam: string,
-  }
 
 
-  const StartUpsForm = () => {
-    const {
-      register,
-      handleSubmit,
-      formState: { errors },
-      reset,
-    } = useForm<Info>({
-      mode: "onBlur",
-    });
-  
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-    const [Message, setMessage] = useState("");
-    const [Send, setSend] = useState(false);
-    const [formData, setFormData] = useState(initialFormData);
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
 
-    const handleFormSubmit = async (data: Info) => {
-      // e.preventDefault();
-      setIsSubmitting(true);
-      setSend(true);
-      const sendFormData = new FormData();
-      sendFormData.append("name", data.name);
-      sendFormData.append("phone", data.phone);
-      sendFormData.append("email", data.email);
-      sendFormData.append("members_count", data.members_count.toString());
-  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>({
+    mode: 'onBlur',
+    defaultValues: initialFormData,
+  });
+
+  const onSubmit = async (formData: FormData) => {
+    try {
+      const response = await fetch('/api/contact-us', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      reset(initialFormData); // Reset the form after successful submission
+      console.log('Form data sent successfully!');
+    } catch (error) {
+      console.error('Error sending form data:', error);
+    }
+
+    const onSubmit = async (formData: FormData) => {
       try {
-        // Response unused. Remove if unnecessary.
-        const response = await Apiclient.post("startup-submit/", sendFormData, {
+        const response = await fetch('/api/business-partner-ship', {
+          method: 'POST',
           headers: {
-            "content-type": "multipart/form-data",
-            "X-CSRFToken": csrfToken,
+            'Content-Type': 'application/json',
           },
+          body: JSON.stringify(formData),
         });
   
-        setIsSuccess(true);
-        setMessage("ارسال موفقیت آمیز بود");
-        setSend(false);
-        reset(); // Reset the form fields
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+  
+        reset(initialFormData); // Reset the form after successful submission
+        console.log('Form data sent successfully!');
       } catch (error) {
-        console.log(error);
-        setMessage("ارسال ناموفق بود !");
-        setSend(false);
-        setIsSuccess(false);
+        console.error('Error sending form data:', error);
       }
     };
+  
+
   return (
     <div className="mx-auto w-7/12 bg-white">
       <h2 className="text-slate-950 text-center text-6xl mb-3 mt-16">
         PARTNER Membership FORM
       </h2>
       <h3 className="text-slate-950 text-center text-1xl mb-16 pr-16">
-        Drop us a line through the form below and we'll get back to you
+        Drop us a line through the form below and we will get back to you
       </h3>
       <h4 className="text-slate-950 text-left text-2xl ">
         Personal Informations
       </h4>
       <hr className="h-0.5 mt-2 mb-6 bg-gray-100 border-0 dark:bg-gray-700"></hr>
 
-      <form action="" className="flex flex-col">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
         <div className="grid grid-cols-3 mb-10 justify-center items-center">
           <div className="grid justify-center items-center">
             <label htmlFor="" className="block mb-1 text-slate-950">
               Full Name
             </label>
-            <input type="text" className="mb-4 bg-amber-100 p-1 pr-8 pl-14 rounded-md shadow-md" />
+
+            <div className="flex flex-col">
+            <input
+              id="fullName"
+              type="text"
+              {...register('fullName', {
+                required: 'Your Name is required.',
+                pattern: {
+                  value: /^[a-z ,.'-]+$/i,
+                  message: 'Enter a valid Name.',
+                },
+              })}
+              placeholder="Your Name*"
+              className={`mb-4 bg-amber-100 p-1 pr-8 pl-14 rounded-md shadow-md ${
+                errors.fullName ? 'border-red-500' : ''
+              }`}
+            />
+            {errors.fullName && (
+              <p className="text-sm text-yellow-500 mt-2">
+                {errors.fullName.message}
+              </p>
+            )}
+          </div>
             <br />
             <label htmlFor="" className="block mb-1 text-slate-950">
               Email
@@ -186,4 +213,5 @@ export default function BusinessPartnerShiphtmlform() {
       </form>
     </div>
   );
+}
 }
