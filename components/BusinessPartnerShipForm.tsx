@@ -47,27 +47,8 @@ export default function BusinessPartnerShiphtmlform() {
     mode: 'onBlur',
     defaultValues: initialFormData,
   });
-
-  const onSubmit = async (formData: FormData) => {
-    try {
-      const response = await fetch('/api/contact-us', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      reset(initialFormData); // Reset the form after successful submission
-      console.log('Form data sent successfully!');
-    } catch (error) {
-      console.error('Error sending form data:', error);
-    }
-
+    // TODO: Serach about handle forms with useForm
+    
     const onSubmit = async (formData: FormData) => {
       try {
         const response = await fetch('/api/business-partner-ship', {
