@@ -8,9 +8,8 @@ export default function AerialViewBusinessTeam() {
         backgroundImage: "url('/static/images/Office.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        
       }}
-      className="h-[598px] bg-black bg-opacity-40"
+      className="h-[598px]"
     >
       <div className="text-center py-5 font-condensed">
         <span className="text-white text-xl font-normal tracking-[7px]">
