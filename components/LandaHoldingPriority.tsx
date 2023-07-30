@@ -39,7 +39,6 @@ export default function LandaHoldingPriority() {
   ];
 
   return (
-    //ToDo: Put LandaHoldingPriorityCard in loop.
     <div className="w-full h-[613px] px-28 pt-16 pb-20 bg-white flex-col justify-start items-start gap-9 inline-flex">
       <div>
         <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">

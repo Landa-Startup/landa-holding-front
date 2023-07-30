@@ -10,6 +10,7 @@ import UpcomingEvents from '@/components/UpcomingEvents';
 import React from 'react';
 import { Metadata } from 'next';
 import LandaHoldingBlack from '@/components/LandaHoldingBlack';
+
 export const metadata: Metadata = {
   title: 'Landa Holding',
   description: 'Page Desc',

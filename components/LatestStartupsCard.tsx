@@ -13,14 +13,14 @@ export default function LatestStartupsCard({
 }) {
   return (
     <Link
-      className="w-[391px] h-[468px] relative border border-black hover:shadow-xl"
+      className="w-[391px] h-[468px] relative border border-black group hover:shadow-lg"
       href={'/startups/' + title}
     >
       <div className="w-[391px] h-[468px] left-0 top-0 absolute" />
       <div className="w-[391px] h-[468px] left-0 top-0 absolute" />
       <Image
         alt={image}
-        className="w-[249px] h-[216px] left-[71px] top-[18px] absolute object-contain"
+        className="w-[249px] h-[216px] left-[71px] top-[18px] absolute object-contain group-hover:scale-110 transition-all"
         src={image}
         width={500}
         height={500}

@@ -79,3 +79,4 @@ model NewsTags {
   news   News @relation(fields: [newsId], references: [id])
   tag    Tag  @relation(fields: [tagId], references: [id])
 }
+// TODO: create contact-us model  
