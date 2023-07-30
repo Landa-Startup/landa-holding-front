@@ -15,14 +15,10 @@ export default function RootLayout({
       </head>
       <body>
         <div>
-          {/* <Navbar /> */}
+          <Navbar />
           <main>{children}</main>
-<<<<<<< HEAD
-          {/* <Footer /> */}
-=======
           <Footer />
           <ScrollUpButton />
->>>>>>> 052c85fd293ffb9ed9a262d0401fb043513cf05c
         </div>
       </body>
     </html>
