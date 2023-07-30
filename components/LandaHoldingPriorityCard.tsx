@@ -9,7 +9,7 @@ export default function LandaHoldingPriorityCard({
   image: string;
 }) {
   return (
-    <div className="w-[290px] h-[168px] relative border border-stone-500">
+    <div className="w-[290px] h-[168px] relative border border-primary">
       <Image
         className="w-[70px] h-[70px] left-[210px] top-[90px] absolute opacity-25"
         src={image}
@@ -25,7 +25,7 @@ export default function LandaHoldingPriorityCard({
         height={500}
       />
       <div className="w-[238px] p-2.5 left-[61px] top-[72px] absolute justify-center items-center gap-2.5 inline-flex">
-        <div className="w-[197px] flex items-center text-black text-2xl font-normal">
+        <div className="w-[197px] flex items-center text-black text-2xl font-normal font-gilda">
           {title}
         </div>
       </div>

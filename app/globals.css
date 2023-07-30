@@ -10,9 +10,75 @@
 }
 @font-face {
   font-family: 'Barlow';
-  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf') format('truetype');
+  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Condensed';
+  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.b4 {
+  overflow: hidden !important;
+}
+.circle {
+  transition: all 0.3s cubic-bezier(0.86, 0.31, 0.55, 0.99);
+}
+.b4:hover {
+  color: blue;
+}
+.b4:hover > .circle {
+  transform: scale(90);
+}
+
+.btn2 span:first-child {
+  transform: translateX(-101%);
+  transition: transform 0.3s ease-in;
+}
+.btn2:hover span {
+  transform: translateX(0);
+}
+
+.spin-image {
+  animation: spin 2s linear infinite both;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.spin-image-top {
+  animation: spinTop 2s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spinTop {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Make scroll behavior smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make images not draggable */
+img {
+  pointer-events: none;
 }
 
 /* Customize scrollbar */

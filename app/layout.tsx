@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import ScrollUpButton from '@/components/ScrollUpButton';
 
 export default function RootLayout({
   children,
@@ -13,10 +14,11 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <div className="">
+        <div>
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <ScrollUpButton />
         </div>
       </body>
     </html>

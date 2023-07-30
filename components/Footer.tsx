@@ -1,11 +1,12 @@
 import React from 'react';
 import CopyRight from './CopyRight';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
     <div>
-      <div className="h-[381px] relative bg-neutral-800">
+      <div className="h-[381px] relative bg-neutral-800 font-barlow">
         <div className="w-full h-[0px] left-0 top-[341px] absolute border border-white"></div>
         <CopyRight />
         <div className="left-[172px] top-[68px] absolute justify-start items-start gap-[84px] inline-flex">
@@ -14,7 +15,7 @@ export default function Footer() {
               About Landa
               <br />
             </div>
-            <div className="w-[344px] h-[138px] text-justify text-neutral-400 text-base font-normal">
+            <div className="w-[344px] text-justify text-neutral-400 text-base font-normal">
               In Landa Academy, individuals will be trained based on their
               interests and capabilities. Necessary actions are taken at the
               Landa Acceleration Center to accelerate their unique abilities.
@@ -22,35 +23,43 @@ export default function Footer() {
               developing the nurtured capabilities of individuals.
               <br />
             </div>
-            <div className="w-[126px] h-[22px] relative">
-              <Image
-                className="w-5 h-5 left-0 top-0 absolute"
-                src="https://via.placeholder.com/20x20"
-                alt="social"
-                width={50}
-                height={50}
-              />
-              <Image
-                className="w-5 h-5 left-0 top-0 absolute"
-                src="https://via.placeholder.com/20x20"
-                alt="social"
-                width={50}
-                height={50}
-              />
-              <Image
-                className="w-5 h-5 left-0 top-0 absolute"
-                src="https://via.placeholder.com/20x20"
-                alt="social"
-                width={50}
-                height={50}
-              />
-              <Image
-                className="w-5 h-5 left-0 top-0 absolute"
-                src="https://via.placeholder.com/20x20"
-                alt="social"
-                width={50}
-                height={50}
-              />
+            <div className="w-[126px] h-[22px] flex flex-row">
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5 mr-3"
+                  src="/static/images/aa99d9333028a3e533d91d20dbd6b9a8.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5 mr-3"
+                  src="/static/images/5080b1e2fa01acd810ef0bba4824f40b.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5 mr-3"
+                  src="/static/images/f70234cc786c7b06e04167b970124d28.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href={'/'}>
+                <Image
+                  className="w-5 h-5"
+                  src="/static/images/e8564f775d3908177afc07583d4b2a33.png"
+                  alt="social"
+                  width={50}
+                  height={50}
+                />
+              </Link>
             </div>
           </div>
           <div className="flex-col justify-start items-start inline-flex">
@@ -58,31 +67,54 @@ export default function Footer() {
               Explore
               <br />
             </div>
-            <div className="flex-col justify-center items-center gap-[7px] flex">
-              <div className="text-neutral-400 text-base font-normal">Home</div>
-              <div className="text-neutral-400 text-base font-normal">
+            <div className="flex-col justify-center items-center gap-2 flex">
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
+                Home
+              </Link>
+              <Link
+                href={'/about'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 About
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/contact'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Contact
-              </div>
+              </Link>
             </div>
           </div>
-          <div className="pb-3 flex-col justify-start items-start gap-[15px] inline-flex">
+          <div className="pb-3 flex-col justify-start items-start gap-4 inline-flex">
             <div className="text-white text-xl font-medium">Forms</div>
-            <div className="self-stretch flex-col justify-start items-start gap-[7px] inline-flex">
-              <div className="text-neutral-400 text-base font-normal">
+            <div className="self-stretch flex-col justify-start items-start gap-2 inline-flex">
+              <Link
+                href={'/startups'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Startups
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Center of Investor
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Center of Entrepreneurs
-              </div>
-              <div className="text-neutral-400 text-base font-normal">
+              </Link>
+              <Link
+                href={'/'}
+                className="text-neutral-400 text-base font-normal"
+              >
                 Our business partners
-              </div>
+              </Link>
             </div>
           </div>
           <div className="flex-col justify-start items-start gap-2.5 inline-flex">
