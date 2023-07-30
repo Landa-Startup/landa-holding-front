@@ -24,6 +24,7 @@ export default function LandaMagazine() {
   ];
 
   return (
+    // TODO: create commponent for show repeated parts. because codes are almost same and just written few times
     <div>
       <div className="h-[884px] relative bg-neutral-800 flex justify-center">
         <div className="w-[1362px] h-[666px] left-[45px] top-[73px] absolute">

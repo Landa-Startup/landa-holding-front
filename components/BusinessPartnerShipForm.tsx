@@ -1,15 +1,90 @@
+'use client'
 import React from 'react';
+import { useState } from 'react';
 import {useForm} from 'react-hook-form'
 export default function BusinessPartnerShiphtmlform() {
   const initialFormData = {
-    name: "",
+    fullName: "",
     email: "",
-    phone: "",
-    members_count: "",
-    pitch: null as File | null,
+    streetAddress: "",
+    companyName: "",
+    phoneNumber: "",
+    countryOfeEsidence: "",
+    streetAddressLine2: "",
+    investmentCeiling:"",
+    birthTime:Date,
+    provinceOfResidence:"",
+    zipCode:Number,
+    yourPositionInTeam:"",
+
+
   };
 
+  interface Info {
+    fullName: string,
+    email: string,
+    streetAddress: string,
+    companyName: string,
+    phoneNumber: string,
+    countryOfeEsidence: string,
+    streetAddressLine2: string,
+    investmentCeiling: string,
+    birthTime:Date,
+    provinceOfResidence: string,
+    zipCode:number,
+    yourPositionInTeam: string,
+  }
 
+
+  const StartUpsForm = () => {
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      reset,
+    } = useForm<Info>({
+      mode: "onBlur",
+    });
+  
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [Message, setMessage] = useState("");
+    const [Send, setSend] = useState(false);
+    const [formData, setFormData] = useState(initialFormData);
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleFormSubmit = async (data: Info) => {
+      // e.preventDefault();
+      setIsSubmitting(true);
+      setSend(true);
+      const sendFormData = new FormData();
+      sendFormData.append("name", data.name);
+      sendFormData.append("phone", data.phone);
+      sendFormData.append("email", data.email);
+      sendFormData.append("members_count", data.members_count.toString());
+  
+      try {
+        // Response unused. Remove if unnecessary.
+        const response = await Apiclient.post("startup-submit/", sendFormData, {
+          headers: {
+            "content-type": "multipart/form-data",
+            "X-CSRFToken": csrfToken,
+          },
+        });
+  
+        setIsSuccess(true);
+        setMessage("ارسال موفقیت آمیز بود");
+        setSend(false);
+        reset(); // Reset the form fields
+      } catch (error) {
+        console.log(error);
+        setMessage("ارسال ناموفق بود !");
+        setSend(false);
+        setIsSuccess(false);
+      }
+    };
   return (
     <div className="mx-auto w-7/12 bg-white">
       <h2 className="text-slate-950 text-center text-6xl mb-3 mt-16">
