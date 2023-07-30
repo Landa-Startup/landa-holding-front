@@ -70,9 +70,9 @@ export default function BusinessPartnerShiphtmlform() {
     }
   };
 
-  // TODO: fix regex of validations
+  // TODO: fix regex of validations 
   return (
-    <div className="mx-auto w-7/12 bg-white h-[600px]">
+    <div className="mx-auto w-7/12 bg-white">
       <h2 className="text-slate-950 text-center text-6xl mb-3 mt-16">
         PARTNER Membership FORM
       </h2>
