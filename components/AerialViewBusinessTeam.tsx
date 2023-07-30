@@ -8,6 +8,7 @@ export default function AerialViewBusinessTeam() {
         backgroundImage: "url('/static/images/Office.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
+        
       }}
       className="h-[598px] bg-black bg-opacity-40"
     >
