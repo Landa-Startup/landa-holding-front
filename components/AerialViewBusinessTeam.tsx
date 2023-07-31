@@ -5,13 +5,13 @@ export default function AerialViewBusinessTeam() {
   return (
     <div
       style={{
-        backgroundImage: "url('/static/images/Office.png')",
+        backgroundImage: "url('/static/images/Home/Cooperation-members/Office.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[598px] bg-black bg-opacity-40"
+      className="h-[598px]"
     >
-      <div className="text-center py-5 font-condensed">
+      <div className="py-5 text-center font-condensed">
         <span className="text-white text-xl font-normal tracking-[7px]">
           Landa Holding
           <br />
@@ -40,7 +40,7 @@ export default function AerialViewBusinessTeam() {
           {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
           <Image
             className="w-[108px] h-[104px] border"
-            src="/static/images/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg"
+            src="/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg"
             width={500}
             height={500}
             alt="Avatar"
