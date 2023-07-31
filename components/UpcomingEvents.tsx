@@ -8,10 +8,10 @@ export default function UpcomingEvents() {
         UPCOMING EVENT
       </div>
       <div className="pr-[53px] left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
-        <div className="self-stretch justify-start items-center gap-[625px] inline-flex">
-          <div className="justify-start items-center gap-[69px] flex">
+        <div className="self-stretch justify-start items-center gap-[680px] inline-flex">
+          <div className="justify-start items-center gap-[55px] flex">
             <div className="inline-flex flex-col items-center justify-start px-8">
-              <div className="text-right text-stone-500 text-[40px] font-medium">
+              <div className="text-right text-primary text-[40px] font-medium">
                 08
               </div>
               <div className="text-3xl font-medium text-right text-primary">

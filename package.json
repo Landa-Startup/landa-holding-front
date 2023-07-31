@@ -19,8 +19,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
-    "daisyui": "^2.51.5",
-    "dotenv": "^16.3.1",
+    "daisyui": "3.5.0",
     "dotenv-cli": "^7.2.1",
     "next": "^13.4.7",
     "prisma": "^5.0.0",
