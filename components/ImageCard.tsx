@@ -18,14 +18,14 @@ export default function ImageCard({
         Landa holding
       </div>
       {reverse ? (
-        <div className="text-center flex flex-row-reverse">
+        <div className="flex flex-row-reverse text-center">
           <span className="text-neutral-800 text-6xl font-normal tracking-[6.40px]">
             {title}
           </span>
           <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
           <div className="grid grid-cols-2 gap-2 mt-14">
             <Image
-              className="w-64 h-96 mt-32"
+              className="w-64 mt-32 h-96"
               src={imageOne}
               alt={imageOne}
               width={500}
@@ -48,7 +48,7 @@ export default function ImageCard({
           <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
           <div className="grid grid-cols-2 gap-2 mt-14">
             <Image
-              className="w-64 h-96 mt-32"
+              className="w-64 mt-32 h-96"
               src={imageOne}
               alt={imageOne}
               width={500}
