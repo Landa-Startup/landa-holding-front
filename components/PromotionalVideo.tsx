@@ -11,7 +11,7 @@ export default function PromotionalVideo() {
       }}
       className="h-[400px] relative"
     >
-      <div className="absolute flex flex-col h-[400px] justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute flex flex-col h-[400px] w-full inset-0 bg-black bg-opacity-40 justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div className="w-155 h-23 text-white text-base font-normal tracking-wide font-condensed">
           LANDA HOLDING
         </div>
