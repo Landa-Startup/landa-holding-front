@@ -80,6 +80,7 @@ model NewsTags {
   tag    Tag  @relation(fields: [tagId], references: [id])
 }
 // TODO: create contact-us model  
+<<<<<<< HEAD
 model contactUsForm {
   id        Int      @id @default(autoincrement())
   name      String
@@ -89,3 +90,29 @@ model contactUsForm {
   message   String
   createdAt DateTime @default(now())
 }
+=======
+
+
+
+
+// TODO: create business partner model
+
+
+model BusinessPartner{
+  id Int @id @default(autoincrement())
+  fullName String
+  email String
+  streetAddress String
+  companyName String
+  phoneNumber String
+  countryOfEsidence String
+  streetAddressLine2 String
+  investmentCeiling String
+  birthTime DateTime
+  provinceOfResidence String
+  zipCode BigInt
+  yourPositionInTeam String
+  preferredInvestment String
+  wayKnowUs String
+}
+>>>>>>> 1dc964668df2dfcf996d9a0be61b8d682ca763df
