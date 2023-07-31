@@ -1,9 +1,5 @@
-//import prisma from '../../../lib/client';
-
-// create api for post request
-// save data in database with prisma
 import { NextApiRequest, NextApiResponse } from 'next';
-import { PrismaClient } from '@prisma/client';
+import prisma from '@/lib/prisma';
 
 interface FormData {
   name: string;
@@ -14,8 +10,6 @@ interface FormData {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const prisma = new PrismaClient();
-
   if (req.method === 'POST') {
     try {
       const formData: FormData = req.body;
@@ -30,7 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           message: formData.message,
         },
       });
-      
 
       console.log('Contact form data saved successfully:', contact);
 
@@ -39,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.error('Error saving contact form data:', error);
       res.status(500).json({ error: 'An error occurred while saving the form data.' });
     } finally {
-      await prisma.$disconnect();
+      await prisma.$disconnect(); // Properly disconnect the Prisma Client
     }
   } else {
     res.status(405).json({ error: 'Method not allowed.' });
