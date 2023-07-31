@@ -20,6 +20,8 @@ interface FormData {
   wayKnowUs: string;
 }
 
+
+
 export default function BusinessPartnerShiphtmlform() {
   const initialFormData: FormData = {
     fullName: '',
@@ -50,6 +52,22 @@ export default function BusinessPartnerShiphtmlform() {
   // TODO: Serach about handle forms with useForm
 
   const onSubmit = async (formData: FormData) => {
+    // formData={
+    //   fullName: "John Doe",
+    //   email: "john.doe@example.com",
+    //   streetAddress: "123 Main Street",
+    //   companyName: "ABC Corporation",
+    //   phoneNumber: "123-456-7890",
+    //   countryOfEsidence: "United States",
+    //   streetAddressLine2: "Apt 4B",
+    //   investmentCeiling: "$100,000",
+    //   birthTime: new Date("1990-01-01T00:00:00Z"),
+    //   provinceOfResidence: "California",
+    //   zipCode: 12345,
+    //   yourPositionInTeam: "Manager",
+    //   preferredInvestment: "Stocks",
+    //   wayKnowUs: "Online Advertisement",
+    // };
     try {
       const response = await fetch('/api/business-partner-ship', {
         method: 'POST',
@@ -70,9 +88,9 @@ export default function BusinessPartnerShiphtmlform() {
     }
   };
 
-  // TODO: fix regex of validations
+  // TODO: fix regex of validations 
   return (
-    <div className="mx-auto w-7/12 bg-white h-[600px]">
+    <div className="mx-auto w-7/12 bg-white">
       <h2 className="text-slate-950 text-center text-6xl mb-3 mt-16">
         PARTNER Membership FORM
       </h2>
@@ -294,10 +312,6 @@ export default function BusinessPartnerShiphtmlform() {
                 type="text"
                 {...register('birthTime', {
                   required: 'Your Birth Time is required.',
-                  pattern: {
-                    value: /^[a-z ,.'-]+$/i,
-                    message: 'Enter a valid Birth Time.',
-                  },
                 })}
                 placeholder="Your Birth Time*"
                 className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
