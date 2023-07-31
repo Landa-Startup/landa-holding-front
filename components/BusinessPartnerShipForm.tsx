@@ -3,6 +3,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import NotificationSendForm from './base/NotificationSendForm';
+import Input from './base/Input';
+
 interface FormData {
   fullName: string;
   email: string;
@@ -80,7 +82,6 @@ export default function BusinessPartnerShiphtmlform() {
       console.error('Error sending form data:', error);
     }
   };
-
   // TODO: fix regex of validations
   return (
     <div className="mx-auto w-7/12 bg-white">
@@ -106,7 +107,7 @@ export default function BusinessPartnerShiphtmlform() {
               id="fullName"
               type="text"
               {...register('fullName', {
-                required: 'Your Name is required.',
+                required: 'Please Enter Full',
                 pattern: {
                   value: /^[a-z ,.'-]+$/i,
                   message: 'Enter a valid Name.',
@@ -124,54 +125,13 @@ export default function BusinessPartnerShiphtmlform() {
             )}
 
             <br />
-            <label htmlFor="" className="block mb-1 text-slate-950">
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              {...register('email', {
-                required: 'Your email is required.',
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: 'Enter a valid email.',
-                },
-              })}
-              placeholder="Your Email*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.email ? 'border-red-500' : ''
-              }`}
-            />
-            {errors.email && (
-              <p className="text-sm text-yellow-500 mb-4 mt-0.5">
-                {errors.email.message}
-              </p>
-            )}
-            <br />
-            <label htmlFor="" className="block mb-1 text-slate-950">
-              Street Address
-            </label>
-            <input
-              id="streetAddress"
-              type="text"
-              {...register('streetAddress', {
-                required: 'Your Street Address is required.',
-                pattern: {
-                  value: /^[a-z ,.'-]+$/i,
-                  message: 'Enter a valid Street Address.',
-                },
-              })}
-              placeholder="Your Street Address*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.streetAddress ? 'border-red-500' : ''
-              }`}
-            />
-            {errors.streetAddress && (
-              <p className="text-sm text-yellow-500 mb-4 mt-0.5">
-                {errors.streetAddress.message}
-              </p>
-            )}
-            <br />
+            
+            
+            <Input register={register} errors={errors} nameInput='email' type='email' label='Email' required='Your Email is Invalid' patternValue='^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$' patternMessage='Please Enter Correct Email!' placeholder='Your Email Address' className='bg-amber-100 px-2 py-1 rounded-md shadow-md' labelClass='block mb-1 text-slate-950'/>
+            <Input register={register} errors={errors} nameInput='streetAddress' type='text' label='Street Address' required='Your Street Address is required.' patternValue='' patternMessage='' placeholder='Your Street Address*' className='bg-amber-100 px-2 py-1 rounded-md shadow-md' labelClass='block mb-1 text-slate-950'/>
+            <Input register={register} errors={errors} nameInput='streetAddress' type='text' label='Street Address' required='Your Street Address is required.' patternValue='' patternMessage='' placeholder='Your Street Address*' className='bg-amber-100 px-2 py-1 rounded-md shadow-md' labelClass='block mb-1 text-slate-950'/>
+            
+
             <label htmlFor="" className="block mb-1 text-slate-950">
               Company Name
             </label>
