@@ -33,6 +33,7 @@ export default async function handler(req: NextApiRequest,res: NextApiResponse){
           ...formData,
         },
       })
+      
       res.status(200).json({message:"Form data received successfully."})
     }
     catch(error){
