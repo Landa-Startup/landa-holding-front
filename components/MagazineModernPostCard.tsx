@@ -3,21 +3,21 @@ import Image from 'next/image'
 export default function MagazineModernPostCard() {
   return (
     <div className='px-16'>
-      <div className='mb-8 mx-20 py-10'>
+      <div className='py-10 mx-20 mb-8'>
       <div className="flex flex-col justify-center">
         <Image
           className=""
-          src={'/static/images/Rectangle 2880.png'}
+          src={'/static/images/Magazine/Rectangle 2880.png'}
           alt="Landa"
           width={800}
           height={300}
         />
       </div>
       <div className="flex flex-col justify-start">
-        <h2 className="text-slate-950 text-2xl text-bold mt-5">
+        <h2 className="mt-5 text-2xl text-slate-950 text-bold">
           12 DECEMBER 2022
         </h2>
-        <h2 className="text-yellow-600 text-2xl text-bold mt-1">
+        <h2 className="mt-1 text-2xl text-yellow-600 text-bold">
           Newspaper create with a hobby
         </h2>
       </div>

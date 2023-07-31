@@ -5,19 +5,19 @@ export default function LandaMagazine() {
   const cardData = [
     {
       title: 'Benefits of Spa Treatments',
-      image: '/static/images/annie-spratt-hWJsOnaWTqs-unsplash 1.png',
+      image: '/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png',
       type: 'Acceleration',
       date: 'apr 27',
     },
     {
       title: 'Fitness Center',
-      image: '/static/images/remy_loz-3S0INpfREQc-unsplash (1) 1.png',
+      image: '/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png',
       type: 'Investment',
       date: 'apr 27',
     },
     {
       title: 'Benefits of Spa Treatments',
-      image: '/static/images/emile-perron-xrVDYZRGdw4-unsplash 1.png',
+      image: '/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png',
       type: 'Investment',
       date: 'apr 27',
     },
@@ -32,7 +32,7 @@ export default function LandaMagazine() {
             LANDA MAGAZINE
           </div>
           <div className="flex flex-row items-center justify-center absolute top-[150px] left-10">
-            <button className="border border-white rounded-full mr-3 w-12 h-12 flex items-center justify-center">
+            <button className="flex items-center justify-center w-12 h-12 mr-3 border border-white rounded-full">
               {/* Left Arrow */}
               <svg
                 className="w-6 h-6 text-white transform"
@@ -58,7 +58,7 @@ export default function LandaMagazine() {
                 />
               ))}
             </div>
-            <button className="border border-white rounded-full ml-3 w-12 h-12 flex items-center justify-center">
+            <button className="flex items-center justify-center w-12 h-12 ml-3 border border-white rounded-full">
               {/* Right Arrow */}
               <svg
                 className="w-6 h-6 text-white"
@@ -76,7 +76,7 @@ export default function LandaMagazine() {
           </div>
         </div>
         <button className="w-[223px] h-[57px] py-3.5 bg-primary justify-center items-center gap-2.5 inline-flex absolute bottom-8 ">
-          <div className="text-white text-xl font-medium tracking-wide font-condensed">
+          <div className="text-xl font-medium tracking-wide text-white font-condensed">
             Read MORE
           </div>
         </button>
