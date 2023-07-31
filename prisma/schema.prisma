@@ -80,3 +80,12 @@ model NewsTags {
   tag    Tag  @relation(fields: [tagId], references: [id])
 }
 // TODO: create contact-us model  
+model contactUsForm {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   
+  number    String
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}
