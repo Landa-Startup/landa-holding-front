@@ -1,49 +1,3 @@
-// 'use client'
-// import React from 'react';
-// import Input from '../base/Input';
-// import { useForm } from 'react-hook-form';
-
-// export default function InvestorRegistrationForm() {
-
-//   function YourFormComponent() {
-//     // Use useForm() to get form methods and state from the parent form
-//     const { register, handleSubmit, formState: { errors } } = useForm();
-
-//     // Define a function to handle form submission
-//     const onSubmit = (data: any) => {
-//       // Handle form submission here
-//       console.log(data);
-//     }
-//   return (
-//     <>
-//       <div className="container p-20 mx-auto bg-[#faf8f5]">
-//         <div>
-//         <form onSubmit={handleSubmit(onSubmit)}>
-//       {/* Use the Input component */}
-//       <Input
-//         register={register}
-//         errors={errors}
-//         nameInput="yourFieldName" // Provide a unique name for each input field
-//         type="text" // Specify the input type (e.g., text, email, password)
-//         label="Your Label" // Specify the label for the input field
-//         required="This field is required." // Specify the required error message
-//         patternValue="^[A-Za-z]+$" // Specify the regular expression pattern (without slashes)
-//         patternMessage="Only alphabetic characters are allowed." // Specify the pattern error message
-//         placeholder="Enter your text" // Specify the placeholder text for the input field
-//         className="w-full input input-bordered drop-shadow-lg" // Specify the CSS class for the input element
-//         labelClass="your-label-styles" // Specify the CSS class for the label element
-//       />
-
-//       {/* Add other input fields and submit button */}
-
-//       <button type="submit">Submit</button>
-//     </form>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }}
-
 'use client';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -64,7 +18,7 @@ function FormComponent() {
     <>
       <div className="container p-20 mx-auto bg-[#faf8f5]">
         <form
-          className="grid gap-6 my-6 md:grid-cols-3"
+          className="grid my-6 gap-y-3 gap-x-6 md:grid-cols-3"
           onSubmit={handleSubmit(onSubmit)}
         >
           <Input
@@ -77,7 +31,7 @@ function FormComponent() {
             patternValue="^[A-Za-z]+$"
             patternMessage="Only alphabetic characters are allowed."
             placeholder="Enter your first name"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="my-5"
           />
 
@@ -91,21 +45,21 @@ function FormComponent() {
             patternValue="^[A-Za-z]+$"
             patternMessage="Only alphabetic characters are allowed."
             placeholder="Enter your last name"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
           />
 
           <Input
             register={register}
             errors={errors}
-            nameInput="birthTime"
+            nameInput="birthDate"
             type="text"
-            label="Birth Time"
+            label="Birth Date"
             required="This field is required."
-            patternValue="^\d{4}-\d{2}-\d{2}$"
-            patternMessage="Please enter a valid birth time (e.g., 10:30 AM)"
-            placeholder="Enter your birth time"
-            className="w-full input input-bordered drop-shadow-lg"
+            patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
+            patternMessage="Please enter a valid Birth Date (e.g., 2001\02\11)"
+            placeholder="Enter your Birth Date"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
           />
 
@@ -119,7 +73,7 @@ function FormComponent() {
             patternValue="^[A-Za-z]+$"
             patternMessage="Only alphabetic characters are allowed."
             placeholder="Enter your country of residence"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
           />
 
@@ -133,7 +87,7 @@ function FormComponent() {
             patternValue="^[A-Za-z]+$"
             patternMessage="Only alphabetic characters are allowed."
             placeholder="Enter your province of residence"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
           />
 
@@ -145,7 +99,7 @@ function FormComponent() {
             label="Street Address"
             required="This field is required."
             placeholder="Enter your street address"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             patternValue={''}
             patternMessage={''}
@@ -158,7 +112,7 @@ function FormComponent() {
             type="text"
             label="Street Address Line 2"
             placeholder="Enter additional address details"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             required={''}
             patternValue={''}
@@ -173,7 +127,7 @@ function FormComponent() {
             label="Postal/Zip Code"
             required="This field is required."
             placeholder="Enter your postal or zip code"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             patternValue={''}
             patternMessage={''}
@@ -187,7 +141,7 @@ function FormComponent() {
             label="Company Name"
             required="This field is required."
             placeholder="Enter your company name"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             patternValue={''}
             patternMessage={''}
@@ -201,7 +155,7 @@ function FormComponent() {
             label="Investment Ceiling"
             required="This field is required."
             placeholder="Enter your investment ceiling"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             patternValue={''}
             patternMessage={''}
@@ -215,7 +169,7 @@ function FormComponent() {
             label="Your Position in Team"
             required="This field is required."
             placeholder="Enter your position in the team"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             patternValue={''}
             patternMessage={''}
@@ -229,7 +183,7 @@ function FormComponent() {
             label="Preferred Areas for Investment"
             required="This field is required."
             placeholder="Enter your preferred areas for investment"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             patternValue={''}
             patternMessage={''}
@@ -243,7 +197,7 @@ function FormComponent() {
             label="How Did You Get to Know Us?"
             required="This field is required."
             placeholder="Enter how you found out about us"
-            className="w-full input input-bordered drop-shadow-lg"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg"
             labelClass="your-label-styles"
             patternValue={''}
             patternMessage={''}

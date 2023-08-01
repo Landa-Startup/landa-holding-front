@@ -29,7 +29,7 @@ export default function Input({
   let value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
     <div>
-      <label htmlFor={nameInput} className={labelClass}>
+      <label htmlFor={nameInput} className={labelClass }>
         {label}
       </label>
 
@@ -49,9 +49,9 @@ export default function Input({
         }
       />
       {errors[nameInput] && (
-        <p className="text-sm text-yellow-500 mb-4 mt-0.5">
+        <span className="mt-4 text-sm text-yellow-500">
           {errors[nameInput].message}
-        </p>
+        </span>
       )}
 
       <br />
