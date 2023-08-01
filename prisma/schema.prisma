@@ -79,8 +79,7 @@ model NewsTags {
   news   News @relation(fields: [newsId], references: [id])
   tag    Tag  @relation(fields: [tagId], references: [id])
 }
-// TODO: create contact-us model  
-<<<<<<< HEAD
+
 model contactUsForm {
   id        Int      @id @default(autoincrement())
   name      String
@@ -90,7 +89,6 @@ model contactUsForm {
   message   String
   createdAt DateTime @default(now())
 }
-=======
 
 
 
@@ -115,4 +113,3 @@ model BusinessPartner{
   preferredInvestment String
   wayKnowUs String
 }
->>>>>>> 1dc964668df2dfcf996d9a0be61b8d682ca763df

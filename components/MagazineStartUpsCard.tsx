@@ -10,27 +10,26 @@ export default function MagazineStartUpsCard({
   description: string;
 }) {
   return (
-    <div className='mb-16'>
+    <div className="mb-16">
       <div className="flex justify-center">
         <Image
           className=""
-          src={'/static/images/startups.png'}
+          src={'/static/images/Magazine/StartUps/camera.png'}
           alt="Landa"
           width={320}
           height={420}
         />
       </div>
       <div className="flex flex-col justify-start px-20">
-        <h2 className="text-slate-950 text-2xl text-bold mt-4">
+        <h2 className="mt-4 text-2xl text-slate-950 text-bold">
           12 DECEMBER 2022
         </h2>
 
-        <h2 className="text-yellow-600 text-2xl text-bold mt-1 mb-6">
-        LANDA TRIP
+        <h2 className="mt-1 mb-6 text-2xl text-yellow-600 text-bold">
+          LANDA TRIP
         </h2>
-
       </div>
-      <div className="flex justify-start px-20" >
+      <div className="flex justify-start px-20">
         <p className="text-justify text-slate-950 text-bold">
           Quisque pretium fermentum quam, sit amet cursus ante sollicitudin vel.
           Morbi consequat risus consequat, porttitor orci sit amet, iaculis

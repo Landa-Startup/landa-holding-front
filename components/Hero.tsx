@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div
       style={{
-        backgroundImage: "url('/static/images/businessman.png')",
+        backgroundImage: "url('/static/images/Home/Hero/businessman.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
@@ -38,7 +38,7 @@ export default function Hero() {
           height={500}
         />
         <Link
-          className="animate-bounce w-12 h-12 rounded-full border border-white flex justify-center items-center absolute left-10 bottom-4"
+          className="absolute flex items-center justify-center w-12 h-12 border border-white rounded-full animate-bounce left-10 bottom-4"
           href={'#LandaHolding'}
         >
           <svg
@@ -46,7 +46,7 @@ export default function Hero() {
             width="24"
             height="24"
             fill="currentColor"
-            className="bi bi-arrow-down text-white"
+            className="text-white bi bi-arrow-down"
             viewBox="0 0 16 16"
           >
             <path
