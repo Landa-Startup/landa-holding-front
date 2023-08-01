@@ -4,7 +4,7 @@ import React from 'react';
 export default function page() {
   const cards = [
     {
-      title:"Investment Center",
+      title: "Investment Center",
       text: 'We assist startups by providing their investments to help them grow and transition their businesses into the business markets to expand them internationally.We collaborate with a group of international investors who invest in various projects and businesses based on their investment priorities.',
       image: '/static/images/fc88e5340249e1ee02b7a4df655b1f2a.jpg',
       reverse: true,
@@ -22,29 +22,17 @@ export default function page() {
       reverse: true,
     },
   ];
-  
+
 
 
 
   return (
-    <>
-      <div>
-        {cards.map((cart, index) => (
-          <Aboutuscart
-            reverse={cart.reverse}
-            key={index}
-            text={cart.text}
-            image={cart.image}
-            title={cart.title}
-          />
-        ))}
-      </div>
-
-      <div className="flex grid-cols-3 gap-4 ml-[119px] mr-[119px]">
-      <AboutUsProfile 
-  
+    <div>
+      <Banner
+        image="/static/images/About/95514dad2cafeb21614d74c1cc53afa2.jpg"
+        title="About Us"
       />
-      </div>
+    </div>
     </>
   );
 }

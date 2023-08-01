@@ -7,11 +7,11 @@ export default function ContactUs() {
   return (
     <div className="h-[644px] relative bg-neutral-50">
       {/* TODO: show images with javascript map */}
-      <div className="flex-col absolute right-20 top-10">
+      <div className="absolute flex-col right-20 top-10">
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/88fb1ed1092acc259b946b40b2ca01af.png"
+            src="/static/images/Home/universities/azad.png"
             alt="t"
             width={100}
             height={100}
@@ -20,7 +20,7 @@ export default function ContactUs() {
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/7b967be6ae1eb0bbc73de6cec23b892c.png"
+            src="/static/images/Home/universities/uni.png"
             alt="t"
             width={100}
             height={100}
@@ -29,7 +29,7 @@ export default function ContactUs() {
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/https___logosource.ir_wp-content_uploads_2017_01_Amirkabir 1.png"
+            src="/static/images/Home/universities/amirkabir.png"
             alt="t"
             width={100}
             height={100}
@@ -38,18 +38,18 @@ export default function ContactUs() {
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/Asset 1 1.png"
+            src="/static/images/Home/universities/sharif.png"
             alt="t"
             width={100}
             height={100}
           />
         </div>
       </div>
-      <div className="flex-col absolute right-56 top-10">
+      <div className="absolute flex-col right-56 top-10">
         <div className="spin-image-top">
           <Image
             className="grayscale"
-            src="/static/images/universities/88fb1ed1092acc259b946b40b2ca01af.png"
+            src="/static/images/Home/universities/azad.png"
             alt="t"
             width={100}
             height={100}
@@ -58,7 +58,7 @@ export default function ContactUs() {
         <div className="spin-image-top">
           <Image
             className="grayscale"
-            src="/static/images/universities/7b967be6ae1eb0bbc73de6cec23b892c.png"
+            src="/static/images/Home/universities/uni.png"
             alt="t"
             width={100}
             height={100}
@@ -67,7 +67,7 @@ export default function ContactUs() {
         <div className="spin-image-top">
           <Image
             className="grayscale"
-            src="/static/images/universities/https___logosource.ir_wp-content_uploads_2017_01_Amirkabir 1.png"
+            src="/static/images/Home/universities/amirkabir.png"
             alt="t"
             width={100}
             height={100}
@@ -76,18 +76,18 @@ export default function ContactUs() {
         <div className="spin-image-top">
           <Image
             className="grayscale"
-            src="/static/images/universities/Asset 1 1.png"
+            src="/static/images/Home/universities/sharif.png"
             alt="t"
             width={100}
             height={100}
           />
         </div>
       </div>
-      <div className="flex-col absolute right-96 top-10">
+      <div className="absolute flex-col right-96 top-10">
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/88fb1ed1092acc259b946b40b2ca01af.png"
+            src="/static/images/Home/universities/azad.png"
             alt="t"
             width={100}
             height={100}
@@ -96,7 +96,7 @@ export default function ContactUs() {
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/7b967be6ae1eb0bbc73de6cec23b892c.png"
+            src="/static/images/Home/universities/uni.png"
             alt="t"
             width={100}
             height={100}
@@ -105,7 +105,7 @@ export default function ContactUs() {
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/https___logosource.ir_wp-content_uploads_2017_01_Amirkabir 1.png"
+            src="/static/images/Home/universities/amirkabir.png"
             alt="t"
             width={100}
             height={100}
@@ -114,7 +114,7 @@ export default function ContactUs() {
         <div className="spin-image">
           <Image
             className="grayscale"
-            src="/static/images/universities/Asset 1 1.png"
+            src="/static/images/Home/universities/sharif.png"
             alt="t"
             width={100}
             height={100}
