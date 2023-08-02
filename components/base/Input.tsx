@@ -44,10 +44,8 @@ export default function Input({
           },
         })}
         placeholder={placeholder}
-        className={className + (
-          errors.nameInput ? 'border-red-500' : '')
-        }
-      />
+        className={className + (errors[nameInput] ? ' border-red-500' : '')}
+        />
       {errors[nameInput] && (
         <span className="mt-4 text-sm text-yellow-500">
           {errors[nameInput].message}
