@@ -9,9 +9,9 @@ export default function Select({
   options,
   className,
   labelClass,
-  placeholder
+  placeholder,
 }: {
-  register: UseFormRegister<FieldValues>;
+  register: any;
   errors: any;
   nameInput: string;
   label: string;
@@ -22,7 +22,7 @@ export default function Select({
   placeholder: string;
 }) {
   return (
-    <div>
+    <>
       <label htmlFor={nameInput} className={labelClass}>
         {label}
       </label>
@@ -34,7 +34,9 @@ export default function Select({
         })}
         className={className + (errors[nameInput] ? ' border-red-500' : '')}
       >
-        <option disabled selected value="">{placeholder}</option>
+        <option disabled selected value={""}>
+          {placeholder}
+        </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
@@ -43,12 +45,12 @@ export default function Select({
       </select>
 
       {errors[nameInput] && (
-        <span className="mt-4 text-sm text-yellow-500">
+        <span className="mt-2 text-sm text-yellow-500">
           {errors[nameInput].message}
         </span>
       )}
 
       <br />
-    </div>
+    </>
   );
 }
