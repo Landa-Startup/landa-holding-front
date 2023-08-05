@@ -58,10 +58,10 @@ model UserCategories {
 }
 
 model News {
-  id          Int       @id @default(autoincrement())
+  id          Int        @id @default(autoincrement())
   title       String
-  description String    @db.Text
-  date        DateTime  @default(now())
+  description String     @db.Text
+  date        DateTime   @default(now())
   image       String[]
   NewsTag     NewsTags[]
 }
@@ -80,36 +80,32 @@ model NewsTags {
   tag    Tag  @relation(fields: [tagId], references: [id])
 }
 
-model contactUsForm {
+model ContactUsForm {
   id        Int      @id @default(autoincrement())
   name      String
-  email     String   
+  email     String
   number    String
   subject   String
   message   String
   createdAt DateTime @default(now())
 }
 
-
-
-
 // TODO: create business partner model
 
-
-model BusinessPartner{
-  id Int @id @default(autoincrement())
-  fullName String
-  email String
-  streetAddress String
-  companyName String
-  phoneNumber String
-  countryOfEsidence String
-  streetAddressLine2 String
-  investmentCeiling String
-  birthTime DateTime
+model BusinessPartner {
+  id                  Int      @id @default(autoincrement())
+  fullName            String
+  email               String
+  streetAddress       String
+  companyName         String
+  phoneNumber         String
+  countryOfEsidence   String
+  streetAddressLine2  String
+  investmentCeiling   String
+  birthTime           DateTime
   provinceOfResidence String
-  zipCode BigInt
-  yourPositionInTeam String
+  zipCode             BigInt
+  yourPositionInTeam  String
   preferredInvestment String
-  wayKnowUs String
+  wayKnowUs           String
 }
