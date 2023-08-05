@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../base/Input';
 import Select from '../base/Select';
-import InvestorRegistrationTitle from './InvestorRegistrationTitle';
+import PartnerMembershipTitle from './PartnerMembershipTitle';
 
 interface FormData {
   firstName: string;
@@ -21,7 +21,7 @@ interface FormData {
   howDidYouKnowUs: string;
 }
 
-export default function InvestorRegistrationForm() {
+export default function PartnerMembershipForm() {
   const {
     register,
     handleSubmit,
@@ -30,7 +30,7 @@ export default function InvestorRegistrationForm() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch('/api/investor-registration', {
+      const response = await fetch('/api/partner-membership', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export default function InvestorRegistrationForm() {
   return (
     <>
       <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <InvestorRegistrationTitle/>
+        <PartnerMembershipTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <Input
