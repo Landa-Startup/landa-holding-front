@@ -8,7 +8,7 @@ export default function page() {
     <div>
       {/* TODO: add props for this component */}
       <Banner
-        image="/static/images/37b76f28c1c41b4ea18163cf2fba85ab.jpg"
+        image="/static/images/contact/37b76f28c1c41b4ea18163cf2fba85ab.png"
         title="Contact Us"
       />
       <div className="container grid grid-cols-1 gap-5 px-3 mx-auto my-20 md:grid-cols-2">

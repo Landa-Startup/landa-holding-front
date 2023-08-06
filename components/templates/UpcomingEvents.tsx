@@ -51,8 +51,8 @@ export default function UpcomingEvents() {
           <Button text="Register" size="register" />
         </div>
         <div className="self-stretch justify-start items-center gap-[680px] inline-flex">
-          <div className="justify-start items-center gap-16 flex">
-            <div className="px-8 flex-col justify-start items-center inline-flex font-condensed">
+          <div className="flex items-center justify-start gap-16">
+            <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-right text-primary text-[40px] font-medium">
                 08
               </div>
@@ -76,7 +76,7 @@ export default function UpcomingEvents() {
         <div className="w-[306px] h-0 left-0 top-[307px] absolute origin-top-left -rotate-90 bg-neutral-800 border border-neutral-800"></div>
         <div className="w-14 h-0 left-0 top-[103.03px] absolute bg-neutral-800 border border-neutral-800"></div>
         <div className="w-14 h-0 left-0 top-[305px] absolute bg-neutral-800 border border-neutral-800"></div>
-        <div className="w-14 h-0 left-0 top-0 absolute bg-neutral-800 border border-neutral-800"></div>
+        <div className="absolute top-0 left-0 h-0 border w-14 bg-neutral-800 border-neutral-800"></div>
         <div className="w-14 h-0 left-0 top-[198.51px] absolute bg-neutral-800 border border-neutral-800"></div>
         <div className="w-3 h-3 left-14 top-[97px] absolute bg-neutral-800 rounded-full border border-neutral-800" />
         <div className="w-3 h-3 left-14 top-[194px] absolute bg-neutral-800 rounded-full border border-neutral-800" />

@@ -6,35 +6,35 @@ export default function LandaHoldingPriority() {
   const cardData = [
     {
       title: 'Platform based on AI and VR',
-      image: '/static/images/vr-glasses 2.png',
+      image: '/static/images/Home/Priority/vr-glasses 2.png',
     },
     {
       title: 'Agriculture',
-      image: '/static/images/system 2.png',
+      image: '/static/images/Home/Priority/system 2.png',
     },
     {
       title: 'Renewable Energy',
-      image: '/static/images/online-shop 1.png',
+      image: '/static/images/Home/Priority/online-shop 1.png',
     },
     {
       title: 'The Environment',
-      image: '/static/images/planet-earth 1.png',
+      image: '/static/images/Home/Priority/planet-earth 1.png',
     },
     {
       title: 'Entertainment',
-      image: '/static/images/ai 2.png',
+      image: '/static/images/Home/Priority/ai 2.png',
     },
     {
       title: 'Biomedical Engineering',
-      image: '/static/images/man 2.png',
+      image: '/static/images/Home/Priority/man 2.png',
     },
     {
       title: 'Services for Teenagers',
-      image: '/static/images/process 2.png',
+      image: '/static/images/Home/Priority/process 2.png',
     },
     {
       title: 'Tourism services',
-      image: '/static/images/world 2.png',
+      image: '/static/images/Home/Priority/world 2.png',
     },
   ];
 
@@ -45,7 +45,7 @@ export default function LandaHoldingPriority() {
           Landa Holding
           <br />
         </span>
-        <span className="text-black text-4xl font-normal tracking-widest font-condensed">
+        <span className="text-4xl font-normal tracking-widest text-black font-condensed">
           Priority
         </span>
       </div>

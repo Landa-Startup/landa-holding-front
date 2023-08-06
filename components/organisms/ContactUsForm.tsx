@@ -54,7 +54,7 @@ export default function ContactUsForm() {
     <div>
       <h2 className="text-5xl font-light text-center">Get in touch</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 gap-6 my-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-y-5 gap-x-6 my-6 md:grid-cols-2">
           <div className="flex flex-col">
             <input
               id="name"
@@ -72,9 +72,9 @@ export default function ContactUsForm() {
               }`}
             />
             {errors.name && (
-              <p className="text-sm text-yellow-500 mt-2">
+              <span className="text-sm text-yellow-500 mt-2">
                 {errors.name.message}
-              </p>
+              </span>
             )}
           </div>
           <div className="flex flex-col">
@@ -154,7 +154,7 @@ export default function ContactUsForm() {
             placeholder="Message*"
           ></textarea>
           {errors.message && (
-            <span className="text-sm text-yellow-500 mt-2">
+            <span className="text-sm text-yellow-500 ">
               {errors.message.message}
             </span>
           )}

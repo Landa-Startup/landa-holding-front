@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Navbar() {
   return (
-    <div className="justify-end items-center inline-flex z-10 absolute mt-9 ml-32">
+    <div className="z-10 inline-flex items-center justify-end ml-32 mt-9">
       <Link className="w-36 h-16 justify-end items-end gap-0.5 inline-flex" href={"/"}>
         <Image
           src={'static/images/Logo.svg'}
@@ -16,21 +16,24 @@ export default function Navbar() {
           LANDA
         </div>
       </Link>
-      <div className="justify-center items-center gap-14 inline-flex font-condensed ml-36">
-        <Link className="text-primary text-xl font-medium" href={'/'}>
+      <div className="inline-flex items-center justify-center gap-14 font-condensed ml-36">
+        <Link className="text-xl font-medium text-primary" href={'/'}>
           HOME{' '}
         </Link>
-        <Link className="text-stone-100 text-xl font-medium" href={'/about'}>
+        <Link className="text-xl font-medium text-stone-100" href={'/about'}>
           ABOUT
         </Link>
-        <Link className="text-stone-100 text-xl font-medium" href={'contact'}>
+        <Link className="text-xl font-medium text-stone-100" href={'contact'}>
           CONTACT
         </Link>
-        <Link className="text-stone-100 text-xl font-medium" href={'/magazine'}>
+        <Link className="text-xl font-medium text-stone-100" href={'/team'}>
+          OUR TEAM
+        </Link>
+        <Link className="text-xl font-medium text-stone-100" href={'/magazine'}>
           MAGAZINE
         </Link>
         <Link
-          className="text-stone-100 text-xl font-medium"
+          className="text-xl font-medium text-stone-100"
           href={'/StartupsForm'}
         >
           WORK WITH US

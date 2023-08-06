@@ -5,7 +5,7 @@ export default function page() {
   return (
     <div>
       <Banner
-        image="/static/images/95514dad2cafeb21614d74c1cc53afa2.jpg"
+        image="/static/images/About/95514dad2cafeb21614d74c1cc53afa2.jpg"
         title="About Us"
       />
       page
