@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import BusinessPartnerShipForm from '@/components/BusinessPartnerShipForm'
+import BusinessPartnerShipForm from '@/components/organisms/BusinessPartnerShipForm'
 import React from 'react'
 export default function page() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import TextCard from './Textcard';
-import ImageCard from './ImageCard';
+import TextCard from '../atoms/cards/Textcard';
+import ImageCard from '../atoms/cards/ImageCard';
 
 export default function HomeTextCardContainer({
   title,

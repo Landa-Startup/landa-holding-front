@@ -1,15 +1,15 @@
-import AerialViewBusinessTeam from '@/components/AerialViewBusinessTeam';
-import ContactUs from '@/components/ContactUs';
-import Hero from '@/components/Hero';
-import HomeTextCardContainer from '@/components/HomeTextCardContainer';
-import LandaHoldingPriority from '@/components/LandaHoldingPriority';
-import LandaMagazine from '@/components/LandaMagazine';
-import LatestStartups from '@/components/LatestStartups';
-import PromotionalVideo from '@/components/PromotionalVideo';
-import UpcomingEvents from '@/components/UpcomingEvents';
+import AerialViewBusinessTeam from '@/components/templates/BusinessTeam';
+import ContactUs from '@/components/templates/ContactUs';
+import Hero from '@/components/templates/Hero';
+import HomeTextCardContainer from '@/components/molecules/HomeTextCardContainer';
+import LandaHoldingPriority from '@/components/templates/LandaHoldingPriority';
+import LandaMagazine from '@/components/templates/LandaMagazine';
+import LatestStartups from '@/components/templates/LatestStartups';
+import PromotionalVideo from '@/components/templates/PromotionalVideo';
+import UpcomingEvents from '@/components/templates/UpcomingEvents';
 import React from 'react';
 import { Metadata } from 'next';
-import LandaHoldingBlack from '@/components/LandaHoldingBlack';
+import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 
 export const metadata: Metadata = {
   title: 'Landa Holding',

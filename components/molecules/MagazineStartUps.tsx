@@ -1,5 +1,5 @@
 import React from 'react';
-import MagazineStartUpsCard from './MagazineStartUpsCard';
+import MagazineStartUpsCard from '../atoms/MagazineStartUpsCard';
 export default function MagazineStartUps() {
   return (
     <div className="px-16">

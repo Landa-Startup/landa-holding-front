@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import Button from './Button';
+import Button from '../atoms/Button';
 
 export default function ContactUs() {
   // TODO: use daisyUI for styling

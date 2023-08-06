@@ -1,6 +1,6 @@
 import React from 'react';
 import Phone from '../icons/IconPhone';
-import Email from '../icons/IconEmail';
+import Email from '../atoms/IconEmail';
 import Location from '../icons/IconLocation';
 
 export default function ContactUsDescription() {

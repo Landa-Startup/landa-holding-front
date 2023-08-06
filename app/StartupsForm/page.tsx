@@ -1,4 +1,4 @@
-import Banner from '@/components/Banner';
+import Banner from '@/components/molecules/Banner';
 import React from 'react';
 
 export default function page() {

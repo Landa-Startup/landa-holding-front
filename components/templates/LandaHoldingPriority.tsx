@@ -1,5 +1,5 @@
 import React from 'react';
-import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
+import LandaHoldingPriorityCard from '../atoms/cards/LandaHoldingPriorityCard';
 import Image from 'next/image';
 
 export default function LandaHoldingPriority() {

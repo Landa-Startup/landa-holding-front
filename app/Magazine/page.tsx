@@ -1,11 +1,11 @@
 import React from 'react';
-import LandaMagazine from '@/components/LandaMagazine';
+import LandaMagazine from '@/components/molecules/LandaMagazine';
 import LandaMagazineCard from '@/components/LandaMagazineCard';
-import MagazineStartUps from '@/components/MagazineStartUps';
-import Hero from '@/components/Hero';
-import MagazineModernPost from '@/components/MagazineModernPost';
-import Footer from '@/components/Footer';
-import Banner from '@/components/Banner';
+import MagazineStartUps from '@/components/molecules/MagazineStartUps';
+import Hero from '@/components/molecules/Hero';
+import MagazineModernPost from '@/components/atoms/MagazineModernPost';
+import Footer from '@/components/templates/Footer';
+import Banner from '@/components/molecules/Banner';
 
 export default function page() {
   return (

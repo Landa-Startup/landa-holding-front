@@ -1,7 +1,7 @@
-import Footer from '@/components/Footer';
+import Footer from '@/components/templates/Footer';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import ScrollUpButton from '@/components/ScrollUpButton';
+import Navbar from '@/components/templates/Navbar';
+import ScrollUpButton from '@/components/atoms/ScrollUpButton';
 
 export default function RootLayout({
   children,

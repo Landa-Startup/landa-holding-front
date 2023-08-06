@@ -1,8 +1,8 @@
 import React from 'react';
-import Hero from '@/components/Hero';
-import ContactUsForm from '@/components/contact-us/ContactUsForm';
-import ContactUsDescription from '@/components/contact-us/ContactUsDescription';
-import Banner from '@/components/Banner';
+import Hero from '@/components/molecules/Hero';
+import ContactUsForm from '@/components/organisms/ContactUsForm';
+import ContactUsDescription from '@/components/molecules/ContactUsDescription';
+import Banner from '@/components/molecules/Banner';
 export default function page() {
   return (
     <div>
