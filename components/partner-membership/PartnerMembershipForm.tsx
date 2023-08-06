@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import Input from '../base/Input';
-import Select from '../base/Select';
+import Input from '../organisms/base/Input';
+import Select from '../organisms/base/Select';
 import PartnerMembershipTitle from './PartnerMembershipTitle';
 
 interface FormData {
