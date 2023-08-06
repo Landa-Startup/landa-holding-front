@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link className="text-xl font-medium text-stone-100" href={'contact'}>
           CONTACT
         </Link>
-        <Link className="text-xl font-medium text-stone-100" href={'/team'}>
+        <Link className="text-xl font-medium text-stone-100" href={'/our-team'}>
           OUR TEAM
         </Link>
         <Link className="text-xl font-medium text-stone-100" href={'/magazine'}>
