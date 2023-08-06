@@ -1,5 +1,5 @@
 import Banner from '@/components/Banner'
-import InvestorRegistrationForm from '@/components/investor-registration/InvestorRegistrationForm'
+import InvestorRegistrationForm from '@/components/organisms/InvestorRegistrationForm'
 import React from 'react'
 
 export default function page() {

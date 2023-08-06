@@ -1,5 +1,5 @@
 import Banner from '@/components/Banner'
-import PartnerMembershipForm from '@/components/partner-membership/PartnerMembershipForm'
+import PartnerMembershipForm from '@/components/organisms/PartnerMembershipForm'
 import React from 'react'
 
 export default function page() {

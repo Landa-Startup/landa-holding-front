@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import Input from '../organisms/base/Input';
-import Select from '../organisms/base/Select';
-import PartnerMembershipTitle from './PartnerMembershipTitle';
+import Input from './base/Input';
+import Select from './base/Select';
+import InvestorRegistrationTitle from '../atoms/InvestorRegistrationTitle';
 
 interface FormData {
   firstName: string;
@@ -21,7 +21,7 @@ interface FormData {
   howDidYouKnowUs: string;
 }
 
-export default function PartnerMembershipForm() {
+export default function InvestorRegistrationForm() {
   const {
     register,
     handleSubmit,
@@ -30,7 +30,7 @@ export default function PartnerMembershipForm() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch('/api/partner-membership', {
+      const response = await fetch('/api/investor-registration', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export default function PartnerMembershipForm() {
   return (
     <>
       <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <PartnerMembershipTitle />
+        <InvestorRegistrationTitle/>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <Input
