@@ -141,29 +141,33 @@ model PartnerMembership {
 }
 
 model StartupsForm {
-  id                  Int      @id @default(autoincrement())
-  firstName           String
-  lastName            String
-  birthDate           String
-  email               String
-  countryOfResidence  String
-  provinceOfResidence String
-  type                Type
-  ideaExplanation     String
-  getToKnowUs         String
-  pitchDeck           Boolean
-  businessPlan        Boolean
-  productName         String
-  siteAddress         String
-  customerProblem     String
-  solution            String
-  productLevel        Level
-  scalable            String
-
-
-
-  createdAt  DateTime   @default(now())
-  updatedAt  DateTime   @updatedAt
+  id                      Int      @id @default(autoincrement())
+  firstName               String
+  lastName                String
+  birthDate               String
+  email                   String
+  countryOfResidence      String
+  provinceOfResidence     String
+  type                    Type
+  ideaExplanation         String
+  getToKnowUs             String
+  pitchDeck               Boolean
+  pitchDeckFile           String
+  businessPlan            Boolean
+  businessPlanFile        String
+  productName             String
+  siteAddress             String
+  customerProblem         String
+  solution                String
+  productLevel            Level
+  scalable                String
+  monetizationOfYourPlan  String
+  structureOfYourSales    String
+  financialModel          String
+  cooperatedWithInvestors String
+  financial               Boolean
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
 }
 
 enum Type {
@@ -174,6 +178,14 @@ enum Type {
   SaleDevelopment
 }
 
-enum Level{
-  
+enum Level {
+  basicPrinciple
+  technologyConcept
+  exprimentalProof
+  confirmedTechnologyLab
+  confirmedTechnologyEnv
+  presentedTechnologyEnv
+  systemPrototypeInMvp
+  realisticSystem
+  qualifiedSystem
 }
