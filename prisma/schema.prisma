@@ -144,7 +144,7 @@ model StartupsForm {
   id                      Int      @id @default(autoincrement())
   firstName               String
   lastName                String
-  birthDate               DateTime
+  birthDate               DateTime  
   email                   String
   countryOfResidence      String
   provinceOfResidence     String
