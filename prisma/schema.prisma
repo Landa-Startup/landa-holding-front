@@ -139,3 +139,41 @@ model PartnerMembership {
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
 }
+
+model StartupsForm {
+  id                  Int      @id @default(autoincrement())
+  firstName           String
+  lastName            String
+  birthDate           String
+  email               String
+  countryOfResidence  String
+  provinceOfResidence String
+  type                Type
+  ideaExplanation     String
+  getToKnowUs         String
+  pitchDeck           Boolean
+  businessPlan        Boolean
+  productName         String
+  siteAddress         String
+  customerProblem     String
+  solution            String
+  productLevel        Level
+  scalable            String
+
+
+
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+}
+
+enum Type {
+  IDEA
+  MVP
+  TRIAL
+  FisrtScale
+  SaleDevelopment
+}
+
+enum Level{
+  
+}
