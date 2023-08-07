@@ -4,11 +4,15 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import NotificationSendForm from './base/NotificationSendForm';
 import Input from './base/Input';
+<<<<<<< HEAD
 import {FormData} from '../../app/types/global'
 
+=======
+import { BusinessPartnerShipFormData } from '../../app/types/global';
+>>>>>>> origin/develop
 
 export default function BusinessPartnerShiphtmlform() {
-  const initialFormData: FormData = {
+  const initialFormData: BusinessPartnerShipFormData = {
     fullName: '',
     email: '',
     streetAddress: '',
@@ -30,7 +34,7 @@ export default function BusinessPartnerShiphtmlform() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<FormData>({
+  } = useForm<BusinessPartnerShipFormData>({
     mode: 'onBlur',
     defaultValues: initialFormData,
   });
@@ -39,9 +43,8 @@ export default function BusinessPartnerShiphtmlform() {
   const [send, setSend] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  
-  
-  const onSubmit = async (formData: FormData) => {
+
+  const onSubmit = async (formData: BusinessPartnerShipFormData) => {
     setIsSubmitting(true);
     setSend(true);
     try {
@@ -69,21 +72,21 @@ export default function BusinessPartnerShiphtmlform() {
   };
   // TODO: fix regex of validations
   return (
-    <div className="mx-auto w-7/12 bg-white">
-      <h2 className="text-slate-950 text-center text-6xl mb-3 mt-16">
+    <div className="w-7/12 mx-auto bg-white">
+      <h2 className="mt-16 mb-3 text-6xl text-center text-slate-950">
         PARTNER Membership FORM
       </h2>
-      <h3 className="text-slate-950 text-center text-1xl mb-16 pr-16">
+      <h3 className="pr-16 mb-16 text-center text-slate-950 text-1xl">
         Drop us a line through the form below and we will get back to you
       </h3>
-      <h4 className="text-slate-950 text-left text-2xl ">
+      <h4 className="text-2xl text-left text-slate-950 ">
         Personal Informations
       </h4>
       <hr className="h-0.5 mt-2 mb-6 bg-gray-100 border-0 dark:bg-gray-700"></hr>
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
-        <div className="grid grid-cols-3 mb-10 justify-center items-center">
-          <div className="grid justify-center items-center">
+        <div className="grid items-center justify-center grid-cols-3 mb-10">
+          <div className="grid items-center justify-center">
             <label htmlFor="" className="block mb-1 text-slate-950">
               Full Name
             </label>
@@ -110,12 +113,46 @@ export default function BusinessPartnerShiphtmlform() {
             )}
 
             <br />
-            
-            
-            <Input register={register} errors={errors} nameInput='email' type='email' label='Email' required='Your Email is Invalid' patternValue='^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$' patternMessage='Please Enter Correct Email!' placeholder='Your Email Address' className='bg-amber-100 px-2 py-1 rounded-md shadow-md' labelClass='block mb-1 text-slate-950'/>
-            <Input register={register} errors={errors} nameInput='streetAddress' type='text' label='Street Address' required='Your Street Address is required.' patternValue='' patternMessage='' placeholder='Your Street Address*' className='bg-amber-100 px-2 py-1 rounded-md shadow-md' labelClass='block mb-1 text-slate-950'/>
-            <Input register={register} errors={errors} nameInput='streetAddress' type='text' label='Street Address' required='Your Street Address is required.' patternValue='' patternMessage='' placeholder='Your Street Address*' className='bg-amber-100 px-2 py-1 rounded-md shadow-md' labelClass='block mb-1 text-slate-950'/>
-            
+
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="email"
+              type="email"
+              label="Email"
+              required="Your Email is Invalid"
+              patternValue="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$"
+              patternMessage="Please Enter Correct Email!"
+              placeholder="Your Email Address"
+              className="px-2 py-1 rounded-md shadow-md bg-amber-100"
+              labelClass="block mb-1 text-slate-950"
+            />
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="streetAddress"
+              type="text"
+              label="Street Address"
+              required="Your Street Address is required."
+              patternValue=""
+              patternMessage=""
+              placeholder="Your Street Address*"
+              className="px-2 py-1 rounded-md shadow-md bg-amber-100"
+              labelClass="block mb-1 text-slate-950"
+            />
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="streetAddress"
+              type="text"
+              label="Street Address"
+              required="Your Street Address is required."
+              patternValue=""
+              patternMessage=""
+              placeholder="Your Street Address*"
+              className="px-2 py-1 rounded-md shadow-md bg-amber-100"
+              labelClass="block mb-1 text-slate-950"
+            />
 
             <label htmlFor="" className="block mb-1 text-slate-950">
               Company Name
@@ -142,7 +179,7 @@ export default function BusinessPartnerShiphtmlform() {
             )}
           </div>
 
-          <div className="grid justify-center items-center">
+          <div className="grid items-center justify-center">
             <label htmlFor="" className="block mb-1 text-slate-950">
               Phone Number
             </label>
@@ -240,7 +277,7 @@ export default function BusinessPartnerShiphtmlform() {
             )}
           </div>
 
-          <div className="grid justify-center items-center">
+          <div className="grid items-center justify-center">
             <label htmlFor="" className="block mb-1 text-slate-950">
               Birth Time
             </label>
@@ -336,7 +373,7 @@ export default function BusinessPartnerShiphtmlform() {
         </div>
         <div className="flex flex-col">
           <div className="mb-6">
-            <label htmlFor="" className="block text-slate-950 mb-2">
+            <label htmlFor="" className="block mb-2 text-slate-950">
               Preferred areas for investment*
             </label>
             <input
@@ -361,7 +398,7 @@ export default function BusinessPartnerShiphtmlform() {
             )}
           </div>
           <div className="mb-16">
-            <label htmlFor="" className="block text-slate-950 mb-2">
+            <label htmlFor="" className="block mb-2 text-slate-950">
               How did you get to know us? *
             </label>
             <input
@@ -388,11 +425,10 @@ export default function BusinessPartnerShiphtmlform() {
           <div className="mx-auto">
             <button
               type="submit"
-              className="bg-amber-800 text-white px-12 py-2 rounded-lg mb-24"
+              className="px-12 py-2 mb-24 text-white rounded-lg bg-amber-800"
               disabled={send}
-
             >
-            {send ? "Sending ..." : "Send"}
+              {send ? 'Sending ...' : 'Send'}
             </button>
           </div>
         </div>
