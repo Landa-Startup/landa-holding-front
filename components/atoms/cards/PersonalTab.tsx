@@ -7,7 +7,8 @@ import IconRoundedEmail from '../IconRoundedEmail';
 
 
 
-export default function page({ image }: { image: string }) {
+export default function PersonalTab({ image,name,position }: { image: string,name:string,position:string }) {
+  
   return (
     <div className='sm:' >
 
@@ -37,10 +38,9 @@ export default function page({ image }: { image: string }) {
 
               <div className=" mt-28 ">
                 <hr className="  ml-14 mr-14 " />
-                {/* TODO: use props for name and position instead of static data like "lucy Clark" */}
                 <div className="  flex flex-col items-center  ">
-                  <span className="  text-[#FFF] font-normal ">lucy Clark</span>
-                  <span className="text-[#FAFAFA] font-light ">Front-end</span>
+                  <span className="  text-[#FFF] font-normal "> {name} </span>
+                  <span className="text-[#FAFAFA] font-light "> {position} </span>
                 </div>
               </div>
             </div>
