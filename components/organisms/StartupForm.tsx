@@ -7,7 +7,7 @@ import RadioButton from '../atoms/RadioButton';
 import TwoOptionRadio from '../atoms/TwoOptionRadio';
 import Button from '../atoms/Button';
 import Input from './base/Input';
-import {startupsFormData} from '../../app/type/global';
+import { startupsFormData } from '../../app/types/global';
 
 enum Type {
   IDEA = 'IDEA',
@@ -28,7 +28,6 @@ enum Level {
   realisticSystem = 'realisticSystem',
   qualifiedSystem = 'qualifiedSystem',
 }
-
 
 const StartupForm = () => {
   const initialFormData: startupsFormData = {
@@ -53,19 +52,19 @@ const StartupForm = () => {
     scalable: '',
     monetizationOfYourPlan: '',
     structureOfYourSales: '',
-    financialModelFile:  null as File | null,
+    financialModelFile: null as File | null,
     cooperatedWithInvestors: '',
     financial: true,
-    financialFile:null as File | null ,        
-    customerCharacteristic:'',  
-    currentCustomers:'',
-    estimatedMarketSize:'',
+    financialFile: null as File | null,
+    customerCharacteristic: '',
+    currentCustomers: '',
+    estimatedMarketSize: '',
     totalTamSamSom: '',
-    startupRevenue: '' ,
-    monthlyIncome:'',
-    currentInterestRate:'' ,
-    currentRaisedFunding:'',
-    neededCapital:'' ,
+    startupRevenue: '',
+    monthlyIncome: '',
+    currentInterestRate: '',
+    currentRaisedFunding: '',
+    neededCapital: '',
   };
 
   const {
@@ -163,14 +162,20 @@ const StartupForm = () => {
       formData.monetizationOfYourPlan
     );
     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
-    sendFormData.append('financialModelFile', formData.financialModelFile as Blob);
+    sendFormData.append(
+      'financialModelFile',
+      formData.financialModelFile as Blob
+    );
     sendFormData.append(
       'cooperatedWithInvestors',
       formData.cooperatedWithInvestors
     );
     sendFormData.append('financial', String(formData.financial));
     sendFormData.append('financialFile', formData.financialFile as Blob);
-    sendFormData.append('customerCharacteristic', formData.customerCharacteristic);
+    sendFormData.append(
+      'customerCharacteristic',
+      formData.customerCharacteristic
+    );
     sendFormData.append('currentCustomers', formData.currentCustomers);
     sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
     sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
@@ -370,19 +375,19 @@ const StartupForm = () => {
                 Do you have Pitch deck?*
               </div>
               <div className="flex items-center space-x-4">
-              <Input
-              register={register}
-              errors={errors}
-              nameInput="productName"
-              type="radio"
-              label="Product Name"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
+                <Input
+                  register={register}
+                  errors={errors}
+                  nameInput="productName"
+                  type="radio"
+                  label="Product Name"
+                  required="Street Address is Required."
+                  placeholder="Enter your Street Address"
+                  className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+                  labelClass="text-[#6b6b6b] dark:text-current"
+                  patternValue={''}
+                  patternMessage={''}
+                />
                 <label htmlFor="pitchDeckYes" className="text-lg font-medium">
                   Yes
                 </label>

@@ -4,9 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import NotificationSendForm from './base/NotificationSendForm';
 import Input from './base/Input';
-import {BusinessPartnerShipFormData}  from '../../app/type/global';
-
-
+import { BusinessPartnerShipFormData } from '../../app/types/global';
 
 export default function BusinessPartnerShiphtmlform() {
   const initialFormData: BusinessPartnerShipFormData = {
@@ -40,8 +38,7 @@ export default function BusinessPartnerShiphtmlform() {
   const [send, setSend] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  
-  
+
   const onSubmit = async (formData: BusinessPartnerShipFormData) => {
     setIsSubmitting(true);
     setSend(true);
@@ -111,12 +108,46 @@ export default function BusinessPartnerShiphtmlform() {
             )}
 
             <br />
-            
-            
-            <Input register={register} errors={errors} nameInput='email' type='email' label='Email' required='Your Email is Invalid' patternValue='^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$' patternMessage='Please Enter Correct Email!' placeholder='Your Email Address' className='px-2 py-1 rounded-md shadow-md bg-amber-100' labelClass='block mb-1 text-slate-950'/>
-            <Input register={register} errors={errors} nameInput='streetAddress' type='text' label='Street Address' required='Your Street Address is required.' patternValue='' patternMessage='' placeholder='Your Street Address*' className='px-2 py-1 rounded-md shadow-md bg-amber-100' labelClass='block mb-1 text-slate-950'/>
-            <Input register={register} errors={errors} nameInput='streetAddress' type='text' label='Street Address' required='Your Street Address is required.' patternValue='' patternMessage='' placeholder='Your Street Address*' className='px-2 py-1 rounded-md shadow-md bg-amber-100' labelClass='block mb-1 text-slate-950'/>
-            
+
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="email"
+              type="email"
+              label="Email"
+              required="Your Email is Invalid"
+              patternValue="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$"
+              patternMessage="Please Enter Correct Email!"
+              placeholder="Your Email Address"
+              className="px-2 py-1 rounded-md shadow-md bg-amber-100"
+              labelClass="block mb-1 text-slate-950"
+            />
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="streetAddress"
+              type="text"
+              label="Street Address"
+              required="Your Street Address is required."
+              patternValue=""
+              patternMessage=""
+              placeholder="Your Street Address*"
+              className="px-2 py-1 rounded-md shadow-md bg-amber-100"
+              labelClass="block mb-1 text-slate-950"
+            />
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="streetAddress"
+              type="text"
+              label="Street Address"
+              required="Your Street Address is required."
+              patternValue=""
+              patternMessage=""
+              placeholder="Your Street Address*"
+              className="px-2 py-1 rounded-md shadow-md bg-amber-100"
+              labelClass="block mb-1 text-slate-950"
+            />
 
             <label htmlFor="" className="block mb-1 text-slate-950">
               Company Name
@@ -391,9 +422,8 @@ export default function BusinessPartnerShiphtmlform() {
               type="submit"
               className="px-12 py-2 mb-24 text-white rounded-lg bg-amber-800"
               disabled={send}
-
             >
-            {send ? "Sending ..." : "Send"}
+              {send ? 'Sending ...' : 'Send'}
             </button>
           </div>
         </div>

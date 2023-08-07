@@ -4,8 +4,7 @@ import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import InvestorRegistrationTitle from '../atoms/InvestorRegistrationTitle';
-import {InvestorRegistrationFormData} from '../../app/type/global';
-
+import { InvestorRegistrationFormData } from '../../app/types/global';
 
 export default function InvestorRegistrationForm() {
   const {
@@ -43,7 +42,7 @@ export default function InvestorRegistrationForm() {
   return (
     <>
       <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <InvestorRegistrationTitle/>
+        <InvestorRegistrationTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <Input

@@ -4,9 +4,7 @@ import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
-import {partnerMembershipFormData} from '../../app/type/global';
-
-
+import { partnerMembershipFormData } from '../../app/types/global';
 
 export default function PartnerMembershipForm() {
   const {
