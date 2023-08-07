@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // import Banner from '@/components/Banner'
+=======
+import Banner from '@/components/molecules/Banner'
+>>>>>>> origin/develop
 import InvestorRegistrationForm from '@/components/organisms/InvestorRegistrationForm'
 import React from 'react'
 

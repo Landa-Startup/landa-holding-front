@@ -7,7 +7,10 @@ cloudinary.config({
     api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
     api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
 });
-const upload = async (files: File[], path: string = 'images') => {
+interface UploadFile extends File {
+    filepath: string;
+}
+const upload = async (files: UploadFile[], path: string = 'images') => {
     const urls = [];
     for (const file of files) {
         const uploadResult = await cloudinary.uploader.upload(file.filepath, {
