@@ -2,23 +2,23 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 enum Type {
-  IDEA='IDEA',
-  MVP='MVP',
-  TRIAL='TRIAL',
-  FisrtScale='FisrtScale',
-  SaleDevelopment='SaleDevelopment',
+  IDEA = 'IDEA',
+  MVP = 'MVP',
+  TRIAL = 'TRIAL',
+  FisrtScale = 'FisrtScale',
+  SaleDevelopment = 'SaleDevelopment',
 }
 
 enum Level {
-  basicPrinciple='basicPrinciple',
-  technologyConcept='technologyConcept',
-  exprimentalProof='exprimentalProof',
-  confirmedTechnologyLab='confirmedTechnologyLab',
-  confirmedTechnologyEnv='confirmedTechnologyEnv',
-  presentedTechnologyEnv='presentedTechnologyEnv',
-  systemPrototypeInMvp='systemPrototypeInMvp',
-  realisticSystem='realisticSystem',
-  qualifiedSystem='qualifiedSystem',
+  basicPrinciple = 'basicPrinciple',
+  technologyConcept = 'technologyConcept',
+  exprimentalProof = 'exprimentalProof',
+  confirmedTechnologyLab = 'confirmedTechnologyLab',
+  confirmedTechnologyEnv = 'confirmedTechnologyEnv',
+  presentedTechnologyEnv = 'presentedTechnologyEnv',
+  systemPrototypeInMvp = 'systemPrototypeInMvp',
+  realisticSystem = 'realisticSystem',
+  qualifiedSystem = 'qualifiedSystem',
 }
 
 interface FormData {
@@ -98,30 +98,43 @@ const StartupForm = () => {
   const [filePost, setFilePost] = useState<{ pitch: File | null }>({
     pitch: null,
   });
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState<FormData>(initialFormData);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.name === 'pitch') {
-      if (e.target.files && e.target.files.length > 0) {
-        setFilePost({ pitch: e.target.files[0] });
-      }
-      console.log(e.target.files);
-    }
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.name === 'pitch') {
+  //     if (e.target.files && e.target.files.length > 0) {
+  //       setFilePost({ pitch: e.target.files[0] });
+  //     }
+  //     console.log(e.target.files);
+  //   }
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
+
+  const handlePitchDeckFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const pitchDeckFile = event.target.files && event.target.files[0];
+    setFormData({ ...formData, pitchDeckFile });
   };
+
+  const handleBusinessPlanFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const businessPlanFile = event.target.files && event.target.files[0];
+    setFormData({ ...formData, businessPlanFile });
+  };
+
+  // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = event.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
   const onSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
     setSend(true);
 
-    
     const sendFormData = new FormData();
 
     // TODO: fix this condition for other field
     if (filePost.pitch) {
       sendFormData.append('pitch', filePost.pitch, filePost.pitch.name);
     }
-
 
     sendFormData.append('fullName', formData.firstName);
     sendFormData.append('lastName', formData.lastName);
@@ -142,18 +155,37 @@ const StartupForm = () => {
     sendFormData.append('solution', formData.solution);
     sendFormData.append('productLevel', formData.productLevel);
     sendFormData.append('scalable', formData.scalable);
-    sendFormData.append('monetizationOfYourPlan', formData.monetizationOfYourPlan);
+    sendFormData.append(
+      'monetizationOfYourPlan',
+      formData.monetizationOfYourPlan
+    );
     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
     sendFormData.append('financialModel', formData.financialModel);
-    sendFormData.append('cooperatedWithInvestors', formData.cooperatedWithInvestors)
-    sendFormData.append('financial', String(formData.financial))
+    sendFormData.append(
+      'cooperatedWithInvestors',
+      formData.cooperatedWithInvestors
+    );
+    sendFormData.append('financial', String(formData.financial));
+      
+
+
+// TODO: use this code
+// const keys = Object.keys(initialFormData);
+// keys.forEach(key:string => {
+//   if (key.endsWith('File')) {
+//     sendFormData.append(key, formData[key] instanceof Blob ? formData[key] : new Blob());
+//   } else {
+//     sendFormData.append(key, String(formData[key]));
+//   }
+// });
+
 
 
     try {
-      const response = await fetch("/api/upload-form", {
-        method: "POST",
-        body: sendFormData
-    });
+      const response = await fetch('/api/upload-form', {
+        method: 'POST',
+        body: sendFormData,
+      });
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
