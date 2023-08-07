@@ -4,31 +4,18 @@ import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
+import {partnerMembershipFormData} from '../../app/type/global';
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  birthDate: string;
-  countryOfResidence: string;
-  provinceOfResidence: string;
-  streetAddress: string;
-  streetAddressLine2: string;
-  postalCode: string;
-  companyName: string;
-  investmentCeiling: string;
-  positionInTeam: string;
-  preferredAreas: string;
-  howDidYouKnowUs: string;
-}
+
 
 export default function PartnerMembershipForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>();
+  } = useForm<partnerMembershipFormData>();
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (data: partnerMembershipFormData) => {
     try {
       const response = await fetch('/api/partner-membership', {
         method: 'POST',
