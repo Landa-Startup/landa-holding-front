@@ -1,24 +1,30 @@
 'use client';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import TextArea from '../atoms/TextArea';
+import UploadInput from '../atoms/UploadInput';
+import RadioButton from '../atoms/RadioButton';
+import TwoOptionRadio from '../atoms/TwoOptionRadio';
+import Input from '../atoms/Input';
+import Button from '../atoms/Button';
 enum Type {
-  IDEA='IDEA',
-  MVP='MVP',
-  TRIAL='TRIAL',
-  FisrtScale='FisrtScale',
-  SaleDevelopment='SaleDevelopment',
+  IDEA = 'IDEA',
+  MVP = 'MVP',
+  TRIAL = 'TRIAL',
+  FisrtScale = 'FisrtScale',
+  SaleDevelopment = 'SaleDevelopment',
 }
 
 enum Level {
-  basicPrinciple='basicPrinciple',
-  technologyConcept='technologyConcept',
-  exprimentalProof='exprimentalProof',
-  confirmedTechnologyLab='confirmedTechnologyLab',
-  confirmedTechnologyEnv='confirmedTechnologyEnv',
-  presentedTechnologyEnv='presentedTechnologyEnv',
-  systemPrototypeInMvp='systemPrototypeInMvp',
-  realisticSystem='realisticSystem',
-  qualifiedSystem='qualifiedSystem',
+  basicPrinciple = 'basicPrinciple',
+  technologyConcept = 'technologyConcept',
+  exprimentalProof = 'exprimentalProof',
+  confirmedTechnologyLab = 'confirmedTechnologyLab',
+  confirmedTechnologyEnv = 'confirmedTechnologyEnv',
+  presentedTechnologyEnv = 'presentedTechnologyEnv',
+  systemPrototypeInMvp = 'systemPrototypeInMvp',
+  realisticSystem = 'realisticSystem',
+  qualifiedSystem = 'qualifiedSystem',
 }
 
 interface FormData {
@@ -98,30 +104,43 @@ const StartupForm = () => {
   const [filePost, setFilePost] = useState<{ pitch: File | null }>({
     pitch: null,
   });
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState<FormData>(initialFormData);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.name === 'pitch') {
-      if (e.target.files && e.target.files.length > 0) {
-        setFilePost({ pitch: e.target.files[0] });
-      }
-      console.log(e.target.files);
-    }
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.name === 'pitch') {
+  //     if (e.target.files && e.target.files.length > 0) {
+  //       setFilePost({ pitch: e.target.files[0] });
+  //     }
+  //     console.log(e.target.files);
+  //   }
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
+
+  const handlePitchDeckFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const pitchDeckFile = event.target.files && event.target.files[0];
+    setFormData({ ...formData, pitchDeckFile });
   };
+
+  const handleBusinessPlanFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const businessPlanFile = event.target.files && event.target.files[0];
+    setFormData({ ...formData, businessPlanFile });
+  };
+
+  // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = event.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
   const onSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
     setSend(true);
 
-    
     const sendFormData = new FormData();
 
     // TODO: fix this condition for other field
     if (filePost.pitch) {
       sendFormData.append('pitch', filePost.pitch, filePost.pitch.name);
     }
-
 
     sendFormData.append('fullName', formData.firstName);
     sendFormData.append('lastName', formData.lastName);
@@ -142,7 +161,10 @@ const StartupForm = () => {
     sendFormData.append('solution', formData.solution);
     sendFormData.append('productLevel', formData.productLevel);
     sendFormData.append('scalable', formData.scalable);
-    sendFormData.append('monetizationOfYourPlan', formData.monetizationOfYourPlan);
+    sendFormData.append(
+      'monetizationOfYourPlan',
+      formData.monetizationOfYourPlan
+    );
     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
     sendFormData.append('financialModel', formData.financialModel);
     sendFormData.append('cooperatedWithInvestors', formData.cooperatedWithInvestors)
@@ -150,10 +172,10 @@ const StartupForm = () => {
 
 
     try {
-      const response = await fetch("/api/upload-form", {
-        method: "POST",
-        body: sendFormData
-    });
+      const response = await fetch('/api/upload-form', {
+        method: 'POST',
+        body: sendFormData,
+      });
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -282,26 +304,8 @@ const StartupForm = () => {
         {/* Form with text areas */}
         {showForm && (
           <div className="grid grid-cols-2">
-            <div>
-              <label htmlFor="explainIdea" className="text-lg font-medium">
-                Explain your idea in 5 lines?*
-              </label>
-              <textarea
-                id="explainIdea"
-                className="w-full h-24 p-2 border-2 border-stone-100 rounded-lg focus:outline-none focus:border-gold"
-                placeholder="Your idea..."
-              ></textarea>
-            </div>
-            <div>
-              <label htmlFor="howDidYouKnowUs" className="text-lg font-medium">
-                How did you get to know us?*
-              </label>
-              <textarea
-                id="howDidYouKnowUs"
-                className="w-full h-24 p-2 border-2 border-stone-100 rounded-lg focus:outline-none focus:border-gold"
-                placeholder="Your answer..."
-              ></textarea>
-            </div>
+            <TextArea title="Explain your idea in 5 lines?*" halfSize={false} />
+            <TextArea title="How did you get to know us?*" halfSize={false} />
           </div>
         )}
         <div className="flex items-center space-x-4">
@@ -350,7 +354,7 @@ const StartupForm = () => {
             </div>
             <div className="flex flex-col">
               <div className="text-lg font-medium">
-                Do you have Pitch deck?*
+              Do you have Business Plan?*
               </div>
               <div className="flex items-center space-x-4">
                 <input
@@ -444,11 +448,10 @@ const StartupForm = () => {
           </div>
         </div>
         <div className="mt-4">
-          <div className="text-lg font-medium">
-            How much is the level of your product and technology preparation?
-          </div>
-
           <div className="flex flex-col">
+            <div className="text-lg font-medium">
+              How much is the level of your product and technology preparation?
+            </div>
             <div className="flex">
               <input
                 type="radio"
@@ -545,7 +548,364 @@ const StartupForm = () => {
                 A complete and qualified system.
               </label>
             </div>
+            <TextArea
+              title="Briefly explain how your technology is scalable?*"
+              halfSize={true}
+            />
+            <span className="text-black">Business model</span>
+            <TextArea
+              title="Describe the method of monetization of your plan?*"
+              halfSize={true}
+            />
+            <TextArea
+              title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+              halfSize={true}
+            />
           </div>
+          <UploadInput title="If your plan has a financial model, please upload it." />
+          <TextArea
+            title="Have you previously cooperated with investors or accelerators?*"
+            halfSize={true}
+          />
+          <TextArea title="How did you get to know us?*" halfSize={true} />
+          <RadioButton text="First Sale" />
+          <div className="flex justify-around">
+            <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload />
+            <TwoOptionRadio title="Do you have Business Plan?*" hasUpload />
+            <TwoOptionRadio title="Do you have Financial?*" hasUpload />
+          </div>
+          <Input title="Product Name" />
+          <Input title="Site Address" />
+          <span className="text-black">Problems</span>
+          <TextArea
+            title="Describe the customer problem you want to solve with your product or service. *"
+            halfSize={true}
+          />
+          <span className="text-black">Solutions</span>
+          <TextArea
+            title="What is your unique value proposition (innovation)? What is new about what you do?*"
+            halfSize={true}
+          />
+          <div className="text-lg font-medium">
+            How much is the level of your product and technology preparation?
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The basic principle has been observed
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Experimental proof of concept.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in laboratory.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The presented technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Show the system prototype in the mvp operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The proved realistic system in the operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              A complete and qualified system.
+            </label>
+          </div>
+          <TextArea
+            title="Briefly explain how your technology is scalable?*"
+            halfSize={true}
+          />
+          <span className="text-black">Business model</span>
+          <TextArea
+            title="Describe the method of monetization of your plan?*"
+            halfSize
+          />
+          <TextArea
+            title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+            halfSize
+          />
+          <UploadInput title="If your plan has a financial model, please upload it." />
+          <TextArea
+            title="Have you previously cooperated with investors or accelerators?*"
+            halfSize
+          />
+          <TextArea title="How did you get to know us?*" halfSize />
+          <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
+          <span className="text-black">Target Market</span>
+          <TextArea
+            title="Based on what characteristics do you decide who are your customers and who are not?*"
+            halfSize
+          />
+          <TextArea
+            title="Who are your current customers? How many customers have you had so far?*"
+            halfSize
+          />
+          <TextArea
+            title="How have you estimated the size of the market?*"
+            halfSize
+          />
+          <TextArea
+            title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
+            halfSize
+          />
+          <span className="text-black">Property</span>
+          <TextArea
+            title="How much revenue has your startup made since its inception?*"
+            halfSize
+          />
+          <TextArea title="How much is your monthly income?*" halfSize />
+          <TextArea title="What is your current interest rate?*" halfSize />
+          <TextArea
+            title="How much current funding did you raise before starting your business?*"
+            halfSize
+          />
+          <TextArea
+            title="How much capital do you need to start your project?*"
+            halfSize
+          />
+          <RadioButton text="Sale Development" />
+          <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload={false} />
+          <Input title="Product Name*" />
+          <Input title="Site Address*" />
+          <span className="text-black">Problems</span>
+          <TextArea
+            title="Describe the customer problem you want to solve with your product or service. *"
+            halfSize
+          />
+          <span className="text-black">Solutions</span>
+          <TextArea
+            title="What is your unique value proposition (innovation)? What is new about what you do?*"
+            halfSize
+          />
+          <TextArea
+            title="What is your unique value proposition (innovation)? What is new about what you do?*"
+            halfSize
+          />
+          <div className="text-lg font-medium">
+            How much is the level of your product and technology preparation?
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The basic principle has been observed
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Experimental proof of concept.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in laboratory.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The presented technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Show the system prototype in the mvp operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The proved realistic system in the operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              A complete and qualified system.
+            </label>
+          </div>
+          <TextArea
+            title="Briefly explain how your technology is scalable?*"
+            halfSize
+          />
+          <span className="text-black">Business model</span>
+          <TextArea
+            title="Describe the method of monetization of your plan?*"
+            halfSize
+          />
+          <TextArea
+            title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+            halfSize
+          />
+          <UploadInput title="If your plan has a financial model, please upload it." />
+          <TextArea
+            title="Have you previously cooperated with investors or accelerators?*"
+            halfSize
+          />
+          <TextArea title="How did you get to know us?*" halfSize />
+          <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
+          <TextArea
+            title="Based on what characteristics do you decide who are your customers and who are not?*"
+            halfSize
+          />
+          <TextArea
+            title="Who are your current customers? How many customers have you had so far?*"
+            halfSize
+          />
+          <TextArea
+            title="How have you estimated the size of the market?*"
+            halfSize
+          />
+          <TextArea
+            title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
+            halfSize
+          />
+          <span className="text-black">Property</span>
+          <TextArea
+            title="How much revenue has your startup made since its inception?*"
+            halfSize
+          />
+          <TextArea title="How much is your monthly income?*" halfSize />
+          <TextArea title="What is your current interest rate?*" halfSize />
+          <TextArea
+            title="How much current funding did you raise before starting your business?*"
+            halfSize
+          />
+          <TextArea
+            title="How much capital do you need to start your project?*"
+            halfSize
+          />
+          <Button text="SEND" size="" />
         </div>
       </form>
     </div>
