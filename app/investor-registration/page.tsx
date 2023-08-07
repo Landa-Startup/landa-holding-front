@@ -1,4 +1,4 @@
-import Banner from '@/components/Banner'
+import Banner from '@/components/molecules/Banner'
 import InvestorRegistrationForm from '@/components/organisms/InvestorRegistrationForm'
 import React from 'react'
 

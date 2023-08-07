@@ -1,5 +1,4 @@
 import React from 'react';
-import Hero from '@/components/molecules/Hero';
 import ContactUsForm from '@/components/organisms/ContactUsForm';
 import ContactUsDescription from '@/components/molecules/ContactUsDescription';
 import Banner from '@/components/molecules/Banner';
