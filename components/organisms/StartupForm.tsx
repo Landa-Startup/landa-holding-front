@@ -341,7 +341,7 @@ const StartupForm = () => {
             </div>
             <div className="flex flex-col">
               <div className="text-lg font-medium">
-                Do you have Pitch deck?*
+              Do you have Business Plan?*
               </div>
               <div className="flex items-center space-x-4">
                 <input
