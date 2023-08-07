@@ -1,4 +1,5 @@
 import Banner from '@/components/molecules/Banner'
+// import Banner from '@/components/Banner'
 import PartnerMembershipForm from '@/components/organisms/PartnerMembershipForm'
 import React from 'react'
 

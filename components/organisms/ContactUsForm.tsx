@@ -1,17 +1,10 @@
 'use client';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-
-interface FormData {
-  name: string;
-  email: string;
-  number: string;
-  subject: string;
-  message: string;
-}
+import { contactUSFormData } from '../../app/types/global';
 
 export default function ContactUsForm() {
-  const initialFormData: FormData = {
+  const initialFormData: contactUSFormData = {
     name: '',
     email: '',
     number: '',
@@ -24,12 +17,12 @@ export default function ContactUsForm() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<FormData>({
+  } = useForm<contactUSFormData>({
     mode: 'onBlur',
     defaultValues: initialFormData,
   });
 
-  const onSubmit = async (formData: FormData) => {
+  const onSubmit = async (formData: contactUSFormData) => {
     try {
       const response = await fetch('/api/contact-us', {
         method: 'POST',
@@ -54,7 +47,7 @@ export default function ContactUsForm() {
     <div>
       <h2 className="text-5xl font-light text-center">Get in touch</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 gap-y-5 gap-x-6 my-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 my-6 gap-y-5 gap-x-6 md:grid-cols-2">
           <div className="flex flex-col">
             <input
               id="name"
@@ -72,7 +65,7 @@ export default function ContactUsForm() {
               }`}
             />
             {errors.name && (
-              <span className="text-sm text-yellow-500 mt-2">
+              <span className="mt-2 text-sm text-yellow-500">
                 {errors.name.message}
               </span>
             )}
@@ -94,7 +87,7 @@ export default function ContactUsForm() {
               }`}
             />
             {errors.email && (
-              <span className="text-sm text-yellow-500 mt-2">
+              <span className="mt-2 text-sm text-yellow-500">
                 {errors.email.message}
               </span>
             )}
@@ -116,7 +109,7 @@ export default function ContactUsForm() {
               }`}
             />
             {errors.number && (
-              <span className="text-sm text-yellow-500 mt-2">
+              <span className="mt-2 text-sm text-yellow-500">
                 {errors.number.message}
               </span>
             )}
@@ -138,7 +131,7 @@ export default function ContactUsForm() {
               }`}
             />
             {errors.subject && (
-              <span className="text-sm text-yellow-500 mt-2">
+              <span className="mt-2 text-sm text-yellow-500">
                 {errors.subject.message}
               </span>
             )}
