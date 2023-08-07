@@ -245,10 +245,10 @@ const StartupForm = () => {
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">
+              <span className="text-base font-normal text-black">
                 Last Name
               </span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -266,8 +266,8 @@ const StartupForm = () => {
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">Birthday</span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-black">Birthday</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -379,7 +379,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="ideaExplanation"
+            nameTextArea="getToKnowUs"
             patternMessage=''
             patternValue=''
             required=''
@@ -642,7 +642,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="monetizationOfYourPlan"
             patternMessage=''
             patternValue=''
             required=''
@@ -654,7 +654,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="structureOfYourSales"
             patternMessage=''
             patternValue=''
             required=''
@@ -670,7 +670,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="cooperatedWithInvestors"
             patternMessage=''
             patternValue=''
             required=''
@@ -681,7 +681,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="getToKnowUs"
             patternMessage=''
             patternValue=''
             required=''
@@ -728,7 +728,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="customerProblem"
             patternMessage=''
             patternValue=''
             required=''
@@ -740,7 +740,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="solution"
             patternMessage=''
             patternValue=''
             required=''
@@ -862,7 +862,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="monetizationOfYourPlan"
             patternMessage=''
             patternValue=''
             required=''
@@ -873,7 +873,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="structureOfYourSales"
             patternMessage=''
             patternValue=''
             required=''
@@ -888,7 +888,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="cooperatedWithInvestors"
             patternMessage=''
             patternValue=''
             required=''
@@ -900,7 +900,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="getToKnowUs"
             patternMessage=''
             patternValue=''
             required=''
@@ -915,7 +915,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="nameTextArea"
             patternMessage=''
             patternValue=''
             required=''
@@ -927,7 +927,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="currentCustomers"
             patternMessage=''
             patternValue=''
             required=''
@@ -939,7 +939,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="estimatedMarketSize"
             patternMessage=''
             patternValue=''
             required=''
@@ -951,7 +951,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="totalTamSamSom"
             patternMessage=''
             patternValue=''
             required=''
@@ -964,7 +964,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="startupRevenue"
             patternMessage=''
             patternValue=''
             required=''
@@ -976,7 +976,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="monthlyIncome"
             patternMessage=''
             patternValue=''
             required=''
@@ -988,7 +988,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="currentInterestRate"
             patternMessage=''
             patternValue=''
             required=''
@@ -1000,7 +1000,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="currentRaisedFunding"
             patternMessage=''
             patternValue=''
             required=''
@@ -1012,7 +1012,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="neededCapital"
             patternMessage=''
             patternValue=''
             required=''
@@ -1056,7 +1056,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="customerProblem"
             patternMessage=''
             patternValue=''
             required=''
@@ -1069,7 +1069,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="solution"
             patternMessage=''
             patternValue=''
             required=''
@@ -1205,7 +1205,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="monetizationOfYourPlan"
             patternMessage=''
             patternValue=''
             required=''
@@ -1216,7 +1216,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="structureOfYourSales"
             patternMessage=''
             patternValue=''
             required=''
@@ -1229,7 +1229,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="cooperatedWithInvestors"
             patternMessage=''
             patternValue=''
             required=''
@@ -1241,7 +1241,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="getToKnowUs"
             patternMessage=''
             patternValue=''
             required=''
@@ -1254,7 +1254,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="customerCharacteristic"
             patternMessage=''
             patternValue=''
             required=''
@@ -1266,7 +1266,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="currentCustomers"
             patternMessage=''
             patternValue=''
             required=''
@@ -1279,7 +1279,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="estimatedMarketSize"
             patternMessage=''
             patternValue=''
             required=''
@@ -1292,7 +1292,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="totalTamSamSom"
             patternMessage=''
             patternValue=''
             required=''
@@ -1305,7 +1305,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="startupRevenue"
             patternMessage=''
             patternValue=''
             required=''
@@ -1318,7 +1318,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="monthlyIncome"
             patternMessage=''
             patternValue=''
             required=''
@@ -1330,7 +1330,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="currentInterestRate"
             patternMessage=''
             patternValue=''
             required=''
@@ -1341,7 +1341,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="currentRaisedFunding"
             patternMessage=''
             patternValue=''
             required=''
@@ -1353,7 +1353,7 @@ const StartupForm = () => {
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
+            nameTextArea="neededCapital"
             patternMessage=''
             patternValue=''
             required=''

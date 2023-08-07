@@ -4,12 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import NotificationSendForm from './base/NotificationSendForm';
 import Input from './base/Input';
-<<<<<<< HEAD
-import {FormData} from '../../app/types/global'
-
-=======
 import { BusinessPartnerShipFormData } from '../../app/types/global';
->>>>>>> origin/develop
 
 export default function BusinessPartnerShiphtmlform() {
   const initialFormData: BusinessPartnerShipFormData = {
