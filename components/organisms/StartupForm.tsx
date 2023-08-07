@@ -104,17 +104,32 @@ const StartupForm = () => {
   const [filePost, setFilePost] = useState<{ pitch: File | null }>({
     pitch: null,
   });
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState<FormData>(initialFormData);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.name === 'pitch') {
-      if (e.target.files && e.target.files.length > 0) {
-        setFilePost({ pitch: e.target.files[0] });
-      }
-      console.log(e.target.files);
-    }
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.name === 'pitch') {
+  //     if (e.target.files && e.target.files.length > 0) {
+  //       setFilePost({ pitch: e.target.files[0] });
+  //     }
+  //     console.log(e.target.files);
+  //   }
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
+
+  const handlePitchDeckFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const pitchDeckFile = event.target.files && event.target.files[0];
+    setFormData({ ...formData, pitchDeckFile });
   };
+
+  const handleBusinessPlanFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const businessPlanFile = event.target.files && event.target.files[0];
+    setFormData({ ...formData, businessPlanFile });
+  };
+
+  // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = event.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
   const onSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
@@ -152,11 +167,9 @@ const StartupForm = () => {
     );
     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
     sendFormData.append('financialModel', formData.financialModel);
-    sendFormData.append(
-      'cooperatedWithInvestors',
-      formData.cooperatedWithInvestors
-    );
-    sendFormData.append('financial', String(formData.financial));
+    sendFormData.append('cooperatedWithInvestors', formData.cooperatedWithInvestors)
+    sendFormData.append('financial', String(formData.financial))
+
 
     try {
       const response = await fetch('/api/upload-form', {

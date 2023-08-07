@@ -163,9 +163,19 @@ model StartupsForm {
   scalable                String
   monetizationOfYourPlan  String
   structureOfYourSales    String
-  financialModel          String
+  financialModelFile      String?
   cooperatedWithInvestors String
   financial               Boolean
+  financialFile           String
+  customerCharacteristic  String
+  currentCustomers        String
+  estimatedMarketSize     String
+  totalTamSamSom          String
+  startupRevenue          String
+  monthlyIncome           String
+  currentInterestRate     String
+  currentRaisedFunding    String
+  neededCapital           String
   createdAt               DateTime @default(now())
   updatedAt               DateTime @updatedAt
 }
