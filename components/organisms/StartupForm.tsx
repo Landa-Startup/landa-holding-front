@@ -5,8 +5,8 @@ import TextArea from '../atoms/TextArea';
 import UploadInput from '../atoms/UploadInput';
 import RadioButton from '../atoms/RadioButton';
 import TwoOptionRadio from '../atoms/TwoOptionRadio';
-import Input from '../atoms/Input';
 import Button from '../atoms/Button';
+import Input from './base/Input';
 enum Type {
   IDEA = 'IDEA',
   MVP = 'MVP',
@@ -92,10 +92,17 @@ const StartupForm = () => {
     defaultValues: initialFormData,
   });
 
-  const [showForm, setShowForm] = useState(false);
+  const [selectedRadio, setSelectedRadio] = useState('');
 
-  const handleRadioChange = (e: any) => {
-    setShowForm(e.target.value === 'idea' || e.target.value === 'mvp');
+  const handleRadioChange = (radioValue: string) => {
+    setSelectedRadio(radioValue);
+  };
+
+  const renderForm = (radioValue: string) => {
+    if (selectedRadio === radioValue) {
+      return <form>{/* Form content */}</form>;
+    }
+    return null;
   };
 
   const [send, setSend] = useState(false);
@@ -116,12 +123,16 @@ const StartupForm = () => {
   //   setFormData({ ...formData, [e.target.name]: e.target.value });
   // };
 
-  const handlePitchDeckFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePitchDeckFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const pitchDeckFile = event.target.files && event.target.files[0];
     setFormData({ ...formData, pitchDeckFile });
   };
 
-  const handleBusinessPlanFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBusinessPlanFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const businessPlanFile = event.target.files && event.target.files[0];
     setFormData({ ...formData, businessPlanFile });
   };
@@ -167,9 +178,11 @@ const StartupForm = () => {
     );
     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
     sendFormData.append('financialModel', formData.financialModel);
-    sendFormData.append('cooperatedWithInvestors', formData.cooperatedWithInvestors)
-    sendFormData.append('financial', String(formData.financial))
-
+    sendFormData.append(
+      'cooperatedWithInvestors',
+      formData.cooperatedWithInvestors
+    );
+    sendFormData.append('financial', String(formData.financial));
 
     try {
       const response = await fetch('/api/upload-form', {
@@ -216,10 +229,19 @@ const StartupForm = () => {
               </span>
               <span className="text-stone-500 text-base font-normal">*</span>
             </div>
-            <input
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="streetAddress"
+              type="text"
+              label="Street Address"
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
               className="w-[275px] h-[31px] relative bg-stone-100 shadow"
-              placeholder="First Name"
-            ></input>
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
@@ -228,31 +250,57 @@ const StartupForm = () => {
               </span>
               <span className="text-stone-500 text-base font-normal">*</span>
             </div>
-            <input
-              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
-              placeholder="First Name"
-            ></input>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="aaa"
+              type="text"
+              label="First Name"
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
               <span className="text-black text-base font-normal">Birthday</span>
               <span className="text-stone-500 text-base font-normal">*</span>
             </div>
-            <input
-              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
-              placeholder="First Name"
-            ></input>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="aaa"
+              type="text"
+              label="First Name"
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
               <span className="text-black text-base font-normal">Email</span>
               <span className="text-stone-500 text-base font-normal">*</span>
             </div>
-            <input
-              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
-              placeholder="Email"
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="aaa"
               type="email"
-            ></input>
+              label="Email"
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
@@ -261,10 +309,19 @@ const StartupForm = () => {
               </span>
               <span className="text-stone-500 text-base font-normal">*</span>
             </div>
-            <input
-              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
-              placeholder="Country"
-            ></input>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="productName"
+              type="text"
+              label="Country"
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
@@ -273,10 +330,19 @@ const StartupForm = () => {
               </span>
               <span className="text-stone-500 text-base font-normal">*</span>
             </div>
-            <input
-              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
-              placeholder="Province"
-            ></input>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="aaa"
+              type="text"
+              label="Province"
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
           </div>
         </div>
 
@@ -289,37 +355,17 @@ const StartupForm = () => {
 
         {/* Radio buttons */}
         <div className="flex items-center space-x-4">
-          <input
-            type="radio"
-            id="idea"
-            name="projectStage"
-            value="idea"
-            onChange={handleRadioChange}
-            className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
-          />
-          <label htmlFor="idea" className="text-lg font-medium">
-            Idea
-          </label>
+          <RadioButton text="Idea" handleRadioChange={handleRadioChange} />
         </div>
         {/* Form with text areas */}
-        {showForm && (
-          <div className="grid grid-cols-2">
-            <TextArea title="Explain your idea in 5 lines?*" halfSize={false} />
-            <TextArea title="How did you get to know us?*" halfSize={false} />
-          </div>
-        )}
+
+        <div className="grid grid-cols-2">
+          <TextArea title="Explain your idea in 5 lines?*" halfSize={false} />
+          <TextArea title="How did you get to know us?*" halfSize={false} />
+        </div>
+
         <div className="flex items-center space-x-4">
-          <input
-            type="radio"
-            id="mvp"
-            name="projectStage"
-            value="mvp"
-            onChange={handleRadioChange}
-            className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
-          />
-          <label htmlFor="mvp" className="text-lg font-medium">
-            Minimal Valuable Product
-          </label>
+          <RadioButton text="hi" handleRadioChange={handleRadioChange} />
         </div>
         {/* Form for Minimal Valuable Product */}
         <div className="w-1/2">
@@ -329,13 +375,19 @@ const StartupForm = () => {
                 Do you have Pitch deck?*
               </div>
               <div className="flex items-center space-x-4">
-                <input
-                  type="radio"
-                  id="pitchDeckYes"
-                  name="pitchDeckOption"
-                  value="yes"
-                  className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
-                />
+              <Input
+              register={register}
+              errors={errors}
+              nameInput="productName"
+              type="radio"
+              label="Product Name"
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
                 <label htmlFor="pitchDeckYes" className="text-lg font-medium">
                   Yes
                 </label>
@@ -354,7 +406,7 @@ const StartupForm = () => {
             </div>
             <div className="flex flex-col">
               <div className="text-lg font-medium">
-                Do you have Pitch deck?*
+                Do you have Business Plan?*
               </div>
               <div className="flex items-center space-x-4">
                 <input
@@ -568,14 +620,41 @@ const StartupForm = () => {
             halfSize={true}
           />
           <TextArea title="How did you get to know us?*" halfSize={true} />
-          <RadioButton text="First Sale" />
+          <RadioButton
+            text="First Sale"
+            handleRadioChange={handleRadioChange}
+          />
           <div className="flex justify-around">
             <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload />
             <TwoOptionRadio title="Do you have Business Plan?*" hasUpload />
             <TwoOptionRadio title="Do you have Financial?*" hasUpload />
           </div>
-          <Input title="Product Name" />
-          <Input title="Site Address" />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Product Name"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Site Address"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
           <span className="text-black">Problems</span>
           <TextArea
             title="Describe the customer problem you want to solve with your product or service. *"
@@ -737,10 +816,37 @@ const StartupForm = () => {
             title="How much capital do you need to start your project?*"
             halfSize
           />
-          <RadioButton text="Sale Development" />
+          <RadioButton
+            text="Sale Development"
+            handleRadioChange={handleRadioChange}
+          />
           <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload={false} />
-          <Input title="Product Name*" />
-          <Input title="Site Address*" />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Product Name"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Site Address"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
           <span className="text-black">Problems</span>
           <TextArea
             title="Describe the customer problem you want to solve with your product or service. *"
