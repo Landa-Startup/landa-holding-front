@@ -4,7 +4,8 @@ import React from 'react';
 
 export default function Navbar() {
   return (
-    <div className="z-10 inline-flex items-center justify-end ml-32 mt-9">
+    <div className="z-10 inline-flex items-center ml-32 absolute  mt-[52px]">
+
       <Link className="w-36 h-16 justify-end items-end gap-0.5 inline-flex" href={"/"}>
         <Image
           src={'static/images/Logo.svg'}

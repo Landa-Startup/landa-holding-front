@@ -1,16 +1,18 @@
 import React from 'react'
-
+import Image from 'next/image'
 export default function AboutUsProfileCard({ image, title, description }: { image: string, title: string, description: string }) {
     return (
-        <div>
-            <div className="grid">
-
-
-                <img
-                    className="w-[390px] h-[400px] shrink-0"
+       
+            <div className='container bg-whiteGold w-fit h-fit mb-6  shadow-lg'>
+                <Image
+                    alt='image'
+                    width={320}
+                    height={320}
                     src={image}
-                ></img>
-                <div className=" flex gap-4 ml-28 mt-6">
+                />
+
+                <div className="flex justify-center items-center space-x-2 p-2 mt-6  ">
+
                     <img
                         className="shrink-0 w-9 h-9"
                         src="/static/images/03bc78eaab3dcbbdddec7554e9d34351.png"
@@ -23,15 +25,26 @@ export default function AboutUsProfileCard({ image, title, description }: { imag
                         className="shrink-0 w-9 h-9"
                         src="/static/images/aeb307f84efb8c124b331799a6f734e6.png"
                     ></img>
+
                     <img
                         className="shrink-0 w-9 h-9"
                         src="/static/images/c897906edf05703723098f4a66032d9b.png"
                     ></img>
+
                 </div>
-                <p className="text-gray-700 text-justify font-Barlow text-xs not-italic	font-medium	leading-normal ml-[164.5px] mt-2">
-                    {title}
-                </p>
-            </div>
-        </div>
+
+                <div >
+             <div className='ml-20'>
+                    <p className="text-gray-700 text-justify font-Barlow text-xs not-italic	font-medium	leading-normal  mt-2 ml-9">
+                        {title}
+                    </p>
+                    <p className="text-gray-700 text-justify font-Barlow text-xs not-italic	font-medium	leading-normal  mt-2 mb-[16px]">
+                        {description}
+                    </p>
+
+             </div>
+                </div>
+            </div>  
+       
     )
 }
