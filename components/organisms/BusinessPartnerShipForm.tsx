@@ -4,23 +4,8 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import NotificationSendForm from './base/NotificationSendForm';
 import Input from './base/Input';
+import {FormData} from '../../app/types/global'
 
-interface FormData {
-  fullName: string;
-  email: string;
-  streetAddress: string;
-  companyName: string;
-  phoneNumber: string;
-  countryOfEsidence: string;
-  streetAddressLine2: string;
-  investmentCeiling: string;
-  birthTime: Date;
-  provinceOfResidence: string;
-  zipCode: number;
-  yourPositionInTeam: string;
-  preferredInvestment: string;
-  wayKnowUs: string;
-}
 
 export default function BusinessPartnerShiphtmlform() {
   const initialFormData: FormData = {

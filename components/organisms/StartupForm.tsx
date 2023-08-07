@@ -234,7 +234,47 @@ const StartupForm = () => {
               errors={errors}
               nameInput="streetAddress"
               type="text"
-              label="Street Address"
+              label=""
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-black text-base font-normal">
+                Last Name
+              </span>
+              <span className="text-stone-500 text-base font-normal">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="lastName"
+              type="text"
+              label=""
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-black text-base font-normal">Birthday</span>
+              <span className="text-stone-500 text-base font-normal">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="birthDate"
+              type="text"
+              label=""
               required="Street Address is Required."
               placeholder="Enter your Street Address"
               className="w-[275px] h-[31px] relative bg-stone-100 shadow"
@@ -254,50 +294,12 @@ const StartupForm = () => {
               register={register}
               errors={errors}
               nameInput="aaa"
-              type="text"
-              label="First Name"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-          </div>
-          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
-            <div className="h-[17px]">
-              <span className="text-black text-base font-normal">Birthday</span>
-              <span className="text-stone-500 text-base font-normal">*</span>
-            </div>
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="aaa"
-              type="text"
-              label="First Name"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-          </div>
-          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
-            <div className="h-[17px]">
-              <span className="text-black text-base font-normal">Email</span>
-              <span className="text-stone-500 text-base font-normal">*</span>
-            </div>
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="aaa"
               type="email"
-              label="Email"
-              required="Street Address is Required."
+              label=""
+              required="Email Address is Required."
               placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
-              labelClass="text-[#6b6b6b] dark:text-current"
+              className="w-[275px] h-[31px] bg-stone-100 shadow"
+              labelClass="text-black text-base font-normal"
               patternValue={''}
               patternMessage={''}
             />
@@ -312,12 +314,12 @@ const StartupForm = () => {
             <Input
               register={register}
               errors={errors}
-              nameInput="productName"
+              nameInput="countryOfResidence"
               type="text"
-              label="Country"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              label=""
+              required="countryOfResidence is Required."
+              placeholder="Enter your countryOfResidence"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
               labelClass="text-[#6b6b6b] dark:text-current"
               patternValue={''}
               patternMessage={''}
@@ -333,12 +335,12 @@ const StartupForm = () => {
             <Input
               register={register}
               errors={errors}
-              nameInput="aaa"
+              nameInput="provinceOfResidence"
               type="text"
-              label="Province"
-              required="Street Address is Required."
+              label=""
+              required="provinceOfResidence is Required."
               placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
               labelClass="text-[#6b6b6b] dark:text-current"
               patternValue={''}
               patternMessage={''}
@@ -360,8 +362,29 @@ const StartupForm = () => {
         {/* Form with text areas */}
 
         <div className="grid grid-cols-2">
-          <TextArea title="Explain your idea in 5 lines?*" halfSize={false} />
-          <TextArea title="How did you get to know us?*" halfSize={false} />
+          <TextArea
+            title="Explain your idea in 5 lines?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="ideaExplanation"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+                    <TextArea
+            title="How did you get to know us?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="ideaExplanation"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
         </div>
 
         <div className="flex items-center space-x-4">
@@ -375,19 +398,19 @@ const StartupForm = () => {
                 Do you have Pitch deck?*
               </div>
               <div className="flex items-center space-x-4">
-              <Input
-              register={register}
-              errors={errors}
-              nameInput="productName"
-              type="radio"
-              label="Product Name"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
+                <Input
+                  register={register}
+                  errors={errors}
+                  nameInput="productName"
+                  type="radio"
+                  label="Product Name"
+                  required="Street Address is Required."
+                  placeholder="Enter your Street Address"
+                  className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+                  labelClass="text-[#6b6b6b] dark:text-current"
+                  patternValue={''}
+                  patternMessage={''}
+                />
                 <label htmlFor="pitchDeckYes" className="text-lg font-medium">
                   Yes
                 </label>
@@ -402,7 +425,7 @@ const StartupForm = () => {
                   No
                 </label>
               </div>
-              <input type="file" onChange={handlePitchDeckFileChange}/>
+              <input type="file" onChange={handlePitchDeckFileChange} />
             </div>
             <div className="flex flex-col">
               <div className="text-lg font-medium">
@@ -431,7 +454,7 @@ const StartupForm = () => {
                 </label>
               </div>
 
-              <input type="file" onChange={handleBusinessPlanFileChange}/>
+              <input type="file" onChange={handleBusinessPlanFileChange} />
             </div>
           </div>
           <div className="grid grid-cols-2">
@@ -601,25 +624,68 @@ const StartupForm = () => {
               </label>
             </div>
             <TextArea
-              title="Briefly explain how your technology is scalable?*"
-              halfSize={true}
-            />
+            title="Briefly explain how your technology is scalable?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+            How did you get to know us?*
             <span className="text-black">Business model</span>
             <TextArea
-              title="Describe the method of monetization of your plan?*"
-              halfSize={true}
-            />
-            <TextArea
-              title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
-              halfSize={true}
-            />
+            title="Describe the method of monetization of your plan?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          
+          <TextArea
+            title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          
+
+
           </div>
           <UploadInput title="If your plan has a financial model, please upload it." />
           <TextArea
             title="Have you previously cooperated with investors or accelerators?*"
-            halfSize={true}
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea title="How did you get to know us?*" halfSize={true} />
+            <TextArea
+            title="How did you get to know us?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
           <RadioButton
             text="First Sale"
             handleRadioChange={handleRadioChange}
@@ -658,12 +724,26 @@ const StartupForm = () => {
           <span className="text-black">Problems</span>
           <TextArea
             title="Describe the customer problem you want to solve with your product or service. *"
-            halfSize={true}
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
           <span className="text-black">Solutions</span>
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?*"
-            halfSize={true}
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
           <div className="text-lg font-medium">
             How much is the level of your product and technology preparation?
@@ -766,56 +846,178 @@ const StartupForm = () => {
           </div>
           <TextArea
             title="Briefly explain how your technology is scalable?*"
-            halfSize={true}
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
           <span className="text-black">Business model</span>
           <TextArea
             title="Describe the method of monetization of your plan?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
           <TextArea
             title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
+
+
           <UploadInput title="If your plan has a financial model, please upload it." />
+
           <TextArea
             title="Have you previously cooperated with investors or accelerators?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea title="How did you get to know us?*" halfSize />
+
+          <TextArea
+            title="How did you get to know us?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
           <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
           <span className="text-black">Target Market</span>
+
           <TextArea
             title="Based on what characteristics do you decide who are your customers and who are not?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
+
           <TextArea
             title="Who are your current customers? How many customers have you had so far?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
+
           <TextArea
             title="How have you estimated the size of the market?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
+
           <TextArea
             title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
+
           <span className="text-black">Property</span>
           <TextArea
             title="How much revenue has your startup made since its inception?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea title="How much is your monthly income?*" halfSize />
-          <TextArea title="What is your current interest rate?*" halfSize />
+
+          <TextArea
+            title="How much is your monthly income?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="What is your current interest rate?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
           <TextArea
             title="How much current funding did you raise before starting your business?*"
-            halfSize
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
+
           <TextArea
             title="How much capital do you need to start your project?*"
-            halfSize
-          />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />  
+
           <RadioButton
             text="Sale Development"
             handleRadioChange={handleRadioChange}
@@ -850,17 +1052,40 @@ const StartupForm = () => {
           <span className="text-black">Problems</span>
           <TextArea
             title="Describe the customer problem you want to solve with your product or service. *"
-            halfSize
-          />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
           <span className="text-black">Solutions</span>
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?*"
-            halfSize
-          />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?*"
-            halfSize
-          />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
           <div className="text-lg font-medium">
             How much is the level of your product and technology preparation?
           </div>
@@ -960,58 +1185,180 @@ const StartupForm = () => {
               A complete and qualified system.
             </label>
           </div>
+
           <TextArea
             title="Briefly explain how your technology is scalable?*"
-            halfSize
-          />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
           <span className="text-black">Business model</span>
+
           <TextArea
             title="Describe the method of monetization of your plan?*"
-            halfSize
-          />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
           <TextArea
             title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
-            halfSize
-          />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
           <UploadInput title="If your plan has a financial model, please upload it." />
           <TextArea
             title="Have you previously cooperated with investors or accelerators?*"
-            halfSize
-          />
-          <TextArea title="How did you get to know us?*" halfSize />
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
+          <TextArea
+            title="How did you get to know us?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
           <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
           <TextArea
             title="Based on what characteristics do you decide who are your customers and who are not?*"
-            halfSize
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea
+
+<TextArea
             title="Who are your current customers? How many customers have you had so far?*"
-            halfSize
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea
+
+
+<TextArea
             title="How have you estimated the size of the market?*"
-            halfSize
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea
+
+
+<TextArea
             title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
-            halfSize
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
+
           <span className="text-black">Property</span>
           <TextArea
             title="How much revenue has your startup made since its inception?*"
-            halfSize
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea title="How much is your monthly income?*" halfSize />
-          <TextArea title="What is your current interest rate?*" halfSize />
+
+
+<TextArea
+            title="How much is your monthly income?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="What is your current interest rate?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
           <TextArea
             title="How much current funding did you raise before starting your business?*"
-            halfSize
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <TextArea
+
+                    <TextArea
             title="How much capital do you need to start your project?*"
-            halfSize
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
           />
-          <Button text="SEND" size="" type='submit' />
+          <Button text="SEND" size="" type="submit" />
         </div>
       </form>
     </div>
