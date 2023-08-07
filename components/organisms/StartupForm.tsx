@@ -350,7 +350,7 @@ const StartupForm = () => {
                   No
                 </label>
               </div>
-              <input type="file" />
+              <input type="file" onChange={handlePitchDeckFileChange}/>
             </div>
             <div className="flex flex-col">
               <div className="text-lg font-medium">
@@ -379,7 +379,7 @@ const StartupForm = () => {
                 </label>
               </div>
 
-              <input type="file" />
+              <input type="file" onChange={handleBusinessPlanFileChange}/>
             </div>
           </div>
           <div className="grid grid-cols-2">
@@ -905,7 +905,7 @@ const StartupForm = () => {
             title="How much capital do you need to start your project?*"
             halfSize
           />
-          <Button text="SEND" size="" />
+          <Button text="SEND" size="" type='submit' />
         </div>
       </form>
     </div>
