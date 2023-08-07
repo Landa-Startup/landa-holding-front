@@ -291,16 +291,8 @@ const StartupForm = () => {
         {/* Form with text areas */}
         {showForm && (
           <div className="grid grid-cols-2">
-            <TextArea
-              title="Explain your idea in 5 lines?*"
-              placeHolder="Description"
-              halfSize={false}
-            />
-            <TextArea
-              title="How did you get to know us?*"
-              placeHolder="Description"
-              halfSize={false}
-            />
+            <TextArea title="Explain your idea in 5 lines?*" halfSize={false} />
+            <TextArea title="How did you get to know us?*" halfSize={false} />
           </div>
         )}
         <div className="flex items-center space-x-4">
@@ -545,32 +537,24 @@ const StartupForm = () => {
             </div>
             <TextArea
               title="Briefly explain how your technology is scalable?*"
-              placeHolder="your idea..."
               halfSize={true}
             />
             <span className="text-black">Business model</span>
             <TextArea
               title="Describe the method of monetization of your plan?*"
-              placeHolder="your idea..."
               halfSize={true}
             />
             <TextArea
               title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
-              placeHolder="your idea..."
               halfSize={true}
             />
           </div>
           <UploadInput title="If your plan has a financial model, please upload it." />
           <TextArea
             title="Have you previously cooperated with investors or accelerators?*"
-            placeHolder="your idea..."
             halfSize={true}
           />
-          <TextArea
-            title="How did you get to know us?*"
-            placeHolder="your idea..."
-            halfSize={true}
-          />
+          <TextArea title="How did you get to know us?*" halfSize={true} />
           <RadioButton text="First Sale" />
           <div className="flex justify-around">
             <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload />
@@ -582,13 +566,11 @@ const StartupForm = () => {
           <span className="text-black">Problems</span>
           <TextArea
             title="Describe the customer problem you want to solve with your product or service. *"
-            placeHolder=""
             halfSize={true}
           />
           <span className="text-black">Solutions</span>
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?*"
-            placeHolder=""
             halfSize={true}
           />
           <div className="text-lg font-medium">
@@ -693,76 +675,53 @@ const StartupForm = () => {
           <TextArea
             title="Briefly explain how your technology is scalable?*"
             halfSize={true}
-            placeHolder=""
           />
           <span className="text-black">Business model</span>
           <TextArea
             title="Describe the method of monetization of your plan?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
-            placeHolder=""
             halfSize
           />
           <UploadInput title="If your plan has a financial model, please upload it." />
           <TextArea
             title="Have you previously cooperated with investors or accelerators?*"
-            placeHolder=""
             halfSize
           />
-          <TextArea
-            title="How did you get to know us?*"
-            placeHolder=""
-            halfSize
-          />
+          <TextArea title="How did you get to know us?*" halfSize />
           <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
           <span className="text-black">Target Market</span>
           <TextArea
             title="Based on what characteristics do you decide who are your customers and who are not?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="Who are your current customers? How many customers have you had so far?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="How have you estimated the size of the market?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
-            placeHolder=""
             halfSize
           />
           <span className="text-black">Property</span>
           <TextArea
             title="How much revenue has your startup made since its inception?*"
-            placeHolder=""
             halfSize
           />
-          <TextArea
-            title="How much is your monthly income?*"
-            placeHolder=""
-            halfSize
-          />
-          <TextArea
-            title="What is your current interest rate?*"
-            placeHolder=""
-            halfSize
-          />
+          <TextArea title="How much is your monthly income?*" halfSize />
+          <TextArea title="What is your current interest rate?*" halfSize />
           <TextArea
             title="How much current funding did you raise before starting your business?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="How much capital do you need to start your project?*"
-            placeHolder=""
             halfSize
           />
           <RadioButton text="Sale Development" />
@@ -772,18 +731,15 @@ const StartupForm = () => {
           <span className="text-black">Problems</span>
           <TextArea
             title="Describe the customer problem you want to solve with your product or service. *"
-            placeHolder=""
             halfSize
           />
           <span className="text-black">Solutions</span>
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?*"
-            placeHolder=""
             halfSize
           />
           <div className="text-lg font-medium">
@@ -887,76 +843,53 @@ const StartupForm = () => {
           </div>
           <TextArea
             title="Briefly explain how your technology is scalable?*"
-            placeHolder=""
             halfSize
           />
           <span className="text-black">Business model</span>
           <TextArea
             title="Describe the method of monetization of your plan?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
-            placeHolder=""
             halfSize
           />
           <UploadInput title="If your plan has a financial model, please upload it." />
           <TextArea
             title="Have you previously cooperated with investors or accelerators?*"
-            placeHolder=""
             halfSize
           />
-          <TextArea
-            title="How did you get to know us?*"
-            placeHolder=""
-            halfSize
-          />
+          <TextArea title="How did you get to know us?*" halfSize />
           <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
           <TextArea
             title="Based on what characteristics do you decide who are your customers and who are not?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="Who are your current customers? How many customers have you had so far?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="How have you estimated the size of the market?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
-            placeHolder=""
             halfSize
           />
           <span className="text-black">Property</span>
           <TextArea
             title="How much revenue has your startup made since its inception?*"
-            placeHolder=""
             halfSize
           />
-          <TextArea
-            title="How much is your monthly income?*"
-            placeHolder=""
-            halfSize
-          />
-          <TextArea
-            title="What is your current interest rate?*"
-            placeHolder=""
-            halfSize
-          />
+          <TextArea title="How much is your monthly income?*" halfSize />
+          <TextArea title="What is your current interest rate?*" halfSize />
           <TextArea
             title="How much current funding did you raise before starting your business?*"
-            placeHolder=""
             halfSize
           />
           <TextArea
             title="How much capital do you need to start your project?*"
-            placeHolder=""
             halfSize
           />
           <Button text="SEND" size="" />
