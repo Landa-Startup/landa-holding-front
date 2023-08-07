@@ -7,6 +7,8 @@ import RadioButton from '../atoms/RadioButton';
 import TwoOptionRadio from '../atoms/TwoOptionRadio';
 import Button from '../atoms/Button';
 import Input from './base/Input';
+import {startupsFormData} from '../../app/type/global';
+
 enum Type {
   IDEA = 'IDEA',
   MVP = 'MVP',
@@ -27,35 +29,9 @@ enum Level {
   qualifiedSystem = 'qualifiedSystem',
 }
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  birthDate: Date;
-  email: string;
-  countryOfResidence: string;
-  provinceOfResidence: string;
-  type: Type;
-  ideaExplanation: string;
-  getToKnowUs: string;
-  pitchDeck: boolean;
-  pitchDeckFile: File | null;
-  businessPlan: boolean;
-  businessPlanFile: File | null;
-  productName: string;
-  siteAddress: string;
-  customerProblem: string;
-  solution: string;
-  productLevel: Level;
-  scalable: string;
-  monetizationOfYourPlan: string;
-  structureOfYourSales: string;
-  financialModel: string;
-  cooperatedWithInvestors: string;
-  financial: boolean;
-}
 
 const StartupForm = () => {
-  const initialFormData: FormData = {
+  const initialFormData: startupsFormData = {
     firstName: '',
     lastName: '',
     birthDate: new Date(),
@@ -77,9 +53,19 @@ const StartupForm = () => {
     scalable: '',
     monetizationOfYourPlan: '',
     structureOfYourSales: '',
-    financialModel: '',
+    financialModelFile:  null as File | null,
     cooperatedWithInvestors: '',
     financial: true,
+    financialFile:null as File | null ,        
+    customerCharacteristic:'',  
+    currentCustomers:'',
+    estimatedMarketSize:'',
+    totalTamSamSom: '',
+    startupRevenue: '' ,
+    monthlyIncome:'',
+    currentInterestRate:'' ,
+    currentRaisedFunding:'',
+    neededCapital:'' ,
   };
 
   const {
@@ -87,7 +73,7 @@ const StartupForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<FormData>({
+  } = useForm<startupsFormData>({
     mode: 'onBlur',
     defaultValues: initialFormData,
   });
@@ -111,7 +97,7 @@ const StartupForm = () => {
   const [filePost, setFilePost] = useState<{ pitch: File | null }>({
     pitch: null,
   });
-  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [formData, setFormData] = useState<startupsFormData>(initialFormData);
 
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   //   if (e.target.name === 'pitch') {
@@ -142,7 +128,7 @@ const StartupForm = () => {
   //   setFormData({ ...formData, [name]: value });
   // };
 
-  const onSubmit = async (formData: FormData) => {
+  const onSubmit = async (formData: startupsFormData) => {
     setIsSubmitting(true);
     setSend(true);
 
@@ -177,13 +163,22 @@ const StartupForm = () => {
       formData.monetizationOfYourPlan
     );
     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
-    sendFormData.append('financialModel', formData.financialModel);
+    sendFormData.append('financialModelFile', formData.financialModelFile as Blob);
     sendFormData.append(
       'cooperatedWithInvestors',
       formData.cooperatedWithInvestors
     );
     sendFormData.append('financial', String(formData.financial));
-
+    sendFormData.append('financialFile', formData.financialFile as Blob);
+    sendFormData.append('customerCharacteristic', formData.customerCharacteristic);
+    sendFormData.append('currentCustomers', formData.currentCustomers);
+    sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
+    sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
+    sendFormData.append('startupRevenue', formData.startupRevenue);
+    sendFormData.append('monthlyIncome', formData.monthlyIncome);
+    sendFormData.append('currentInterestRate', formData.currentInterestRate);
+    sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
+    sendFormData.append('neededCapital', formData.neededCapital);
     try {
       const response = await fetch('/api/upload-form', {
         method: 'POST',
@@ -224,10 +219,10 @@ const StartupForm = () => {
         <div className="grid grid-cols-3">
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">
+              <span className="text-base font-normal text-black">
                 First Name
               </span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -245,10 +240,10 @@ const StartupForm = () => {
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">
+              <span className="text-base font-normal text-black">
                 Last Name
               </span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -266,8 +261,8 @@ const StartupForm = () => {
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">Birthday</span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-black">Birthday</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -285,8 +280,8 @@ const StartupForm = () => {
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">Email</span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-black">Email</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -304,10 +299,10 @@ const StartupForm = () => {
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">
+              <span className="text-base font-normal text-black">
                 Country of Residence
               </span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -325,10 +320,10 @@ const StartupForm = () => {
           </div>
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
-              <span className="text-black text-base font-normal">
+              <span className="text-base font-normal text-black">
                 Province of Residence
               </span>
-              <span className="text-stone-500 text-base font-normal">*</span>
+              <span className="text-base font-normal text-stone-500">*</span>
             </div>
             <Input
               register={register}
@@ -396,7 +391,7 @@ const StartupForm = () => {
                   id="pitchDeckNo"
                   name="pitchDeckOption"
                   value="no"
-                  className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                  className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
                 />
                 <label htmlFor="pitchDeckNo" className="text-lg font-medium">
                   No
@@ -414,7 +409,7 @@ const StartupForm = () => {
                   id="pitchDeckYes"
                   name="pitchDeckOption"
                   value="yes"
-                  className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                  className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
                 />
                 <label htmlFor="pitchDeckYes" className="text-lg font-medium">
                   Yes
@@ -424,7 +419,7 @@ const StartupForm = () => {
                   id="pitchDeckNo"
                   name="pitchDeckOption"
                   value="no"
-                  className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                  className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
                 />
                 <label htmlFor="pitchDeckNo" className="text-lg font-medium">
                   No
@@ -437,10 +432,10 @@ const StartupForm = () => {
           <div className="grid grid-cols-2">
             <div className="h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
               <div className="h-[17px]">
-                <span className="text-black text-base font-normal">
+                <span className="text-base font-normal text-black">
                   Product Name
                 </span>
-                <span className="text-stone-500 text-base font-normal">*</span>
+                <span className="text-base font-normal text-stone-500">*</span>
               </div>
               <input
                 className="h-[31px] relative bg-stone-100 shadow"
@@ -449,10 +444,10 @@ const StartupForm = () => {
             </div>
             <div className="h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
               <div className="h-[17px]">
-                <span className="text-black text-base font-normal">
+                <span className="text-base font-normal text-black">
                   Site Address
                 </span>
-                <span className="text-stone-500 text-base font-normal">*</span>
+                <span className="text-base font-normal text-stone-500">*</span>
               </div>
               <input
                 className="h-[31px] relative bg-stone-100 shadow"
@@ -469,7 +464,7 @@ const StartupForm = () => {
               or service.*
             </label>
             <textarea
-              className="w-full h-24 p-2 border-2 border-stone-100 rounded-lg focus:outline-none focus:border-gold"
+              className="w-full h-24 p-2 border-2 rounded-lg border-stone-100 focus:outline-none focus:border-gold"
               placeholder="Your description..."
             />
           </div>
@@ -482,7 +477,7 @@ const StartupForm = () => {
               or service.*
             </label>
             <textarea
-              className="w-full h-24 p-2 border-2 border-stone-100 rounded-lg focus:outline-none focus:border-gold"
+              className="w-full h-24 p-2 border-2 rounded-lg border-stone-100 focus:outline-none focus:border-gold"
               placeholder="Your description..."
             />
           </div>
@@ -494,7 +489,7 @@ const StartupForm = () => {
               about what you do?*
             </label>
             <textarea
-              className="w-full h-24 p-2 border-2 border-stone-100 rounded-lg focus:outline-none focus:border-gold"
+              className="w-full h-24 p-2 border-2 rounded-lg border-stone-100 focus:outline-none focus:border-gold"
               placeholder="Your description..."
             />
           </div>
@@ -510,7 +505,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 The basic principle has been observed
@@ -522,7 +517,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 Experimental proof of concept.
@@ -534,7 +529,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 The confirmed technology in laboratory.
@@ -546,7 +541,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 The confirmed technology in the environmental conditions
@@ -558,7 +553,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 The presented technology in the environmental conditions
@@ -570,7 +565,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 Show the system prototype in the mvp operating environment.
@@ -582,7 +577,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 The proved realistic system in the operating environment.
@@ -594,7 +589,7 @@ const StartupForm = () => {
                 id="basicPrinciple"
                 name="technologyLevel"
                 value="basicPrinciple"
-                className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
               />
               <label htmlFor="basicPrinciple" className="text-lg">
                 A complete and qualified system.
@@ -674,7 +669,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The basic principle has been observed
@@ -686,7 +681,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               Experimental proof of concept.
@@ -698,7 +693,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The confirmed technology in laboratory.
@@ -710,7 +705,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The confirmed technology in the environmental conditions
@@ -722,7 +717,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The presented technology in the environmental conditions
@@ -734,7 +729,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               Show the system prototype in the mvp operating environment.
@@ -746,7 +741,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The proved realistic system in the operating environment.
@@ -758,7 +753,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               A complete and qualified system.
@@ -870,7 +865,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The basic principle has been observed
@@ -882,7 +877,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               Experimental proof of concept.
@@ -894,7 +889,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The confirmed technology in laboratory.
@@ -906,7 +901,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The confirmed technology in the environmental conditions
@@ -918,7 +913,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The presented technology in the environmental conditions
@@ -930,7 +925,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               Show the system prototype in the mvp operating environment.
@@ -942,7 +937,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               The proved realistic system in the operating environment.
@@ -954,7 +949,7 @@ const StartupForm = () => {
               id="basicPrinciple"
               name="technologyLevel"
               value="basicPrinciple"
-              className="w-5 h-5 text-gold border-2 border-gold rounded-full focus:outline-none focus:border-gold"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
             />
             <label htmlFor="basicPrinciple" className="text-lg">
               A complete and qualified system.

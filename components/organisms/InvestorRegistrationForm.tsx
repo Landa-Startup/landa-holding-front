@@ -4,31 +4,17 @@ import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import InvestorRegistrationTitle from '../atoms/InvestorRegistrationTitle';
+import {InvestorRegistrationFormData} from '../../app/type/global';
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  birthDate: string;
-  countryOfResidence: string;
-  provinceOfResidence: string;
-  streetAddress: string;
-  streetAddressLine2: string;
-  postalCode: string;
-  companyName: string;
-  investmentCeiling: string;
-  positionInTeam: string;
-  preferredAreas: string;
-  howDidYouKnowUs: string;
-}
 
 export default function InvestorRegistrationForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>();
+  } = useForm<InvestorRegistrationFormData>();
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (data: InvestorRegistrationFormData) => {
     try {
       const response = await fetch('/api/investor-registration', {
         method: 'POST',
