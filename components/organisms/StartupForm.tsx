@@ -294,47 +294,6 @@ const StartupForm = () => {
               register={register}
               errors={errors}
               nameInput="aaa"
-<<<<<<< HEAD
-=======
-              type="text"
-              label="First Name"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-          </div>
-          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
-            <div className="h-[17px]">
-              <span className="text-base font-normal text-black">Birthday</span>
-              <span className="text-base font-normal text-stone-500">*</span>
-            </div>
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="aaa"
-              type="text"
-              label="First Name"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-          </div>
-          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
-            <div className="h-[17px]">
-              <span className="text-base font-normal text-black">Email</span>
-              <span className="text-base font-normal text-stone-500">*</span>
-            </div>
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="aaa"
->>>>>>> origin/develop
               type="email"
               label=""
               required="Email Address is Required."
