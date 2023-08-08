@@ -25,10 +25,12 @@
     "formidable": "^3.5.0",
     "googleapis": "^123.0.0",
     "next": "^13.4.7",
+    "path": "^0.12.7",
     "prisma": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.45.2"
+    "react-hook-form": "^7.45.2",
+    "stream": "^0.0.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
