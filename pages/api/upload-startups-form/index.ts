@@ -24,17 +24,23 @@ export default async function handler(
         })
         const { fields, files } = parseData
         console.log(files.businessPlanFile)
+        console.log(files.pitchDeckFile)
+
         const uploadUrls = await cloudinary(files.businessPlanFile, 'landa/files/forms')
-        console.log("this is file : ",uploadUrls)
+        const uploadUrls2 = await cloudinary(files.pitchDeckFile, 'landa/files/forms')
+
+        console.log("this is file : ",uploadUrls)   
         const startupsForm = await prisma.startupsForm.create({
             data: {
                 firstName: extractFieldValue(fields, 'firstName'),
                 lastName: extractFieldValue(fields, 'lastName'),
-                businessPlanFile: uploadUrls[0]
+                businessPlanFile: uploadUrls[0],
+                pitchDeckFile: uploadUrls2[0], 
             }
         })
         // res.status(200).json(product)
         res.status(200).json({'message':uploadUrls})
+
         // res.status(200).json({'message1':startupsForm})
     } else {
         try {

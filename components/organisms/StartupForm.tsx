@@ -93,6 +93,9 @@ const StartupForm = () => {
   const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
     businessPlanFile: null,
   });
+  const [filePost2, setFilePost2] = useState<{ pitchDeckFile: File | null }>({
+    pitchDeckFile: null,
+  });
   const [formData, setFormData] = useState<startupsFormData>(initialFormData);
 
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -109,7 +112,9 @@ const StartupForm = () => {
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     const pitchDeckFile = event.target.files && event.target.files[0];
-    setFormData({ ...formData, pitchDeckFile });
+    if (event.target.files && event.target.files.length > 0) {
+      setFilePost2({ pitchDeckFile: event.target.files[0] });
+    }
   };
 
   const handleBusinessPlanFileChange = (
@@ -137,8 +142,11 @@ const StartupForm = () => {
     if (filePost.businessPlanFile) {
       sendFormData.append('businessPlanFile', filePost.businessPlanFile, filePost.businessPlanFile.name);
     }
+    if(filePost2.pitchDeckFile){
+      sendFormData.append('pitchDeckFile',filePost2.pitchDeckFile,filePost2.pitchDeckFile.name);
+    }
 
-    sendFormData.append('fullName', formData.firstName);
+    sendFormData.append('firstName', formData.firstName);
     sendFormData.append('lastName', formData.lastName);
     sendFormData.append('email', formData.email);
     sendFormData.append('countryOfResidence', formData.countryOfResidence);
@@ -148,7 +156,7 @@ const StartupForm = () => {
     sendFormData.append('ideaExplanation', formData.ideaExplanation);
     sendFormData.append('getToKnowUs', formData.getToKnowUs);
     sendFormData.append('pitchDeck', String(formData.pitchDeck));
-    sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
+    // sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
     sendFormData.append('businessPlan', String(formData.businessPlan));
     // sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
     sendFormData.append('productName', formData.productName);
@@ -232,7 +240,7 @@ const StartupForm = () => {
             <Input
               register={register}
               errors={errors}
-              nameInput="streetAddress"
+              nameInput="firstName"
               type="text"
               label=""
               required=""
@@ -244,7 +252,7 @@ const StartupForm = () => {
             />
           </div>
 
-          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+          {/* <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
               <span className="text-base font-normal text-black">
                 File 
@@ -257,7 +265,7 @@ const StartupForm = () => {
               onChange={handleBusinessPlanFileChange} // must use onChange event handler after register
               />
             </div>
-          </div>
+          </div> */}
           
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
@@ -441,7 +449,12 @@ const StartupForm = () => {
                   No
                 </label>
               </div>
-              <input type="file" onChange={handlePitchDeckFileChange} />
+              <input type="file" className='w-[275px] h-[31px] relative bg-stone-100 shadow' value={formData.pitchDeckFile?.name}
+                      {...register("pitchDeckFile", {
+                        required: '',
+                      })}
+              onChange={handlePitchDeckFileChange} // must use onChange event handler after register
+              />
             </div>
             <div className="flex flex-col">
               <div className="text-lg font-medium">
@@ -470,7 +483,12 @@ const StartupForm = () => {
                 </label>
               </div>
 
-              <input type="file" onChange={handleBusinessPlanFileChange} />
+              <input type="file" className='w-[275px] h-[31px] relative bg-stone-100 shadow' value={formData.businessPlanFile?.name}
+                      {...register("businessPlanFile", {
+                        required: '',
+                      })}
+              onChange={handleBusinessPlanFileChange} // must use onChange event handler after register
+              />
             </div>
           </div>
           <div className="grid grid-cols-2">
