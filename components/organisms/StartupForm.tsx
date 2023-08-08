@@ -90,11 +90,8 @@ const StartupForm = () => {
     return null;
   };
 
-  const [send, setSend] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [filePost, setFilePost] = useState<{ pitch: File | null }>({
-    pitch: null,
+  const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
+    businessPlanFile: null,
   });
   const [formData, setFormData] = useState<startupsFormData>(initialFormData);
 
@@ -118,8 +115,12 @@ const StartupForm = () => {
   const handleBusinessPlanFileChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const businessPlanFile = event.target.files && event.target.files[0];
-    setFormData({ ...formData, businessPlanFile });
+    if (event.target.files && event.target.files.length > 0) {
+      setFilePost({ businessPlanFile: event.target.files[0] });
+    }
+    
+    // const businessPlanFile = event.target.files && event.target.files[0];
+    // setFilePost({businessPlanFile: event.target.files[0]})
   };
 
   // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -128,14 +129,13 @@ const StartupForm = () => {
   // };
 
   const onSubmit = async (formData: startupsFormData) => {
-    setIsSubmitting(true);
-    setSend(true);
+
 
     const sendFormData = new FormData();
 
     // TODO: fix this condition for other field
-    if (filePost.pitch) {
-      sendFormData.append('pitch', filePost.pitch, filePost.pitch.name);
+    if (filePost.businessPlanFile) {
+      sendFormData.append('businessPlanFile', filePost.businessPlanFile, filePost.businessPlanFile.name);
     }
 
     sendFormData.append('fullName', formData.firstName);
@@ -150,7 +150,7 @@ const StartupForm = () => {
     sendFormData.append('pitchDeck', String(formData.pitchDeck));
     sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
     sendFormData.append('businessPlan', String(formData.businessPlan));
-    sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
+    // sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
     sendFormData.append('productName', formData.productName);
     sendFormData.append('siteAddress', formData.siteAddress);
     sendFormData.append('customerProblem', formData.customerProblem);
@@ -185,7 +185,7 @@ const StartupForm = () => {
     sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
     sendFormData.append('neededCapital', formData.neededCapital);
     try {
-      const response = await fetch('/api/upload-form', {
+      const response = await fetch('/api/upload-startups-form', {
         method: 'POST',
         body: sendFormData,
       });
@@ -194,13 +194,13 @@ const StartupForm = () => {
         throw new Error('Network response was not ok');
       }
 
-      setIsSuccess(true);
-      setSend(false);
+      // setIsSuccess(true);
+      // setSend(false);
       reset(initialFormData); // Reset the form after successful submission
       console.log('Form data sent successfully!');
     } catch (error) {
-      setSend(false);
-      setIsSuccess(false);
+      // setSend(false);
+      // setIsSuccess(false);
       console.error('Error sending form data:', error);
     }
   };
@@ -235,7 +235,7 @@ const StartupForm = () => {
               nameInput="streetAddress"
               type="text"
               label=""
-              required="Street Address is Required."
+              required=""
               placeholder="Enter your Street Address"
               className="w-[275px] h-[31px] relative bg-stone-100 shadow"
               labelClass="text-[#6b6b6b] dark:text-current"
@@ -243,6 +243,22 @@ const StartupForm = () => {
               patternMessage={''}
             />
           </div>
+
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                File 
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+              <input type="file" className='w-[275px] h-[31px] relative bg-stone-100 shadow' value={formData.businessPlanFile?.name}
+                      {...register("businessPlanFile", {
+                        required: '',
+                      })}
+              onChange={handleBusinessPlanFileChange} // must use onChange event handler after register
+              />
+            </div>
+          </div>
+          
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
               <span className="text-black text-base font-normal">
@@ -256,7 +272,7 @@ const StartupForm = () => {
               nameInput="lastName"
               type="text"
               label=""
-              required="Street Address is Required."
+              required=""
               placeholder="Enter your Street Address"
               className="w-[275px] h-[31px] relative bg-stone-100 shadow"
               labelClass="text-[#6b6b6b] dark:text-current"
@@ -275,7 +291,7 @@ const StartupForm = () => {
               nameInput="birthDate"
               type="text"
               label=""
-              required="Street Address is Required."
+              required=""
               placeholder="Enter your Street Address"
               className="w-[275px] h-[31px] relative bg-stone-100 shadow"
               labelClass="text-[#6b6b6b] dark:text-current"
@@ -296,7 +312,7 @@ const StartupForm = () => {
               nameInput="aaa"
               type="email"
               label=""
-              required="Email Address is Required."
+              required=""
               placeholder="Enter your Street Address"
               className="w-[275px] h-[31px] bg-stone-100 shadow"
               labelClass="text-black text-base font-normal"
@@ -317,7 +333,7 @@ const StartupForm = () => {
               nameInput="countryOfResidence"
               type="text"
               label=""
-              required="countryOfResidence is Required."
+              required=""
               placeholder="Enter your countryOfResidence"
               className="w-[275px] h-[31px] relative bg-stone-100 shadow"
               labelClass="text-[#6b6b6b] dark:text-current"
@@ -338,7 +354,7 @@ const StartupForm = () => {
               nameInput="provinceOfResidence"
               type="text"
               label=""
-              required="provinceOfResidence is Required."
+              required=""
               placeholder="Enter your Street Address"
               className="w-[275px] h-[31px] relative bg-stone-100 shadow"
               labelClass="text-[#6b6b6b] dark:text-current"
@@ -404,7 +420,7 @@ const StartupForm = () => {
                   nameInput="productName"
                   type="radio"
                   label="Product Name"
-                  required="Street Address is Required."
+                  required=""
                   placeholder="Enter your Street Address"
                   className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
                   labelClass="text-[#6b6b6b] dark:text-current"
@@ -701,7 +717,7 @@ const StartupForm = () => {
             nameInput="productName"
             type="text"
             label="Product Name"
-            required="Street Address is Required."
+            required=""
             placeholder="Enter your Street Address"
             className="w-[275px] h-[31px] relative bg-stone-100 shadow"
             labelClass="text-[#6b6b6b] dark:text-current"
@@ -1029,7 +1045,7 @@ const StartupForm = () => {
             nameInput="productName"
             type="text"
             label="Product Name"
-            required="Street Address is Required."
+            required=""
             placeholder="Enter your Street Address"
             className="w-[275px] h-[31px] relative bg-stone-100 shadow"
             labelClass="text-[#6b6b6b] dark:text-current"

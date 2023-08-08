@@ -13,7 +13,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    if (req.method === "POST") {
+    if (req.method === "POST") {    
         const form = formidable({ multiples: true })
 
         const parseData = await new Promise<{ fields: formidable.Fields, files: formidable.Files }>((resolve, reject) => {
@@ -23,18 +23,19 @@ export default async function handler(
             })
         })
         const { fields, files } = parseData
-        console.log("this is files",files)
-        const uploadUrls = await cloudinary(files.file, 'landa/files/forms')
-        console.log(uploadUrls)
-        const product = await prisma.product.create({
+        console.log(files.businessPlanFile)
+        const uploadUrls = await cloudinary(files.businessPlanFile, 'landa/files/forms')
+        console.log("this is file : ",uploadUrls)
+        const startupsForm = await prisma.startupsForm.create({
             data: {
-                name: extractFieldValue(fields, 'name'),
-                family: extractFieldValue(fields, 'family'),
-                file: uploadUrls[0]
+                firstName: extractFieldValue(fields, 'firstName'),
+                lastName: extractFieldValue(fields, 'lastName'),
+                businessPlanFile: uploadUrls[0]
             }
         })
         // res.status(200).json(product)
         res.status(200).json({'message':uploadUrls})
+        // res.status(200).json({'message1':startupsForm})
     } else {
         try {
 
@@ -48,7 +49,7 @@ export default async function handler(
             return res.status(200).json({"message":"error!"})
         } catch (error) {
             console.log("message",res)      
-            return res.status(500).json({ message: 'Internal server error' });
+            return res.status(500).json({ message: error });
         }
 
     }
