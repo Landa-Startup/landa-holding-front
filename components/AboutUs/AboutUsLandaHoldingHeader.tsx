@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 export default function AboutUsLandaHoldingHeader({ text, title }: { text: string, title: string, image: string }) {
     return (

@@ -24,7 +24,7 @@ export default function AboutUsProfile() {
 
   return (
     <div>
-      <div className='mb-11 mt-44	ml-[119px]'>
+      <div className='md:mb-11 md:mt-44	md:ml-[119px] ml-10 mb-4'>
         <p className='text-black font-gilda text-2xl not-italic	font-normal	leading-normal '>PROFESSIONALS</p>
         <p className='text-black font-gilda text-4xl not-italic	font-normal	leading-normal	'> Managing Directors</p>
 
