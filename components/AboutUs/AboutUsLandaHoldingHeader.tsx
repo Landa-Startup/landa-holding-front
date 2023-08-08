@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function AboutUsLandaHoldingHeader({ text, title }: { text: string, title: string, image: string }) {
     return (
         <div className='flex flex-row  md:flex-col'>
