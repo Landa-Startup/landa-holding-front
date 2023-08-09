@@ -4,6 +4,7 @@ import Input from './base/Input';
 import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
+import YesNoRadioButton from '../atoms/YesNoRadioButton';
 
 export default function StartupFormMVP() {
   const {
@@ -35,7 +36,27 @@ export default function StartupFormMVP() {
   return (
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-      {/* <TextArea
+        <YesNoRadioButton
+          title="Do you have Pitch deck?*"
+          register={register}
+          errors={errors}
+          required="Please choose an option"
+          name="agree"
+        />
+                <YesNoRadioButton
+          title="Do you have Business Plan?*"
+          register={register}
+          errors={errors}
+          required="Please choose an option"
+          name="agree"
+        />
+      </div>
+    </>
+  );
+}
+
+{
+  /* <TextArea
             title="Explain your idea in 5 lines?*"
             register={register}
             errors={errors}
@@ -44,18 +65,5 @@ export default function StartupFormMVP() {
             patternMessage=''
             patternValue=''
             required=''
-          />
-          <TextArea
-            title="How did you get to know us?*"
-            register={register}
-            errors={errors}
-            placeholder="Description"
-            nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> */}
-      </div>
-    </>
-  );
+          />*/
 }
