@@ -37,6 +37,7 @@ export default function page() {
     {
       title: "L\u00A0A\u00A0N\u00A0D\u00A0A\u00A0\u00A0 \u00A0H\u00A0O\u00A0L\u00A0D\u00A0I\u00A0N\u00A0G",
       text: "About Us",
+      image: "test"
     }
   ]
   return (
@@ -53,7 +54,7 @@ export default function page() {
       }
       <AboutUsLandaHolding />
       <AboutUsCooperation />
-      <div className='bg-whiteGold md:mx-[25px] md:pb-32 pt-12'>
+      {/* <div className='bg-whiteGold md:mx-[25px] md:pb-32 pt-12'>
         {cards.map((cart, index) => (
           <Aboutuscart
             reverse={cart.reverse}
@@ -62,10 +63,10 @@ export default function page() {
             title={cart.title}
             image={cart.image}
             teext={cart.teext}
-            ttext={cart.ttext}
+            ttext={cart.teext}
           />
         ))}
-      </div>
+      </div> */}
 
       <div>
         <AboutUsProfile
