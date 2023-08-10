@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 
-export default function YesNoRadioButton({
+export default function YesRadioButton({
   title,
   register,
   errors,
@@ -23,7 +23,7 @@ export default function YesNoRadioButton({
     <div>
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <div className='flex flex-col'>
-        <div className="flex flex-row mt-4 bg-[#f9f6f3] dark:bg-[#1D232A] p-4 rounded-lg">
+        <div className="flex flex-row mt-4 bg-[#f9f6f3] dark:bg-[#1D232A] p-4 rounded-lg drop-shadow-lg">
           <label className="flex flex-column mr-10 ">
             <input
               type="radio"
@@ -71,7 +71,7 @@ export default function YesNoRadioButton({
 ///////////////////////////////////////
 
 {
-  /* <YesNoRadioButton
+  /* <YesRadioButton
 title="Do you agree?"
 register={register}
 errors={errors}

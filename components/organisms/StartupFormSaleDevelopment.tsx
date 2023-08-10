@@ -4,6 +4,13 @@ import Input from './base/Input';
 import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
+import YesRadioButton from '../atoms/YesRadioButton';
+import NoRadioButton from '../atoms/NoRadioButton';
+import StartupFormProblem from './StartupFormProblems';
+import StartupFormSolutions from './StartupFormSolutions';
+import StartupFormBusinessModel from './StartupFormBusinessModel';
+import StartupFormTargetMarket from './StartupFormTargetMarket';
+import StartupFormProperty from './StartupFormProperty';
 
 export default function StartupFormSaleDevelopment() {
   const {
@@ -35,7 +42,97 @@ export default function StartupFormSaleDevelopment() {
   return (
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-      {/* <TextArea
+        <YesRadioButton
+          title="Do you have Pitch deck?"
+          register={register}
+          errors={errors}
+          required="Please choose an option"
+          name="pitch-deck"
+        />
+        <YesRadioButton
+          title="Do you have Business Plan?"
+          register={register}
+          errors={errors}
+          required="Please choose an option"
+          name="business-plan"
+        />
+        <YesRadioButton
+          title="Do you have Business Plan?"
+          register={register}
+          errors={errors}
+          required="Please choose an option"
+          name="business-plan"
+        />
+      </div>
+      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+        <div>
+          <NoRadioButton
+            title="Do you have Pitch deck?*"
+            register={register}
+            errors={errors}
+            required="Please choose an option"
+            name="pitch-deck"
+          />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Product Name"
+            required="Product Name is Required."
+            patternValue=""
+            patternMessage="Only Alphabetic Characters are Allowed."
+            placeholder="Enter your Product Name"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            labelClass="text-[#6b6b6b] dark:text-current"
+          />
+        </div>
+
+        <div>
+          <NoRadioButton
+            title="Do you have Business Plan?*"
+            register={register}
+            errors={errors}
+            required="Please choose an option"
+            name="business-plan"
+          />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="siteAddress"
+            type="text"
+            label="Site Address"
+            required="Site Address is Required."
+            patternValue=""
+            patternMessage="Only Alphabetic Characters are Allowed."
+            placeholder="Enter your Site Address"
+            className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            labelClass="text-[#6b6b6b] dark:text-current"
+          />
+        </div>
+      </div>
+      <StartupFormProblem />
+      <StartupFormSolutions />
+      <StartupFormBusinessModel />
+      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <NoRadioButton
+            title="Do you have Financial?"
+            register={register}
+            errors={errors}
+            required="Please choose an option"
+            name="pitch-deck"
+          />
+        </div>
+      </div>
+      <StartupFormTargetMarket/>
+      <StartupFormProperty/>
+    </>
+  );
+}
+
+{
+  /* <TextArea
             title="Explain your idea in 5 lines?*"
             register={register}
             errors={errors}
@@ -44,18 +141,5 @@ export default function StartupFormSaleDevelopment() {
             patternMessage=''
             patternValue=''
             required=''
-          />
-          <TextArea
-            title="How did you get to know us?*"
-            register={register}
-            errors={errors}
-            placeholder="Description"
-            nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> */}
-      </div>
-    </>
-  );
+          />*/
 }

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
 import UploadInput from '../atoms/UploadInput';
 import RadioButton from '../atoms/RadioButtonGroup';
-import TwoOptionRadio from '../atoms/YesNoRadioButton';
+import TwoOptionRadio from '../atoms/YesRadioButton';
 import Button from '../atoms/Button';
 import Input from './base/Input';
 import { startupsFormData } from '../../app/types/global';
