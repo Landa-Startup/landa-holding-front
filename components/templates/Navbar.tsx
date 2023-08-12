@@ -1,53 +1,61 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
-export default function Navbar() {
+export default function Navbar({ children }: { children: React.ReactNode }) {
   return (
-<<<<<<< HEAD:components/templates/Navbar.tsx
-    <div className="z-10 absolute inline-flex items-center justify-end ml-32 mt-9">
-      <Link
-        className="w-36 h-16 justify-end items-end gap-0.5 inline-flex"
-        href={'/'}
-      >
-=======
-    <div className="z-10 inline-flex items-center ml-32 absolute  mt-[52px]">
-
-      <Link className="w-36 h-16 justify-end items-end gap-0.5 inline-flex" href={"/"}>
->>>>>>> feature/aboutus:components/Navbar.tsx
-        <Image
-          src={'static/images/Logo.svg'}
-          alt="Logo"
-          width={500}
-          height={500}
-        />
-        <div className="w-[93px] h-[15px] text-primary text-xl font-bold tracking-widest">
-          LANDA
+    <div className="drawer">
+      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content flex flex-col relative md:px-10">
+        <div className="w-full navbar bg-transparent text-white flex justify-between items-center">
+          {/* hover:text-white md:flex md:justify-between md:mx-5 */}
+          <div className="flex-none lg:hidden">
+            <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </label>
+          </div>
+          <div className=" px-2 mx-2 text-left">
+            <Link href="/">
+              <Image
+                src={'static/images/Logo.svg'}
+                alt="Logo"
+                width={50}
+                height={50}
+              />
+            </Link>
+          </div>
+          <div className="hidden md:flex-1 md:flex justify-center"> {/* Center items in md mode */}
+            <ul className="menu menu-horizontal w-full flex justify-center space-x-10">
+              <li><a>HOME</a></li>
+              <li><a>ABOUT</a></li>
+              <li><a>CONTACT</a></li>
+              <li><a>OUR TEAM</a></li>
+            </ul>
+          </div>
         </div>
-      </Link>
-      <div className="inline-flex items-center justify-center gap-14 font-condensed ml-36">
-        <Link className="text-xl font-medium text-primary" href={'/'}>
-          HOME{' '}
-        </Link>
-        <Link className="text-xl font-medium text-stone-100" href={'/about'}>
-          ABOUT
-        </Link>
-        <Link className="text-xl font-medium text-stone-100" href={'contact'}>
-          CONTACT
-        </Link>
-        <Link className="text-xl font-medium text-stone-100" href={'/our-team'}>
-          OUR TEAM
-        </Link>
-        <Link className="text-xl font-medium text-stone-100" href={'/magazine'}>
-          MAGAZINE
-        </Link>
-        <Link
-          className="text-xl font-medium text-stone-100"
-          href={'/StartupsForm'}
-        >
-          WORK WITH US
-        </Link>
+        <div className="children">
+          {children}
+        </div>
       </div>
+      <div className="drawer-side">
+        <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
+        <ul className="menu p-4 w-80 h-full bg-base-200">
+          <li><a>HOME</a></li>
+          <li><a>ABOUT</a></li>
+          <li><a>CONTACT</a></li>
+          <li><a>OUR TEAM</a></li>
+        </ul>
+      </div>
+      <style jsx>{`
+        .children {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+      `}</style>
     </div>
   );
 }
