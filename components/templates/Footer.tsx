@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     //  <CopyRight />
-    <div className="grid md:grid-cols-4 bg-neutral-800 font-barlow p-5">
+    <div className="grid md:grid-cols-4 bg-neutral-800 font-barlow p-5 space-y-5">
 
       <div className="col-span-1 flex flex-col">
         <div className="h-[25px] text-justify text-white text-xl font-medium">
@@ -65,7 +65,7 @@ export default function Footer() {
           Explore
           <br />
         </div>
-        <div className="flex-col justify-center items-center gap-2 flex">
+        <div className="flex flex-col">
           <Link
             href={'/'}
             className="text-neutral-400 text-base font-normal"
@@ -88,7 +88,7 @@ export default function Footer() {
       </div>
       <div className="col-span-1 flex flex-col">
         <div className="text-white text-xl font-medium">Forms</div>
-        <div className="self-stretch flex-col justify-start items-start gap-2 inline-flex">
+        <div className="self-stretch flex-col justify-start items-start  inline-flex">
           <Link
             href={'/startups'}
             className="text-neutral-400 text-base font-normal"

@@ -14,17 +14,20 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <div className="">
-          {/* <Navbar /> */}
-        </div>
-
-        <div className="bg-green-500 min-h-screen">
+        {/* <div className=""> */}
+        <Navbar >
           <main>{children}</main>
-        </div>
+          <div className="bottom-0 w-full">
+            <Footer />
+          </div>
+        </Navbar>
+        {/* </div> */}
 
-        <div className="sticky bottom-0 w-full">
-          <Footer />
-        </div>
+        {/* <div className="min-h-screen">
+          <main>{children}</main>
+        </div> */}
+
+
         {/* <div>
           <Navbar />
           <main>{children}</main>
