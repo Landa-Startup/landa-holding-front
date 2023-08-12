@@ -28,7 +28,7 @@ const Aboutuscart: React.FC<AboutuscartProps> = ({ title, text, image, reverse, 
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
-            }} /> />
+            }} />
           </div>
           <div className='font-barlow leading-6 mt-[120px]  not-italic text-black md:text-lg	px-[30px]'>
             <p className='md:mt-20 text-black font-gilda text-2xl not-italic font-normal leading-6 mb-2 text-start'>{title}</p>
