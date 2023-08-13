@@ -69,9 +69,9 @@ interface startupsFormData {
   ideaExplanation: string;
   getToKnowUs: string;
   pitchDeck: boolean;
-  pitchDeckFile: File | null;
+  pitchDeckFile?: File | null;
   businessPlan: boolean;
-  businessPlanFile: File | null;
+  businessPlanFile?: File | null;
   productName: string;
   siteAddress: string;
   customerProblem: string;
@@ -80,10 +80,10 @@ interface startupsFormData {
   scalable: string;
   monetizationOfYourPlan: string;
   structureOfYourSales: string;
-  financialModelFile: File | null;
+  financialModelFile?: File | null;
   cooperatedWithInvestors: string;
   financial: boolean;
-  financialFile: File | null;
+  financialFile?: File | null;
   customerCharacteristic:  string;
   currentCustomers: string;
   estimatedMarketSize: string;

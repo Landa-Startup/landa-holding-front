@@ -5,8 +5,8 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['via.placeholder.com'],
-  },
+    domains: ['res.cloudinary.com'],
+  }
 };
 
 module.exports = nextConfig;
