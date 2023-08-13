@@ -77,7 +77,7 @@ export default function StartupFormForm() {
             <input
               type="radio"
               value="ideaExplanation"
-              {...register('ideaExplanation')}
+              {...register("type")}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'ideaExplanation'}
               onChange={handleRadioChange}
@@ -98,7 +98,7 @@ export default function StartupFormForm() {
             <input
               type="radio"
               value="MVP"
-              {...register('MVP')}
+              {...register('type')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'MVP'}
               onChange={handleRadioChange}
@@ -115,7 +115,7 @@ export default function StartupFormForm() {
             <input
               type="radio"
               value="TRIAL"
-              {...register('TRIAL')}
+              {...register('type')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'TRIAL'}
               onChange={handleRadioChange}
@@ -133,7 +133,7 @@ export default function StartupFormForm() {
             <input
               type="radio"
               value="FisrtSale"
-              {...register('FisrtSale')}
+              {...register("type")}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'FisrtSale'}
               onChange={handleRadioChange}
@@ -151,7 +151,7 @@ export default function StartupFormForm() {
             <input
               type="radio"
               value="Sale Development"
-              {...register('Sale Development')}
+              {...register('type')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'Sale Development'}
               onChange={handleRadioChange}
