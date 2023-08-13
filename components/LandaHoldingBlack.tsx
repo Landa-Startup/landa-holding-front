@@ -10,7 +10,7 @@ export default function LandaHoldingBalck() {
             <br />
           </span>
           <span className="text-white text-4xl font-normal">
-            Investment Center
+            Cooperation
             <br />
           </span>
         </div>
