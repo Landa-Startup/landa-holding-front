@@ -10,9 +10,9 @@ export default function Hero() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[300px] md:h-[745px] relative"
+      className="h-[400px] md:h-[745px] relative"
     >
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex flex-col items-center justify-center h-full">
         <div className="w-[557px] h-11 text-center text-white text-xl md:text-3xl font-normal tracking-[11.20px] font-condensed">
           Landa Holding
         </div>
