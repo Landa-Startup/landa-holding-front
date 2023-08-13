@@ -1,4 +1,4 @@
-import { errors } from 'formidable';
+
 import * as React from 'react';
 import Input from './base/Input';
 import { InvestorRegistrationFormData } from 'app/types/global';
