@@ -65,6 +65,8 @@ export default async function handler(
                 lastName: extractFieldValue(fields, 'lastName'),
                 businessPlanFile: links["businessPlanFile"]? links["businessPlanFile"]: null,
                 pitchDeckFile: links["pitchDeckFile"]? links["pitchDeckFile"]: null, 
+                financialModelFile: links["financialModelFile"]? links["financialModelFile"]: null, 
+
             }
         })
         // res.status(200).json(product)
