@@ -2,7 +2,6 @@
 import React from 'react';
 import AboutUsCooperation from '@/components/molecules/AboutUsCooperation';
 import AboutUsLandaHolding from '@/components/molecules/AboutUsLandaHolding';
-import AboutUsLandaHoldingHeader from '@/components/molecules/AboutUsLandaHoldingHeader';
 import AboutUsProfile from '@/components/molecules/AboutUsProfile';
 import Aboutuscart from '@/components/molecules/AboutUscard';
 import Banner from '@/components/molecules/Banner';
@@ -35,25 +34,9 @@ export default function page() {
             reverse: true,
         },
     ];
-    const headers = [
-        {
-            title: "L\u00A0A\u00A0N\u00A0D\u00A0A\u00A0\u00A0 \u00A0H\u00A0O\u00A0L\u00A0D\u00A0I\u00A0N\u00A0G",
-            text: "About Us",
-        }
-    ]
     return (
         <div>
             <Banner title="About Us" image="/static/images/aerial-view-business-team.png" />
-            {/* {
-        headers.map((header, index) => (
-          <AboutUsLandaHoldingHeader
-            title={header.title}
-            image={header.image}
-            text={header.text}
-            key={index}
-          />
-        ))
-      } */}
             <AboutUsLandaHolding />
             <AboutUsCooperation />
             <div className='bg-whiteGold md:mx-[25px] md:pb-32 pt-12'>
