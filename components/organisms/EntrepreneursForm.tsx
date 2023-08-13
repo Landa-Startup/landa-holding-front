@@ -3,19 +3,19 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
-import InvestorRegistrationTitle from '../atoms/InvestorRegistrationTitle';
-import { InvestorRegistrationFormData } from '../../app/types/global';
+import { EntrepreneursFormData } from '../../app/types/global';
+import EntrepreneursTitle from '../atoms/EntrepreneursTitle';
 
-export default function InvestorRegistrationForm() {
+export default function EntrepreneursForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+  } = useForm<EntrepreneursFormData>();
 
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
+  const onSubmit = async (data: EntrepreneursFormData) => {
     try {
-      const response = await fetch('/api/investor-registration', {
+      const response = await fetch('/api/entrepreneurs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export default function InvestorRegistrationForm() {
   return (
     <>
       <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <InvestorRegistrationTitle />
+        <EntrepreneursTitle/>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-span-1">
