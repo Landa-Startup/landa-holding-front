@@ -64,7 +64,7 @@ export default function StartupFormForm() {
           <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <StartupFormPersonalInformation />
+          <StartupFormPersonalInformation register={register} errors={errors} />
 
           <div>
             <p className="text-4xl mb-4">Grows and Scale Up</p>
@@ -86,7 +86,10 @@ export default function StartupFormForm() {
           </label>
             {(() => {
             if (selectedRadio == "ideaExplanation") {
-              return <StartupFormIdea />;
+              return <StartupFormIdea register={register} errors={errors} />;
+            }
+            else{
+              return <div></div>;
             }
             })()}
 

@@ -1,36 +1,17 @@
-import { errors } from 'formidable';
 import * as React from 'react';
 import Input from './base/Input';
 import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
+import { startupsFormData } from 'app/types/global';
 
-export default function StartupFormIdea() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
-
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-    }
-  };
+export default function StartupFormIdea({
+  register,
+  errors,
+}: {
+  register: any;
+  errors: any;
+}) {
 
   return (
     <>
@@ -43,17 +24,17 @@ export default function StartupFormIdea() {
           nameTextArea="ideaExplanation"
           patternMessage=""
           patternValue=""
-          required=""
+          required="this is required"
         />
         <TextArea
           title="How did you get to know us?*"
           register={register}
           errors={errors}
           placeholder="Description"
-          nameTextArea="ideaExplanation"
+          nameTextArea="getToKnowUs"
           patternMessage=""
           patternValue=""
-          required=""
+          required="this is required"
         />
       </div>
     </>
