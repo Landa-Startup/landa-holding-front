@@ -213,6 +213,7 @@ const StartupForm = () => {
             <div className="text-black text-[64px] font-normal">
               STARTUPS FORM
             </div>
+<<<<<<< HEAD
             <div className="text-center text-black text-[32px] font-normal">
               Let’s Talk About Your Project
             </div>
@@ -221,6 +222,175 @@ const StartupForm = () => {
             <div>
               <div className="text-black text-[35px] font-normal">
                 Personal Information
+=======
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="streetAddress"
+              type="text"
+              label=""
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                Last Name
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="lastName"
+              type="text"
+              label=""
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">Birthday</span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="birthDate"
+              type="text"
+              label=""
+              required="Street Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                Last Name
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="aaa"
+              type="email"
+              label=""
+              required="Email Address is Required."
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] bg-stone-100 shadow"
+              labelClass="text-black text-base font-normal"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                Country of Residence
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="countryOfResidence"
+              type="text"
+              label=""
+              required="countryOfResidence is Required."
+              placeholder="Enter your countryOfResidence"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                Province of Residence
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="provinceOfResidence"
+              type="text"
+              label=""
+              required="provinceOfResidence is Required."
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+        </div>
+
+        <div>
+          <div className="text-black text-[35px] font-normal">
+            Grows and Scale Up
+          </div>
+          <div className="divide-y-2"></div>
+        </div>
+
+        {/* Radio buttons */}
+        <div className="flex items-center space-x-4">
+          <RadioButton text="Idea" handleRadioChange={handleRadioChange} />
+        </div>
+        {/* Form with text areas */}
+
+        <div className="grid grid-cols-2">
+          <TextArea
+            title="Explain your idea in 5 lines?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="ideaExplanation"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+                    <TextArea
+            title="How did you get to know us?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="getToKnowUs"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+        </div>
+
+        <div className="flex items-center space-x-4">
+          <RadioButton text="hi" handleRadioChange={handleRadioChange} />
+        </div>
+        {/* Form for Minimal Valuable Product */}
+        <div className="w-1/2">
+          <div className="flex space-x-3">
+            <div className="flex flex-col">
+              <div className="text-lg font-medium">
+                Do you have Pitch deck?*
+>>>>>>> origin/develop
               </div>
               <div className="divide-y-2"></div>
             </div>
@@ -364,11 +534,28 @@ const StartupForm = () => {
                   patternMessage={''}
                 />
               </div>
+<<<<<<< HEAD
+=======
+              <input type="file" onChange={handlePitchDeckFileChange} />
+>>>>>>> origin/develop
             </div>
 
+<<<<<<< HEAD
             <div>
               <div className="text-black text-[35px] font-normal">
                 Grows and Scale Up
+=======
+              <input type="file" onChange={handleBusinessPlanFileChange} />
+            </div>
+          </div>
+          <div className="grid grid-cols-2">
+            <div className="h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+              <div className="h-[17px]">
+                <span className="text-base font-normal text-black">
+                  Product Name
+                </span>
+                <span className="text-base font-normal text-stone-500">*</span>
+>>>>>>> origin/develop
               </div>
               <div className="divide-y-2"></div>
             </div>
@@ -1066,8 +1253,889 @@ const StartupForm = () => {
             </div>
           </form>
         </div>
+<<<<<<< HEAD
       </div>
     </>
+=======
+        <div className="w-1/2">
+          <span className="text-black">Problems</span>
+          <div className="mt-4">
+            <label className="text-lg font-medium">
+              Describe the customer problem you want to solve with your product
+              or service.*
+            </label>
+            <textarea
+              className="w-full h-24 p-2 border-2 rounded-lg border-stone-100 focus:outline-none focus:border-gold"
+              placeholder="Your description..."
+            />
+          </div>
+        </div>
+        <div className="w-1/2">
+          <span className="text-black">Solutions</span>
+          <div className="mt-4">
+            <label className="text-lg font-medium">
+              Describe the customer problem you want to solve with your product
+              or service.*
+            </label>
+            <textarea
+              className="w-full h-24 p-2 border-2 rounded-lg border-stone-100 focus:outline-none focus:border-gold"
+              placeholder="Your description..."
+            />
+          </div>
+        </div>
+        <div className="w-1/2">
+          <div className="mt-4">
+            <label className="text-lg font-medium">
+              What is your unique value proposition (innovation)? What is new
+              about what you do?*
+            </label>
+            <textarea
+              className="w-full h-24 p-2 border-2 rounded-lg border-stone-100 focus:outline-none focus:border-gold"
+              placeholder="Your description..."
+            />
+          </div>
+        </div>
+        <div className="mt-4">
+          <div className="flex flex-col">
+            <div className="text-lg font-medium">
+              How much is the level of your product and technology preparation?
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                The basic principle has been observed
+              </label>
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                Experimental proof of concept.
+              </label>
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                The confirmed technology in laboratory.
+              </label>
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                The confirmed technology in the environmental conditions
+              </label>
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                The presented technology in the environmental conditions
+              </label>
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                Show the system prototype in the mvp operating environment.
+              </label>
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                The proved realistic system in the operating environment.
+              </label>
+            </div>
+            <div className="flex">
+              <input
+                type="radio"
+                id="basicPrinciple"
+                name="technologyLevel"
+                value="basicPrinciple"
+                className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+              />
+              <label htmlFor="basicPrinciple" className="text-lg">
+                A complete and qualified system.
+              </label>
+            </div>
+            <TextArea
+            title="Briefly explain how your technology is scalable?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+            How did you get to know us?*
+            <span className="text-black">Business model</span>
+            <TextArea
+            title="Describe the method of monetization of your plan?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="monetizationOfYourPlan"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          
+          <TextArea
+            title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="structureOfYourSales"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          
+
+
+          </div>
+          <UploadInput title="If your plan has a financial model, please upload it." />
+          <TextArea
+            title="Have you previously cooperated with investors or accelerators?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="cooperatedWithInvestors"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+            <TextArea
+            title="How did you get to know us?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="getToKnowUs"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          <RadioButton
+            text="First Sale"
+            handleRadioChange={handleRadioChange}
+          />
+          <div className="flex justify-around">
+            <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload />
+            <TwoOptionRadio title="Do you have Business Plan?*" hasUpload />
+            <TwoOptionRadio title="Do you have Financial?*" hasUpload />
+          </div>
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Product Name"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Site Address"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
+          <span className="text-black">Problems</span>
+          <TextArea
+            title="Describe the customer problem you want to solve with your product or service. *"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="customerProblem"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          <span className="text-black">Solutions</span>
+          <TextArea
+            title="What is your unique value proposition (innovation)? What is new about what you do?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="solution"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          <div className="text-lg font-medium">
+            How much is the level of your product and technology preparation?
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The basic principle has been observed
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Experimental proof of concept.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in laboratory.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The presented technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Show the system prototype in the mvp operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The proved realistic system in the operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              A complete and qualified system.
+            </label>
+          </div>
+          <TextArea
+            title="Briefly explain how your technology is scalable?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          <span className="text-black">Business model</span>
+          <TextArea
+            title="Describe the method of monetization of your plan?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="monetizationOfYourPlan"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          <TextArea
+            title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="structureOfYourSales"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+
+          <UploadInput title="If your plan has a financial model, please upload it." />
+
+          <TextArea
+            title="Have you previously cooperated with investors or accelerators?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="cooperatedWithInvestors"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="How did you get to know us?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="getToKnowUs"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
+          <span className="text-black">Target Market</span>
+
+          <TextArea
+            title="Based on what characteristics do you decide who are your customers and who are not?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="nameTextArea"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="Who are your current customers? How many customers have you had so far?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="currentCustomers"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="How have you estimated the size of the market?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="estimatedMarketSize"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="totalTamSamSom"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <span className="text-black">Property</span>
+          <TextArea
+            title="How much revenue has your startup made since its inception?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="startupRevenue"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="How much is your monthly income?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="monthlyIncome"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="What is your current interest rate?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="currentInterestRate"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="How much current funding did you raise before starting your business?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="currentRaisedFunding"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="How much capital do you need to start your project?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="neededCapital"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />  
+
+          <RadioButton
+            text="Sale Development"
+            handleRadioChange={handleRadioChange}
+          />
+          <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload={false} />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Product Name"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="productName"
+            type="text"
+            label="Site Address"
+            required="Street Address is Required."
+            placeholder="Enter your Street Address"
+            className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            patternValue={''}
+            patternMessage={''}
+          />
+          <span className="text-black">Problems</span>
+          <TextArea
+            title="Describe the customer problem you want to solve with your product or service. *"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="customerProblem"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
+          <span className="text-black">Solutions</span>
+          <TextArea
+            title="What is your unique value proposition (innovation)? What is new about what you do?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="solution"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
+          <TextArea
+            title="What is your unique value proposition (innovation)? What is new about what you do?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+          <div className="text-lg font-medium">
+            How much is the level of your product and technology preparation?
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The basic principle has been observed
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Experimental proof of concept.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in laboratory.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The confirmed technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The presented technology in the environmental conditions
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              Show the system prototype in the mvp operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              The proved realistic system in the operating environment.
+            </label>
+          </div>
+          <div className="flex">
+            <input
+              type="radio"
+              id="basicPrinciple"
+              name="technologyLevel"
+              value="basicPrinciple"
+              className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+            />
+            <label htmlFor="basicPrinciple" className="text-lg">
+              A complete and qualified system.
+            </label>
+          </div>
+
+          <TextArea
+            title="Briefly explain how your technology is scalable?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+          <span className="text-black">Business model</span>
+
+          <TextArea
+            title="Describe the method of monetization of your plan?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="monetizationOfYourPlan"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+          <TextArea
+            title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="structureOfYourSales"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
+          <UploadInput title="If your plan has a financial model, please upload it." />
+          <TextArea
+            title="Have you previously cooperated with investors or accelerators?*"
+            halfSize={false}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="cooperatedWithInvestors"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
+          <TextArea
+            title="How did you get to know us?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="getToKnowUs"
+            patternMessage=''
+            patternValue=''
+            required=''
+          /> 
+
+          <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
+          <TextArea
+            title="Based on what characteristics do you decide who are your customers and who are not?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="customerCharacteristic"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+<TextArea
+            title="Who are your current customers? How many customers have you had so far?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="currentCustomers"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+
+<TextArea
+            title="How have you estimated the size of the market?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="estimatedMarketSize"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+
+<TextArea
+            title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="totalTamSamSom"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <span className="text-black">Property</span>
+          <TextArea
+            title="How much revenue has your startup made since its inception?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="startupRevenue"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+
+<TextArea
+            title="How much is your monthly income?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="monthlyIncome"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+          <TextArea
+            title="What is your current interest rate?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="currentInterestRate"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          <TextArea
+            title="How much current funding did you raise before starting your business?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="currentRaisedFunding"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+
+                    <TextArea
+            title="How much capital do you need to start your project?*"
+            halfSize={true}
+            register={register}
+            errors={errors}
+            placeholder="Explain your idea in 5 lines?"
+            nameTextArea="neededCapital"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />
+          <Button text="SEND" size="" type="submit" />
+        </div>
+      </form>
+    </div>
+>>>>>>> origin/develop
   );
 };
 

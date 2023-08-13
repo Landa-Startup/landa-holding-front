@@ -5,7 +5,8 @@ export default function AerialViewBusinessTeam() {
   return (
     <div
       style={{
-        backgroundImage: "url('/static/images/Home/Cooperation-members/Office.png')",
+        backgroundImage:
+          "url('/static/images/Home/Cooperation-members/Office.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
@@ -16,19 +17,19 @@ export default function AerialViewBusinessTeam() {
           Landa Holding
           <br />
         </span>
-        <span className="text-white text-[40px] font-normal">
+        <span className="text-white text-base md:text-[40px] font-normal">
           What Our Cooperation Members Say?
         </span>
       </div>
-      <div className="w-[1006px] h-[380px] relative bg-neutral-500 bg-opacity-60 mx-auto">
-        <div className="left-[416px] top-[316px] absolute justify-start items-start gap-[19px] inline-flex">
+      <div className="w-[363px] md:w-[1006px] h-[242px] md:h-[380px] relative bg-neutral-500 bg-opacity-60 mx-auto">
+        <div className="left-1/2 md:left-[416px] top-[316px] absolute justify-start items-start gap-[19px] inline-flex">
           <button className="w-[15px] h-[15px] bg-primary rounded-full" />
           <button className="w-[15px] h-[15px] rounded-full border border-white" />
           <button className="w-[15px] h-[15px] rounded-full border border-white" />
           <button className="w-[15px] h-[15px] rounded-full border border-white" />
         </div>
-        <div className="w-[794px] p-2.5 left-[78px] top-[147px] absolute justify-center items-center gap-2.5 inline-flex">
-          <div className="w-[722px] text-stone-100 text-xl font-medium leading-7 font-barlow">
+        <div className="md:w-[794px] p-2.5 left-[78px] top-[147px] absolute justify-center items-center gap-2.5 inline-flex">
+          <div className="md:w-[722px] text-stone-100 text-xs md:text-xl font-medium leading-7 font-barlow">
             Landa Holding provides comprehensive information on investment
             strategies, business creation, and entrepreneurial methods. Its
             informative approaches in various economic and managerial fields

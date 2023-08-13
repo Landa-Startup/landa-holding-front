@@ -14,12 +14,12 @@ export default function ImageCard({
 }) {
   return (
     <div>
-      <div className="w-[557px] font-condensed h-11 text-center text-neutral-800 text-3xl font-normal uppercase tracking-[11.20px]">
+      <div className="w-[557px] font-condensed h-11 text-center text-neutral-800 text-2xl md:text-3xl font-normal uppercase tracking-[11.20px]">
         Landa holding
       </div>
       {reverse ? (
         <div className="flex flex-row-reverse text-center">
-          <span className="text-neutral-800 text-6xl font-normal tracking-[6.40px]">
+          <span className="text-neutral-800 md:text-6xl font-normal tracking-[6.40px] text-4xl">
             {title}
           </span>
           <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
@@ -32,7 +32,7 @@ export default function ImageCard({
               height={500}
             />
             <Image
-              className="w-64 h-96"
+              className="w-64 h-96 hidden md:block"
               src={imageTwo}
               alt={imageTwo}
               width={500}
@@ -42,7 +42,7 @@ export default function ImageCard({
         </div>
       ) : (
         <div className="text-center">
-          <span className="text-neutral-800 text-6xl font-normal tracking-[6.40px]">
+          <span className="text-neutral-800 md:text-6xl font-normal tracking-[6.40px] text-4xl">
             {title}
           </span>
           <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
@@ -55,7 +55,7 @@ export default function ImageCard({
               height={500}
             />
             <Image
-              className="w-64 h-96"
+              className="w-64 h-96 hidden md:block"
               src={imageTwo}
               alt={imageTwo}
               width={500}

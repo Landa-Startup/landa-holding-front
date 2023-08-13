@@ -27,17 +27,17 @@ export default function LatestStartups() {
   return (
     //TODO: put cards in loop.
     <div>
-      <div className="h-[643px] relative bg-stone-100">
-        <div className="w-[595px] h-[78px] flex-col justify-start items-start inline-flex">
+      <div className="md:h-[643px] relative bg-stone-100">
+        <div className="md:w-[595px] h-[78px] flex-col justify-start items-start">
           <div className="text-neutral-800 text-base font-normal tracking-[5.60px] absolute left-[160px] top-[24px] font-condensed">
             LANDA HOLDING
           </div>
-          <div className="w-[595px] h-[59px] text-primary text-[64px] font-normal absolute left-[160px] top-[43px] font-condensed">
+          <div className="md:w-[595px] text-primary text-2xl text-[64px] font-normal absolute left-[25px] md:left-[160px] top-[50px] md:top-[43px] font-condensed">
             LATEST STARTUPS
           </div>
         </div>
         <div className="flex justify-center mt-2">
-          <div className="grid grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
             {cardData.map((data, index) => (
               <LatestStartupsCard
                 key={index}
