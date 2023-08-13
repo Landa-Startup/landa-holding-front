@@ -1,5 +1,15 @@
 import React from 'react';
-const Aboutuscart: React.FC<AboutuscartProps> = ({ title, text, image, reverse, description, teext, ttext, }) => {
+type AboutUsCardProps = {
+  title: string;
+  text: string;
+  image: string;
+  reverse: boolean;
+  description: string;
+  teext: string;
+  ttext: string;
+}
+
+const Aboutuscart = ({ title, text, image, reverse, description, teext, ttext }: AboutUsCardProps) => {
   return (
     <>
       {reverse && (

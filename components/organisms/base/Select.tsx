@@ -23,6 +23,8 @@ export default function Select({
 }) {
   return (
     <>
+    <div>
+
       <label htmlFor={nameInput} className={labelClass}>
         {label}
       </label>
@@ -51,6 +53,7 @@ export default function Select({
       )}
 
       <br />
+    </div>
     </>
   );
 }
