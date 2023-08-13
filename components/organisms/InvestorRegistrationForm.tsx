@@ -1,10 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import InvestorRegistrationTitle from '../atoms/InvestorRegistrationTitle';
 import { InvestorRegistrationFormData } from '../../app/types/global';
+import NotificationSendForm from './base/NotificationSendForm';
 
 export default function InvestorRegistrationForm() {
   const {
@@ -12,6 +13,10 @@ export default function InvestorRegistrationForm() {
     handleSubmit,
     formState: { errors },
   } = useForm<InvestorRegistrationFormData>();
+
+  const [send, setSend] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const onSubmit = async (data: InvestorRegistrationFormData) => {
     try {
@@ -23,13 +28,15 @@ export default function InvestorRegistrationForm() {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
+      setIsSuccess(true);
+      setSend(false);
     } catch (error) {
-      console.error('Error submitting form data:', error);
+      setSend(false);
+      setIsSuccess(false);
+      console.error('Error sending form data:', error);
     }
   };
 
@@ -234,6 +241,7 @@ export default function InvestorRegistrationForm() {
             </button>
           </div>
         </form>
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
       </div>
     </>
   );

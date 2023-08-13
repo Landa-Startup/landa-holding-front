@@ -1,60 +1,51 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
-export default function NotificationSendForm({submitting,success}:{submitting:boolean,success:boolean}) {
-
+export default function NotificationSendForm({
+  submitting,
+  success,
+}: {
+  submitting: boolean;
+  success: boolean;
+}) {
   return (
-    <div>
-              {success && submitting && (
-        <div
-          className="flex p-4   mb-4 text-sm text-green-900 rounded-lg text-bold bg-green-10 dark:bg-neutral-700 dark:text-green-400"
-          role="alert"
-          style={{ backgroundColor: '#26ff2a54' }}
-        >
+    <div className="w-96 mx-auto mt-5">
+      {success && submitting && (
+        <div className="alert alert-success">
           <svg
-            aria-hidden="true"
-            className="flex-shrink-0 inline w-5 h-5 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
           >
             <path
-              fillRule="evenodd"
-              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-              clipRule="evenodd"
-            ></path>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
-          <span className="sr-only">پیام</span>
-          <div>
-            <span className="font-medium">Successfull</span>!
-          </div>
+          <span>Form Submitted Successfully.</span>
         </div>
       )}
 
       {!success && submitting && (
-        <div
-          className="flex p-4 mb-4 text-sm text-red-900 rounded-lg text-bold bg-red-90 dark:bg-neutral-700 dark:text-red-400"
-          role="alert"
-          style={{ backgroundColor: '#ff24244f' }}
-        >
+        <div className="alert alert-error">
           <svg
-            aria-hidden="true"
-            className="flex-shrink-0 inline w-5 h-5 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
           >
             <path
-              fillRule="evenodd"
-              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-              clipRule="evenodd"
-            ></path>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
-          <span className="sr-only"></span>
-          <div>
-            <span className="font-medium">Unsuccessfull</span>!
-          </div>  
+          <span>An error occurred. Please Contact Support.</span>
         </div>
       )}
     </div>
-  )
+  );
 }

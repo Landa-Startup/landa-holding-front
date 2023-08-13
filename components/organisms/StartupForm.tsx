@@ -8,6 +8,7 @@ import TwoOptionRadio from '../atoms/TwoOptionRadio';
 import Button from '../atoms/Button';
 import Input from './base/Input';
 import { startupsFormData } from '../../app/types/global';
+import NotificationSendForm from './base/NotificationSendForm';
 
 enum Type {
   IDEA = 'IDEA',
@@ -369,22 +370,21 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
-                    <TextArea
+          <TextArea
             title="How did you get to know us?*"
             halfSize={false}
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="getToKnowUs"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
-
         </div>
 
         <div className="flex items-center space-x-4">
@@ -624,44 +624,40 @@ const StartupForm = () => {
               </label>
             </div>
             <TextArea
-            title="Briefly explain how your technology is scalable?*"
-            halfSize={false}
-            register={register}
-            errors={errors}
-            placeholder="Explain your idea in 5 lines?"
-            nameTextArea="scalable"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />
+              title="Briefly explain how your technology is scalable?*"
+              halfSize={false}
+              register={register}
+              errors={errors}
+              placeholder="Explain your idea in 5 lines?"
+              nameTextArea="scalable"
+              patternMessage=""
+              patternValue=""
+              required=""
+            />
             How did you get to know us?*
             <span className="text-black">Business model</span>
             <TextArea
-            title="Describe the method of monetization of your plan?*"
-            halfSize={false}
-            register={register}
-            errors={errors}
-            placeholder="Explain your idea in 5 lines?"
-            nameTextArea="monetizationOfYourPlan"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />
-          
-          <TextArea
-            title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
-            halfSize={false}
-            register={register}
-            errors={errors}
-            placeholder="Explain your idea in 5 lines?"
-            nameTextArea="structureOfYourSales"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />
-          
-
-
+              title="Describe the method of monetization of your plan?*"
+              halfSize={false}
+              register={register}
+              errors={errors}
+              placeholder="Explain your idea in 5 lines?"
+              nameTextArea="monetizationOfYourPlan"
+              patternMessage=""
+              patternValue=""
+              required=""
+            />
+            <TextArea
+              title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
+              halfSize={false}
+              register={register}
+              errors={errors}
+              placeholder="Explain your idea in 5 lines?"
+              nameTextArea="structureOfYourSales"
+              patternMessage=""
+              patternValue=""
+              required=""
+            />
           </div>
           <UploadInput title="If your plan has a financial model, please upload it." />
           <TextArea
@@ -671,20 +667,20 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="cooperatedWithInvestors"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
-            <TextArea
+          <TextArea
             title="How did you get to know us?*"
             halfSize={false}
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="getToKnowUs"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
           <RadioButton
             text="First Sale"
@@ -729,9 +725,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="customerProblem"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
           <span className="text-black">Solutions</span>
           <TextArea
@@ -741,9 +737,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="solution"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
           <div className="text-lg font-medium">
             How much is the level of your product and technology preparation?
@@ -851,9 +847,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="scalable"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
           <span className="text-black">Business model</span>
           <TextArea
@@ -863,9 +859,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="monetizationOfYourPlan"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
           <TextArea
             title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
@@ -874,11 +870,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="structureOfYourSales"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
-
 
           <UploadInput title="If your plan has a financial model, please upload it." />
 
@@ -889,9 +884,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="cooperatedWithInvestors"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -901,9 +896,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="getToKnowUs"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
@@ -916,9 +911,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="nameTextArea"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -928,9 +923,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="currentCustomers"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -940,9 +935,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="estimatedMarketSize"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -952,9 +947,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="totalTamSamSom"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <span className="text-black">Property</span>
@@ -965,9 +960,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="startupRevenue"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -977,9 +972,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="monthlyIncome"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -989,9 +984,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="currentInterestRate"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -1001,9 +996,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="currentRaisedFunding"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -1013,10 +1008,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="neededCapital"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />  
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
 
           <RadioButton
             text="Sale Development"
@@ -1057,10 +1052,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="customerProblem"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
 
           <span className="text-black">Solutions</span>
           <TextArea
@@ -1070,10 +1065,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="solution"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
 
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?*"
@@ -1082,10 +1077,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="scalable"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
           <div className="text-lg font-medium">
             How much is the level of your product and technology preparation?
           </div>
@@ -1193,10 +1188,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="scalable"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
           <span className="text-black">Business model</span>
 
           <TextArea
@@ -1206,10 +1201,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="monetizationOfYourPlan"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
           <TextArea
             title="Please clearly mention the structure of your sales cycle from contact to delivery.*"
             halfSize={false}
@@ -1217,10 +1212,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="structureOfYourSales"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
 
           <UploadInput title="If your plan has a financial model, please upload it." />
           <TextArea
@@ -1230,10 +1225,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="cooperatedWithInvestors"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
 
           <TextArea
             title="How did you get to know us?*"
@@ -1242,10 +1237,10 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="getToKnowUs"
-            patternMessage=''
-            patternValue=''
-            required=''
-          /> 
+            patternMessage=""
+            patternValue=""
+            required=""
+          />
 
           <TwoOptionRadio title="Do you have Financial?*" hasUpload={false} />
           <TextArea
@@ -1255,47 +1250,45 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="customerCharacteristic"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
-<TextArea
+          <TextArea
             title="Who are your current customers? How many customers have you had so far?*"
             halfSize={true}
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="currentCustomers"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
-
-<TextArea
+          <TextArea
             title="How have you estimated the size of the market?*"
             halfSize={true}
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="estimatedMarketSize"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
-
-<TextArea
+          <TextArea
             title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*"
             halfSize={true}
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="totalTamSamSom"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <span className="text-black">Property</span>
@@ -1306,22 +1299,21 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="startupRevenue"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
-
-<TextArea
+          <TextArea
             title="How much is your monthly income?*"
             halfSize={true}
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="monthlyIncome"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
           <TextArea
@@ -1331,9 +1323,9 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="currentInterestRate"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
           <TextArea
             title="How much current funding did you raise before starting your business?*"
@@ -1342,25 +1334,26 @@ const StartupForm = () => {
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="currentRaisedFunding"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
 
-                    <TextArea
+          <TextArea
             title="How much capital do you need to start your project?*"
             halfSize={true}
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
             nameTextArea="neededCapital"
-            patternMessage=''
-            patternValue=''
-            required=''
+            patternMessage=""
+            patternValue=""
+            required=""
           />
           <Button text="SEND" size="" type="submit" />
         </div>
       </form>
+      <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
     </div>
   );
 };
