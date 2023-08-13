@@ -39,14 +39,14 @@ export default function page() {
   return (
     <div>
       <Hero />
-      {cardData.map((data, index) => (
+      {/* {cardData.map((data, index) => (
         <HomeTextCardContainer
           key={index}
           title={data.title}
           text={data.text}
           reverse={data.reverse}
         />
-      ))}
+      ))} */}
       <LandaHoldingBlack />
       <PromotionalVideo />
       <UpcomingEvents />

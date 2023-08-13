@@ -13,7 +13,10 @@ export default function HomeTextCardContainer({
 }) {
   return (
     <div>
-      <div className="flex flex-row items-center justify-around py-10 font-gilda bg-whiteGold" id='LandaHolding'>
+      <div
+        className="flex flex-col-reverse md:flex-row items-center justify-around py-10 font-gilda bg-whiteGold"
+        id="LandaHolding"
+      >
         <TextCard text={text} />
         <ImageCard
           reverse={false}
