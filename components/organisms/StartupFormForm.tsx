@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+import React,{useState} from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import InvestorRegistrationTitle from 'app/types/global';
-import { InvestorRegistrationFormData } from '../../app/types/global';
+import { startupsFormData } from '../../app/types/global';
 import StartupFormTitle from '../atoms/StartupFormTitle';
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
@@ -12,15 +12,22 @@ import StartupFormMVP from './StartupFormMVP';
 import StartupFormTrialProduct from './StartupFormTrialProduct';
 import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
+import NoRadioButton from '../atoms/NoRadioButton';
 
 export default function StartupFormForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+  } = useForm<startupsFormData>();
 
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
+  const [selectedRadio, setSelectedRadio] = useState('');
+
+  const handleRadioChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedRadio(event.target.value);
+  };
+
+  const onSubmit = async (data: startupsFormData) => {
     try {
       const response = await fetch('/api/investor-registration', {
         method: 'POST',
@@ -65,52 +72,94 @@ export default function StartupFormForm() {
           <div>
             <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
           </div>
+            
+            <label className="flex flex-column mr-10 my-10">
+            <input
+              type="radio"
+              value="ideaExplanation"
+              {...register('ideaExplanation')}
+              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
+              checked={selectedRadio === 'ideaExplanation'}
+              onChange={handleRadioChange}
+            />
+            <span>Idea</span>
+          </label>
+            {(() => {
+            if (selectedRadio == "ideaExplanation") {
+              return <StartupFormIdea />;
+            }
+            })()}
 
-          <div className="collapse collapse-arrow bg-[#f9f7f5] dark:bg-[#21282f] my-10">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]">
-              Idea
-            </div>
-            <div className="collapse-content">
-              <StartupFormIdea />
-            </div>
-          </div>
-          <div className="collapse collapse-arrow bg-[#f9f7f5] dark:bg-[#21282f] my-10">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]">
-              Minimal Valuable Product
-            </div>
-            <div className="collapse-content">
-              <StartupFormMVP />
-            </div>
-          </div>
-          <div className="collapse collapse-arrow bg-[#f9f7f5] dark:bg-[#21282f] my-10">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]">
-              Trial Product
-            </div>
-            <div className="collapse-content">
-              <StartupFormTrialProduct />
-            </div>
-          </div>
-          <div className="collapse collapse-arrow bg-[#f9f7f5] dark:bg-[#21282f] my-10">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]">
-              First Sale
-            </div>
-            <div className="collapse-content">
-              <StartupFormFirstSale />
-            </div>
-          </div>
-          <div className="collapse collapse-arrow bg-[#f9f7f5] dark:bg-[#21282f] my-10">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]">
-              Sale Development
-            </div>
-            <div className="collapse-content">
-              <StartupFormSaleDevelopment />
-            </div>
-          </div>
+
+<label className="flex flex-column mr-10 my-10">
+            <input
+              type="radio"
+              value="MVP"
+              {...register('MVP')}
+              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
+              checked={selectedRadio === 'MVP'}
+              onChange={handleRadioChange}
+            />
+            <span>Minimal Valuable Product</span>
+          </label>
+            {(() => {
+            if (selectedRadio == "MVP") {
+              return <StartupFormMVP />;
+            }
+            })()}
+
+<label className="flex flex-column mr-10 my-10">
+            <input
+              type="radio"
+              value="TRIAL"
+              {...register('TRIAL')}
+              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
+              checked={selectedRadio === 'TRIAL'}
+              onChange={handleRadioChange}
+            />
+            <span>Trial Product</span>
+          </label>
+            {(() => {
+            if (selectedRadio == "TRIAL") {
+              return <StartupFormTrialProduct />;
+            }
+            })()}
+
+
+<label className="flex flex-column mr-10 my-10">
+            <input
+              type="radio"
+              value="FisrtSale"
+              {...register('FisrtSale')}
+              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
+              checked={selectedRadio === 'FisrtSale'}
+              onChange={handleRadioChange}
+            />
+            <span>First Sale</span>
+          </label>
+            {(() => {
+            if (selectedRadio == "FisrtSale") {
+              return <StartupFormFirstSale />;
+            }
+            })()}
+
+
+          <label className="flex flex-column mr-10 my-10">
+            <input
+              type="radio"
+              value="Sale Development"
+              {...register('Sale Development')}
+              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
+              checked={selectedRadio === 'Sale Development'}
+              onChange={handleRadioChange}
+            />
+            <span>Sale Development</span>
+          </label>
+            {(() => {
+            if (selectedRadio == "Sale Development") {
+              return <StartupFormSaleDevelopment />;
+            }
+            })()}
           <div className="text-center">
             <button
               type="submit"
