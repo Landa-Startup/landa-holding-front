@@ -107,7 +107,7 @@ export default function StartupFormForm() {
           </label>
             {(() => {
             if (selectedRadio == "MVP") {
-              return <StartupFormMVP />;
+              return <StartupFormMVP register={register} errors={errors}/>;
             }
             })()}
 
@@ -124,7 +124,7 @@ export default function StartupFormForm() {
           </label>
             {(() => {
             if (selectedRadio == "TRIAL") {
-              return <StartupFormTrialProduct />;
+              return <StartupFormTrialProduct register={register} errors={errors}/>;
             }
             })()}
 
@@ -142,7 +142,7 @@ export default function StartupFormForm() {
           </label>
             {(() => {
             if (selectedRadio == "FisrtSale") {
-              return <StartupFormFirstSale />;
+              return <StartupFormFirstSale register={register} errors={errors}/>;
             }
             })()}
 
@@ -160,7 +160,7 @@ export default function StartupFormForm() {
           </label>
             {(() => {
             if (selectedRadio == "Sale Development") {
-              return <StartupFormSaleDevelopment />;
+              return <StartupFormSaleDevelopment register={register} errors={errors}/>;
             }
             })()}
           <div className="text-center">

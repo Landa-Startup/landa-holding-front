@@ -12,12 +12,13 @@ import StartupFormBusinessModel from './StartupFormBusinessModel';
 import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
 
-export default function StartupFormFirstSale() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+export default function StartupFormFirstSale({
+  register,
+  errors,
+}: {
+  register: any;
+  errors: any;
+}) {
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
@@ -40,26 +41,6 @@ export default function StartupFormFirstSale() {
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setSelectedRadioFinancial(event.target.value);
-  };
-
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-    }
   };
 
   return (

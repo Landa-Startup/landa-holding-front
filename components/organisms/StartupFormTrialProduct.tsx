@@ -9,12 +9,14 @@ import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 
-export default function StartupFormMVP() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+export default function StartupFormMVP({
+  register,
+  errors,
+}: {
+  register: any;
+  errors: any;
+}) {
+  
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
   const handleRadioPitchChange = (
@@ -31,25 +33,6 @@ export default function StartupFormMVP() {
     setSelectedRadioBusiness(event.target.value);
   };
 
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-    }
-  };
 
   return (
     <>
