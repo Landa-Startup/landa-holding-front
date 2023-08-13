@@ -42,6 +42,8 @@ const UploadFormPage: React.FC = () => {
     };
 
     return (
+        <div>
+            <div>      </div>
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Name:</label>
@@ -57,6 +59,9 @@ const UploadFormPage: React.FC = () => {
             </div>
             <button type="submit">Submit</button>
         </form>
+        </div>
+
+
     );
 };
 

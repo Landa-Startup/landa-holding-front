@@ -23,24 +23,53 @@ export default async function handler(
             })
         })
         const { fields, files } = parseData
-        console.log(files.businessPlanFile)
-        console.log(files.pitchDeckFile)
+        
+        // console.log(files.businessPlanFile)
+        // if (files.pitchDeckFile === undefined){
 
-        const uploadUrls = await cloudinary(files.businessPlanFile, 'landa/files/forms')
-        const uploadUrls2 = await cloudinary(files.pitchDeckFile, 'landa/files/forms')
+        // }
+        console.log(files)
+        const links:any = {};
+        for (const [key, value] of Object.entries(files)) {
+            const link =  await cloudinary(files[key], 'landa/files/forms/'+fields.email)
+            links[key] = link[0]
+        }
+        console.log(links)
 
-        console.log("this is file : ",uploadUrls)   
+        // for(const file of files){
+        //     if (file !== undefined){
+        //         // let link:string = ""
+        //         // console.log(file); 
+        //         const key = Object.entries(files)
+
+        //         links[key] =  await cloudinary(file, 'landa/files/forms/'+fields.email)
+        //     //    await prisma.startupsForm.update({
+        //     //     where: {
+        //     //       firstName: extractFieldValue(fields, 'firstName'),
+        //     //     },
+        //     //     data: {
+        //     //       name: 'Viola the Magnificent',
+        //     //     },
+        //     //   })
+        //         //  = link;
+        //     }
+        // }
+        // const uploadUrls = await cloudinary(files.businessPlanFile, 'landa/files/forms')
+        // const uploadUrls2 = await cloudinary(files.pitchDeckFile, 'landa/files/forms')
+
+        // console.log("this is file : ",uploadUrls)   
+
         const startupsForm = await prisma.startupsForm.create({
             data: {
                 firstName: extractFieldValue(fields, 'firstName'),
                 lastName: extractFieldValue(fields, 'lastName'),
-                businessPlanFile: uploadUrls[0],
-                pitchDeckFile: uploadUrls2[0], 
+                businessPlanFile: links["businessPlanFile"]? links["businessPlanFile"]: null,
+                pitchDeckFile: links["pitchDeckFile"]? links["pitchDeckFile"]: null, 
             }
         })
         // res.status(200).json(product)
-        res.status(200).json({'message':uploadUrls})
 
+        res.status(200).json({'message':links})
         // res.status(200).json({'message1':startupsForm})
     } else {
         try {

@@ -77,18 +77,17 @@ const StartupForm = () => {
     defaultValues: initialFormData,
   });
 
-  const [selectedRadio, setSelectedRadio] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
 
-  const handleRadioChange = (radioValue: string) => {
-    setSelectedRadio(radioValue);
+  // const handleRadioChange = (radioValue: string) => {
+  //   setSelectedRadio(radioValue);
+  // };
+
+  const handleRadioChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedOption(event.target.value);
   };
 
-  const renderForm = (radioValue: string) => {
-    if (selectedRadio === radioValue) {
-      return <form>{/* Form content */}</form>;
-    }
-    return null;
-  };
+
 
   const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
     businessPlanFile: null,
@@ -307,6 +306,9 @@ const StartupForm = () => {
               patternMessage={''}
             />
           </div>
+
+
+
           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
             <div className="h-[17px]">
               <span className="text-base font-normal text-black">
@@ -381,38 +383,50 @@ const StartupForm = () => {
 
         {/* Radio buttons */}
         <div className="flex items-center space-x-4">
-          <RadioButton text="Idea" handleRadioChange={handleRadioChange} />
+          {/* <RadioButton text="Idea" handleRadioChange={handleRadioChange} /> */}
+          <input type="radio" value={'Idea'} checked={selectedOption === 'Idea'} onChange={handleRadioChange}/>
         </div>
         {/* Form with text areas */}
-
-        <div className="grid grid-cols-2">
-          <TextArea
-            title="Explain your idea in 5 lines?*"
-            halfSize={false}
-            register={register}
-            errors={errors}
-            placeholder="Explain your idea in 5 lines?"
-            nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />
-                    <TextArea
-            title="How did you get to know us?*"
-            halfSize={false}
-            register={register}
-            errors={errors}
-            placeholder="Explain your idea in 5 lines?"
-            nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />
+        
+        <div>
+        {(() => {
+        if (selectedOption === "Idea") {
+          return(
+            <div className="grid grid-cols-2">
+            <TextArea
+              title="Explain your idea in 5 lines?*"
+              halfSize={false}
+              register={register}
+              errors={errors}
+              placeholder="Explain your idea in 5 lines?"
+              nameTextArea="ideaExplanation"
+              patternMessage=''
+              patternValue=''
+              required=''
+            />
+                      <TextArea
+              title="How did you get to know us?*"
+              halfSize={false}
+              register={register}
+              errors={errors}
+              placeholder="Explain your idea in 5 lines?"
+              nameTextArea="ideaExplanation"
+              patternMessage=''
+              patternValue=''
+              required=''
+            />
+  
+          </div>
+          )
+        } else {
+          return null;
+        }
+      })()}
 
         </div>
 
         <div className="flex items-center space-x-4">
-          <RadioButton text="hi" handleRadioChange={handleRadioChange} />
+          {/* <RadioButton text="hi" handleRadioChange={handleRadioChange} /> */}
         </div>
         {/* Form for Minimal Valuable Product */}
         <div className="w-1/2">
@@ -720,10 +734,10 @@ const StartupForm = () => {
             patternValue=''
             required=''
           />
-          <RadioButton
+          {/* <RadioButton
             text="First Sale"
-            handleRadioChange={handleRadioChange}
-          />
+            // handleRadioChange={handleRadioChange}
+          /> */}
           <div className="flex justify-around">
             <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload />
             <TwoOptionRadio title="Do you have Business Plan?*" hasUpload />
@@ -1051,11 +1065,11 @@ const StartupForm = () => {
             patternValue=''
             required=''
           />  
-
+{/* 
           <RadioButton
             text="Sale Development"
-            handleRadioChange={handleRadioChange}
-          />
+            // handleRadioChange={handleRadioChange}
+          /> */}
           <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload={false} />
           <Input
             register={register}
