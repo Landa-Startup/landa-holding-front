@@ -14,7 +14,7 @@ export default function ImageCard({
 }) {
   return (
     <div>
-      <div className="w-[557px] font-condensed h-11 text-center text-neutral-800 text-xs md:text-3xl font-normal uppercase tracking-[3px] md:tracking-[11.20px]">
+      <div className="md:w-[557px] font-condensed h-11 text-center text-neutral-800 text-xs md:text-3xl font-normal uppercase tracking-[3px] md:tracking-[11.20px]">
         Landa holding
       </div>
       {reverse ? (
