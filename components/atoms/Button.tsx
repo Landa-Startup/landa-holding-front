@@ -19,10 +19,10 @@ export default function Button({
     // {...rest}
     >
       <span className="absolute inset-0 bg-black"></span>
-      <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal">
+      <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal leading-none">
         {text}
       </span>
-      <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal">
+      <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal leading-none">
         {text}
       </span>
     </button>

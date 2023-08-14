@@ -11,9 +11,9 @@ export default function AboutUsLandaHolding() {
         <img className='w-[360px] h-[157px]  md:w-[661px] md:h-[404px] mt-[13px]  pr-[33px] ' style={{
           backgroundImage: 'url(/static/images/0419a30cb9ec2a0cf247e25dd885f7c2.jpg)', backgroundSize: 'cover',
           backgroundPosition: 'center'
-}}
-       
-          ></img>
+        }}
+
+        ></img>
       </div>
     </div>)
 }

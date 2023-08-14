@@ -54,10 +54,7 @@ export default function page() {
             </div> */}
 
             <div>
-                <AboutUsProfile
-
-
-                />
+                <AboutUsProfile />
             </div>
         </div>
     );
