@@ -18,7 +18,7 @@ export default function LandaHoldingPriorityCard({
         height={500}
       />
       <div className=" justify-center items-center gap-2.5 inline-flex">
-        <div className="flex items-center text-black text-base md:text-2xl font-normal font-gilda">
+        <div className="flex items-center text-black text-base md:text-2xl font-normal font-gilda w-32 justify-center text-center">
           {title}
         </div>
       </div>

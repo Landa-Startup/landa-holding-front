@@ -6,10 +6,12 @@ export default function HomeTextCardContainer({
   title,
   text,
   reverse,
+  show,
 }: {
   title: string;
   text: string;
   reverse: boolean;
+  show: boolean;
 }) {
   return (
     <div>
@@ -20,6 +22,7 @@ export default function HomeTextCardContainer({
         <TextCard
           text={text}
           image="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
+          show={show}
         />
         <ImageCard
           reverse={false}

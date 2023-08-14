@@ -13,10 +13,10 @@ export default function PromotionalVideo() {
       className="h-[300px] md:h-[400px] relative"
     >
       <div className="absolute flex flex-col h-[300px] md:h-[400px] w-full inset-0 bg-black bg-opacity-40 justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <div className="text-base font-normal tracking-wide text-white w-155 h-23 font-condensed">
+        <div className="text-xs md:text-base font-normal leading-[2.5px] tracking-wide text-white w-155 h-23 font-condensed">
           LANDA HOLDING
         </div>
-        <div className="h-12 my-4 text-4xl font-normal tracking-wider text-white w-373 font-gilda">
+        <div className="h-12 my-4 text-4xl font-normal tracking-[1.6px] text-white w-373 font-gilda">
           Promotional Video
         </div>
         <div className="relative w-20 h-20 p-6 font-light text-center text-white border-2 rounded-full opacity-100 border-primary font-futura b4">
