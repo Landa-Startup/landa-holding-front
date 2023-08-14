@@ -1,5 +1,5 @@
 
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Input from './base/Input';
 import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
@@ -47,15 +47,28 @@ export default function StartupFormFirstSale({
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
         <YesRadioButton
-          title="Do you have Pitch deck?"
+          title="Do you have Financial Plan?"
           register={register}
           errors={errors}
           required="Please choose an option"
-          name="pitch-deck"
-          handleRadioChange={handleRadioPitchChange}
-          selectedRadio={selectedRadioPitch}
+          name="financial-plan"
+          handleRadioChange={handleRadioFinancialChange}
+          selectedRadio={selectedRadioFinancial}
+          handleChangeFile={() => { }}
+          fileName=""
         />
         <YesRadioButton
+          title="Do you have Financial?"
+          register={register}
+          errors={errors}
+          required="Please choose an option"
+          name="financial-plan"
+          handleRadioChange={handleRadioFinancialChange}
+          selectedRadio={selectedRadioFinancial}
+          handleChangeFile={() => { }}
+          fileName=""
+        />
+        {/* <YesRadioButton
           title="Do you have Business Plan?"
           register={register}
           errors={errors}
@@ -63,7 +76,7 @@ export default function StartupFormFirstSale({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
-        />
+        /> */}
       </div>
       {(() => {
         if ((Boolean(selectedRadioBusiness) === false) && (Boolean(selectedRadioPitch)) === false) {
@@ -111,27 +124,29 @@ export default function StartupFormFirstSale({
       })()}
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
         <div>
-        <YesRadioButton
-          title="Do you have Financial?"
-          register={register}
-          errors={errors}
-          required="Please choose an option"
-          name="financial-plan"
-          handleRadioChange={handleRadioFinancialChange}
-          selectedRadio={selectedRadioFinancial}
-        />
+          <YesRadioButton
+            title="Do you have Financial?"
+            register={register}
+            errors={errors}
+            required="Please choose an option"
+            name="financial-plan"
+            handleRadioChange={handleRadioFinancialChange}
+            selectedRadio={selectedRadioFinancial}
+            handleChangeFile={() => { }}
+            fileName=""
+          />
         </div>
       </div>
       {(() => {
-            if (Boolean(selectedRadioFinancial) === false) {
-              return (
-                <div>
-                        <StartupFormTargetMarket/>
-                    <StartupFormProperty/>
-                </div>
-              );
-            }
-            })()}
+        if (Boolean(selectedRadioFinancial) === false) {
+          return (
+            <div>
+              <StartupFormTargetMarket />
+              <StartupFormProperty />
+            </div>
+          );
+        }
+      })()}
 
     </>
   );

@@ -2,7 +2,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import prisma from '@/lib/prisma';
 
-
 interface FormData {
   firstName: string;
   lastName: string;

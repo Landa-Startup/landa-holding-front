@@ -109,12 +109,8 @@ model InvestorRegistration {
   birthDate           DateTime
   countryOfResidence  String
   provinceOfResidence String
-  streetAddress       String
-  streetAddressLine2  String?
-  postalCode          String
   companyName         String
   investmentCeiling   String
-  positionInTeam      String
   preferredAreas      String
   howDidYouKnowUs     String
   createdAt           DateTime @default(now())
@@ -128,13 +124,8 @@ model PartnerMembership {
   birthDate           DateTime
   countryOfResidence  String
   provinceOfResidence String
-  streetAddress       String
-  streetAddressLine2  String?
-  postalCode          String
   companyName         String
   investmentCeiling   String
-  positionInTeam      String
-  preferredAreas      String
   howDidYouKnowUs     String
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
@@ -201,7 +192,7 @@ enum Level {
 }
 
 model product {
-  id     Int       @id @default(autoincrement())
+  id     Int    @id @default(autoincrement())
   name   String
   family String
   file   String

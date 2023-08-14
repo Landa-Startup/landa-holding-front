@@ -45,6 +45,8 @@ export default function StartupFormMVP({
           name="pitch-deck"
           handleRadioChange={handleRadioPitchChange}
           selectedRadio={selectedRadioPitch}
+          handleChangeFile={() => {}}
+          fileName=""
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -54,6 +56,8 @@ export default function StartupFormMVP({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
+          handleChangeFile={() => {}}
+          fileName=""
         />
       </div>
       {(() => {
