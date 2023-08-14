@@ -47,16 +47,24 @@ interface partnerMembershipFormData {
   birthDate: string;
   countryOfResidence: string;
   provinceOfResidence: string;
-  streetAddress: string;
-  streetAddressLine2: string;
-  postalCode: string;
+  // streetAddress: string;
+  // streetAddressLine2: string;
+  // postalCode: string;
   companyName: string;
   investmentCeiling: string;
-  positionInTeam: string;
+  // positionInTeam: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
 }
 
+
+enum Type {
+  IDEA = 'IDEA',
+  MVP = 'MVP',
+  TRIAL = 'TRIAL',
+  FisrtSale = 'FisrtSale',
+  SaleDevelopment = 'SaleDevelopment',
+}
 
 interface startupsFormData {
   firstName: string;
@@ -138,4 +146,4 @@ interface startupsFormData {
 
   }
 
-export {contactUSFormData,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData,initialStartupsFormData}
+export {contactUSFormData,Type,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData,initialStartupsFormData}

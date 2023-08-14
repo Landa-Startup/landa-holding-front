@@ -1,5 +1,5 @@
 'use client';
-import React,{useState} from 'react';
+import React, { useState,useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
@@ -12,7 +12,16 @@ import StartupFormMVP from './StartupFormMVP';
 import StartupFormTrialProduct from './StartupFormTrialProduct';
 import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
-import NoRadioButton from '../atoms/NoRadioButton';
+
+//TODO: add this enum in a file and import it to index.ts api file , global.d file
+enum Type {
+  IDEA = 'IDEA',
+  MVP = 'MVP',
+  TRIAL = 'TRIAL',
+  FisrtSale = 'FisrtSale',
+  SaleDevelopment = 'SaleDevelopment',
+}
+
 
 
 export default function StartupFormForm() {
@@ -24,7 +33,7 @@ export default function StartupFormForm() {
     email: '',
     countryOfResidence: '',
     provinceOfResidence: '',
-    type: '',
+    type: Type.IDEA,
     ideaExplanation: '',
     getToKnowUs: '',
     pitchDeck: true,
@@ -52,17 +61,12 @@ export default function StartupFormForm() {
     currentInterestRate: '',
     currentRaisedFunding: '',
     neededCapital: '',
-    MVP:false,
-    FirstSale:false,
-    TrialProduct:false,
-    SaleDevelopment:false,
-    Idea:false,
+    MVP: false,
+    FirstSale: false,
+    TrialProduct: false,
+    SaleDevelopment: false,
+    Idea: false,
   };
-  
-
-
-
-
 
   const {
     register,
@@ -74,9 +78,14 @@ export default function StartupFormForm() {
     defaultValues: initialStartupsFormData,
   });
 
-  const [selectedRadio, setSelectedRadio] = useState('');
+  const [selectedRadio, setSelectedRadio] = useState("");
 
-  const handleRadioChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+  useEffect(() => {
+    setSelectedRadio("IDEA")
+  }, []);
+
+
+  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRadio(event.target.value);
   };
   const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
@@ -88,7 +97,6 @@ export default function StartupFormForm() {
   const [filePost3, setFilePost3] = useState<{ financialFile: File | null }>({
     financialFile: null,
   });
-
 
   const handlePitchDeckFileChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -105,90 +113,115 @@ export default function StartupFormForm() {
     if (event.target.files && event.target.files.length > 0) {
       setFilePost({ businessPlanFile: event.target.files[0] });
     }
-    
     // const businessPlanFile = event.target.files && event.target.files[0];
     // setFilePost({businessPlanFile: event.target.files[0]})
   };
-const [formData, setFormData] = useState<startupsFormData>(initialStartupsFormData);
 
-const onSubmit = async (formData: startupsFormData) => {
+  const handleFinancialFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const financialFile = event.target.files && event.target.files[0];
+    if (event.target.files && event.target.files.length > 0) {
+      setFilePost3({ financialFile: event.target.files[0] });
+    }
+  };
 
-
-  const sendFormData = new FormData()
-  // TODO: fix this condition for other field
-  if (filePost.businessPlanFile) {
-    sendFormData.append('businessPlanFile', filePost.businessPlanFile, filePost.businessPlanFile.name);
-  }
-  if(filePost2.pitchDeckFile){
-    sendFormData.append('pitchDeckFile',filePost2.pitchDeckFile,filePost2.pitchDeckFile.name);
-  }
-
-  sendFormData.append('firstName', formData.firstName);
-  sendFormData.append('lastName', formData.lastName);
-  sendFormData.append('email', formData.email);
-  sendFormData.append('countryOfResidence', formData.countryOfResidence);
-  sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-  sendFormData.append('type', formData.type);
-  sendFormData.append('birthDate', String(formData.birthDate));
-  sendFormData.append('ideaExplanation', formData.ideaExplanation);
-  sendFormData.append('getToKnowUs', formData.getToKnowUs);
-  sendFormData.append('pitchDeck', String(formData.pitchDeck));
-  sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
-  sendFormData.append('businessPlan', String(formData.businessPlan));
-  sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
-  sendFormData.append('productName', formData.productName);
-  sendFormData.append('siteAddress', formData.siteAddress);
-  sendFormData.append('customerProblem', formData.customerProblem);
-  sendFormData.append('solution', formData.solution);
-  sendFormData.append('productLevel', formData.productLevel);
-  sendFormData.append('scalable', formData.scalable);
-  sendFormData.append(
-    'monetizationOfYourPlan',
-    formData.monetizationOfYourPlan
+  const [formData, setFormData] = useState<startupsFormData>(
+    initialStartupsFormData
   );
-  sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
-  sendFormData.append(
-    'financialModelFile',
-    formData.financialModelFile as Blob
-  );
-  sendFormData.append(
-    'cooperatedWithInvestors',
-    formData.cooperatedWithInvestors
-  );
-  sendFormData.append('financial', String(formData.financial));
-  sendFormData.append('financialFile', formData.financialFile as Blob);
-  sendFormData.append(
-    'customerCharacteristic',
-    formData.customerCharacteristic
-  );
-  sendFormData.append('currentCustomers', formData.currentCustomers);
-  sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
-  sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
-  sendFormData.append('startupRevenue', formData.startupRevenue);
-  sendFormData.append('monthlyIncome', formData.monthlyIncome);
-  sendFormData.append('currentInterestRate', formData.currentInterestRate);
-  sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
-  sendFormData.append('neededCapital', formData.neededCapital);
-  try {
-    const response = await fetch('/api/upload-startups-form', {
-      method: 'POST',
-      body: sendFormData,
-    });
 
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
+  const onSubmit = async (formData: startupsFormData) => {
+    const sendFormData = new FormData();
+    // TODO: fix this condition for other field
+    if (filePost.businessPlanFile) {
+      sendFormData.append(
+        'businessPlanFile',
+        filePost.businessPlanFile,
+        filePost.businessPlanFile.name
+      );
+    }
+    if (filePost2.pitchDeckFile) {
+      sendFormData.append(
+        'pitchDeckFile',
+        filePost2.pitchDeckFile,
+        filePost2.pitchDeckFile.name
+      );
+    }
+    if (filePost3.financialFile) {
+      sendFormData.append(
+        'financialFile',
+        filePost3.financialFile,
+        filePost3.financialFile.name
+      );
+    }
+    console.log(formData.birthDate);
+    sendFormData.append('firstName', formData.firstName);
+    sendFormData.append('lastName', formData.lastName);
+    sendFormData.append('email', formData.email);
+    sendFormData.append('countryOfResidence', formData.countryOfResidence);
+    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
+    sendFormData.append('type', formData.type);
+    sendFormData.append('birthDate', String(formData.birthDate));
+    sendFormData.append('ideaExplanation', formData.ideaExplanation);
+    sendFormData.append('getToKnowUs', formData.getToKnowUs);
+    sendFormData.append('pitchDeck', String(formData.pitchDeck));
+    sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
+    sendFormData.append('businessPlan', String(formData.businessPlan));
+    sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
+    sendFormData.append('productName', formData.productName);
+    sendFormData.append('siteAddress', formData.siteAddress);
+    sendFormData.append('customerProblem', formData.customerProblem);
+    sendFormData.append('solution', formData.solution);
+    sendFormData.append('productLevel', formData.productLevel);
+    sendFormData.append('scalable', formData.scalable);
+    sendFormData.append(
+      'monetizationOfYourPlan',
+      formData.monetizationOfYourPlan
+    );
+    sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
+    sendFormData.append(
+      'financialModelFile',
+      formData.financialModelFile as Blob
+    );
+    sendFormData.append(
+      'cooperatedWithInvestors',
+      formData.cooperatedWithInvestors
+    );
+    sendFormData.append('financial', String(formData.financial));
+    sendFormData.append('financialFile', formData.financialFile as Blob);
+    sendFormData.append(
+      'customerCharacteristic',
+      formData.customerCharacteristic
+    );
+    sendFormData.append('currentCustomers', formData.currentCustomers);
+    sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
+    sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
+    sendFormData.append('startupRevenue', formData.startupRevenue);
+    sendFormData.append('monthlyIncome', formData.monthlyIncome);
+    sendFormData.append('currentInterestRate', formData.currentInterestRate);
+    sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
+    sendFormData.append('neededCapital', formData.neededCapital);
+    try {
+      const response = await fetch('/api/upload-startups-form', {
+        method: 'POST',
+        body: sendFormData,
+      });
 
-    // setIsSuccess(true);
-    // setSend(false);
-    reset(initialStartupsFormData); // Reset the form after successful submission
-    console.log('Form data sent successfully!');
-  } catch (error) {
-    // setSend(false);
-    // setIsSuccess(false);
-    console.error('Error sending form data:', error);
-  }
-};
+      //       if (!response.ok) {
+      //         throw new Error('Network response was not ok');
+      //       }
+
+      // setIsSuccess(true);
+      // setSend(false);
+      reset(initialStartupsFormData); // Reset the form after successful submission
+      setSelectedRadio("IDEA");
+      console.log('Form data sent successfully!');
+    } catch (error) {
+      // setSend(false);
+      // setIsSuccess(false);
+      console.error('Error sending form data:', error);
+    }
+  };
 
   const test = [
     { value: '1', label: '1' },
@@ -215,32 +248,31 @@ const onSubmit = async (formData: startupsFormData) => {
           <div>
             <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
           </div>
-            {/* idea section */}
-            <label className="flex flex-column mr-10 my-10">
+          {/* idea section */}
+          <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
-              value="ideaExplanation"
-              {...register("type")}
+              value={Type.IDEA}
+              {...register('type')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'ideaExplanation'}
+              checked={selectedRadio === 'IDEA'}
               onChange={handleRadioChange}
             />
             <span>Idea</span>
           </label>
-            {(() => {
-            if (selectedRadio == "ideaExplanation") {
+          {(() => {
+            if (selectedRadio == 'IDEA') {
               return <StartupFormIdea register={register} errors={errors} />;
-            }
-            else{
+            } else {
               return <div></div>;
             }
-            })()}
+          })()}
 
-{/* MVP section */}
-<label className="flex flex-column mr-10 my-10">
+          {/* MVP section */}
+          <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
-              value="MVP"
+              value={Type.MVP}
               {...register('type')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'MVP'}
@@ -248,87 +280,101 @@ const onSubmit = async (formData: startupsFormData) => {
             />
             <span>Minimal Valuable Product</span>
           </label>
-            {(() => {
-            if (selectedRadio == "MVP") {
-              return <StartupFormMVP register={register} errors={errors} handleBusinessPlanFileChange={handleBusinessPlanFileChange} handlePitchDeckFileChange={handlePitchDeckFileChange}/>;
-            }else{
+          {(() => {
+            if (selectedRadio == 'MVP') {
+              return (
+                <StartupFormMVP
+                  register={register}
+                  errors={errors}
+                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
+                  handlePitchDeckFileChange={handlePitchDeckFileChange}
+                  handleFinancialFileChange={handleFinancialFileChange}
+                />
+              );
+            } else {
               return <div></div>;
             }
-            })()}
-
-<label className="flex flex-column mr-10 my-10">
-            <input
-              type="radio"
-<<<<<<< HEAD
-              value="TrialProduct"
-              {...register('TrialProduct')}
-=======
-              value="TRIAL"
-              {...register('type')}
->>>>>>> origin/develop
-              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'TrialProduct'}
-              onChange={handleRadioChange}
-            />
-            <span>Trial Product</span>
-          </label>
-            {(() => {
-            if (selectedRadio == "TrialProduct") {
-              return <StartupFormTrialProduct register={register} errors={errors}/>;
-            }else{
-              return <div></div>;
-            }
-            })()}
-
-
-<label className="flex flex-column mr-10 my-10">
-            <input
-              type="radio"
-<<<<<<< HEAD
-              value="FirstSale"
-              {...register('FirstSale')}
-=======
-              value="FisrtSale"
-              {...register("type")}
->>>>>>> origin/develop
-              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'FirstSale'}
-              onChange={handleRadioChange}
-            />
-            <span>First Sale</span>
-          </label>
-            {(() => {
-            if (selectedRadio == "FirstSale") {
-              return <StartupFormFirstSale register={register} errors={errors}/>;
-            }else{
-              return <div></div>;
-            }
-            })()}
-
+          })()}
 
           <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
-<<<<<<< HEAD
-              value="SaleDevelopment"
-              {...register('SaleDevelopment')}
-=======
-              value="Sale Development"
+              value={Type.TRIAL}
               {...register('type')}
->>>>>>> origin/develop
+              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
+              checked={selectedRadio === 'TRIAL'}
+              onChange={handleRadioChange}
+            />
+            <span>Trial Product</span>
+          </label>
+          {(() => {
+            if (selectedRadio == 'TRIAL') {
+              return (
+                <StartupFormTrialProduct
+                  register={register}
+                  errors={errors}
+                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
+                  handlePitchDeckFileChange={handlePitchDeckFileChange}
+                  handleFinancialFileChange={handleFinancialFileChange}
+                />
+              );
+            } else {
+              return <div></div>;
+            }
+          })()}
+
+          <label className="flex flex-column mr-10 my-10">
+            <input
+              type="radio"
+              value={Type.FisrtSale}
+              {...register('type')}
+              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
+              checked={selectedRadio === 'FisrtSale'}
+              onChange={handleRadioChange}
+            />
+            <span>First Sale</span>
+          </label>
+          {(() => {
+            if (selectedRadio == 'FisrtSale') {
+              return (
+                <StartupFormFirstSale                   
+                register={register}
+                errors={errors}
+                handleBusinessPlanFileChange={handleBusinessPlanFileChange}
+                handlePitchDeckFileChange={handlePitchDeckFileChange}
+                handleFinancialFileChange={handleFinancialFileChange} />
+              );
+            } else {
+              return <div></div>;
+            }
+          })()}
+
+          <label className="flex flex-column mr-10 my-10">
+            <input
+              type="radio"
+              value={Type.SaleDevelopment}
+              {...register('type')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'SaleDevelopment'}
               onChange={handleRadioChange}
             />
             <span>Sale Development</span>
           </label>
-            {(() => {
-            if (selectedRadio == "SaleDevelopment") {
-              return <StartupFormSaleDevelopment register={register} errors={errors}/>;
-            }else{
+          {(() => {
+            if (selectedRadio == 'SaleDevelopment') {
+              return (
+                <StartupFormSaleDevelopment
+                  register={register}
+                  errors={errors}
+                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
+                  handlePitchDeckFileChange={handlePitchDeckFileChange}
+                  handleFinancialFileChange={handleFinancialFileChange}
+                />
+              );
+            } else {
               return <div></div>;
             }
-            })()}
+          })()}
           <div className="text-center">
             <button
               type="submit"
@@ -341,112 +387,4 @@ const onSubmit = async (formData: startupsFormData) => {
       </div>
     </>
   );
-}
-
-{
-  /* <Input
-              register={register}
-              errors={errors}
-              nameInput="streetAddress"
-              type="text"
-              label="Street Address"
-              required="Street Address is Required."
-              placeholder="Enter your Street Address"
-              className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="streetAddressLine2"
-              type="text"
-              label="Street Address Line 2"
-              placeholder="Enter Additional Address Details"
-              className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              required={''}
-              patternValue={''}
-              patternMessage={''}
-            />
-
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="postalCode"
-              type="text"
-              label="Postal/Zip Code"
-              required="Postal/Zip Code is Required."
-              placeholder="Enter your Postal or Zip Code"
-              className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="companyName"
-              type="text"
-              label="Company Name"
-              required="Company Name is Required."
-              placeholder="Enter your Company Name"
-              className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue="^[A-Za-z]+$"
-              patternMessage="Only Alphabetic Characters are Allowed."
-            />
-
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="investmentCeiling"
-              type="text"
-              label="Investment Ceiling"
-              required="Investment Ceiling is Required."
-              placeholder="Enter your Investment Ceiling"
-              className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="positionInTeam"
-              type="text"
-              label="Your Position in Team"
-              required="Position in Team is Required."
-              placeholder="Enter your Position in Team"
-              className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
-              <Select
-                register={register}
-                errors={errors}
-                nameInput="preferredAreas"
-                label="Preferred Areas for Investment"
-                placeholder="Select your Position in Team"
-                required="Preferred Areas is Required."
-                options={test}
-                className=" w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-              <Select
-                register={register}
-                errors={errors}
-                nameInput="howDidYouKnowUs"
-                label="How did You Get to Know Us?"
-                placeholder="Select How did You Get to Know Us?"
-                required="This field is Required."
-                options={test}
-                className=" w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              /> */
 }

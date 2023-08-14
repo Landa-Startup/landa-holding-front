@@ -6,32 +6,15 @@ import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
 import RadioButtonGroup from '../atoms/RadioButtonGroup';
 
-export default function StartupFormSolutions() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+export default function StartupFormSolutions({
+  register,
+  errors,
+}:{
+  register:any;
+  errors:any;
+}){
 
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
 
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-    }
-  };
 
   const preparationStatsOption = [
     { value: 'The basic principle has been observed.', label: 'The basic principle has been observed.' },
@@ -60,7 +43,7 @@ export default function StartupFormSolutions() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="ProblemExplanation"
+            nameTextArea="solution"
             patternMessage=""
             patternValue=""
             required=""
@@ -82,10 +65,10 @@ export default function StartupFormSolutions() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="techScale"
+            nameTextArea="scalable"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required"
           />
         </div>
       </div>

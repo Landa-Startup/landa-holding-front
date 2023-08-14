@@ -20,12 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const formData: FormData = req.body;
       console.log('Received form data:', formData);
-
-      // Save the form data to the database using Prisma Client
       const savedFormData = await prisma.partnerMembership.create({ data: formData });
-
       console.log('Saved form data:', savedFormData);
-
       res.status(200).json({ message: 'Form data received and processed successfully.' });
     } catch (error) {
       console.error('Error processing form data:', error);

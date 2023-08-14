@@ -39,7 +39,7 @@ export default function page() {
             <Banner title="About Us" image="/static/images/aerial-view-business-team.png" />
             <AboutUsLandaHolding />
             <AboutUsCooperation />
-            <div className='bg-whiteGold md:mx-[25px] md:pb-32 pt-12'>
+            {/* <div className='bg-whiteGold md:mx-[25px] md:pb-32 pt-12'>
                 {cards.map((cart, index) => (
                     <Aboutuscart
                         reverse={cart.reverse}
@@ -51,13 +51,10 @@ export default function page() {
                         ttext={cart.ttext}
                     />
                 ))}
-            </div>
+            </div> */}
 
             <div>
-                <AboutUsProfile
-
-
-                />
+                <AboutUsProfile />
             </div>
         </div>
     );

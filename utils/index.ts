@@ -17,10 +17,18 @@ export function extractFieldValue(fields: formidable.Fields, fieldName: string):
 
 
 
-export function parseDateString(dateString: string): Date | null {
-  const parsedDate = moment(dateString, 'MM/DD/YYYY');
-  if (parsedDate.isValid()) {
-    return parsedDate.toDate();
+export function convertDateFormat(inputDate:any) {
+    const dateObject = new Date(inputDate);
+    
+    // Ensure double digits for month, day, hours, minutes, and seconds
+    const month = (dateObject.getMonth() + 1).toString().padStart(2, '0');
+    const day = dateObject.getDate().toString().padStart(2, '0');
+    const hours = dateObject.getHours().toString().padStart(2, '0');
+    const minutes = dateObject.getMinutes().toString().padStart(2, '0');
+    const seconds = dateObject.getSeconds().toString().padStart(2, '0');
+    const milliseconds = dateObject.getMilliseconds().toString().padStart(3, '0');
+    
+    const isoDate = `${dateObject.getFullYear()}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}Z`;
+  
+    return isoDate;
   }
-  return null; // Return null for invalid date strings
-}
