@@ -35,12 +35,11 @@ const cardData = [
     reverse: false,
     show: false,
   },
-  // Add more card data objects here if needed
 ];
 
 export default function page() {
   return (
-    <div>
+    <div className="relative">
       <Hero />
       {cardData.map((data, index) => (
         <HomeTextCardContainer
