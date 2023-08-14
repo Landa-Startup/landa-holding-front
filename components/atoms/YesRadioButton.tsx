@@ -7,7 +7,10 @@ export default function YesRadioButton({
   required,
   name,
   selectedRadio,
-  handleRadioChange
+  handleRadioChange,
+  handleChangeFile,
+  fileName,
+
 
 }: {
   title: string;
@@ -17,13 +20,10 @@ export default function YesRadioButton({
   name: string;
   selectedRadio: string;
   handleRadioChange:any;
+  handleChangeFile:any;
+  fileName:string;
 
 }) {
-  function handlePitchDeckFileChange(
-    event: ChangeEvent<HTMLInputElement>
-  ): void {
-    throw new Error('Function not implemented.');
-  }
 
   return (
     <div>
@@ -66,11 +66,16 @@ export default function YesRadioButton({
                   type="file"
                   className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
                   value=""
-                  {...register('pitchDeckFile', {
+                  {...register(fileName, {
                     required: '',
                   })}
-                  onChange={handlePitchDeckFileChange} // must use onChange event handler after register
+                  onChange={handleChangeFile} // must use onChange event handler after register
                 />
+                      {errors[fileName] && (
+        <span className="mt-4 text-sm text-yellow-500">
+          {errors[fileName].message}
+        </span>
+      )}
               </div>
               );
             }
