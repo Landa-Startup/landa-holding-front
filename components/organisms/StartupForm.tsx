@@ -68,16 +68,10 @@ import NotificationSendForm from './base/NotificationSendForm';
 //     neededCapital: '',
 //   };
 
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//     reset,
-//   } = useForm<startupsFormData>({
-//     mode: 'onBlur',
-//     defaultValues: initialFormData,
-//   });
++6
+3666666666
 
+<<<<<<< HEAD
 //   const [selectedRadio, setSelectedRadio] = useState('');
 
 //   const handleRadioChange = (radioValue: string) => {
@@ -98,6 +92,27 @@ import NotificationSendForm from './base/NotificationSendForm';
 //     pitch: null,
 //   });
 //   const [formData, setFormData] = useState<startupsFormData>(initialFormData);
+=======
+  const [selectedOption, setSelectedOption] = useState('');
+
+  // const handleRadioChange = (radioValue: string) => {
+  //   setSelectedRadio(radioValue);
+  // };
+
+  const handleRadioChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedOption(event.target.value);
+  };
+
+
+
+  const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
+    businessPlanFile: null,
+  });
+  const [filePost2, setFilePost2] = useState<{ pitchDeckFile: File | null }>({
+    pitchDeckFile: null,
+  });
+  const [formData, setFormData] = useState<startupsFormData>(initialFormData);
+>>>>>>> feature/send-startups-form
 
 //   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 //   //   if (e.target.name === 'pitch') {
@@ -109,102 +124,110 @@ import NotificationSendForm from './base/NotificationSendForm';
 //   //   setFormData({ ...formData, [e.target.name]: e.target.value });
 //   // };
 
-//   const handlePitchDeckFileChange = (
-//     event: React.ChangeEvent<HTMLInputElement>
-//   ) => {
-//     const pitchDeckFile = event.target.files && event.target.files[0];
-//     setFormData({ ...formData, pitchDeckFile });
-//   };
+  const handlePitchDeckFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const pitchDeckFile = event.target.files && event.target.files[0];
+    if (event.target.files && event.target.files.length > 0) {
+      setFilePost2({ pitchDeckFile: event.target.files[0] });
+    }
+  };
 
-//   const handleBusinessPlanFileChange = (
-//     event: React.ChangeEvent<HTMLInputElement>
-//   ) => {
-//     const businessPlanFile = event.target.files && event.target.files[0];
-//     setFormData({ ...formData, businessPlanFile });
-//   };
+  const handleBusinessPlanFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (event.target.files && event.target.files.length > 0) {
+      setFilePost({ businessPlanFile: event.target.files[0] });
+    }
+    
+    // const businessPlanFile = event.target.files && event.target.files[0];
+    // setFilePost({businessPlanFile: event.target.files[0]})
+  };
 
 //   // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 //   //   const { name, value } = event.target;
 //   //   setFormData({ ...formData, [name]: value });
 //   // };
 
-//   const onSubmit = async (formData: startupsFormData) => {
-//     setIsSubmitting(true);
-//     setSend(true);
+  const onSubmit = async (formData: startupsFormData) => {
 
-//     const sendFormData = new FormData();
 
-//     // TODO: fix this condition for other field
-//     if (filePost.pitch) {
-//       sendFormData.append('pitch', filePost.pitch, filePost.pitch.name);
-//     }
+    const sendFormData = new FormData();
 
-//     sendFormData.append('fullName', formData.firstName);
-//     sendFormData.append('lastName', formData.lastName);
-//     sendFormData.append('email', formData.email);
-//     sendFormData.append('countryOfResidence', formData.countryOfResidence);
-//     sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-//     sendFormData.append('type', formData.type);
-//     sendFormData.append('birthDate', String(formData.birthDate));
-//     sendFormData.append('ideaExplanation', formData.ideaExplanation);
-//     sendFormData.append('getToKnowUs', formData.getToKnowUs);
-//     sendFormData.append('pitchDeck', String(formData.pitchDeck));
-//     sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
-//     sendFormData.append('businessPlan', String(formData.businessPlan));
-//     sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
-//     sendFormData.append('productName', formData.productName);
-//     sendFormData.append('siteAddress', formData.siteAddress);
-//     sendFormData.append('customerProblem', formData.customerProblem);
-//     sendFormData.append('solution', formData.solution);
-//     sendFormData.append('productLevel', formData.productLevel);
-//     sendFormData.append('scalable', formData.scalable);
-//     sendFormData.append(
-//       'monetizationOfYourPlan',
-//       formData.monetizationOfYourPlan
-//     );
-//     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
-//     sendFormData.append(
-//       'financialModelFile',
-//       formData.financialModelFile as Blob
-//     );
-//     sendFormData.append(
-//       'cooperatedWithInvestors',
-//       formData.cooperatedWithInvestors
-//     );
-//     sendFormData.append('financial', String(formData.financial));
-//     sendFormData.append('financialFile', formData.financialFile as Blob);
-//     sendFormData.append(
-//       'customerCharacteristic',
-//       formData.customerCharacteristic
-//     );
-//     sendFormData.append('currentCustomers', formData.currentCustomers);
-//     sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
-//     sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
-//     sendFormData.append('startupRevenue', formData.startupRevenue);
-//     sendFormData.append('monthlyIncome', formData.monthlyIncome);
-//     sendFormData.append('currentInterestRate', formData.currentInterestRate);
-//     sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
-//     sendFormData.append('neededCapital', formData.neededCapital);
-//     try {
-//       const response = await fetch('/api/upload-form', {
-//         method: 'POST',
-//         body: sendFormData,
-//       });
+    // TODO: fix this condition for other field
+    if (filePost.businessPlanFile) {
+      sendFormData.append('businessPlanFile', filePost.businessPlanFile, filePost.businessPlanFile.name);
+    }
+    if(filePost2.pitchDeckFile){
+      sendFormData.append('pitchDeckFile',filePost2.pitchDeckFile,filePost2.pitchDeckFile.name);
+    }
+    
+    sendFormData.append('firstName', formData.firstName);
+    sendFormData.append('lastName', formData.lastName);
+    sendFormData.append('email', formData.email);
+    sendFormData.append('countryOfResidence', formData.countryOfResidence);
+    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
+    sendFormData.append('type', formData.type);
+    sendFormData.append('birthDate', String(formData.birthDate));
+    sendFormData.append('ideaExplanation', formData.ideaExplanation);
+    sendFormData.append('getToKnowUs', formData.getToKnowUs);
+    sendFormData.append('pitchDeck', String(formData.pitchDeck));
+    // sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
+    sendFormData.append('businessPlan', String(formData.businessPlan));
+    // sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
+    sendFormData.append('productName', formData.productName);
+    sendFormData.append('siteAddress', formData.siteAddress);
+    sendFormData.append('customerProblem', formData.customerProblem);
+    sendFormData.append('solution', formData.solution);
+    sendFormData.append('productLevel', formData.productLevel);
+    sendFormData.append('scalable', formData.scalable);
+    sendFormData.append(
+      'monetizationOfYourPlan',
+      formData.monetizationOfYourPlan
+    );
+    sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
+    sendFormData.append(
+      'financialModelFile',
+      formData.financialModelFile as Blob
+    );
+    sendFormData.append(
+      'cooperatedWithInvestors',
+      formData.cooperatedWithInvestors
+    );
+    sendFormData.append('financial', String(formData.financial));
+    sendFormData.append('financialFile', formData.financialFile as Blob);
+    sendFormData.append(
+      'customerCharacteristic',
+      formData.customerCharacteristic
+    );
+    sendFormData.append('currentCustomers', formData.currentCustomers);
+    sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
+    sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
+    sendFormData.append('startupRevenue', formData.startupRevenue);
+    sendFormData.append('monthlyIncome', formData.monthlyIncome);
+    sendFormData.append('currentInterestRate', formData.currentInterestRate);
+    sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
+    sendFormData.append('neededCapital', formData.neededCapital);
+    try {
+      const response = await fetch('/api/upload-startups-form', {
+        method: 'POST',
+        body: sendFormData,
+      });
 
 //       if (!response.ok) {
 //         throw new Error('Network response was not ok');
 //       }
 
-//       setIsSuccess(true);
-//       setSend(false);
-//       reset(initialFormData); // Reset the form after successful submission
-//       console.log('Form data sent successfully!');
-//     } catch (error) {
-//       setSend(false);
-//       setIsSuccess(false);
-//       console.error('Error sending form data:', error);
-//     }
-//   };
+      // setIsSuccess(true);
+      // setSend(false);
+      reset(initialFormData); // Reset the form after successful submission
+      console.log('Form data sent successfully!');
+    } catch (error) {
+      // setSend(false);
+      // setIsSuccess(false);
+      console.error('Error sending form data:', error);
+    }
+  };
 
 //   return (
 //     <>
@@ -343,12 +366,160 @@ import NotificationSendForm from './base/NotificationSendForm';
 //           </div>
 //         </div>
 
+<<<<<<< HEAD
 //         <div>
 //           <div className="text-black text-[35px] font-normal">
 //             Grows and Scale Up
 //           </div>
 //           <div className="divide-y-2"></div>
 //         </div>
+=======
+        <div className="grid grid-cols-3">
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                First Name
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="firstName"
+              type="text"
+              label=""
+              required=""
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+
+          {/* <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                File 
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+              <input type="file" className='w-[275px] h-[31px] relative bg-stone-100 shadow' value={formData.businessPlanFile?.name}
+                      {...register("businessPlanFile", {
+                        required: '',
+                      })}
+              onChange={handleBusinessPlanFileChange} // must use onChange event handler after register
+              />
+            </div>
+          </div> */}
+          
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-black text-base font-normal">
+                Last Name
+              </span>
+              <span className="text-stone-500 text-base font-normal">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="lastName"
+              type="text"
+              label=""
+              required=""
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-black text-base font-normal">Birthday</span>
+              <span className="text-stone-500 text-base font-normal">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="birthDate"
+              type="text"
+              label=""
+              required=""
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+
+
+
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                Last Name
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="aaa"
+              type="email"
+              label=""
+              required=""
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] bg-stone-100 shadow"
+              labelClass="text-black text-base font-normal"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                Country of Residence
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="countryOfResidence"
+              type="text"
+              label=""
+              required=""
+              placeholder="Enter your countryOfResidence"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+          <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
+            <div className="h-[17px]">
+              <span className="text-base font-normal text-black">
+                Province of Residence
+              </span>
+              <span className="text-base font-normal text-stone-500">*</span>
+            </div>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="provinceOfResidence"
+              type="text"
+              label=""
+              required=""
+              placeholder="Enter your Street Address"
+              className="w-[275px] h-[31px] relative bg-stone-100 shadow"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
+          </div>
+        </div>
+>>>>>>> feature/send-startups-form
 
 //         {/* Radio buttons */}
 //         <div className="flex items-center space-x-4">
@@ -356,6 +527,7 @@ import NotificationSendForm from './base/NotificationSendForm';
 //         </div>
 //         {/* Form with text areas */}
 
+<<<<<<< HEAD
 //         <div className="grid grid-cols-2">
 //           <TextArea
 //             title="Explain your idea in 5 lines?*"
@@ -549,8 +721,130 @@ import NotificationSendForm from './base/NotificationSendForm';
 //               <input type="file" onChange={handlePitchDeckFileChange} />
 // >>>>>>> origin/develop
 //             </div>
+=======
+        {/* Radio buttons */}
+        <div className="flex items-center space-x-4">
+          {/* <RadioButton text="Idea" handleRadioChange={handleRadioChange} /> */}
+          <input type="radio" value={'Idea'} checked={selectedOption === 'Idea'} onChange={handleRadioChange}/>
+        </div>
+        {/* Form with text areas */}
+        
+        <div>
+        {(() => {
+        if (selectedOption === "Idea") {
+          return(
+            <div className="grid grid-cols-2">
+            <TextArea
+              title="Explain your idea in 5 lines?*"
+              halfSize={false}
+              register={register}
+              errors={errors}
+              placeholder="Explain your idea in 5 lines?"
+              nameTextArea="ideaExplanation"
+              patternMessage=''
+              patternValue=''
+              required=''
+            />
+                      <TextArea
+              title="How did you get to know us?*"
+              halfSize={false}
+              register={register}
+              errors={errors}
+              placeholder="Explain your idea in 5 lines?"
+              nameTextArea="ideaExplanation"
+              patternMessage=''
+              patternValue=''
+              required=''
+            />
+  
+          </div>
+          )
+        } else {
+          return null;
+        }
+      })()}
 
-              <input type="file" onChange={handleBusinessPlanFileChange} />
+        </div>
+
+        <div className="flex items-center space-x-4">
+          {/* <RadioButton text="hi" handleRadioChange={handleRadioChange} /> */}
+        </div>
+        {/* Form for Minimal Valuable Product */}
+        <div className="w-1/2">
+          <div className="flex space-x-3">
+            <div className="flex flex-col">
+              <div className="text-lg font-medium">
+                Do you have Pitch deck?*
+              </div>
+              <div className="flex items-center space-x-4">
+                <Input
+                  register={register}
+                  errors={errors}
+                  nameInput="productName"
+                  type="radio"
+                  label="Product Name"
+                  required=""
+                  placeholder="Enter your Street Address"
+                  className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex"
+                  labelClass="text-[#6b6b6b] dark:text-current"
+                  patternValue={''}
+                  patternMessage={''}
+                />
+                <label htmlFor="pitchDeckYes" className="text-lg font-medium">
+                  Yes
+                </label>
+                <input
+                  type="radio"
+                  id="pitchDeckNo"
+                  name="pitchDeckOption"
+                  value="no"
+                  className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+                />
+                <label htmlFor="pitchDeckNo" className="text-lg font-medium">
+                  No
+                </label>
+              </div>
+              <input type="file" className='w-[275px] h-[31px] relative bg-stone-100 shadow' value={formData.pitchDeckFile?.name}
+                      {...register("pitchDeckFile", {
+                        required: '',
+                      })}
+              onChange={handlePitchDeckFileChange} // must use onChange event handler after register
+              />
+            </div>
+            <div className="flex flex-col">
+              <div className="text-lg font-medium">
+                Do you have Business Plan?*
+              </div>
+              <div className="flex items-center space-x-4">
+                <input
+                  type="radio"
+                  id="pitchDeckYes"
+                  name="pitchDeckOption"
+                  value="yes"
+                  className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+                />
+                <label htmlFor="pitchDeckYes" className="text-lg font-medium">
+                  Yes
+                </label>
+                <input
+                  type="radio"
+                  id="pitchDeckNo"
+                  name="pitchDeckOption"
+                  value="no"
+                  className="w-5 h-5 border-2 rounded-full text-gold border-gold focus:outline-none focus:border-gold"
+                />
+                <label htmlFor="pitchDeckNo" className="text-lg font-medium">
+                  No
+                </label>
+              </div>
+>>>>>>> feature/send-startups-form
+
+              <input type="file" className='w-[275px] h-[31px] relative bg-stone-100 shadow' value={formData.businessPlanFile?.name}
+                      {...register("businessPlanFile", {
+                        required: '',
+                      })}
+              onChange={handleBusinessPlanFileChange} // must use onChange event handler after register
+              />
             </div>
           </div>
           <div className="grid grid-cols-2">
@@ -778,10 +1072,10 @@ import NotificationSendForm from './base/NotificationSendForm';
             patternValue=""
             required=""
           />
-          <RadioButton
+          {/* <RadioButton
             text="First Sale"
-            handleRadioChange={handleRadioChange}
-          />
+            // handleRadioChange={handleRadioChange}
+          /> */}
           <div className="flex justify-around">
             <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload />
             <TwoOptionRadio title="Do you have Business Plan?*" hasUpload />
@@ -793,7 +1087,7 @@ import NotificationSendForm from './base/NotificationSendForm';
             nameInput="productName"
             type="text"
             label="Product Name"
-            required="Street Address is Required."
+            required=""
             placeholder="Enter your Street Address"
             className="w-[275px] h-[31px] relative bg-stone-100 shadow"
             labelClass="text-[#6b6b6b] dark:text-current"
@@ -1101,16 +1395,25 @@ import NotificationSendForm from './base/NotificationSendForm';
             register={register}
             errors={errors}
             placeholder="Explain your idea in 5 lines?"
+<<<<<<< HEAD
             nameTextArea="neededCapital"
             patternMessage=""
             patternValue=""
             required=""
           />
 
+=======
+            nameTextArea="scalable"
+            patternMessage=''
+            patternValue=''
+            required=''
+          />  
+{/* 
+>>>>>>> feature/send-startups-form
           <RadioButton
             text="Sale Development"
-            handleRadioChange={handleRadioChange}
-          />
+            // handleRadioChange={handleRadioChange}
+          /> */}
           <TwoOptionRadio title="Do you have Pitch deck?*" hasUpload={false} />
           <Input
             register={register}
@@ -1118,7 +1421,7 @@ import NotificationSendForm from './base/NotificationSendForm';
             nameInput="productName"
             type="text"
             label="Product Name"
-            required="Street Address is Required."
+            required=""
             placeholder="Enter your Street Address"
             className="w-[275px] h-[31px] relative bg-stone-100 shadow"
             labelClass="text-[#6b6b6b] dark:text-current"
