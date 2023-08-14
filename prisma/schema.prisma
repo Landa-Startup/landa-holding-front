@@ -109,12 +109,8 @@ model InvestorRegistration {
   birthDate           DateTime
   countryOfResidence  String
   provinceOfResidence String
-  streetAddress       String
-  streetAddressLine2  String?
-  postalCode          String
   companyName         String
   investmentCeiling   String
-  positionInTeam      String
   preferredAreas      String
   howDidYouKnowUs     String
   createdAt           DateTime @default(now())
@@ -128,23 +124,18 @@ model PartnerMembership {
   birthDate           DateTime
   countryOfResidence  String
   provinceOfResidence String
-  streetAddress       String
-  streetAddressLine2  String?
-  postalCode          String
   companyName         String
   investmentCeiling   String
-  positionInTeam      String
-  preferredAreas      String
   howDidYouKnowUs     String
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
 }
 
 model StartupsForm {
-  id                      Int      @id @default(autoincrement())
+  id                      Int       @id @default(autoincrement())
   firstName               String?
   lastName                String?
-  birthDate               DateTime?  
+  birthDate               DateTime?
   email                   String?
   countryOfResidence      String?
   provinceOfResidence     String?
@@ -163,7 +154,7 @@ model StartupsForm {
   scalable                String?
   monetizationOfYourPlan  String?
   structureOfYourSales    String?
-  financialModelFile      String?  @default("")
+  financialModelFile      String?   @default("")
   cooperatedWithInvestors String?
   financial               Boolean?
   financialFile           String?
@@ -176,8 +167,8 @@ model StartupsForm {
   currentInterestRate     String?
   currentRaisedFunding    String?
   neededCapital           String?
-  createdAt               DateTime @default(now())
-  updatedAt               DateTime @updatedAt
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
 }
 
 enum Type {
@@ -198,4 +189,11 @@ enum Level {
   systemPrototypeInMvp
   realisticSystem
   qualifiedSystem
+}
+
+model product {
+  id     Int    @id @default(autoincrement())
+  name   String
+  family String
+  file   String
 }

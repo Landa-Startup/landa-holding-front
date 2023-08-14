@@ -10,35 +10,28 @@ export default function Hero() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[745px] relative"
+      className="h-[200px] md:h-[990px] relative"
     >
-      <div className="flex flex-col items-center justify-center h-screen">
-        <div className="w-[557px] h-11 text-center text-white text-3xl font-normal tracking-[11.20px] font-condensed">
+      <div className="flex flex-col items-center justify-center h-full space-y-5">
+        <div className="text-center text-white text-xl md:text-3xl font-normal tracking-[5px] md:tracking-[11.20px] font-condensed">
           Landa Holding
         </div>
-        <div className="h-20 font-gilda text-right text-neutral-50 text-opacity-95 text-6xl font-normal tracking-[6.40px]">
+        <div className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]">
           Acceleration Center
           <br />
         </div>
-        <div className="w-[572px] text-center font-barlow text-neutral-50 text-opacity-95 text-base font-normal leading-8 pt-10">
-          Landa Holding is an international investment company active in Iran
-          and Canada.
-          <br />
-          Landa Holding acts as a supporter of entrepreneurs, investors,
-          business owners and everybody who is willing to start its own
-          start-up.
-          <br />
-          Our main focus is to make your business boost internationally.
+        <div className="text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+          Feel The Future
         </div>
         <Image
-          className="w-[411px] h-[559px] absolute right-0 bottom-0"
+          className="w-[103px] md:w-[412px] h-[140px] md:h-[560px] absolute right-0 bottom-0"
           src={'static/images/Landa.svg'}
           alt="Landa"
           width={500}
           height={500}
         />
         <Link
-          className="absolute flex items-center justify-center w-12 h-12 border border-white rounded-full animate-bounce left-10 bottom-4"
+          className="absolute flex items-center justify-center w-5 h-5 md:w-12 h-w-5 md:h-12 border border-white rounded-full animate-bounce left-10 bottom-4"
           href={'#LandaHolding'}
         >
           <svg

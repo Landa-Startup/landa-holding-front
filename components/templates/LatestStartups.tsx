@@ -21,23 +21,21 @@ export default function LatestStartups() {
       description:
         'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
     },
-    // Add more card data objects here if needed
   ];
 
   return (
-    //TODO: put cards in loop.
     <div>
-      <div className="h-[643px] relative bg-stone-100">
-        <div className="w-[595px] h-[78px] flex-col justify-start items-start inline-flex">
-          <div className="text-neutral-800 text-base font-normal tracking-[5.60px] absolute left-[160px] top-[24px] font-condensed">
+      <div className="flex flex-col p-5 bg-stone-100 items-center text-center">
+        <div className="flex-col justify-start items-start md:ml-96 md:self-start">
+          <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[5.60px] font-condensed">
             LANDA HOLDING
           </div>
-          <div className="w-[595px] h-[59px] text-primary text-[64px] font-normal absolute left-[160px] top-[43px] font-condensed">
+          <div className="text-primary text-5xl md:text-[64px] font-normal font-condensed">
             LATEST STARTUPS
           </div>
         </div>
         <div className="flex justify-center mt-2">
-          <div className="grid grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
             {cardData.map((data, index) => (
               <LatestStartupsCard
                 key={index}

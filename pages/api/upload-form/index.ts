@@ -23,28 +23,31 @@
 //             })
 //         })
 //         const { fields, files } = parseData
+//         console.log("this is files",files)
 //         const uploadUrls = await cloudinary(files.file, 'landa/files/forms')
-//         // const product = await prisma.product.create({
-//         //     data: {
-//         //         name: extractFieldValue(fields, 'name'),
-//         //         family: extractFieldValue(fields, 'description'),
-//         //         file: {
-//         //             create: uploadUrls.map((url) => ({ path: url })),
-//         //         },
-//         //     }
-//         // })
+//         console.log(uploadUrls)
+//         const product = await prisma.product.create({
+//             data: {
+//                 name: extractFieldValue(fields, 'name'),
+//                 family: extractFieldValue(fields, 'family'),
+//                 file: uploadUrls[0]
+//             }
+//         })
 //         // res.status(200).json(product)
+//         res.status(200).json({'message':uploadUrls})
 //     } else {
 //         try {
 
-//             const products = await prisma.product.findMany({
-//                 include: {
-//                     images: true
-//                 }
-//             });
-//             console.log("products: ", products)
-//             return res.status(200).json(products);
+//             // const products = await prisma.product.create({
+//             //     include: {
+//             //         images: true
+//             //     }
+//             // })
+//             // console.log("products: ", products)
+//             // return res.status(200).json(products);
+//             return res.status(200).json({"message":"error!"})
 //         } catch (error) {
+//             console.log("message",res)      
 //             return res.status(500).json({ message: 'Internal server error' });
 //         }
 

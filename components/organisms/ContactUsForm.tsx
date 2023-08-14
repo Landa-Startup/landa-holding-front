@@ -1,7 +1,8 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { contactUSFormData } from '../../app/types/global';
+import NotificationSendForm from './base/NotificationSendForm';
 
 export default function ContactUsForm() {
   const initialFormData: contactUSFormData = {
@@ -22,6 +23,10 @@ export default function ContactUsForm() {
     defaultValues: initialFormData,
   });
 
+  const [send, setSend] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
   const onSubmit = async (formData: contactUSFormData) => {
     try {
       const response = await fetch('/api/contact-us', {
@@ -35,10 +40,13 @@ export default function ContactUsForm() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-
+      setIsSuccess(true);
+      setSend(false);
       reset(initialFormData); // Reset the form after successful submission
       console.log('Form data sent successfully!');
     } catch (error) {
+      setSend(false);
+      setIsSuccess(false);
       console.error('Error sending form data:', error);
     }
   };
@@ -158,6 +166,7 @@ export default function ContactUsForm() {
           </button>
         </div>
       </form>
+      <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
     </div>
   );
 }
