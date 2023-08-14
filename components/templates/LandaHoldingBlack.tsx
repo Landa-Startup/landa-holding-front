@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 md:h-[590px] py-10">
+    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[890px] md:h-[590px] py-10">
       <svg
-        className="absolute left-[940px]"
+        className="absolute left-[940px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
         height="589"
@@ -17,7 +17,33 @@ export default function LandaHoldingBlack() {
           stroke-width="2"
         />
       </svg>
-      <div className="flex flex-col items-center md:items-start mb-10 md:mb-0 space-y-2">
+      <svg
+        className="md:hidden absolute left-0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="75"
+        height="899"
+        viewBox="0 0 75 899"
+        fill="none"
+      >
+        <path
+          d="M23.885 -1L23.7156 153.41M23.885 503.319H75M23.885 503.319L23.7156 153.41M23.885 503.319L23.7156 621.933L23.7664 705.115M23.7156 153.41H0M23.885 899V804.559M23.885 804.559H59.7674M23.885 804.559L23.7664 705.115M23.7664 705.115H0"
+          stroke="#F8F5F0"
+        />
+      </svg>
+      <svg
+        className="md:hidden absolute right-0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="149"
+        height="899"
+        viewBox="0 0 149 899"
+        fill="none"
+      >
+        <path
+          d="M124.788 0L124.96 154.143M124.96 385.375H0M124.96 385.375V154.143M124.96 385.375V606.215M124.96 154.143H149M124.96 899V853.956M124.96 606.215V621.855V760.428V853.956M124.96 606.215H149M124.96 853.956H18.5"
+          stroke="#F8F5F0"
+        />
+      </svg>
+      <div className="w-[234px] flex flex-col items-center md:items-start mb-10 md:mb-0 space-y-2">
         <div>
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
@@ -66,7 +92,7 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center md:items-start md:mt-5 space-y-2">
+      <div className="w-[234px] flex flex-col items-center md:items-start md:mt-5 space-y-2">
         <div>
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
