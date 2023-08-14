@@ -15,9 +15,15 @@ import StartupFormProperty from './StartupFormProperty';
 export default function StartupFormFirstSale({
   register,
   errors,
+  handlePitchDeckFileChange,
+  handleBusinessPlanFileChange,
+  handleFinancialFileChange
 }: {
   register: any;
   errors: any;
+  handlePitchDeckFileChange:any;
+  handleBusinessPlanFileChange:any;
+  handleFinancialFileChange:any;
 }) {
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
@@ -54,6 +60,8 @@ export default function StartupFormFirstSale({
           name="pitch-deck"
           handleRadioChange={handleRadioPitchChange}
           selectedRadio={selectedRadioPitch}
+          handleChangeFile={handlePitchDeckFileChange}
+          fileName='pitchDeckFile'
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -63,6 +71,8 @@ export default function StartupFormFirstSale({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
+          handleChangeFile={handlePitchDeckFileChange}
+          fileName='businessPlanFile'
         />
       </div>
       {(() => {
@@ -119,6 +129,8 @@ export default function StartupFormFirstSale({
           name="financial-plan"
           handleRadioChange={handleRadioFinancialChange}
           selectedRadio={selectedRadioFinancial}
+          handleChangeFile={handleFinancialFileChange}
+          fileName='financialFile'
         />
         </div>
       </div>

@@ -12,9 +12,13 @@ import StartupFormBusinessModel from './StartupFormBusinessModel';
 export default function StartupFormMVP({
   register,
   errors,
+  handlePitchDeckFileChange,
+  handleBusinessPlanFileChange,
 }: {
   register: any;
   errors: any;
+  handlePitchDeckFileChange:any;
+  handleBusinessPlanFileChange:any;
 }) {
   
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
@@ -37,7 +41,7 @@ export default function StartupFormMVP({
   return (
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-        <YesRadioButton
+      <YesRadioButton
           title="Do you have Pitch deck?"
           register={register}
           errors={errors}
@@ -45,6 +49,8 @@ export default function StartupFormMVP({
           name="pitch-deck"
           handleRadioChange={handleRadioPitchChange}
           selectedRadio={selectedRadioPitch}
+          handleChangeFile={handlePitchDeckFileChange}
+          fileName='pitchDeckFile'
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -54,7 +60,10 @@ export default function StartupFormMVP({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
+          handleChangeFile={handleBusinessPlanFileChange}
+          fileName='businessPlanFile'
         />
+
       </div>
       {(() => {
         if ((Boolean(selectedRadioBusiness) === false) && (Boolean(selectedRadioPitch)) === false) {

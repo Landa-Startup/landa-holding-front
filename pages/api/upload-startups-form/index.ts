@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "@/lib/prisma";
 import formidable from 'formidable'
 import cloudinary from '@/lib/cloudinary'
-import { extractFieldValue,parseDateString } from "@/utils/index";
+import { extractFieldValue } from "@/utils/index";
 
 
 export const config = {
@@ -62,14 +62,12 @@ export default async function handler(
 
         
         const startupsForm = await prisma.startupsForm.create({
-
             data: {
                 firstName: extractFieldValue(fields, 'firstName'),
                 lastName: extractFieldValue(fields, 'lastName'),
                 email: extractFieldValue(fields, 'email'),
-                birthDate: parseDateString(extractFieldValue(fields, 'birthDate')),
+                birthDate: new Date(extractFieldValue(fields, 'birthDate')),
                 countryOfResidence: extractFieldValue(fields, 'countryOfResidence'),
-
                 businessPlanFile: links["businessPlanFile"]? links["businessPlanFile"]: null,
                 pitchDeckFile: links["pitchDeckFile"]? links["pitchDeckFile"]: null, 
                 financialModelFile: links["financialModelFile"]? links["financialModelFile"]: null, 
