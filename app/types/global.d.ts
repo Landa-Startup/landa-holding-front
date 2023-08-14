@@ -47,12 +47,12 @@ interface partnerMembershipFormData {
   birthDate: string;
   countryOfResidence: string;
   provinceOfResidence: string;
-  streetAddress: string;
-  streetAddressLine2: string;
-  postalCode: string;
+  // streetAddress: string;
+  // streetAddressLine2: string;
+  // postalCode: string;
   companyName: string;
   investmentCeiling: string;
-  positionInTeam: string;
+  // positionInTeam: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
 }

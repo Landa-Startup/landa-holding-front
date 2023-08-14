@@ -289,8 +289,6 @@ export default function StartupFormForm() {
                   handleBusinessPlanFileChange={handleBusinessPlanFileChange}
                   handlePitchDeckFileChange={handlePitchDeckFileChange}
                   handleFinancialFileChange={handleFinancialFileChange}
-                  pitchFileState={filePost}
-                  businessFileState={filePost2}
                 />
               );
             } else {

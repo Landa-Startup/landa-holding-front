@@ -2,8 +2,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "@/lib/prisma";
 import formidable from 'formidable'
 import cloudinary from '@/lib/cloudinary'
+<<<<<<< HEAD
 import { extractFieldValue } from "@/utils/index";
 import { type } from "os";
+=======
+// import {UploadFile} from 'cloudinary'
+import { extractFieldValue, parseDateString } from "@/utils/index";
+
+>>>>>>> origin/develop
 
 enum Type {
     IDEA = 'IDEA',
@@ -21,9 +27,8 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    if (req.method === "POST") {    
+    if (req.method === "POST") {
         const form = formidable({ multiples: true })
-
         const parseData = await new Promise<{ fields: formidable.Fields, files: formidable.Files }>((resolve, reject) => {
             form.parse(req, (err: Error, fields: formidable.Fields, files: formidable.Files) => {
                 if (err) return reject(err)
@@ -31,19 +36,23 @@ export default async function handler(
             })
         })
         const { fields, files } = parseData
-        
-        // console.log(files.businessPlanFile)
-        // if (files.pitchDeckFile === undefined){
+        // const formidableFiles = Object.values(files);
 
-        // }
-        console.log(files)
-        const links:any = {};
+        // const uploadFiles = formidableFiles.map(file => {
+        //   return {
+        //      path: file.filepath, 
+        //      // access filepath on each File object
+        //      mimetype: file.mimetype  
+        //   };
+        // });
+
+        const links: any = {};
         for (const [key, value] of Object.entries(files)) {
-            const link =  await cloudinary(files[key], 'landa/files/forms/'+fields.email)
+            const link = await cloudinary(files[key] as any, 'landa/files/forms/' + fields.email)
             links[key] = link[0]
         }
-        console.log(links)
 
+<<<<<<< HEAD
         // for(const file of files){
         //     if (file !== undefined){
         //         // let link:string = ""
@@ -88,6 +97,8 @@ export default async function handler(
                 type = undefined
                 break;
         }
+=======
+>>>>>>> origin/develop
         const startupsForm = await prisma.startupsForm.create({
             data: {
                 firstName: extractFieldValue(fields, 'firstName'),
@@ -101,6 +112,7 @@ export default async function handler(
                 // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
                 // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
 
+<<<<<<< HEAD
                 birthDate: new Date(extractFieldValue(fields, 'birthDate')),
                 countryOfResidence: extractFieldValue(fields, 'countryOfResidence'),
                 type: type || null || undefined,
@@ -108,17 +120,23 @@ export default async function handler(
                 pitchDeckFile: links["pitchDeckFile"]? links["pitchDeckFile"]: null, 
                 financialFile: links["financialFile"]? links["financialFile"]: null, 
                 
+=======
+                businessPlanFile: links["businessPlanFile"] ? links["businessPlanFile"] : null,
+                pitchDeckFile: links["pitchDeckFile"] ? links["pitchDeckFile"] : null,
+                financialModelFile: links["financialModelFile"] ? links["financialModelFile"] : null,
+
+>>>>>>> origin/develop
             }
         })
 
 
-        res.status(200).json({'message':links})
+        res.status(200).json({ 'message': links })
         // res.status(200).json({'message1':startupsForm})
     } else {
         try {
-            return res.status(200).json({"message":"error!"})
+            return res.status(200).json({ "message": "error!" })
         } catch (error) {
-            console.log("message",res)      
+            console.log("message", res)
             return res.status(500).json({ message: error });
         }
 
