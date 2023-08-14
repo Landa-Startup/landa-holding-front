@@ -69,7 +69,10 @@ export default function Footer() {
             <br />
           </div>
           <div className="flex flex-col">
-            <Link href={'/'} className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit">
+            <Link
+              href={'/'}
+              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+            >
               Home
             </Link>
             <Link
@@ -95,13 +98,22 @@ export default function Footer() {
             >
               Startups
             </Link>
-            <Link href={'/'} className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit">
+            <Link
+              href={'/'}
+              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+            >
               Center of Investor
             </Link>
-            <Link href={'/'} className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit">
+            <Link
+              href={'/'}
+              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+            >
               Center of Entrepreneurs
             </Link>
-            <Link href={'/'} className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit">
+            <Link
+              href={'/'}
+              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+            >
               Our business partners
             </Link>
           </div>
@@ -133,7 +145,9 @@ export default function Footer() {
       </div>
       <div className="self-stretch text-center pt-4 border-t">
         © Copyright {GetYear()} by{' '}
-        <span className="text-primary">LandaHolding</span>
+        <Link href={'/'} className="text-primary">
+          LandaHolding
+        </Link>
       </div>
     </div>
   );
