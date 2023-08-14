@@ -14,16 +14,13 @@ export default function ImageCard({
 }) {
   return (
     <div>
-      <div className="w-[557px] font-condensed h-11 text-center text-neutral-800 text-2xl md:text-3xl font-normal uppercase tracking-[11.20px]">
+      <div className="w-[557px] font-condensed h-11 text-center text-neutral-800 text-base md:text-3xl font-normal uppercase tracking-[11.20px]">
         Landa holding
       </div>
       {reverse ? (
         <div className="flex flex-row-reverse text-center">
-          <span className="text-neutral-800 md:text-6xl font-normal tracking-[6.40px] text-4xl">
-            {title}
-          </span>
           <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
-          <div className="grid grid-cols-2 gap-2 mt-14">
+          <div className="grid-cols-2 gap-2 md:mt-14 hidden md:grid">
             <Image
               className="w-64 mt-32 h-96"
               src={imageOne}
@@ -32,7 +29,7 @@ export default function ImageCard({
               height={500}
             />
             <Image
-              className="w-64 h-96 hidden md:block"
+              className="w-64 h-96"
               src={imageTwo}
               alt={imageTwo}
               width={500}
@@ -41,14 +38,14 @@ export default function ImageCard({
           </div>
         </div>
       ) : (
-        <div className="text-center">
+        <div className="text-center -mt-5 md:mt-0">
           <span className="text-neutral-800 md:text-6xl font-normal tracking-[6.40px] text-4xl">
             {title}
           </span>
           <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
-          <div className="grid grid-cols-2 gap-2 mt-14">
+          <div className="grid-cols-2 gap-2 md:mt-14 hidden md:grid">
             <Image
-              className="w-64 mt-32 h-96"
+              className="w-64 md:mt-32 h-96"
               src={imageOne}
               alt={imageOne}
               width={500}

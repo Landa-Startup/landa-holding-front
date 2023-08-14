@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function LandaHoldingBalck() {
   return (
-    <div className="md:h-[589px] relative bg-neutral-800">
+    <div className="relative bg-neutral-800">
       <div className="flex flex-col md:flex-row justify-around items-center p-9">
         <div className="w-[245px] h-[70.55px] text-center font-barlow md:hidden mb-3">
           <span className="text-white text-base font-normal tracking-[5.60px]">
@@ -25,7 +25,7 @@ export default function LandaHoldingBalck() {
               <br />
             </span>
           </div>
-          <div className="w-[353px] md:w-[434px] md:h-72">
+          <div className="w-[353px] md:w-[434px]">
             <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow mt-4">
               <li>Global Investment Opportunities within Your Reach.</li>
               <li>
@@ -74,7 +74,7 @@ export default function LandaHoldingBalck() {
               <br />
             </span>
           </div>
-          <ul className="h-72 font-barlow text-white text-base font-normal leading-8 mt-4">
+          <ul className="font-barlow text-white text-base font-normal leading-8 mt-4">
             <li className="list-disc">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>

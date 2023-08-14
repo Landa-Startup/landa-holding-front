@@ -220,7 +220,7 @@ const onSubmit = async (formData: startupsFormData) => {
             <input
               type="radio"
               value="ideaExplanation"
-              {...register('ideaExplanation')}
+              {...register("type")}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'ideaExplanation'}
               onChange={handleRadioChange}
@@ -241,7 +241,7 @@ const onSubmit = async (formData: startupsFormData) => {
             <input
               type="radio"
               value="MVP"
-              {...register('MVP')}
+              {...register('type')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'MVP'}
               onChange={handleRadioChange}
@@ -259,8 +259,13 @@ const onSubmit = async (formData: startupsFormData) => {
 <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
+<<<<<<< HEAD
               value="TrialProduct"
               {...register('TrialProduct')}
+=======
+              value="TRIAL"
+              {...register('type')}
+>>>>>>> origin/develop
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'TrialProduct'}
               onChange={handleRadioChange}
@@ -279,8 +284,13 @@ const onSubmit = async (formData: startupsFormData) => {
 <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
+<<<<<<< HEAD
               value="FirstSale"
               {...register('FirstSale')}
+=======
+              value="FisrtSale"
+              {...register("type")}
+>>>>>>> origin/develop
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'FirstSale'}
               onChange={handleRadioChange}
@@ -299,8 +309,13 @@ const onSubmit = async (formData: startupsFormData) => {
           <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
+<<<<<<< HEAD
               value="SaleDevelopment"
               {...register('SaleDevelopment')}
+=======
+              value="Sale Development"
+              {...register('type')}
+>>>>>>> origin/develop
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
               checked={selectedRadio === 'SaleDevelopment'}
               onChange={handleRadioChange}
