@@ -4,7 +4,7 @@ export default function LandaHoldingBlack() {
   return (
     <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[890px] md:h-[590px] py-10">
       <svg
-        className="absolute left-[940px] hidden md:block"
+        className="absolute left-[640px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
         height="589"
@@ -14,7 +14,7 @@ export default function LandaHoldingBlack() {
         <path
           d="M70.5 0L70 145.875M70 293.75H237.5M70 293.75V145.875M70 293.75V588.5M70 145.875H0"
           stroke="#F8F5F0"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
       <svg
@@ -43,13 +43,13 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className="w-[234px] flex flex-col items-center md:items-start mb-10 md:mb-0 space-y-2">
-        <div>
+      <div className="w-[234px] flex flex-col items-center md:items-start space-y-2">
+        <div className="flex flex-col items-center">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
           </span>
-          <span className="text-white text-3xl font-barlow font-normal hidden md:block">
+          <span className="text-white text-3xl font-barlow font-normal">
             Investment Center
             <br />
           </span>
@@ -71,11 +71,11 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5">
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
-          <div className="justify-start items-start gap-2.5 flex w-5 h-5">
+          <div className="justify-start items-start gap-2.5 flex">
             <div className="w-5 h-5 md:w-10 md:h-10 border border-stone-100" />
             <svg
               className="absolute text-white"
@@ -92,41 +92,42 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="w-[234px] flex flex-col items-center md:items-start md:mt-5 space-y-2">
-        <div>
+      <div className="flex flex-col items-center md:items-start md:mt-5 space-y-2">
+        <div className="flex flex-col items-center">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
           </span>
-          <span className="text-white text-3xl font-barlow font-normal hidden md:block">
+          <span className="text-white text-3xl font-barlow font-normal">
             Entrepreneur Center
             <br />
           </span>
         </div>
-        <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
-          <li className="list-disc">
-            Global Networking Opportunities for Collaboration and Partnerships
-          </li>
-          <li className="list-disc">
-            Access to all videos of pitches, industry trend presentations and
-            panel discussions
-          </li>
-          <li className="list-disc">
-            Attending events of the Entrepreneurs Center
-          </li>
-          <li className="list-disc">
-            Meetings with top business leaders and entrepreneurs
-          </li>
-          <li className="list-disc">
-            Participation in seasonal meetings with other international
-            entrepreneurs
-          </li>
-          <li className="list-disc">
-            Online platform for connecting with other entrepreneurs
-          </li>
-        </ul>
-
-        <button className="relative justify-start items-center gap-4 inline-flex">
+        <div className="w-[353px] md:w-[434px]">
+          <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
+            <li className="list-disc">
+              Global Networking Opportunities for Collaboration and Partnerships
+            </li>
+            <li className="list-disc">
+              Access to all videos of pitches, industry trend presentations and
+              panel discussions
+            </li>
+            <li className="list-disc">
+              Attending events of the Entrepreneurs Center
+            </li>
+            <li className="list-disc">
+              Meetings with top business leaders and entrepreneurs
+            </li>
+            <li className="list-disc">
+              Participation in seasonal meetings with other international
+              entrepreneurs
+            </li>
+            <li className="list-disc">
+              Online platform for connecting with other entrepreneurs
+            </li>
+          </ul>
+        </div>
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5">
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condense">
             More
           </div>

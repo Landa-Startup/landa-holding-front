@@ -1,5 +1,6 @@
 import React from 'react';
 import LandaMagazineCard from '../atoms/cards/LandaMagazineCard';
+import Button from '../atoms/Button';
 
 export default function LandaMagazine() {
   const cardData = [
@@ -28,10 +29,11 @@ export default function LandaMagazine() {
 
   return (
     // TODO: create commponent for show repeated parts. because codes are almost same and just written few times
-    <div>
+    <div className="hidden md:block">
+      {/* hide component on mobile */}
       <div className="bg-neutral-800 flex justify-center py-5">
-        <div className="flex flex-col items-center">
-          <div className="text-white text-3xl mx-auto md:text-[64px] font-normal font-gilda">
+        <div className="flex flex-col">
+          <div className="text-white text-3xl my-10 md:text-[64px] font-normal font-gilda md:ml-16">
             LANDA MAGAZINE
           </div>
           <div className="flex flex-row items-center justify-center">
@@ -50,7 +52,7 @@ export default function LandaMagazine() {
                 <path d="M19 12H5M12 19l-7-7 7-7" />
               </svg>
             </button>
-            <div className="grid overflow-auto grid-cols-3 gap-4">
+            <div className="grid overflow-auto grid-cols-3 gap-4 h-[570px]">
               {cardData.map((data, index) => (
                 <LandaMagazineCard
                   key={index}
@@ -77,11 +79,7 @@ export default function LandaMagazine() {
               </svg>
             </button>
           </div>
-          <button className="w-4/12 py-3.5 bg-primary justify-center items-center gap-2.5 inline-flex">
-            <div className="text-xl font-medium tracking-wide text-white font-condensed">
-              Read MORE
-            </div>
-          </button>
+          <Button text="Read More" size="visit" addedClass='self-center'/>
         </div>
       </div>
     </div>
