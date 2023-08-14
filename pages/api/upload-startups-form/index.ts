@@ -2,14 +2,9 @@ import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "@/lib/prisma";
 import formidable from 'formidable'
 import cloudinary from '@/lib/cloudinary'
-<<<<<<< HEAD
-import { extractFieldValue } from "@/utils/index";
-import { type } from "os";
-=======
 // import {UploadFile} from 'cloudinary'
-import { extractFieldValue, parseDateString } from "@/utils/index";
+import { extractFieldValue} from "@/utils/index";
 
->>>>>>> origin/develop
 
 enum Type {
     IDEA = 'IDEA',
@@ -52,29 +47,6 @@ export default async function handler(
             links[key] = link[0]
         }
 
-<<<<<<< HEAD
-        // for(const file of files){
-        //     if (file !== undefined){
-        //         // let link:string = ""
-        //         // console.log(file); 
-        //         const key = Object.entries(files)
-
-        //         links[key] =  await cloudinary(file, 'landa/files/forms/'+fields.email)
-        //     //    await prisma.startupsForm.update({
-        //     //     where: {
-        //     //       firstName: extractFieldValue(fields, 'firstName'),
-        //     //     },
-        //     //     data: {
-        //     //       name: 'Viola the Magnificent',
-        //     //     },
-        //     //   })
-        //         //  = link;
-        //     }
-        // }
-        // const uploadUrls = await cloudinary(files.businessPlanFile, 'landa/files/forms')
-        // const uploadUrls2 = await cloudinary(files.pitchDeckFile, 'landa/files/forms')
-
-        // console.log("this is file : ",uploadUrls)   
         let type;
         switch (extractFieldValue(fields,'type')) {
             case "IDEA":
@@ -97,8 +69,6 @@ export default async function handler(
                 type = undefined
                 break;
         }
-=======
->>>>>>> origin/develop
         const startupsForm = await prisma.startupsForm.create({
             data: {
                 firstName: extractFieldValue(fields, 'firstName'),
@@ -112,7 +82,6 @@ export default async function handler(
                 // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
                 // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
 
-<<<<<<< HEAD
                 birthDate: new Date(extractFieldValue(fields, 'birthDate')),
                 countryOfResidence: extractFieldValue(fields, 'countryOfResidence'),
                 type: type || null || undefined,
@@ -120,12 +89,6 @@ export default async function handler(
                 pitchDeckFile: links["pitchDeckFile"]? links["pitchDeckFile"]: null, 
                 financialFile: links["financialFile"]? links["financialFile"]: null, 
                 
-=======
-                businessPlanFile: links["businessPlanFile"] ? links["businessPlanFile"] : null,
-                pitchDeckFile: links["pitchDeckFile"] ? links["pitchDeckFile"] : null,
-                financialModelFile: links["financialModelFile"] ? links["financialModelFile"] : null,
-
->>>>>>> origin/develop
             }
         })
 
