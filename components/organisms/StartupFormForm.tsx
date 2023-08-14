@@ -14,38 +14,181 @@ import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NoRadioButton from '../atoms/NoRadioButton';
 
+
 export default function StartupFormForm() {
+
+  const initialStartupsFormData: startupsFormData = {
+    firstName: '',
+    lastName: '',
+    birthDate: new Date(),
+    email: '',
+    countryOfResidence: '',
+    provinceOfResidence: '',
+    type: '',
+    ideaExplanation: '',
+    getToKnowUs: '',
+    pitchDeck: true,
+    pitchDeckFile: null as File | null,
+    businessPlan: true,
+    businessPlanFile: null as File | null,
+    productName: '',
+    siteAddress: '',
+    customerProblem: '',
+    solution: '',
+    productLevel: '',
+    scalable: '',
+    monetizationOfYourPlan: '',
+    structureOfYourSales: '',
+    financialModelFile: null as File | null,
+    cooperatedWithInvestors: '',
+    financial: true,
+    financialFile: null as File | null,
+    customerCharacteristic: '',
+    currentCustomers: '',
+    estimatedMarketSize: '',
+    totalTamSamSom: '',
+    startupRevenue: '',
+    monthlyIncome: '',
+    currentInterestRate: '',
+    currentRaisedFunding: '',
+    neededCapital: '',
+    MVP:false,
+    FirstSale:false,
+    TrialProduct:false,
+    SaleDevelopment:false,
+    Idea:false,
+  };
+  
+
+
+
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<startupsFormData>();
+    reset,
+  } = useForm<startupsFormData>({
+    mode: 'onBlur',
+    defaultValues: initialStartupsFormData,
+  });
 
   const [selectedRadio, setSelectedRadio] = useState('');
 
   const handleRadioChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRadio(event.target.value);
   };
+  const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
+    businessPlanFile: null,
+  });
+  const [filePost2, setFilePost2] = useState<{ pitchDeckFile: File | null }>({
+    pitchDeckFile: null,
+  });
+  const [filePost3, setFilePost3] = useState<{ financialFile: File | null }>({
+    financialFile: null,
+  });
 
-  const onSubmit = async (data: startupsFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
 
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
+  const handlePitchDeckFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const pitchDeckFile = event.target.files && event.target.files[0];
+    if (event.target.files && event.target.files.length > 0) {
+      setFilePost2({ pitchDeckFile: event.target.files[0] });
     }
   };
+
+  const handleBusinessPlanFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (event.target.files && event.target.files.length > 0) {
+      setFilePost({ businessPlanFile: event.target.files[0] });
+    }
+    
+    // const businessPlanFile = event.target.files && event.target.files[0];
+    // setFilePost({businessPlanFile: event.target.files[0]})
+  };
+const [formData, setFormData] = useState<startupsFormData>(initialStartupsFormData);
+
+const onSubmit = async (formData: startupsFormData) => {
+
+
+  const sendFormData = new FormData()
+  // TODO: fix this condition for other field
+  if (filePost.businessPlanFile) {
+    sendFormData.append('businessPlanFile', filePost.businessPlanFile, filePost.businessPlanFile.name);
+  }
+  if(filePost2.pitchDeckFile){
+    sendFormData.append('pitchDeckFile',filePost2.pitchDeckFile,filePost2.pitchDeckFile.name);
+  }
+
+  sendFormData.append('firstName', formData.firstName);
+  sendFormData.append('lastName', formData.lastName);
+  sendFormData.append('email', formData.email);
+  sendFormData.append('countryOfResidence', formData.countryOfResidence);
+  sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
+  sendFormData.append('type', formData.type);
+  sendFormData.append('birthDate', String(formData.birthDate));
+  sendFormData.append('ideaExplanation', formData.ideaExplanation);
+  sendFormData.append('getToKnowUs', formData.getToKnowUs);
+  sendFormData.append('pitchDeck', String(formData.pitchDeck));
+  sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
+  sendFormData.append('businessPlan', String(formData.businessPlan));
+  sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
+  sendFormData.append('productName', formData.productName);
+  sendFormData.append('siteAddress', formData.siteAddress);
+  sendFormData.append('customerProblem', formData.customerProblem);
+  sendFormData.append('solution', formData.solution);
+  sendFormData.append('productLevel', formData.productLevel);
+  sendFormData.append('scalable', formData.scalable);
+  sendFormData.append(
+    'monetizationOfYourPlan',
+    formData.monetizationOfYourPlan
+  );
+  sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
+  sendFormData.append(
+    'financialModelFile',
+    formData.financialModelFile as Blob
+  );
+  sendFormData.append(
+    'cooperatedWithInvestors',
+    formData.cooperatedWithInvestors
+  );
+  sendFormData.append('financial', String(formData.financial));
+  sendFormData.append('financialFile', formData.financialFile as Blob);
+  sendFormData.append(
+    'customerCharacteristic',
+    formData.customerCharacteristic
+  );
+  sendFormData.append('currentCustomers', formData.currentCustomers);
+  sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
+  sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
+  sendFormData.append('startupRevenue', formData.startupRevenue);
+  sendFormData.append('monthlyIncome', formData.monthlyIncome);
+  sendFormData.append('currentInterestRate', formData.currentInterestRate);
+  sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
+  sendFormData.append('neededCapital', formData.neededCapital);
+  try {
+    const response = await fetch('/api/upload-startups-form', {
+      method: 'POST',
+      body: sendFormData,
+    });
+
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+
+    // setIsSuccess(true);
+    // setSend(false);
+    reset(initialStartupsFormData); // Reset the form after successful submission
+    console.log('Form data sent successfully!');
+  } catch (error) {
+    // setSend(false);
+    // setIsSuccess(false);
+    console.error('Error sending form data:', error);
+  }
+};
 
   const test = [
     { value: '1', label: '1' },
@@ -72,7 +215,7 @@ export default function StartupFormForm() {
           <div>
             <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
           </div>
-            
+            {/* idea section */}
             <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
@@ -93,7 +236,7 @@ export default function StartupFormForm() {
             }
             })()}
 
-
+{/* MVP section */}
 <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
@@ -107,24 +250,28 @@ export default function StartupFormForm() {
           </label>
             {(() => {
             if (selectedRadio == "MVP") {
-              return <StartupFormMVP register={register} errors={errors}/>;
+              return <StartupFormMVP register={register} errors={errors} handleBusinessPlanFileChange={handleBusinessPlanFileChange} handlePitchDeckFileChange={handlePitchDeckFileChange}/>;
+            }else{
+              return <div></div>;
             }
             })()}
 
 <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
-              value="TRIAL"
-              {...register('TRIAL')}
+              value="TrialProduct"
+              {...register('TrialProduct')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'TRIAL'}
+              checked={selectedRadio === 'TrialProduct'}
               onChange={handleRadioChange}
             />
             <span>Trial Product</span>
           </label>
             {(() => {
-            if (selectedRadio == "TRIAL") {
+            if (selectedRadio == "TrialProduct") {
               return <StartupFormTrialProduct register={register} errors={errors}/>;
+            }else{
+              return <div></div>;
             }
             })()}
 
@@ -132,17 +279,19 @@ export default function StartupFormForm() {
 <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
-              value="FisrtSale"
-              {...register('FisrtSale')}
+              value="FirstSale"
+              {...register('FirstSale')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'FisrtSale'}
+              checked={selectedRadio === 'FirstSale'}
               onChange={handleRadioChange}
             />
             <span>First Sale</span>
           </label>
             {(() => {
-            if (selectedRadio == "FisrtSale") {
+            if (selectedRadio == "FirstSale") {
               return <StartupFormFirstSale register={register} errors={errors}/>;
+            }else{
+              return <div></div>;
             }
             })()}
 
@@ -150,17 +299,19 @@ export default function StartupFormForm() {
           <label className="flex flex-column mr-10 my-10">
             <input
               type="radio"
-              value="Sale Development"
-              {...register('Sale Development')}
+              value="SaleDevelopment"
+              {...register('SaleDevelopment')}
               className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'Sale Development'}
+              checked={selectedRadio === 'SaleDevelopment'}
               onChange={handleRadioChange}
             />
             <span>Sale Development</span>
           </label>
             {(() => {
-            if (selectedRadio == "Sale Development") {
+            if (selectedRadio == "SaleDevelopment") {
               return <StartupFormSaleDevelopment register={register} errors={errors}/>;
+            }else{
+              return <div></div>;
             }
             })()}
           <div className="text-center">

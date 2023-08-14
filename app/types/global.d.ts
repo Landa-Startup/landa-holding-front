@@ -93,7 +93,49 @@ interface startupsFormData {
   currentInterestRate: string;
   currentRaisedFunding:  string;
   neededCapital:  string;
+  MVP:boolean;
+  FirstSale:boolean;
+  TrialProduct:boolean;
+  SaleDevelopment:boolean;
+  Idea:boolean;
 }
 
+  const initialStartupsFormData: startupsFormData = {
+    firstName: '',
+    lastName: '',
+    birthDate: new Date(),
+    email: '',
+    countryOfResidence: '',
+    provinceOfResidence: '',
+    type: Type.IDEA,
+    ideaExplanation: '',
+    getToKnowUs: '',
+    pitchDeck: true,
+    pitchDeckFile: null as File | null,
+    businessPlan: true,
+    businessPlanFile: null as File | null,
+    productName: '',
+    siteAddress: '',
+    customerProblem: '',
+    solution: '',
+    productLevel: Level.basicPrinciple,
+    scalable: '',
+    monetizationOfYourPlan: '',
+    structureOfYourSales: '',
+    financialModelFile: null as File | null,
+    cooperatedWithInvestors: '',
+    financial: true,
+    financialFile: null as File | null,
+    customerCharacteristic: '',
+    currentCustomers: '',
+    estimatedMarketSize: '',
+    totalTamSamSom: '',
+    startupRevenue: '',
+    monthlyIncome: '',
+    currentInterestRate: '',
+    currentRaisedFunding: '',
+    neededCapital: '',
 
-export {contactUSFormData,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData}
+  }
+
+export {contactUSFormData,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData,initialStartupsFormData}

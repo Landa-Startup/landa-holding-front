@@ -68,15 +68,8 @@ import NotificationSendForm from './base/NotificationSendForm';
 //     neededCapital: '',
 //   };
 
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//     reset,
-//   } = useForm<startupsFormData>({
-//     mode: 'onBlur',
-//     defaultValues: initialFormData,
-//   });
++6
+3666666666
 
 <<<<<<< HEAD
 //   const [selectedRadio, setSelectedRadio] = useState('');
@@ -131,21 +124,6 @@ import NotificationSendForm from './base/NotificationSendForm';
 //   //   setFormData({ ...formData, [e.target.name]: e.target.value });
 //   // };
 
-<<<<<<< HEAD
-//   const handlePitchDeckFileChange = (
-//     event: React.ChangeEvent<HTMLInputElement>
-//   ) => {
-//     const pitchDeckFile = event.target.files && event.target.files[0];
-//     setFormData({ ...formData, pitchDeckFile });
-//   };
-
-//   const handleBusinessPlanFileChange = (
-//     event: React.ChangeEvent<HTMLInputElement>
-//   ) => {
-//     const businessPlanFile = event.target.files && event.target.files[0];
-//     setFormData({ ...formData, businessPlanFile });
-//   };
-=======
   const handlePitchDeckFileChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -165,82 +143,17 @@ import NotificationSendForm from './base/NotificationSendForm';
     // const businessPlanFile = event.target.files && event.target.files[0];
     // setFilePost({businessPlanFile: event.target.files[0]})
   };
->>>>>>> feature/send-startups-form
 
 //   // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 //   //   const { name, value } = event.target;
 //   //   setFormData({ ...formData, [name]: value });
 //   // };
 
-<<<<<<< HEAD
-//   const onSubmit = async (formData: startupsFormData) => {
-//     setIsSubmitting(true);
-//     setSend(true);
-=======
   const onSubmit = async (formData: startupsFormData) => {
 
->>>>>>> feature/send-startups-form
 
-//     const sendFormData = new FormData();
+    const sendFormData = new FormData();
 
-<<<<<<< HEAD
-//     // TODO: fix this condition for other field
-//     if (filePost.pitch) {
-//       sendFormData.append('pitch', filePost.pitch, filePost.pitch.name);
-//     }
-
-//     sendFormData.append('fullName', formData.firstName);
-//     sendFormData.append('lastName', formData.lastName);
-//     sendFormData.append('email', formData.email);
-//     sendFormData.append('countryOfResidence', formData.countryOfResidence);
-//     sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-//     sendFormData.append('type', formData.type);
-//     sendFormData.append('birthDate', String(formData.birthDate));
-//     sendFormData.append('ideaExplanation', formData.ideaExplanation);
-//     sendFormData.append('getToKnowUs', formData.getToKnowUs);
-//     sendFormData.append('pitchDeck', String(formData.pitchDeck));
-//     sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
-//     sendFormData.append('businessPlan', String(formData.businessPlan));
-//     sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
-//     sendFormData.append('productName', formData.productName);
-//     sendFormData.append('siteAddress', formData.siteAddress);
-//     sendFormData.append('customerProblem', formData.customerProblem);
-//     sendFormData.append('solution', formData.solution);
-//     sendFormData.append('productLevel', formData.productLevel);
-//     sendFormData.append('scalable', formData.scalable);
-//     sendFormData.append(
-//       'monetizationOfYourPlan',
-//       formData.monetizationOfYourPlan
-//     );
-//     sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
-//     sendFormData.append(
-//       'financialModelFile',
-//       formData.financialModelFile as Blob
-//     );
-//     sendFormData.append(
-//       'cooperatedWithInvestors',
-//       formData.cooperatedWithInvestors
-//     );
-//     sendFormData.append('financial', String(formData.financial));
-//     sendFormData.append('financialFile', formData.financialFile as Blob);
-//     sendFormData.append(
-//       'customerCharacteristic',
-//       formData.customerCharacteristic
-//     );
-//     sendFormData.append('currentCustomers', formData.currentCustomers);
-//     sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
-//     sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
-//     sendFormData.append('startupRevenue', formData.startupRevenue);
-//     sendFormData.append('monthlyIncome', formData.monthlyIncome);
-//     sendFormData.append('currentInterestRate', formData.currentInterestRate);
-//     sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
-//     sendFormData.append('neededCapital', formData.neededCapital);
-//     try {
-//       const response = await fetch('/api/upload-form', {
-//         method: 'POST',
-//         body: sendFormData,
-//       });
-=======
     // TODO: fix this condition for other field
     if (filePost.businessPlanFile) {
       sendFormData.append('businessPlanFile', filePost.businessPlanFile, filePost.businessPlanFile.name);
@@ -248,7 +161,7 @@ import NotificationSendForm from './base/NotificationSendForm';
     if(filePost2.pitchDeckFile){
       sendFormData.append('pitchDeckFile',filePost2.pitchDeckFile,filePost2.pitchDeckFile.name);
     }
-
+    
     sendFormData.append('firstName', formData.firstName);
     sendFormData.append('lastName', formData.lastName);
     sendFormData.append('email', formData.email);
@@ -300,24 +213,11 @@ import NotificationSendForm from './base/NotificationSendForm';
         method: 'POST',
         body: sendFormData,
       });
->>>>>>> feature/send-startups-form
 
 //       if (!response.ok) {
 //         throw new Error('Network response was not ok');
 //       }
 
-<<<<<<< HEAD
-//       setIsSuccess(true);
-//       setSend(false);
-//       reset(initialFormData); // Reset the form after successful submission
-//       console.log('Form data sent successfully!');
-//     } catch (error) {
-//       setSend(false);
-//       setIsSuccess(false);
-//       console.error('Error sending form data:', error);
-//     }
-//   };
-=======
       // setIsSuccess(true);
       // setSend(false);
       reset(initialFormData); // Reset the form after successful submission
@@ -328,7 +228,6 @@ import NotificationSendForm from './base/NotificationSendForm';
       console.error('Error sending form data:', error);
     }
   };
->>>>>>> feature/send-startups-form
 
 //   return (
 //     <>
