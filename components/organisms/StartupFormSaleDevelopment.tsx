@@ -112,11 +112,15 @@ export default function StartupFormFirstSale({
                   />
                 </div>
               </div>
-              <StartupFormProblem />
-              <StartupFormSolutions />
-              <StartupFormBusinessModel />
+
+              <StartupFormProblem register={register} errors={errors}/>
+              <StartupFormSolutions register={register} errors={errors}/>
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange} />
             </div>
           );
+        }
+        else{
+          return <div></div>;
         }
       })()}
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
@@ -138,10 +142,12 @@ export default function StartupFormFirstSale({
             if (Boolean(selectedRadioFinancial) === false) {
               return (
                 <div>
-                        <StartupFormTargetMarket/>
-                    <StartupFormProperty/>
+                        <StartupFormTargetMarket register={register} errors={errors}/>
+                    <StartupFormProperty register={register} errors={errors}/>
                 </div>
               );
+            }else{
+              return <div></div>;
             }
             })()}
 

@@ -9,32 +9,16 @@ import NoRadioButton from '../atoms/NoRadioButton';
 import YesRadioButton from '../atoms/YesRadioButton';
 import { ChangeEvent } from 'react';
 
-export default function StartupFormBusinessModel() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+export default function StartupFormBusinessModel({
+  register,
+  errors,
+  handleFinancialFileChange,
+}: {
+  register: any;
+  errors: any;
+  handleFinancialFileChange:any;
 
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-    }
-  };
+}) {
 
   const preparationStatsOption = [
     {
@@ -118,11 +102,10 @@ export default function StartupFormBusinessModel() {
           <input
             type="file"
             className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
-            value=""
-            // {...register('financialModelFile', {
-            //   required: '',
-            // })}
-            onChange={handlePitchDeckFileChange} // must use onChange event handler after register
+            {...register('financialFile', {
+              required: '',
+            })}
+            onChange={handleFinancialFileChange} // must use onChange event handler after register
           />
         </div>
         </div>

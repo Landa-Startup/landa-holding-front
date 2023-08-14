@@ -3,8 +3,15 @@ import prisma from "@/lib/prisma";
 import formidable from 'formidable'
 import cloudinary from '@/lib/cloudinary'
 import { extractFieldValue } from "@/utils/index";
+import { type } from "os";
 
-
+enum Type {
+    IDEA = 'IDEA',
+    MVP = 'MVP',
+    TRIAL = 'TRIAL',
+    FisrtSale = 'FisrtSale',
+    SaleDevelopment = 'SaleDevelopment',
+  }
 export const config = {
     api: {
         bodyParser: false,
@@ -59,18 +66,47 @@ export default async function handler(
         // const uploadUrls2 = await cloudinary(files.pitchDeckFile, 'landa/files/forms')
 
         // console.log("this is file : ",uploadUrls)   
+        let type;
+        switch (extractFieldValue(fields,'type')) {
+            case "IDEA":
+                type = Type.IDEA
+                break;
+            case "MVP":
+                type = Type.MVP
+                break;
+            case "TRIAL":
+                type = Type.TRIAL
+                break;
+            case "SaleDevelopment":
+                type = Type.SaleDevelopment
+                break;
+            case "FisrtSale":
+                type = Type.FisrtSale
+                break;
 
-        
+            default:
+                type = undefined
+                break;
+        }
         const startupsForm = await prisma.startupsForm.create({
             data: {
                 firstName: extractFieldValue(fields, 'firstName'),
                 lastName: extractFieldValue(fields, 'lastName'),
                 email: extractFieldValue(fields, 'email'),
+                provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
+                ideaExplanation: extractFieldValue(fields,'ideaExplanation'),
+                getToKnowUs: extractFieldValue(fields,'getToKnowUs'),
+                // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
+                // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
+                // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
+                // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
+
                 birthDate: new Date(extractFieldValue(fields, 'birthDate')),
                 countryOfResidence: extractFieldValue(fields, 'countryOfResidence'),
+                type: type || null || undefined,
                 businessPlanFile: links["businessPlanFile"]? links["businessPlanFile"]: null,
                 pitchDeckFile: links["pitchDeckFile"]? links["pitchDeckFile"]: null, 
-                financialModelFile: links["financialModelFile"]? links["financialModelFile"]: null, 
+                financialFile: links["financialFile"]? links["financialFile"]: null, 
                 
             }
         })

@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
 import UploadInput from '../atoms/UploadInput';
-import RadioButton from '../atoms/RadioButton';
-import TwoOptionRadio from '../atoms/TwoOptionRadio';
 import Button from '../atoms/Button';
 import Input from './base/Input';
 import { startupsFormData } from '../../app/types/global';

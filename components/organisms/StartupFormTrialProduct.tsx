@@ -9,16 +9,18 @@ import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 
-export default function StartupFormMVP({
+export default function StartupFormTrialProduct({
   register,
   errors,
   handlePitchDeckFileChange,
   handleBusinessPlanFileChange,
+  handleFinancialFileChange,
 }: {
   register: any;
   errors: any;
   handlePitchDeckFileChange:any;
   handleBusinessPlanFileChange:any;
+  handleFinancialFileChange:any;
 }) {
   
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
@@ -102,11 +104,13 @@ export default function StartupFormMVP({
                   />
                 </div>
               </div>
-              <StartupFormProblem />
-              <StartupFormSolutions />
-              <StartupFormBusinessModel />
+              <StartupFormProblem register={register} errors={errors}/>
+              <StartupFormSolutions register={register} errors={errors}/>
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange}/>
             </div>
           );
+        }else{
+          return <div></div>;
         }
       })()}
     </>
