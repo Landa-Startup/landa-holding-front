@@ -15,7 +15,7 @@ export default function RootLayout({
       </head>
       <body>
         {/* <div className=""> */}
-        <Navbar >
+        <Navbar>
           <main>{children}</main>
           <div className="bottom-0 w-full">
             <Footer />
@@ -26,7 +26,6 @@ export default function RootLayout({
         {/* <div className="min-h-screen">
           <main>{children}</main>
         </div> */}
-
 
         {/* <div>
           <Navbar />

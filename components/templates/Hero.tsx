@@ -10,26 +10,27 @@ export default function Hero() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[400px] md:h-[745px] relative"
+      className="h-[200px] md:h-[745px] relative"
     >
       <div className="flex flex-col items-center justify-center h-full">
-        <div className="w-[557px] h-11 text-center text-white text-xl md:text-3xl font-normal tracking-[11.20px] font-condensed">
+        <div className="w-[557px] h-11 text-center text-white text-xl md:text-3xl font-normal tracking-[5px] md:tracking-[11.20px] font-condensed">
           Landa Holding
         </div>
-        <div className="md:h-20 font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[6.40px]">
+        <div className="md:h-20 font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]">
           Acceleration Center
           <br />
         </div>
-        <div className="w-[250px] md:w-[572px] text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-base font-normal leading-8 md:pt-10">
+        <div className="w-[250px] md:w-[572px] text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-base font-normal leading-3 md:leading-8 md:pt-10 mt-4">
           Landa Holding is an international investment company active in Iran
           and Canada.
           <br />
-          <div className='hidden md:block'>
-          Landa Holding acts as a supporter of entrepreneurs, investors,
-          business owners and everybody who is willing to start its own
-          start-up.
-          <br />
-          Our main focus is to make your business boost internationally.</div>
+          <div className="hidden md:block">
+            Landa Holding acts as a supporter of entrepreneurs, investors,
+            business owners and everybody who is willing to start its own
+            start-up.
+            <br />
+            Our main focus is to make your business boost internationally.
+          </div>
         </div>
         <Image
           className="w-[103px] md:w-[411px] h-[140px] md:h-[559px] absolute right-0 bottom-0"

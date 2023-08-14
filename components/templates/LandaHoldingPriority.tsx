@@ -39,8 +39,8 @@ export default function LandaHoldingPriority() {
   ];
 
   return (
-    <div className="w-full md:h-[613px] py-10 bg-white flex-col justify-start relative gap-9 inline-flex">
-      <div className='ml-5 md:ml-20'>
+    <div className="w-full md:h-[613px] py-10 bg-white flex-col justify-start items-center relative gap-9 inline-flex">
+      <div className="ml-5 md:ml-20">
         <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
           Landa Holding
           <br />

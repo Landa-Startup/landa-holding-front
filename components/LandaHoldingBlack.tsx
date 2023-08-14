@@ -26,7 +26,7 @@ export default function LandaHoldingBalck() {
             </span>
           </div>
           <div className="w-[353px] md:w-[434px]">
-            <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow mt-4">
+            <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
               <li>Global Investment Opportunities within Your Reach.</li>
               <li>
                 Access to a Network of Successful Entrepreneurs and Investors.

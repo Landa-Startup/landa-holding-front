@@ -3,8 +3,8 @@ import React from 'react';
 export default function LandaHoldingBalck() {
   return (
     <div className="relative bg-neutral-800">
-      <div className="flex flex-col md:flex-row justify-around items-center p-9 space-y-5">
-        <div className="w-[245px] h-[70.55px] text-center font-barlow md:hidden mb-3">
+      <div className="flex flex-col md:flex-row justify-around items-center p-9">
+        <div className="text-center font-barlow md:hidden mb-3">
           <span className="text-white text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -14,7 +14,7 @@ export default function LandaHoldingBalck() {
             <br />
           </span>
         </div>
-        <div className="flex flex-col items-center mt-0">
+        <div className="flex flex-col items-center mb-10 md:mb-0">
           <div>
             <span className="hidden md:block text-white font-barlow text-base font-normal tracking-[5.60px]">
               LANDA HOLDING
@@ -26,7 +26,7 @@ export default function LandaHoldingBalck() {
             </span>
           </div>
           <div className="w-[353px] md:w-[434px]">
-            <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow mt-4">
+            <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
               <li>Global Investment Opportunities within Your Reach.</li>
               <li>
                 Access to a Network of Successful Entrepreneurs and Investors.
@@ -63,18 +63,18 @@ export default function LandaHoldingBalck() {
             </div>
           </button>
         </div>
-        <div className="flex flex-col items-center">
-          <div>
-            <span className="hidden md:block text-white font-barlow text-base font-normal tracking-[5.60px]">
+        <div className="flex flex-col items-center md:mt-5">
+          <div className="text-center font-barlow md:hidden mb-3">
+            <span className="text-white text-base font-normal tracking-[5.60px]">
               LANDA HOLDING
               <br />
             </span>
-            <span className="mt-14 text-white text-[32px] font-normal font-barlow">
+            <span className="text-white text-4xl font-normal">
               Entrepreneur Center
               <br />
             </span>
           </div>
-          <ul className="font-barlow text-white text-base font-normal leading-8 mt-4">
+          <ul className="font-barlow text-white text-base font-normal leading-8">
             <li className="list-disc">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>

@@ -21,18 +21,16 @@ export default function LatestStartups() {
       description:
         'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
     },
-    // Add more card data objects here if needed
   ];
 
   return (
-    //TODO: put cards in loop.
     <div>
-      <div className="flex flex-col p-5 bg-stone-100">
+      <div className="flex flex-col p-5 bg-stone-100 items-center text-center">
         <div className="flex-col justify-start items-start md:ml-96">
-          <div className="text-neutral-800 text-base font-normal tracking-[5.60px] font-condensed">
+          <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[5.60px] font-condensed">
             LANDA HOLDING
           </div>
-          <div className="text-primary text-2xl text-[64px] font-normal font-condensed">
+          <div className="text-primary text-5xl md:text-[64px] font-normal font-condensed">
             LATEST STARTUPS
           </div>
         </div>
