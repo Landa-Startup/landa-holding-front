@@ -44,7 +44,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </svg>
             </label>
           </div>
-          <div className="hidden md:flex-1 md:flex justify-start ml-32">
+          <div className="hidden xl:flex-1 xl:flex justify-start ml-32 hover:font-white">
             {' '}
             {/* Center items in md mode */}
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl">
@@ -62,12 +62,26 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <li>
                 <Link href={'/our-team'}>OUR TEAM</Link>
               </li>
-              <li>
-                <Link href={'/'}>MAGAZINE</Link>
-              </li>
-              <li>
+              {/* <li>
                 <Link href={'/'}>WORK WITH US</Link>
+              </li> */}
+              <li>
+                <details className="dropdown mb-32 ">
+                  <summary className="m-1 ">WORK WITH US</summary>
+                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-transparent rounded-box w-64">
+                    <li>
+                      <Link href={'/investor-registration'}>CENTER OF INVESTOR</Link>
+                    </li>
+                    <li>
+                      <Link href={'/partner-membership'}>OUR BUSINESS PARTNERS</Link>
+                    </li>
+                    <li>
+                      <Link href={'/StartupsForm'}>Startups</Link>
+                    </li>
+                  </ul>
+                </details>
               </li>
+
             </ul>
           </div>
         </div>
@@ -89,9 +103,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </li>
           <li>
             <Link href={'/our-team'}>OUR TEAM</Link>
-          </li>
-          <li>
-            <Link href={'/'}>MAGAZINE</Link>
           </li>
           <li>
             <Link href={'/'}>WORK WITH US</Link>
