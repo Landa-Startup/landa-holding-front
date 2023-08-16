@@ -4,17 +4,17 @@ import AboutUsProfileCard from './AboutUsProfileCard';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image: '/static/images/c1285c5aa4c31619ff4fd2173fac716a.jpg',
+      image: '/static/images/About/4-1 1.png',
       title: 'info@landa.com',
       description: 'Diaco department manager',
     },
     {
-      image: '/static/images/c1285c5aa4c31619ff4fd2173fac716a.jpg',
+      image: '/static/images/About/4-1 1 (1).png',
       title: 'victora Dan',
       description: 'Diaco department manager',
     },
     {
-      image: '/static/images/c1285c5aa4c31619ff4fd2173fac716a.jpg',
+      image: '/static/images/About/4-1 1 (2).png',
       title: 'Enrico Brown',
       description: 'Diaco department manager',
     },
@@ -23,14 +23,14 @@ export default function AboutUsProfile() {
 
 
   return (
-    <div>
-      <div className='mb-11 mt-44	ml-[119px]'>
-        <p className='text-black font-gilda text-2xl not-italic	font-normal	leading-normal '>PROFESSIONALS</p>
+    <div className='justify-items-center'>
+      <div className='flex flex-col justify-items-center my-10  md:mx-36'>
+        <p className='text-black font-normal font-Barlow-Condensed tracking-widest md:text-xl not-italic	leading-normal '>PROFESSIONALS</p>
         <p className='text-black font-gilda text-4xl not-italic	font-normal	leading-normal	'> Managing Directors</p>
 
       </div >
       
-      <div className="md:grid md:grid-cols-3 gap-4 md:mx-[119px] mb-52 flex flex-col mx-10">
+      <div className="md:grid md:grid-cols-3 mb-5 flex flex-col  md:justify-items-center sm:align-items-center">
           {cardsData.map((card, index) => (
             <AboutUsProfileCard key={index} image={card.image} title={card.title} description={card.description} />
           ))}

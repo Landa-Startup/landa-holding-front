@@ -26,12 +26,14 @@ export default function LatestStartups() {
   return (
     <div>
       <div className="flex flex-col p-5 bg-stone-100 items-center text-center">
-        <div className="flex-col justify-start items-start md:ml-96 md:self-start">
-          <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[5.60px] font-condensed">
-            LANDA HOLDING
-          </div>
-          <div className="text-primary text-5xl md:text-[64px] font-normal font-condensed">
-            LATEST STARTUPS
+        <div className="flex-col justify-start items-start md:ml-32 md:self-start">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[5.60px] font-condensed">
+              LANDA HOLDING
+            </div>
+            <div className="text-primary text-5xl md:text-[64px] font-normal font-condensed">
+              LATEST STARTUPS
+            </div>
           </div>
         </div>
         <div className="flex justify-center mt-2">
