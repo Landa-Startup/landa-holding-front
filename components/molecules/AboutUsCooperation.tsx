@@ -17,7 +17,7 @@ function AboutUsCooperation() {
           <p className="tracking-wide font-barlow font-semibold  text-xl">
             Investment Center
           </p>
-          <p className="font-light md:px-20 pt-2">
+          <p className="font-light md:px-32 pt-2">
             The Landa Investors Association is composed of a group of
             individuals active in the field of investment who collaborate with
             each other based on their investment priorities and invest in
@@ -38,7 +38,7 @@ function AboutUsCooperation() {
           <p className="tracking-wide font-barlow font-semibold  text-xl">
           Entrepreneur Center
           </p>
-          <p className="font-light md:px-20 pt-2 pb-1">
+          <p className="font-light md:px-32 pt-2 pb-1">
           The Entrepreneur Center is a community of active individuals in the
             field of business and entrepreneurship who form a dynamic and
             powerful technological ecosystem together.
@@ -47,7 +47,7 @@ function AboutUsCooperation() {
             special skills, join us by completing the Entrepreneur Membership
             form.
           </p>
-          <div className="md:pt-20 pt-12">
+          <div className="md:pt-16 pt-10">
             <span className="mr-3">More</span>
             <a href="#">
             <Image width={40} height={40} className='inline' src="/static/images/About/right-arrow2.png" alt="arrow" />
