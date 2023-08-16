@@ -3,7 +3,7 @@ import prisma from "@/lib/prisma";
 import formidable from 'formidable'
 import cloudinary from '@/lib/cloudinary'
 // import {UploadFile} from 'cloudinary'
-import { extractFieldValue} from "@/utils/index";
+import { extractFieldValue } from "@/utils/index";
 
 
 enum Type {
@@ -12,7 +12,7 @@ enum Type {
     TRIAL = 'TRIAL',
     FisrtSale = 'FisrtSale',
     SaleDevelopment = 'SaleDevelopment',
-  }
+}
 export const config = {
     api: {
         bodyParser: false,
@@ -48,7 +48,7 @@ export default async function handler(
         }
 
         let type;
-        switch (extractFieldValue(fields,'type')) {
+        switch (extractFieldValue(fields, 'type')) {
             case "IDEA":
                 type = Type.IDEA
                 break;
@@ -74,9 +74,9 @@ export default async function handler(
                 firstName: extractFieldValue(fields, 'firstName'),
                 lastName: extractFieldValue(fields, 'lastName'),
                 email: extractFieldValue(fields, 'email'),
-                provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
-                ideaExplanation: extractFieldValue(fields,'ideaExplanation'),
-                getToKnowUs: extractFieldValue(fields,'getToKnowUs'),
+                provinceOfResidence: extractFieldValue(fields, 'provinceOfResidence'),
+                ideaExplanation: extractFieldValue(fields, 'ideaExplanation'),
+                getToKnowUs: extractFieldValue(fields, 'getToKnowUs'),
                 // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
                 // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
                 // provinceOfResidence: extractFieldValue(fields,'provinceOfResidence'),
@@ -84,11 +84,11 @@ export default async function handler(
 
                 birthDate: new Date(extractFieldValue(fields, 'birthDate')),
                 countryOfResidence: extractFieldValue(fields, 'countryOfResidence'),
-                type: type || null || undefined,
-                businessPlanFile: links["businessPlanFile"]? links["businessPlanFile"]: null,
-                pitchDeckFile: links["pitchDeckFile"]? links["pitchDeckFile"]: null, 
-                financialFile: links["financialFile"]? links["financialFile"]: null, 
-                
+                type: type as any,
+                businessPlanFile: links["businessPlanFile"] ? links["businessPlanFile"] : null,
+                pitchDeckFile: links["pitchDeckFile"] ? links["pitchDeckFile"] : null,
+                financialFile: links["financialFile"] ? links["financialFile"] : null,
+
             }
         })
 

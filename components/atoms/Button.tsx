@@ -9,12 +9,12 @@ type ButtonProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HT
 export default function Button({
   text,
   size,
-  type,
+  type = "button",
   addedClass,
 }: {
   text: string;
   size: string;
-  type?: string;
+  type?: "button" | "reset" | "submit";
   addedClass?: string;
 }) {
   return size == 'visit' ? (
