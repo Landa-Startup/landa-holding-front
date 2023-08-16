@@ -7,16 +7,18 @@ export default function HomeTextCardContainer({
   text,
   reverse,
   show,
+  index,
 }: {
   title: string;
   text: string;
   reverse: boolean;
   show: boolean;
+  index: number;
 }) {
   return (
     <div>
       <svg
-        className="hidden md:block absolute left-[300px] top-[1050px]"
+        className="hidden md:block absolute left-[0px] top-[820px]"
         xmlns="http://www.w3.org/2000/svg"
         width="1092"
         height="2573"
@@ -26,7 +28,7 @@ export default function HomeTextCardContainer({
         <path
           d="M0 152.749H709.675M709.675 152.749V0M709.675 152.749H798.634M709.675 152.749V765.5M709.675 2573V2489M1092 851.338H709.675V765.5M709.675 765.5H517M709.675 765.5V1429M709.675 1429V1469V1576.5M709.675 1429H549.5M709.675 2489H926M709.675 2489V2252.5M709.675 1726H355M709.675 1726V2252.5M709.675 1726V1576.5M709.675 2252.5H597.5M709.675 1576.5H943"
           stroke="#AA8453"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
       <svg
@@ -43,7 +45,7 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <svg
-        className="md:hidden absolute left-0"
+        className="md:hidden absolute right-0"
         xmlns="http://www.w3.org/2000/svg"
         width="408"
         height="1408"
@@ -56,17 +58,18 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <div
-        className="flex flex-col-reverse md:flex-row items-center justify-around px-14 py-24 font-gilda bg-whiteGold p-8"
+        className={`flex flex-col-reverse ${
+          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+        } items-center justify-around px-14 py-24 font-gilda bg-whiteGold p-8`}
         id="LandaHolding"
       >
         <TextCard
           text={text}
           image="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
           show={show}
-          reverse={false}
+          index={index}
         />
         <ImageCard
-          reverse={false}
           title={title}
           imageOne="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
           imageTwo="/static/images/Home/Investment/Rectangle 1412.png"

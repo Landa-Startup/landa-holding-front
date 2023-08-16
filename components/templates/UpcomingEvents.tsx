@@ -8,7 +8,7 @@ export default function UpcomingEvents() {
         UPCOMING EVENT
       </div>
       <div className="md:pr-[53px] left-24 md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
-        <div className="self-stretch justify-start items-center gap-5 md:gap-[1300px] inline-flex">
+        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
           <div className="justify-start items-center gap-[55px] flex">
             <div className="inline-flex flex-col items-center justify-start px-8">
               <div className="text-4xl font-medium text-right text-primary">
@@ -29,7 +29,7 @@ export default function UpcomingEvents() {
           </div>
           <Button text="Register" size="register" />
         </div>
-        <div className="self-stretch justify-start items-center gap-5 md:gap-[1270px] inline-flex">
+        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
           <div className="w-[307px] justify-start items-start gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
@@ -50,7 +50,7 @@ export default function UpcomingEvents() {
           </div>
           <Button text="Register" size="register" />
         </div>
-        <div className="self-stretch justify-start items-center gap-5 md:gap-[1300px] inline-flex">
+        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
           <div className="flex items-center justify-start gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-right text-primary text-[40px] font-medium">
