@@ -59,9 +59,6 @@ export default function StartupFormBusinessModel({
     },
   ];
 
-  function handlePitchDeckFileChange(event: ChangeEvent<HTMLInputElement>): void {
-    throw new Error('Function not implemented.');
-  }
 
   return (
     <>
@@ -78,7 +75,7 @@ export default function StartupFormBusinessModel({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="planMonetization"
+            nameTextArea="monetizationOfYourPlan"
             patternMessage=""
             patternValue=""
             required=""
@@ -90,7 +87,7 @@ export default function StartupFormBusinessModel({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="structureOfYourSales"
             patternMessage=""
             patternValue=""
             required=""
@@ -115,7 +112,7 @@ export default function StartupFormBusinessModel({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="cooperatedWithInvestors"
             patternMessage=""
             patternValue=""
             required=""
@@ -127,7 +124,7 @@ export default function StartupFormBusinessModel({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="getToKnowUs"
             patternMessage=""
             patternValue=""
             required=""

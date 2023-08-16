@@ -5,14 +5,13 @@ import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
 import YesRadioButton from '../atoms/YesRadioButton';
-import NoRadioButton from '../atoms/NoRadioButton';
 import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
 
-export default function StartupFormFirstSale({
+export default function StartupFormSaleDevelopment({
   register,
   errors,
   handlePitchDeckFileChange,
@@ -71,7 +70,7 @@ export default function StartupFormFirstSale({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
-          handleChangeFile={handlePitchDeckFileChange}
+          handleChangeFile={handleBusinessPlanFileChange}
           fileName='businessPlanFile'
         />
       </div>

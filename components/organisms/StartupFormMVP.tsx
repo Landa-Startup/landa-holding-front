@@ -15,6 +15,8 @@ export default function StartupFormMVP({
   handlePitchDeckFileChange,
   handleBusinessPlanFileChange,
   handleFinancialFileChange,
+
+
 }: {
   register: any;
   errors: any;
@@ -51,6 +53,7 @@ export default function StartupFormMVP({
           selectedRadio={selectedRadioPitch}
           handleChangeFile={handlePitchDeckFileChange}
           fileName='pitchDeckFile'
+
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -62,6 +65,7 @@ export default function StartupFormMVP({
           selectedRadio={selectedRadioBusiness}
           handleChangeFile={handleBusinessPlanFileChange}
           fileName='businessPlanFile'
+
         />
       </div>
       {(() => {
