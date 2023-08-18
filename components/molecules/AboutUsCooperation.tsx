@@ -1,23 +1,22 @@
 
 import React from 'react';
-import IconMore from '@/components/atoms/IconMore';
 import Image from 'next/image';
 
 function AboutUsCooperation() {
   return (
-    <div className="text-center h-full bg-neutral-800 text-white py-10">
+    <div className="h-full py-10 text-center text-white bg-neutral-800">
       <div className="text-center">
         <p className="tracking-widest">LANDA HOLDING</p>
         <p className="text-5xl not-italic leading-normal font-gilda">
           Cooperation
         </p>
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 px-10 md:px-28">
+      <div className="grid grid-cols-1 gap-10 px-10 md:grid-cols-2 md:px-28">
         <div className="col-span-1">
-          <p className="tracking-wide font-barlow font-semibold  text-xl">
+          <p className="text-xl font-semibold tracking-wide font-barlow">
             Investment Center
           </p>
-          <p className="font-light md:px-32 pt-2">
+          <p className="pt-2 font-light md:px-32">
             The Landa Investors Association is composed of a group of
             individuals active in the field of investment who collaborate with
             each other based on their investment priorities and invest in
@@ -35,10 +34,10 @@ function AboutUsCooperation() {
           </div>
         </div>
         <div className="col-span-1">
-          <p className="tracking-wide font-barlow font-semibold  text-xl">
+          <p className="text-xl font-semibold tracking-wide font-barlow">
           Entrepreneur Center
           </p>
-          <p className="font-light md:px-32 pt-2 pb-1">
+          <p className="pt-2 pb-1 font-light md:px-32">
           The Entrepreneur Center is a community of active individuals in the
             field of business and entrepreneurship who form a dynamic and
             powerful technological ecosystem together.
@@ -47,7 +46,7 @@ function AboutUsCooperation() {
             special skills, join us by completing the Entrepreneur Membership
             form.
           </p>
-          <div className="md:pt-16 pt-10">
+          <div className="pt-10 md:pt-16">
             <span className="mr-3">More</span>
             <a href="#">
             <Image width={40} height={40} className='inline' src="/static/images/About/right-arrow2.png" alt="arrow" />
@@ -60,4 +59,3 @@ function AboutUsCooperation() {
 }
 
 export default AboutUsCooperation;
-// class="md:grid md:grid-cols-3 gap-4 md:mx-[119px] mb-52 flex flex-col justify-center items-center mx-10"

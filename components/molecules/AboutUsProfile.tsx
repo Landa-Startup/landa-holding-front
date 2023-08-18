@@ -23,19 +23,17 @@ export default function AboutUsProfile() {
 
 
   return (
-    <div className='justify-items-center'>
-      <div className='flex flex-col justify-items-center my-10  md:mx-36'>
-        <p className='text-black font-normal font-Barlow-Condensed tracking-widest md:text-xl not-italic	leading-normal '>PROFESSIONALS</p>
-        <p className='text-black font-gilda text-4xl not-italic	font-normal	leading-normal	'> Managing Directors</p>
-
+    <div className=''>
+      <div className='flex flex-col m-8 text-black justify-items-center md:ps-24 md:ms-28'>
+        <p className='not-italic font-normal leading-normal tracking-widest font-Barlow-Condensed md:text-xl '> PROFESSIONALS</p>
+        <p className='text-3xl font-normal leading-normal font-gilda md:text-4xl '>Managing Directors</p>
       </div >
       
-      <div className="md:grid md:grid-cols-3 mb-5 flex flex-col  md:justify-items-center sm:align-items-center">
+      <div className="flex flex-col m-8 md:grid md:grid-cols-3 md:gap-8 md:mx-20 md:px-32 ">
           {cardsData.map((card, index) => (
-            <AboutUsProfileCard key={index} image={card.image} title={card.title} description={card.description} />
+            <AboutUsProfileCard key={card.title} image={card.image} title={card.title} description={card.description} />
           ))}
-        
-     </div>
+      </div>
     </div>
 
   );
