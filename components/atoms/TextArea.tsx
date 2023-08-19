@@ -24,7 +24,7 @@ export default function TextArea({
     <div>
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <textarea
-        className="textarea textarea-bordered textarea-lg w-full mt-3 mb-1 drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF] "
+        className={"textarea textarea-bordered textarea-lg w-full mt-3 mb-1 drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]" + (errors[nameTextArea] ? ' border-red-500' : '')}
         {...register(nameTextArea, {
           required: required,
           pattern: {
