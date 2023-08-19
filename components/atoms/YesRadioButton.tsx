@@ -11,7 +11,6 @@ export default function YesRadioButton({
   handleChangeFile,
   fileName,
 
-
 }: {
   title: string;
   register: any;
@@ -78,6 +77,9 @@ export default function YesRadioButton({
       )}
               </div>
               );
+            }
+            else{
+              return <div></div>
             }
             })()}
 

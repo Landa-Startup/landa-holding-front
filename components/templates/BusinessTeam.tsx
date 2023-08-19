@@ -34,7 +34,7 @@ export default function AerialViewBusinessTeam() {
               alt="Avatar"
             />
             <div className="md:hidden w-[150px] h-0 left-[125px] top-[150px] absolute origin-top-left -rotate-90 bg-white border border-white"></div>
-            <div className="hidden md:block w-96 h-0 left-0 top-[115px] absolute bg-white border border-white"></div>
+            <div className="hidden md:block w-[300px] h-0 left-0 top-[115px] absolute bg-white border border-white"></div>
             <div className="flex-col justify-center items-start gap-[3px] text-center">
               <div className=" text-white text-base md:text-xl font-medium font-barlow">
                 Morteza Jafari

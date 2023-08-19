@@ -10,7 +10,7 @@ export default function Hero() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[200px] md:h-[990px] relative"
+      className="h-[230px] md:h-[740px] relative"
     >
       <div className="flex flex-col items-center justify-center h-full space-y-5">
         <div className="text-center text-white text-xl md:text-3xl font-normal tracking-[5px] md:tracking-[11.20px] font-condensed">
@@ -20,8 +20,12 @@ export default function Hero() {
           Acceleration Center
           <br />
         </div>
-        <div className="text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+        <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
           Feel The Future
+        </div>
+        <div className="md:hidden text-center w-[250px] font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+          Landa Holding is an international investment company active in Iran
+          and Canada.
         </div>
         <Image
           className="w-[103px] md:w-[412px] h-[140px] md:h-[560px] absolute right-0 bottom-0"

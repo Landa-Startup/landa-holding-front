@@ -142,9 +142,7 @@ model StartupsForm {
   type                    Type?
   ideaExplanation         String?
   getToKnowUs             String?
-  pitchDeck               Boolean?
   pitchDeckFile           String?
-  businessPlan            Boolean?
   businessPlanFile        String?
   productName             String?
   siteAddress             String?
@@ -156,7 +154,6 @@ model StartupsForm {
   structureOfYourSales    String?
   financialModelFile      String?   @default("")
   cooperatedWithInvestors String?
-  financial               Boolean?
   financialFile           String?
   customerCharacteristic  String?
   currentCustomers        String?
@@ -175,7 +172,7 @@ enum Type {
   IDEA
   MVP
   TRIAL
-  FisrtScale
+  FisrtSale
   SaleDevelopment
 }
 

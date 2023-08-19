@@ -58,6 +58,14 @@ interface partnerMembershipFormData {
 }
 
 
+enum Type {
+  IDEA = 'IDEA',
+  MVP = 'MVP',
+  TRIAL = 'TRIAL',
+  FisrtSale = 'FisrtSale',
+  SaleDevelopment = 'SaleDevelopment',
+}
+
 interface startupsFormData {
   firstName: string;
   lastName: string;
@@ -138,4 +146,4 @@ interface startupsFormData {
 
   }
 
-export {contactUSFormData,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData,initialStartupsFormData}
+export {contactUSFormData,Type,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData,initialStartupsFormData}

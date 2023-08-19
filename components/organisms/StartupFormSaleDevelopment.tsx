@@ -5,19 +5,24 @@ import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
 import YesRadioButton from '../atoms/YesRadioButton';
-import NoRadioButton from '../atoms/NoRadioButton';
 import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
 
-export default function StartupFormFirstSale({
+export default function StartupFormSaleDevelopment({
   register,
   errors,
+  handlePitchDeckFileChange,
+  handleBusinessPlanFileChange,
+  handleFinancialFileChange
 }: {
   register: any;
   errors: any;
+  handlePitchDeckFileChange:any;
+  handleBusinessPlanFileChange:any;
+  handleFinancialFileChange:any;
 }) {
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
@@ -54,8 +59,8 @@ export default function StartupFormFirstSale({
           name="pitch-deck"
           handleRadioChange={handleRadioPitchChange}
           selectedRadio={selectedRadioPitch}
-          handleChangeFile={() => {}}
-          fileName=""
+          handleChangeFile={handlePitchDeckFileChange}
+          fileName='pitchDeckFile'
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -65,8 +70,8 @@ export default function StartupFormFirstSale({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
-          handleChangeFile={() => {}}
-          fileName=""
+          handleChangeFile={handleBusinessPlanFileChange}
+          fileName='businessPlanFile'
         />
       </div>
       {(() => {
@@ -106,11 +111,15 @@ export default function StartupFormFirstSale({
                   />
                 </div>
               </div>
-              <StartupFormProblem />
-              <StartupFormSolutions />
-              <StartupFormBusinessModel />
+
+              <StartupFormProblem register={register} errors={errors}/>
+              <StartupFormSolutions register={register} errors={errors}/>
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange} />
             </div>
           );
+        }
+        else{
+          return <div></div>;
         }
       })()}
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
@@ -123,8 +132,8 @@ export default function StartupFormFirstSale({
           name="financial-plan"
           handleRadioChange={handleRadioFinancialChange}
           selectedRadio={selectedRadioFinancial}
-          handleChangeFile={() => {}}
-          fileName=""
+          handleChangeFile={handleFinancialFileChange}
+          fileName='financialFile'
         />
         </div>
       </div>
@@ -132,10 +141,12 @@ export default function StartupFormFirstSale({
             if (Boolean(selectedRadioFinancial) === false) {
               return (
                 <div>
-                        <StartupFormTargetMarket/>
-                    <StartupFormProperty/>
+                        <StartupFormTargetMarket register={register} errors={errors}/>
+                    <StartupFormProperty register={register} errors={errors}/>
                 </div>
               );
+            }else{
+              return <div></div>;
             }
             })()}
 

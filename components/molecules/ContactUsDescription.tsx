@@ -53,7 +53,7 @@ export default function ContactUsDescription() {
         <ul className="mx-4">
           <li>Address</li>
           <li>- Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
-          <li>- A3 Unit,Daneshvar tower, Eastern Daneshvar street, Tehran</li>
+          <li>- No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran, Iran</li>
           <li>- C5 Unit,Tala Building, Saadat Abad Ave, Isfahan, Iran</li>
         </ul>
       </div>

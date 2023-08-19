@@ -9,12 +9,18 @@ import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 
-export default function StartupFormMVP({
+export default function StartupFormTrialProduct({
   register,
   errors,
+  handlePitchDeckFileChange,
+  handleBusinessPlanFileChange,
+  handleFinancialFileChange,
 }: {
   register: any;
   errors: any;
+  handlePitchDeckFileChange:any;
+  handleBusinessPlanFileChange:any;
+  handleFinancialFileChange:any;
 }) {
   
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
@@ -37,7 +43,7 @@ export default function StartupFormMVP({
   return (
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-        <YesRadioButton
+      <YesRadioButton
           title="Do you have Pitch deck?"
           register={register}
           errors={errors}
@@ -45,8 +51,8 @@ export default function StartupFormMVP({
           name="pitch-deck"
           handleRadioChange={handleRadioPitchChange}
           selectedRadio={selectedRadioPitch}
-          handleChangeFile={() => {}}
-          fileName=""
+          handleChangeFile={handlePitchDeckFileChange}
+          fileName='pitchDeckFile'
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -56,9 +62,10 @@ export default function StartupFormMVP({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
-          handleChangeFile={() => {}}
-          fileName=""
+          handleChangeFile={handleBusinessPlanFileChange}
+          fileName='businessPlanFile'
         />
+
       </div>
       {(() => {
         if ((Boolean(selectedRadioBusiness) === false) && (Boolean(selectedRadioPitch)) === false) {
@@ -97,11 +104,13 @@ export default function StartupFormMVP({
                   />
                 </div>
               </div>
-              <StartupFormProblem />
-              <StartupFormSolutions />
-              <StartupFormBusinessModel />
+              <StartupFormProblem register={register} errors={errors}/>
+              <StartupFormSolutions register={register} errors={errors}/>
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange}/>
             </div>
           );
+        }else{
+          return <div></div>;
         }
       })()}
     </>

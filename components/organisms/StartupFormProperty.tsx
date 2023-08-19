@@ -5,33 +5,13 @@ import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
 
-export default function StartupFormProperty() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
-
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-    }
-  };
-
+export default function StartupFormProperty({
+  register,
+  errors,
+}:{
+  register:any;
+  errors:any;
+}) {
   return (
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
@@ -47,7 +27,7 @@ export default function StartupFormProperty() {
           register={register}
           errors={errors}
           placeholder="Description"
-          nameTextArea="customersCharacteristics"
+          nameTextArea="startupRevenue"
           patternMessage=""
           patternValue=""
           required=""
@@ -59,7 +39,7 @@ export default function StartupFormProperty() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="monthlyIncome"
             patternMessage=""
             patternValue=""
             required=""
@@ -71,7 +51,7 @@ export default function StartupFormProperty() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="currentInterestRate"
             patternMessage=""
             patternValue=""
             required=""
@@ -83,7 +63,7 @@ export default function StartupFormProperty() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="currentRaisedFunding"
             patternMessage=""
             patternValue=""
             required=""
@@ -95,7 +75,7 @@ export default function StartupFormProperty() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="neededCapital"
             patternMessage=""
             patternValue=""
             required=""

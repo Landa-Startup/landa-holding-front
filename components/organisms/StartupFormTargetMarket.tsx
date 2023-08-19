@@ -5,32 +5,15 @@ import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
 
-export default function StartupFormTargetMarket() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+export default function StartupFormTargetMarket({
+  register,
+  errors,
+}:{
+  register:any;
+  errors:any;
+}) {
 
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
-    try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
 
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
-        console.error('Failed to submit form data.');
-      }
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-    }
-  };
 
   return (
     <>
@@ -47,7 +30,7 @@ export default function StartupFormTargetMarket() {
           register={register}
           errors={errors}
           placeholder="Description"
-          nameTextArea="customersCharacteristics"
+          nameTextArea="customerCharacteristic"
           patternMessage=""
           patternValue=""
           required=""
@@ -59,7 +42,7 @@ export default function StartupFormTargetMarket() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="currentCustomers"
             patternMessage=""
             patternValue=""
             required=""
@@ -71,7 +54,7 @@ export default function StartupFormTargetMarket() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="estimatedMarketSize"
             patternMessage=""
             patternValue=""
             required=""
@@ -83,7 +66,7 @@ export default function StartupFormTargetMarket() {
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="totalTamSamSom"
             patternMessage=""
             patternValue=""
             required=""
