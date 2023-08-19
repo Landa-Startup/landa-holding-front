@@ -16,7 +16,7 @@ export default function PersonalTab({ image,name,position }: { image: string,nam
         <div className=" ">
           <div
 
-            className=""
+            className="w-[288px] h-[300px]"
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
@@ -25,7 +25,7 @@ export default function PersonalTab({ image,name,position }: { image: string,nam
           >
             <div className='' >
               <div className="flex flex-col gap-3 pl-3.5 pt-4 ">
-                <Link className="  " href="#">
+                <Link className="" href="#">
                   <IconLinkedin />
                 </Link>
                 <Link className="  " href="#">
