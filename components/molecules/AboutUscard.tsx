@@ -16,7 +16,7 @@ const AboutUsCart = ({ title, text, image, reverse, description}: AboutUsCardPro
           <div className='font-barlow text-black md:text-lg	 leading-6 mt-[120px] items-center mx-8 not-italic md:-mt-28 md:w-[587px] md:h-[187px] '>
             <p className='text-black font-gilda text-2xl not-italic font-normal  items-center leading-6 text-start pr-[75px] md:mt-20 '>{title}</p>
             <p>{text}</p>
-            {/* <button className=' md:text-center md:justify-center bg-[#AA8453] text-white mt-10	md:ml-40 w-[180px]  flex px-[61px] py-[14px] justify-center	gap-10 shrink-0 font-barlow  ml-16 mb-10'>Visit Now</button> */}
+            <button className=' md:text-center md:justify-center bg-[#AA8453] text-white mt-10	md:ml-40 w-[180px]  flex px-[61px] py-[14px] justify-center	gap-10 shrink-0 font-barlow  ml-16 mb-10'>Visit Now</button>
           </div>
           <div className='grid grid-cols-1 md:pl-20 -mt-28 '>
             {/* <img className="md:w-[589px] md:h-[357px] flex-shrink-0 -mb-[90px] w-[430px] h-[110px] md:mt-20 " style={{

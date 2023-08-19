@@ -33,7 +33,7 @@ export default function page() {
             <Banner title="About Us" image="/static/images/aerial-view-business-team.png" />
             <AboutUsLandaHolding />
             <AboutUsCooperation />
-            <div className='bg-whiteGold md:mx-[25px] md:pb-32 pt-12'>
+            <div className='bg-whiteGold my-20 md:mx-12 md:pb-32 pt-12'>
                 {cards.map((cart, index) => (
                     <AboutUsCart
                         reverse={cart.reverse}
