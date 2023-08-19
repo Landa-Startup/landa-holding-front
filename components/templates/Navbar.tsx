@@ -8,7 +8,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col relative md:px-10">
         <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-          <div className="px-2 m-5 text-left">
+          <div className="px-2 m-5 text-left h-full flex justify-start items-start ">
             <Link href="/">
               <div className="flex flex-col md:flex-row items-center">
                 <Image
