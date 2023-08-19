@@ -4,19 +4,19 @@ import LatestStartupsCard from '../atoms/cards/LatestStartupsCard';
 export default function LatestStartups() {
   const cardData = [
     {
-      image: '/static/images/trip.png',
+      image: '/static/images/Home/Startups/trip.png',
       title: 'LANDA TRIP',
       description:
         'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
     },
     {
-      image: '/static/images/diaco.png',
+      image: '/static/images/Home/Startups/diaco.png',
       title: 'Diaco',
       description:
         'Diaco is an open innovation platform which acts as an intermediate between technology seekers and providers to fulfill their technological demands.',
     },
     {
-      image: '/static/images/vision raft.png',
+      image: '/static/images/Home/Startups/vision-raft.png',
       title: 'VISION RAFT',
       description:
         'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',

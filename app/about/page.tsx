@@ -3,7 +3,7 @@ import React from 'react';
 import AboutUsCooperation from '@/components/molecules/AboutUsCooperation';
 import AboutUsLandaHolding from '@/components/molecules/AboutUsLandaHolding';
 import AboutUsProfile from '@/components/molecules/AboutUsProfile';
-import AboutUsCart from '@/components/molecules/AboutUsCard';
+import AboutUsCart from '@/components/molecules/AboutUscard'
 import Banner from '@/components/molecules/Banner';
 
 export default function page() {
@@ -23,7 +23,7 @@ export default function page() {
         },
         {
             title: 'Academy',
-            text:"The first step after joining the Landa Academy is to discover each individual's interests. We believe that in order to progress, every person should take steps in their interested field, because pursuing one's passions always brings better results . With the help of our experienced and specialized staff, we can identify each person's interests and train them according to their passion . The most up-to-date method of education in the world is mentoring. This method of education is both theoretical and practical providing specialized training to individuals based on their skills and interests. By selecting the best mentors, we offer the best education to teenagers. Additionally, after assessing their interests, teenagers can actively participate and gain experience in the relevant profession within our organization.",
+            text: "The first step after joining the Landa Academy is to discover each individual's interests. We believe that in order to progress, every person should take steps in their interested field, because pursuing one's passions always brings better results . With the help of our experienced and specialized staff, we can identify each person's interests and train them according to their passion . The most up-to-date method of education in the world is mentoring. This method of education is both theoretical and practical providing specialized training to individuals based on their skills and interests. By selecting the best mentors, we offer the best education to teenagers. Additionally, after assessing their interests, teenagers can actively participate and gain experience in the relevant profession within our organization.",
             image: '/static/images/ee88829efb28ce5d1d32318949a34cce.jpg',
             reverse: true,
         },
@@ -41,11 +41,11 @@ export default function page() {
                         text={cart.text}
                         title={cart.title}
                         image={cart.image}
-                        description={''}  
+                        description={''}
                     />
                 ))}
             </div>
-                <AboutUsProfile />
+            <AboutUsProfile />
         </div>
     );
 }

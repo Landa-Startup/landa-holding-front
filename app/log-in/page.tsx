@@ -1,10 +1,10 @@
-import LoginPage from '@/components/organisms/LoginPage';
+// import LoginPage from '@/components/organisms/LoginPage';
 
 
 function page() {
   return (
     < >
-      <LoginPage/>
+      {/* <LoginPage/> */}
     </>
   );
 }
