@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 export default function AboutUsProfileCard({ image, title, description }: { image: string, title: string, description: string }) {
   return (
-    <div className='container bg-whiteGold w-fit h-fit mb-6 shadow-lg'>
+    <div className='container mb-6 shadow-lg bg-whiteGold w-fit h-fit'>
       <Image
         alt='image'
-        width={320}
+        width={420}
         height={320}
         src={image}
       />
 
-      <div className="flex justify-center items-center space-x-2 p-2 mt-6">
+      <div className="flex items-center justify-center p-2 mt-6 space-x-2">
         <Image
           alt='icon1'
           src="/static/images/03bc78eaab3dcbbdddec7554e9d34351.png"
@@ -40,7 +40,7 @@ export default function AboutUsProfileCard({ image, title, description }: { imag
 
       <div>
         <div className='ml-20'>
-          <p className="text-gray-700 text-justify font-Barlow text-xs not-italic font-medium leading-normal mt-2 ml-9">
+          <p className="mt-2 text-xs not-italic font-medium leading-normal text-justify text-gray-700 font-Barlow ml-9">
             {title}
           </p>
           <p className="text-gray-700 text-justify font-Barlow text-xs not-italic font-medium leading-normal mt-2 mb-[16px]">
