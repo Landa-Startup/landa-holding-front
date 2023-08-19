@@ -6,15 +6,17 @@ export default function LatestStartupsCard({
   image,
   title,
   description,
+  link
 }: {
   image: string;
   title: string;
   description: string;
+  link: string
 }) {
   return (
     <Link
       className="w-[391px] h-[468px] relative border border-black group hover:shadow-lg"
-      href={'/startups/' + title}
+      href={link}
     >
       <div className="w-[391px] h-[468px] left-0 top-0 absolute" />
       <div className="w-[391px] h-[468px] left-0 top-0 absolute" />

@@ -49,34 +49,34 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             {/* Center items in md mode */}
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl">
               <li>
-                <Link href={'/'} className="text-primary">
+                <Link href={'/'} className="text-primary hover:text-primary hover:bg-base-200">
                   HOME
                 </Link>
               </li>
               <li>
-                <Link href={'/about'}>ABOUT</Link>
+                <Link href={'/about'} className='hover:text-primary hover:bg-base-200'>ABOUT</Link>
               </li>
               <li>
-                <Link href={'/contact'}>CONTACT</Link>
+                <Link href={'/contact'} className='hover:text-primary hover:bg-base-200'>CONTACT</Link>
               </li>
               <li>
-                <Link href={'/our-team'}>OUR TEAM</Link>
+                <Link href={'/our-team'} className='hover:text-primary hover:bg-base-200'>OUR TEAM</Link>
               </li>
               {/* <li>
                 <Link href={'/'}>WORK WITH US</Link>
               </li> */}
               <li>
-                <details className="dropdown mb-32 ">
-                  <summary className="m-1 ">WORK WITH US</summary>
+                <details className="dropdown mb-32">
+                  <summary className="m-1 hover:text-primary hover:bg-base-200">WORK WITH US</summary>
                   <ul className="p-2 shadow menu dropdown-content z-[1] bg-transparent rounded-box w-64">
                     <li>
-                      <Link href={'/investor-registration'}>CENTER OF INVESTOR</Link>
+                      <Link href={'/investor-registration'} className='hover:text-primary hover:bg-base-200 p-5 font-bold'>CENTER OF INVESTOR</Link>
                     </li>
                     <li>
-                      <Link href={'/partner-membership'}>OUR BUSINESS PARTNERS</Link>
+                      <Link href={'/partner-membership'} className='hover:text-primary hover:bg-base-200 p-5 font-bold'>OUR BUSINESS PARTNERS</Link>
                     </li>
                     <li>
-                      <Link href={'/StartupsForm'}>Startups</Link>
+                      <Link href={'/StartupsForm'} className='hover:text-primary hover:bg-base-200 p-5 font-bold'>STARTUPS</Link>
                     </li>
                   </ul>
                 </details>
