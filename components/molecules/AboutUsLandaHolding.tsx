@@ -1,19 +1,21 @@
 import React from 'react'
+import Image from 'next/image';
 export default function AboutUsLandaHolding() {
   return (
-
-    <div className='flex flex-col mb-[124px] md:flex-row md:p-5 md:justify-center md:space-x-10 px-[33px] mt-[17px] mr-33px'>
-      <div className='md:pr-[157px] md:pt-[80px] md:pl-10 text-justify'>
-        {/* <p className=' shrink-0	text-black font-gilda text-3xl not-italic font-normal '>About Landa Holding</p>
-        <p className=' text-justify  text-black font-barlow text-base not-italic font-normal leading-6 '>Landa International Holding started its activity<br /> in Canada in 2017 as one of the most reliable companies in<br />  the field of immigration.<br /> Landa Holding's distinctive feature that makes it unique<br />  compared to other immigration companies is its<br />  extensive charitable activities and high-quality<br />  transaction flow.<br />  Landa Holding aims to gather reliable investors together<br /> from all over the world and introduce the best<br />  investment opportunities for start-up businesses.</p> */}
+    <div className='flex flex-col lg:justify-center md:gap-2 p-7 md:items-center justify-items-center md:m-12 lg:flex-row'>
+      <div className='text-black xl:px-10 sm:pb-4 lg:text-justify '>
+        <p className='pb-4 text-3xl text-center xl:text-4xl md:text-left text-semibold font-gilda'>About Landa Holding</p>
+        <p className='ml-5 font-normal tracking-wide font-barlow md:ml-0'>Landa International Holding started its activity in Canada <br/>  in 2017 as one of the most reliable companies in the field<br/>of immigration.<br /> Landa Holding's distinctive feature that makes it unique<br />  compared to other immigration companies is its<br />  extensive charitable activities and high-quality<br />  transaction flow.<br />  Landa Holding aims to gather reliable investors together<br/> from all over the world and introduce the best<br/>investment opportunities for start-up businesses.</p>
       </div>
-      <div>
-        <img className='w-[360px] h-[157px]  md:w-[661px] md:h-[404px] mt-[13px]  pr-[33px] ' style={{
-          backgroundImage: 'url(/static/images/0419a30cb9ec2a0cf247e25dd885f7c2.jpg)', backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-
-        ></img>
+      <div className='pt-8 md:pt-2 md:pl-8 xl:p-5'>
+      <Image
+        className=''
+        src='/static/images/0419a30cb9ec2a0cf247e25dd885f7c2.jpg'
+        width={600}
+        height={404}
+        alt=''
+      />
       </div>
-    </div>)
+    </div>
+    )
 }

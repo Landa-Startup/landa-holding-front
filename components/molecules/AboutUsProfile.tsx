@@ -4,17 +4,17 @@ import AboutUsProfileCard from './AboutUsProfileCard';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image: '/static/images/c1285c5aa4c31619ff4fd2173fac716a.jpg',
+      image: '/static/images/About/4-1 1.png',
       title: 'info@landa.com',
       description: 'Diaco department manager',
     },
     {
-      image: '/static/images/c1285c5aa4c31619ff4fd2173fac716a.jpg',
+      image: '/static/images/About/4-1 1 (1).png',
       title: 'victora Dan',
       description: 'Diaco department manager',
     },
     {
-      image: '/static/images/c1285c5aa4c31619ff4fd2173fac716a.jpg',
+      image: '/static/images/About/4-1 1 (2).png',
       title: 'Enrico Brown',
       description: 'Diaco department manager',
     },
@@ -23,19 +23,17 @@ export default function AboutUsProfile() {
 
 
   return (
-    <div>
-      <div className='mb-11 mt-44	ml-[119px]'>
-        <p className='text-black font-gilda text-2xl not-italic	font-normal	leading-normal '>PROFESSIONALS</p>
-        <p className='text-black font-gilda text-4xl not-italic	font-normal	leading-normal	'> Managing Directors</p>
-
+    <div className=''>
+      <div className='flex flex-col m-8 text-black justify-items-center md:ps-24 md:ms-28'>
+        <p className='not-italic font-normal leading-normal tracking-widest font-Barlow-Condensed md:text-xl '> PROFESSIONALS</p>
+        <p className='text-3xl font-normal leading-normal font-gilda md:text-4xl '>Managing Directors</p>
       </div >
       
-      <div className="md:grid md:grid-cols-3 gap-4 md:mx-[119px] mb-52 flex flex-col mx-10">
+      <div className="flex flex-col m-8 md:grid md:grid-cols-3 md:gap-8 md:mx-20 md:px-32 ">
           {cardsData.map((card, index) => (
-            <AboutUsProfileCard key={index} image={card.image} title={card.title} description={card.description} />
+            <AboutUsProfileCard key={card.title} image={card.image} title={card.title} description={card.description} />
           ))}
-        
-     </div>
+      </div>
     </div>
 
   );

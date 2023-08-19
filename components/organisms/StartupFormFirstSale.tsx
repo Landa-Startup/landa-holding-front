@@ -51,28 +51,17 @@ export default function StartupFormFirstSale({
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
         <YesRadioButton
-          title="Do you have Financial Plan?"
+          title="Do you have Pitch deck?"
           register={register}
           errors={errors}
           required="Please choose an option"
-          name="financial-plan"
-          handleRadioChange={handleRadioFinancialChange}
-          selectedRadio={selectedRadioFinancial}
-          handleChangeFile={() => { }}
-          fileName=""
+          name="pitch-deck"
+          handleRadioChange={handleRadioPitchChange}
+          selectedRadio={selectedRadioPitch}
+          handleChangeFile={handlePitchDeckFileChange}
+          fileName='pitchDeckFile'
         />
         <YesRadioButton
-          title="Do you have Financial?"
-          register={register}
-          errors={errors}
-          required="Please choose an option"
-          name="financial-plan"
-          handleRadioChange={handleRadioFinancialChange}
-          selectedRadio={selectedRadioFinancial}
-          handleChangeFile={() => { }}
-          fileName=""
-        />
-        {/* <YesRadioButton
           title="Do you have Business Plan?"
           register={register}
           errors={errors}
@@ -80,7 +69,9 @@ export default function StartupFormFirstSale({
           name="business-plan"
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
-        /> */}
+          handleChangeFile={handleBusinessPlanFileChange}
+          fileName='businessPlanFile'
+        />
       </div>
       {(() => {
         if (
@@ -124,7 +115,7 @@ export default function StartupFormFirstSale({
               </div>
               <StartupFormProblem register={register} errors={errors}/>
               <StartupFormSolutions register={register} errors={errors}/>
-              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleBusinessPlanFileChange}/>
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange}/>
             </div>
           );
         } else {
@@ -154,6 +145,8 @@ export default function StartupFormFirstSale({
                     <StartupFormProperty register={register} errors={errors}/>
             </div>
           );
+        }else{
+          return <div></div>;
         }
       })()}
     </>

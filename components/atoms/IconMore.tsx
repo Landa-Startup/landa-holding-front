@@ -2,10 +2,9 @@ import React from 'react';
 
 export default function Email() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="60" viewBox="0 0 100 60">
-            <rect x="10" y="10" width="80" height="40" rx="5" ry="5" fill="#E2E8F0" />
-            <path d="M80 30L65 45V15z" fill="#4A5568" />
-        </svg>
+<svg display="inline"  width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Arrow 1" d="M25 6L15 0.226497L15 11.7735L25 6ZM2.45371e-09 7L16 7L16 5L-2.45371e-09 5L2.45371e-09 7Z" fill="#F8F5F0"/>
+</svg>
 
     );
 }

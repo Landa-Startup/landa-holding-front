@@ -27,7 +27,7 @@ export default function StartupFormProperty({
           register={register}
           errors={errors}
           placeholder="Description"
-          nameTextArea="customersCharacteristics"
+          nameTextArea="startupRevenue"
           patternMessage=""
           patternValue=""
           required=""
@@ -39,7 +39,7 @@ export default function StartupFormProperty({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="monthlyIncome"
             patternMessage=""
             patternValue=""
             required=""
@@ -51,7 +51,7 @@ export default function StartupFormProperty({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="currentInterestRate"
             patternMessage=""
             patternValue=""
             required=""
@@ -63,7 +63,7 @@ export default function StartupFormProperty({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="currentRaisedFunding"
             patternMessage=""
             patternValue=""
             required=""
@@ -75,7 +75,7 @@ export default function StartupFormProperty({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="neededCapital"
             patternMessage=""
             patternValue=""
             required=""
