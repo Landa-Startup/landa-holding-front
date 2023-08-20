@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 type AboutUsCardProps = {
@@ -19,22 +20,43 @@ const AboutUsCart = ({ title, text, image, reverse, description}: AboutUsCardPro
             <button className=' justify-items-center mx-auto bg-[#AA8453] text-white md:mt-24 mt-8  flex px-10 py-2 font-barlow'>Visit Now</button>
           </div>
           <div className='col-span-1 md:pl-16'>
-            <img className="mb-2 md:w-[650px] md:h-[320px] w-[430px] h-[110px] md:mt-2 " style={{
+            {/* <img className="mb-2 md:w-[650px] md:h-[320px] w-[430px] h-[110px] md:mt-2 "
+             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
-            }} />
+            }} /> */}
+            <Image 
+            alt={`Image for ${title}`}
+            src={image}
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+            className='mb-2 md:w-[650px] md:h-[320px] w-[430px] h-[110px] md:mt-2'
+            />
           </div>
         </div>
       )}
       {!reverse && (
         <div className='flex md:py-12 flex-col md:grid md:grid-cols-2'>
           <div className='col-span-1'>
-          <img className="mb-2 md:w-[589px] md:h-[357px] w-[430px] h-[150px] md:mt-2 " style={{
+          {/* <img className="mb-2 md:w-[589px] md:h-[357px] w-[430px] h-[150px] md:mt-2 " style={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
-            }} />
+            }} /> */}
+            <Image 
+            alt={`Image for ${title}`}
+            src={image}
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+            className='mb-2 md:w-[589px] md:h-[357px] w-[430px] h-[150px] md:mt-2'
+            />
           </div>
           <div className='col-span-1 font-barlow leading-6 mt-1 text-black	px-[30px]'>
             <p className='text-3xl font-normal text-black mt-3 text-center font-gilda'>{title}</p>
