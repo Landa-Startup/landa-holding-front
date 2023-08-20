@@ -106,6 +106,7 @@ model InvestorRegistration {
   id                  Int      @id @default(autoincrement())
   firstName           String
   lastName            String
+  email               String
   birthDate           DateTime
   countryOfResidence  String
   provinceOfResidence String
@@ -122,6 +123,7 @@ model PartnerMembership {
   firstName           String
   lastName            String
   birthDate           DateTime
+  email               String
   countryOfResidence  String
   provinceOfResidence String
   companyName         String
