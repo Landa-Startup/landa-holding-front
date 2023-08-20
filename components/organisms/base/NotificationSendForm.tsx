@@ -1,15 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 export default function NotificationSendForm({
   submitting,
   success,
+  sendStatus,
+  show
 }: {
   submitting: boolean;
   success: boolean;
+  sendStatus: boolean;
+  show:boolean;
 }) {
+  console.log(show)
   return (
     <div className="w-96 mx-auto mt-5">
-      {success && submitting && (
+      {success && submitting && !sendStatus && show &&(
         <div className="alert alert-success">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +33,7 @@ export default function NotificationSendForm({
         </div>
       )}
 
-      {!success && submitting && (
+      {!success && submitting && !sendStatus && show &&(
         <div className="alert alert-error">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -85,6 +85,9 @@ export default function StartupFormForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
   const [Send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
+
+
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRadio(event.target.value);
@@ -215,19 +218,27 @@ export default function StartupFormForm() {
       //       }
 
       setIsSuccess(true);
+      setShowNotification(true);
       setSend(false);
       reset(initialStartupsFormData); // Reset the form after successful submission
       setSelectedRadio('IDEA');
       setFormData(initialStartupsFormData);
       console.log('Form data sent successfully!');
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds
     } catch (error) {
+      setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
       //TODO: remove below code after testing
       console.error('Error sending form data:', error);
       reset(initialStartupsFormData); // Reset the form after successful submission
+      setFormData(initialStartupsFormData); // reset states after successful submission
       setSelectedRadio('IDEA');
-      setFormData(initialStartupsFormData);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds  
     }
   };
 
@@ -393,7 +404,7 @@ export default function StartupFormForm() {
               {Send ? 'Submiting ....' : 'Submit'}
             </button>
           </div>
-          <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
+          <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={Send} show={showNotification}/>
         </form>
       </div>
     </>

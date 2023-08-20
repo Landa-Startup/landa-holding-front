@@ -148,7 +148,7 @@ model StartupsForm {
   siteAddress             String?
   customerProblem         String?
   solution                String?
-  productLevel            Level?
+  productLevel            String?
   scalable                String?
   monetizationOfYourPlan  String?
   structureOfYourSales    String?
@@ -175,19 +175,6 @@ enum Type {
   FisrtSale
   SaleDevelopment
 }
-
-enum Level {
-  basicPrinciple
-  technologyConcept
-  exprimentalProof
-  confirmedTechnologyLab
-  confirmedTechnologyEnv
-  presentedTechnologyEnv
-  systemPrototypeInMvp
-  realisticSystem
-  qualifiedSystem
-}
-
 model product {
   id     Int    @id @default(autoincrement())
   name   String
