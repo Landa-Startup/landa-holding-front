@@ -10,7 +10,6 @@ export default function YesRadioButton({
   handleRadioChange,
   handleChangeFile,
   fileName,
-
 }: {
   title: string;
   register: any;
@@ -18,16 +17,14 @@ export default function YesRadioButton({
   required: string;
   name: string;
   selectedRadio: string;
-  handleRadioChange:any;
-  handleChangeFile:any;
-  fileName:string;
-
+  handleRadioChange: any;
+  handleChangeFile: any;
+  fileName: string;
 }) {
-
   return (
     <div>
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
-      <div className='flex flex-col'>
+      <div className="flex flex-col">
         <div className="flex flex-row mt-4 bg-[#f9f6f3] dark:bg-[#1D232A] p-4 rounded-lg drop-shadow-lg">
           <label className="flex flex-column mr-10 ">
             <input
@@ -46,7 +43,6 @@ export default function YesRadioButton({
             <input
               type="radio"
               value=""
-              
               {...register(name, {
                 required: required,
               })}
@@ -58,31 +54,28 @@ export default function YesRadioButton({
           </label>
         </div>
         {(() => {
-            if (Boolean(selectedRadio) === true) {
-              return (
-                <div className='flex justify-center '>
+          if (Boolean(selectedRadio) === true) {
+            return (
+              <div className="flex justify-center ">
                 <input
                   type="file"
                   className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
-                  value=""
                   {...register(fileName, {
                     required: '',
                   })}
                   onChange={handleChangeFile} // must use onChange event handler after register
                 />
-                      {errors[fileName] && (
-        <span className="mt-4 text-sm text-yellow-500">
-          {errors[fileName].message}
-        </span>
-      )}
+                {errors[fileName] && (
+                  <span className="mt-4 text-sm text-yellow-500">
+                    {errors[fileName].message}
+                  </span>
+                )}
               </div>
-              );
-            }
-            else{
-              return <div></div>
-            }
-            })()}
-
+            );
+          } else {
+            return <div></div>;
+          }
+        })()}
       </div>
       {errors[name] && (
         <span className="mt-4 text-sm text-yellow-500">

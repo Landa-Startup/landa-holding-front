@@ -69,6 +69,10 @@ export default async function handler(
                 type = undefined
                 break;
         }
+
+
+
+
         const startupsForm = await prisma.startupsForm.create({
             data: {
                 firstName: extractFieldValue(fields, 'firstName'),
@@ -81,7 +85,7 @@ export default async function handler(
                 siteAddress: extractFieldValue(fields,'siteAddress'),
                 customerProblem: extractFieldValue(fields,'customerProblem'),
                 solution: extractFieldValue(fields,'solution'),
-                // productLevel: extractFieldValue(fields,'productLevel'),
+                productLevel: extractFieldValue(fields,'productLevel'),
                 scalable: extractFieldValue(fields,'scalable'),
                 monetizationOfYourPlan: extractFieldValue(fields,'monetizationOfYourPlan'),
                 structureOfYourSales: extractFieldValue(fields,'structureOfYourSales'),

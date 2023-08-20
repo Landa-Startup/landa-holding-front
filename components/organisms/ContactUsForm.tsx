@@ -166,7 +166,7 @@ export default function ContactUsForm() {
           </button>
         </div>
       </form>
-      <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
+      <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} />
     </div>
   );
 }
