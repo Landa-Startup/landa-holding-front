@@ -9,7 +9,7 @@ type AboutUsCardProps = {
   description: string;
 }
 
-const AboutUsCart = ({ title, text, image, reverse, description}: AboutUsCardProps) => {
+const AboutUscard = ({ title, text, image, reverse, description}: AboutUsCardProps) => {
   return (
     <>
       {reverse && (
@@ -72,4 +72,4 @@ const AboutUsCart = ({ title, text, image, reverse, description}: AboutUsCardPro
   );
 };
 
-export default AboutUsCart;
+export default AboutUscard;

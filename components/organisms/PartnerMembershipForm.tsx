@@ -198,7 +198,7 @@ export default function PartnerMembershipForm() {
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
+        {/* <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={}/> */}
       </div>
     </>
   );

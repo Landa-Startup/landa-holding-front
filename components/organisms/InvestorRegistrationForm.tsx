@@ -211,7 +211,7 @@ export default function InvestorRegistrationForm() {
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
+        {/* <NotificationSendForm submitting={isSubmitting} success={isSuccess} /> */}
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 import AboutUsCooperation from '@/components/molecules/AboutUsCooperation';
 import AboutUsLandaHolding from '@/components/molecules/AboutUsLandaHolding';
 import AboutUsProfile from '@/components/molecules/AboutUsProfile';
-import AboutUsCart from '@/components/molecules/AboutUsCard'
+import AboutUsCart from '@/components/molecules/AboutUscard'
 import Banner from '@/components/molecules/Banner';
 
 export default function page() {
