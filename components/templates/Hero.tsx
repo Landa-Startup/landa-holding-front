@@ -10,7 +10,7 @@ export default function Hero() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[230px] md:h-[740px] relative"
+      className="h-screen md:h-[740px] relative"
     >
       <div className="flex flex-col items-center justify-center h-full space-y-5">
         <div className="text-center text-white text-xl md:text-3xl font-normal tracking-[5px] md:tracking-[11.20px] font-condensed">

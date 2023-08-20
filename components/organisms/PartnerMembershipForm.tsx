@@ -6,6 +6,7 @@ import Select from './base/Select';
 import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
 import { partnerMembershipFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
+import TextArea from '../atoms/TextArea';
 
 export default function PartnerMembershipForm() {
   const {
@@ -40,11 +41,6 @@ export default function PartnerMembershipForm() {
     }
   };
 
-  const test = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
 
   return (
     <>
@@ -180,17 +176,16 @@ export default function PartnerMembershipForm() {
               />
             </div>
 
-            <div className="col-span-1 md:col-span-2 lg:col-span-3">
-              <Select
+            <div className="col-span-1 md:col-span-2">
+              <TextArea
+                title="How did you get to know us?*"
                 register={register}
                 errors={errors}
-                nameInput="howDidYouKnowUs"
-                label="How did You Get to Know Us?"
-                placeholder="Select How did You Get to Know Us?"
-                required="This field is Required."
-                options={test}
-                className="col-start-2 col-span-3 w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF] "
-                labelClass="text-[#6b6b6b] dark:text-current"
+                placeholder="Description"
+                nameTextArea="howDidYouKnowUs"
+                patternMessage=""
+                patternValue=""
+                required="This field is required"
               />
             </div>
           </div>
