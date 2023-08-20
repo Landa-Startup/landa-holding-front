@@ -1,37 +1,61 @@
-import React from 'react'
-import IconMore from '@/components/atoms/IconMore'
+
+import React from 'react';
+import Image from 'next/image';
+
 function AboutUsCooperation() {
   return (
-    <div className='h-[589px] bg-neutral-800 text-white'>
-      <div className='text-center'>
-        <p className='mt-10 text-center text-xl shrink-0 not-italic	font-normal	leading-normal   font-gilda '>L&nbsp;A&nbsp;N&nbsp;D&nbsp;A&nbsp;&nbsp;&nbsp;H&nbsp;O&nbsp;L&nbsp;D&nbsp;I&nbsp;N&nbsp;G </p>
-        <p className=' text-5xl shrink-0 not-italic	font-normal	leading-normal font-gilda'> Cooperation </p>
-
+    <div className="h-full py-10 text-center text-white bg-neutral-800">
+      <div className="text-center">
+        <p className="tracking-widest">LANDA HOLDING</p>
+        <p className="text-5xl not-italic leading-normal font-gilda">
+          Cooperation
+        </p>
       </div>
-      <div className='flex flex-col'>
-        <div className='flex flex-col'>
-          <p className='font-barlow 	not-italicfont-semibold leading-6 text-xl'>Investment Center</p>
-          <p className='	font-gilda 	not-italicfont-semibold leading-6	'><br />  Landa Investors Association is composed of a group of<br /> individuals active in the field of investment who collaborate<br /> with each other based on their investment priorities and invest<br /> in startups and new businesses.<br />If you are also interested in investing in new and innovative<br /> businesses and increasing your capital in the most modern<br /> way, we have provided an opportunity for you.</p>
-          <div>
-            <IconMore />
+      <div className="grid grid-cols-1 gap-10 px-10 md:grid-cols-2 md:px-28">
+        <div className="col-span-1">
+          <p className="text-xl font-semibold tracking-wide font-barlow">
+            Investment Center
+          </p>
+          <p className="pt-2 font-light md:px-32">
+            The Landa Investors Association is composed of a group of
+            individuals active in the field of investment who collaborate with
+            each other based on their investment priorities and invest in
+            startups and new businesses.
+            <br />
+            If you are also interested in investing in new and innovative
+            businesses and increasing your capital in the most modern way, we
+            have provided an opportunity for you.
+          </p>
+          <div className="pt-10">
+            <span className="mr-3">More</span>
+            <a href="#">
+            <Image width={40} height={40} className='inline' src="/static/images/About/right-arrow2.png" alt="arrow" />
+            </a>
           </div>
-          {/* <button className="  justify-start items-center gap-4 inline-flex ">
-            <p className="text-stone-100 text-3xl font-normal leading-6 tracking-wider font-condensed ">
-              More
-            </p>
-            <div className="justify-start items-start gap-2.5 flex ">
-              <div className="w-10 h-10 border border-stone-100" />
-              <IconMore />
-            </div>
-          </button> */}
         </div>
-        <div className='flex flex-col'>
-          <p>Invesment Center</p>
-          <p>Invesment Center Invesment CenterInvesment CenterInvesment CenterInvesment CenterInvesment Center</p>
+        <div className="col-span-1">
+          <p className="text-xl font-semibold tracking-wide font-barlow">
+          Entrepreneur Center
+          </p>
+          <p className="pt-2 pb-1 font-light md:px-32">
+          The Entrepreneur Center is a community of active individuals in the
+            field of business and entrepreneurship who form a dynamic and
+            powerful technological ecosystem together.
+            <br />
+            If you also have an interest in building a business or possess
+            special skills, join us by completing the Entrepreneur Membership
+            form.
+          </p>
+          <div className="pt-10 md:pt-16">
+            <span className="mr-3">More</span>
+            <a href="#">
+            <Image width={40} height={40} className='inline' src="/static/images/About/right-arrow2.png" alt="arrow" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default AboutUsCooperation;

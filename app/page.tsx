@@ -23,6 +23,7 @@ const cardData = [
     reverse: false,
     show: true,
     index: 1,
+    link: "/investment-registration"
   },
   {
     title: 'Acceleration',
@@ -55,12 +56,12 @@ export default function page() {
         />
       ))}
       <LandaHoldingBlack />
-      <PromotionalVideo />
+      {/* <PromotionalVideo /> */}
       <UpcomingEvents />
       <LandaHoldingPriority />
       <AerialViewBusinessTeam />
       <LatestStartups />
-      <LandaMagazine />
+      {/* <LandaMagazine /> */}
       <ContactUs />
     </div>
   );

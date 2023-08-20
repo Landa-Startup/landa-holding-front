@@ -215,11 +215,16 @@ export default function StartupFormForm() {
       // setSend(false);
       reset(initialStartupsFormData); // Reset the form after successful submission
       setSelectedRadio("IDEA");
+      setFormData(initialStartupsFormData);
       console.log('Form data sent successfully!');
     } catch (error) {
       // setSend(false);
       // setIsSuccess(false);
+      //TODO: remove below code after testing
       console.error('Error sending form data:', error);
+      reset(initialStartupsFormData); // Reset the form after successful submission
+      setSelectedRadio("IDEA");
+      setFormData(initialStartupsFormData);
     }
   };
 
@@ -289,6 +294,8 @@ export default function StartupFormForm() {
                   handleBusinessPlanFileChange={handleBusinessPlanFileChange}
                   handlePitchDeckFileChange={handlePitchDeckFileChange}
                   handleFinancialFileChange={handleFinancialFileChange}
+
+
                 />
               );
             } else {

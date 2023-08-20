@@ -130,7 +130,7 @@ export default function Footer() {
             +1 (416) 557-7622
           </div>
           <div className="text-justify text-neutral-400 text-base font-normal">
-            Eastern Daneshvar street, Tehran, Iran
+            No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran, Iran
           </div>
           <div className="text-justify text-neutral-400 text-base font-normal">
             02188030167

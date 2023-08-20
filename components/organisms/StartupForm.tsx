@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import TextArea from '../atoms/TextArea';
-import UploadInput from '../atoms/UploadInput';
-import Button from '../atoms/Button';
-import Input from './base/Input';
-import { startupsFormData } from '../../app/types/global';
-import NotificationSendForm from './base/NotificationSendForm';
-=======
 // 'use client';
 // import React, { useState } from 'react';
 // import { useForm } from 'react-hook-form';
@@ -20,7 +9,6 @@ import NotificationSendForm from './base/NotificationSendForm';
 // import Input from './base/Input';
 // import { startupsFormData } from '../../app/types/global';
 // import NotificationSendForm from './base/NotificationSendForm';
->>>>>>> origin/develop
 
 // // enum Type {
 // //   IDEA = 'IDEA',

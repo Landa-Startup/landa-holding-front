@@ -30,7 +30,7 @@ export default function StartupFormTargetMarket({
           register={register}
           errors={errors}
           placeholder="Description"
-          nameTextArea="customersCharacteristics"
+          nameTextArea="customerCharacteristic"
           patternMessage=""
           patternValue=""
           required=""
@@ -42,7 +42,7 @@ export default function StartupFormTargetMarket({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="currentCustomers"
             patternMessage=""
             patternValue=""
             required=""
@@ -54,7 +54,7 @@ export default function StartupFormTargetMarket({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="estimatedMarketSize"
             patternMessage=""
             patternValue=""
             required=""
@@ -66,7 +66,7 @@ export default function StartupFormTargetMarket({
             register={register}
             errors={errors}
             placeholder="Description"
-            nameTextArea="salesCycleStructure"
+            nameTextArea="totalTamSamSom"
             patternMessage=""
             patternValue=""
             required=""
