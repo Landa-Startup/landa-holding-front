@@ -1,35 +1,60 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import Button from '../atoms/Button';
 
-export default function Hero() {
+export default function Hero({
+  showLanda,
+  title,
+  subTitle,
+  buttonBg,
+  backgroundImage,
+  leftImage,
+}: {
+  showLanda: boolean;
+  title: string;
+  subTitle: string;
+  buttonBg?: string;
+  backgroundImage: string;
+  leftImage: string;
+}) {
   return (
     <div
       style={{
-        backgroundImage: "url('/static/images/Home/Hero/businessman.png')",
+        backgroundImage: `url('/static/images/Home/Hero/${backgroundImage}')`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
       className="h-screen md:h-[740px] relative"
     >
       <div className="flex flex-col items-center justify-center h-full space-y-5">
-        <div className="text-center text-white text-xl md:text-3xl font-normal tracking-[5px] md:tracking-[11.20px] font-condensed">
+        <div
+          className={` ${
+            showLanda ? 'block' : 'hidden'
+          } text-center text-white text-xl md:text-3xl font-normal tracking-[5px] md:tracking-[11.20px] font-condensed`}
+        >
           Landa Holding
         </div>
         <div className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]">
-          Acceleration Center
+          {title}
           <br />
         </div>
-        <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
-          Feel The Future
+        <div className="hidden md:w-[820px] md:block text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+          {subTitle}
         </div>
         <div className="md:hidden text-center w-[250px] font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
           Landa Holding is an international investment company active in Iran
           and Canada.
         </div>
+        <Button
+          text="Register Now"
+          size="notVisit"
+          bgColor={buttonBg}
+          addedClass={buttonBg ? 'block' : 'hidden'}
+        />
         <Image
           className="w-[103px] md:w-[412px] h-[140px] md:h-[560px] absolute right-0 bottom-0"
-          src={'static/images/Landa.svg'}
+          src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
           height={500}
