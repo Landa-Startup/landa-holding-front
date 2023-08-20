@@ -10,7 +10,7 @@ export default function AerialViewBusinessTeam() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[353px] md:h-[598px]"
+      className="h-[353px] md:h-[598px] business-team"
     >
       <div className="py-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
         <span className="text-white text-base md:text-xl font-normal">
@@ -70,7 +70,7 @@ export default function AerialViewBusinessTeam() {
               </div>
             </div>
           </div>
-          <div className="p-2.5 justify-center items-center gap-3 inline-flex w-2/3 md:w-full">
+          <div className="p-2.5 pt-5 justify-center items-center gap-3 inline-flex w-2/3 md:w-full">
             <div className="text-stone-100 text-xs md:text-xl font-medium leading-[20px] md:leading-7 font-barlow md:w-[722px]">
               Landa Holding provides comprehensive information on investment
               strategies, business creation, and entrepreneurial methods. Its
@@ -80,28 +80,28 @@ export default function AerialViewBusinessTeam() {
               entrepreneurship.
             </div>
             <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
-                <Image
-                  className="w-7 h-w-7"
-                  src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
-                  alt="Linkedin"
-                  width={50}
-                  height={50}
-                />
-                <Image
-                  className="w-7 h-w-7"
-                  src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
-                  alt="Linkedin"
-                  width={50}
-                  height={50}
-                />
-                <Image
-                  className="w-7 h-w-7"
-                  src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
-                  alt="Linkedin"
-                  width={50}
-                  height={50}
-                />
-              </div>
+              <Image
+                className="w-7 h-w-7"
+                src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
+                alt="Linkedin"
+                width={50}
+                height={50}
+              />
+              <Image
+                className="w-7 h-w-7"
+                src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
+                alt="Linkedin"
+                width={50}
+                height={50}
+              />
+              <Image
+                className="w-7 h-w-7"
+                src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
+                alt="Linkedin"
+                width={50}
+                height={50}
+              />
+            </div>
           </div>
         </div>
         <div className="justify-start items-start gap-[12px] md:gap-[19px] inline-flex mt-5">

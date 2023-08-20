@@ -44,7 +44,7 @@
   transform: translateX(0);
 }
 
-.spin-image {
+/* .spin-image {
   animation: spin 1s linear infinite;
 }
 
@@ -69,7 +69,7 @@
   100% {
     transform: translateY(0);
   }
-}
+} */
 
 /* Make scroll behavior smooth */
 html {
