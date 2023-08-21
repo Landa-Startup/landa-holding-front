@@ -172,8 +172,8 @@ export default function ContactUsForm() {
           )}
         </div>
         <div className="text-center">
-          <button type="submit" className="mt-3 btn btn-wide btn-neutral">
-            Send Message
+          <button type="submit" className="mt-3 btn btn-wide btn-neutral" disabled={send}>
+          {send ? 'Submitting ....' : 'Submit'}
           </button>
         </div>
       </form>

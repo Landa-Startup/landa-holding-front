@@ -19,7 +19,7 @@ export default function page() {
     {
       "image": '/static/images/our-team/Personals/a1.png',
       "position": "Manager",
-      "name": "Dr.Rasol Moradimehr"
+      "name": "Dr.Rasoul Moradimehr"
 
     },
     {
@@ -73,7 +73,7 @@ export default function page() {
     {
       "image": '/static/images/our-team/Personals/a10.png',
       "position": "front-end",
-      "name": "Mernoosh Haybati"
+      "name": "Mernoosh Heibati"
 
     },
 
@@ -86,7 +86,7 @@ export default function page() {
     {
       "image": '/static/images/our-team/Personals/a12.png',
       "position": "front-end",
-      "name": "Maryam Eskandara"
+      "name": "Maryam Eskandari"
 
     },
     {
@@ -220,14 +220,14 @@ export default function page() {
   return (
     <div>
       <Banner image="/static/images/our-team/Frame2916.png " title="Our Team" />
-      <div className="flex flex-row justify-between  lg:px-36  py-12 px-16 gap-3 flex-wrap">
+      {/* <div className="flex flex-row justify-between  lg:px-36  py-12 px-16 gap-3 flex-wrap">
         {jobLinks.map((job, index) => (
           <a key={job} href="#" className="hover:bg-black hover:text-white border py-1 px-3">
             {job}
           </a>
         ))}
-      </div>
-      <div className="grid grid-cols-1  gap-8 md:max-lg:mx-12 justify-items-center lg:px-28 pb-28 md:grid-cols-2 xl:grid-cols-4">
+      </div> */}
+      <div className="grid grid-cols-1 mt-10 gap-8 md:max-lg:mx-12 justify-items-center lg:px-28 pb-28 md:grid-cols-2 xl:grid-cols-4">
         {persons.map((person, index) => (
           <PersonalTab key={index} image={person.image} position={person.position} name={person.name} />
         ))}
