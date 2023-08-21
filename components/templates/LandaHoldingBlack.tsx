@@ -43,7 +43,7 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className="w-[234px] flex flex-col items-center md:items-start space-y-2">
+      <div className="h-[376px] flex flex-col items-center justify-between md:items-start">
         <div className="flex flex-col items-center">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
@@ -55,7 +55,7 @@ export default function LandaHoldingBlack() {
           </span>
         </div>
         <div className="w-[353px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
+          <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow">
             <li>Global Investment Opportunities within Your Reach.</li>
             <li>
               Access to a Network of Successful Entrepreneurs and Investors.
@@ -128,7 +128,7 @@ export default function LandaHoldingBlack() {
           </ul>
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5">
-          <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condense">
+          <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
           <div className="justify-start items-start gap-2.5 flex">

@@ -428,7 +428,7 @@ export default function BusinessPartnerShiphtmlform() {
           </div>
         </div>
       </form>
-      <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
+      {/* <NotificationSendForm submitting={isSubmitting} success={isSuccess} /> */}
     </div>
   );
 }

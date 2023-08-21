@@ -1,5 +1,5 @@
 'use client';
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
@@ -12,6 +12,7 @@ import StartupFormMVP from './StartupFormMVP';
 import StartupFormTrialProduct from './StartupFormTrialProduct';
 import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
+import NotificationSendForm from './base/NotificationSendForm';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 enum Type {
@@ -22,10 +23,7 @@ enum Type {
   SaleDevelopment = 'SaleDevelopment',
 }
 
-
-
 export default function StartupFormForm() {
-
   const initialStartupsFormData: startupsFormData = {
     firstName: '',
     lastName: '',
@@ -78,11 +76,18 @@ export default function StartupFormForm() {
     defaultValues: initialStartupsFormData,
   });
 
-  const [selectedRadio, setSelectedRadio] = useState("");
+  const [selectedRadio, setSelectedRadio] = useState('');
 
   useEffect(() => {
-    setSelectedRadio("IDEA")
+    setSelectedRadio('IDEA');
   }, []);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
+  // TODO: change Send to send(start with small letter)
+  const [Send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
+
 
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -131,6 +136,8 @@ export default function StartupFormForm() {
   );
 
   const onSubmit = async (formData: startupsFormData) => {
+    setIsSubmitting(true);
+    setSend(true);
     const sendFormData = new FormData();
     // TODO: fix this condition for other field
     if (filePost.businessPlanFile) {
@@ -211,20 +218,28 @@ export default function StartupFormForm() {
       //         throw new Error('Network response was not ok');
       //       }
 
-      // setIsSuccess(true);
-      // setSend(false);
+      setIsSuccess(true);
+      setShowNotification(true);
+      setSend(false);
       reset(initialStartupsFormData); // Reset the form after successful submission
-      setSelectedRadio("IDEA");
+      setSelectedRadio('IDEA');
       setFormData(initialStartupsFormData);
       console.log('Form data sent successfully!');
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds
     } catch (error) {
-      // setSend(false);
-      // setIsSuccess(false);
+      setShowNotification(true);
+      setSend(false);
+      setIsSuccess(false);
       //TODO: remove below code after testing
       console.error('Error sending form data:', error);
       reset(initialStartupsFormData); // Reset the form after successful submission
-      setSelectedRadio("IDEA");
-      setFormData(initialStartupsFormData);
+      setFormData(initialStartupsFormData); // reset states after successful submission
+      setSelectedRadio('IDEA');
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds  
     }
   };
 
@@ -294,8 +309,6 @@ export default function StartupFormForm() {
                   handleBusinessPlanFileChange={handleBusinessPlanFileChange}
                   handlePitchDeckFileChange={handlePitchDeckFileChange}
                   handleFinancialFileChange={handleFinancialFileChange}
-
-
                 />
               );
             } else {
@@ -344,12 +357,13 @@ export default function StartupFormForm() {
           {(() => {
             if (selectedRadio == 'FisrtSale') {
               return (
-                <StartupFormFirstSale                   
-                register={register}
-                errors={errors}
-                handleBusinessPlanFileChange={handleBusinessPlanFileChange}
-                handlePitchDeckFileChange={handlePitchDeckFileChange}
-                handleFinancialFileChange={handleFinancialFileChange} />
+                <StartupFormFirstSale
+                  register={register}
+                  errors={errors}
+                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
+                  handlePitchDeckFileChange={handlePitchDeckFileChange}
+                  handleFinancialFileChange={handleFinancialFileChange}
+                />
               );
             } else {
               return <div></div>;
@@ -384,12 +398,14 @@ export default function StartupFormForm() {
           })()}
           <div className="text-center">
             <button
+              disabled={Send}
               type="submit"
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
             >
-              Submit
+              {Send ? 'Submiting ....' : 'Submit'}
             </button>
           </div>
+          <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={Send} show={showNotification}/>
         </form>
       </div>
     </>
