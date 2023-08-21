@@ -23,7 +23,7 @@ export default function UpcomingEvents() {
                 Entrepreneur
               </div>
               <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
-                MONDAY/ 2022
+                MONDAY/ 2023
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function UpcomingEvents() {
           <div className="w-[307px] justify-start items-start gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
-                08
+                11
               </div>
               <div className="text-3xl font-medium text-right text-primary">
                 oct
@@ -44,7 +44,7 @@ export default function UpcomingEvents() {
                 Entrepreneur
               </div>
               <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
-                MONDAY/ 2022
+                SATURDAY/ 2023
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function UpcomingEvents() {
           <div className="flex items-center justify-start gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-right text-primary text-[40px] font-medium">
-                08
+                18
               </div>
               <div className="text-3xl font-medium text-right text-primary">
                 oct
@@ -65,7 +65,7 @@ export default function UpcomingEvents() {
                 Investment
               </div>
               <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
-                MONDAY/ 2022
+                SUNDAY/ 2023
               </div>
             </div>
           </div>

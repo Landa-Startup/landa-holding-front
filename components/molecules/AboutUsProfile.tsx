@@ -18,6 +18,11 @@ export default function AboutUsProfile() {
       title: 'Enrico Brown',
       description: 'Diaco department manager',
     },
+    // {
+    //   image: '/static/images/About/4-1 1 (2).png',
+    //   title: 'Enrico Brown',
+    //   description: 'Diaco department manager',
+    // },
   ];
 
 

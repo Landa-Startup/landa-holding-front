@@ -12,7 +12,7 @@ import { Metadata } from 'next';
 import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 
 export const metadata: Metadata = {
-  title: 'Landa Holding',
+  title: '377642',
   description: 'Page Desc',
 };
 

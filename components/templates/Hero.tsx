@@ -25,7 +25,7 @@ export default function Hero({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-screen md:h-[740px] relative"
+      className="h-screen relative"
     >
       <div className="flex flex-col items-center justify-center h-full space-y-5">
         <div
