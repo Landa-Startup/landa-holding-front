@@ -129,8 +129,9 @@ export default function Footer() {
           <div className="text-justify text-neutral-400 text-base font-normal">
             +1 (416) 557-7622
           </div>
-          <div className="text-justify text-neutral-400 text-base font-normal">
-            No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran, Iran
+          <div className="text-neutral-400 text-base font-normal">
+            No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran,
+            Iran
           </div>
           <div className="text-justify text-neutral-400 text-base font-normal">
             02188030167
@@ -143,7 +144,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch text-center pt-4 border-t">
+      <div className="self-stretch text-center text-white pt-4 border-t">
         © Copyright {GetYear()} by{' '}
         <Link href={'/'} className="text-primary">
           LandaHolding
