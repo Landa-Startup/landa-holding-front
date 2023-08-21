@@ -7,13 +7,36 @@ import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
 import { partnerMembershipFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
 import TextArea from '../atoms/TextArea';
+import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm() {
+const initialPartnerMembershipFormData : partnerMembershipFormData ={
+    firstName: '',
+    lastName: '',
+    birthDate: new Date(),
+    email: '',
+    countryOfResidence: '',
+    provinceOfResidence: '',
+    companyName : '',
+    investmentCeiling:'',
+    preferredAreas:'',
+    howDidYouKnowUs:'',
+};
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<partnerMembershipFormData>();
+    reset,
+  } = useForm<partnerMembershipFormData>({
+    mode: 'onBlur',
+    defaultValues: initialPartnerMembershipFormData ,
+  });
+
+  const [formData, setFormData] = useState<partnerMembershipFormData>(
+    initialPartnerMembershipFormData
+  );
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
@@ -37,6 +60,8 @@ export default function PartnerMembershipForm() {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
+      reset (initialPartnerMembershipFormData);
+      setFormData(initialPartnerMembershipFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); 
@@ -45,6 +70,8 @@ export default function PartnerMembershipForm() {
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      reset (initialPartnerMembershipFormData);
+      setFormData(initialPartnerMembershipFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds  
@@ -205,7 +232,7 @@ export default function PartnerMembershipForm() {
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
               disabled={send}
             >
-              {send ? 'Submiting ....' : 'Submit'}
+              {send ? 'Submitting ....' : 'Submit'}
             </button>
           </div>
         </form>

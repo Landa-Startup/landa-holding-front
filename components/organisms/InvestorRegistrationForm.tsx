@@ -9,16 +9,42 @@ import NotificationSendForm from './base/NotificationSendForm';
 import TextArea from '../atoms/TextArea';
 
 export default function InvestorRegistrationForm() {
+  const initialInvestorRegistrationFormData : InvestorRegistrationFormData ={
+    firstName: '',
+    lastName: '',
+    birthDate: new Date(),
+    email: '',
+    countryOfResidence: '',
+    provinceOfResidence: '',
+    streetAddress:'',
+    streetAddressLine2:'' ,
+    postalCode: '',
+    companyName:'' ,
+    investmentCeiling:'' ,
+    positionInTeam: '', 
+    preferredAreas:'',
+    howDidYouKnowUs:'',
+};
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+    reset,
+  } = useForm<InvestorRegistrationFormData>({
+    mode: 'onBlur',
+    defaultValues: initialInvestorRegistrationFormData ,
+  });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
+
+  const [formData, setFormData] = useState<InvestorRegistrationFormData>(
+    initialInvestorRegistrationFormData
+  );
 
   const onSubmit = async (data: InvestorRegistrationFormData) => {
     setIsSubmitting(true);
@@ -38,6 +64,8 @@ export default function InvestorRegistrationForm() {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
+      reset (initialInvestorRegistrationFormData );
+      setFormData(initialInvestorRegistrationFormData );
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000);
@@ -46,6 +74,8 @@ export default function InvestorRegistrationForm() {
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      reset (initialInvestorRegistrationFormData );
+      setFormData(initialInvestorRegistrationFormData );
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds  
@@ -215,10 +245,11 @@ export default function InvestorRegistrationForm() {
           </div>
           <div className="text-center">
             <button
+              disabled={send}
               type="submit"
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
             >
-              Submit
+              {send ? 'Submitting ....' : 'Submit'}
             </button>
           </div>
         </form>
