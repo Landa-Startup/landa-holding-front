@@ -45,7 +45,7 @@ export default function LandaHoldingPriority() {
           Landa Holding
           <br />
         </span>
-        <span className="text-4xl font-normal tracking-widest text-black font-condensed">
+        <span className="text-5xl font-normal tracking-widest text-black font-condensed">
           Priority
         </span>
       </div>

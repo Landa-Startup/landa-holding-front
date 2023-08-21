@@ -23,7 +23,7 @@ const cardData = [
     reverse: false,
     show: true,
     index: 1,
-    link: "/investment-registration"
+    link: '/investment-registration',
   },
   {
     title: 'Acceleration',
@@ -44,7 +44,13 @@ const cardData = [
 export default function page() {
   return (
     <div className="relative">
-      <Hero />
+      <Hero
+        showLanda
+        title="Acceleration Center"
+        subTitle="Feel The Future"
+        backgroundImage="businessman.png"
+        leftImage="Landa.svg"
+      />
       {cardData.map((data, index) => (
         <HomeTextCardContainer
           key={index}

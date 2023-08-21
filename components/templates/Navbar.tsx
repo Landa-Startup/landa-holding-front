@@ -47,41 +47,75 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           <div className="hidden xl:flex-1 xl:flex justify-start ml-32 hover:font-white">
             {' '}
             {/* Center items in md mode */}
-            <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl">
+            <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               <li>
-                <Link href={'/'} className="text-primary hover:text-primary hover:bg-base-200">
+                <Link
+                  href={'/'}
+                  className="text-primary hover:text-primary hover:bg-base-200"
+                >
                   HOME
                 </Link>
               </li>
               <li>
-                <Link href={'/about'} className='hover:text-primary hover:bg-base-200'>ABOUT</Link>
+                <Link
+                  href={'/about'}
+                  className="hover:text-primary hover:bg-base-200"
+                >
+                  ABOUT
+                </Link>
               </li>
               <li>
-                <Link href={'/contact'} className='hover:text-primary hover:bg-base-200'>CONTACT</Link>
+                <Link
+                  href={'/contact'}
+                  className="hover:text-primary hover:bg-base-200"
+                >
+                  CONTACT
+                </Link>
               </li>
               <li>
-                <Link href={'/our-team'} className='hover:text-primary hover:bg-base-200'>OUR TEAM</Link>
+                <Link
+                  href={'/our-team'}
+                  className="hover:text-primary hover:bg-base-200"
+                >
+                  OUR TEAM
+                </Link>
               </li>
               {/* <li>
                 <Link href={'/'}>WORK WITH US</Link>
               </li> */}
               <li>
                 <details className="dropdown mb-32">
-                  <summary className="m-1 hover:text-primary hover:bg-base-200">WORK WITH US</summary>
-                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-transparent rounded-box w-64">
+                  <summary className="m-1 hover:text-primary hover:bg-base-200">
+                    WORK WITH US
+                  </summary>
+                  <ul className="p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64">
                     <li>
-                      <Link href={'/investor-registration'} className='hover:text-primary hover:bg-base-200 p-5 font-bold'>CENTER OF INVESTOR</Link>
+                      <Link
+                        href={'/investor-registration'}
+                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                      >
+                        CENTER OF INVESTOR
+                      </Link>
                     </li>
                     <li>
-                      <Link href={'/partner-membership'} className='hover:text-primary hover:bg-base-200 p-5 font-bold'>OUR BUSINESS PARTNERS</Link>
+                      <Link
+                        href={'/partner-membership'}
+                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                      >
+                        OUR BUSINESS PARTNERS
+                      </Link>
                     </li>
                     <li>
-                      <Link href={'/StartupsForm'} className='hover:text-primary hover:bg-base-200 p-5 font-bold'>STARTUPS</Link>
+                      <Link
+                        href={'/StartupsForm'}
+                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                      >
+                        STARTUPS
+                      </Link>
                     </li>
                   </ul>
                 </details>
               </li>
-
             </ul>
           </div>
         </div>

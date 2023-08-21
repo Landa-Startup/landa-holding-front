@@ -98,7 +98,7 @@ export default function LandaHoldingBalck() {
           </ul>
 
           <button className="relative justify-start items-center gap-4 inline-flex">
-            <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condense">
+            <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
               More
             </div>
             <div className="justify-start items-start gap-2.5 flex">
