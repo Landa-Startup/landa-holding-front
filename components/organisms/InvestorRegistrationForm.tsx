@@ -15,11 +15,14 @@ export default function InvestorRegistrationForm() {
     formState: { errors },
   } = useForm<InvestorRegistrationFormData>();
 
-  const [send, setSend] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
 
   const onSubmit = async (data: InvestorRegistrationFormData) => {
+    setIsSubmitting(true);
+    setSend(true);
     try {
       const response = await fetch('/api/investor-registration', {
         method: 'POST',
@@ -33,11 +36,19 @@ export default function InvestorRegistrationForm() {
         throw new Error('Network response was not ok');
       }
       setIsSuccess(true);
+      setShowNotification(true);
       setSend(false);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000);
     } catch (error) {
+      setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds  
     }
   };
 
@@ -211,7 +222,7 @@ export default function InvestorRegistrationForm() {
             </button>
           </div>
         </form>
-        {/* <NotificationSendForm submitting={isSubmitting} success={isSuccess} /> */}
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
       </div>
     </>
   );
