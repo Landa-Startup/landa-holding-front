@@ -9,7 +9,7 @@ export default function page() {
     <div className="bg-[#F1F8EC]">
       <Hero
         showLanda={false}
-        title="SEO COURSE"
+        titles="SEO COURSE"
         subTitle="
 Elevate your online impact with our SEO course at Landa Academy! Master search engine optimization, from keywords to cutting-edge strategies. Join us now and amplify your digital presence!"
         buttonBg="#FDD30A"
