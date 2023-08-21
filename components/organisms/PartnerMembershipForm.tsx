@@ -232,7 +232,7 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
               disabled={send}
             >
-              {send ? 'Submiting ....' : 'Submit'}
+              {send ? 'Submitting ....' : 'Submit'}
             </button>
           </div>
         </form>
