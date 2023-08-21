@@ -28,10 +28,15 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<partnerMembershipFormData>({
     mode: 'onBlur',
     defaultValues: initialPartnerMembershipFormData ,
   });
+
+  const [formData, setFormData] = useState<partnerMembershipFormData>(
+    initialPartnerMembershipFormData
+  );
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
@@ -55,6 +60,8 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
+      reset (initialPartnerMembershipFormData);
+      setFormData(initialPartnerMembershipFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); 
@@ -63,6 +70,8 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      reset (initialPartnerMembershipFormData);
+      setFormData(initialPartnerMembershipFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds  
