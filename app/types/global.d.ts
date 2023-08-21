@@ -27,7 +27,8 @@ interface contactUSFormData {
 interface InvestorRegistrationFormData {
   firstName: string;
   lastName: string;
-  birthDate: string;
+  birthDate: Date;
+  email:string;
   countryOfResidence: string;
   provinceOfResidence: string;
   streetAddress: string;
