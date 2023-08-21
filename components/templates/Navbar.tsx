@@ -1,8 +1,14 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import React, { useState } from 'react';
 export default function Navbar({ children }: { children: React.ReactNode }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -80,9 +86,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                   OUR TEAM
                 </Link>
               </li>
-              {/* <li>
-                <Link href={'/'}>WORK WITH US</Link>
-              </li> */}
               <li>
                 <details className="dropdown mb-32">
                   <summary className="m-1 hover:text-primary hover:bg-base-200">
@@ -138,8 +141,23 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           <li>
             <Link href={'/our-team'}>OUR TEAM</Link>
           </li>
-          <li>
+          <li onClick={toggleMenu}>
             <Link href={'/'}>WORK WITH US</Link>
+            <ul className={isMenuOpen ? 'menu open' : 'menu'}>
+              <li>
+                <Link href={'/investor-registration'}>
+                  CENTER OF INVESTOR
+                </Link>
+              </li>
+              <li>
+                <Link href={'/partner-membership'}>
+                  OUR BUSINESS PARTNERS
+                </Link>
+              </li>
+              <li>
+                <Link href={'/StartupsForm'}>STARTUPS</Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>

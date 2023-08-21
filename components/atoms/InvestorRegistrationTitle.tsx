@@ -4,7 +4,7 @@ export default function InvestorRegistrationTitle(){
   return(
     <>
     <div className='text-center'>
-<p className='font-serif text-7xl mb-20 tracking-wide'>INVESTOR REGISTRATION FORM</p>
+<p className='font-serif text-2xl mb-20 tracking-wide'>INVESTOR REGISTRATION FORM</p>
     </div>
     <div>
       <p className='text-4xl mb-4'>Personal information</p>
