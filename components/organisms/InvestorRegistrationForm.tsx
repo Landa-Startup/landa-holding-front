@@ -6,19 +6,49 @@ import Select from './base/Select';
 import InvestorRegistrationTitle from '../atoms/InvestorRegistrationTitle';
 import { InvestorRegistrationFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
+import TextArea from '../atoms/TextArea';
 
 export default function InvestorRegistrationForm() {
+  const initialInvestorRegistrationFormData : InvestorRegistrationFormData ={
+    firstName: '',
+    lastName: '',
+    birthDate: new Date(),
+    email: '',
+    countryOfResidence: '',
+    provinceOfResidence: '',
+    streetAddress:'',
+    streetAddressLine2:'' ,
+    postalCode: '',
+    companyName:'' ,
+    investmentCeiling:'' ,
+    positionInTeam: '', 
+    preferredAreas:'',
+    howDidYouKnowUs:'',
+};
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<InvestorRegistrationFormData>();
+    reset,
+  } = useForm<InvestorRegistrationFormData>({
+    mode: 'onBlur',
+    defaultValues: initialInvestorRegistrationFormData ,
+  });
 
-  const [send, setSend] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
+
+  const [formData, setFormData] = useState<InvestorRegistrationFormData>(
+    initialInvestorRegistrationFormData
+  );
 
   const onSubmit = async (data: InvestorRegistrationFormData) => {
+    setIsSubmitting(true);
+    setSend(true);
     try {
       const response = await fetch('/api/investor-registration', {
         method: 'POST',
@@ -32,19 +62,26 @@ export default function InvestorRegistrationForm() {
         throw new Error('Network response was not ok');
       }
       setIsSuccess(true);
+      setShowNotification(true);
       setSend(false);
+      reset (initialInvestorRegistrationFormData );
+      setFormData(initialInvestorRegistrationFormData );
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000);
     } catch (error) {
+      setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      reset (initialInvestorRegistrationFormData );
+      setFormData(initialInvestorRegistrationFormData );
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds  
     }
   };
 
-  const test = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
 
   return (
     <>
@@ -180,44 +217,43 @@ export default function InvestorRegistrationForm() {
               />
             </div>
 
-            <div className="col-span-1 md:col-span-2 lg:col-span-3">
-              <Select
+            <div className="col-span-1 md:col-span-2">
+            <TextArea
+                title="Preferred Areas for Investment"
                 register={register}
                 errors={errors}
-                nameInput="preferredAreas"
-                label="Preferred Areas for Investment"
-                placeholder="Select your Preferred Area"
-                required="Preferred Areas is Required."
-                options={test}
-                className=" col-start-2 col-span-3 w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF] "
-                labelClass="text-[#6b6b6b] dark:text-current"
+                placeholder="Description"
+                nameTextArea="preferredAreas"
+                patternMessage=""
+                patternValue=""
+                required="This field is required"
               />
             </div>
 
-            <div className="col-span-1 md:col-span-2 lg:col-span-3">
-              <Select
+            <div className="col-span-1 md:col-span-2">
+            <TextArea
+                title="How did you get to know us?*"
                 register={register}
                 errors={errors}
-                nameInput="howDidYouKnowUs"
-                label="How did You Get to Know Us?"
-                placeholder="Select How did You Get to Know Us?"
-                required="This field is Required."
-                options={test}
-                className="col-start-2 col-span-3 w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF] "
-                labelClass="text-[#6b6b6b] dark:text-current"
+                placeholder="Description"
+                nameTextArea="howDidYouKnowUs"
+                patternMessage=""
+                patternValue=""
+                required="This field is required"
               />
             </div>
           </div>
           <div className="text-center">
             <button
+              disabled={send}
               type="submit"
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
             >
-              Submit
+              {send ? 'Submitting ....' : 'Submit'}
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
       </div>
     </>
   );

@@ -1,14 +1,20 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import React, { useState } from 'react';
 export default function Navbar({ children }: { children: React.ReactNode }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col relative md:px-10">
         <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-          <div className="px-2 m-5 text-left h-full flex justify-start items-start ">
+          <div className="px-2 m-2 text-left h-full flex justify-start items-start ">
             <Link href="/">
               <div className="flex flex-col md:flex-row items-center">
                 <Image
@@ -47,41 +53,72 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           <div className="hidden xl:flex-1 xl:flex justify-start ml-32 hover:font-white">
             {' '}
             {/* Center items in md mode */}
-            <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl">
+            <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               <li>
-                <Link href={'/'} className="text-primary">
+                <Link
+                  href={'/'}
+                  className="text-primary hover:text-primary hover:bg-base-200"
+                >
                   HOME
                 </Link>
               </li>
               <li>
-                <Link href={'/about'}>ABOUT</Link>
+                <Link
+                  href={'/about'}
+                  className="hover:text-primary hover:bg-base-200"
+                >
+                  ABOUT
+                </Link>
               </li>
               <li>
-                <Link href={'/contact'}>CONTACT</Link>
+                <Link
+                  href={'/contact'}
+                  className="hover:text-primary hover:bg-base-200"
+                >
+                  CONTACT
+                </Link>
               </li>
               <li>
-                <Link href={'/our-team'}>OUR TEAM</Link>
+                <Link
+                  href={'/our-team'}
+                  className="hover:text-primary hover:bg-base-200"
+                >
+                  OUR TEAM
+                </Link>
               </li>
-              {/* <li>
-                <Link href={'/'}>WORK WITH US</Link>
-              </li> */}
               <li>
-                <details className="dropdown mb-32 ">
-                  <summary className="m-1 ">WORK WITH US</summary>
-                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-transparent rounded-box w-64">
+                <details className="dropdown mb-32">
+                  <summary className="m-1 hover:text-primary hover:bg-base-200">
+                    WORK WITH US
+                  </summary>
+                  <ul className="p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64">
                     <li>
-                      <Link href={'/investor-registration'}>CENTER OF INVESTOR</Link>
+                      <Link
+                        href={'/investor-registration'}
+                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                      >
+                        CENTER OF INVESTOR
+                      </Link>
                     </li>
                     <li>
-                      <Link href={'/partner-membership'}>OUR BUSINESS PARTNERS</Link>
+                      <Link
+                        href={'/partner-membership'}
+                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                      >
+                        OUR BUSINESS PARTNERS
+                      </Link>
                     </li>
                     <li>
-                      <Link href={'/StartupsForm'}>Startups</Link>
+                      <Link
+                        href={'/StartupsForm'}
+                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                      >
+                        STARTUPS
+                      </Link>
                     </li>
                   </ul>
                 </details>
               </li>
-
             </ul>
           </div>
         </div>
@@ -104,8 +141,23 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           <li>
             <Link href={'/our-team'}>OUR TEAM</Link>
           </li>
-          <li>
+          <li onClick={toggleMenu}>
             <Link href={'/'}>WORK WITH US</Link>
+            <ul className={isMenuOpen ? 'menu open' : 'menu'}>
+              <li>
+                <Link href={'/investor-registration'}>
+                  CENTER OF INVESTOR
+                </Link>
+              </li>
+              <li>
+                <Link href={'/partner-membership'}>
+                  OUR BUSINESS PARTNERS
+                </Link>
+              </li>
+              <li>
+                <Link href={'/StartupsForm'}>STARTUPS</Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>

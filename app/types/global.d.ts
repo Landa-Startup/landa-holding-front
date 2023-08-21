@@ -27,7 +27,8 @@ interface contactUSFormData {
 interface InvestorRegistrationFormData {
   firstName: string;
   lastName: string;
-  birthDate: string;
+  birthDate: Date;
+  email:string;
   countryOfResidence: string;
   provinceOfResidence: string;
   streetAddress: string;
@@ -44,7 +45,8 @@ interface InvestorRegistrationFormData {
 interface partnerMembershipFormData {
   firstName: string;
   lastName: string;
-  birthDate: string;
+  birthDate: Date;
+  email:string;
   countryOfResidence: string;
   provinceOfResidence: string;
   // streetAddress: string;
@@ -108,42 +110,4 @@ interface startupsFormData {
   Idea:boolean;
 }
 
-  const initialStartupsFormData: startupsFormData = {
-    firstName: '',
-    lastName: '',
-    birthDate: new Date(),
-    email: '',
-    countryOfResidence: '',
-    provinceOfResidence: '',
-    type: Type.IDEA,
-    ideaExplanation: '',
-    getToKnowUs: '',
-    pitchDeck: true,
-    pitchDeckFile: null as File | null,
-    businessPlan: true,
-    businessPlanFile: null as File | null,
-    productName: '',
-    siteAddress: '',
-    customerProblem: '',
-    solution: '',
-    productLevel: Level.basicPrinciple,
-    scalable: '',
-    monetizationOfYourPlan: '',
-    structureOfYourSales: '',
-    financialModelFile: null as File | null,
-    cooperatedWithInvestors: '',
-    financial: true,
-    financialFile: null as File | null,
-    customerCharacteristic: '',
-    currentCustomers: '',
-    estimatedMarketSize: '',
-    totalTamSamSom: '',
-    startupRevenue: '',
-    monthlyIncome: '',
-    currentInterestRate: '',
-    currentRaisedFunding: '',
-    neededCapital: '',
-
-  }
-
-export {contactUSFormData,Type,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData,initialStartupsFormData}
+export {contactUSFormData,Type,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData}

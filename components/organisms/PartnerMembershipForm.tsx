@@ -6,19 +6,45 @@ import Select from './base/Select';
 import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
 import { partnerMembershipFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
+import TextArea from '../atoms/TextArea';
+import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm() {
+const initialPartnerMembershipFormData : partnerMembershipFormData ={
+    firstName: '',
+    lastName: '',
+    birthDate: new Date(),
+    email: '',
+    countryOfResidence: '',
+    provinceOfResidence: '',
+    companyName : '',
+    investmentCeiling:'',
+    preferredAreas:'',
+    howDidYouKnowUs:'',
+};
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<partnerMembershipFormData>();
+    reset,
+  } = useForm<partnerMembershipFormData>({
+    mode: 'onBlur',
+    defaultValues: initialPartnerMembershipFormData ,
+  });
 
-  const [send, setSend] = useState(false);
+  const [formData, setFormData] = useState<partnerMembershipFormData>(
+    initialPartnerMembershipFormData
+  );
+
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
   const onSubmit = async (data: partnerMembershipFormData) => {
+    setIsSubmitting(true);
+    setSend(true);
     try {
       const response = await fetch('/api/partner-membership', {
         method: 'POST',
@@ -32,19 +58,26 @@ export default function PartnerMembershipForm() {
         throw new Error('Network response was not ok');
       }
       setIsSuccess(true);
+      setShowNotification(true);
       setSend(false);
+      reset (initialPartnerMembershipFormData);
+      setFormData(initialPartnerMembershipFormData);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); 
     } catch (error) {
+      setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      reset (initialPartnerMembershipFormData);
+      setFormData(initialPartnerMembershipFormData);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds  
     }
   };
 
-  const test = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
 
   return (
     <>
@@ -180,17 +213,16 @@ export default function PartnerMembershipForm() {
               />
             </div>
 
-            <div className="col-span-1 md:col-span-2 lg:col-span-3">
-              <Select
+            <div className="col-span-1 md:col-span-2">
+              <TextArea
+                title="How did you get to know us?*"
                 register={register}
                 errors={errors}
-                nameInput="howDidYouKnowUs"
-                label="How did You Get to Know Us?"
-                placeholder="Select How did You Get to Know Us?"
-                required="This field is Required."
-                options={test}
-                className="col-start-2 col-span-3 w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF] "
-                labelClass="text-[#6b6b6b] dark:text-current"
+                placeholder="Description"
+                nameTextArea="howDidYouKnowUs"
+                patternMessage=""
+                patternValue=""
+                required="This field is required"
               />
             </div>
           </div>
@@ -198,12 +230,13 @@ export default function PartnerMembershipForm() {
             <button
               type="submit"
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
+              disabled={send}
             >
-              Submit
+              {send ? 'Submitting ....' : 'Submit'}
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} />
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
       </div>
     </>
   );

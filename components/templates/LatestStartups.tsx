@@ -8,18 +8,22 @@ export default function LatestStartups() {
       title: 'LANDA TRIP',
       description:
         'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
+      link: 'https://landatrip.com/',
     },
+
     {
       image: '/static/images/Home/Startups/diaco.png',
       title: 'Diaco',
       description:
         'Diaco is an open innovation platform which acts as an intermediate between technology seekers and providers to fulfill their technological demands.',
+      link: 'https://irdiaco.ca/',
     },
     {
       image: '/static/images/Home/Startups/vision-raft.png',
       title: 'VISION RAFT',
       description:
         'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
+      link: 'https://invigorated-drop-231359.framer.app',
     },
   ];
 
@@ -44,6 +48,7 @@ export default function LatestStartups() {
                 title={data.title}
                 image={data.image}
                 description={data.description}
+                link={data.link}
               />
             ))}
           </div>

@@ -12,7 +12,7 @@ import { Metadata } from 'next';
 import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 
 export const metadata: Metadata = {
-  title: 'Landa Holding',
+  title: '377642',
   description: 'Page Desc',
 };
 
@@ -23,7 +23,7 @@ const cardData = [
     reverse: false,
     show: true,
     index: 1,
-    link: "/investment-registration"
+    link: '/investment-registration',
   },
   {
     title: 'Acceleration',
@@ -44,7 +44,14 @@ const cardData = [
 export default function page() {
   return (
     <div className="relative">
-      <Hero />
+      <Hero
+        showLanda
+        titles={['Acceleration', 'Investment', 'Academy']}
+        subTitle="Feel The Future"
+        backgroundImage="businessman.png"
+        leftImage="Landa.svg"
+        showButton={false}
+      />
       {cardData.map((data, index) => (
         <HomeTextCardContainer
           key={index}
