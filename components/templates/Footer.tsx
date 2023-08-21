@@ -10,8 +10,8 @@ export default function Footer() {
   }
   return (
     <div className="flex flex-col bg-neutral-800 font-barlow p-10">
-      <div className="grid md:grid-cols-4 space-y-5 md:p-20">
-        <div className="col-span-1 flex flex-col">
+      <div className="grid md:grid-cols-5 space-y-5 md:p-20">
+        <div className="md:col-span-2 flex flex-col">
           <div className="h-[25px] text-justify text-white text-xl font-medium">
             About Landa
             <br />
@@ -129,8 +129,9 @@ export default function Footer() {
           <div className="text-justify text-neutral-400 text-base font-normal">
             +1 (416) 557-7622
           </div>
-          <div className="text-justify text-neutral-400 text-base font-normal">
-            No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran, Iran
+          <div className="text-neutral-400 text-base font-normal">
+            No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran,
+            Iran
           </div>
           <div className="text-justify text-neutral-400 text-base font-normal">
             02188030167
@@ -143,7 +144,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch text-center pt-4 border-t">
+      <div className="self-stretch text-center text-white pt-4 border-t">
         © Copyright {GetYear()} by{' '}
         <Link href={'/'} className="text-primary">
           LandaHolding

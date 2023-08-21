@@ -12,7 +12,7 @@ import { Metadata } from 'next';
 import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 
 export const metadata: Metadata = {
-  title: 'Landa Holding',
+  title: '377642',
   description: 'Page Desc',
 };
 
@@ -46,10 +46,11 @@ export default function page() {
     <div className="relative">
       <Hero
         showLanda
-        title="Acceleration Center"
+        titles={['Acceleration', 'Investment', 'Academy']}
         subTitle="Feel The Future"
         backgroundImage="businessman.png"
         leftImage="Landa.svg"
+        showButton={false}
       />
       {cardData.map((data, index) => (
         <HomeTextCardContainer

@@ -24,12 +24,9 @@ export default function Button({
 }) {
   return size == 'visit' ? (
     <button
-      className={
-        `btn2 w-[135px] md:w-[219px] h-[32px] md:h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px] ${
-          bgColor ? bgColor : 'bg-primary'
-        } px-10 py-5 relative border border-white uppercase  tracking-wider leading-none overflow-hidden inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal hover:text-white ` +
-        addedClass
-      }
+      className={`btn2 w-[135px] md:w-[219px] h-[32px] md:h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px] ${
+        bgColor ? bgColor : 'bg-primary'
+      } px-10 py-5 relative border border-white uppercase  tracking-wider leading-none overflow-hidden inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal hover:text-white ${addedClass}`}
       type={type}
       // {...rest}
     >

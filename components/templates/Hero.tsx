@@ -5,18 +5,20 @@ import Button from '../atoms/Button';
 
 export default function Hero({
   showLanda,
-  title,
+  titles,
   subTitle,
   buttonBg,
   backgroundImage,
   leftImage,
+  showButton,
 }: {
   showLanda: boolean;
-  title: string;
+  titles: string[] | string;
   subTitle: string;
   buttonBg?: string;
   backgroundImage: string;
   leftImage: string;
+  showButton?: boolean;
 }) {
   return (
     <div
@@ -25,7 +27,7 @@ export default function Hero({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-screen md:h-[740px] relative"
+      className="h-[230px] md:h-[740px] relative"
     >
       <div className="flex flex-col items-center justify-center h-full space-y-5">
         <div
@@ -35,23 +37,38 @@ export default function Hero({
         >
           Landa Holding
         </div>
+        {/* {titles.map((title) => (
+          <div
+            key={title}
+            className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]"
+          >
+            {title}
+            <br />
+          </div>
+        ))} */}
+
         <div className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]">
-          {title}
+          {"Academy"}
           <br />
         </div>
+
         <div className="hidden md:w-[820px] md:block text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
           {subTitle}
         </div>
-        <div className="md:hidden text-center w-[250px] font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+        <div className="md:hidden text-center w-[250px] font-condensed text-neutral-50 text-[12px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
           Landa Holding is an international investment company active in Iran
           and Canada.
         </div>
-        <Button
-          text="Register Now"
-          size="notVisit"
-          bgColor={buttonBg}
-          addedClass={buttonBg ? 'block' : 'hidden'}
-        />
+        {showButton ? (
+          <Button
+            text="Register Now"
+            size="notVisit"
+            bgColor={buttonBg}
+            addedClass={buttonBg ? 'md:hidden' : 'block'}
+          />
+        ) : (
+          <></>
+        )}
         <Image
           className="w-[103px] md:w-[412px] h-[140px] md:h-[560px] absolute right-0 bottom-0"
           src={`/static/images/${leftImage}`}
@@ -60,7 +77,7 @@ export default function Hero({
           height={500}
         />
         <Link
-          className="absolute flex items-center justify-center w-5 h-5 md:w-12 h-w-5 md:h-12 border border-white rounded-full animate-bounce left-10 bottom-4"
+          className="absolute flex items-center justify-center w-7 h-7 md:w-12 h-w-5 md:h-12 border border-white rounded-full animate-bounce left-10 bottom-4"
           href={'#LandaHolding'}
         >
           <svg

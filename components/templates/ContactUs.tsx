@@ -18,9 +18,9 @@ export default function ContactUs() {
         </p>
         <Button text="Visit Now" size="visit" />
       </div>
-      <div className="flex gap-20 md:h-full relative my-12 md:my-0 mb-28 md:mb-0">
-        <div className="absolute top-0 w-full h-48 bg-gradient-to-b from-white via-transparent-white z-10" />
-        <div className="absolute md:bottom-0 w-full h-60 bg-gradient-to-t from-white via-transparent-white z-10" />
+      <div className="flex gap-20 md:h-full relative mt-5 md:my-0 md:mb-0">
+        <div className="absolute top-0 w-full h-16 md:h-48 bg-gradient-to-b from-white via-transparent-white z-10" />
+        <div className="absolute bottom-0 w-full h-16 md:h-60 bg-gradient-to-t from-white via-transparent-white z-10" />
         <div className="flex flex-col justify-around">
           <div className="spin-image">
             <Image

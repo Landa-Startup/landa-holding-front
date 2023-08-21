@@ -40,7 +40,7 @@ export default function PersonalTab({ image,name,position }: { image: string,nam
                 <hr className="  ml-14 mr-14 " />
                 <div className="  flex flex-col items-center  ">
                   <span className="  text-[#FFF] font-normal "> {name} </span>
-                  <span className="text-[#FAFAFA] font-light "> {position} </span>
+                  {/* <span className="text-[#FAFAFA] font-light "> {position} </span> */}
                 </div>
               </div>
             </div>
