@@ -33,11 +33,13 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
     defaultValues: initialPartnerMembershipFormData ,
   });
 
-  const [send, setSend] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
   const onSubmit = async (data: partnerMembershipFormData) => {
+    setIsSubmitting(true);
+    setSend(true);
     try {
       const response = await fetch('/api/partner-membership', {
         method: 'POST',
@@ -51,11 +53,19 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
         throw new Error('Network response was not ok');
       }
       setIsSuccess(true);
+      setShowNotification(true);
       setSend(false);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); 
     } catch (error) {
+      setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds  
     }
   };
 
@@ -211,12 +221,13 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
             <button
               type="submit"
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
+              disabled={send}
             >
-              Submit
+              {send ? 'Submiting ....' : 'Submit'}
             </button>
           </div>
         </form>
-        {/* <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={}/> */}
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
       </div>
     </>
   );

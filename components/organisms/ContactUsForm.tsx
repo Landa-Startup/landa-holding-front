@@ -23,11 +23,14 @@ export default function ContactUsForm() {
     defaultValues: initialFormData,
   });
 
-  const [send, setSend] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
 
   const onSubmit = async (formData: contactUSFormData) => {
+    setIsSubmitting(true);
+    setSend(true);
     try {
       const response = await fetch('/api/contact-us', {
         method: 'POST',
@@ -41,13 +44,21 @@ export default function ContactUsForm() {
         throw new Error('Network response was not ok');
       }
       setIsSuccess(true);
+      setShowNotification(true);
       setSend(false);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000);
       reset(initialFormData); // Reset the form after successful submission
       console.log('Form data sent successfully!');
     } catch (error) {
+      setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds  
     }
   };
 
@@ -166,7 +177,7 @@ export default function ContactUsForm() {
           </button>
         </div>
       </form>
-      <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} />
+      <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
     </div>
   );
 }
