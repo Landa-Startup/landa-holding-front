@@ -13,6 +13,8 @@ import StartupFormTrialProduct from './StartupFormTrialProduct';
 import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from './base/NotificationSendForm';
+import GetCsrfToken from '@/utils/get-csrf-token';
+import apiClient from '@/utils/api';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 enum Type {
@@ -35,9 +37,9 @@ export default function StartupFormForm() {
     ideaExplanation: '',
     getToKnowUs: '',
     pitchDeck: true,
-    pitchDeckFile: null as File | null,
+    pitchDeckFile: '' as File | '',
     businessPlan: true,
-    businessPlanFile: null as File | null,
+    businessPlanFile: '' as File | '',
     productName: '',
     siteAddress: '',
     customerProblem: '',
@@ -46,10 +48,10 @@ export default function StartupFormForm() {
     scalable: '',
     monetizationOfYourPlan: '',
     structureOfYourSales: '',
-    financialModelFile: null as File | null,
+    financialModelFile: '' as File | '',
     cooperatedWithInvestors: '',
     financial: true,
-    financialFile: null as File | null,
+    financialFile: '' as File | '',
     customerCharacteristic: '',
     currentCustomers: '',
     estimatedMarketSize: '',
@@ -93,14 +95,14 @@ export default function StartupFormForm() {
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRadio(event.target.value);
   };
-  const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
-    businessPlanFile: null,
+  const [filePost, setFilePost] = useState<{ businessPlanFile: File | '' }>({
+    businessPlanFile: '',
   });
-  const [filePost2, setFilePost2] = useState<{ pitchDeckFile: File | null }>({
-    pitchDeckFile: null,
+  const [filePost2, setFilePost2] = useState<{ pitchDeckFile: File | '' }>({
+    pitchDeckFile: '',
   });
-  const [filePost3, setFilePost3] = useState<{ financialFile: File | null }>({
-    financialFile: null,
+  const [filePost3, setFilePost3] = useState<{ financialFile: File | '' }>({
+    financialFile: '',
   });
 
   const handlePitchDeckFileChange = (
@@ -135,6 +137,17 @@ export default function StartupFormForm() {
     initialStartupsFormData
   );
 
+  const [csrfToken, setCsrfToken] = useState("");
+
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      setCsrfToken(token);
+    }
+
+    fetchCsrfToken();
+  }, []);
+  
   const onSubmit = async (formData: startupsFormData) => {
     setIsSubmitting(true);
     setSend(true);
@@ -209,9 +222,11 @@ export default function StartupFormForm() {
     sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
     sendFormData.append('neededCapital', formData.neededCapital);
     try {
-      const response = await fetch('/api/upload-startups-form', {
-        method: 'POST',
-        body: sendFormData,
+      const response = await apiClient.post("startups-form", sendFormData, {
+        headers: {
+          "content-type": "multipart/form-data",
+          "X-CSRFToken": csrfToken,
+        },
       });
 
       //       if (!response.ok) {

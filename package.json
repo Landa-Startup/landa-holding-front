@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
+    "axios": "^1.4.0",
     "cloudinary": "^1.40.0",
     "daisyui": "3.5.0",
     "dotenv-cli": "^7.2.1",

@@ -1,8 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { contactUSFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
+import GetCsrfToken from '@/utils/get-csrf-token';
+import apiClient from '@/utils/api';
 
 export default function ContactUsForm() {
   const initialFormData: contactUSFormData = {
@@ -27,22 +29,31 @@ export default function ContactUsForm() {
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
+  const [csrfToken, setCsrfToken] = useState("");
+
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token/");
+      setCsrfToken(token);
+    }
+
+    fetchCsrfToken();
+  }, []);
 
   const onSubmit = async (formData: contactUSFormData) => {
     setIsSubmitting(true);
     setSend(true);
     try {
-      const response = await fetch('/api/contact-us', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+      const response = await apiClient.post(
+        "contactUs-form",
+        JSON.stringify(formData),
+        {
+          headers: {
+            "X-CSRFToken": csrfToken,
+            "Content-Type": "application/json",
+          },
+        }
+      );
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
