@@ -30,7 +30,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         companyName : formData.companyName,
         investmentCeiling : formData.investmentCeiling,
         howDidYouKnowUs : formData.howDidYouKnowUs,
-
       } });
       console.log('Saved form data:', savedFormData);
       res.status(200).json({ message: 'Form data received and processed successfully.' });

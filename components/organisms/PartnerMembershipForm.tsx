@@ -7,13 +7,31 @@ import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
 import { partnerMembershipFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
 import TextArea from '../atoms/TextArea';
+import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm() {
+const initialPartnerMembershipFormData : partnerMembershipFormData ={
+    firstName: '',
+    lastName: '',
+    birthDate: new Date(),
+    email: '',
+    countryOfResidence: '',
+    provinceOfResidence: '',
+    companyName : '',
+    investmentCeiling:'',
+    preferredAreas:'',
+    howDidYouKnowUs:'',
+};
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<partnerMembershipFormData>();
+  } = useForm<partnerMembershipFormData>({
+    mode: 'onBlur',
+    defaultValues: initialPartnerMembershipFormData ,
+  });
 
   const [send, setSend] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
