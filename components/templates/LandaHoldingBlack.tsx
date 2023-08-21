@@ -49,12 +49,12 @@ export default function LandaHoldingBlack() {
             LANDA HOLDING
             <br />
           </span>
-          <span className="text-white text-3xl font-barlow font-normal">
+          <span className="text-white text-3xl font-condensed font-normal">
             Investment Center
             <br />
           </span>
         </div>
-        <div className="w-[353px] md:w-[434px]">
+        <div className="w-[300px] md:w-[434px]">
           <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow">
             <li>Global Investment Opportunities within Your Reach.</li>
             <li>
@@ -98,12 +98,12 @@ export default function LandaHoldingBlack() {
             LANDA HOLDING
             <br />
           </span>
-          <span className="text-white text-3xl font-barlow font-normal">
+          <span className="text-white text-3xl font-condensed font-normal">
             Entrepreneur Center
             <br />
           </span>
         </div>
-        <div className="w-[353px] md:w-[434px]">
+        <div className="w-[300px] md:w-[434px]">
           <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
             <li className="list-disc">
               Global Networking Opportunities for Collaboration and Partnerships

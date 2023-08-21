@@ -7,9 +7,9 @@ export default function UpcomingEvents() {
       <div className="left-28 md:left-[185px] top-10 md:top-[29px] absolute text-neutral-800 text-2xl md:text-4xl font-normal font-gilda">
         UPCOMING EVENT
       </div>
-      <div className="md:pr-[53px] left-24 md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
+      <div className="md:pr-[53px] left-[20px] md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
         <div className="self-stretch justify-between items-center flex md:w-[1200px]">
-          <div className="w-[307px] justify-start items-start gap-16 flex">
+          <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
                 08
@@ -27,10 +27,10 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          {/* <Button text="Register" size="register" /> */}
+          <Button text="Register" size="register" addedClass="block" />
         </div>
         <div className="self-stretch justify-between items-center flex md:w-[1200px]">
-          <div className="w-[307px] justify-start items-start gap-16 flex">
+          <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
                 08
@@ -48,10 +48,10 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          {/* <Button text="Register" size="register" /> */}
+          <Button text="Register" size="register" addedClass="block" />
         </div>
         <div className="self-stretch justify-between items-center flex md:w-[1200px]">
-          <div className="flex items-center justify-start gap-16">
+          <div className="flex items-center justify-start gap-1 md:gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-right text-primary text-[40px] font-medium">
                 08
@@ -69,10 +69,10 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          {/* <Button text="Register" size="register" /> */}
+          <Button text="Register" size="register" addedClass="block" />
         </div>
       </div>
-      <div className="w-16 h-[313.88px] left-10 md:left-[121px] top-[52px] absolute">
+      <div className="w-16 h-[313.88px] left-10 md:left-[121px] top-[52px] absolute hidden md:block">
         <div className="w-[306px] h-0 left-0 top-[307px] absolute origin-top-left -rotate-90 bg-neutral-800 border border-neutral-800"></div>
         <div className="w-14 h-0 left-0 top-[103.03px] absolute bg-neutral-800 border border-neutral-800"></div>
         <div className="w-14 h-0 left-0 top-[305px] absolute bg-neutral-800 border border-neutral-800"></div>
