@@ -6,7 +6,7 @@ import prisma from '@/lib/prisma';
 interface FormData {
   firstName: string;
   lastName: string;
-  birthDate: string;
+  birthDate: Date;
   email: string;
   countryOfResidence: string;
   provinceOfResidence: string;
@@ -19,6 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     try {
       const formData: FormData = req.body;
+      formData.birthDate = new Date(formData.birthDate)
       console.log('Received form data:', formData);
       const savedFormData = await prisma.partnerMembership.create({ data:{
         birthDate :formData.birthDate,
