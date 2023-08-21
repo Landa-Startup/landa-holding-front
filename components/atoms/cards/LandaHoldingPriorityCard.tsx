@@ -9,9 +9,9 @@ export default function LandaHoldingPriorityCard({
   image: string;
 }) {
   return (
-    <div className="w-48 h-24 md:w-72 md:h-40 flex justify-center relative border border-primary overflow-hidden">
+    <div className="w-44 h-24 md:w-72 md:h-40 flex justify-center relative border border-primary overflow-hidden">
       <Image
-        className="absolute -right-9 -bottom-14 w-12 md:w-[150px] h-12 md:h-[150px] opacity-10"
+        className="absolute -right-2 md:-right-9 -bottom-2 md:-bottom-14 w-12 md:w-[150px] h-12 md:h-[150px] opacity-5"
         src={image}
         alt=""
         width={500}

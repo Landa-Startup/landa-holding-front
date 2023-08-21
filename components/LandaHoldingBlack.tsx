@@ -15,17 +15,17 @@ export default function LandaHoldingBalck() {
           </span>
         </div>
         <div>
-          <div className="w-[312px] md:h-[69px]">
+          <div className="w-[300px] md:h-[69px]">
             <span className="hidden md:block text-white font-barlow text-base font-normal tracking-[5.60px]">
               LANDA HOLDING
               <br />
             </span>
-            <span className="text-white text-3xl font-barlow font-normal">
+            <span className="text-white text-3xl font-condensed font-normal">
               Investment Center
               <br />
             </span>
           </div>
-          <div className="w-[353px] md:w-[434px]">
+          <div className="w-[323px] md:w-[434px]">
             <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
               <li>Global Investment Opportunities within Your Reach.</li>
               <li>
@@ -64,7 +64,7 @@ export default function LandaHoldingBalck() {
           </button>
         </div>
         <div>
-          <div className="w-[312px] md:h-[69px]">
+          <div className="w-[300px] md:h-[69px]">
             <span className="hidden md:block text-white font-barlow text-base font-normal tracking-[5.60px]">
               LANDA HOLDING
               <br />
