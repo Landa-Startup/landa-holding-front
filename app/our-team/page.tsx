@@ -19,7 +19,7 @@ export default function page() {
     {
       "image": '/static/images/our-team/Personals/a1.png',
       "position": "Manager",
-      "name": "Dr.Rasol Moradimehr"
+      "name": "Dr.Rasoul Moradimehr"
 
     },
     {
@@ -73,7 +73,7 @@ export default function page() {
     {
       "image": '/static/images/our-team/Personals/a10.png',
       "position": "front-end",
-      "name": "Mernoosh Haybati"
+      "name": "Mernoosh Heibati"
 
     },
 
@@ -86,7 +86,7 @@ export default function page() {
     {
       "image": '/static/images/our-team/Personals/a12.png',
       "position": "front-end",
-      "name": "Maryam Eskandara"
+      "name": "Maryam Eskandari"
 
     },
     {

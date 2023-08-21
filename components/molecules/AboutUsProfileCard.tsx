@@ -4,12 +4,14 @@ import Image from 'next/image';
 export default function AboutUsProfileCard({ image, title, description }: { image: string, title: string, description: string }) {
   return (
     <div className='container mb-6 shadow-lg bg-whiteGold w-fit h-fit'>
-      <Image
+      <a href=''>      
+        <Image
         alt='image'
         width={420}
         height={320}
         src={image}
       />
+      </a>
 
       <div className="flex items-center justify-center p-2 mt-6 space-x-2">
         <Image
@@ -39,11 +41,11 @@ export default function AboutUsProfileCard({ image, title, description }: { imag
       </div>
 
       <div>
-        <div className='ml-20'>
-          <p className="mt-2 text-xs not-italic font-medium leading-normal text-justify text-gray-700 font-Barlow ml-9">
+        <div className='text-center font-gilda'>
+          <p className="mt-2 text-xl  font-medium text-black font-Barlow">
             {title}
           </p>
-          <p className="text-gray-700 text-justify font-Barlow text-xs not-italic font-medium leading-normal mt-2 mb-[16px]">
+          <p className=" text-gray-700 font-Barlow text-xs font-normal mt-2 mb-[16px]">
             {description}
           </p>
         </div>
