@@ -5,12 +5,17 @@ export default function AboutUsProfile() {
   const cardsData = [
     {
       image: '/static/images/About/4-1 1.png',
-      title: 'DR Rasool Moradimehr',
+      title: 'Rasoul Moradimehr',
       description: 'Diaco department manager',
     },
     {
       image: '/static/images/About/4-1 1 (1).png',
-      title: 'DR Hadi Hasanpour',
+      title: 'Hadi Hasanpour',
+      description: 'Diaco department manager',
+    },
+    {
+      image: '/static/images/About/4-1 1 (2).png',
+      title: 'Enrico Brown',
       description: 'Diaco department manager',
     },
     // {
@@ -24,8 +29,8 @@ export default function AboutUsProfile() {
 
   return (
     <div className=''>
-      <div className='flex flex-col m-8 text-black justify-items-center items-center justify-center md:ps-24 md:ms-28'>
-        <p className='not-italic font-normal leading-normal tracking-widest font-Barlow-Condensed md:text-xl '> PROFESSIONALS</p>
+      <div className='flex flex-col m-8 text-black justify-items-center md:ps-24 md:ms-28'>
+        <p className=' font-normal leading-normal tracking-widest font-Barlow-Condensed md:text-xl '> PROFESSIONALS</p>
         <p className='text-3xl font-normal leading-normal font-gilda md:text-4xl '>Managing Directors</p>
       </div >
       

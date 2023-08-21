@@ -24,23 +24,19 @@ const AboutUscard = ({ title, text, image, reverse, description, link }: AboutUs
             </Link>          </div>
           <div className='col-span-1 md:pl-16'>
             {/* <img className="mb-2 md:w-[650px] md:h-[320px] w-[430px] h-[110px] md:mt-2 "
-             style={{
+              style={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} /> */}
-            <Image
-              alt={`Image for ${title}`}
-              src={image}
-              width={650}
-              height={320}
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-              className='mb-2 md:w-[650px] md:h-[320px] w-[430px] h-[110px] md:mt-2'
-            />
+            <div className='mb-2 md:w-[650px] md:h-[320px] w-[430px] h-[160px] md:mt-2' style={{ position: 'relative', overflow: 'hidden' }}>
+              <Image
+                alt={`Image for ${title}`}
+                src={image}
+                layout="fill" // Set layout to 'fill'
+                objectFit="cover" // Set objectFit to 'cover'
+              />
+            </div>
           </div>
         </div>
       )}
@@ -52,18 +48,14 @@ const AboutUscard = ({ title, text, image, reverse, description, link }: AboutUs
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} /> */}
-            <Image
-              alt={`Image for ${title}`}
-              src={image}
-              width={430}
-              height={357}
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-              className='mb-2 md:w-[589px] md:h-[357px] w-[430px] h-[150px] md:mt-2'
-            />
+            <div className='mb-2 md:w-[589px] md:h-[357px] w-[430px] h-[160px] md:mt-2' style={{ position: 'relative', overflow: 'hidden' }}>
+              <Image
+                alt={`Image for ${title}`}
+                src={image}
+                layout="fill" // Set layout to 'fill'
+                objectFit="cover" // Set objectFit to 'cover'
+              />
+            </div>
           </div>
           <div className='col-span-1 font-barlow leading-6 mt-1 text-black	px-[30px]'>
             <p className='text-3xl font-normal text-black mt-3 text-center font-gilda'>{title}</p>

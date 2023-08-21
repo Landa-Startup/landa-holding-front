@@ -49,13 +49,15 @@ export default function AboutUsProfileCard({ image, title, description }: { imag
         </Link>
       </div>
 
-      <div className='flex flex-col justify-center items-center'>
-        <p className="mt-2 text-xs not-italic font-medium leading-normal text-justify text-gray-700 font-Barlow">
-          {title}
-        </p>
-        <p className="text-gray-700 text-justify font-Barlow text-xs not-italic font-medium leading-normal mt-2 mb-[16px]">
-          {description}
-        </p>
+      <div>
+        <div className='text-center font-gilda'>
+          <p className="mt-2 text-xl  font-medium text-black font-Barlow">
+            {title}
+          </p>
+          <p className=" text-gray-700 font-Barlow text-xs font-normal mt-2 mb-[16px]">
+            {description}
+          </p>
+        </div>
       </div>
     </div>
   );
