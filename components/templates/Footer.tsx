@@ -9,7 +9,7 @@ export default function Footer() {
     return currentYear;
   }
   return (
-    <div className="flex flex-col bg-neutral-800 font-barlow p-10">
+    <div className="flex flex-col bg-neutral-800 font-barlow p-8">
       <div className="grid md:grid-cols-5 space-y-5 md:p-20">
         <div className="md:col-span-2 flex flex-col">
           <div className="h-[25px] text-justify text-white text-xl font-medium">
