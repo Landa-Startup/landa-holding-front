@@ -22,8 +22,8 @@ const AboutUscard = ({
   return (
     <>
       {reverse && (
-        <div className="flex flex-col-reverse leading-6 justify-items-center md:grid md:grid-cols-2  ">
-          <div className="px-[30px] md:px-0 leading-6 text-black md:ml-8 ">
+        <div className="flex flex-col-reverse leading-6 justify-items-center md:grid md:grid-cols-2 my-5">
+          <div className="px-[30px] md:px-0 leading-6 text-black md:ml-8 pb-5">
             <p className="font-gilda text-3xl md:pr-8 text-center mt-3">
               {title}
             </p>
