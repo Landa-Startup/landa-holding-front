@@ -2,6 +2,7 @@ import ContactUs from '@/components/academy/ContactUs';
 import Gallery from '@/components/academy/Gallery';
 import Scroll from '@/components/academy/Scroll';
 import Hero from '@/components/templates/Hero';
+import Image from 'next/image';
 import React from 'react';
 
 export default function page() {
@@ -45,9 +46,12 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
             stroke-linejoin="round"
           />
         </svg>
-        <img
-          className="md:w-96 md:h-56 md:ml-16 md:mr-20"
-          src="https://via.placeholder.com/389x221"
+        <Image
+          className="md:w-[389px] md:h-[221px] md:ml-16 md:mr-20"
+          width={389}
+          height={221}
+          alt="Academy"
+          src="/static/images/Academy/852fb15316648e6e7e6205f9cea01f80.png"
         />
       </div>
       <div className="md:w-[883px] gap-1 mx-auto flex">
@@ -80,12 +84,15 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
           Academy and gain access to our services, which include:
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-evenly my-10 mx-4">
-        <img
-          className="md:w-[553px] md:h-[298px] blur-sm"
-          src="https://via.placeholder.com/553x298"
+      <div className="flex flex-col md:flex-row justify-center my-10 mx-4">
+        <Image
+          className="md:w-[553px] md:h-[298px]"
+          width={553}
+          height={298}
+          alt="Academy"
+          src="/static/images/Academy/81ac32a7db6541deac380f65556aaca0.png"
         />
-        <div className="md:w-[559px] flex flex-col text-black text-base md:text-xl font-medium leading-10 tracking-wide justify-between">
+        <div className="md:w-[559px] flex flex-col text-black text-base md:text-xl font-medium leading-10 tracking-wide justify-between md:ml-9">
           <span>1.Personalized mentoring by industry professionals</span>
           <span>2.Co-working spaces</span>
           <span>3.Free participation at the next courses</span>
@@ -133,9 +140,12 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
             stroke-linejoin="round"
           />
         </svg>
-        <img
+        <Image
           className="md:w-96 md:h-56 md:mr-28 md:ml-32"
-          src="https://via.placeholder.com/370x221"
+          width={384}
+          height={224}
+          alt="Academy"
+          src="/static/images/Academy/3a3225cf5a0508f377effbd0acb03f5c.jpg"
         />
       </div>
       <div className="md:w-[512px] gap-1 flex mx-auto">
