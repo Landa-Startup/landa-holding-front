@@ -227,7 +227,7 @@ export default function page() {
           </a>
         ))}
       </div> */}
-      <div className="grid grid-cols-1 mt-10 gap-8 md:max-lg:mx-12 justify-items-center lg:px-28 pb-28 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-4 gap-4 mx-28 my-5">
         {persons.map((person, index) => (
           <PersonalTab key={index} image={person.image} position={person.position} name={person.name} />
         ))}
