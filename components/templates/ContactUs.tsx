@@ -16,7 +16,7 @@ export default function ContactUs() {
           enterprise. To become an affiliate, please complete our free
           questionnaire for our confidential review.
         </p>
-        <Button text="Visit Now" size="visit" />
+        <Button text="Visit Now" size="دخفؤisit" />
       </div>
       <div className="flex gap-20 md:h-full relative mt-5 md:my-0 md:mb-0">
         <div className="absolute top-0 w-full h-16 md:h-48 bg-gradient-to-b from-white via-transparent-white z-10" />
