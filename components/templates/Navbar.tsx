@@ -145,14 +145,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <Link href={'/'}>WORK WITH US</Link>
             <ul className={isMenuOpen ? 'menu open' : 'menu'}>
               <li>
-                <Link href={'/investor-registration'}>
-                  CENTER OF INVESTOR
-                </Link>
+                <Link href={'/investor-registration'}>CENTER OF INVESTOR</Link>
               </li>
               <li>
-                <Link href={'/partner-membership'}>
-                  OUR BUSINESS PARTNERS
-                </Link>
+                <Link href={'/partner-membership'}>OUR BUSINESS PARTNERS</Link>
               </li>
               <li>
                 <Link href={'/StartupsForm'}>STARTUPS</Link>

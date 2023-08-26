@@ -7,8 +7,8 @@ export default function UpcomingEvents() {
       <div className="left-28 md:left-[185px] top-10 md:top-[29px] absolute text-neutral-800 text-2xl md:text-4xl font-normal font-gilda">
         UPCOMING EVENT
       </div>
-      <div className="md:pr-[53px] left-[20px] md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
-        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
+      <div className="md:pr-[40px] left-[20px] md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
+        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
@@ -29,7 +29,7 @@ export default function UpcomingEvents() {
           </div>
           <Button text="Register" size="register" addedClass="block" />
         </div>
-        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
+        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
@@ -50,7 +50,7 @@ export default function UpcomingEvents() {
           </div>
           <Button text="Register" size="register" addedClass="block" />
         </div>
-        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
+        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="flex items-center justify-start gap-1 md:gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-right text-primary text-[40px] font-medium">
