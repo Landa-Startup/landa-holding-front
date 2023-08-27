@@ -79,7 +79,7 @@ export default function Scroll() {
             </svg>
           </button>
           <div
-            className="flex overflow-x-scroll md:overflow-x-hidden whitespace-nowrap mx-2 gap-4 md:gap-12 h-[225px] md:h-[486px]"
+            className="flex overflow-x-scroll md:overflow-x-hidden whitespace-nowrap mx-2 gap-4 md:gap-12 md:h-[486px]"
             ref={scrollContainerRef}
           >
             {cardData.map((card, index) => (
