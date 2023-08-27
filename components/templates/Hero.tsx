@@ -48,7 +48,7 @@ export default function Hero({
         ))} */}
 
         <div className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]">
-          {"Academy"}
+          {'Academy'}
           <br />
         </div>
 
