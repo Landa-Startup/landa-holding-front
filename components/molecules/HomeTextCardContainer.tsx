@@ -32,7 +32,7 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <svg
-        className="absolute right-0 md:hidden"
+        className="hidden absolute right-0 md:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="408"
         height="1408"
@@ -45,7 +45,7 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <svg
-        className="absolute md:hidden"
+        className="hidden absolute md:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="124"
         height="1407"
