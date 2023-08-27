@@ -1,20 +1,39 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
-export default function Navbar({ children }: { children: React.ReactNode }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+import React, { useState, useRef } from 'react';
 
+export default function Navbar({ children }: { children: React.ReactNode }) {
+  const drawerRef = useRef<HTMLInputElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const menuItems = [
+    { label: 'HOME', href: '/' },
+    { label: 'ABOUT', href: '/about' },
+    { label: 'CONTACT', href: '/contact' },
+    { label: 'OUR TEAM', href: '/our-team' },
+  ];
+  const submenuItems = [
+    { label: 'CENTER OF INVESTOR', href: '/investor-registration' },
+    { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
+    { label: 'STARTUPS', href: '/StartupsForm' },
+  ];
+  const handleLinkClick = (href: string) => {
+    if (!drawerRef.current) {
+      console.log(drawerRef)
+      return
+    };
+    drawerRef.current.click();
+  };
   return (
     <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={drawerRef} />
       <div className="drawer-content flex flex-col relative md:px-10">
         <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-          
+
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -52,71 +71,25 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
           <div className="hidden xl:flex-1 xl:flex justify-start ml-32 hover:font-white">
-            {' '}
-            {/* Center items in md mode */}
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
-              <li>
-                <Link
-                  href={'/'}
-                  className="text-primary hover:text-primary hover:bg-base-200"
-                >
-                  HOME
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={'/about'}
-                  className="hover:text-primary hover:bg-base-200"
-                >
-                  ABOUT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={'/contact'}
-                  className="hover:text-primary hover:bg-base-200"
-                >
-                  CONTACT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={'/our-team'}
-                  className="hover:text-primary hover:bg-base-200"
-                >
-                  OUR TEAM
-                </Link>
-              </li>
+              {menuItems.map((item) => (
+                <li key={item.label} onClick={() => handleLinkClick(item.href)}>
+                  <Link href={item.href} className="">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <details className="dropdown mb-32">
                   <summary className="m-1 hover:text-primary hover:bg-base-200">
                     WORK WITH US
                   </summary>
                   <ul className="p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64">
-                    <li>
-                      <Link
-                        href={'/investor-registration'}
-                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
-                      >
-                        CENTER OF INVESTOR
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={'/partner-membership'}
-                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
-                      >
-                        OUR BUSINESS PARTNERS
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={'/StartupsForm'}
-                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
-                      >
-                        STARTUPS
-                      </Link>
-                    </li>
+                    {submenuItems.map((item) => (
+                      <li key={item.label} onClick={() => handleLinkClick(item.href)}>
+                        <Link href={item.href} className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold">{item.label} </Link>
+                      </li>
+                    ))}
                   </ul>
                 </details>
               </li>
@@ -128,32 +101,21 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-base-200 text-xl">
-          <li>
-            <Link href={'/'} className="text-primary">
-              HOME
-            </Link>
-          </li>
-          <li>
-            <Link href={'/about'}>ABOUT</Link>
-          </li>
-          <li>
-            <Link href={'/contact'}>CONTACT</Link>
-          </li>
-          <li>
-            <Link href={'/our-team'}>OUR TEAM</Link>
-          </li>
+          {menuItems.map((item) => (
+            <li key={item.label} onClick={() => handleLinkClick(item.href)}>
+              <Link href={item.href} className="">
+                {item.label}
+              </Link>
+            </li>
+          ))}
           <li onClick={toggleMenu}>
             <Link href={'/'}>WORK WITH US</Link>
-            <ul className={isMenuOpen ? 'menu open' : 'menu'}>
-              <li>
-                <Link href={'/investor-registration'}>CENTER OF INVESTOR</Link>
-              </li>
-              <li>
-                <Link href={'/partner-membership'}>OUR BUSINESS PARTNERS</Link>
-              </li>
-              <li>
-                <Link href={'/StartupsForm'}>STARTUPS</Link>
-              </li>
+            <ul>
+              {submenuItems.map((item) => (
+                <li key={item.label} onClick={() => handleLinkClick(item.href)}>
+                  <Link href={item.href} className="">{item.label} </Link>
+                </li>
+              ))}
             </ul>
           </li>
         </ul>
