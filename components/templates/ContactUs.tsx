@@ -25,7 +25,7 @@ export default function ContactUs() {
           <div className="spin-image">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/azad.png"
+              src="/static/images/Home/universities/1.png"
               alt="t"
               width={100}
               height={100}
@@ -34,7 +34,7 @@ export default function ContactUs() {
           <div className="spin-image">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/uni.png"
+              src="/static/images/Home/universities/22.png"
               alt="t"
               width={100}
               height={100}
@@ -43,7 +43,7 @@ export default function ContactUs() {
           <div className="spin-image">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/amirkabir.png"
+              src="/static/images/Home/universities/3.png"
               alt="t"
               width={100}
               height={100}
@@ -52,7 +52,7 @@ export default function ContactUs() {
           <div className="spin-image">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/sharif.png"
+              src="/static/images/Home/universities/4.png"
               alt="t"
               width={100}
               height={100}
@@ -63,7 +63,7 @@ export default function ContactUs() {
           <div className="spin-image-top">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/azad.png"
+              src="/static/images/Home/universities/5.png"
               alt="t"
               width={100}
               height={100}
@@ -72,7 +72,7 @@ export default function ContactUs() {
           <div className="spin-image-top">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/uni.png"
+              src="/static/images/Home/universities/6.jpg"
               alt="t"
               width={100}
               height={100}
@@ -81,7 +81,7 @@ export default function ContactUs() {
           <div className="spin-image-top">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/amirkabir.png"
+              src="/static/images/Home/universities/7.jpg"
               alt="t"
               width={100}
               height={100}
@@ -90,7 +90,7 @@ export default function ContactUs() {
           <div className="spin-image-top">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/sharif.png"
+              src="/static/images/Home/universities/8.jpg"
               alt="t"
               width={100}
               height={100}
@@ -101,7 +101,7 @@ export default function ContactUs() {
           <div className="spin-image">
             <Image
               className="grayscale"
-              src="/static/images/Home/universities/azad.png"
+              src="/static/images/Home/universities/9.png"
               alt="t"
               width={100}
               height={100}
