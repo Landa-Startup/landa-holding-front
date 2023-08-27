@@ -84,7 +84,7 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
           d="M1.00588 0.0156249L1.00809 107.022M1.00428 207L1.00884 143.306L1.00809 107.022M1.00809 107.022L730.005 107.022"
           stroke="#3D5656"
           stroke-width="2"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
       </svg>
       <div className="flex flex-col">
@@ -151,7 +151,7 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
           d="M716.701 0.00672811L716.696 63.7017L716.697 99.9853M716.697 99.9853L0.00227398 99.985M716.697 99.9853L716.699 135.745M716.701 171.505L716.699 135.745M716.699 135.745L1043.59 135.745"
           stroke="#3D5656"
           stroke-width="2"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
       </svg>
       <div className="flex my-5 mx-8 justify-center">
@@ -182,7 +182,7 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
             d="M298.999 0.00508838L299.001 42.7611M298.998 230.245L298.998 173M298.998 173L299.002 134.229L299.003 85.5172L299.001 42.7611M298.998 173L488 173M299.001 42.7611L0.500977 42.7613"
             stroke="#3D5656"
             stroke-width="2"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
         </svg>
         <Image
