@@ -4,7 +4,7 @@ import AboutUsProfileCard from './AboutUsProfileCard';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image: '/static/images/About/4-1 1 (2).png',
+      image: '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
     },

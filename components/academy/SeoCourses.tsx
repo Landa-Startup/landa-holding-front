@@ -53,6 +53,7 @@ export default function SeoCourses() {
                   <a
                     role="button"
                     className="btn border-0 text-xl text-white bg-[#FDD30A] hover:bg-[#fcda30] rounded-none	px-14  mb-10"
+                    href='https://zarinp.al/526029'
                   >
                     Buy Now
                   </a>
@@ -94,7 +95,7 @@ export default function SeoCourses() {
                     education. Cultivating the right mindset necessitates a
                     correct form of instruction, which undoubtedly evolves from
                     initially mastering the skill and subsequently gaining
-                    experience through trial and error. <br/> The comprehensive SEO
+                    experience through trial and error. <br /> The comprehensive SEO
                     course conducted by Landa Academy and authored and recorded
                     by Iman Nasr. In the SEO Manager course, you will
                     effortlessly acquire all the skills required to become an
