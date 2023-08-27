@@ -32,16 +32,16 @@ export default function LatestStartups() {
       <div className="flex flex-col p-5 bg-stone-100 items-center text-center">
         <div className="flex-col justify-start items-start md:ml-32 md:self-start">
           <div className="flex flex-col items-center md:items-start">
-            <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[5.60px] font-condensed">
+            <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[3.5px] md:tracking-[5.60px] font-condensed">
               LANDA HOLDING
             </div>
-            <div className="text-primary text-5xl md:text-[64px] font-normal font-condensed">
+            <div className="text-primary text-4xl md:text-[64px] font-normal font-condensed tracking-[3.5px] md:tracking-[5.60px]">
               LATEST STARTUPS
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-2">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-10 mt-3 md:mt-10">
             {cardData.map((data, index) => (
               <LatestStartupsCard
                 key={index}

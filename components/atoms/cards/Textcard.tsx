@@ -22,7 +22,7 @@ export default function TextCard({
       <br />
       <Image
         className={`w-20 h-32 absolute ${index === 2 ? 'left-0 top-72' : 'right-0'
-          } -bottom-28 md:hidden`}
+          } -bottom-36 md:hidden`}
         src={image}
         alt={image}
         width={500}
