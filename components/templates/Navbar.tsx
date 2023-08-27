@@ -1,14 +1,14 @@
 'use client';
+import { cookies } from 'next/dist/client/components/headers';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const menuRef = useRef<HTMLDetailsElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
 
   const menuItems = [
     { label: 'HOME', href: '/' },
@@ -21,19 +21,27 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
   ];
-  const handleLinkClick = (href: string) => {
+  const handleLinkClick = () => {
+    // setIsMenuOpen(false);
     if (!drawerRef.current) {
       console.log(drawerRef)
       return
     };
     drawerRef.current.click();
   };
+  // const handleClickOutside = (event: Event) => {
+  //   if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //     setIsMenuOpen(false);
+  //   }
+  // }; 
+  // useEffect(() => {
+  //   document.addEventListener('click', handleClickOutside);
+  // }, []);
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={drawerRef} />
       <div className="drawer-content flex flex-col relative md:px-10">
         <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -70,23 +78,24 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
           </div>
-          <div className="hidden xl:flex-1 xl:flex justify-start ml-32 hover:font-white">
+          <div className="hidden xl:flex-1 xl:flex justify-start ml-32">
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               {menuItems.map((item) => (
-                <li key={item.label} onClick={() => handleLinkClick(item.href)}>
-                  <Link href={item.href} className="">
+                <li className='text-2xl' key={item.label} >
+                  <Link href={item.href} className="hover:bg-white">
                     {item.label}
                   </Link>
                 </li>
               ))}
               <li>
                 <details className="dropdown mb-32">
-                  <summary className="m-1 hover:text-primary hover:bg-base-200">
+                  <summary className="text-2xl hover:text-primary hover:bg-base-200" onClick={() => setIsMenuOpen(true)}>
                     WORK WITH US
                   </summary>
-                  <ul className="p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64">
+                  <ul className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
+                    }`}>
                     {submenuItems.map((item) => (
-                      <li key={item.label} onClick={() => handleLinkClick(item.href)}>
+                      <li className='text-2xl' key={item.label} onClick={() => setIsMenuOpen(false)}>
                         <Link href={item.href} className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold">{item.label} </Link>
                       </li>
                     ))}
@@ -102,17 +111,17 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-base-200 text-xl">
           {menuItems.map((item) => (
-            <li key={item.label} onClick={() => handleLinkClick(item.href)}>
+            <li key={item.label} onClick={() => handleLinkClick()}>
               <Link href={item.href} className="">
                 {item.label}
               </Link>
             </li>
           ))}
-          <li onClick={toggleMenu}>
+          <li>
             <Link href={'/'}>WORK WITH US</Link>
             <ul>
               {submenuItems.map((item) => (
-                <li key={item.label} onClick={() => handleLinkClick(item.href)}>
+                <li key={item.label} onClick={() => handleLinkClick()}>
                   <Link href={item.href} className="">{item.label} </Link>
                 </li>
               ))}
