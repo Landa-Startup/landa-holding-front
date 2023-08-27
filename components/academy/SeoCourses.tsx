@@ -53,7 +53,7 @@ export default function SeoCourses() {
                   <a
                     role="button"
                     className="btn border-0 text-xl text-white bg-[#FDD30A] hover:bg-[#fcda30] rounded-none	px-14  mb-10"
-                    href='https://zarinp.al/526029'
+                    href='https://zarinp.al/527792'
                   >
                     Buy Now
                   </a>
