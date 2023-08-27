@@ -19,7 +19,7 @@ export default function PersonalTab({
       <div>
         <div className=" ">
           <div
-            className="w-[270px] h-[300px]"
+            className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm"
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
