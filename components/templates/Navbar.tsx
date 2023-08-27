@@ -14,22 +14,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col relative md:px-10">
         <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-          <div className="px-2 m-2 text-left h-full flex justify-start items-start ">
-            <Link href="/">
-              <div className="flex flex-col md:flex-row items-center">
-                <Image
-                  className="w-7 h-8 md:w-12 md:h-14"
-                  src={'static/images/Logo.svg'}
-                  alt="Logo"
-                  width={50}
-                  height={50}
-                />
-                <span className="text-primary text-[7.5px] md:text-xl tracking-[0.375px] font-bold">
-                  LANDA
-                </span>
-              </div>
-            </Link>
-          </div>
+          
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -49,6 +34,22 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 ></path>
               </svg>
             </label>
+          </div>
+          <div className="px-2 m-2 text-left h-full flex justify-start items-start ">
+            <Link href="/">
+              <div className="flex flex-col md:flex-row items-center">
+                <Image
+                  className="w-7 h-8 md:w-12 md:h-14"
+                  src={'static/images/Logo.svg'}
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                />
+                <span className="text-primary text-[7.5px] md:text-xl tracking-[0.375px] font-bold">
+                  LANDA
+                </span>
+              </div>
+            </Link>
           </div>
           <div className="hidden xl:flex-1 xl:flex justify-start ml-32 hover:font-white">
             {' '}
@@ -145,14 +146,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <Link href={'/'}>WORK WITH US</Link>
             <ul className={isMenuOpen ? 'menu open' : 'menu'}>
               <li>
-                <Link href={'/investor-registration'}>
-                  CENTER OF INVESTOR
-                </Link>
+                <Link href={'/investor-registration'}>CENTER OF INVESTOR</Link>
               </li>
               <li>
-                <Link href={'/partner-membership'}>
-                  OUR BUSINESS PARTNERS
-                </Link>
+                <Link href={'/partner-membership'}>OUR BUSINESS PARTNERS</Link>
               </li>
               <li>
                 <Link href={'/StartupsForm'}>STARTUPS</Link>

@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 export default function AboutUsProfileCard({ image, title, description }: { image: string, title: string, description: string }) {
   return (
-    <div className='container mb-6 shadow-lg bg-whiteGold w-fit h-fit'>
+    <div className='container mb-6 shadow-lg bg-whiteGold mx-auto w-fit h-fit border'>
       <Link href="#">
         <Image
           alt='image'
-          width={420}
-          height={320}
+          width={266}
+          height={254}
           src={image}
         />
       </Link>
