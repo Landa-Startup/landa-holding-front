@@ -71,14 +71,17 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
           <div className="justify-start items-start gap-2.5 flex">
-            <div className="w-5 h-5 md:w-10 md:h-10 border border-stone-100" />
+            <div className="relative w-5 h-5 md:w-10 md:h-10">
+              <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
+              <div className="w-full h-full border border-stone-100" />
+            </div>
             <svg
-              className="absolute text-white"
+              className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
@@ -127,14 +130,17 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
           <div className="justify-start items-start gap-2.5 flex">
-            <div className="w-5 h-5 md:w-10 md:h-10 border border-stone-100" />
+            <div className="relative w-5 h-5 md:w-10 md:h-10">
+              <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
+              <div className="w-full h-full border border-stone-100" />
+            </div>
             <svg
-              className="absolute text-white"
+              className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"

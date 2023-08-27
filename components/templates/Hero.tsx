@@ -29,7 +29,7 @@ export default function Hero({
       }}
       className="h-[230px] md:h-[740px] relative"
     >
-      <div className="flex flex-col items-center justify-center h-full space-y-5">
+      <div className="flex flex-col items-center justify-center h-screen space-y-5">
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
@@ -48,7 +48,7 @@ export default function Hero({
         ))} */}
 
         <div className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]">
-          {"Academy"}
+          {'Academy'}
           <br />
         </div>
 
