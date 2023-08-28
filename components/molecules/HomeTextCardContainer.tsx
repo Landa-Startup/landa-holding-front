@@ -68,6 +68,7 @@ export default function HomeTextCardContainer({
           image="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
           show={show}
           index={index}
+          link='/'
         />
         <ImageCard
           title={title}

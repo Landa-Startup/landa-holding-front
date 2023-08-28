@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[890px] md:h-[590px] py-10">
+    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-10">
       <svg
         className="absolute left-[640px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className="h-[376px] flex flex-col items-center justify-between md:items-start">
+      <div className="h-[376px] flex flex-col items-center mt-5 justify-between md:items-start">
         <div className="flex flex-col items-center">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
@@ -55,7 +55,7 @@ export default function LandaHoldingBlack() {
           </span>
         </div>
         <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow">
+          <ul className="text-white text-sm font-normal leading-8 list-disc pl-4 font-barlow">
             <li>Global Investment Opportunities within Your Reach.</li>
             <li>
               Access to a Network of Successful Entrepreneurs and Investors.
@@ -95,7 +95,7 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center md:items-start md:mt-5 space-y-2">
+      <div className="flex flex-col items-center md:items-start mt-11 md:mt-5 space-y-2">
         <div className="flex flex-col items-center">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
@@ -107,7 +107,7 @@ export default function LandaHoldingBlack() {
           </span>
         </div>
         <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
+          <ul className="text-white text-sm font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
             <li className="list-disc">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>

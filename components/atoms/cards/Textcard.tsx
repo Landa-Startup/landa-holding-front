@@ -8,30 +8,30 @@ export default function TextCard({
   image,
   show,
   index,
-}: // link
-{
+  link,
+}: {
   text: string;
   image: string;
   show: boolean;
   index: number;
-  // link: string
+  link: string;
 }) {
   return show ? (
     <div className="flex flex-col relative font-barlow items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
       {text}
       <br />
       <Image
-        className={` object-top object-cover ${
-          index === 2 ? 'w-24 h-32 absolute left-0 top-72' : 'w-64 h-28 right-0 -top-5'
+        className={`w-64 h-28 object-top object-cover mt-2 ${
+          index === 2 ? 'w-64 h-28 left-0 top-72 mt-2' : 'right-0'
         } md:hidden`}
         src={image}
         alt={image}
         width={500}
         height={500}
       />
-      {/* <Link href={link}>
+      <Link href={link}>
         <Button text="Visit Now" size="visit" />
-      </Link> */}
+      </Link>
     </div>
   ) : (
     <div className="flex flex-col relative font-barlow items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
@@ -44,9 +44,9 @@ export default function TextCard({
         width={500}
         height={500}
       />
-      {/* <Link href={link}>
+      <Link href={link}>
         <Button text="Visit Now" size="visit" />
-      </Link> */}
+      </Link>
     </div>
   );
 }
