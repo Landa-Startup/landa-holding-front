@@ -19,34 +19,46 @@ export default function Scroll() {
     {
       title: 'Business',
       image: '/static/images/Academy/courses/Rectangle 3014 (2).png',
+      date: '27/Dec/2023',
     },
     {
       title: 'AI webinar',
       image: '/static/images/Academy/courses/Rectangle 3011.png',
+      date: '27/Dec/2023',
     },
     {
       title: 'SEO course',
       image: '/static/images/Academy/courses/Rectangle 3014.png',
+      date: '27/Dec/2023',
+
       active: true,
     },
     {
       title: 'Python course',
       image: '/static/images/Academy/courses/Rectangle 3016.png',
+      date: '27/Dec/2023',
     },
     {
       title: 'UX Workshop',
       image: '/static/images/Academy/courses/Rectangle 3015.png',
+      date: '27/Dec/2023',
     },
     {
       title: 'Icdl workshop',
       image: '/static/images/Academy/courses/Rectangle 3011 (1).png',
+      date: '27/Dec/2023',
     },
     {
       title: 'Front-end course',
       image:
         '/static/images/Academy/courses/027fae0dc46b4eacee7dbeeda27b2fdb.jpg',
+      date: '27/Dec/2023',
     },
-    { title: 'Digital marketing', image: '/static/images/Academy/courses/' },
+    {
+      title: 'Digital marketing',
+      image: '/static/images/Academy/courses/',
+      date: '27/Dec/2023',
+    },
   ];
 
   return (
@@ -87,6 +99,7 @@ export default function Scroll() {
                 key={index}
                 title={card.title}
                 image={card.image}
+                date={card.date}
                 active={card.active}
               />
             ))}
