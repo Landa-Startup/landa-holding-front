@@ -8,8 +8,8 @@ export default function TextCard({
   image,
   show,
   index,
-  // link
-}: {
+}: // link
+{
   text: string;
   image: string;
   show: boolean;
@@ -21,8 +21,9 @@ export default function TextCard({
       {text}
       <br />
       <Image
-        className={`w-20 h-32 absolute ${index === 2 ? 'left-0 top-72' : 'right-0'
-          } -bottom-36 md:hidden`}
+        className={` object-top object-cover ${
+          index === 2 ? 'w-24 h-32 absolute left-0 top-72' : 'w-64 h-28 right-0 -top-5'
+        } md:hidden`}
         src={image}
         alt={image}
         width={500}

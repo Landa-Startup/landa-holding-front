@@ -60,7 +60,7 @@ export default function HomeTextCardContainer({
       <div
         className={`flex flex-col-reverse ${
           reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-        } items-center justify-around px-14 py-24 font-gilda bg-whiteGold p-8`}
+        } items-center justify-around px-11 py-6 md:px-14 md:py-24 font-gilda bg-whiteGold`}
         id="LandaHolding"
       >
         <TextCard
