@@ -107,33 +107,6 @@ export default function ContactUs() {
               height={100}
             />
           </div>
-          <div className="spin-image">
-            <Image
-              className="grayscale"
-              src="/static/images/Home/universities/uni.png"
-              alt="t"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="spin-image">
-            <Image
-              className="grayscale"
-              src="/static/images/Home/universities/amirkabir.png"
-              alt="t"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="spin-image">
-            <Image
-              className="grayscale"
-              src="/static/images/Home/universities/sharif.png"
-              alt="t"
-              width={100}
-              height={100}
-            />
-          </div>
         </div>
       </div>
     </div>
