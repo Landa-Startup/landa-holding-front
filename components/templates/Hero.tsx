@@ -28,7 +28,7 @@ export default function Hero({
     if (Array.isArray(titles)) {
       const interval = setInterval(() => {
         setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-      }, 3000);
+      }, 2000);
 
       return () => clearInterval(interval);
     }
