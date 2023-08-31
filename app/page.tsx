@@ -24,6 +24,17 @@ const cardData = [
     show: true,
     index: 1,
     link: '/investment-registration',
+    images: [
+      {
+        src: "/static/images/Home/Investment/male-female-business-people-working-tablet-office.png",
+        alt: ""
+      },
+      {
+        src: "/static/images/Home/Investment/Rectangle 1412.png",
+        alt: ""
+      }
+    ]
+    
   },
   {
     title: 'Acceleration',
@@ -32,6 +43,16 @@ const cardData = [
     show: true,
     index: 2,
     link: '/startupsForm',
+    images: [
+      {
+        src: "/static/images/Home/Acceleration/1.png",
+        alt: "Landa Holding Acceleration Center"
+      },
+      {
+        src: "/static/images/Home/Acceleration/2.png",
+        alt: "Landa Holding Acceleration Center"
+      }
+    ]
   },
   {
     title: 'Academy',
@@ -40,6 +61,16 @@ const cardData = [
     show: false,
     index: 3,
     link: '/academy',
+    images: [
+      {
+        src: "/static/images/Home/Investment/male-female-business-people-working-tablet-office.png",
+        alt: ""
+      },
+      {
+        src: "/static/images/Home/Investment/Rectangle 1412.png",
+        alt: ""
+      }
+    ]
   },
 ];
 
@@ -63,6 +94,7 @@ export default function page() {
           show={data.show}
           index={data.index}
           link={data.link}
+          images={data.images}
         />
       ))}
       <LandaHoldingBlack />

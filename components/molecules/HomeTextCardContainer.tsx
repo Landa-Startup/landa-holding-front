@@ -9,6 +9,7 @@ export default function HomeTextCardContainer({
   show,
   index,
   link,
+  images,
 }: {
   title: string;
   text: string;
@@ -16,6 +17,7 @@ export default function HomeTextCardContainer({
   show: boolean;
   index: number;
   link: string;
+  images: Array<{ src: string; alt: string }>;
 }) {
   return (
     <div>
@@ -66,15 +68,15 @@ export default function HomeTextCardContainer({
       >
         <TextCard
           text={text}
-          image="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
+          image={images[0].src}
           show={show}
           index={index}
           link={link}
         />
         <ImageCard
           title={title}
-          imageOne="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
-          imageTwo="/static/images/Home/Investment/Rectangle 1412.png"
+          imageOne={images[0].src}
+          imageTwo={images[1].src}
         />
       </div>
     </div>

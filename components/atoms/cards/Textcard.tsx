@@ -21,9 +21,8 @@ export default function TextCard({
       {text}
       <br />
       <Image
-        className={`w-64 h-28 object-top object-cover mt-2 ${
-          index === 2 ? 'w-64 h-28 left-0 top-72 mt-2' : 'right-0'
-        } md:hidden`}
+        className={`w-64 h-64 object-top object-fit mt-2 ${index === 2 ? 'w-64 h-28 left-0 top-72 mt-2' : 'right-0'
+          } md:hidden`}
         src={image}
         alt={image}
         width={500}
