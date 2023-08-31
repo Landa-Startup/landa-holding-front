@@ -31,6 +31,7 @@ const cardData = [
     reverse: true,
     show: true,
     index: 2,
+    link: '/startupsForm',
   },
   {
     title: 'Academy',
@@ -38,6 +39,7 @@ const cardData = [
     reverse: false,
     show: false,
     index: 3,
+    link: '/academy',
   },
 ];
 
@@ -60,6 +62,7 @@ export default function page() {
           reverse={data.reverse}
           show={data.show}
           index={data.index}
+          link={data.link}
         />
       ))}
       <LandaHoldingBlack />

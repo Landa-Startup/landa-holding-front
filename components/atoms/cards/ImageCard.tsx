@@ -22,7 +22,7 @@ export default function ImageCard({
         <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
         <div className="grid-cols-2 gap-2 md:mt-14 hidden md:grid">
           <Image
-            className="w-64 md:mt-32 h-96"
+            className="w-64 md:mt-32 h-96 object-cover"
             src={imageOne}
             alt={imageOne}
             width={500}

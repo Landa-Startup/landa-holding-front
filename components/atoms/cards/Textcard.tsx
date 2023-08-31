@@ -29,9 +29,9 @@ export default function TextCard({
         width={500}
         height={500}
       />
-      <Link href={link}>
+      {/* <Link href={link}>
         <Button text="Visit Now" size="visit" />
-      </Link>
+      </Link> */}
     </div>
   ) : (
     <div className="flex flex-col relative font-barlow items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
@@ -44,9 +44,9 @@ export default function TextCard({
         width={500}
         height={500}
       />
-      <Link href={link}>
+      {/* <Link href={link}>
         <Button text="Visit Now" size="visit" />
-      </Link>
+      </Link> */}
     </div>
   );
 }

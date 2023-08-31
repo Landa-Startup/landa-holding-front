@@ -8,12 +8,14 @@ export default function HomeTextCardContainer({
   reverse,
   show,
   index,
+  link,
 }: {
   title: string;
   text: string;
   reverse: boolean;
   show: boolean;
   index: number;
+  link: string;
 }) {
   return (
     <div>
@@ -58,9 +60,8 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <div
-        className={`flex flex-col-reverse ${
-          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-        } items-center justify-around px-11 py-6 md:px-14 md:py-24 font-gilda bg-whiteGold`}
+        className={`flex flex-col-reverse ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+          } items-center justify-around px-11 py-6 md:px-14 md:py-24 font-gilda bg-whiteGold`}
         id="LandaHolding"
       >
         <TextCard
@@ -68,7 +69,7 @@ export default function HomeTextCardContainer({
           image="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
           show={show}
           index={index}
-          link='/'
+          link={link}
         />
         <ImageCard
           title={title}

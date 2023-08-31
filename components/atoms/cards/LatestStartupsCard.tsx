@@ -17,6 +17,7 @@ export default function LatestStartupsCard({
     <Link
       className="w-[264px] md:w-[350px] h-[254px] md:h-[468px] relative border border-black group hover:shadow-lg"
       href={link}
+      target="_blank"
     >
       <div className="w-[264px] md:w-[350px] h-[254px] md:h-[468px] left-0 top-0 absolute" />
       <div className="w-[264px] md:w-[350px] h-[254px] md:h-[468px] left-0 top-0 absolute" />
