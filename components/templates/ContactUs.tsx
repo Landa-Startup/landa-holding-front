@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Button from '../atoms/Button';
+import Link from 'next/link';
 
 export default function ContactUs() {
   // TODO: use daisyUI for styling
@@ -9,14 +10,12 @@ export default function ContactUs() {
       {/* TODO: show images with javascript map */}
       <div className="md:w-[515px] md:h-[476px] flex flex-col items-center justify-center px-12 py-10">
         <p className="text-justify">
-          At Immigration.ca we welcome strategic affiliations with international
-          firms and qualified influencers alike. As an approved affiliate you
-          will receive co-branded support and future representations from
-          Canada’s leading immigration law firm and international recruitment
-          enterprise. To become an affiliate, please complete our free
-          questionnaire for our confidential review.
+          At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape.
+          To become an affiliate, please complete our free questionnaire for our confidential review.
         </p>
-        <Button text="Visit Now" size="دخفؤisit" />
+        <Link href={'/partner-membership'} >
+          <Button text="Join Us" size='' />
+        </Link>
       </div>
       <div className="flex gap-20 md:h-full relative mt-5 md:my-0 md:mb-0">
         <div className="absolute top-0 w-full h-16 md:h-48 bg-gradient-to-b from-white via-transparent-white z-10" />
@@ -24,7 +23,7 @@ export default function ContactUs() {
         <div className="flex flex-col justify-around">
           <div className="spin-image">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/1.png"
               alt="t"
               width={100}
@@ -33,7 +32,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/22.png"
               alt="t"
               width={100}
@@ -42,7 +41,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/3.png"
               alt="t"
               width={100}
@@ -51,7 +50,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/4.png"
               alt="t"
               width={100}
@@ -62,7 +61,7 @@ export default function ContactUs() {
         <div className="flex flex-col justify-around">
           <div className="spin-image-top">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/5.png"
               alt="t"
               width={100}
@@ -71,7 +70,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image-top">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/6.jpg"
               alt="t"
               width={100}
@@ -80,7 +79,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image-top">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/7.jpg"
               alt="t"
               width={100}
@@ -89,7 +88,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image-top">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/8.jpg"
               alt="t"
               width={100}
@@ -100,7 +99,7 @@ export default function ContactUs() {
         <div className="flex flex-col justify-around">
           <div className="spin-image">
             <Image
-              className="grayscale"
+              className=""
               src="/static/images/Home/universities/9.png"
               alt="t"
               width={100}

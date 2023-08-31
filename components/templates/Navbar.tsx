@@ -95,7 +95,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                   <ul className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
                     }`}>
                     {submenuItems.map((item) => (
-                      <li className='text-2xl' key={item.label} onClick={() => setIsMenuOpen(false)}>
+                      <li className='text-xl' key={item.label} onClick={() => setIsMenuOpen(false)}>
                         <Link href={item.href} className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold">{item.label} </Link>
                       </li>
                     ))}

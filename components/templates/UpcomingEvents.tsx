@@ -27,7 +27,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button text="Register" size="register" addedClass="block" />
+          {/* <Button text="Register" size="register" addedClass="block" /> */}
         </div>
         <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
@@ -48,7 +48,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button text="Register" size="register" addedClass="block" />
+          {/* <Button text="Register" size="register" addedClass="block" /> */}
         </div>
         <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="flex items-center justify-start gap-1 md:gap-16">
@@ -69,7 +69,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button text="Register" size="register" addedClass="block" />
+          {/* <Button text="Register" size="register" addedClass="block" /> */}
         </div>
       </div>
       <div className="w-16 h-[313.88px] left-10 md:left-[121px] top-[52px] absolute hidden md:block">
