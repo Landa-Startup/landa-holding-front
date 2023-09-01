@@ -18,7 +18,7 @@ export default function ContactUs() {
             placeholder="First Name"
           ></input>
           <input
-            className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex my-4"
+            className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
             placeholder="Last Name"
           ></input>
         </div>
