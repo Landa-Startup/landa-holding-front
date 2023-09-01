@@ -3,7 +3,7 @@ import Button from '../atoms/Button';
 
 export default function UpcomingEvents() {
   return (
-    <div className="h-[480px] relative bg-stone-100">
+    <div className="h-[480px] relative bg-whiteGold">
       <div className="left-20 md:left-[185px] top-10 md:top-[29px] absolute text-neutral-800 text-2xl md:text-4xl font-normal font-gilda">
         UPCOMING EVENT
       </div>
@@ -20,7 +20,7 @@ export default function UpcomingEvents() {
             </div>
             <div className="inline-flex flex-col items-start justify-start gap-2">
               <div className="text-3xl font-medium text-right text-neutral-800 font-condensed">
-                Entrepreneur
+                Investment
               </div>
               <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
                 MONDAY/ 2023
