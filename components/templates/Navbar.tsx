@@ -20,6 +20,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'CENTER OF INVESTOR', href: '/investor-registration' },
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
+    { label: 'APPLY JOB', href: '/job-form' },
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
