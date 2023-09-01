@@ -15,34 +15,39 @@ export default function Gallery() {
           <Image
             width={389}
             height={243}
+            quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
+            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
             src="/static/images/Academy/gallery/Rectangle 3024.png"
           />
           <Image
             width={291}
             height={243}
+            quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
+            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
             src="/static/images/Academy/gallery/Rectangle 3025.png"
           />
           <Image
             width={493}
             height={243}
+            quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
+            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
             src="/static/images/Academy/gallery/Rectangle 3026.png"
           />
           <Image
             width={489}
             height={243}
+            quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
+            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
             src="/static/images/Academy/gallery/Rectangle 3027.png"
           />
           <Image
             width={389}
             height={243}
+            quality={100}
             alt="Gallery Photo"
             className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
             src="/static/images/Academy/gallery/Rectangle 3028.png"
@@ -50,8 +55,9 @@ export default function Gallery() {
           <Image
             width={287}
             height={243}
+            quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
+            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
             src="/static/images/Academy/gallery/Rectangle 3029.png"
           />
         </div>
