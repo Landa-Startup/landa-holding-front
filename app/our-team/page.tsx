@@ -194,7 +194,7 @@ export default function page() {
           </a>
         ))}
       </div> */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:mx-28 my-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:px-28 py-5 bg-[#FAFAFA]">
         {persons.map((person, index) => (
           <PersonalTab
             key={index}

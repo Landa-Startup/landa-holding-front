@@ -29,7 +29,7 @@ export default function LatestStartups() {
 
   return (
     <div>
-      <div className="flex flex-col p-5 bg-stone-100 items-center text-center">
+      <div className="flex flex-col p-5 bg-whiteGold items-center text-center">
         <div className="flex-col justify-start items-start md:ml-32 md:self-start">
           <div className="flex flex-col items-center md:items-start">
             <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[3.5px] md:tracking-[5.60px] font-condensed">
