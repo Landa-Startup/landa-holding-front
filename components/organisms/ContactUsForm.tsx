@@ -58,13 +58,15 @@ export default function ContactUsForm() {
       console.error('Error sending form data:', error);
       const timeout = setTimeout(() => {
         setShowNotification(false);
-      }, 10000); // 10 seconds in milliseconds  
+      }, 10000); // 10 seconds in milliseconds
     }
   };
 
   return (
     <div>
-      <h2 className="text-5xl font-light text-center">Get in touch</h2>
+      <h2 className="text-5xl font-light text-center font-gilda">
+        Get in touch
+      </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-1 my-6 gap-y-5 gap-x-6 md:grid-cols-2">
           <div className="flex flex-col">
@@ -79,7 +81,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Name*"
-              className={`w-full input input-bordered drop-shadow-lg ${
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
                 errors.name ? 'border-red-500' : ''
               }`}
             />
@@ -101,7 +103,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Email*"
-              className={`w-full input input-bordered drop-shadow-lg ${
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
                 errors.email ? 'border-red-500' : ''
               }`}
             />
@@ -123,7 +125,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Number*"
-              className={`w-full input input-bordered drop-shadow-lg ${
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
                 errors.number ? 'border-red-500' : ''
               }`}
             />
@@ -145,7 +147,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Subject*"
-              className={`w-full input input-bordered drop-shadow-lg ${
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
                 errors.subject ? 'border-red-500' : ''
               }`}
             />
@@ -160,7 +162,7 @@ export default function ContactUsForm() {
             {...register('message', { required: 'Message is required.' })}
             rows={4}
             cols={20}
-            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg ${
+            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${
               errors.message ? 'border-red-500' : ''
             }`}
             placeholder="Message*"
@@ -172,12 +174,21 @@ export default function ContactUsForm() {
           )}
         </div>
         <div className="text-center">
-          <button type="submit" className="mt-3 btn btn-wide btn-neutral" disabled={send}>
-          {send ? 'Submitting ....' : 'Submit'}
+          <button
+            type="submit"
+            className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
+            disabled={send}
+          >
+            {send ? 'Submitting ....' : 'Submit'}
           </button>
         </div>
       </form>
-      <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
+      <NotificationSendForm
+        submitting={isSubmitting}
+        success={isSuccess}
+        sendStatus={send}
+        show={showNotification}
+      />
     </div>
   );
 }
