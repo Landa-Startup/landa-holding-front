@@ -45,7 +45,7 @@ export default function LandaHoldingBlack() {
         />
       </svg>
       <div className="h-[376px] flex flex-col items-center mt-5 justify-between md:items-start">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-start">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -73,14 +73,13 @@ export default function LandaHoldingBlack() {
           </ul>
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
-
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
           <div className="justify-start items-start gap-2.5 flex">
             <div className="relative w-5 h-5 md:w-10 md:h-10">
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
-              <div className="w-full h-full border border-stone-100" >
+              <div className="w-full h-full border border-stone-100">
                 <svg
                   className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,12 +94,11 @@ export default function LandaHoldingBlack() {
                 </svg>
               </div>
             </div>
-
           </div>
         </button>
       </div>
       <div className="flex flex-col items-center md:items-start mt-11 md:mt-5 space-y-2">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-start">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -141,7 +139,7 @@ export default function LandaHoldingBlack() {
           <div className="justify-start items-start gap-2.5 flex">
             <div className="relative w-5 h-5 md:w-10 md:h-10">
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
-              <div className="w-full h-full border border-stone-100" >
+              <div className="w-full h-full border border-stone-100">
                 <svg
                   className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
                   xmlns="http://www.w3.org/2000/svg"

@@ -62,8 +62,9 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <div
-        className={`flex flex-col-reverse ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-          } items-center justify-around px-11 py-6 md:px-14 md:py-24 font-gilda bg-whiteGold`}
+        className={`flex flex-col-reverse ${
+          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+        } items-center justify-around px-11 py-6 md:px-14 md:py-24 font-gilda bg-whiteGold`}
         id="LandaHolding"
       >
         <TextCard
