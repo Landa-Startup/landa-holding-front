@@ -170,6 +170,17 @@ model StartupsForm {
   updatedAt               DateTime  @updatedAt
 }
 
+model JobForm {
+  id          Int      @id @default(autoincrement())
+  firstName   String
+  lastName    String
+  email       String
+  phoneNumber String
+  cvFile      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
 enum Type {
   IDEA
   MVP
@@ -177,6 +188,7 @@ enum Type {
   FisrtSale
   SaleDevelopment
 }
+
 model product {
   id     Int    @id @default(autoincrement())
   name   String
