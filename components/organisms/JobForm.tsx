@@ -2,12 +2,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
-import Select from './base/Select';
-import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
 import { JobFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
-import TextArea from '../atoms/TextArea';
-import { PartnerMembership } from '@prisma/client';
 
 export default function JobForm() {
     const initialJobFormData: JobFormData = {
@@ -169,19 +165,21 @@ export default function JobForm() {
 
                         </div>
                         <div className='col-span-1'>
+                            <label htmlFor="cvFileInput">CV File:</label>
                             <input
                                 type="file"
+                                id="cvFileInput"
                                 className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
                                 {...register("cvFile", {
                                     required: 'CV File is Required',
                                 })}
                                 onChange={handleChangeFile} // must use onChange event handler after register
                             />
-                            {/* {errors["cvFile"] && (
+                            {errors["cvFile"] && (
                                 <span className="mt-4 text-sm text-yellow-500">
-                                    {errors["cvFile"].message}
+                                    {errors["cvFile"].message?.toString()}
                                 </span>
-                            )} */}
+                            )}
                         </div>
 
                     </div>
