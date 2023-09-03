@@ -4,7 +4,8 @@ import AboutUsProfileCard from './AboutUsProfileCard';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image: '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
+      image:
+        '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
     },
@@ -23,13 +24,12 @@ export default function AboutUsProfile() {
   return (
     <div className="bg-[#FAFAFA]">
       <div className="flex flex-col mx-8 py-5 text-black justify-items-center md:ps-24 md:ms-28">
-        <p className=" font-normal leading-normal tracking-widest font-Barlow-Condensed md:text-xl ">
-          {' '}
+        <h2 className="text-xl font-normal leading-normal tracking-widest font-Barlow-Condensed md:text-2xl">
           PROFESSIONALS
-        </p>
-        <p className="text-3xl font-normal leading-normal font-gilda md:text-4xl ">
+        </h2>
+        <h1 className="text-3xl font-normal leading-normal font-gilda md:text-4xl">
           Managing Directors
-        </p>
+        </h1>
       </div>
 
       <div className="flex flex-col mx-8 md:grid md:grid-cols-3 md:gap-8 md:mx-20 md:px-32">

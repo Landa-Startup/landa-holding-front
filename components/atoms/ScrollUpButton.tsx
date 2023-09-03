@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ScrollUpButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -18,7 +18,7 @@ const ScrollUpButton = () => {
     const documentHeight = document.body.clientHeight;
     const maxScroll = documentHeight - windowHeight;
     const progress = (scrollY / maxScroll) * 100;
-    setScrollProgress(progress >= 100 ? 100 : progress); // Cap progress at 100%
+    setScrollProgress(Math.min(progress, 100)); // Cap progress at 100%
   };
 
   const scrollToTop = () => {
