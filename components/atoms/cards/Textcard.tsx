@@ -17,7 +17,7 @@ export default function TextCard({
   link: string;
 }) {
   return show ? (
-    <div className="flex flex-col font-barlow items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
+    <div className="flex flex-col md:flex-col-reverse font-barlow items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
       {text}
       <br />
       <div className="relative w-64 h-80">
@@ -36,7 +36,7 @@ export default function TextCard({
       </Link> */}
     </div>
   ) : (
-    <div className="flex flex-col font-barlow items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
+    <div className="flex flex-col font-barlow md:-mb-72 items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
       {text}
       <br />
       <Image
