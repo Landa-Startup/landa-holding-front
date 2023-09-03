@@ -98,7 +98,7 @@ export default function page() {
       ))}
       <LandaHoldingBlack />
       {/* <PromotionalVideo /> */}
-      <UpcomingEvents />
+      {/* <UpcomingEvents /> */}
       <LandaHoldingPriority />
       <AerialViewBusinessTeam />
       <LatestStartups />

@@ -60,7 +60,7 @@ export default function Hero({
         <div className="md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl">
           {currentTitle}
         </div>
-        <div className="w-[1000px] text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
+        <div className="text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
           {subTitle}
         </div>
         <div className="md:hidden text-center w-[250px] font-condensed text-neutral-50 text-[12px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
