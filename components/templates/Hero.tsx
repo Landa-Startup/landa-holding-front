@@ -23,12 +23,16 @@ export default function Hero({
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState('');
+  const [isTitleChanging, setIsTitleChanging] = useState(false); // Track if the title is changing
 
   useEffect(() => {
     if (Array.isArray(titles)) {
       const interval = setInterval(() => {
-        setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-      }, 2000);
+        setIsTitleChanging(true); // Start the animation
+        setTimeout(() => {
+          setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+        }, 500); // Delay the title change slightly to allow animation
+      }, 3000);
 
       return () => clearInterval(interval);
     }
@@ -39,6 +43,11 @@ export default function Hero({
       setCurrentTitle(titles[titleIndex]);
     }
   }, [titleIndex, titles]);
+
+  useEffect(() => {
+    // Reset the animation flag when the title changes
+    setIsTitleChanging(false);
+  }, [currentTitle]);
 
   return (
     <div
@@ -57,7 +66,14 @@ export default function Hero({
         >
           Landa Holding
         </div>
-        <div className="md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl">
+        <div
+          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl ${
+            isTitleChanging
+              ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
+              : '' // Apply spin animation class when the title is changing
+          }`}
+          style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
+        >
           {currentTitle}
         </div>
         <div className="text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
