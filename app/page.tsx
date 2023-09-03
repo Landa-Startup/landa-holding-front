@@ -1,21 +1,20 @@
-import AerialViewBusinessTeam from '@/components/templates/BusinessTeam';
-import ContactUs from '@/components/templates/ContactUs';
+import React from 'react';
+import { Metadata } from 'next';
 import Hero from '@/components/templates/Hero';
 import HomeTextCardContainer from '@/components/molecules/HomeTextCardContainer';
 import LandaHoldingPriority from '@/components/templates/LandaHoldingPriority';
-import LandaMagazine from '@/components/templates/LandaMagazine';
 import LatestStartups from '@/components/templates/LatestStartups';
-import PromotionalVideo from '@/components/templates/PromotionalVideo';
-import UpcomingEvents from '@/components/templates/UpcomingEvents';
-import React from 'react';
-import { Metadata } from 'next';
+import ContactUs from '@/components/templates/ContactUs';
 import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
+import AerialViewBusinessTeam from '@/components/templates/BusinessTeam';
 
+// Define metadata for the page
 export const metadata: Metadata = {
   title: 'Landa Holding',
   description: 'Page Desc',
 };
 
+// Define data for the text card containers
 const cardData = [
   {
     title: 'investment',
@@ -73,9 +72,10 @@ const cardData = [
   },
 ];
 
-export default function page() {
+export default function Page() {
   return (
     <div className="relative">
+      {/* Hero section */}
       <Hero
         showLanda
         titles={['Acceleration', 'Investment', 'Academy']}
@@ -84,6 +84,8 @@ export default function page() {
         leftImage="Landa.svg"
         showButton={false}
       />
+
+      {/* Map over cardData to create HomeTextCardContainers */}
       {cardData.map((data, index) => (
         <HomeTextCardContainer
           key={index}
@@ -96,13 +98,12 @@ export default function page() {
           images={data.images}
         />
       ))}
+
+      {/* Include other components */}
       <LandaHoldingBlack />
-      {/* <PromotionalVideo /> */}
-      {/* <UpcomingEvents /> */}
       <LandaHoldingPriority />
       <AerialViewBusinessTeam />
       <LatestStartups />
-      {/* <LandaMagazine /> */}
       <ContactUs />
     </div>
   );
