@@ -1,3 +1,4 @@
+import React from 'react';
 import Footer from '@/components/templates/Footer';
 import './globals.css';
 import Navbar from '@/components/templates/Navbar';
@@ -14,26 +15,13 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        {/* <div className=""> */}
         <Navbar>
-          <main>{children}</main>
+          <main>{children}</main> {/* Main Content */}
           <div className="bottom-0 w-full">
-            <Footer />
-            <ScrollUpButton />
+            <Footer /> {/* Footer */}
+            <ScrollUpButton /> {/* Scroll Up Button */}
           </div>
         </Navbar>
-        {/* </div> */}
-
-        {/* <div className="min-h-screen">
-          <main>{children}</main>
-        </div> */}
-
-        {/* <div>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <ScrollUpButton />
-        </div> */}
       </body>
     </html>
   );
