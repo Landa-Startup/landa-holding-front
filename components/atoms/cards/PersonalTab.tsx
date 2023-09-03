@@ -33,7 +33,7 @@ export default function PersonalTab({
       </div>
       <div className="flex flex-col items-center border-t-2 px-4 pb-4 text-white">
         <span className="font-normal text-lg">{name}</span>
-        {/* TODO: set team roles. */}
+        {/* TODO: Set team roles. */}
         {/* <span className="font-light">{position}</span> */}
       </div>
     </div>

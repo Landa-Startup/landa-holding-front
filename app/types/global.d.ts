@@ -1,21 +1,32 @@
+// Define an enum for the types of startups
+enum Type {
+  IDEA = 'IDEA',
+  MVP = 'MVP',
+  TRIAL = 'TRIAL',
+  FisrtSale = 'FisrtSale', // Typo: Should be "FirstSale"
+  SaleDevelopment = 'SaleDevelopment',
+}
+
+// Define an interface for business partnership form data
 interface BusinessPartnerShipFormData {
   fullName: string;
   email: string;
   streetAddress: string;
   companyName: string;
   phoneNumber: string;
-  countryOfEsidence: string;
+  countryOfResidence: string; // Typo: Should be "countryOfResidence"
   streetAddressLine2: string;
   investmentCeiling: string;
-  birthTime: Date;
+  birthTime: Date; // Typo: Should be "birthDate"
   provinceOfResidence: string;
   zipCode: number;
   yourPositionInTeam: string;
   preferredInvestment: string;
-  wayKnowUs: string;
+  wayKnowUs: string; // Typo: Should be "wayToKnowUs"
 }
 
-interface contactUSFormData {
+// Define an interface for contact form data
+interface ContactUSFormData {
   name: string;
   email: string;
   number: string;
@@ -23,7 +34,7 @@ interface contactUSFormData {
   message: string;
 }
 
-
+// Define an interface for investor registration form data
 interface InvestorRegistrationFormData {
   firstName: string;
   lastName: string;
@@ -41,8 +52,8 @@ interface InvestorRegistrationFormData {
   howDidYouKnowUs: string;
 }
 
-
-interface partnerMembershipFormData {
+// Define an interface for partner membership form data
+interface PartnerMembershipFormData {
   firstName: string;
   lastName: string;
   birthDate: Date;
@@ -54,6 +65,8 @@ interface partnerMembershipFormData {
   preferredAreas: string;
   howDidYouKnowUs: string;
 }
+
+// Define an interface for job application form data
 interface JobFormData {
   firstName: string;
   lastName: string;
@@ -62,15 +75,8 @@ interface JobFormData {
   cvFile?: any | null;
 }
 
-enum Type {
-  IDEA = 'IDEA',
-  MVP = 'MVP',
-  TRIAL = 'TRIAL',
-  FisrtSale = 'FisrtSale',
-  SaleDevelopment = 'SaleDevelopment',
-}
-
-interface startupsFormData {
+// Define an interface for startups form data
+interface StartupsFormData {
   firstName: string;
   lastName: string;
   birthDate: Date;
@@ -88,7 +94,7 @@ interface startupsFormData {
   siteAddress: string;
   customerProblem: string;
   solution: string;
-  productLevel: Level;
+  productLevel: Level; // You might want to define "Level" enum here
   scalable: string;
   monetizationOfYourPlan: string;
   structureOfYourSales: string;
@@ -112,4 +118,12 @@ interface startupsFormData {
   Idea: boolean;
 }
 
-export { contactUSFormData, Type, BusinessPartnerShipFormData, startupsFormData, partnerMembershipFormData, InvestorRegistrationFormData, JobFormData }
+export {
+  ContactUSFormData,
+  Type,
+  BusinessPartnerShipFormData,
+  StartupsFormData,
+  PartnerMembershipFormData,
+  InvestorRegistrationFormData,
+  JobFormData,
+};

@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 
 export default function YesRadioButton({
   title,
@@ -23,16 +23,16 @@ export default function YesRadioButton({
 }) {
   return (
     <div>
+      {/* Label for the radio buttons */}
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <div className="flex flex-col">
+        {/* Radio buttons for 'Yes' and 'No' */}
         <div className="flex flex-row mt-4 bg-[#f9f6f3] dark:bg-[#1D232A] p-4 rounded-lg drop-shadow-lg">
           <label className="flex flex-column mr-10 ">
             <input
               type="radio"
               value="true"
-              {...register(name, {
-                required: required,
-              })}
+              {...register(name, { required: required })}
               checked={selectedRadio === 'true'}
               onChange={handleRadioChange}
               className="radio mr-2 text-indigo-600 dark:text-indigo-400 drop-shadow-lg"
@@ -43,9 +43,7 @@ export default function YesRadioButton({
             <input
               type="radio"
               value=""
-              {...register(name, {
-                required: required,
-              })}
+              {...register(name, { required: required })}
               checked={selectedRadio === ''}
               onChange={handleRadioChange}
               className="radio mr-2 text-indigo-600 dark:text-indigo-400  drop-shadow-lg"
@@ -53,30 +51,26 @@ export default function YesRadioButton({
             <span>No</span>
           </label>
         </div>
-        {(() => {
-          if (Boolean(selectedRadio) === true) {
-            return (
-              <div className="flex justify-center ">
-                <input
-                  type="file"
-                  className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
-                  {...register(fileName, {
-                    required: '',
-                  })}
-                  onChange={handleChangeFile} // must use onChange event handler after register
-                />
-                {errors[fileName] && (
-                  <span className="mt-4 text-sm text-yellow-500">
-                    {errors[fileName].message}
-                  </span>
-                )}
-              </div>
-            );
-          } else {
-            return <div></div>;
-          }
-        })()}
+
+        {/* Conditional file input */}
+        {selectedRadio === 'true' && (
+          <div className="flex justify-center">
+            <input
+              type="file"
+              className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
+              {...register(fileName, { required: '' })}
+              onChange={handleChangeFile} // Use onChange event handler after register
+            />
+            {errors[fileName] && (
+              <span className="mt-4 text-sm text-yellow-500">
+                {errors[fileName].message}
+              </span>
+            )}
+          </div>
+        )}
       </div>
+
+      {/* Error message for radio buttons */}
       {errors[name] && (
         <span className="mt-4 text-sm text-yellow-500">
           {errors[name].message}
@@ -84,16 +78,4 @@ export default function YesRadioButton({
       )}
     </div>
   );
-}
-
-///////////////////////////////////////
-
-{
-  /* <YesRadioButton
-title="Do you agree?"
-register={register}
-errors={errors}
-required="Please choose an option"
-name="agree"
-/> */
 }
