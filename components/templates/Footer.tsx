@@ -118,7 +118,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col space-y-1 tracking-[2px]">
+        <div className="col-span-1 flex flex-col space-y-1">
           <div className="w-[93px] h-[30px] text-justify text-white text-xl font-medium">
             Contact
             <br />
