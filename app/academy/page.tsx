@@ -2,9 +2,9 @@ import React from 'react';
 import Hero from '@/components/templates/Hero';
 import RoadmapContainer from '@/components/academy/Roadmap/RoadmapContainer';
 import PromoteCourse from '@/components/academy/PromoteCourse';
-import Scroll from '@/components/academy/Scroll';
 import Gallery from '@/components/academy/Gallery';
 import ContactUs from '@/components/academy/ContactUs';
+import ScrollMenu from '@/components/academy/ScrollMenu';
 
 export default function SeoCoursePage() {
   return (
@@ -26,7 +26,7 @@ export default function SeoCoursePage() {
       <PromoteCourse image="/static/images/Academy/Frame 37625.png" />
 
       {/* Scroll Section */}
-      <Scroll />
+      <ScrollMenu />
 
       {/* Gallery Section */}
       <Gallery />
