@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <div className="flex flex-col bg-neutral-800 font-barlow p-8">
       <div className="flex flex-col md:flex-row space-y-5 md:p-20 justify-between">
-        <div className="flex flex-col w-[344px]">
+        <div className="flex flex-col md:w-[344px]">
           <div className="h-[25px] text-justify text-white text-xl font-medium">
             About Landa
             <br />
