@@ -11,7 +11,7 @@ type AboutUsCardProps = {
   link: string;
 };
 
-const AboutUscard = ({
+const AboutUsCard = ({
   title,
   text,
   image,
@@ -97,4 +97,4 @@ const AboutUscard = ({
   );
 };
 
-export default AboutUscard;
+export default AboutUsCard;
