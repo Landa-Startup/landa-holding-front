@@ -1,12 +1,7 @@
-// import LoginPage from '@/components/organisms/LoginPage';
-
-
-function page() {
+import React from 'react'
+import LoginForm from '@/components/organisms/LoginForm'
+export default function page() {
   return (
-    < >
-      {/* <LoginPage/> */}
-    </>
-  );
+    // <div><loginForm/></div>
+  )
 }
-
-export default page;
