@@ -21,22 +21,24 @@ export default function ImageCard({
         </span>
         <span className="text-neutral-800 text-6xl font-normal tracking-[7.04px]"></span>
         <div className="grid-cols-2 gap-2 md:mt-14 hidden md:grid">
-          <Image
-            className="w-64 md:mt-32 h-96"
-            src={imageOne}
-            alt={imageOne}
-            width={500}
-            height={500}
-            quality={100}
-          />
-          <Image
-            className="w-64 h-96 hidden md:block"
-            src={imageTwo}
-            alt={imageTwo}
-            width={500}
-            height={500}
-            quality={100}
-          />
+          <div className="relative w-64 h-96">
+            <Image
+              className="relative w-64 h-96 md:mt-32 object-cover"
+              src={imageOne}
+              alt={imageOne}
+              layout="fill"
+              quality={100}
+            />
+          </div>
+          <div className="relative w-64 h-96">
+            <Image
+              className="hidden md:block object-cover"
+              src={imageTwo}
+              alt={imageTwo}
+              layout="fill"
+              quality={100}
+            />
+          </div>
         </div>
       </div>
     </div>
