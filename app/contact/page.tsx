@@ -10,7 +10,7 @@ export default function page() {
         image="/static/images/Contact/37b76f28c1c41b4ea18163cf2fba85ab.png"
         title="Contact Us"
       />
-      <div className="container grid grid-cols-1 gap-5 px-3 mx-auto my-20 md:grid-cols-2">
+      <div className="container grid grid-cols-1 gap-6 mx-auto px-28 py-32 md:grid-cols-2 bg-[#FAFAFA] text-black">
         <ContactUsDescription />
         <ContactUsForm />
       </div>

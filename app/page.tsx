@@ -12,7 +12,7 @@ import { Metadata } from 'next';
 import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 
 export const metadata: Metadata = {
-  title: '377642',
+  title: 'Landa Holding',
   description: 'Page Desc',
 };
 
@@ -24,6 +24,16 @@ const cardData = [
     show: true,
     index: 1,
     link: '/investment-registration',
+    images: [
+      {
+        src: '/static/images/Home/Investment/male-female-business-people-working-tablet-office.png',
+        alt: 'Landa Investment',
+      },
+      {
+        src: '/static/images/Home/Investment/Rectangle 1412.png',
+        alt: 'Landa Investment',
+      },
+    ],
   },
   {
     title: 'Acceleration',
@@ -31,6 +41,17 @@ const cardData = [
     reverse: true,
     show: true,
     index: 2,
+    link: '/startupsForm',
+    images: [
+      {
+        src: '/static/images/Home/Acceleration/1.png',
+        alt: 'Landa Holding Acceleration Center',
+      },
+      {
+        src: '/static/images/Home/Acceleration/2.png',
+        alt: 'Landa Holding Acceleration Center',
+      },
+    ],
   },
   {
     title: 'Academy',
@@ -38,6 +59,17 @@ const cardData = [
     reverse: false,
     show: false,
     index: 3,
+    link: '/academy',
+    images: [
+      {
+        src: '/static/images/Home/Academy/3390782c4ef216a1fb0b67f2cc41660d 1.png',
+        alt: 'Landa Holding Academy',
+      },
+      {
+        src: '/static/images/Home/Academy/group-people-working-out-business-plan-office 1.png',
+        alt: 'Landa Holding Academy',
+      },
+    ],
   },
 ];
 
@@ -60,11 +92,13 @@ export default function page() {
           reverse={data.reverse}
           show={data.show}
           index={data.index}
+          link={data.link}
+          images={data.images}
         />
       ))}
       <LandaHoldingBlack />
       {/* <PromotionalVideo /> */}
-      <UpcomingEvents />
+      {/* <UpcomingEvents /> */}
       <LandaHoldingPriority />
       <AerialViewBusinessTeam />
       <LatestStartups />

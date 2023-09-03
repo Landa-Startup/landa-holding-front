@@ -1,29 +1,48 @@
 'use client';
+import { cookies } from 'next/dist/client/components/headers';
 import Image from 'next/image';
 import Link from 'next/link';
+import React, { useState, useRef, useEffect } from 'react';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
+  const drawerRef = useRef<HTMLInputElement>(null);
+  const menuRef = useRef<HTMLDetailsElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+
+  const menuItems = [
+    { label: 'HOME', href: '/' },
+    { label: 'ABOUT', href: '/about' },
+    { label: 'CONTACT', href: '/contact' },
+    { label: 'OUR TEAM', href: '/our-team' },
+  ];
+  const submenuItems = [
+    { label: 'CENTER OF INVESTOR', href: '/investor-registration' },
+    { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
+    { label: 'STARTUPS', href: '/StartupsForm' },
+    { label: 'APPLY JOB', href: '/job-form' },
+  ];
+  const handleLinkClick = () => {
+    // setIsMenuOpen(false);
+    if (!drawerRef.current) {
+      console.log(drawerRef)
+      return
+    };
+    drawerRef.current.click();
+  };
+  // const handleClickOutside = (event: Event) => {
+  //   if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //     setIsMenuOpen(false);
+  //   }
+  // }; 
+  // useEffect(() => {
+  //   document.addEventListener('click', handleClickOutside);
+  // }, []);
   return (
     <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={drawerRef} />
       <div className="drawer-content flex flex-col relative md:px-10">
         <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-          <div className="px-2 m-2 text-left h-full flex justify-start items-start ">
-            <Link href="/">
-              <div className="flex flex-col md:flex-row items-center">
-                <Image
-                  className="w-7 h-8 md:w-12 md:h-14"
-                  src={'static/images/Logo.svg'}
-                  alt="Logo"
-                  width={50}
-                  height={50}
-                />
-                <span className="text-primary text-[7.5px] md:text-xl tracking-[0.375px] font-bold">
-                  LANDA
-                </span>
-              </div>
-            </Link>
-          </div>
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -44,75 +63,43 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </svg>
             </label>
           </div>
-          <div className="hidden xl:flex-1 xl:flex justify-start ml-32 hover:font-white">
-            {' '}
-            {/* Center items in md mode */}
+          <div className="px-2 m-2 text-left h-full flex justify-start items-start ">
+            <Link href="/">
+              <div className="flex flex-col md:flex-row items-center">
+                <Image
+                  className="w-7 h-8 md:w-12 md:h-14"
+                  src={'static/images/Logo.svg'}
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                />
+                <span className="text-primary text-[7.5px] md:text-xl tracking-[0.375px] font-bold">
+                  LANDA
+                </span>
+              </div>
+            </Link>
+          </div>
+          <div className="hidden xl:flex-1 xl:flex justify-start ml-32">
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
-              <li>
-                <Link
-                  href={'/'}
-                  className="text-primary hover:text-primary hover:bg-base-200"
-                >
-                  HOME
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={'/about'}
-                  className="hover:text-primary hover:bg-base-200"
-                >
-                  ABOUT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={'/contact'}
-                  className="hover:text-primary hover:bg-base-200"
-                >
-                  CONTACT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={'/our-team'}
-                  className="hover:text-primary hover:bg-base-200"
-                >
-                  OUR TEAM
-                </Link>
-              </li>
-              {/* <li>
-                <Link href={'/'}>WORK WITH US</Link>
-              </li> */}
+              {menuItems.map((item) => (
+                <li className='text-2xl' key={item.label} >
+                  <Link href={item.href} className="hover:bg-white">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <details className="dropdown mb-32">
-                  <summary className="m-1 hover:text-primary hover:bg-base-200">
+                  <summary className="text-2xl hover:text-primary hover:bg-base-200" onClick={() => setIsMenuOpen(true)}>
                     WORK WITH US
                   </summary>
-                  <ul className="p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64">
-                    <li>
-                      <Link
-                        href={'/investor-registration'}
-                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
-                      >
-                        CENTER OF INVESTOR
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={'/partner-membership'}
-                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
-                      >
-                        OUR BUSINESS PARTNERS
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={'/StartupsForm'}
-                        className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
-                      >
-                        STARTUPS
-                      </Link>
-                    </li>
+                  <ul className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
+                    }`}>
+                    {submenuItems.map((item) => (
+                      <li className='text-xl' key={item.label} onClick={() => setIsMenuOpen(false)}>
+                        <Link href={item.href} className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold">{item.label} </Link>
+                      </li>
+                    ))}
                   </ul>
                 </details>
               </li>
@@ -124,22 +111,22 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-base-200 text-xl">
+          {menuItems.map((item) => (
+            <li key={item.label} onClick={() => handleLinkClick()}>
+              <Link href={item.href} className="">
+                {item.label}
+              </Link>
+            </li>
+          ))}
           <li>
-            <Link href={'/'} className="text-primary">
-              HOME
-            </Link>
-          </li>
-          <li>
-            <Link href={'/about'}>ABOUT</Link>
-          </li>
-          <li>
-            <Link href={'/contact'}>CONTACT</Link>
-          </li>
-          <li>
-            <Link href={'/our-team'}>OUR TEAM</Link>
-          </li>
-          <li>
-            <Link href={'/'}>WORK WITH US</Link>
+            <Link href={'#'}>WORK WITH US</Link>
+            <ul>
+              {submenuItems.map((item) => (
+                <li key={item.label} onClick={() => handleLinkClick()}>
+                  <Link href={item.href} className="">{item.label} </Link>
+                </li>
+              ))}
+            </ul>
           </li>
         </ul>
       </div>

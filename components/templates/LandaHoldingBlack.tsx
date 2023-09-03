@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[890px] md:h-[590px] py-10">
+    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-10">
       <svg
         className="absolute left-[640px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +44,8 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className="h-[376px] flex flex-col items-center justify-between md:items-start">
-        <div className="flex flex-col items-center">
+      <div className="h-[376px] flex flex-col items-center mt-5 justify-around md:items-start">
+        <div className="flex flex-col items-start">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -55,7 +56,7 @@ export default function LandaHoldingBlack() {
           </span>
         </div>
         <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow">
+          <ul className="text-white text-sm font-normal leading-9 list-disc pl-4 font-barlow">
             <li>Global Investment Opportunities within Your Reach.</li>
             <li>
               Access to a Network of Successful Entrepreneurs and Investors.
@@ -71,29 +72,33 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
           <div className="justify-start items-start gap-2.5 flex">
-            <div className="w-5 h-5 md:w-10 md:h-10 border border-stone-100" />
-            <svg
-              className="absolute text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <div className="relative w-5 h-5 md:w-10 md:h-10">
+              <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
+              <div className="w-full h-full border border-stone-100">
+                <svg
+                  className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center md:items-start md:mt-5 space-y-2">
-        <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center md:items-start mt-11 md:mt-5 space-y-2">
+        <div className="flex flex-col items-start">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -104,7 +109,7 @@ export default function LandaHoldingBlack() {
           </span>
         </div>
         <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
+          <ul className="text-white text-sm font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
             <li className="list-disc">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>
@@ -127,24 +132,28 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
           <div className="justify-start items-start gap-2.5 flex">
-            <div className="w-5 h-5 md:w-10 md:h-10 border border-stone-100" />
-            <svg
-              className="absolute text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <div className="relative w-5 h-5 md:w-10 md:h-10">
+              <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
+              <div className="w-full h-full border border-stone-100">
+                <svg
+                  className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
           </div>
         </button>
       </div>

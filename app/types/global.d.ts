@@ -28,7 +28,7 @@ interface InvestorRegistrationFormData {
   firstName: string;
   lastName: string;
   birthDate: Date;
-  email:string;
+  email: string;
   countryOfResidence: string;
   provinceOfResidence: string;
   streetAddress: string;
@@ -46,19 +46,21 @@ interface partnerMembershipFormData {
   firstName: string;
   lastName: string;
   birthDate: Date;
-  email:string;
+  email: string;
   countryOfResidence: string;
   provinceOfResidence: string;
-  // streetAddress: string;
-  // streetAddressLine2: string;
-  // postalCode: string;
   companyName: string;
   investmentCeiling: string;
-  // positionInTeam: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
 }
-
+interface JobFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  cvFile?: any | null;
+}
 
 enum Type {
   IDEA = 'IDEA',
@@ -93,21 +95,26 @@ interface startupsFormData {
   financialModelFile?: File | '';
   cooperatedWithInvestors: string;
   financial: boolean;
+<<<<<<< HEAD
   financialFile?: File | '';
   customerCharacteristic:  string;
+=======
+  financialFile?: File | null;
+  customerCharacteristic: string;
+>>>>>>> 7ae2909bafa7906f0d0649edbc919adf2c6cf762
   currentCustomers: string;
   estimatedMarketSize: string;
   totalTamSamSom: string;
-  startupRevenue : string;
-  monthlyIncome:  string;
+  startupRevenue: string;
+  monthlyIncome: string;
   currentInterestRate: string;
-  currentRaisedFunding:  string;
-  neededCapital:  string;
-  MVP:boolean;
-  FirstSale:boolean;
-  TrialProduct:boolean;
-  SaleDevelopment:boolean;
-  Idea:boolean;
+  currentRaisedFunding: string;
+  neededCapital: string;
+  MVP: boolean;
+  FirstSale: boolean;
+  TrialProduct: boolean;
+  SaleDevelopment: boolean;
+  Idea: boolean;
 }
 
-export {contactUSFormData,Type,BusinessPartnerShipFormData,startupsFormData,partnerMembershipFormData,InvestorRegistrationFormData}
+export { contactUSFormData, Type, BusinessPartnerShipFormData, startupsFormData, partnerMembershipFormData, InvestorRegistrationFormData, JobFormData }

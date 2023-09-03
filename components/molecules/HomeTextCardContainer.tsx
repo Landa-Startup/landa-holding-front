@@ -8,12 +8,16 @@ export default function HomeTextCardContainer({
   reverse,
   show,
   index,
+  link,
+  images,
 }: {
   title: string;
   text: string;
   reverse: boolean;
   show: boolean;
   index: number;
+  link: string;
+  images: Array<{ src: string; alt: string }>;
 }) {
   return (
     <div>
@@ -32,7 +36,7 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <svg
-        className="absolute right-0 md:hidden"
+        className="hidden absolute right-0 md:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="408"
         height="1408"
@@ -45,7 +49,7 @@ export default function HomeTextCardContainer({
         />
       </svg>
       <svg
-        className="absolute md:hidden"
+        className="hidden absolute md:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="124"
         height="1407"
@@ -60,19 +64,20 @@ export default function HomeTextCardContainer({
       <div
         className={`flex flex-col-reverse ${
           reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-        } items-center justify-around px-14 py-24 font-gilda bg-whiteGold p-8`}
+        } items-center justify-around px-11 py-6 md:px-14 md:py-24 font-gilda bg-whiteGold`}
         id="LandaHolding"
       >
         <TextCard
           text={text}
-          image="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
+          image={images[0].src}
           show={show}
           index={index}
+          link={link}
         />
         <ImageCard
           title={title}
-          imageOne="/static/images/Home/Investment/male-female-business-people-working-tablet-office.png"
-          imageTwo="/static/images/Home/Investment/Rectangle 1412.png"
+          imageOne={images[0].src}
+          imageTwo={images[1].src}
         />
       </div>
     </div>

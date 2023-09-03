@@ -27,6 +27,7 @@ export default function ImageCard({
             alt={imageOne}
             width={500}
             height={500}
+            quality={100}
           />
           <Image
             className="w-64 h-96 hidden md:block"
@@ -34,6 +35,7 @@ export default function ImageCard({
             alt={imageTwo}
             width={500}
             height={500}
+            quality={100}
           />
         </div>
       </div>

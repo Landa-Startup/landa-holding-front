@@ -1,24 +1,130 @@
-import React from 'react';
+'use client';
+import React, { useRef, useState } from 'react';
 import Card from './Card';
 
 export default function Scroll() {
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = (scrollOffset: number) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const newPosition = scrollPosition + scrollOffset;
+      container.scrollLeft = newPosition;
+      setScrollPosition(newPosition);
+    }
+  };
+
+  const cardData = [
+    {
+      title: 'Business',
+      image: '/static/images/Academy/courses/Rectangle 3014 (2).png',
+      date: '27/Dec/2023',
+    },
+    {
+      title: 'AI webinar',
+      image: '/static/images/Academy/courses/Rectangle 3011.png',
+      date: '27/Dec/2023',
+    },
+    {
+      title: 'SEO course',
+      image: '/static/images/Academy/courses/Rectangle 3014.png',
+      date: '27/Dec/2023',
+
+      active: true,
+    },
+    {
+      title: 'Python course',
+      image: '/static/images/Academy/courses/Rectangle 3016.png',
+      date: '27/Dec/2023',
+    },
+    {
+      title: 'UX Workshop',
+      image: '/static/images/Academy/courses/Rectangle 3015.png',
+      date: '27/Dec/2023',
+    },
+    {
+      title: 'Icdl workshop',
+      image: '/static/images/Academy/courses/Rectangle 3011 (1).png',
+      date: '27/Dec/2023',
+    },
+    {
+      title: 'Front-end course',
+      image:
+        '/static/images/Academy/courses/027fae0dc46b4eacee7dbeeda27b2fdb.jpg',
+      date: '27/Dec/2023',
+    },
+    {
+      title: 'Digital marketing',
+      image: '/static/images/Academy/courses/',
+      date: '27/Dec/2023',
+    },
+  ];
+
   return (
-    <div className="flex flex-col items-center bg-[#3D5656] py-10">
-      <div className="md:w-[413px] md:h-[58px] text-center text-white text-2xl md:text-[32px] font-normal leading-[50px] tracking-[11.20px]">
-        LANDA ACADEMY
-      </div>
-      <div className="md:w-[413px] md:h-[58px] text-center text-white text-5xl md:text-[64px] font-normal leading-[50px] tracking-[3.20px] mb-12">
-        Our Courses
-      </div>
-      <div className="flex overflow-x-scroll justify-start gap-14 md:w-full">
-        <Card title="Digital marketing" />
-        <Card title="AI webinar" />
-        <Card active title="SEO course" />
-        <Card title="Python course" />
-        <Card title="UX Workshop" />
-        <Card title="Icdl workshop" />
-        <Card title="Digital marketing" />
-        <Card title="Digital marketing" />
+    <div className="bg-[#3D5656] py-10">
+      <div className="container mx-auto">
+        <div className="text-center text-white text-2xl md:text-3xl font-normal leading-[50px] tracking-[11.20px]">
+          LANDA ACADEMY
+        </div>
+        <div className="text-center text-white text-4xl md:text-5xl font-normal leading-[50px] tracking-[3.20px] mb-12">
+          Our Courses
+        </div>
+        <div className="flex flex-row items-center mx-5">
+          <button
+            className="bg-gray-700 text-white px-4 py-2 rounded-l hidden md:block"
+            onClick={() => handleScroll(-200)} // Adjust scroll offset as needed
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                strokeLinejoin="round"
+                d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+              />
+            </svg>
+          </button>
+          <div
+            className="flex overflow-x-scroll md:overflow-x-hidden whitespace-nowrap mx-2 gap-4 md:gap-12 md:h-[486px]"
+            ref={scrollContainerRef}
+          >
+            {cardData.map((card, index) => (
+              <Card
+                key={index}
+                title={card.title}
+                image={card.image}
+                date={card.date}
+                active={card.active}
+              />
+            ))}
+          </div>
+          <button
+            className="bg-gray-700 text-white px-4 py-2 rounded-r hidden md:block"
+            onClick={() => handleScroll(200)} // Adjust scroll offset as needed
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="flex justify-center mt-4"></div>
       </div>
     </div>
   );

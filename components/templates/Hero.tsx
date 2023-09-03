@@ -1,6 +1,7 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../atoms/Button';
 
 export default function Hero({
@@ -20,6 +21,25 @@ export default function Hero({
   leftImage: string;
   showButton?: boolean;
 }) {
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [currentTitle, setCurrentTitle] = useState('');
+
+  useEffect(() => {
+    if (Array.isArray(titles)) {
+      const interval = setInterval(() => {
+        setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+      }, 2000);
+
+      return () => clearInterval(interval);
+    }
+  }, [titles]);
+
+  useEffect(() => {
+    if (Array.isArray(titles)) {
+      setCurrentTitle(titles[titleIndex]);
+    }
+  }, [titleIndex, titles]);
+
   return (
     <div
       style={{
@@ -27,32 +47,20 @@ export default function Hero({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[230px] md:h-[740px] relative"
+      className="h-[400px] md:h-[740px] relative"
     >
-      <div className="flex flex-col items-center justify-center h-full space-y-5">
+      <div className="flex flex-col items-center justify-center md:h-screen space-y-5 pt-24">
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
-          } text-center text-white text-xl md:text-3xl font-normal tracking-[5px] md:tracking-[11.20px] font-condensed`}
+          } text-center text-white text-xl md:tracking-[11.20px] font-condensed font-normal tracking-widest`}
         >
           Landa Holding
         </div>
-        {/* {titles.map((title) => (
-          <div
-            key={title}
-            className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]"
-          >
-            {title}
-            <br />
-          </div>
-        ))} */}
-
-        <div className="font-gilda text-right text-neutral-50 text-opacity-95 text-2xl md:text-6xl font-normal tracking-[2.4px] md:tracking-[6.40px]">
-          {"Academy"}
-          <br />
+        <div className="md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl">
+          {currentTitle}
         </div>
-
-        <div className="hidden md:w-[820px] md:block text-center font-barlow text-neutral-50 text-opacity-95 text-[9.5px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+        <div className="text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
           {subTitle}
         </div>
         <div className="md:hidden text-center w-[250px] font-condensed text-neutral-50 text-[12px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">

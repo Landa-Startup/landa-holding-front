@@ -8,21 +8,21 @@ export default function TextCard({
   image,
   show,
   index,
-  // link
+  link,
 }: {
   text: string;
   image: string;
   show: boolean;
   index: number;
-  // link: string
+  link: string;
 }) {
   return show ? (
     <div className="flex flex-col relative font-barlow items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
       {text}
       <br />
       <Image
-        className={`w-20 h-32 absolute ${index === 2 ? 'left-0 top-72' : 'right-0'
-          } -bottom-28 md:hidden`}
+        className={`w-64 h-64 object-top object-fit mt-2 ${index === 2 ? 'w-64 h-28 left-0 top-72 mt-2' : 'right-0'
+          } md:hidden`}
         src={image}
         alt={image}
         width={500}

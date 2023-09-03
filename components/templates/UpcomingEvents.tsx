@@ -3,12 +3,12 @@ import Button from '../atoms/Button';
 
 export default function UpcomingEvents() {
   return (
-    <div className="h-[480px] relative bg-stone-100">
-      <div className="left-28 md:left-[185px] top-10 md:top-[29px] absolute text-neutral-800 text-2xl md:text-4xl font-normal font-gilda">
+    <div className="h-[480px] relative bg-whiteGold">
+      <div className="left-20 md:left-[185px] top-10 md:top-[29px] absolute text-neutral-800 text-2xl md:text-4xl font-normal font-gilda">
         UPCOMING EVENT
       </div>
-      <div className="md:pr-[53px] left-[20px] md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
-        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
+      <div className="md:pr-[40px] left-[20px] md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
+        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
@@ -20,16 +20,16 @@ export default function UpcomingEvents() {
             </div>
             <div className="inline-flex flex-col items-start justify-start gap-2">
               <div className="text-3xl font-medium text-right text-neutral-800 font-condensed">
-                Entrepreneur
+                Investment
               </div>
               <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
                 MONDAY/ 2023
               </div>
             </div>
           </div>
-          <Button text="Register" size="register" addedClass="block" />
+          {/* <Button text="Register" size="register" addedClass="block" /> */}
         </div>
-        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
+        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-4xl font-medium text-right text-primary">
@@ -48,9 +48,9 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button text="Register" size="register" addedClass="block" />
+          {/* <Button text="Register" size="register" addedClass="block" /> */}
         </div>
-        <div className="self-stretch justify-between items-center flex md:w-[1200px]">
+        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="flex items-center justify-start gap-1 md:gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
               <div className="text-right text-primary text-[40px] font-medium">
@@ -69,7 +69,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button text="Register" size="register" addedClass="block" />
+          {/* <Button text="Register" size="register" addedClass="block" /> */}
         </div>
       </div>
       <div className="w-16 h-[313.88px] left-10 md:left-[121px] top-[52px] absolute hidden md:block">
