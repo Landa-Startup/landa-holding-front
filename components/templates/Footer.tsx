@@ -10,13 +10,13 @@ export default function Footer() {
   }
   return (
     <div className="flex flex-col bg-neutral-800 font-barlow p-8">
-      <div className="flex space-y-5 md:p-20 justify-between">
+      <div className="flex flex-col md:flex-row space-y-5 md:p-20 justify-between">
         <div className="flex flex-col">
           <div className="h-[25px] text-justify text-white text-xl font-medium">
             About Landa
             <br />
           </div>
-          <div className="w-[344px] text-justify text-neutral-400 text-base font-normal mt-1">
+          <div className="text-justify text-neutral-400 text-base font-normal mt-1">
             In Landa Academy, individuals will be trained based on their
             interests and capabilities. Necessary actions are taken at the Landa
             Acceleration Center to accelerate their unique abilities. Then,
