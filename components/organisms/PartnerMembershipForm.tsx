@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
@@ -7,7 +7,9 @@ import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
 import { partnerMembershipFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
 import TextArea from '../atoms/TextArea';
-import { PartnerMembership } from '@prisma/client';
+import GetCsrfToken from '@/utils/get-csrf-token';
+import apiClient from '@/utils/api';
+// import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm() {
 const initialPartnerMembershipFormData : partnerMembershipFormData ={
@@ -42,21 +44,33 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
+  const [csrfToken, setCsrfToken] = useState("");
+
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      setCsrfToken(token);
+    }
+
+    fetchCsrfToken();
+  }, []);
+    
   const onSubmit = async (data: partnerMembershipFormData) => {
     setIsSubmitting(true);
     setSend(true);
     try {
-      const response = await fetch('/api/partner-membership', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await apiClient.post(
+        "partner-membership",
+        JSON.stringify(data),
+        {
+          headers: {
+            "X-CSRFToken": csrfToken,
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);

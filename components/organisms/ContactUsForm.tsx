@@ -33,7 +33,7 @@ export default function ContactUsForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token/");
+      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
       setCsrfToken(token);
     }
 
@@ -127,7 +127,7 @@ export default function ContactUsForm() {
           <div className="flex flex-col">
             <input
               id="number"
-              type="number"
+              type="text"
               {...register('number', {
                 required: 'Your Number is required.',
                 pattern: {

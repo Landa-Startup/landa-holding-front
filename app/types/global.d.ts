@@ -95,13 +95,8 @@ interface startupsFormData {
   financialModelFile?: File | '';
   cooperatedWithInvestors: string;
   financial: boolean;
-<<<<<<< HEAD
   financialFile?: File | '';
   customerCharacteristic:  string;
-=======
-  financialFile?: File | null;
-  customerCharacteristic: string;
->>>>>>> 7ae2909bafa7906f0d0649edbc919adf2c6cf762
   currentCustomers: string;
   estimatedMarketSize: string;
   totalTamSamSom: string;

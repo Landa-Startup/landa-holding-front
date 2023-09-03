@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
@@ -7,6 +7,8 @@ import InvestorRegistrationTitle from '../atoms/InvestorRegistrationTitle';
 import { InvestorRegistrationFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
 import TextArea from '../atoms/TextArea';
+import GetCsrfToken from '@/utils/get-csrf-token';
+import apiClient from '@/utils/api';
 
 export default function InvestorRegistrationForm() {
   const initialInvestorRegistrationFormData : InvestorRegistrationFormData ={
@@ -41,26 +43,34 @@ export default function InvestorRegistrationForm() {
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
+  const [csrfToken, setCsrfToken] = useState("");
 
   const [formData, setFormData] = useState<InvestorRegistrationFormData>(
     initialInvestorRegistrationFormData
   );
+  
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      setCsrfToken(token);
+    }
 
+    fetchCsrfToken();
+  }, []);
   const onSubmit = async (data: InvestorRegistrationFormData) => {
     setIsSubmitting(true);
     setSend(true);
     try {
-      const response = await fetch('/api/investor-registration', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+      const response = await apiClient.post(
+        "investor-registration",
+        JSON.stringify(data),
+        {
+          headers: {
+            "X-CSRFToken": csrfToken,
+            "Content-Type": "application/json",
+          },
+        }
+      );
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
