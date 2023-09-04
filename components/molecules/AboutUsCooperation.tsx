@@ -8,7 +8,7 @@ export default function AboutUsCooperation() {
       <div className="text-center">
         <p className="tracking-widest">LANDA HOLDING</p>
         <p className="text-5xl not-italic leading-normal font-gilda">
-          Cooperation
+          Corporation
         </p>
       </div>
       <div className="grid grid-cols-1 gap-10 px-10 md:grid-cols-2 lg:px-28">
