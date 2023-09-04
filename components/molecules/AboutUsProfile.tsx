@@ -8,10 +8,10 @@ export default function AboutUsProfile() {
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
       links: {
-        linkedin: 'https://www.linkedin.com/in/morteza-jafari-2b2b6b1b4/',
-        whatsapp: 'https://wa.me/989122000000',
-        email: 'mailto:mjafari@gmail.com',
-        website: 'https://www.google.com/',
+        linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
+        whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
+        email: 'www.morteza_jafari49@yahoo.com',
+        website: 'https://mortezajafari.ca/',
       }
     },
     {
@@ -19,10 +19,10 @@ export default function AboutUsProfile() {
       title: 'Rasoul Moradimehr',
       description: 'CO-FOUNDER & CEO',
       links: {
-        linkedin: 'https://www.linkedin.com/in/morteza-jafari-2b2b6b1b4/',
-        whatsapp: 'https://wa.me/989122000000',
-        email: 'mailto:mjafari@gmail.com',
-        website: 'https://www.google.com/',
+        linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
+        whatsapp: 'wa.me/+989134233863',
+        email: 'mailto:rasoulmoradimehr@gmail.com',
+        website: 'https://moradimehr.com/',
       }
     },
     {
@@ -30,10 +30,10 @@ export default function AboutUsProfile() {
       title: 'Hadi Hasanpour',
       description: 'CO-FOUNDER & INVESTOR',
       links: {
-        linkedin: 'https://www.linkedin.com/in/morteza-jafari-2b2b6b1b4/',
-        whatsapp: 'https://wa.me/989122000000',
-        email: 'mailto:mjafari@gmail.com',
-        website: 'https://www.google.com/',
+        linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
+        whatsapp: 'https://wa.me/+12892693933',
+        email: 'mailto:hadihasanpor@gmail.com',
+        website: 'https://www.hadihasanpour.ca/',
       }
     },
   ];

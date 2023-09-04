@@ -8,7 +8,7 @@ export default function ContactUsDescription() {
   return (
     <div>
       <h1 className="text-5xl font-light">Landa Holding</h1>
-      <p className="my-5">
+      <p className="my-5 text-base text-justify">
         In Landa Holding, individuals will be trained based on their interests
         and capabilities. Necessary actions are taken at the Landa Acceleration
         Center to accelerate their unique abilities. Then, investment is made
