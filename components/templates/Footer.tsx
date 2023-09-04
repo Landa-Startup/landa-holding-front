@@ -140,14 +140,13 @@ export default function Footer() {
             +1 (416) 557-7622
           </div>
           <div className="text-neutral-400 text-base font-normal">
-            No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran,
-            Iran
+            No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
           </div>
-          <div className="text-justify text-neutral-400 text-base font-normal">
+          {/* <div className="text-justify text-neutral-400 text-base font-normal">
             02188030167
-          </div>
+          </div> */}
           <div className="text-justify text-neutral-400 text-base font-normal">
-            Saadat Abad Ave, Isfahan, Iran
+            Tala Complex, Saadat Abad St, Isfahan, Iran
           </div>
           <div className="text-justify text-neutral-400 text-base font-normal">
             03131311914
