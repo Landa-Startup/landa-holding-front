@@ -13,7 +13,7 @@ export default function Chevron({
           width="40"
           height="40"
           fill="currentColor"
-          className="bi bi-chevron-left cursor-pointer hidden md:block"
+          className="bi bi-chevron-left cursor-pointer hidden md:block hover:text-primary"
           viewBox="0 0 16 16"
         >
           <path
@@ -27,7 +27,7 @@ export default function Chevron({
           width="40"
           height="40"
           fill="currentColor"
-          className="bi bi-chevron-right cursor-pointer hidden md:block"
+          className="bi bi-chevron-right cursor-pointer hidden md:block hover:text-primary"
           viewBox="0 0 16 16"
         >
           <path

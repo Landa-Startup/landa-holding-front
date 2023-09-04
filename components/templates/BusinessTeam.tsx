@@ -11,23 +11,25 @@ export default function AerialViewBusinessTeam() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[353px] md:h-[598px] business-team flex justify-center items-center flex-col"
+      className="md:h-[598px] business-team flex justify-center items-center flex-col"
     >
       <div className="py-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
-        <span className="text-white text-base md:text-xl font-normal">
-          Landa Holding
-          <br />
-        </span>
-        <span className="text-white text-base md:text-[40px] font-normal">
-          What Our Cooperation Members Say?
-        </span>
+        <div className="flex flex-col space-y-2 md:space-y-7 md:mb-5">
+          <span className="text-white text-base md:text-xl font-normal">
+            Landa Holding
+            <br />
+          </span>
+          <span className="text-white text-base md:text-[40px] font-normal">
+            What Our Cooperation Members Say?
+          </span>
+        </div>
       </div>
       <div className="flex flex-row items-center justify-center">
         <Chevron direction="left" />
         <div className="md:w-[1000px] p-5 flex flex-col items-center bg-neutral-500 bg-opacity-60 w-[360px] md:h-[360px]">
           <div className="flex md:flex-col md:items-center md:w-full">
             {' '}
-            <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-1/3">
+            <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
               {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
               <Image
                 className="w-14 h-14 md:w-[108px] md:h-[104px] border"
@@ -37,12 +39,12 @@ export default function AerialViewBusinessTeam() {
                 alt="Avatar"
               />
               <div className="md:hidden w-[170px] h-0 left-[115px] top-[170px] absolute origin-top-left -rotate-90 bg-white border border-white"></div>
-              <div className="hidden md:block w-[300px] h-0 left-0 top-[115px] absolute bg-white border border-white"></div>
-              <div className="flex-col justify-center items-start gap-[3px] text-center">
+              <div className="hidden md:block w-[230px] h-[1px] left-0 top-[120px] absolute bg-white border border-white"></div>
+              <div className="flex flex-col justify-center md:items-start gap-[3px] text-center items-center">
                 <div className=" text-white text-base md:text-xl font-medium font-barlow">
                   Morteza Jafari
                 </div>
-                <div className="w-28 text-white text-xs md:text-base font-normal font-barlow">
+                <div className="text-white text-xs md:text-base font-normal font-barlow">
                   Founder of IRimmigration
                 </div>
                 <div className=" text-white text-xs md:text-[15px] font-normal font-gilda mt-1">
@@ -73,14 +75,13 @@ export default function AerialViewBusinessTeam() {
                 </div>
               </div>
             </div>
-            <div className="p-2.5 ml-3 justify-center items-center gap-3 inline-flex w-2/3 md:w-full">
-              <div className="text-stone-100 text-xs md:text-xl font-medium leading-[20px] md:leading-7 font-barlow md:w-[722px] text-justify">
-                Landa Holding provides comprehensive information on investment
-                strategies, business creation, and entrepreneurial methods. Its
-                informative approaches in various economic and managerial fields
-                assist {"Landa's"} followers in gaining a deeper understanding
-                of concepts and principles related to investment and
-                entrepreneurship.
+            <div className="p-2.5 pt-4 ml-3 justify-center items-center gap-3 inline-flex w-2/3 md:w-full">
+              <div className="text-stone-100 text-xs md:text-xl font-medium leading-[20px] md:leading-[28px] tracking-wider font-barlow md:w-[722px]">
+                It amazes me that Landa Holding offers a specialized environment
+                for teenagers to enhance their knowledge and refine their unique
+                skills. I have rarely seen another company with this feature. So
+                I appreciate their valuable initiative for trying to build a
+                brighter future.
               </div>
               <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
                 <Image
