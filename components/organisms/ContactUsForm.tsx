@@ -1,11 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { contactUSFormData } from '../../app/types/global';
+import { ContactUSFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
 
 export default function ContactUsForm() {
-  const initialFormData: contactUSFormData = {
+  const initialFormData: ContactUSFormData = {
     name: '',
     email: '',
     number: '',
@@ -18,7 +18,7 @@ export default function ContactUsForm() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<contactUSFormData>({
+  } = useForm<ContactUSFormData>({
     mode: 'onBlur',
     defaultValues: initialFormData,
   });
@@ -28,7 +28,7 @@ export default function ContactUsForm() {
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
 
-  const onSubmit = async (formData: contactUSFormData) => {
+  const onSubmit = async (formData: ContactUSFormData) => {
     setIsSubmitting(true);
     setSend(true);
     try {
@@ -81,9 +81,8 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Name*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${
-                errors.name ? 'border-red-500' : ''
-              }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.name ? 'border-red-500' : ''
+                }`}
             />
             {errors.name && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -103,9 +102,8 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Email*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${
-                errors.email ? 'border-red-500' : ''
-              }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.email ? 'border-red-500' : ''
+                }`}
             />
             {errors.email && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -125,9 +123,8 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Number*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${
-                errors.number ? 'border-red-500' : ''
-              }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.number ? 'border-red-500' : ''
+                }`}
             />
             {errors.number && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -147,9 +144,8 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Subject*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${
-                errors.subject ? 'border-red-500' : ''
-              }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.subject ? 'border-red-500' : ''
+                }`}
             />
             {errors.subject && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -162,9 +158,8 @@ export default function ContactUsForm() {
             {...register('message', { required: 'Message is required.' })}
             rows={4}
             cols={20}
-            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${
-              errors.message ? 'border-red-500' : ''
-            }`}
+            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${errors.message ? 'border-red-500' : ''
+              }`}
             placeholder="Message*"
           ></textarea>
           {errors.message && (

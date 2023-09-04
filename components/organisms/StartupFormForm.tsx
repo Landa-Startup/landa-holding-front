@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import InvestorRegistrationTitle from 'app/types/global';
-import { startupsFormData } from '../../app/types/global';
+import { StartupsFormData } from '../../app/types/global';
 import StartupFormTitle from '../atoms/StartupFormTitle';
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
@@ -24,7 +24,7 @@ enum Type {
 }
 
 export default function StartupFormForm() {
-  const initialStartupsFormData: startupsFormData = {
+  const initialStartupsFormData: StartupsFormData = {
     firstName: '',
     lastName: '',
     birthDate: new Date(),
@@ -71,7 +71,7 @@ export default function StartupFormForm() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<startupsFormData>({
+  } = useForm<StartupsFormData>({
     mode: 'onBlur',
     defaultValues: initialStartupsFormData,
   });
@@ -131,11 +131,11 @@ export default function StartupFormForm() {
     }
   };
 
-  const [formData, setFormData] = useState<startupsFormData>(
+  const [formData, setFormData] = useState<StartupsFormData>(
     initialStartupsFormData
   );
 
-  const onSubmit = async (formData: startupsFormData) => {
+  const onSubmit = async (formData: StartupsFormData) => {
     setIsSubmitting(true);
     setSend(true);
     const sendFormData = new FormData();
