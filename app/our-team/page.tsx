@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import PersonalTab from '@/components/atoms/cards/PersonalTab';
 
-export default function page() {
+export default function TeamPage() {
   const jobLinks = [
     'all',
     'Manager',
@@ -187,14 +187,8 @@ export default function page() {
   return (
     <div>
       <Banner image="/static/images/our-team/Frame2916.png " title="Our Team" />
-      {/* <div className="flex flex-row justify-between  lg:px-36  py-12 px-16 gap-3 flex-wrap">
-        {jobLinks.map((job, index) => (
-          <a key={job} href="#" className="hover:bg-black hover:text-white border py-1 px-3">
-            {job}
-          </a>
-        ))}
-      </div> */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:px-28 py-5 bg-[#FAFAFA]">
+        {/* map over personals. */}
         {persons.map((person, index) => (
           <PersonalTab
             key={index}

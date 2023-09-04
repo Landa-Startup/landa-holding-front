@@ -11,7 +11,7 @@ export default function AerialViewBusinessTeam() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[353px] md:h-[598px] business-team"
+      className="h-[353px] md:h-[598px] business-team flex justify-center items-center flex-col"
     >
       <div className="py-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
         <span className="text-white text-base md:text-xl font-normal">

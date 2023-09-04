@@ -16,7 +16,7 @@ export default function IconLinkedin() {
           cy="15"
           r="14.5"
           fill="url(#pattern1)"
-          fill-opacity="0.7"
+          fillOpacity="0.7"
           stroke="#AA8453"
         />
         <defs>

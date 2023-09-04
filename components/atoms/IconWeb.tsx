@@ -4,7 +4,7 @@ export default function IconWeb() {
   return (
     <div>
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-<circle cx="15" cy="15" r="15" fill="url(#pattern2)" fill-opacity="0.7"/>
+<circle cx="15" cy="15" r="15" fill="url(#pattern2)" fillOpacity="0.7"/>
 <defs>
 <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlinkHref="#image0_507_1256" transform="scale(0.00195312)"/>

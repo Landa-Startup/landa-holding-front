@@ -1,11 +1,11 @@
-import BusinessPartnerShipForm from '@/components/organisms/BusinessPartnerShipForm'
-import React from 'react'
-export default function page() {
+import React from 'react';
+import BusinessPartnerShipForm from '@/components/organisms/BusinessPartnerShipForm';
+
+export default function BusinessPartnerShipPage() {
   return (
     <div className='mx-auto w-screen bg-white'>
-      <div>
-      <BusinessPartnerShipForm/>
-      </div>
+      {/* BusinessPartnerShipForm Component */}
+      <BusinessPartnerShipForm />
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-  import React from 'react';
+import React from 'react';
 
 export default function TextArea({
   title,
@@ -19,22 +19,26 @@ export default function TextArea({
   patternMessage: string;
   placeholder: string;
 }) {
-  let value = new RegExp(patternValue);
+  // Create a regular expression pattern for validation
+  const pattern = new RegExp(patternValue);
+
   return (
     <div>
+      {/* Label for the textarea */}
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <textarea
-        className={"textarea textarea-bordered textarea-lg w-full mt-3 mb-1 drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]" + (errors[nameTextArea] ? ' border-red-500' : '')}
+        className={
+          'textarea textarea-bordered textarea-lg w-full mt-3 mb-1 drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]' +
+          (errors[nameTextArea] ? ' border-red-500' : '')
+        }
         {...register(nameTextArea, {
           required: required,
           pattern: {
-            value: value,
+            value: pattern,
             message: patternMessage,
           },
         })}
         placeholder={placeholder}
-        //TODO: write below dynamic class name
-        // className={className + (errors[nameInput] ? ' border-red-500' : '')}
       />
       {errors[nameTextArea] && (
         <span className="mt-4 text-sm text-yellow-500">

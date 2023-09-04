@@ -23,12 +23,16 @@ export default function Hero({
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState('');
+  const [isTitleChanging, setIsTitleChanging] = useState(false); // Track if the title is changing
 
   useEffect(() => {
     if (Array.isArray(titles)) {
       const interval = setInterval(() => {
-        setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-      }, 2000);
+        setIsTitleChanging(true); // Start the animation
+        setTimeout(() => {
+          setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+        }, 500); // Delay the title change slightly to allow animation
+      }, 3000);
 
       return () => clearInterval(interval);
     }
@@ -40,6 +44,11 @@ export default function Hero({
     }
   }, [titleIndex, titles]);
 
+  useEffect(() => {
+    // Reset the animation flag when the title changes
+    setIsTitleChanging(false);
+  }, [currentTitle]);
+
   return (
     <div
       style={{
@@ -47,7 +56,7 @@ export default function Hero({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[400px] md:h-[740px] relative"
+      className="h-[400px] md:h-screen relative"
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 pt-24">
         <div
@@ -57,10 +66,17 @@ export default function Hero({
         >
           Landa Holding
         </div>
-        <div className="md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl">
+        <div
+          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl ${
+            isTitleChanging
+              ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
+              : '' // Apply spin animation class when the title is changing
+          }`}
+          style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
+        >
           {currentTitle}
         </div>
-        <div className="w-[1000px] text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
+        <div className="text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
           {subTitle}
         </div>
         <div className="md:hidden text-center w-[250px] font-condensed text-neutral-50 text-[12px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">

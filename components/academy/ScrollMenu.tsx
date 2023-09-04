@@ -1,8 +1,8 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import Card from './Card';
+import CourseCard from './CourseCard';
 
-export default function Scroll() {
+export default function ScrollMenu() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -95,7 +95,7 @@ export default function Scroll() {
             ref={scrollContainerRef}
           >
             {cardData.map((card, index) => (
-              <Card
+              <CourseCard
                 key={index}
                 title={card.title}
                 image={card.image}

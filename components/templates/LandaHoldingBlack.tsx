@@ -44,7 +44,7 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className="h-[376px] flex flex-col items-center mt-5 justify-between md:items-start">
+      <div className="h-[376px] flex flex-col items-center mt-5 justify-around md:items-start">
         <div className="flex flex-col items-start">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
@@ -56,7 +56,7 @@ export default function LandaHoldingBlack() {
           </span>
         </div>
         <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-sm font-normal leading-8 list-disc pl-4 font-barlow">
+          <ul className="text-white text-base font-normal leading-9 list-disc pl-4 font-barlow leading-loose">
             <li>Global Investment Opportunities within Your Reach.</li>
             <li>
               Access to a Network of Successful Entrepreneurs and Investors.
@@ -108,8 +108,8 @@ export default function LandaHoldingBlack() {
             <br />
           </span>
         </div>
-        <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-sm font-normal leading-8 list-disc pl-4 font-barlow md:mt-4">
+        <div className="w-[300px] md:w-[500px]">
+          <ul className="text-white text-base font-normal leading-8 list-disc pl-5 font-barlow md:mt-4 leading-loose">
             <li className="list-disc">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>

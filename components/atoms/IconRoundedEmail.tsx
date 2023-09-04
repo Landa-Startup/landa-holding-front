@@ -16,7 +16,7 @@ export default function IconRoundedEmail() {
           cy="15"
           r="15"
           fill="url(#pattern0)"
-          fill-opacity="0.7"
+          fillOpacity="0.7"
         />
         <defs>
           <pattern
