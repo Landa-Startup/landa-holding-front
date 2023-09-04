@@ -4,20 +4,37 @@ import AboutUsProfileCard from './AboutUsProfileCard';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image:
-        '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
+      image: '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/morteza-jafari-2b2b6b1b4/',
+        whatsapp: 'https://wa.me/989122000000',
+        email: 'mailto:mjafari@gmail.com',
+        website: 'https://www.google.com/',
+      }
     },
     {
       image: '/static/images/About/4-1 1.png',
       title: 'Rasoul Moradimehr',
       description: 'CO-FOUNDER & CEO',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/morteza-jafari-2b2b6b1b4/',
+        whatsapp: 'https://wa.me/989122000000',
+        email: 'mailto:mjafari@gmail.com',
+        website: 'https://www.google.com/',
+      }
     },
     {
       image: '/static/images/About/4-1 1 (1).png',
       title: 'Hadi Hasanpour',
       description: 'CO-FOUNDER & INVESTOR',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/morteza-jafari-2b2b6b1b4/',
+        whatsapp: 'https://wa.me/989122000000',
+        email: 'mailto:mjafari@gmail.com',
+        website: 'https://www.google.com/',
+      }
     },
   ];
 
@@ -39,6 +56,7 @@ export default function AboutUsProfile() {
             image={card.image}
             title={card.title}
             description={card.description}
+            links={card.links}
           />
         ))}
       </div>

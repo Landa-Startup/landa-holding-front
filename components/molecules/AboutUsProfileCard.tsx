@@ -6,10 +6,13 @@ export default function AboutUsProfileCard({
   image,
   title,
   description,
+  links,
 }: {
   image: string;
   title: string;
   description: string;
+  links: Record<string, string>;
+
 }) {
   return (
     <div className="container mb-6 shadow-lg bg-whiteGold mx-auto w-fit h-fit border">
@@ -19,7 +22,7 @@ export default function AboutUsProfileCard({
 
       <div className="flex items-center justify-center p-2 mt-6 space-x-3">
         {/* Add descriptive alt text for icons */}
-        <Link href="#">
+        <Link href={links.whatsapp}>
           <Image
             alt="Icon 1"
             src="/static/images/03bc78eaab3dcbbdddec7554e9d34351.png"
@@ -27,7 +30,7 @@ export default function AboutUsProfileCard({
             height={25}
           />
         </Link>
-        <Link href="#">
+        <Link href={links.linkedin}>
           <Image
             alt="Icon 2"
             src="/static/images/6fd49ad10f9b1a9ab4224d4d900d8355.png"
@@ -35,7 +38,7 @@ export default function AboutUsProfileCard({
             height={25}
           />
         </Link>
-        <Link href="#">
+        <Link href={links.email}>
           <Image
             alt="Icon 3"
             src="/static/images/aeb307f84efb8c124b331799a6f734e6.png"
@@ -43,7 +46,7 @@ export default function AboutUsProfileCard({
             height={25}
           />
         </Link>
-        <Link href="#">
+        <Link href={links.website}>
           <Image
             alt="Icon 4"
             src="/static/images/c897906edf05703723098f4a66032d9b.png"
