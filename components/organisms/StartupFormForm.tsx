@@ -251,10 +251,10 @@ export default function StartupFormForm() {
 
   return (
     <>
-      <div className="container m-10 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+      <div className="container m-10 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <StartupFormTitle />
         <div>
-          <p className="text-4xl mb-4">Personal information</p>
+          <p className="mb-4 text-4xl">Personal information</p>
         </div>
         <div>
           <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
@@ -263,13 +263,13 @@ export default function StartupFormForm() {
           <StartupFormPersonalInformation register={register} errors={errors} />
 
           <div>
-            <p className="text-4xl mb-4">Grows and Scale Up</p>
+            <p className="mb-4 text-4xl">Grows and Scale Up</p>
           </div>
           <div>
             <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
           </div>
           {/* idea section */}
-          <label className="flex flex-column mr-10 my-10">
+          <label className="flex my-10 mr-10 flex-column">
             <input
               type="radio"
               value={Type.IDEA}
@@ -289,7 +289,7 @@ export default function StartupFormForm() {
           })()}
 
           {/* MVP section */}
-          <label className="flex flex-column mr-10 my-10">
+          <label className="flex my-10 mr-10 flex-column">
             <input
               type="radio"
               value={Type.MVP}
@@ -316,7 +316,7 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <label className="flex flex-column mr-10 my-10">
+          <label className="flex my-10 mr-10 flex-column">
             <input
               type="radio"
               value={Type.TRIAL}
@@ -343,7 +343,7 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <label className="flex flex-column mr-10 my-10">
+          <label className="flex my-10 mr-10 flex-column">
             <input
               type="radio"
               value={Type.FisrtSale}
@@ -370,7 +370,7 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <label className="flex flex-column mr-10 my-10">
+          <label className="flex my-10 mr-10 flex-column">
             <input
               type="radio"
               value={Type.SaleDevelopment}
