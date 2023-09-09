@@ -75,7 +75,8 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
+        <button  className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
+         <Link href={"/investor-registration"}>
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
