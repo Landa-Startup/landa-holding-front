@@ -10,13 +10,13 @@ export default function Footer() {
   }
   return (
     <div className="flex flex-col bg-neutral-800 font-barlow p-8">
-      <div className="flex flex-col md:flex-row space-y-5 md:p-20 justify-between">
-        <div className="flex flex-col md:w-[344px]">
+      <div className="flex flex-col lg:flex-row space-y-5 md:p-20 justify-between">
+        <div className="flex flex-col lg:w-[344px]">
           <div className="h-[25px] text-justify text-white text-xl font-medium">
             About Landa
             <br />
           </div>
-          <div className="text-justify text-neutral-400 text-base font-normal mt-1">
+          <div className="text-justify text-neutral-400 text-base font-normal mt-1 ">
             In Landa Academy, individuals will be trained based on their
             interests and capabilities. Necessary actions are taken at the Landa
             Acceleration Center to accelerate their unique abilities. Then,
@@ -68,7 +68,7 @@ export default function Footer() {
             Explore
             <br />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col space-y-1">
             <Link
               href={'/'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
@@ -77,7 +77,7 @@ export default function Footer() {
             </Link>
             <Link
               href={'/about'}
-              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+              className="text-neutral-40 text-base font-normal hover:text-primary max-w-fit"
             >
               About
             </Link>

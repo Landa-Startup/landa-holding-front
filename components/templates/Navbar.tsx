@@ -42,8 +42,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={drawerRef} />
       <div className="drawer-content flex flex-col relative md:px-10">
-        <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-          <div className="flex-none lg:hidden">
+        <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-1">
+          <div className="flex-none xl:hidden">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
@@ -79,7 +79,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
           </div>
-          <div className="hidden xl:flex-1 xl:flex justify-start ml-32">
+          <div className=" xl:flex-1 xl:flex justify-start ml-32 hidden">
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               {menuItems.map((item) => (
                 <li className='text-2xl' key={item.label} >

@@ -39,8 +39,8 @@ export default function LandaHoldingPriority() {
   ];
 
   return (
-    <div className="w-full md:h-[613px] py-10 bg-white flex-col justify-start items-center relative gap-9 inline-flex">
-      <div className="ml-5 md:ml-40 md:self-start flex flex-col items-center">
+    <div className="w-full xl:h-[613px] py-10 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
+      <div className="ml-5 xl:ml-40 lg:self-start flex flex-col items-center">
         <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
           Landa Holding
           <br />
@@ -50,7 +50,7 @@ export default function LandaHoldingPriority() {
         </span>
       </div>
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 place-items-center mx-5 md:mx-32">
+        <div className="grid grid-cols-2 mx-0 gap-12 mr-0 ml-7 xl:grid-cols-4  place-items-center mx-5 md:grid-cols-2 lg:grid-cols-2 ">
           {cardData.map((data, index) => (
             <LandaHoldingPriorityCard
               key={index}

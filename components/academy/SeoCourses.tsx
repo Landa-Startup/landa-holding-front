@@ -25,11 +25,13 @@ export default function SeoCourses() {
                 </div>
                 <div className="bg-[#F1F8EC] my-5 mx-20 py-5">
                   <p className="text-2xl my-1">Course Price</p>
-                  <p className="text-3xl my-1 line-through decoration-wavy decoration-[#FDD30A]">4,200,000T</p>
+                  <p className="text-3xl my-1 line-through decoration-wavy decoration-[#FDD30A]">
+                    4,200,000T
+                  </p>
                   <p className="text-3xl my-1">2,900,000T</p>
                 </div>
                 <div className="bg-[#F1F8EC]  my-5 mx-20 py-5">
-                  <p className="text-2xl  my-1">Contact Us</p>
+                  <p className="text-2xl  my-1"></p>
                   <div className="flex justify-center  my-1	">
                     <IconPhoneAcademy />
                     <a
@@ -53,7 +55,7 @@ export default function SeoCourses() {
                   <a
                     role="button"
                     className="btn border-0 text-xl text-white bg-[#FDD30A] hover:bg-[#fcda30] rounded-none	px-14  mb-10"
-                    href='https://zarinp.al/527792'
+                    href="https://zarinp.al/527792"
                   >
                     Buy Now
                   </a>
@@ -95,9 +97,9 @@ export default function SeoCourses() {
                     education. Cultivating the right mindset necessitates a
                     correct form of instruction, which undoubtedly evolves from
                     initially mastering the skill and subsequently gaining
-                    experience through trial and error. <br /> The comprehensive SEO
-                    course conducted by Landa Academy and authored and recorded
-                    by Iman Nasr. In the SEO Manager course, you will
+                    experience through trial and error. <br /> The comprehensive
+                    SEO course conducted by Landa Academy and authored and
+                    recorded by Iman Nasr. In the SEO Manager course, you will
                     effortlessly acquire all the skills required to become an
                     SEO specialist and proficiently perform website SEO
                     services.

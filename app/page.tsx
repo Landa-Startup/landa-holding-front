@@ -86,7 +86,7 @@ export default function Page() {
       />
 
       {/* Map over cardData to create HomeTextCardContainers */}
-      {cardData.map((data, index) => (
+      {/* {cardData.map((data, index) => (
         <HomeTextCardContainer
           key={index}
           title={data.title}
@@ -97,13 +97,13 @@ export default function Page() {
           link={data.link}
           images={data.images}
         />
-      ))}
+      ))} */}
 
       {/* Include other components */}
-      <LandaHoldingBlack />
+      { <LandaHoldingBlack /> }
       <LandaHoldingPriority />
-      <AerialViewBusinessTeam />
-      <LatestStartups />
+      { <AerialViewBusinessTeam/> }
+      { <LatestStartups /> }
       <ContactUs />
     </div>
   );

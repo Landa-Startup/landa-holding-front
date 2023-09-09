@@ -56,9 +56,9 @@ export default function Hero({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="h-[400px] md:h-screen relative"
+      className="h-[400px] lg:h-screen relative  "
     >
-      <div className="flex flex-col items-center justify-center md:h-screen space-y-5 pt-24">
+      <div className="flex flex-col items-center justify-center md:h-screen space-y-5 pt-24 md:mb-auto pb:60">
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'

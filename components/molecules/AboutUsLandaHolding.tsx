@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 export default function AboutUsLandaHolding() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-evenly pt-5 md:py-32 bg-[#FAFAFA]">
-      <div className="text-black p-7 space-y-2">
+    <div className="flex flex-col lg:flex-row items-center justify-evenly pt-5 md:py-32 bg-[#FAFAFA] lg:flex flex-row">
+      <div className="text-black p-3 space-y-2">
         <p className="text-3xl text-center font-semibold font-gilda">
           About Landa Holding
         </p>
-        <p className="md:w-[387px] text-justify mt-4 md:mt-0 ml-0 md:ml-5 font-normal tracking-wide font-barlow">
+        <p className="lg:w-[687px]  text-justify  text-xl mt-4 md:mt-8 ml-0 md:mx-10 font-normal tracking-wide font-barlow mb-20">
           Landa International Holding started its activity in Canada in 2017 as
           one of the most reliable companies in the field of immigration. Landa
           Holding&rsquo;s distinctive feature that makes it unique compared to
@@ -27,5 +27,6 @@ export default function AboutUsLandaHolding() {
         objectFit="cover"
       />
     </div>
+    
   );
 }
