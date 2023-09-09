@@ -79,6 +79,7 @@ export default function LandaHoldingBlack() {
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
+         </Link>
           <div className="justify-start items-start gap-2.5 flex">
             <div className="relative w-5 h-5 md:w-10 md:h-10">
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
@@ -136,9 +137,11 @@ export default function LandaHoldingBlack() {
           </ul>
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
+          <Link href={"/entrepreneurs"}>
           <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
             More
           </div>
+          </Link>
           <div className="justify-start items-start gap-2.5 flex">
             <div className="relative w-5 h-5 md:w-10 md:h-10">
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
