@@ -12,8 +12,8 @@ export default function ContactUs() {
           At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape.
           To become an affiliate, please complete our free questionnaire for our confidential review.
         </p>
-        <Link href={'/partner-membership'} >
-          <Button text="Join Us" size='visit' />
+        <Link href={'/partner-membership'}>
+          <Button text="Join Us" size="visit" />
         </Link>
       </div>
      <div className="flex gap-20 md:h-full relative mt-5 ma:my-0 md:mb-0 ml-5 mr-2">

@@ -62,12 +62,12 @@ export default function Hero({
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
-          } text-center text-white text-xl md:tracking-[11.20px] font-condensed font-normal tracking-widest`}
+          } text-center text-white text-2xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
         >
           Landa Holding
         </div>
         <div
-          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl ${
+          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${
             isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
               : '' // Apply spin animation class when the title is changing
@@ -76,10 +76,10 @@ export default function Hero({
         >
           {currentTitle}
         </div>
-        <div className="text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
+        <div className="hidden md:block text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
           {subTitle}
         </div>
-        <div className="md:hidden text-center w-[250px] font-condensed text-neutral-50 text-[12px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+        <div className="md:hidden text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
           Landa Holding is an international investment company active in Iran
           and Canada.
         </div>
@@ -94,14 +94,14 @@ export default function Hero({
           <></>
         )}
         <Image
-          className="w-[103px] md:w-[412px] h-[140px] md:h-[560px] absolute right-0 bottom-0"
+          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 bottom-0"
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
           height={500}
         />
         <Link
-          className="absolute flex items-center justify-center w-7 h-7 md:w-12 h-w-5 md:h-12 border border-white rounded-full animate-bounce left-10 bottom-4"
+          className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
           href={'#LandaHolding'}
         >
           <svg

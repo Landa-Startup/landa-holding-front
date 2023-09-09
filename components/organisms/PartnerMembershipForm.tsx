@@ -4,24 +4,24 @@ import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import Select from './base/Select';
 import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
-import { partnerMembershipFormData } from '../../app/types/global';
+import { PartnerMembershipFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
 import TextArea from '../atoms/TextArea';
 import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm() {
-const initialPartnerMembershipFormData : partnerMembershipFormData ={
+  const initialPartnerMembershipFormData: PartnerMembershipFormData = {
     firstName: '',
     lastName: '',
     birthDate: new Date(),
     email: '',
     countryOfResidence: '',
     provinceOfResidence: '',
-    companyName : '',
-    investmentCeiling:'',
-    preferredAreas:'',
-    howDidYouKnowUs:'',
-};
+    companyName: '',
+    investmentCeiling: '',
+    preferredAreas: '',
+    howDidYouKnowUs: '',
+  };
 
 
   const {
@@ -29,12 +29,12 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<partnerMembershipFormData>({
+  } = useForm<PartnerMembershipFormData>({
     mode: 'onBlur',
-    defaultValues: initialPartnerMembershipFormData ,
+    defaultValues: initialPartnerMembershipFormData,
   });
 
-  const [formData, setFormData] = useState<partnerMembershipFormData>(
+  const [formData, setFormData] = useState<PartnerMembershipFormData>(
     initialPartnerMembershipFormData
   );
 
@@ -42,7 +42,7 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const onSubmit = async (data: partnerMembershipFormData) => {
+  const onSubmit = async (data: PartnerMembershipFormData) => {
     setIsSubmitting(true);
     setSend(true);
     try {
@@ -60,17 +60,17 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset (initialPartnerMembershipFormData);
+      reset(initialPartnerMembershipFormData);
       setFormData(initialPartnerMembershipFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
-      }, 10000); 
+      }, 10000);
     } catch (error) {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
-      reset (initialPartnerMembershipFormData);
+      reset(initialPartnerMembershipFormData);
       setFormData(initialPartnerMembershipFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
@@ -81,7 +81,7 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
 
   return (
     <>
-      <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+      <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <PartnerMembershipTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
@@ -236,7 +236,7 @@ const initialPartnerMembershipFormData : partnerMembershipFormData ={
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification} />
       </div>
     </>
   );

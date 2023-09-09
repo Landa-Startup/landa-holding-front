@@ -13,7 +13,7 @@ export default function BusinessPartnerShiphtmlform() {
     streetAddress: '',
     companyName: '',
     phoneNumber: '',
-    countryOfEsidence: '',
+    countryOfResidence: '',
     streetAddressLine2: '',
     investmentCeiling: '',
     birthTime: new Date(),
@@ -205,7 +205,7 @@ export default function BusinessPartnerShiphtmlform() {
             <input
               id="countryOfEsidence"
               type="text"
-              {...register('countryOfEsidence', {
+              {...register('countryOfResidence', {
                 required: 'Your Phone Number is required.',
                 pattern: {
                   value: /^[a-z ,.'-]+$/i,
@@ -214,12 +214,12 @@ export default function BusinessPartnerShiphtmlform() {
               })}
               placeholder="Your Country Of Esidence*"
               className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.countryOfEsidence ? 'border-red-500' : ''
+                errors.countryOfResidence ? 'border-red-500' : ''
               }`}
             />
-            {errors.countryOfEsidence && (
+            {errors.countryOfResidence && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
-                {errors.countryOfEsidence.message}
+                {errors.countryOfResidence.message}
               </p>
             )}
             <br />

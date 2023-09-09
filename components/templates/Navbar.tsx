@@ -9,7 +9,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
-
   const menuItems = [
     { label: 'HOME', href: '/' },
     { label: 'ABOUT', href: '/about' },
@@ -25,16 +24,16 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
     if (!drawerRef.current) {
-      console.log(drawerRef)
-      return
-    };
+      console.log(drawerRef);
+      return;
+    }
     drawerRef.current.click();
   };
   // const handleClickOutside = (event: Event) => {
   //   if (menuRef.current && !menuRef.current.contains(event.target)) {
   //     setIsMenuOpen(false);
   //   }
-  // }; 
+  // };
   // useEffect(() => {
   //   document.addEventListener('click', handleClickOutside);
   // }, []);
@@ -63,9 +62,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </svg>
             </label>
           </div>
-          <div className="px-2 m-2 text-left h-full flex justify-start items-start ">
+          <div className="px-2 m-2 text-left h-full flex justify-start items-center">
             <Link href="/">
-              <div className="flex flex-col md:flex-row items-center">
+              <div className="flex flex-col md:flex-row items-end">
                 <Image
                   className="w-7 h-8 md:w-12 md:h-14"
                   src={'static/images/Logo.svg'}
@@ -82,22 +81,37 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           <div className=" xl:flex-1 xl:flex justify-start ml-32 hidden">
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               {menuItems.map((item) => (
-                <li className='text-2xl' key={item.label} >
+                <li className="text-2xl h-9" key={item.label}>
                   <Link href={item.href} className="hover:bg-white">
                     {item.label}
                   </Link>
                 </li>
               ))}
-              <li>
+              <li className="h-9">
                 <details className="dropdown mb-32">
-                  <summary className="text-2xl hover:text-primary hover:bg-base-200" onClick={() => setIsMenuOpen(true)}>
+                  <summary
+                    className="text-2xl hover:text-primary hover:bg-base-200"
+                    onClick={() => setIsMenuOpen(true)}
+                  >
                     WORK WITH US
                   </summary>
-                  <ul className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
-                    }`}>
+                  <ul
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
+                      isMenuOpen ? '' : 'hidden'
+                    }`}
+                  >
                     {submenuItems.map((item) => (
-                      <li className='text-xl' key={item.label} onClick={() => setIsMenuOpen(false)}>
-                        <Link href={item.href} className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold">{item.label} </Link>
+                      <li
+                        className="text-xl max-h-fit"
+                        key={item.label}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <Link
+                          href={item.href}
+                          className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                        >
+                          {item.label}{' '}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -123,7 +137,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <ul>
               {submenuItems.map((item) => (
                 <li key={item.label} onClick={() => handleLinkClick()}>
-                  <Link href={item.href} className="">{item.label} </Link>
+                  <Link href={item.href} className="">
+                    {item.label}{' '}
+                  </Link>
                 </li>
               ))}
             </ul>

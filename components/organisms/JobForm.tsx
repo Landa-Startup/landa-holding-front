@@ -89,13 +89,13 @@ export default function JobForm() {
 
     return (
         <>
-            <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+            <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
                 <>
                     <div className='text-center'>
-                        <p className='font-serif text-2xl mb-20 tracking-wide'>APPLY FORM</p>
+                        <p className='mb-20 font-serif text-2xl tracking-wide'>APPLY FORM</p>
                     </div>
                     <div>
-                        <p className='text-4xl mb-4'>Personal information</p>
+                        <p className='mb-4 text-4xl'>Personal information</p>
                     </div>
                     <div>
                         <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />

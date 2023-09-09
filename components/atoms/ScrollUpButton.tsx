@@ -15,7 +15,7 @@ const ScrollUpButton = () => {
 
     // Calculate the scroll progress relative to the maximum scroll distance
     const windowHeight = window.innerHeight;
-    const documentHeight = document.body.clientHeight;
+    const documentHeight = document.documentElement.scrollHeight; // Use documentElement to get full document height
     const maxScroll = documentHeight - windowHeight;
     const progress = (scrollY / maxScroll) * 100;
     setScrollProgress(Math.min(progress, 100)); // Cap progress at 100%

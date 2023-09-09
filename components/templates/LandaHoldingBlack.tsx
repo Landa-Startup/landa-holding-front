@@ -3,8 +3,8 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-10">
-      {/* <svg
+    <div className="flex flex-col md:flex-row justify-between md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10">
+      <svg
         className="absolute left-[640px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
@@ -17,9 +17,9 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
           strokeWidth="2"
         />
-      </svg> */}
+      </svg> 
       <svg
-        className="md:hidden absolute left-0"
+        className="md:hidden absolute left-0 top-0"
         xmlns="http://www.w3.org/2000/svg"
         width="75"
         height="899"
@@ -32,7 +32,7 @@ export default function LandaHoldingBlack() {
         />
       </svg>
       <svg
-        className="md:hidden absolute right-0"
+        className="md:hidden absolute right-0 top-0"
         xmlns="http://www.w3.org/2000/svg"
         width="149"
         height="899"
@@ -61,13 +61,13 @@ export default function LandaHoldingBlack() {
             <li>
               Access to a Network of Successful Entrepreneurs and Investors.
             </li>
-            <li>
+            <li className="leading-6">
               Exclusive Insights and Expert Analysis for Informed Decisions.
             </li>
-            <li>
+            <li className="leading-6">
               Collaborative Environment for Joint Ventures and Partnerships.
             </li>
-            <li>
+            <li className="leading-6">
               Accelerated Growth Potential through Diversified Investments.
             </li>
           </ul>
@@ -81,7 +81,7 @@ export default function LandaHoldingBlack() {
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
               <div className="w-full h-full border border-stone-100">
                 <svg
-                  className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
+                  className="absolute text-white transition duration-1000 ease-in-out group-hover:text-black group-hover:bg-white"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
@@ -97,8 +97,8 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center md:items-start mt-11 md:mt-5 space-y-2 mr-40 ">
-        <div className="flex flex-col items-start">
+      <div className="flex flex-col items-center justify-around md:items-start">
+        <div className="flex flex-col md:items-start items-center">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -108,26 +108,26 @@ export default function LandaHoldingBlack() {
             <br />
           </span>
         </div>
-        <div className="w-[300px] md:w-[800px]">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-5 font-barlow md:mt-4 leading-loose">
-            <li className="list-disc">
+        <div className="w-[300px] md:w-[500px] px-5">
+          <ul className="text-white text-base font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
+            <li className="leading-7">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>
-            <li className="list-disc">
+            <li className="leading-7">
               Access to all videos of pitches, industry trend presentations and
               panel discussions
             </li>
-            <li className="list-disc">
+            <li className="leading-7">
               Attending events of the Entrepreneurs Center
             </li>
-            <li className="list-disc">
+            <li className="leading-7">
               Meetings with top business leaders and entrepreneurs
             </li>
-            <li className="list-disc">
+            <li className="leading-7">
               Participation in seasonal meetings with other international
               entrepreneurs
             </li>
-            <li className="list-disc">
+            <li className="leading-7">
               Online platform for connecting with other entrepreneurs
             </li>
           </ul>
@@ -141,7 +141,7 @@ export default function LandaHoldingBlack() {
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
               <div className="w-full h-full border border-stone-100">
                 <svg
-                  className="absolute text-white transition duration-1000 ease-in-out hover:text-black hover:bg-white"
+                  className="absolute text-white transition duration-1000 ease-in-out group-hover:text-black group-hover:bg-white"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
