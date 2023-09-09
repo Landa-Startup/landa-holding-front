@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Chevron from '../atoms/Chevron';
+import Link from "next/link";
 
 export default function AerialViewBusinessTeam() {
   return (
@@ -51,6 +52,7 @@ export default function AerialViewBusinessTeam() {
                   Investor
                 </div>
                 <div className="inline-flex gap-3 mt-2 md:hidden">
+                  <Link href={"https://www.linkedin.com/in/morteza-jafari-5b40b63a"}>
                   <Image
                     className="w-4 h-4"
                     src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
@@ -58,20 +60,25 @@ export default function AerialViewBusinessTeam() {
                     width={50}
                     height={50}
                   />
+                  </Link>
+                  <Link href={"https://mortezajafari.ca/"}>
                   <Image
                     className="w-4 h-4"
                     src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
-                    alt="Linkedin"
+                    alt="Website"
                     width={50}
                     height={50}
                   />
-                  <Image
-                    className="w-4 h-4"
-                    src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
-                    alt="Linkedin"
-                    width={50}
-                    height={50}
-                  />
+                  </Link>
+                  <Link href={"mailto:www.morteza_jafari49@yahoo.com"}>
+                    <Image
+                        className="w-4 h-4"
+                        src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
+                        alt="Email"
+                        width={50}
+                        height={50}
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -84,6 +91,7 @@ export default function AerialViewBusinessTeam() {
                 brighter future.
               </div>
               <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
+                <Link href={"https://www.linkedin.com/in/morteza-jafari-5b40b63a"}>
                 <Image
                   className="w-7 h-w-7"
                   src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
@@ -91,6 +99,8 @@ export default function AerialViewBusinessTeam() {
                   width={50}
                   height={50}
                 />
+                </Link>
+                <Link href={"https://mortezajafari.ca/"}>
                 <Image
                   className="w-7 h-w-7"
                   src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
@@ -98,6 +108,8 @@ export default function AerialViewBusinessTeam() {
                   width={50}
                   height={50}
                 />
+                </Link>
+                <Link href={"mailto:www.morteza_jafari49@yahoo.com"}>
                 <Image
                   className="w-7 h-w-7"
                   src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
@@ -105,6 +117,7 @@ export default function AerialViewBusinessTeam() {
                   width={50}
                   height={50}
                 />
+                </Link>
               </div>
             </div>
           </div>
