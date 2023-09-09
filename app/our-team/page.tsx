@@ -25,7 +25,7 @@ export default function TeamPage() {
     'Application Developer',
     'UI designer',
     'Front-end',
-    'Back-end',
+    'Back-end'
   ];
 
   const persons = [
