@@ -88,11 +88,10 @@ export default function StartupFormForm() {
   const [Send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
 
-
-
-  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRadio(event.target.value);
   };
+
   const [filePost, setFilePost] = useState<{ businessPlanFile: File | null }>({
     businessPlanFile: null,
   });
@@ -239,7 +238,7 @@ export default function StartupFormForm() {
       setSelectedRadio('IDEA');
       const timeout = setTimeout(() => {
         setShowNotification(false);
-      }, 10000); // 10 seconds in milliseconds  
+      }, 10000); // 10 seconds in milliseconds
     }
   };
 
@@ -256,6 +255,7 @@ export default function StartupFormForm() {
         <div>
           <p className="mb-4 text-4xl">Personal information</p>
         </div>
+
         <div>
           <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
         </div>
@@ -268,18 +268,20 @@ export default function StartupFormForm() {
           <div>
             <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
           </div>
+          <label htmlFor="">Select Your Status: </label>
+          <br />
+          <select
+            className="select select-bordered w-full max-w-xs mt-4"
+            onChange={handleItemChange}
+          >
+            <option value={'IDEA'} selected>
+              Idea
+            </option>
+            <option value={'MVP'}>MVP</option>
+            <option value={'FisrtSale'}>FisrtSale</option>
+            <option value={'SaleDevelopment'}>SaleDevelopment</option>
+          </select>
           {/* idea section */}
-          <label className="flex my-10 mr-10 flex-column">
-            <input
-              type="radio"
-              value={Type.IDEA}
-              {...register('type')}
-              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'IDEA'}
-              onChange={handleRadioChange}
-            />
-            <span>Idea</span>
-          </label>
           {(() => {
             if (selectedRadio == 'IDEA') {
               return <StartupFormIdea register={register} errors={errors} />;
@@ -289,17 +291,7 @@ export default function StartupFormForm() {
           })()}
 
           {/* MVP section */}
-          <label className="flex my-10 mr-10 flex-column">
-            <input
-              type="radio"
-              value={Type.MVP}
-              {...register('type')}
-              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'MVP'}
-              onChange={handleRadioChange}
-            />
-            <span>Minimal Valuable Product</span>
-          </label>
+
           {(() => {
             if (selectedRadio == 'MVP') {
               return (
@@ -315,17 +307,7 @@ export default function StartupFormForm() {
               return <div></div>;
             }
           })()}
-          <label className="flex my-10 mr-10 flex-column">
-            <input
-              type="radio"
-              value={Type.FisrtSale}
-              {...register('type')}
-              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'FisrtSale'}
-              onChange={handleRadioChange}
-            />
-            <span>First Sale</span>
-          </label>
+
           {(() => {
             if (selectedRadio == 'FisrtSale') {
               return (
@@ -342,17 +324,6 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <label className="flex my-10 mr-10 flex-column">
-            <input
-              type="radio"
-              value={Type.SaleDevelopment}
-              {...register('type')}
-              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'SaleDevelopment'}
-              onChange={handleRadioChange}
-            />
-            <span>Sale Development</span>
-          </label>
           {(() => {
             if (selectedRadio == 'SaleDevelopment') {
               return (
@@ -377,7 +348,12 @@ export default function StartupFormForm() {
               {Send ? 'Submiting ....' : 'Submit'}
             </button>
           </div>
-          <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={Send} show={showNotification}/>
+          <NotificationSendForm
+            submitting={isSubmitting}
+            success={isSuccess}
+            sendStatus={Send}
+            show={showNotification}
+          />
         </form>
       </div>
     </>
