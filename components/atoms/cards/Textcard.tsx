@@ -33,7 +33,7 @@ export default function TextCard({
       </div>
     </div>
   ) : (
-    <div className="flex flex-col font-barlow md:-mb-72 items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
+    <div className="flex flex-col font-barlow md:-mb-32 items-center md:w-[491px] text-black text-sm md:text-xl font-normal leading-[25px] md:leading-[30px]">
       {text}
       <br />
       <Image
@@ -43,6 +43,7 @@ export default function TextCard({
         width={500}
         height={500}
       />
+      <Button text="Visit Now" size="visit" goto='/academy'/>
     </div>
   );
 }
