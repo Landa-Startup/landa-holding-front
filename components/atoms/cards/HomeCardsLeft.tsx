@@ -1,7 +1,11 @@
 import React from 'react';
 import Button from '../Button';
 
-export default function HomeCardsLeft({ text }: { text: string }) {
+interface HomeCardsLeftProps {
+  text: string;
+}
+
+export default function HomeCardsLeft({ text }: HomeCardsLeftProps) {
   return (
     <div className="h-[430px] first:self-end order-2 md:order-1">
       <div className="flex flex-col items-center justify-center">

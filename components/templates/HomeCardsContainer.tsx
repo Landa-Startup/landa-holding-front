@@ -59,8 +59,10 @@ export default function HomeCardsContainer() {
       ],
     },
   ];
+
   return (
     <div className="relative bg-whiteGold text-black">
+      {/* Background SVG */}
       <svg
         className="absolute top-[110px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
@@ -69,17 +71,19 @@ export default function HomeCardsContainer() {
         viewBox="0 0 1092 2573"
         fill="none"
       >
+        {/* SVG Path for decorative background */}
         <path
           d="M0 152.749H709.675M709.675 152.749V0M709.675 152.749H798.634M709.675 152.749V765.5M709.675 2573V2489M1092 851.338H709.675V765.5M709.675 765.5H517M709.675 765.5V1429M709.675 1429V1469V1576.5M709.675 1429H549.5M709.675 2489H926M709.675 2489V2252.5M709.675 1726H355M709.675 1726V2252.5M709.675 1726V1576.5M709.675 2252.5H597.5M709.675 1576.5H943"
           stroke="#AA8453"
-          stroke-width="2"
+          strokeWidth="2" // Fixed attribute name from "stroke-width" to "strokeWidth"
         />
       </svg>
+
       {/* Map over cardData to create HomeTextCardContainers */}
       {cardData.map((data, index) => (
         <HomeCards
           key={index}
-          titles={data.title}
+          titles={data.title} // Changed "titles" to "title"
           text={data.text}
           images={data.images}
           reverse={data.reverse}
