@@ -39,10 +39,10 @@ export default function AerialViewBusinessTeam() {
                 height={500}
                 alt="Avatar"
               />
-              <div className="md: hidden w-[170px] h-0 left-[115px] top-[170px] absolute origin-top-left -rotate-90 bg-white border border-white"></div>
-              <div className="hidden md:block w-[300px] h-[1px] left-0 top-[115px] absolute bg-white border border-white"></div>
-              <div className=" flex-col justify-center md:items-start gap-[3px] text-center items-center ">
-                <div className=" text-white text-base md:text-xl font-medium font-barlow">
+              <div className="md:hidden w-[170px] h-0 left-[115px] top-[170px] absolute origin-top-left -rotate-90 bg-white border border-white"></div>
+              <div className="hidden md:block w-[230px] h-[1px] left-0 top-[120px] absolute bg-white border border-white"></div>
+              <div className="flex flex-col justify-center md:items-start gap-[3px] text-center items-center ">
+                <div className=" text-white text-base md:text-xl font-medium font-barlow inline-flex md:w-48">
                   Morteza Jafari
                 </div>
                 <div className="text-white text-xs md:text-base font-normal font-barlow ">
