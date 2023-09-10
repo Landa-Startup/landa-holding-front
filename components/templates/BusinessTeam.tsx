@@ -30,7 +30,7 @@ export default function AerialViewBusinessTeam() {
         <div className="lg:w-[1000px] md:w-[700px] p-5 flex flex-col items-center bg-neutral-500 bg-opacity-60 w-[360px] md:h-[360px]">
           <div className="flex md:flex-col md:items-center md:w-full">
             {' '}
-            <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
+            <div className="relative md:ml-2 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
               {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
               <Image
                 className="w-14 h-14 md:w-[108px] md:h-[104px] border"

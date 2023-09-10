@@ -44,7 +44,7 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className="h-[376px] flex flex-col items-center mt-5 ml-20 justify-around md:items-start ml-80">
+      <div className=" flex flex-col items-center mt-2 justify-around md:items-start ">
         <div className="flex flex-col items-start">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px] md:ml-6">
             LANDA HOLDING
@@ -55,7 +55,7 @@ export default function LandaHoldingBlack() {
             <br />
           </span>
         </div>
-        <div className="w-[400px] md:w-[434px]">
+        <div className="w-[300px] md:w-[434px]">
           <ul className="text-white text-base font-normal leading-9 list-disc pl-50 font-barlow leading-loose md:ml-10">
             <li>Global Investment Opportunities within Your Reach.</li>
             <li>
