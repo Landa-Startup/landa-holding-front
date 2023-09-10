@@ -1,9 +1,15 @@
 import ContactUs from '@/components/academy/ContactUs';
 import Gallery from '@/components/academy/Gallery';
-import Scroll from '@/components/academy/Scroll';
+import Scroll from '@/components/academy/ScrollMenu';
 import Hero from '@/components/templates/Hero';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'آکادمی لاندا',
+  description: '',
+};
 
 export default function page() {
   return (

@@ -8,7 +8,7 @@ export default function ContactUsDescription() {
   return (
     <div>
       <h1 className="text-5xl font-light">Landa Holding</h1>
-      <p className="my-5">
+      <p className="my-5 text-base text-justify">
         In Landa Holding, individuals will be trained based on their interests
         and capabilities. Necessary actions are taken at the Landa Acceleration
         Center to accelerate their unique abilities. Then, investment is made
@@ -56,11 +56,10 @@ export default function ContactUsDescription() {
         <Location />
         <div className="flex flex-col ml-2">
           <span className="font-semibold">Address</span>
-          <ul className="mx-4 list-disc">
+          <ul className="mx-4 list-disc space-y-3">
             <li>Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
             <li>
-              No. 27 ,corner of alley 1, Gholam Ganji St, Tajrish Square,Tehran,
-              Iran
+              A3 Unit,Daneshvar tower, Eastern Daneshvar street, Tehran, Iran
             </li>
             <li>C5 Unit,Tala Building, Saadat Abad Ave, Isfahan, Iran</li>
           </ul>

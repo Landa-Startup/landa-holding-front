@@ -2,12 +2,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
-import Select from './base/Select';
-import PartnerMembershipTitle from '../atoms/PartnerMembershipTitle';
 import { JobFormData } from '../../app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
-import TextArea from '../atoms/TextArea';
-import { PartnerMembership } from '@prisma/client';
 
 export default function JobForm() {
     const initialJobFormData: JobFormData = {
@@ -93,13 +89,13 @@ export default function JobForm() {
 
     return (
         <>
-            <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+            <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
                 <>
                     <div className='text-center'>
-                        <p className='font-serif text-2xl mb-20 tracking-wide'>APPLY FORM</p>
+                        <p className='mb-20 font-serif text-2xl tracking-wide'>APPLY FORM</p>
                     </div>
                     <div>
-                        <p className='text-4xl mb-4'>Personal information</p>
+                        <p className='mb-4 text-4xl'>Personal information</p>
                     </div>
                     <div>
                         <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
@@ -169,19 +165,21 @@ export default function JobForm() {
 
                         </div>
                         <div className='col-span-1'>
+                            <label htmlFor="cvFileInput">CV File:</label>
                             <input
                                 type="file"
+                                id="cvFileInput"
                                 className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
                                 {...register("cvFile", {
                                     required: 'CV File is Required',
                                 })}
                                 onChange={handleChangeFile} // must use onChange event handler after register
                             />
-                            {/* {errors["cvFile"] && (
+                            {errors["cvFile"] && (
                                 <span className="mt-4 text-sm text-yellow-500">
-                                    {errors["cvFile"].message}
+                                    {errors["cvFile"].message?.toString()}
                                 </span>
-                            )} */}
+                            )}
                         </div>
 
                     </div>

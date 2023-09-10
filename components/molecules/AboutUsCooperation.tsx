@@ -1,15 +1,14 @@
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function AboutUsCooperation() {
+export default function AboutUsCooperation() {
   return (
     <div className="h-full py-10 text-center text-white bg-neutral-800">
       <div className="text-center">
         <p className="tracking-widest">LANDA HOLDING</p>
         <p className="text-5xl not-italic leading-normal font-gilda">
-          Cooperation
+          Ceorporation
         </p>
       </div>
       <div className="grid grid-cols-1 gap-10 px-10 md:grid-cols-2 lg:px-28">
@@ -21,7 +20,8 @@ function AboutUsCooperation() {
             The Landa Investors Association is composed of a group of
             individuals active in the field of investment who collaborate with
             each other based on their investment priorities and invest in
-            startups and new businesses.<br />
+            startups and new businesses.
+            <br />
             If you are also interested in investing in new and innovative
             businesses and increasing your capital in the most modern way, we
             have provided an opportunity for you.
@@ -29,7 +29,13 @@ function AboutUsCooperation() {
           <div className="pt-10">
             <span className="mr-3">More</span>
             <Link href="/investor-registration">
-              <Image width={40} height={40} className='inline' src="/static/images/About/right-arrow2.png" alt="arrow" />
+              <Image
+                width={40}
+                height={40}
+                className="inline"
+                src="/static/images/About/right-arrow2.png"
+                alt="arrow"
+              />
             </Link>
           </div>
         </div>
@@ -49,7 +55,13 @@ function AboutUsCooperation() {
           <div className="pt-10 md:pt-16">
             <span className="mr-3">More</span>
             <Link href="/partner-membership">
-              <Image width={40} height={40} className='inline' src="/static/images/About/right-arrow2.png" alt="arrow" />
+              <Image
+                width={40}
+                height={40}
+                className="inline"
+                src="/static/images/About/right-arrow2.png"
+                alt="arrow"
+              />
             </Link>
           </div>
         </div>
@@ -57,5 +69,3 @@ function AboutUsCooperation() {
     </div>
   );
 }
-
-export default AboutUsCooperation;

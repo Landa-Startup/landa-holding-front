@@ -1,9 +1,14 @@
-import Banner from '@/components/molecules/Banner'
-// import Banner from '@/components/Banner'
-import PartnerMembershipForm from '@/components/organisms/PartnerMembershipForm'
-import React from 'react'
+import React from 'react';
+import Banner from '@/components/molecules/Banner';
+import PartnerMembershipForm from '@/components/organisms/PartnerMembershipForm';
+import { Metadata } from 'next';
 
-export default function page() {
+export const metadata: Metadata = {
+  title: 'Landa Holding | Partners',
+  description: '',
+};
+
+export default function AffiliateFormPage() {
   return (
     <>
       <Banner
@@ -12,5 +17,5 @@ export default function page() {
       />
       <PartnerMembershipForm />
     </>
-  )
+  );
 }

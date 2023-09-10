@@ -95,7 +95,7 @@ export default function InvestorRegistrationForm() {
 
   return (
     <>
-      <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+      <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <InvestorRegistrationTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">

@@ -6,7 +6,7 @@ module.exports = {
       fontFamily: {
         gilda: ['Gilda Display', 'serif'],
         barlow: ['Barlow', 'serif'],
-        condensed: ['Barlow', 'serif'],
+        condensed: ['Condensed', 'serif'],
       },
       colors: {
         primary: '#AA8453',

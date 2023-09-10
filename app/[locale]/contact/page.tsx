@@ -2,6 +2,13 @@ import React from 'react';
 import ContactUsForm from '@/components/organisms/ContactUsForm';
 import ContactUsDescription from '@/components/molecules/ContactUsDescription';
 import Banner from '@/components/molecules/Banner';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'هلدینگ لاندا | ارتباط',
+  description: '',
+};
+
 export default function page() {
   return (
     <div>
