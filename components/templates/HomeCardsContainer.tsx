@@ -11,6 +11,7 @@ export default function HomeCardsContainer() {
       show: true,
       index: 1,
       link: '/investment-registration',
+      addedClass: '',
       images: [
         {
           src: '/static/images/Home/Investment/male-female-business-people-working-tablet-office.png',
@@ -29,6 +30,7 @@ export default function HomeCardsContainer() {
       show: true,
       index: 2,
       link: '/startupsForm',
+      addedClass: 'mb-28',
       images: [
         {
           src: '/static/images/Home/Acceleration/1.png',
@@ -47,6 +49,7 @@ export default function HomeCardsContainer() {
       show: false,
       index: 3,
       link: '/academy',
+      addedClass: 'mb-36',
       images: [
         {
           src: '/static/images/Home/Academy/3390782c4ef216a1fb0b67f2cc41660d 1.png',
@@ -61,7 +64,7 @@ export default function HomeCardsContainer() {
   ];
 
   return (
-    <div className="relative bg-whiteGold text-black" id="LandaHolding">
+    <div className="relative bg-whiteGold text-black">
       {/* Background SVG */}
       <svg
         className="absolute top-[110px] hidden md:block"
@@ -83,10 +86,11 @@ export default function HomeCardsContainer() {
       {cardData.map((data, index) => (
         <HomeCards
           key={index}
-          titles={data.title} // Changed "titles" to "title"
+          titles={data.title}
           text={data.text}
           images={data.images}
           reverse={data.reverse}
+          addedClass={data.addedClass}
         />
       ))}
     </div>
