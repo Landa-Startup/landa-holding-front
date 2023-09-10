@@ -19,18 +19,14 @@ export default function LandaHoldingBlack() {
         />
       </svg>
       <div className="flex flex-col items-center mt-2 justify-around md:items-start space-y-2">
-        <div className="flex flex-col md:items-start items-center mb-2">
-          <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
-            LANDA HOLDING
-            <br />
-          </span>
+        <div className="flex flex-col md:items-start items-center mb-2 self-start">
           <span className="text-white text-3xl font-condensed font-normal">
             Investment Center
             <br />
           </span>
         </div>
         <div className="w-[350px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-9 list-disc pl-4 font-barlow space-y-2">
+          <ul className="text-white text-[14px] font-normal leading-9 list-disc pl-4 font-barlow space-y-2">
             <li className="leading-6">
               Global Investment Opportunities within Your Reach.
             </li>
@@ -50,8 +46,8 @@ export default function LandaHoldingBlack() {
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <Link href={'/investor-registration'}>
-            <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
-              More
+            <div className="text-stone-100 text-[28px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
+              Register
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">
@@ -76,18 +72,14 @@ export default function LandaHoldingBlack() {
         </button>
       </div>
       <div className="flex flex-col items-center justify-around md:items-start space-y-2">
-        <div className="flex flex-col md:items-start items-center">
-          <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
-            LANDA HOLDING
-            <br />
-          </span>
+        <div className="flex flex-col md:items-start items-center self-start ml-5">
           <span className="text-white text-3xl font-condensed font-normal">
             Entrepreneur Center
             <br />
           </span>
         </div>
         <div className="w-[380px] md:w-[500px] px-5">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
+          <ul className="text-white text-[14px] font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
             <li className="leading-7">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>
@@ -112,8 +104,8 @@ export default function LandaHoldingBlack() {
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <Link href={'/entrepreneurs'}>
-            <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
-              More
+            <div className="text-stone-100 text-[28px] md:text-[32px] tracking-[1.5px] font-normal leading-6 font-condensed">
+              Register
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">
