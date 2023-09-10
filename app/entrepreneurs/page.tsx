@@ -1,7 +1,13 @@
 import Banner from '@/components/molecules/Banner';
+import { Metadata } from 'next';
 // import EntrepreneursForm from '@/components/organisms/EntrepreneursForm';
 
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Entrepreneurs',
+  description: '',
+};
 
 export default function EntrepreneursPage() {
   return (
