@@ -18,7 +18,7 @@ export default function LandaHoldingBlack() {
           strokeWidth="2"
         />
       </svg>
-      <div className="flex flex-col items-center mt-2 justify-around md:items-start space-y-2">
+      <div className="flex flex-col items-center justify-around md:items-start space-y-2">
         <div className="flex flex-col md:items-start items-center mb-2 self-start">
           <span className="text-white text-3xl font-condensed font-normal">
             Investment Center
@@ -27,19 +27,19 @@ export default function LandaHoldingBlack() {
         </div>
         <div className="w-[350px] md:w-[434px]">
           <ul className="text-white text-[14px] font-normal leading-9 list-disc pl-4 font-barlow space-y-2">
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Global Investment Opportunities within Your Reach.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Access to a Network of Successful Entrepreneurs and Investors.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Exclusive Insights and Expert Analysis for Informed Decisions.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Collaborative Environment for Joint Ventures and Partnerships.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Accelerated Growth Potential through Diversified Investments.
             </li>
           </ul>
@@ -71,7 +71,7 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center justify-around md:items-start space-y-2">
+      <div className="flex flex-col items-center md:mt-2 justify-around md:items-start space-y-2">
         <div className="flex flex-col md:items-start items-center self-start ml-5">
           <span className="text-white text-3xl font-condensed font-normal">
             Entrepreneur Center
