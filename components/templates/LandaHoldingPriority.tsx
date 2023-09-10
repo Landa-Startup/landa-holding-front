@@ -50,7 +50,7 @@ export default function LandaHoldingPriority() {
         </span>
       </div>
       <div>
-        <div className="grid grid-cols-2 mx-0 gap-12 mr-0 ml-7 xl:grid-cols-4  place-items-center mx-5 md:grid-cols-2 lg:grid-cols-2 ">
+        <div className="grid grid-cols-2  gap-5 xl:grid-cols-4  place-items-center mx-5 md:grid-cols-2 lg:grid-cols-2 ">
           {cardData.map((data, index) => (
             <LandaHoldingPriorityCard
               key={index}
