@@ -1,6 +1,12 @@
 import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import PartnerMembershipForm from '@/components/organisms/PartnerMembershipForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Partners',
+  description: '',
+};
 
 export default function AffiliateFormPage() {
   return (

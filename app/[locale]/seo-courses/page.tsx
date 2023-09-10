@@ -1,6 +1,12 @@
 import SeoCourses from '@/components/academy/SeoCourses';
 import Hero from '@/components/templates/Hero';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'هلدینگ لاندا | دوره سئو',
+  description: '',
+};
 
 export default function page() {
   return (

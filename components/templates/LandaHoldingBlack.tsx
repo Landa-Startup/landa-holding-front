@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-10">
+    <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10 space-y-5 pb-5">
       <svg
         className="absolute left-[260px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
@@ -55,27 +55,31 @@ export default function LandaHoldingBlack() {
             <br />
           </span>
         </div>
-        <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-9 list-disc pl-4 font-barlow leading-loose">
-            <li>Global Investment Opportunities within Your Reach.</li>
-            <li>
+        <div className="w-[350px] md:w-[434px]">
+          <ul className="text-white text-[14px] font-normal leading-9 list-disc pl-4 font-barlow space-y-2">
+            <li className="leading-7 md:leading-10">
+              Global Investment Opportunities within Your Reach.
+            </li>
+            <li className="leading-7 md:leading-10">
               Access to a Network of Successful Entrepreneurs and Investors.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Exclusive Insights and Expert Analysis for Informed Decisions.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Collaborative Environment for Joint Ventures and Partnerships.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Accelerated Growth Potential through Diversified Investments.
             </li>
           </ul>
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
-          <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
-            More
-          </div>
+          <Link href={'/investor-registration'}>
+            <div className="text-stone-100 text-[28px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
+              Register
+            </div>
+          </Link>
           <div className="justify-start items-start gap-2.5 flex">
             <div className="relative w-5 h-5 md:w-10 md:h-10">
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
@@ -133,9 +137,11 @@ export default function LandaHoldingBlack() {
           </ul>
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
-          <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
-            More
-          </div>
+          <Link href={'/entrepreneurs'}>
+            <div className="text-stone-100 text-[28px] md:text-[32px] tracking-[1.5px] font-normal leading-6 font-condensed">
+              Register
+            </div>
+          </Link>
           <div className="justify-start items-start gap-2.5 flex">
             <div className="relative w-5 h-5 md:w-10 md:h-10">
               <div className="absolute inset-0 bg-white border border-stone-100 transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>

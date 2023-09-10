@@ -203,7 +203,7 @@ export default function PartnerMembershipForm() {
                 errors={errors}
                 nameInput="investmentCeiling"
                 type="text"
-                label="Investment Ceiling"
+                label="Field Of Professional"
                 required="Investment Ceiling is Required."
                 placeholder="Enter your Investment Ceiling"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"

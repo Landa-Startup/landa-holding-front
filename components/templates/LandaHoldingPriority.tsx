@@ -5,11 +5,11 @@ import Image from 'next/image';
 export default function LandaHoldingPriority() {
   const cardData = [
     {
-      title: 'Platform based on AI and VR',
+      title: 'Artificial Intelligence',
       image: '/static/images/Home/Priority/vr-glasses 2.png',
     },
     {
-      title: 'Agriculture',
+      title: 'Virtual Reality',
       image: '/static/images/Home/Priority/system 2.png',
     },
     {
@@ -46,7 +46,7 @@ export default function LandaHoldingPriority() {
           <br />
         </span>
         <span className="text-5xl font-normal tracking-widest text-black font-condensed">
-          Priority
+          Priorities
         </span>
       </div>
       <div>

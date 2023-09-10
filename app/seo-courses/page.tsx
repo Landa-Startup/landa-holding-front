@@ -1,6 +1,12 @@
 import React from 'react';
 import SeoCourses from '@/components/academy/SeoCourses';
 import Hero from '@/components/templates/Hero';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Academy | Seo Course',
+  description: '',
+};
 
 export default function SeoCoursesPage() {
   return (

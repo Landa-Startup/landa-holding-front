@@ -20,6 +20,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
+    { label: 'Entrepreneurs', href: '/entrepreneurs' },
+
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -51,7 +53,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
+                className="inline-block w-8 h-8 stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -66,13 +68,13 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <Link href="/">
               <div className="flex flex-col md:flex-row items-end">
                 <Image
-                  className="w-7 h-8 md:w-12 md:h-14"
+                  className="w-10 h-10 md:w-12 md:h-14"
                   src={'static/images/Logo.svg'}
                   alt="Logo"
                   width={50}
                   height={50}
                 />
-                <span className="text-primary text-[7.5px] md:text-xl tracking-[0.375px] font-bold">
+                <span className="text-primary text-[12px] md:text-xl tracking-[0.375px] font-bold">
                   LANDA
                 </span>
               </div>
@@ -96,9 +98,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     WORK WITH US
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map((item) => (
                       <li

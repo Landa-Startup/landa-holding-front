@@ -1,6 +1,12 @@
 import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import InvestorRegistrationForm from '@/components/organisms/InvestorRegistrationForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Investors',
+  description: '',
+};
 
 export default function InvestorRegistrationPage() {
   return (

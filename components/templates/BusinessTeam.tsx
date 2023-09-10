@@ -104,7 +104,7 @@ export default function AerialViewBusinessTeam() {
                 <Image
                   className="w-7 h-w-7"
                   src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
-                  alt="Linkedin"
+                  alt="Website"
                   width={50}
                   height={50}
                 />
