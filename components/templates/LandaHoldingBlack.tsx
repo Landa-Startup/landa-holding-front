@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-evenly md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10 space-y-5 pb-5">
+    <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10 space-y-5 pb-5">
       <svg
         className="absolute left-[640px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
