@@ -103,25 +103,25 @@ export default function Footer() {
           <div className="text-white text-xl font-medium">Forms</div>
           <div className="self-stretch flex-col justify-start items-start  inline-flex">
             <Link
-              href={'/startups'}
+              href={'/StartupsForm'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
             >
               Startups
             </Link>
             <Link
-              href={'/'}
+              href={'/investor-registration'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
             >
               Center of Investor
             </Link>
             <Link
-              href={'/'}
+              href={'/entrepreneurs'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
             >
               Center of Entrepreneurs
             </Link>
             <Link
-              href={'/'}
+              href={'/business-partners'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
             >
               Our business partners
