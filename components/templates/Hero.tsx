@@ -94,7 +94,7 @@ export default function Hero({
           <></>
         )}
         <Image
-          className="w-[103px] md:w-[412px] h-[140px] md:h-[560px] absolute right-0 bottom-0"
+          className="w-[103px] md:w-[200px] absolute right-0 bottom-0"
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}

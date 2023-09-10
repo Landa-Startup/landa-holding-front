@@ -3,9 +3,9 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-between md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10">
+    <div className="flex flex-col md:flex-row justify-around items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-10">
       <svg
-        className="absolute left-[640px] hidden md:block"
+        className="absolute left-[260px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
         height="589"
@@ -19,7 +19,7 @@ export default function LandaHoldingBlack() {
         />
       </svg> 
       <svg
-        className="md:hidden absolute left-0 top-0"
+        className="md:hidden absolute left-0 "
         xmlns="http://www.w3.org/2000/svg"
         width="75"
         height="899"
@@ -32,7 +32,7 @@ export default function LandaHoldingBlack() {
         />
       </svg>
       <svg
-        className="md:hidden absolute right-0 top-0"
+        className="md:hidden absolute right-0 "
         xmlns="http://www.w3.org/2000/svg"
         width="149"
         height="899"
@@ -44,19 +44,19 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className=" flex flex-col items-center mt-2 justify-around md:items-start ">
+      <div className="h-[376px] flex flex-col items-center mt-5 justify-around md:items-start ">
         <div className="flex flex-col items-start">
-          <span className="text-white font-barlow text-base font-normal tracking-[5.60px] md:ml-6">
+          <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
           </span>
-          <span className="text-white text-3xl font-condensed font-normal md:ml-6">
+          <span className="text-white text-3xl font-condensed font-normal ">
             Investment Center
             <br />
           </span>
         </div>
         <div className="w-[300px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-9 list-disc pl-50 font-barlow leading-loose md:ml-10">
+          <ul className="text-white text-base font-normal leading-9 list-disc pl-4 font-barlow leading-loose">
             <li>Global Investment Opportunities within Your Reach.</li>
             <li>
               Access to a Network of Successful Entrepreneurs and Investors.
@@ -97,8 +97,8 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center justify-around md:items-start">
-        <div className="flex flex-col md:items-start items-center">
+      <div className="flex flex-col items-center md:items-start mt-11 md:mt-5 space-y-2">
+        <div className="flex flex-col items-start">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -108,26 +108,26 @@ export default function LandaHoldingBlack() {
             <br />
           </span>
         </div>
-        <div className="w-[300px] md:w-[500px] px-5">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
-            <li className="leading-7">
+        <div className="w-[300px] md:w-[500px]">
+          <ul className="text-white text-base font-normal leading-8 list-disc pl-5 font-barlow md:mt-4 leading-lose">
+            <li className="list-disc">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>
-            <li className="leading-7">
+            <li className="list-disc">
               Access to all videos of pitches, industry trend presentations and
               panel discussions
             </li>
-            <li className="leading-7">
+            <li className="list-disc">
               Attending events of the Entrepreneurs Center
             </li>
-            <li className="leading-7">
+            <li className="list-disc">
               Meetings with top business leaders and entrepreneurs
             </li>
-            <li className="leading-7">
+            <li className="llist-disc">
               Participation in seasonal meetings with other international
               entrepreneurs
             </li>
-            <li className="leading-7">
+            <li className="list-disc">
               Online platform for connecting with other entrepreneurs
             </li>
           </ul>
