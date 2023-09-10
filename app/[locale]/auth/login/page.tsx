@@ -1,5 +1,6 @@
 // import LoginPage from '@/components/organisms/LoginPage';
 
+import Login from '@/components/templates/Login';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 function page() {
-  return <>{/* <LoginPage/> */}</>;
+  return <Login />;
 }
 
 export default page;

@@ -7,6 +7,7 @@ interface HomeCardsProps {
   text: string;
   images: Array<{ src: string; alt: string }>;
   reverse?: boolean;
+  addedClass?: string;
 }
 
 export default function HomeCards({
@@ -14,6 +15,7 @@ export default function HomeCards({
   text,
   images,
   reverse = false, // Added a default value for the "reverse" prop
+  addedClass,
 }: HomeCardsProps) {
   // Determine the flex direction based on the "reverse" prop
   const flexDirectionClass = reverse
@@ -24,7 +26,7 @@ export default function HomeCards({
     <div
       className={` ${flexDirectionClass} flex justify-between items-center px-9 md:px-32 py-5 md:py-28`}
     >
-      <HomeCardsLeft text={text} />
+      <HomeCardsLeft text={text} addedClass={addedClass} />
       <HomeCardsRight images={images} titles={titles} />
     </div>
   );

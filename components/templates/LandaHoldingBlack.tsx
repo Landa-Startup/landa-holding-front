@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-evenly md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10 space-y-5 pb-5">
+    <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10 space-y-5 pb-5">
       <svg
         className="absolute left-[640px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
@@ -18,40 +18,36 @@ export default function LandaHoldingBlack() {
           strokeWidth="2"
         />
       </svg>
-      <div className="flex flex-col items-center mt-2 justify-around md:items-start space-y-2">
-        <div className="flex flex-col md:items-start items-center mb-2">
-          <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
-            LANDA HOLDING
-            <br />
-          </span>
+      <div className="flex flex-col items-center justify-around md:items-start space-y-2">
+        <div className="flex flex-col md:items-start items-center mb-2 self-start">
           <span className="text-white text-3xl font-condensed font-normal">
             Investment Center
             <br />
           </span>
         </div>
         <div className="w-[350px] md:w-[434px]">
-          <ul className="text-white text-base font-normal leading-9 list-disc pl-4 font-barlow space-y-2">
-            <li className="leading-6">
+          <ul className="text-white text-[14px] font-normal leading-9 list-disc pl-4 font-barlow space-y-2">
+            <li className="leading-7 md:leading-10">
               Global Investment Opportunities within Your Reach.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Access to a Network of Successful Entrepreneurs and Investors.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Exclusive Insights and Expert Analysis for Informed Decisions.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Collaborative Environment for Joint Ventures and Partnerships.
             </li>
-            <li className="leading-6">
+            <li className="leading-7 md:leading-10">
               Accelerated Growth Potential through Diversified Investments.
             </li>
           </ul>
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <Link href={'/investor-registration'}>
-            <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
-              More
+            <div className="text-stone-100 text-[28px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
+              Register
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">
@@ -75,19 +71,15 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center justify-around md:items-start space-y-2">
-        <div className="flex flex-col md:items-start items-center">
-          <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
-            LANDA HOLDING
-            <br />
-          </span>
+      <div className="flex flex-col items-center md:mt-2 justify-around md:items-start space-y-2">
+        <div className="flex flex-col md:items-start items-center self-start ml-5">
           <span className="text-white text-3xl font-condensed font-normal">
             Entrepreneur Center
             <br />
           </span>
         </div>
         <div className="w-[380px] md:w-[500px] px-5">
-          <ul className="text-white text-base font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
+          <ul className="text-white text-[14px] font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
             <li className="leading-7">
               Global Networking Opportunities for Collaboration and Partnerships
             </li>
@@ -112,8 +104,8 @@ export default function LandaHoldingBlack() {
         </div>
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
           <Link href={'/entrepreneurs'}>
-            <div className="text-stone-100 text-xl md:text-3xl font-normal leading-6 tracking-wider font-condensed">
-              More
+            <div className="text-stone-100 text-[28px] md:text-[32px] tracking-[1.5px] font-normal leading-6 font-condensed">
+              Register
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">
