@@ -1,6 +1,12 @@
 import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import StartupFormForm from '@/components/organisms/StartupFormForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Startups',
+  description: '',
+};
 
 export default function StartupValidationPage() {
   return (

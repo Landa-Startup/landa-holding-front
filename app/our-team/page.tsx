@@ -1,6 +1,12 @@
 import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import PersonalTab from '@/components/atoms/cards/PersonalTab';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Our Teamّ',
+  description: '',
+};
 
 export default function TeamPage() {
   const jobLinks = [
