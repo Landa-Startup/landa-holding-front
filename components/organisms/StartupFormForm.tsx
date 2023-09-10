@@ -315,34 +315,6 @@ export default function StartupFormForm() {
               return <div></div>;
             }
           })()}
-
-          <label className="flex my-10 mr-10 flex-column">
-            <input
-              type="radio"
-              value={Type.TRIAL}
-              {...register('type')}
-              className="radio mr-2 text-xl font-medium  bg-[#f8f5f0] dark:bg-[#2b333d]"
-              checked={selectedRadio === 'TRIAL'}
-              onChange={handleRadioChange}
-            />
-            <span>Trial Product</span>
-          </label>
-          {(() => {
-            if (selectedRadio == 'TRIAL') {
-              return (
-                <StartupFormTrialProduct
-                  register={register}
-                  errors={errors}
-                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
-                  handlePitchDeckFileChange={handlePitchDeckFileChange}
-                  handleFinancialFileChange={handleFinancialFileChange}
-                />
-              );
-            } else {
-              return <div></div>;
-            }
-          })()}
-
           <label className="flex my-10 mr-10 flex-column">
             <input
               type="radio"
