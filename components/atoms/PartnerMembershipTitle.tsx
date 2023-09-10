@@ -5,7 +5,7 @@ export default function PartnerMembershipTitle() {
     <>
       <div className="text-center">
         <p className="font-serif text-2xl mb-20 tracking-wide">
-          AFFILIATE FORM
+          Business Partner Form
         </p>
       </div>
       <div>

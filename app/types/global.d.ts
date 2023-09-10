@@ -118,6 +118,14 @@ interface StartupsFormData {
   Idea: boolean;
 }
 
+interface Entrepreuneur{
+  email: string;
+  companyName: string;
+  phone: string;
+  website: string;
+  fieldOfProfessional: string;
+}
+
 export {
   ContactUSFormData,
   Type,
@@ -126,4 +134,5 @@ export {
   PartnerMembershipFormData,
   InvestorRegistrationFormData,
   JobFormData,
+  Entrepreuneur
 };

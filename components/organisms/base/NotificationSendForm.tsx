@@ -12,7 +12,7 @@ export default function NotificationSendForm({
   show: boolean;
 }) {
   return (
-    <div className="w-96 mx-auto mt-5">
+    <div className="w-64 mx-auto mt-5 lg:w-96">
       {success && submitting && !sendStatus && show && (
         <div className="alert alert-success">
           <svg

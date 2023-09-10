@@ -70,7 +70,7 @@ export default function page() {
     {
       image: '/static/images/our-team/Personals/a10.png',
       position: 'front-end',
-      name: 'Mernoosh Heibati',
+      name: 'Mehrnoosh Heibati',
     },
 
     {
