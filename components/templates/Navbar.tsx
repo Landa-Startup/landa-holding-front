@@ -1,13 +1,15 @@
 'use client';
-import { cookies } from 'next/dist/client/components/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
+import Logo from '../molecules/Logo';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
   const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const router = usePathname();
 
   const menuItems = [
     { label: 'HOME', href: '/' },
@@ -21,7 +23,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
     { label: 'Entrepreneurs', href: '/entrepreneurs' },
-
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -69,22 +70,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </svg>
             </label>
           </div>
-          <div className="px-2 m-2 text-left h-full flex justify-start items-center">
-            <Link href="/">
-              <div className="flex flex-col md:flex-row items-end">
-                <Image
-                  className="w-10 h-10 md:w-12 md:h-14"
-                  src={'static/images/Logo.svg'}
-                  alt="Logo"
-                  width={50}
-                  height={50}
-                />
-                <span className="text-primary text-[12px] md:text-xl tracking-[0.375px] font-bold">
-                  LANDA
-                </span>
-              </div>
-            </Link>
-          </div>
+          <Logo route={router === '/academy' ? 'academy' : 'holding'} />
           <div className="hidden xl:flex-1 xl:flex justify-start ml-32">
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               {menuItems.map((item) => (
@@ -103,8 +89,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     WORK WITH US
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
-                      }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
+                      isMenuOpen ? '' : 'hidden'
+                    }`}
                   >
                     {submenuItems.map((item) => (
                       <li
