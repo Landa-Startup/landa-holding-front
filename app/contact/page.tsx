@@ -2,6 +2,12 @@ import React from 'react';
 import ContactUsForm from '@/components/organisms/ContactUsForm';
 import ContactUsDescription from '@/components/molecules/ContactUsDescription';
 import Banner from '@/components/molecules/Banner';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Contact',
+  description: '',
+};
 
 export default function ContactUsPage() {
   // Renamed the component for better naming

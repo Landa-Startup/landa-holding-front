@@ -1,6 +1,12 @@
 import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import PersonalTab from '@/components/atoms/cards/PersonalTab';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'هلدینگ لاندا | تیم ما',
+  description: '',
+};
 
 export default function page() {
   const jobLinks = [
