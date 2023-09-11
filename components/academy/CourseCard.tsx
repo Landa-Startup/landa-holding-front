@@ -14,7 +14,7 @@ export default function CourseCard({
 }) {
   return (
     <Link
-      href={title}
+      href={'/academy/' + title}
       style={{
         backgroundImage: `url('${image}')`,
         backgroundPosition: 'center',
