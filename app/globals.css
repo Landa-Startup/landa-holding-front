@@ -42,7 +42,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #999999;
+  background-color: rgb(250 204 21);
   border-radius: 4px;
 }
 
