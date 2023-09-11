@@ -23,7 +23,7 @@ export default function Banner({
           <p className="text-neutral-50 text-base font-normal tracking-[5.60px] font-condensed ">
             LANDA HOLDING
           </p>
-          <p className="text-neutral-50 text-[32px] font-normal font-gilda md:text-[50px] lg:text-[74px]">
+          <p className="text-neutral-50 text-[32px] font-normal font-gilda md:text-[50px] lg:text-[74px] xl:text-[84px]">
             {title}
           </p>
         </div>
