@@ -19,8 +19,12 @@ export default function Logo({ route }: { route: 'holding' | 'academy' }) {
             width={125}
             height={106}
           />
-          <span className="text-lime-400 text-[12px] md:text-xl tracking-[0.375px] font-bold">
-            Academy
+          <span
+            className={`${
+              route === 'academy' ? 'text-lime-400' : 'text-primary'
+            } text-[12px] md:text-xl tracking-[0.375px] font-bold`}
+          >
+            {route === 'academy' ? 'Academy' : 'Landa'}
           </span>
         </div>
       </Link>

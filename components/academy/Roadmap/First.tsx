@@ -17,7 +17,7 @@ export default function First() {
             Registration in the Optional Course
           </div>
           <p className="md:hidden text-gray-600 text-2xl leading-10 font-barlow font-normal tracking-wider">
-            Completing the Professional Course with the Best Teachers
+            Registration and participation in Optional courses
           </p>
           <div className="justify-start items-start gap-2 inline-flex">
             <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
