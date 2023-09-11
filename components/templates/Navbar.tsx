@@ -20,6 +20,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
+    { label: 'Entrepreneurs', href: '/entrepreneurs' },
+
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -45,9 +47,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         className="drawer-toggle"
         ref={drawerRef}
       />
-      <div className="drawer-content flex flex-col relative">
-        <div className="bg-neutral-800 bg-opacity-80 w-full navbar text-white flex justify-between items-center md:px-12 fixed z-50">
-          <div className="flex-none lg:hidden mt-3">
+      <div className="drawer-content flex flex-col relative md:px-32 md:pt-5">
+        <div className="w-full navbar bg-transparent text-white flex justify-between items-center">
+          <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"

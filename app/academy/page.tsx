@@ -5,6 +5,12 @@ import PromoteCourse from '@/components/academy/PromoteCourse';
 import Gallery from '@/components/academy/Gallery';
 import ContactUs from '@/components/academy/ContactUs';
 import ScrollMenu from '@/components/academy/ScrollMenu';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Academy',
+  description: '',
+};
 
 export default function SeoCoursePage() {
   return (

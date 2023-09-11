@@ -76,7 +76,7 @@ export default function Hero({
         >
           {currentTitle}
         </div>
-        <div className="hidden md:block text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
+        <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
         </div>
         <div className="md:hidden text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">

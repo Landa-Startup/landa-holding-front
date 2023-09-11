@@ -1,4 +1,3 @@
-
 // import React from 'react';
 // import AboutUsCooperation from '@/components/molecules/AboutUsCooperation';
 // import AboutUsLandaHolding from '@/components/molecules/AboutUsLandaHolding';
@@ -53,10 +52,14 @@
 //         </div>
 //     );
 // }
-import React from 'react'
+import { Metadata } from 'next';
+import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'هلدینگ لاندا | درباره',
+  description: '',
+};
 
 export default function page() {
-  return (
-    <div>page</div>
-  )
+  return <div>page</div>;
 }

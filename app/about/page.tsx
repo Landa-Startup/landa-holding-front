@@ -4,6 +4,12 @@ import AboutUsLandaHolding from '@/components/molecules/AboutUsLandaHolding';
 import AboutUsProfile from '@/components/molecules/AboutUsProfile';
 import Banner from '@/components/molecules/Banner';
 import AboutUsCard from '@/components/molecules/AboutUsCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | About',
+  description: '',
+};
 
 export default function Page() {
   const cards = [
