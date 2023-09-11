@@ -1,7 +1,7 @@
 import ContactUs from '@/components/academy/ContactUs';
 import Gallery from '@/components/academy/Gallery';
+import Hero from '@/components/academy/Hero';
 import Scroll from '@/components/academy/ScrollMenu';
-import Hero from '@/components/templates/Hero';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import React from 'react';
@@ -16,7 +16,7 @@ export default function page() {
     <div className="bg-[#F1F8EC]">
       <Hero
         showLanda={false}
-        titles="SEO COURSE"
+        title="SEO COURSE"
         subTitle="
 Elevate your online impact with our SEO course at Landa Academy! Master search engine optimization, from keywords to cutting-edge strategies. Join us now and amplify your digital presence!"
         buttonBg="#FDD30A"

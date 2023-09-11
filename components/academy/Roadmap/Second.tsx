@@ -5,7 +5,7 @@ import ScrollButton from './ScrollButton';
 export default function Second() {
   return (
     <div className="flex flex-col bg-[#FFFBE6] relative" id="Roadmap-2">
-      <div className="flex flex-row-reverse justify-evenly py-16 z-10">
+      <div className="flex flex-col-reverse md:flex-row-reverse justify-evenly py-16 z-10">
         <Image
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Seminar-amico (1) 1.svg'}
@@ -13,14 +13,14 @@ export default function Second() {
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="w-[500px] text-gray-600 text-5xl font-normal tracking-wider leading-snug">
+          <div className="md:w-[500px] text-gray-600 text-5xl font-normal tracking-wider leading-snug">
             Completing the Professional Course with the Best Teachers
           </div>
         </div>
       </div>
       <ScrollButton scrollTo="Roadmap-3" />
       <svg
-        className="absolute top-0 left-[443px]"
+        className="absolute top-0 left-[443px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="432"
         height="318"
@@ -36,7 +36,7 @@ export default function Second() {
         />
       </svg>
       <svg
-        className="absolute bottom-0 left-[1023px]"
+        className="absolute bottom-0 left-[1023px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="177"
         height="477"

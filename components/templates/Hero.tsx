@@ -14,7 +14,7 @@ export default function Hero({
   showButton,
 }: {
   showLanda: boolean;
-  titles: string[] | string;
+  titles: string[];
   subTitle: string;
   buttonBg?: string;
   backgroundImage: string;
@@ -66,16 +66,34 @@ export default function Hero({
         >
           Landa Holding
         </div>
-        <div
-          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${
-            isTitleChanging
-              ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
-              : '' // Apply spin animation class when the title is changing
-          }`}
-          style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
-        >
-          {currentTitle}
+        <div className="hidden md:flex text-center font-barlow text-neutral-50 text-opacity-75 text-4xl font-semibold leading-10 tracking-[2px] flex-col space-y-2">
+          {titles.map((title, index) => {
+            const currentIndex = (titleIndex + index) % titles.length;
+            const titleClass = `opacity-${
+              index === 1 ? 100 : 25
+            } transform translate-y-${
+              index === 0 ? '-4' : index === 2 ? '4' : '0'
+            }`;
+
+            return (
+              <div
+                key={index}
+                className={`font-gilda tracking-[6.5px] ${
+                  index === 1 ? 'opacity-100' : 'opacity-25'
+                } transform ${
+                  index === 0
+                    ? '-translate-y-4 pt-4 text-5xl'
+                    : index === 2
+                    ? 'translate-y-4 pb-4 text-5xl'
+                    : 'translate-y-0 text-6xl'
+                }`}
+              >
+                {titles[currentIndex]}
+              </div>
+            );
+          })}
         </div>
+
         <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
         </div>

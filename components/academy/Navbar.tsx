@@ -103,7 +103,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                           href={item.href}
                           className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
                         >
-                          {item.label}
+                          {item.label}{' '}
                         </Link>
                       </li>
                     ))}

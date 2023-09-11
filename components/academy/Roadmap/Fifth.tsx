@@ -4,7 +4,7 @@ import React from 'react';
 export default function Fifth() {
   return (
     <div className="flex flex-col items-center relative" id="Roadmap-5">
-      <div className="w-[420px] text-black text-5xl font-normal leading-snug absolute left-40 top-16">
+      <div className="md:w-[420px] text-black text-5xl font-normal leading-snug absolute left-40 top-16">
         Work experience at the Canadian company
       </div>
       <Image
@@ -16,14 +16,14 @@ export default function Fifth() {
       />
       <div className="justify-start items-start gap-2 inline-flex pb-5">
         <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
-        <div className="w-[500px] text-black text-2xl font-normal leading-10 text-justify">
+        <div className="md:w-[500px] text-black text-2xl font-normal leading-10 text-justify">
           Following a year of active participation within Landa, you will
           receive a credible and verifiable Canadian work experience certificate
           from us.
         </div>
       </div>
       <svg
-        className="absolute top-0 left-[683px]"
+        className="absolute top-0 left-[683px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="47"
         height="178"
