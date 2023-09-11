@@ -3,9 +3,9 @@ import React from 'react';
 
 export default function LandaHoldingBlack() {
   return (
-    <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-neutral-800 h-[900px] md:h-[590px] py-5 md:py-10 space-y-5 pb-5">
+    <div className="flex flex-col md:flex-col justify-evenly md:justify-between md:pr-40 md:pl-3 items-center relative bg-neutral-800 h-[900px] md:h-[870px] py-5 md:py-5 space-y-5 pb-5">
       <svg
-        className="absolute left-[260px] hidden md:block"
+        className="absolute left-[260px] hidden md:block md:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
         height="589"
@@ -44,8 +44,8 @@ export default function LandaHoldingBlack() {
           stroke="#F8F5F0"
         />
       </svg>
-      <div className="h-[376px] flex flex-col items-center mt-5 justify-around md:items-start ">
-        <div className="flex flex-col items-start">
+      <div className="h-[376px] flex flex-col items-center mt-5 justify-around md:items-start md:b">
+        <div className="flex flex-col items-start ">
           <span className="text-white font-barlow text-base font-normal tracking-[5.60px]">
             LANDA HOLDING
             <br />
@@ -55,7 +55,7 @@ export default function LandaHoldingBlack() {
             <br />
           </span>
         </div>
-        <div className="w-[350px] md:w-[434px]">
+        <div className="w-[300px] md:w-[500px]">
           <ul className="text-white text-[14px] font-normal leading-9 list-disc pl-4 font-barlow space-y-2">
             <li className="leading-7 md:leading-10">
               Global Investment Opportunities within Your Reach.
@@ -74,7 +74,7 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-left md:pl-8 md:pb-10 md:pt-5 group">
           <Link href={'/investor-registration'}>
             <div className="text-stone-100 text-[28px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
               Register
@@ -136,7 +136,7 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center md:pt-5 group">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-left md:pl-8 md:pt-5 group">
           <Link href={'/entrepreneurs'}>
             <div className="text-stone-100 text-[28px] md:text-[32px] tracking-[1.5px] font-normal leading-6 font-condensed">
               Register
