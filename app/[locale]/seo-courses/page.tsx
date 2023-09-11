@@ -14,7 +14,7 @@ export default function page() {
       <div className="bg-white">
         <Hero
           showLanda={false}
-          titles="SEO COURSE"
+          titles={["SEO COURSE"]}
           subTitle="Upgrade yourself! SEO Strategies for Modern Businesses"
           buttonBg="#FDD30A"
           backgroundImage="586df33bf776763ec00a0ed6ea0528cb.jpg"
