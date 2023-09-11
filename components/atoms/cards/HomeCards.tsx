@@ -24,7 +24,7 @@ export default function HomeCards({
 
   return (
     <div
-      className={` ${flexDirectionClass} flex justify-between items-center px-9 md:px-32 py-5 md:py-28`}
+      className={` ${flexDirectionClass} border-b-2 md:border-none border-primary flex justify-between items-center px-9 md:px-32 py-5 md:py-28`}
     >
       <HomeCardsLeft text={text} addedClass={addedClass} />
       <HomeCardsRight images={images} titles={titles} />

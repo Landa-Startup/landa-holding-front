@@ -8,7 +8,7 @@ export default function Fourth() {
       className="flex flex-col bg-[#263238] text-white relative"
       id="Roadmap-4"
     >
-      <div className="flex flex-row-reverse justify-evenly py-16 z-10">
+      <div className="flex flex-col md:flex-row-reverse justify-evenly py-16 z-10">
         <Image
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Office work-amico 1.svg'}
@@ -16,7 +16,7 @@ export default function Fourth() {
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="w-[480px] text-5xl font-normal tracking-wider leading-snug">
+          <div className="md:w-[480px] text-5xl font-normal tracking-wider leading-snug">
             Employment opportunities for top members
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
@@ -30,7 +30,7 @@ export default function Fourth() {
       </div>
       <ScrollButton scrollTo="Roadmap-5" />
       <svg
-        className="absolute top-0 left-[655px]"
+        className="absolute top-0 left-[655px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="329"
         height="850"
