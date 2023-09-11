@@ -22,32 +22,27 @@ export default function Hero({
   showButton?: boolean;
 }) {
   return (
-    <div
-      style={{
-        backgroundImage: `url('/static/images/Home/Hero/${backgroundImage}')`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-      }}
-      className="h-screen relative overflow-hidden"
-    >
+    <div className="h-screen relative overflow-hidden bg-[#3D5656]">
+      <Image
+        className="absolute bottom-16"
+        src={'/static/images/Academy/Hero/leadership-amico 1.svg'}
+        width={383}
+        height={383}
+        alt="Hero Illustration"
+      />
+      <Image
+        className="absolute top-24 right-0"
+        src={'/static/images/Academy/Hero/Frame 37655.svg'}
+        width={332}
+        height={342}
+        alt="Hero Illustration"
+      />
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
-        <div
-          className={` ${
-            showLanda ? 'block' : 'hidden'
-          } text-center text-white text-2xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
-        >
-          Landa Holding
-        </div>
-        <div className="hidden md:flex text-center font-barlow text-neutral-50 text-opacity-75 text-4xl font-semibold leading-10 tracking-[2px] flex-col space-y-2">
-          {title}
-        </div>
-
-        <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
-          {subTitle}
-        </div>
-        <div className="md:hidden text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
-          Landa Holding is an international investment company active in Iran
-          and Canada.
+        <div className="w-[512px] flex flex-col items-center space-y-4">
+          <div className="font-gilda text-6xl text-[#F1F8EC]">{title}</div>
+          <div className="font-condensed text-neutral-50 text-opacity-95 text-2xl font-semibold leading-10 tracking-[2px] text-center">
+            {subTitle}
+          </div>
         </div>
         {showButton ? (
           <Button
@@ -60,10 +55,10 @@ export default function Hero({
           <></>
         )}
         <Image
-          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 bottom-0"
+          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 -bottom-20"
           src={`/static/images/${leftImage}`}
           alt="Landa"
-          width={500}
+          width={412}
           height={500}
         />
         <Link
