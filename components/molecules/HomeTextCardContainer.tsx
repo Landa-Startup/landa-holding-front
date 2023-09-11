@@ -22,7 +22,7 @@ export default function HomeTextCardContainer({
   return (
     <div>
       <svg
-        className="hidden md:block absolute left-[0px] top-[820px]"
+        className="hidden md:block absolute left-[0px] top-[739px]"
         xmlns="http://www.w3.org/2000/svg"
         width="1092"
         height="2573"

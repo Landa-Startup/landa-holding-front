@@ -1,19 +1,39 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
-import Select from './base/Select';
-import { EntrepreneursFormData } from '../../app/types/global';
+import { Entrepreuneur } from '../../app/types/global';
 import EntrepreneursTitle from '../atoms/EntrepreneursTitle';
+import NotificationSendForm from './base/NotificationSendForm';
 
 export default function EntrepreneursForm() {
+  const initialFormData: Entrepreuneur = {
+    email: '',
+    companyName: '',
+    phone: '',
+    website: '',
+    fieldOfProfessional: '',
+  };
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm<EntrepreneursFormData>();
+  } = useForm<Entrepreuneur>({
+    mode: 'onBlur',
+    defaultValues: initialFormData,
+  });
 
-  const onSubmit = async (data: EntrepreneursFormData) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
+  // TODO: change Send to send(start with small letter)
+  const [Send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
+
+  const onSubmit = async (data: Entrepreuneur) => {
+    setIsSubmitting(true);
+    setSend(true);
     try {
       const response = await fetch('/api/entrepreneurs', {
         method: 'POST',
@@ -22,13 +42,25 @@ export default function EntrepreneursForm() {
         },
         body: JSON.stringify(data),
       });
-      if (response.ok) {
-        console.log('Form data successfully submitted.');
-      } else {
+      if (!response.ok) {
         console.error('Failed to submit form data.');
       }
+      setIsSuccess(true);
+      setShowNotification(true);
+      setSend(false);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000);
+      reset(initialFormData); // Reset the form after successful submission
+      console.log('Form data sent successfully!');
     } catch (error) {
-      console.error('Error submitting form data:', error);
+      setShowNotification(true);
+      setSend(false);
+      setIsSuccess(false);
+      console.error('Error sending form data:', error);
+      const timeout = setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds;
     }
   };
 
@@ -41,52 +73,20 @@ export default function EntrepreneursForm() {
   return (
     <>
       <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <EntrepreneursTitle/>
+        <EntrepreneursTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-span-1">
               <Input
                 register={register}
                 errors={errors}
-                nameInput="firstName"
+                nameInput="companyName"
                 type="text"
-                label="First Name"
-                required="First Name is Required."
+                label="Company Name"
+                required="Company Name is Required."
                 patternValue=""
                 patternMessage=""
-                placeholder="Enter your First Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
-
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="lastName"
-                type="text"
-                label="Last Name"
-                required="Last Name is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Last Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
-
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="birthDate"
-                type="date"
-                label="Birth Date"
-                required="Birth Date is Required."
-                patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
-                patternMessage="Please enter a valid Birth Date (e.g., 2001/02/11)"
-                placeholder="Enter your Birth Date"
+                placeholder="Enter your Company Name"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -112,43 +112,11 @@ export default function EntrepreneursForm() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="countryOfResidence"
+                nameInput="website"
                 type="text"
-                label="Country of Residence"
-                required="Country of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Country of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
-
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="provinceOfResidence"
-                type="text"
-                label="Province of Residence"
-                required="Province of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Province of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
-
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="companyName"
-                type="text"
-                label="Company Name"
-                required="Company Name is Required."
-                placeholder="Enter your Company Name"
+                label="Website"
+                required="Website is Required."
+                placeholder="Enter your Website"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -160,11 +128,26 @@ export default function EntrepreneursForm() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="investmentCeiling"
+                nameInput="phone"
                 type="text"
-                label="Investment Ceiling"
-                required="Investment Ceiling is Required."
-                placeholder="Enter your Investment Ceiling"
+                label="Phone"
+                required="Phone Number is Required."
+                placeholder="Enter your Phone Number"
+                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue={''}
+                patternMessage={''}
+              />
+            </div>
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="fieldOfProfessional"
+                type="text"
+                label="Field Of Professional"
+                required=" Field Of Professional is Required."
+                placeholder="Enter your Field Of Professional"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -172,43 +155,23 @@ export default function EntrepreneursForm() {
               />
             </div>
 
-            <div className="col-span-1 md:col-span-2 lg:col-span-3">
-              <Select
-                register={register}
-                errors={errors}
-                nameInput="preferredAreas"
-                label="Preferred Areas for Investment"
-                placeholder="Select your Preferred Area"
-                required="Preferred Areas is Required."
-                options={test}
-                className=" col-start-2 col-span-3 w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF] "
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
-
-            <div className="col-span-1 md:col-span-2 lg:col-span-3">
-              <Select
-                register={register}
-                errors={errors}
-                nameInput="howDidYouKnowUs"
-                label="How did You Get to Know Us?"
-                placeholder="Select How did You Get to Know Us?"
-                required="This field is Required."
-                options={test}
-                className="col-start-2 col-span-3 w-full mt-3 mb-1 select select-bordered drop-shadow-lg text-[#b2b1b0] dark:text-[#9CA3AF] "
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
           </div>
           <div className="text-center">
-            <button
-              type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
-            >
-              Submit
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
+            disabled={Send}
+          >
+            {Send ? 'Submitting ....' : 'Submit'}
+          </button>
+        </div>
         </form>
+        <NotificationSendForm
+        submitting={isSubmitting}
+        success={isSuccess}
+        sendStatus={Send}
+        show={showNotification}
+      />
       </div>
     </>
   );

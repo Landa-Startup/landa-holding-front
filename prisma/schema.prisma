@@ -195,3 +195,13 @@ model product {
   family String
   file   String
 }
+
+
+model Enterpruner{
+  id Int @id @default(autoincrement())
+  email String
+  companyName String
+  phone String 
+  website String
+  fieldOfProfessional String
+}

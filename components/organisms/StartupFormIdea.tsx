@@ -3,7 +3,7 @@ import Input from './base/Input';
 import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../atoms/TextArea';
-import { startupsFormData } from 'app/types/global';
+// import { StartupsFormData } from 'app/types/global';
 
 export default function StartupFormIdea({
   register,
