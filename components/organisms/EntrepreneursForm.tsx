@@ -1,10 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from './base/Input';
 import { Entrepreuneur } from '../../app/types/global';
 import EntrepreneursTitle from '../atoms/EntrepreneursTitle';
 import NotificationSendForm from './base/NotificationSendForm';
+import apiClient from '@/utils/api';
+import GetCsrfToken from '@/utils/get-csrf-token';
 
 export default function EntrepreneursForm() {
   const initialFormData: Entrepreuneur = {
@@ -30,21 +32,35 @@ export default function EntrepreneursForm() {
   // TODO: change Send to send(start with small letter)
   const [Send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
+  const [csrfToken, setCsrfToken] = useState("");
+
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      setCsrfToken(token);
+    }
+
+    fetchCsrfToken();
+  }, []);
+
 
   const onSubmit = async (data: Entrepreuneur) => {
     setIsSubmitting(true);
     setSend(true);
     try {
-      const response = await fetch('/api/entrepreneurs', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-      if (!response.ok) {
-        console.error('Failed to submit form data.');
-      }
+      const response = await apiClient.post(
+        "entrepreuneur-form",
+        JSON.stringify(data),
+        {
+          headers: {
+            "X-CSRFToken": csrfToken,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      // if (!response.ok) {
+      //   console.error('Failed to submit form data.');
+      // }
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);

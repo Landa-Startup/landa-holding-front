@@ -15,7 +15,6 @@ import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from './base/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
-
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 enum Type {
   IDEA = 'IDEA',
@@ -80,9 +79,9 @@ export default function StartupFormForm() {
 
   const [selectedRadio, setSelectedRadio] = useState('');
 
-  useEffect(() => {
-    setSelectedRadio('IDEA');
-  }, []);
+  // useEffect(() => {
+  //   setSelectedRadio('IDEA');
+  // }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
@@ -235,8 +234,8 @@ export default function StartupFormForm() {
       setShowNotification(true);
       setSend(false);
       reset(initialStartupsFormData); // Reset the form after successful submission
-      setSelectedRadio('IDEA');
       setFormData(initialStartupsFormData);
+      setSelectedRadio('')
       console.log('Form data sent successfully!');
       const timeout = setTimeout(() => {
         setShowNotification(false);
@@ -249,7 +248,7 @@ export default function StartupFormForm() {
       console.error('Error sending form data:', error);
       reset(initialStartupsFormData); // Reset the form after successful submission
       setFormData(initialStartupsFormData); // reset states after successful submission
-      setSelectedRadio('IDEA');
+      setSelectedRadio('')
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
@@ -261,6 +260,9 @@ export default function StartupFormForm() {
     { value: '2', label: '2' },
     { value: '3', label: '3' },
   ];
+
+  console.log(selectedRadio)
+
 
   return (
     <>
@@ -288,7 +290,8 @@ export default function StartupFormForm() {
             className="select select-bordered w-full max-w-xs mt-4"
             onChange={handleItemChange}
           >
-            <option value={'IDEA'} selected>
+            <option value={''} selected>Please Select Option</option>
+            <option value={'IDEA'}>
               Idea
             </option>
             <option value={'MVP'}>MVP</option>
@@ -355,7 +358,7 @@ export default function StartupFormForm() {
           })()}
           <div className="text-center">
             <button
-              disabled={Send}
+              disabled={Boolean(!selectedRadio)}
               type="submit"
               className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
             >

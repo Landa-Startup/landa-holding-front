@@ -42,14 +42,12 @@ interface InvestorRegistrationFormData {
   email: string;
   countryOfResidence: string;
   provinceOfResidence: string;
-  streetAddress: string;
-  streetAddressLine2: string;
-  postalCode: string;
   companyName: string;
   investmentCeiling: string;
   positionInTeam: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
+  interestes: string;
 }
 
 // Define an interface for partner membership form data
@@ -72,7 +70,7 @@ interface JobFormData {
   lastName: string;
   email: string;
   phoneNumber: string;
-  cvFile?: any | null;
+  cvFile?: File | '';
 }
 
 // Define an interface for startups form data

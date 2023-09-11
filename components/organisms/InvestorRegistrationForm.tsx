@@ -11,23 +11,20 @@ import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 
 export default function InvestorRegistrationForm() {
-  const initialInvestorRegistrationFormData : InvestorRegistrationFormData ={
+  const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
     firstName: '',
     lastName: '',
     birthDate: new Date(),
     email: '',
     countryOfResidence: '',
     provinceOfResidence: '',
-    streetAddress:'',
-    streetAddressLine2:'' ,
-    postalCode: '',
-    companyName:'' ,
-    investmentCeiling:'' ,
-    positionInTeam: '', 
-    preferredAreas:'',
-    howDidYouKnowUs:'',
-};
-
+    companyName: '',
+    investmentCeiling: '',
+    positionInTeam: '',
+    preferredAreas: '',
+    howDidYouKnowUs: '',
+    interestes:'',
+  };
 
   const {
     register,
@@ -36,46 +33,93 @@ export default function InvestorRegistrationForm() {
     reset,
   } = useForm<InvestorRegistrationFormData>({
     mode: 'onBlur',
-    defaultValues: initialInvestorRegistrationFormData ,
+    defaultValues: initialInvestorRegistrationFormData,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('');
 
   const [formData, setFormData] = useState<InvestorRegistrationFormData>(
     initialInvestorRegistrationFormData
   );
-  
+
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      const token = await GetCsrfToken('http://localhost:8000/get-csrf-token');
       setCsrfToken(token);
     }
-
     fetchCsrfToken();
   }, []);
-  const onSubmit = async (data: InvestorRegistrationFormData) => {
+
+  useEffect(() => {
+    const apiUrl = 'https://restcountries.com/v3.1/all';
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        // Process the data and set the countries state after sorting
+        const countryData = data.map((country: any) => ({
+          value: country.name.common,
+          text: country.name.common,
+        }));
+        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
+        setCountries(countryData);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
+  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCountry(event.target.value);
+
+    setFormData({
+      ...formData,
+      countryOfResidence: event.target.value, // Update the formData state
+    })
+  };
+
+  console.log(selectedCountry)
+
+  const onSubmit = async (formData: InvestorRegistrationFormData) => {
     setIsSubmitting(true);
     setSend(true);
+    const sendFormData = new FormData();
+
+    sendFormData.append('firstName', formData.firstName);
+    sendFormData.append('lastName', formData.lastName);
+    sendFormData.append('email', formData.email);
+    sendFormData.append('countryOfResidence', selectedCountry);
+    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
+    sendFormData.append('birthDate', String(formData.birthDate));
+    sendFormData.append('companyName', formData.companyName);
+    sendFormData.append('investmentCeiling', formData.investmentCeiling);
+    sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
+    sendFormData.append('preferredAreas', formData.preferredAreas);
+    sendFormData.append('interestes', formData.interestes);
+
+
     try {
       const response = await apiClient.post(
-        "investor-registration",
-        JSON.stringify(data),
+        'investor-registration',
+        sendFormData,
         {
           headers: {
-            "X-CSRFToken": csrfToken,
-            "Content-Type": "application/json",
+            'X-CSRFToken': csrfToken,
+            'Content-Type': 'application/json',
           },
         }
       );
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset (initialInvestorRegistrationFormData );
-      setFormData(initialInvestorRegistrationFormData );
+      reset(initialInvestorRegistrationFormData);
+      setFormData(initialInvestorRegistrationFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000);
@@ -84,14 +128,13 @@ export default function InvestorRegistrationForm() {
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
-      reset (initialInvestorRegistrationFormData );
-      setFormData(initialInvestorRegistrationFormData );
+      reset(initialInvestorRegistrationFormData);
+      setFormData(initialInvestorRegistrationFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
-      }, 10000); // 10 seconds in milliseconds  
+      }, 10000); // 10 seconds in milliseconds
     }
   };
-
 
   return (
     <>
@@ -162,8 +205,24 @@ export default function InvestorRegistrationForm() {
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
             </div>
-
             <div className="col-span-1">
+              <label htmlFor="countrySelect" className='text-[#6b6b6b] dark:text-current'>Select a country:</label>
+              <select
+                id="countrySelect"
+                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                // name='countryOfResidence'
+                value={selectedCountry}
+                onChange={handleCountryChange}
+              >
+                <option value="" selected>Select a country</option>
+                {countries.map((country, index) => (
+                  <option key={index} value={country.text}>
+                    {country.text}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* <div className="col-span-1
               <Input
                 register={register}
                 errors={errors}
@@ -177,7 +236,7 @@ export default function InvestorRegistrationForm() {
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
-            </div>
+            </div> */}
 
             <div className="col-span-1">
               <Input
@@ -215,11 +274,11 @@ export default function InvestorRegistrationForm() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="investmentCeiling"
+                nameInput="interestes"
                 type="text"
-                label="Investment Ceiling"
-                required="Investment Ceiling is Required."
-                placeholder="Enter your Investment Ceiling"
+                label="Interestes"
+                required="Interestes is Required."
+                placeholder="Enter your Interestes"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -228,7 +287,7 @@ export default function InvestorRegistrationForm() {
             </div>
 
             <div className="col-span-1 md:col-span-2">
-            <TextArea
+              <TextArea
                 title="Preferred Areas for Investment"
                 register={register}
                 errors={errors}
@@ -241,7 +300,7 @@ export default function InvestorRegistrationForm() {
             </div>
 
             <div className="col-span-1 md:col-span-2">
-            <TextArea
+              <TextArea
                 title="How did you get to know us?*"
                 register={register}
                 errors={errors}
@@ -263,7 +322,12 @@ export default function InvestorRegistrationForm() {
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
+        <NotificationSendForm
+          submitting={isSubmitting}
+          success={isSuccess}
+          sendStatus={send}
+          show={showNotification}
+        />
       </div>
     </>
   );
