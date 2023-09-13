@@ -9,14 +9,14 @@ export default function Footer() {
     return currentYear;
   }
   return (
-    <div className="flex flex-col bg-neutral-800 font-barlow p-8">
-      <div className="flex flex-col lg:flex-row space-y-5 md:p-8 justify-between">
-        <div className="flex flex-col md:w-[314px] mt-5">
+    <div className="flex flex-col bg-neutral-800 font-barlow p-8 ">
+      <div className="flex flex-col lg:flex-row  space-y-5 md:p-1 justify-between md:flex-row ">
+        <div className="flex flex-col md:w-[314px] mt-5 md:w-1/4" >
           <div className="h-[25px]  text-white text-xl font-medium">
             About Landa
             <br />
           </div>
-          <div className="text-justify text-neutral-400 text-base font-normal mt-1 ">
+          <div className=" text-neutral-400 text-base font-normal mt-1 ">
             In Landa Academy, individuals will be trained based on their
             interests and capabilities. Necessary actions are taken at the Landa
             Acceleration Center to accelerate their unique abilities. Then,
@@ -73,7 +73,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col space-y-1">
+        <div className="col-span-1 flex flex-col space-y-1 md:w-1/4 md:ml-12">
           <div className="text-justify text-white text-xl font-medium">
             Explore
             <br />
@@ -99,7 +99,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col space-y-1">
+        <div className=" col-span-1 flex flex-col space-y-1 md:w-1/4 md:ml-0 mr-7">
           <div className="text-white text-xl font-medium">Forms</div>
           <div className="self-stretch flex-col justify-start items-start  inline-flex">
             <Link
@@ -128,8 +128,8 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col space-y-1">
-          <div className="w-[93px] h-[30px] text-justify text-white text-xl font-medium">
+        <div className="col-span-1 flex flex-col space-y-1 md:w-1/4 md:ml-1">
+          <div className="w-[93px] h-[30px]  text-white text-xl font-medium">
             Contact
             <br />
           </div>
