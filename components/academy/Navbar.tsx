@@ -41,15 +41,19 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   //   document.addEventListener('click', handleClickOutside);
   // }, []);
   return (
-    <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={drawerRef} />
-      <div className="drawer-content flex flex-col relative md:px-10">
-        <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-1">
-          <div className="flex-none xl:hidden">
+    <div className="drawer top-0">
+      <input
+        id="my-drawer-3"
+        type="checkbox"
+        className="drawer-toggle"
+        ref={drawerRef}
+      />
+      <div className="drawer-content flex flex-col relative md:px-32 md:pt-5">
+        <div className="w-full navbar bg-transparent text-white flex justify-between items-center">
+          <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
-
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,25 +69,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 ></path>
               </svg>
             </label>
-            </div>
           </div>
-          <div className="px-2 m-2 text-left h-full flex justify-start items-center">
-            <Link href="/">
-              <div className="flex flex-col md:flex-row items-end">
-                <Image
-                  className="w-10 h-10 md:w-12 md:h-14"
-                  src={'static/images/Logo.svg'}
-                  alt="Logo"
-                  width={50}
-                  height={50}
-                />
-                <span className="text-primary text-[12px] md:text-xl tracking-[0.375px] font-bold">
-                  LANDA
-                </span>
-              </div>
-            </Link>
-          </div>
-          <div className=" xl:flex-1 xl:flex justify-start ml-32 hidden">
           <Logo route={router === '/academy' ? 'academy' : 'holding'} />
           <div className="hidden xl:flex-1 xl:flex justify-start ml-32">
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
@@ -117,7 +103,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                           href={item.href}
                           className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
                         >
-                          {item.label}
+                          {item.label}{' '}
                         </Link>
                       </li>
                     ))}

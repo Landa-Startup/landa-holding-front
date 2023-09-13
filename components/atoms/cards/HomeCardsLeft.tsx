@@ -15,10 +15,10 @@ export default function HomeCardsLeft({
       className={`h-[430px] first:self-end order-2 md:order-1 ${addedClass}`}
     >
       <div className="flex flex-col items-center justify-center">
-        <p className="font-barlow text-base md:text-xl leading-[30px] md:w-[491px] mb-11 mt-4 text-justify">
+        <p className="font-barlow text-base md:text-xl leading-[30px] md:w-[491px] first:mb-0 mb-11 mt-4 text-justify">
           {text}
         </p>
-        <Button size="visit" type="button" text="Visit Now" goto='/academy'/>
+        <Button size="visit" type="button" text="Visit Now" goto="/academy" />
       </div>
     </div>
   );

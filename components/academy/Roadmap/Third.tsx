@@ -23,14 +23,14 @@ export default function Third() {
           />
         </div>
         <div className="flex flex-col mt-5">
-          <div className="w-[500px] text-gray-600 text-5xl font-normal tracking-wider leading-snug">
+          <div className="md:w-[500px] text-gray-600 text-5xl font-normal tracking-wider leading-snug">
             Optain A valid Certificate of achievement
           </div>
         </div>
       </div>
       <ScrollButton scrollTo="Roadmap-4" />
       <svg
-        className=" absolute top-0 left-[482px]"
+        className=" absolute top-0 left-[482px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="586"
         height="850"
