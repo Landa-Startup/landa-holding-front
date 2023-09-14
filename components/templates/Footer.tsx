@@ -140,7 +140,7 @@ export default function Footer() {
             +1 (416) 557-7622
           </div>
           <div className="text-neutral-400 text-base font-normal">
-            A3 Unit,Daneshvar tower, Eastern Daneshvar street, Tehran, Iran
+            No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
           </div>
           {/* <div className="text-justify text-neutral-400 text-base font-normal">
             02188030167

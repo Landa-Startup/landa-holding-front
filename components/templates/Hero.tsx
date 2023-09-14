@@ -60,38 +60,19 @@ export default function Hero({
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
-          className={` ${
-            showLanda ? 'block' : 'hidden'
-          } text-center text-white text-2xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
+          className={` ${showLanda ? 'block' : 'hidden'
+            } text-center text-white text-2xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
         >
           Landa Holding
         </div>
-        <div className="hidden md:flex text-center font-barlow text-neutral-50 text-opacity-75 text-4xl font-semibold leading-10 tracking-[2px] flex-col space-y-2">
-          {titles.map((title, index) => {
-            const currentIndex = (titleIndex + index) % titles.length;
-            const titleClass = `opacity-${
-              index === 1 ? 100 : 25
-            } transform translate-y-${
-              index === 0 ? '-4' : index === 2 ? '4' : '0'
-            }`;
-
-            return (
-              <div
-                key={index}
-                className={`font-gilda tracking-[6.5px] ${
-                  index === 1 ? 'opacity-100' : 'opacity-25'
-                } transform ${
-                  index === 0
-                    ? '-translate-y-4 pt-4 text-5xl'
-                    : index === 2
-                    ? 'translate-y-4 pb-4 text-5xl'
-                    : 'translate-y-0 text-6xl'
-                }`}
-              >
-                {titles[currentIndex]}
-              </div>
-            );
-          })}
+        <div
+          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${isTitleChanging
+              ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
+              : '' // Apply spin animation class when the title is changing
+            }`}
+          style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
+        >
+          {currentTitle}
         </div>
 
         <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">

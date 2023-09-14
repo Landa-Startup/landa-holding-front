@@ -22,7 +22,7 @@ export default function ContactUsDescription() {
           {/* TODO: create component for below icons */}
           <li>
             <Link className="space-x-1" href="tel:+14165577622">
-              <span>Canada:</span>
+              <span>Torento:</span>
               <span className="text-[#AA8453]">+1 (416) 557-7622</span>
             </Link>
           </li>
@@ -57,11 +57,15 @@ export default function ContactUsDescription() {
         <div className="flex flex-col ml-2">
           <span className="font-semibold">Address</span>
           <ul className="mx-4 list-disc space-y-3">
-            <li>Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
             <li>
-              A3 Unit,Daneshvar tower, Eastern Daneshvar street, Tehran, Iran
+              Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
             </li>
-            <li>C5 Unit,Tala Building, Saadat Abad Ave, Isfahan, Iran</li>
+            <li>
+              No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
+            </li>
+            <li>
+              Tala Complex, Saadat Abad St, Isfahan, Iran
+            </li>
           </ul>
         </div>
       </div>
