@@ -60,7 +60,7 @@ export default function StartupFormTargetMarket({
             required=""
           />
         </div>
-        <div className="col-span-2">
+        {/* <div className="col-span-2">
           <TextArea
             title="How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?"
             register={register}
@@ -71,7 +71,7 @@ export default function StartupFormTargetMarket({
             patternValue=""
             required=""
           />
-        </div>
+        </div> */}
 
       </div>
     </>
