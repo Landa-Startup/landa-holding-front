@@ -4,7 +4,7 @@ import ScrollButton from './ScrollButton';
 
 export default function Third() {
   return (
-    <div className="flex flex-col bg-[#80C555] relative" id="Roadmap-3">
+    <div className="flex flex-col bg-[#80C555] relative" id="Roadmap-2">
       <div className="flex justify-between">
         <div className="relative w-[500px] h-[500px]">
           <Image
