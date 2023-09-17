@@ -24,12 +24,6 @@ export default function PersonalTab({
         <Link href="#" className="text-white">
           <IconLinkedin />
         </Link>
-        <Link href="#" className="text-white">
-          <IconRoundedEmail />
-        </Link>
-        <Link href="#" className="text-white">
-          <IconWeb />
-        </Link>
       </div>
       <div className="flex flex-col items-center border-t-2 px-4 pb-4 text-white">
         <span className="font-normal text-lg">{name}</span>

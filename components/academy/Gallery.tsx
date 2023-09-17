@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Button from '../atoms/Button';
 
 export default function Gallery() {
   return (
@@ -61,9 +62,9 @@ export default function Gallery() {
             src="/static/images/Academy/gallery/Rectangle 3029.png"
           />
         </div>
-        <button className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white">
-          Visit Now
-        </button>
+        <div className="mx-auto">
+          <Button size="visit" bgColor="Yellow" text="Visit Now" />
+        </div>
       </div>
     </div>
   );

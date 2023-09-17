@@ -62,7 +62,7 @@ export default function ScrollMenu() {
   ];
 
   return (
-    <div className="bg-[#3D5656] py-10">
+    <div className="bg-[#3D5656] py-10" id='Courses'>
       <div className="container mx-auto">
         <div className="text-center text-white text-2xl md:text-3xl font-normal leading-[50px] tracking-[11.20px]">
           LANDA ACADEMY
