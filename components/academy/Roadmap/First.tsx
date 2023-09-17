@@ -4,8 +4,8 @@ import ScrollButton from './ScrollButton';
 
 export default function Second() {
   return (
-    <div className="flex flex-col bg-[#FFFBE6] relative" id="Roadmap-1">
-      <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly py-16 z-10">
+    <div className="flex flex-col h-screen bg-[#FFFBE6] relative" id="Roadmap-1">
+      <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
         <Image
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Seminar-amico (1) 1.svg'}
