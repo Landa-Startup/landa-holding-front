@@ -103,46 +103,26 @@ export default function Footer() {
           <div className="text-xl font-medium text-white">Forms</div>
           <div className="inline-flex flex-col items-start self-stretch justify-start">
             <Link
-<<<<<<< HEAD
-              href={'/startups'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
-=======
               href={'/StartupsForm'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
->>>>>>> 97cc251c489047acf6cc09a00719667c1e8abd48
             >
               Startups
             </Link>
             <Link
-<<<<<<< HEAD
-              href={'/'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
-=======
               href={'/investor-registration'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
->>>>>>> 97cc251c489047acf6cc09a00719667c1e8abd48
             >
               Center of Investor
             </Link>
             <Link
-<<<<<<< HEAD
-              href={'/'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
-=======
               href={'/entrepreneurs'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
->>>>>>> 97cc251c489047acf6cc09a00719667c1e8abd48
             >
               Center of Entrepreneurs
             </Link>
             <Link
-<<<<<<< HEAD
-              href={'/'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
-=======
               href={'/business-partners'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
->>>>>>> 97cc251c489047acf6cc09a00719667c1e8abd48
             >
               Our business partners
             </Link>
