@@ -1,6 +1,12 @@
 import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import JobForm from '@/components/organisms/JobForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Jobs',
+  description: '',
+};
 
 export default function ApplyFormPage() {
   return (

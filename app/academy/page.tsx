@@ -1,10 +1,16 @@
 import React from 'react';
-import Hero from '@/components/templates/Hero';
 import RoadmapContainer from '@/components/academy/Roadmap/RoadmapContainer';
 import PromoteCourse from '@/components/academy/PromoteCourse';
 import Gallery from '@/components/academy/Gallery';
 import ContactUs from '@/components/academy/ContactUs';
 import ScrollMenu from '@/components/academy/ScrollMenu';
+import { Metadata } from 'next';
+import Hero from '@/components/academy/Hero';
+
+export const metadata: Metadata = {
+  title: 'Landa Academy',
+  description: '',
+};
 
 export default function SeoCoursePage() {
   return (
@@ -12,8 +18,8 @@ export default function SeoCoursePage() {
       {/* Hero Section */}
       <Hero
         showLanda={false}
-        titles="SEO COURSE"
-        subTitle="Elevate your online impact with our SEO course at Landa Academy! Master search engine optimization, from keywords to cutting-edge strategies. Join us now and amplify your digital presence!"
+        title="Landa Academy"
+        subTitle="Landa Academy was founded with the mission of fostering the potential of individuals, especially young minds. We believe that investing in adolescents guarantees a bright future and a better tomorrow."
         buttonBg="#FDD30A"
         backgroundImage="586df33bf776763ec00a0ed6ea0528cb.jpg"
         leftImage="academy.png"
@@ -22,8 +28,8 @@ export default function SeoCoursePage() {
       {/* Roadmap Section */}
       <RoadmapContainer />
 
-      {/* Promote Course Section */}
-      <PromoteCourse image="/static/images/Academy/Frame 37625.png" />
+      {/* Promote Course Section
+      <PromoteCourse image="/static/images/Academy/Frame 37625.png" /> */}
 
       {/* Scroll Section */}
       <ScrollMenu />

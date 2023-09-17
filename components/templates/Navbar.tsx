@@ -1,5 +1,4 @@
 'use client';
-import { cookies } from 'next/dist/client/components/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
@@ -11,7 +10,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    { label: 'ABOUT', href: '/about' },
+    { label: 'ABOUT US', href: '/about' },
     { label: 'CONTACT', href: '/contact' },
     { label: 'OUR TEAM', href: '/our-team' },
   ];
@@ -20,6 +19,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
+    { label: 'Entrepreneurs', href: '/entrepreneurs' },
+
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -38,16 +39,16 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   //   document.addEventListener('click', handleClickOutside);
   // }, []);
   return (
-    <div className="drawer sticky top-0">
+    <div className="drawer top-0">
       <input
         id="my-drawer-3"
         type="checkbox"
         className="drawer-toggle"
         ref={drawerRef}
       />
-      <div className="drawer-content flex flex-col relative md:px-10 bg-black bg-opacity-40">
-        <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-12">
-          <div className="flex-none lg:hidden">
+      <div className="drawer-content flex flex-col relative">
+        <div className="bg-neutral-800 bg-opacity-80 w-full navbar text-white flex justify-between items-center md:px-12 fixed z-50">
+          <div className="flex-none lg:hidden mt-3">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
@@ -56,7 +57,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
+                className="inline-block w-8 h-8 stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -71,13 +72,13 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <Link href="/">
               <div className="flex flex-col md:flex-row items-end">
                 <Image
-                  className="w-7 h-8 md:w-12 md:h-14"
+                  className="w-10 h-10 md:w-12 md:h-14"
                   src={'static/images/Logo.svg'}
                   alt="Logo"
                   width={50}
                   height={50}
                 />
-                <span className="text-primary text-[7.5px] md:text-xl tracking-[0.375px] font-bold">
+                <span className="text-primary text-[12px] md:text-xl tracking-[0.375px] font-bold">
                   LANDA
                 </span>
               </div>
@@ -87,7 +88,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               {menuItems.map((item) => (
                 <li className="text-2xl h-9" key={item.label}>
-                  <Link href={item.href} className="hover:bg-white">
+                  <Link href={item.href} className="hover:bg-white text-white">
                     {item.label}
                   </Link>
                 </li>
@@ -95,15 +96,14 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <li className="h-9">
                 <details className="dropdown mb-32">
                   <summary
-                    className="text-2xl hover:text-primary hover:bg-base-200"
+                    className="text-2xl hover:text-black hover:bg-base-200"
                     onClick={() => setIsMenuOpen(true)}
                   >
                     WORK WITH US
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map((item) => (
                       <li

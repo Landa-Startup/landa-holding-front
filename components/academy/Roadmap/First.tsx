@@ -5,20 +5,23 @@ import ScrollButton from './ScrollButton';
 export default function First() {
   return (
     <div className="flex flex-col bg-[#F1F8EC] relative" id="Roadmap-1">
-      <div className="flex justify-evenly py-16">
+      <div className="flex flex-col md:flex-row justify-evenly py-16">
         <Image
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Course app-bro 1.svg'}
           width={500}
           height={500}
         />
-        <div className="flex flex-col justify-evenly">
-          <div className="w-[500px] text-gray-600 text-5xl font-normal tracking-wider leading-snug">
+        <div className="flex flex-col justify-evenly items-center px-9 space-y-2">
+          <div className="hidden md:block w-[500px] text-gray-600 text-5xl font-normal tracking-wider leading-snug">
             Registration in the Optional Course
           </div>
+          <p className="md:hidden text-gray-600 text-2xl leading-10 font-barlow font-normal tracking-wider">
+            Registration and participation in Optional courses
+          </p>
           <div className="justify-start items-start gap-2 inline-flex">
             <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
-            <div className="w-[500px] text-gray-600 text-2xl font-normal leading-10 text-justify">
+            <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.
@@ -28,7 +31,7 @@ export default function First() {
       </div>
       <ScrollButton scrollTo="Roadmap-2" />
       <svg
-      className='absolute -bottom-1 left-80'
+        className="absolute -bottom-1 left-80 hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="133"
         height="305"
