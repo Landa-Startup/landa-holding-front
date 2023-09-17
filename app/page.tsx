@@ -22,7 +22,7 @@ export default function Page() {
         showLanda
         titles={['Acceleration', 'Investment', 'Academy']}
         subTitle="Feel The Future"
-        backgroundImage="businessman.png"
+        backgroundImage="cc89e64c10ecac569aaf36a80d6403f3.jpg"
         leftImage="Landa.svg"
         showButton={false}
       />
