@@ -4,7 +4,7 @@ import PersonalTab from '@/components/atoms/cards/PersonalTab';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Landa Holding | Our Teamّ',
+  title: 'Landa Holding | Our Team',
   description: '',
 };
 
@@ -31,7 +31,7 @@ export default function TeamPage() {
     'Application Developer',
     'UI designer',
     'Front-end',
-    'Back-end'
+    'Back-end',
   ];
 
   const persons = [
@@ -44,6 +44,16 @@ export default function TeamPage() {
       image: '/static/images/our-team/Personals/a2.png',
       position: 'COTB',
       name: 'Dr.Hadi Hasanpour',
+    },
+    {
+      image: '/static/images/our-team/Personals/a10.png',
+      position: 'Manager',
+      name: 'Mernoosh Heibati',
+    },
+    {
+      image: '/static/images/our-team/Personals/a11.png',
+      position: 'Case Manager',
+      name: 'Mahsa Esmaili',
     },
     {
       image: '/static/images/our-team/Personals/a3.png',
@@ -80,17 +90,7 @@ export default function TeamPage() {
       position: 'Digital Marketer',
       name: 'Ehsan Aliakbari',
     },
-    {
-      image: '/static/images/our-team/Personals/a10.png',
-      position: 'Manager',
-      name: 'Mernoosh Heibati',
-    },
 
-    {
-      image: '/static/images/our-team/Personals/a11.png',
-      position: 'Case Manager',
-      name: 'Mahsa Esmaili',
-    },
     {
       image: '/static/images/our-team/Personals/a12.png',
       position: 'Content Creator',
@@ -206,7 +206,7 @@ export default function TeamPage() {
   return (
     <div>
       <Banner image="/static/images/our-team/Frame2916.png " title="Our Team" />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:px-28 py-5 bg-[#FAFAFA]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:px-44 py-5 bg-[#FAFAFA]">
         {/* map over personals. */}
         {persons.map((person, index) => (
           <PersonalTab
