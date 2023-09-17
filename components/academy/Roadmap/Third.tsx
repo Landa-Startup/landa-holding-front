@@ -5,10 +5,10 @@ import ScrollButton from './ScrollButton';
 export default function Fourth() {
   return (
     <div
-      className="flex flex-col bg-[#263238] text-white relative"
-      id="Roadmap-4"
+      className="flex flex-col h-screen bg-[#263238] text-white relative"
+      id="Roadmap-3"
     >
-      <div className="flex flex-col md:flex-row-reverse justify-evenly py-16 z-10 px-10">
+      <div className="flex flex-col md:flex-row-reverse justify-evenly py-8 z-10 px-10 space-y-5">
         <Image
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Office work-amico 1.svg'}
@@ -30,7 +30,7 @@ export default function Fourth() {
           </div>
         </div>
       </div>
-      <ScrollButton scrollTo="Roadmap-5" color="white" />
+      <ScrollButton scrollTo="Roadmap-4" color="white" />
       <svg
         className="absolute top-0 left-[655px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
