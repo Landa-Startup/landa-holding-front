@@ -54,39 +54,42 @@ export default function Hero({
       style={{
         backgroundImage: `url('/static/images/Home/Hero/${backgroundImage}')`,
         backgroundPosition: 'center',
-        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'auto',
       }}
-      className="h-screen relative overflow-hidden"
+      className="h-[calc(100vh-5rem)] md:h-screen relative overflow-hidden brightness-75"
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
-          className={` ${showLanda ? 'block' : 'hidden'
-            } text-center text-white text-2xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
+          className={` ${
+            showLanda ? 'block' : 'hidden'
+          } text-center text-white text-2xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
         >
           Landa Holding
         </div>
         <div
-          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${isTitleChanging
+          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${
+            isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
               : '' // Apply spin animation class when the title is changing
-            }`}
+          }`}
           style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
         >
           {currentTitle}
         </div>
 
-        <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
+        <div className="text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
         </div>
-        <div className="md:hidden text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
+        {/* <div className="hidden md:block text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
           Landa Holding is an international investment company active in Iran
           and Canada.
-        </div>
+        </div> */}
         {showButton ? (
           <Button
             text="Register Now"
             size="notVisit"
-            bgColor={buttonBg}
+            // bgColor={buttonBg}
             addedClass={buttonBg ? 'md:hidden' : 'block'}
           />
         ) : (
