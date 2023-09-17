@@ -37,7 +37,7 @@ export default function LatestStartupsCard({
         </div>
 
         {/* Description */}
-        <div className="w-[225px] md:w-[320px] left-[16px] top-[170px] md:top-[310px] md:bottom-20 absolute text-neutral-800 text-sm md:text-base font-normal leading-[15px] font-barlow">
+        <div className=" text-left w-[225px] md:w-[320px] left-[16px] top-[170px] md:top-[310px] md:bottom-20 absolute text-neutral-800 text-sm md:text-base font-normal leading-[15px] font-barlow ">
           {description}
         </div>
 

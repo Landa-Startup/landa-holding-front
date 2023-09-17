@@ -14,11 +14,11 @@ export default function HomeCardsContainer() {
       addedClass: '',
       images: [
         {
-          src: '/static/images/Home/Investment/male-female-business-people-working-tablet-office.png',
+          src: '/static/images/Home main/male-female-business-people-working-tablet-office.png',
           alt: 'Landa Investment',
         },
         {
-          src: '/static/images/Home/Investment/Rectangle 1412.png',
+          src: '/static/images/Home main/Rectangle 1412.png',
           alt: 'Landa Investment',
         },
       ],
@@ -52,11 +52,11 @@ export default function HomeCardsContainer() {
       addedClass: 'mb-36',
       images: [
         {
-          src: '/static/images/Home/Academy/3390782c4ef216a1fb0b67f2cc41660d 1.png',
+          src: '/static/images/Home main/3390782c4ef216a1fb0b67f2cc41660d 1.png',
           alt: 'Landa Holding Academy',
         },
         {
-          src: '/static/images/Home/Academy/group-people-working-out-business-plan-office 1.png',
+          src: '/static/images/Home main/group-people-working-out-business-plan-office 1.png',
           alt: 'Landa Holding Academy',
         },
       ],

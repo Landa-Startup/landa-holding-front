@@ -18,8 +18,8 @@ export default function Banner({
         className="h-[250px] md:h-[512px] absolute inset-0"
       ></div>
 
-      <div className="h-[250px] md:h-[512px] justify-center md:justify-start flex items-stretch relative">
-        <div className="flex flex-col justify-center items-center md:ml-32">
+      <div className="h-[250px] md:h-[512px] justify-center md:justify-center flex items-stretch relative">
+        <div className="flex flex-col justify-center items-center  ">
           <p className="text-neutral-50 text-base font-normal tracking-[5.60px] font-condensed">
             LANDA HOLDING
           </p>
