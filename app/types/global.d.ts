@@ -46,7 +46,7 @@ interface InvestorRegistrationFormData {
   streetAddressLine2: string;
   postalCode: string;
   companyName: string;
-  investmentCeiling: string;
+  interests: string;
   positionInTeam: string;
   preferredAreas: string;
   howDidYouKnowUs: string;

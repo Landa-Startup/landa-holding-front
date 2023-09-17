@@ -20,7 +20,7 @@ export default function InvestorRegistrationForm() {
     streetAddressLine2:'' ,
     postalCode: '',
     companyName:'' ,
-    investmentCeiling:'' ,
+    interests:'' ,
     positionInTeam: '', 
     preferredAreas:'',
     howDidYouKnowUs:'',
@@ -205,11 +205,11 @@ export default function InvestorRegistrationForm() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="investmentCeiling"
+                nameInput="interests"
                 type="text"
-                label="Investment Ceiling"
-                required="Investment Ceiling is Required."
-                placeholder="Enter your Investment Ceiling"
+                label="Interests"
+                required="Interests is Required."
+                placeholder="Enter your Interests"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
