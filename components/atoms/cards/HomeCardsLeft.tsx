@@ -18,7 +18,7 @@ export default function HomeCardsLeft({
         <p className="font-barlow text-base md:text-xl leading-[30px] md:w-[491px] first:mb-0 mb-11 mt-4 text-justify">
           {text}
         </p>
-        <Button size="visit" type="button" text="Visit Now" goto="/academy" />
+        <Button size="visit" type="button" text="Visit Now" goto="/StartupsForm" />
       </div>
     </div>
   );
