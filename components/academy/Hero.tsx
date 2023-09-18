@@ -50,7 +50,7 @@ export default function Hero({
           <Button
             text="Register Now"
             size="notVisit"
-            bgColor={buttonBg}
+            bgColor={buttonBg as "Primary" | "Yellow" | undefined}
             addedClass={buttonBg ? 'md:hidden' : 'block'}
           />
         ) : (
