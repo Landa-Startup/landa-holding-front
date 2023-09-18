@@ -74,8 +74,8 @@ export default function Partners() {
   ];
 
   return (
-    <div className="grid grid-cols-4 bg-[#FAFAFA] p-16 gap-16">
-      <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
+      <div className="hidden md:grid grid-cols-2 gap-8">
         {logosLeft.map((role, index) => (
           <Image
             className="w-28 h-28 object-contain"
@@ -87,11 +87,11 @@ export default function Partners() {
           />
         ))}
       </div>
-      <div className="col-span-2 gap-14 bg-[#F8F5F0] flex flex-col items-center justify-center p-9">
-        <p className="text-primary text-4xl font-gilda">
+      <div className="col-span-4 md:col-span-2 gap-14 bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9">
+        <p className="text-primary text-xl md:text-4xl font-gilda">
           Join To Our Business Partners
         </p>
-        <p className="w-[522px] font-barlow text-base font-medium leading-7 tracking-[2.4px] text-justify text-black">
+        <p className="md:w-[522px] font-barlow text-base font-medium leading-7 tracking-[2.4px] text-justify text-black">
           At Landa Holding, we welcome strategic affiliations with international
           firms and qualified influencers alike. As an approved affiliate, you
           will receive co-branded support and future representations that wield
@@ -101,7 +101,7 @@ export default function Partners() {
         </p>
         <Button size="notVisit" text="Join Us" goto="/" bgColor="Primary" />
       </div>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="hidden md:grid grid-cols-2 gap-8">
         {logosRight.map((role, index) => (
           <Image
             className="w-32 h-3w-32 object-contain"
