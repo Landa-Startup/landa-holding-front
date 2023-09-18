@@ -47,7 +47,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         ref={drawerRef}
       />
       <div className="relative flex flex-col drawer-content">
-        <div className="fixed flex items-center justify-between w-full p-0 text-white bg-neutral-800 bg-opacity-80 navbar md:px-12 md:p-3 ">
+        <div className="fixed flex items-center justify-between w-full text-white bg-neutral-700 bg-opacity-80 navbar md:px-12 md:p-3 ">
           <div className="flex-none mt-3 lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -117,7 +117,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                           href={item.href}
                           className="p-5 font-bold text-black border hover:text-primary hover:bg-base-200"
                         >
-                          {item.label}{' '}
+                          {item.label}
                         </Link>
                       </li>
                     ))}
