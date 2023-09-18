@@ -29,7 +29,6 @@ export default function AerialViewBusinessTeam() {
         <Chevron direction="left" />
         <div className="md:w-[1000px] p-5 flex flex-col items-center backdrop-blur-2xl w-[360px] md:h-[360px]">
           <div className="flex md:flex-col md:items-center md:w-full">
-            {' '}
             <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
               {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
               <Image
