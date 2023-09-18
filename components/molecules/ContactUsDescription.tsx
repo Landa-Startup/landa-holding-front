@@ -39,7 +39,7 @@ export default function ContactUsDescription() {
           {/* TODO: create component for below icons */}
           <li>
             <Link className="space-x-1" href="tel:+14165577622">
-              <span>Torento:</span>
+              <span>Toronto:</span>
               <span className="text-[#AA8453]">+1 (416) 557-7622</span>
             </Link>
           </li>

@@ -28,7 +28,8 @@ export default function HomeCardsRight({
               className="object-cover"
               src={image.src}
               alt={image.alt}
-              layout="fill"
+              fill
+              sizes='100vh'
             />
           </div>
         ))}
