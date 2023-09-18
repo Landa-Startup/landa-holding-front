@@ -50,7 +50,7 @@ export default function Hero({
           <Button
             text="Register Now"
             size="notVisit"
-            bgColor={buttonBg}
+            bgColor="Yellow"
             addedClass={buttonBg ? 'md:hidden' : 'block'}
           />
         ) : (
@@ -64,6 +64,7 @@ export default function Hero({
           height={500}
         />
         <Link
+          aria-label="Scroll To Next Section"
           className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
           href={'#Roadmap-1'}
         >

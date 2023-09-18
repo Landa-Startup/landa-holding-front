@@ -27,10 +27,10 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
-        <ScrollButton scrollTo="Courses" addedClass="mt-5 md:-mt-5" />
+        <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-5 md:-mt-5" />
       </div>
       <svg
-        className="absolute top-0 left-[683px] hidden md:block"
+        className="absolute -top-7 left-[683px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="47"
         height="178"
@@ -40,9 +40,9 @@ export default function Fifth() {
         <path
           d="M1.5007 -4.50009C10.0788 10.4421 18.7399 36.2214 18.8044 49.7387C19.0199 94.863 1.61819 125.126 33.2157 140.199C54.8047 155.221 40.0143 158.95 42.8714 175.725"
           stroke="#FDD30A"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-dasharray="6 6"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeDasharray="6 6"
         />
       </svg>
     </div>
