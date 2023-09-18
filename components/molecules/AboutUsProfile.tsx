@@ -4,7 +4,8 @@ import AboutUsProfileCard from './AboutUsProfileCard';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image: '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
+      image:
+        '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
       links: {
@@ -12,7 +13,7 @@ export default function AboutUsProfile() {
         whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
         email: 'www.morteza_jafari49@yahoo.com',
         website: 'https://mortezajafari.ca/',
-      }
+      },
     },
     {
       image: '/static/images/About/4-1 1.png',
@@ -23,7 +24,7 @@ export default function AboutUsProfile() {
         whatsapp: 'wa.me/+989134233863',
         email: 'mailto:rasoulmoradimehr@gmail.com',
         website: 'https://moradimehr.com/',
-      }
+      },
     },
     {
       image: '/static/images/About/4-1 1 (1).png',
@@ -34,14 +35,14 @@ export default function AboutUsProfile() {
         whatsapp: 'https://wa.me/+12892693933',
         email: 'mailto:hadihasanpor@gmail.com',
         website: 'https://www.hadihasanpour.ca/',
-      }
+      },
     },
   ];
 
   return (
     <div className="bg-[#FAFAFA]">
       <div className="flex flex-col mx-8 py-5 text-black justify-items-center md:ps-24 md:ms-28">
-        <h2 className="text-xl font-normal leading-normal tracking-widest font-Barlow-Condensed md:text-2xl">
+        <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl">
           PROFESSIONALS
         </h2>
         <h1 className="text-3xl font-normal leading-normal font-gilda md:text-4xl">

@@ -20,6 +20,7 @@ export default function AboutUsLandaHolding() {
         </p>
       </div>
       <Image
+        className="brightness-95 contrast-[1.15] drop-shadow-md"
         loading="lazy"
         src="/static/images/About/team.jpg"
         width={661}

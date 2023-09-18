@@ -109,6 +109,12 @@ export default function Footer() {
             >
               Contact
             </Link>
+            <Link
+              href={'/our-team'}
+              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
+            >
+              Our Team
+            </Link>
           </div>
         </div>
         <div className="flex flex-col col-span-1 space-y-1">
@@ -146,21 +152,21 @@ export default function Footer() {
             <br />
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
-            Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
+            Young street, Toronto, Canada
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
             +1 (416) 557-7622
           </div>
-          <div className="text-base font-normal text-neutral-400">
-            No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
+          <div className="text-base font-normal text-justify text-neutral-400 border-t border-t-white pt-1">
+            Eastern Daneshvar street, Tehran, Iran
           </div>
-          {/* <div className="text-base font-normal text-justify text-neutral-400">
+          <div className="text-base font-normal text-justify text-neutral-400 border-b border-b-white pb-1">
             02188030167
-          </div> */}
-          <div className="text-base font-normal text-justify text-neutral-400">
-            Tala Complex, Saadat Abad St, Isfahan, Iran
           </div>
-          <div className="text-base font-normal text-justify text-neutral-400">
+          <div className="text-base font-normal text-neutral-400">
+            Saadat Abad Ave, Isfahan, Iran
+          </div>
+          <div className="text-base font-normal text-neutral-400">
             03131311914
           </div>
         </div>

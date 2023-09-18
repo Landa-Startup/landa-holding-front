@@ -3,10 +3,10 @@ import { Metadata } from 'next';
 import Hero from '@/components/templates/Hero';
 import LandaHoldingPriority from '@/components/templates/LandaHoldingPriority';
 import LatestStartups from '@/components/templates/LatestStartups';
-import ContactUs from '@/components/templates/ContactUs';
 import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 import AerialViewBusinessTeam from '@/components/templates/BusinessTeam';
 import HomeCardsContainer from '@/components/templates/HomeCardsContainer';
+import Partners from '@/components/templates/Partners';
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function Page() {
       <LandaHoldingPriority />
       <AerialViewBusinessTeam />
       <LatestStartups />
-      <ContactUs />
+      <Partners />
     </div>
   );
 }
