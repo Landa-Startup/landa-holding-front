@@ -11,7 +11,8 @@ import HomeCardsContainer from '@/components/templates/HomeCardsContainer';
 // Define metadata for the page
 export const metadata: Metadata = {
   title: 'Landa Holding',
-  description: 'Page Desc',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
 export default function Page() {
