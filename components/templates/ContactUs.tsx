@@ -20,12 +20,13 @@ export default function ContactUs() {
           <Button text="Join Us" size="visit" />
         </Link>
       </div>
-     <div className="flex gap-20 md:h-full relative mt-5 md:my-0 md:mb-0 ml-5 mr-5">
+      <div className="flex gap-20 md:h-full relative mt-5 md:my-0 md:mb-0 ml-5 mr-5">
         <div className="absolute top-0 w-full h-16 md:h-48  z-10" />
         <div className="absolute bottom-0 w-full h-16 md:h-60  via-transparent-white z-10" />
         <div className="flex flex-col justify-around ">
           <div className="spin-image">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/1.png"
               alt="t"
@@ -35,6 +36,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/22.png"
               alt="t"
@@ -44,6 +46,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/3.png"
               alt="t"
@@ -53,6 +56,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/4.png"
               alt="t"
@@ -64,6 +68,7 @@ export default function ContactUs() {
         <div className="flex flex-col justify-around">
           <div className="spin-image-top">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/5.png"
               alt="t"
@@ -73,6 +78,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image-top">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/6.png"
               alt="t"
@@ -82,6 +88,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image-top">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/77.png"
               alt="t"
@@ -91,6 +98,7 @@ export default function ContactUs() {
           </div>
           <div className="spin-image-top">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/88.png"
               alt="t"
@@ -102,6 +110,7 @@ export default function ContactUs() {
         <div className="flex flex-col justify-start md:mt-5">
           <div className="spin-image">
             <Image
+              loading="lazy"
               className=""
               src="/static/images/Home/universities/9.png"
               alt="t"

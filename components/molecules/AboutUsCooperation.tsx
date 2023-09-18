@@ -30,6 +30,7 @@ export default function AboutUsCooperation() {
             <span className="mr-3">More</span>
             <Link href="/investor-registration">
               <Image
+                loading="lazy"
                 width={40}
                 height={40}
                 className="inline"
@@ -56,6 +57,7 @@ export default function AboutUsCooperation() {
             <span className="mr-3">More</span>
             <Link href="/partner-membership">
               <Image
+                loading="lazy"
                 width={40}
                 height={40}
                 className="inline"

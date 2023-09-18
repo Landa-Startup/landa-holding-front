@@ -54,6 +54,7 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
         </svg>
         <div className="w-[360px] h-[145px] mx-8 md:ml-16 md:mr-20 relative">
           <Image
+            loading="lazy"
             layout="fill"
             objectFit="cover"
             alt="Academy"
@@ -111,6 +112,7 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
         </div>
         <div className="flex flex-col md:flex-row justify-center mt-7 md:my-10 mx-8">
           <Image
+            loading="lazy"
             className="md:w-[553px] md:h-[298px]"
             width={553}
             height={298}
@@ -192,6 +194,7 @@ Elevate your online impact with our SEO course at Landa Academy! Master search e
           />
         </svg>
         <Image
+          loading="lazy"
           className="md:w-96 md:h-56 md:mr-28 md:ml-32"
           width={384}
           height={224}

@@ -10,6 +10,7 @@ export default function Fourth() {
     >
       <div className="flex flex-col md:flex-row-reverse justify-evenly pyb-8 pt-16 z-10 px-10 space-y-5">
         <Image
+          loading="lazy"
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Office work-amico 1.svg'}
           width={500}
