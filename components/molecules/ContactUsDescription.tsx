@@ -3,7 +3,10 @@ import Phone from '../atoms/IconPhone';
 import Email from '../atoms/IconEmail';
 import Location from '../atoms/IconLocation';
 import Link from 'next/link';
-
+import IconInstagram from '../atoms/IconInstagram';
+import IconWhatApp from '../atoms/IconWhatsApp';
+import IconLinkedinB from '../atoms/IconLinkedinB';
+import IconEmailB from '../atoms/IconEmailB';
 export default function ContactUsDescription() {
   return (
     <div>
@@ -15,6 +18,20 @@ export default function ContactUsDescription() {
         based on the investment priorities of developing the nurtured
         capabilities of individuals.
       </p>
+      <div className="flex flex-row space-x-3 ">
+        <Link href={'#'}>
+          <IconInstagram />
+        </Link>
+        <Link href={'#'}>
+          <IconWhatApp />
+        </Link>
+        <Link href={'#'}>
+          <IconEmailB />
+        </Link>
+        <Link href={'#'}>
+          <IconLinkedinB />
+        </Link>
+      </div>
       <div className="flex my-3">
         <Phone />
         <ul className="mx-4">
@@ -57,15 +74,9 @@ export default function ContactUsDescription() {
         <div className="flex flex-col ml-2">
           <span className="font-semibold">Address</span>
           <ul className="mx-4 list-disc space-y-3">
-            <li>
-              Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
-            </li>
-            <li>
-              No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
-            </li>
-            <li>
-              Tala Complex, Saadat Abad St, Isfahan, Iran
-            </li>
+            <li>Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
+            <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
+            <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
           </ul>
         </div>
       </div>
