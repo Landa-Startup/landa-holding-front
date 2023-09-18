@@ -20,19 +20,19 @@ export default function ContactUsDescription() {
         <ul className="mx-4">
           <li className="font-semibold">Phone Call</li>
           {/* TODO: create component for below icons */}
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Toronto:</span>
               <span className="text-[#AA8453]">+1 (416) 557-7622</span>
             </Link>
           </li>
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Tehran:</span>
               <span className="text-[#AA8453]">02188030167</span>
             </Link>
           </li>
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Isfahan:</span>
               <span className="text-[#AA8453]">03131311914</span>
@@ -57,15 +57,9 @@ export default function ContactUsDescription() {
         <div className="flex flex-col ml-2">
           <span className="font-semibold">Address</span>
           <ul className="mx-4 list-disc space-y-3">
-            <li>
-              Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
-            </li>
-            <li>
-              No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
-            </li>
-            <li>
-              Tala Complex, Saadat Abad St, Isfahan, Iran
-            </li>
+            <li>Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
+            <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
+            <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
           </ul>
         </div>
       </div>
