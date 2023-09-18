@@ -10,6 +10,7 @@ export default function Mobile() {
     >
       <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
         <Image
+          loading="lazy"
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/leadership-amico 1 (1).svg'}
           width={500}

@@ -12,6 +12,7 @@ export default function Fifth() {
         Work experience at the Canadian company
       </div>
       <Image
+        loading="lazy"
         className="md:mt-28 md:mb-16 z-10 order-1"
         alt="Landa academy"
         src={'static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg'}

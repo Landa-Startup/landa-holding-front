@@ -21,6 +21,7 @@ export default function LatestStartupsCard({
 
         {/* Image */}
         <Image
+          loading="lazy"
           alt={image}
           className="w-[124px] md:w-[249px] h-[116px] md:h-[216px] left-[71px] md:left-[55px] top-2 md:top-[18px] absolute object-contain group-hover:scale-110 transition-all"
           src={image}

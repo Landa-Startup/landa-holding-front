@@ -11,6 +11,7 @@ export default function UploadInput({ title }: { title: string }) {
       <div className="px-6 py-2 rounded-md bg-stone-100 shadow justify-center items-center gap-[5px] inline-flex">
         {/* Upload icon */}
         <Image
+          loading="lazy"
           className="w-5 h-5"
           src="/static/images/01b4cd75ff21ef0a30e6e410fa049bb0.png"
           width={100}

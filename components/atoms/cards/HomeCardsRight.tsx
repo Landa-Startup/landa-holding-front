@@ -25,11 +25,12 @@ export default function HomeCardsRight({
             key={index}
           >
             <Image
+              loading="lazy"
               className="object-cover"
               src={image.src}
               alt={image.alt}
               fill
-              sizes='100vh'
+              sizes="100vh"
             />
           </div>
         ))}

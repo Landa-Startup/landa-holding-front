@@ -37,6 +37,7 @@ export default function MagazineModernPostCard3() {
           {/* Image */}
           <div className="flex flex-col justify-center">
             <Image
+              loading="lazy"
               className=""
               src={'/static/images/Magazine/Rectangle 2881.png'}
               alt="Landa"

@@ -6,7 +6,8 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Entrepreneurs',
-  description: '',
+  description:
+    'Explore the Landa Holding Entrepreneurs Form and connect with us to share your entrepreneurial ideas and projects. We are interested in hearing from creative minds and visionaries. Lets collaborate to turn your entrepreneurial dreams into reality.',
 };
 
 export default function EntrepreneursPage() {

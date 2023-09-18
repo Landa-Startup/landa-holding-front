@@ -17,7 +17,13 @@ export default function LandaMagazineCard({
     <Link href={'/'}>
       <div className="w-[391px] h-[476px] group relative">
         {/* Image */}
-        <Image src={image} alt={image} width={500} height={500} />
+        <Image
+          loading="lazy"
+          src={image}
+          alt={image}
+          width={500}
+          height={500}
+        />
 
         {/* Date Container */}
         <div className="w-[46px] h-[84px] px-1 py-2.5 border border-white flex-col justify-start items-center gap-[15px] inline-flex absolute top-8 left-8">

@@ -5,7 +5,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Investors',
-  description: '',
+  description:
+    'Explore the Landa Holding Investor Center, your gateway to comprehensive financial information, reports, and updates. Stay informed about our financial performance and investment opportunities.',
 };
 
 export default function InvestorRegistrationPage() {
