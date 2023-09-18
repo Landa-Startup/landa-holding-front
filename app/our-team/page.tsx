@@ -5,7 +5,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Our Team',
-  description: '',
+  description:
+    'Meet the dedicated and talented individuals who make up the Landa Holding team. Learn about their expertise, passion, and commitment to excellence. Get to know the driving force behind our success.',
 };
 
 export default function TeamPage() {

@@ -6,13 +6,14 @@ export default function Video() {
   return (
     <div className="flex justify-center items-start relative h-[475px]">
       <Image
+        loading="lazy"
         className="blur-md object-cover"
         src={'/static/images/Academy/e8789aa2b833892200e6100e9998211b.jpg'}
         quality={100}
         alt="Landa Video"
         layout="fill"
       />
-      {/* <Image
+      {/* <Image loading="lazy"
         className="absolute w-[377px] h-[453px] bottom-0 -right-10"
         src={'/static/images/Academy/Vector 67.png'}
         quality={100}
@@ -20,7 +21,7 @@ export default function Video() {
         width={377}
         height={453}
       /> */}
-      {/* <Image
+      {/* <Image loading="lazy"
         className="absolute right-0 w-[480px] h-[576px] object-contain"
         src={'/static/images/Academy/Vector 67 (2).png'}
         alt="Landa Video"

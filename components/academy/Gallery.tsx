@@ -14,6 +14,7 @@ export default function Gallery() {
         </div>
         <div className="grid grid-cols-2 mx-8 md:mx-32 md:grid-cols-3 justify-items-center gap-2 my-5">
           <Image
+            loading="lazy"
             width={389}
             height={243}
             quality={100}
@@ -22,6 +23,7 @@ export default function Gallery() {
             src="/static/images/Academy/gallery/Rectangle 3024.png"
           />
           <Image
+            loading="lazy"
             width={291}
             height={243}
             quality={100}
@@ -30,6 +32,7 @@ export default function Gallery() {
             src="/static/images/Academy/gallery/Rectangle 3025.png"
           />
           <Image
+            loading="lazy"
             width={493}
             height={243}
             quality={100}
@@ -38,6 +41,7 @@ export default function Gallery() {
             src="/static/images/Academy/gallery/Rectangle 3026.png"
           />
           <Image
+            loading="lazy"
             width={489}
             height={243}
             quality={100}
@@ -46,6 +50,7 @@ export default function Gallery() {
             src="/static/images/Academy/gallery/Rectangle 3027.png"
           />
           <Image
+            loading="lazy"
             width={389}
             height={243}
             quality={100}
@@ -54,6 +59,7 @@ export default function Gallery() {
             src="/static/images/Academy/gallery/Rectangle 3028.png"
           />
           <Image
+            loading="lazy"
             width={287}
             height={243}
             quality={100}
@@ -63,7 +69,7 @@ export default function Gallery() {
           />
         </div>
         <div className="mx-auto">
-          <Button size="visit" bgColor="Yellow" text="Visit Now" />
+          <Button size="visit" bgColor="Yellow" text="Visit Now" goto="/" />
         </div>
       </div>
     </div>

@@ -8,7 +8,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | About',
-  description: '',
+  description:
+    'Learn about Landa Holding, a forward-thinking company dedicated to innovation and excellence. Discover our mission, values, and the team behind our success. Join us on our journey towards a brighter future.',
 };
 
 export default function Page() {

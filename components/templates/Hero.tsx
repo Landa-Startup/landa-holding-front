@@ -53,11 +53,9 @@ export default function Hero({
     <div
       style={{
         backgroundImage: `url('/static/images/Home/Hero/${backgroundImage}')`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'auto',
+        backgroundSize: 'cover',
       }}
-      className="h-[calc(100vh-5rem)] md:h-screen relative overflow-hidden brightness-75"
+      className="h-[calc(100vh-5rem)] md:h-screen relative overflow-hidden"
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
@@ -91,11 +89,13 @@ export default function Hero({
             size="notVisit"
             // bgColor={buttonBg}
             addedClass={buttonBg ? 'md:hidden' : 'block'}
+            goto="/"
           />
         ) : (
           <></>
         )}
         <Image
+          loading="lazy"
           className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 bottom-0"
           src={`/static/images/${leftImage}`}
           alt="Landa"

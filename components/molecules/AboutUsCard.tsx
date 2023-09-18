@@ -42,6 +42,7 @@ const AboutUsCard = ({
               style={{ position: 'relative', overflow: 'hidden' }}
             >
               <Image
+                loading="lazy"
                 alt={`Image for ${title}`}
                 src={image}
                 layout="fill" // Set layout to 'fill'
@@ -59,6 +60,7 @@ const AboutUsCard = ({
               style={{ position: 'relative', overflow: 'hidden' }}
             >
               <Image
+                loading="lazy"
                 alt={`Image for ${title}`}
                 src={image}
                 layout="fill" // Set layout to 'fill'

@@ -72,6 +72,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <Link href="/">
               <div className="flex flex-col items-end md:flex-row">
                 <Image
+                  loading="lazy"
                   className="w-10 h-10 md:w-12 md:h-14"
                   src={'static/images/Logo.svg'}
                   alt="Logo"

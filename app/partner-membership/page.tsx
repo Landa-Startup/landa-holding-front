@@ -5,7 +5,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Partners',
-  description: '',
+  description:
+    'Explore the Landa Holding Business Partner Form and discover opportunities for collaboration and partnership. Join us in shaping the future of business together.',
 };
 
 export default function AffiliateFormPage() {

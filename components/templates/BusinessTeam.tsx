@@ -33,6 +33,7 @@ export default function AerialViewBusinessTeam() {
             <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
               {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
               <Image
+                loading="lazy"
                 className="w-14 h-14 md:w-[108px] md:h-[104px] border"
                 src="/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg"
                 width={500}
@@ -56,6 +57,7 @@ export default function AerialViewBusinessTeam() {
                     href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
                   >
                     <Image
+                      loading="lazy"
                       className="w-4 h-4"
                       src={
                         '/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'
@@ -67,6 +69,7 @@ export default function AerialViewBusinessTeam() {
                   </Link>
                   <Link href={'https://mortezajafari.ca/'}>
                     <Image
+                      loading="lazy"
                       className="w-4 h-4"
                       src={
                         '/static/images/59f5308a62b217b056f54ef59eeb58e2.png'
@@ -78,6 +81,7 @@ export default function AerialViewBusinessTeam() {
                   </Link>
                   <Link href={'mailto:www.morteza_jafari49@yahoo.com'}>
                     <Image
+                      loading="lazy"
                       className="w-4 h-4"
                       src={
                         '/static/images/e0058a18e539cf27599b846c81814c35.png'
@@ -103,6 +107,7 @@ export default function AerialViewBusinessTeam() {
                   href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
                 >
                   <Image
+                    loading="lazy"
                     className="w-7 h-w-7"
                     src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
                     alt="Linkedin"
@@ -112,6 +117,7 @@ export default function AerialViewBusinessTeam() {
                 </Link>
                 <Link href={'https://mortezajafari.ca/'}>
                   <Image
+                    loading="lazy"
                     className="w-7 h-w-7"
                     src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
                     alt="Website"
@@ -121,6 +127,7 @@ export default function AerialViewBusinessTeam() {
                 </Link>
                 <Link href={'mailto:www.morteza_jafari49@yahoo.com'}>
                   <Image
+                    loading="lazy"
                     className="w-7 h-w-7"
                     src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
                     alt="Linkedin"

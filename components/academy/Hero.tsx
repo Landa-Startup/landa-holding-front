@@ -24,6 +24,7 @@ export default function Hero({
   return (
     <div className="h-screen relative overflow-hidden bg-[#3D5656]">
       <Image
+        loading="lazy"
         className="absolute bottom-16 hidden md:block"
         src={'/static/images/Academy/Hero/leadership-amico 1.svg'}
         width={383}
@@ -31,6 +32,7 @@ export default function Hero({
         alt="Hero Illustration"
       />
       <Image
+        loading="lazy"
         className="absolute bottom-16 md:hidden"
         src={'/static/images/Academy/Hero/leadership-amico 1.svg'}
         width={214}
@@ -52,11 +54,13 @@ export default function Hero({
             size="notVisit"
             bgColor="Yellow"
             addedClass={buttonBg ? 'md:hidden' : 'block'}
+            goto="/"
           />
         ) : (
           <></>
         )}
         <Image
+          loading="lazy"
           className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-28 md:right-0 -bottom-20"
           src={`/static/images/${leftImage}`}
           alt="Landa"

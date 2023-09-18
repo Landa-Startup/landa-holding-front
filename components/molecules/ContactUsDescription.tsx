@@ -37,19 +37,19 @@ export default function ContactUsDescription() {
         <ul className="mx-4">
           <li className="font-semibold">Phone Call</li>
           {/* TODO: create component for below icons */}
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Toronto:</span>
               <span className="text-[#AA8453]">+1 (416) 557-7622</span>
             </Link>
           </li>
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Tehran:</span>
               <span className="text-[#AA8453]">02188030167</span>
             </Link>
           </li>
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Isfahan:</span>
               <span className="text-[#AA8453]">03131311914</span>

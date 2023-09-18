@@ -32,6 +32,7 @@ export default function ContactUs() {
         Visit Now
       </button>
       <Image
+        loading="lazy"
         className="-mb-4 md:absolute md:-left-16 md:-bottom-[5px]"
         src={'/static/images/Academy/Collab-pana 1.svg'}
         alt="Academy Contact Us"

@@ -5,7 +5,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Startups',
-  description: '',
+  description:
+    'Explore the Landa Holding Startup Form and share your innovative ideas with us. We are interested in hearing from startups and entrepreneurs. Lets work together to bring your vision to life.',
 };
 
 export default function StartupValidationPage() {
