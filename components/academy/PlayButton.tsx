@@ -16,7 +16,7 @@ export default function PlayButton() {
         <path
           d="M2 2.94744L35 22L2 41.0526V2.94744Z"
           stroke="#3D5656"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </svg>
     </div>

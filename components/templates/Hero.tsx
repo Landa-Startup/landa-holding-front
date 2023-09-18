@@ -68,7 +68,7 @@ export default function Hero({
           Landa Holding
         </div>
         <div
-          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${
+          className={`md:text-right text-white md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${
             isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
               : '' // Apply spin animation class when the title is changing
@@ -78,7 +78,7 @@ export default function Hero({
           {currentTitle}
         </div>
 
-        <div className="text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
+        <div className="text-center font-barlow text-white text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
         </div>
         {/* <div className="hidden md:block text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
@@ -103,6 +103,7 @@ export default function Hero({
           height={500}
         />
         <Link
+          aria-label="Scroll To Next Section"
           className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
           href={'#LandaHolding'}
         >

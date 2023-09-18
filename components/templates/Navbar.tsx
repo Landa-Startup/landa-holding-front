@@ -20,7 +20,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
     { label: 'Entrepreneurs', href: '/entrepreneurs' },
-
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -44,10 +43,11 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         id="my-drawer-3"
         type="checkbox"
         className="drawer-toggle"
+        aria-label="Menu Toggle"
         ref={drawerRef}
       />
       <div className="relative flex flex-col drawer-content">
-        <div className="fixed z-50 flex items-center justify-between w-full p-0 text-white bg-neutral-800 bg-opacity-80 navbar md:px-12 md:p-3 ">
+        <div className="fixed flex items-center justify-between w-full p-0 text-white bg-neutral-800 bg-opacity-80 navbar md:px-12 md:p-3 ">
           <div className="flex-none mt-3 lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -102,8 +102,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     WORK WITH US
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
-                      }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
+                      isMenuOpen ? '' : 'hidden'
+                    }`}
                   >
                     {submenuItems.map((item) => (
                       <li
@@ -129,7 +130,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="h-full p-4 text-xl menu w-80 bg-base-200">
+        <ul className="absolute h-full p-4 text-xl menu w-80 bg-base-200 top-[72px]">
           {menuItems.map((item) => (
             <li key={item.label} onClick={() => handleLinkClick()}>
               <Link href={item.href} className="">
