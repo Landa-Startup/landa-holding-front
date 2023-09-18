@@ -1,11 +1,23 @@
 import Link from 'next/link';
 import React from 'react';
 
-export default function ScrollButton({ scrollTo }: { scrollTo: string }) {
+export default function ScrollButton({
+  scrollTo,
+  color,
+  addedClass,
+}: {
+  scrollTo: string;
+  color?: 'white' | 'black';
+  addedClass?: string;
+}) {
   return (
     <Link
       href={'#' + scrollTo}
-      className="btn btn-circle btn-outline border-black text-black ml-40 mb-40"
+      className={`btn btn-circle btn-outline ${
+        color === 'white'
+          ? 'border-white text-white'
+          : 'border-black text-black'
+      } mx-auto  ${addedClass ? addedClass : ''}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

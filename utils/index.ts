@@ -11,7 +11,7 @@ export function formatDate(input: string | number): string {
     })
 }
 export function extractFieldValue(fields: formidable.Fields, fieldName: string): string {
-    const fieldValue = fields[fieldName];
+    const fieldValue:any = fields[fieldName];
     return Array.isArray(fieldValue) ? fieldValue[0] : fieldValue;
 }
 

@@ -41,19 +41,19 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   //   document.addEventListener('click', handleClickOutside);
   // }, []);
   return (
-    <div className="drawer top-0">
+    <div className="top-0 drawer">
       <input
         id="my-drawer-3"
         type="checkbox"
         className="drawer-toggle"
         ref={drawerRef}
       />
-      <div className="drawer-content flex flex-col relative md:px-32 md:pt-5">
-        <div className="w-full navbar bg-transparent text-white flex justify-between items-center">
+      <div className="relative flex flex-col drawer-content md:px-32 md:pt-5">
+        <div className="flex items-center justify-between w-full text-white bg-transparent navbar">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
-              className="btn btn-square btn-ghost -mt-5"
+              className="-mt-5 btn btn-square btn-ghost"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,8 +71,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </label>
           </div>
           <Logo route={router === '/academy' ? 'academy' : 'holding'} />
-          <div className="hidden xl:flex-1 xl:flex justify-start ml-32">
-            <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
+          <div className="justify-start hidden ml-32 xl:flex-1 xl:flex">
+            <ul className="flex justify-center space-x-10 text-xl menu menu-horizontal font-condensed">
               {menuItems.map((item) => (
                 <li className="text-2xl h-9" key={item.label}>
                   <Link href={item.href} className="hover:bg-white">
@@ -81,7 +81,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 </li>
               ))}
               <li className="h-9">
-                <details className="dropdown mb-32">
+                <details className="mb-32 dropdown">
                   <summary
                     className="text-2xl hover:text-primary hover:bg-base-200"
                     onClick={() => setIsMenuOpen(true)}
@@ -101,7 +101,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                       >
                         <Link
                           href={item.href}
-                          className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                          className="p-5 font-bold text-black border hover:text-primary hover:bg-base-200"
                         >
                           {item.label}{' '}
                         </Link>
@@ -117,7 +117,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full bg-base-200 text-xl">
+        <ul className="h-full p-4 text-xl menu w-80 bg-base-200">
           {menuItems.map((item) => (
             <li key={item.label} onClick={() => handleLinkClick()}>
               <Link href={item.href} className="">

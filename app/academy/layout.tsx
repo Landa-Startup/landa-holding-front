@@ -5,8 +5,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       {/* <Navbar> */}
-        <main>{children}</main>
-        {/* <Footer /> */}
+      <main>{children}</main>
+      {/* <Footer /> */}
       {/* </Navbar> */}
     </>
   );

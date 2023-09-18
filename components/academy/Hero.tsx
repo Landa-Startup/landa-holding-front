@@ -65,7 +65,7 @@ export default function Hero({
         />
         <Link
           className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
-          href={'#LandaHolding'}
+          href={'#Roadmap-1'}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

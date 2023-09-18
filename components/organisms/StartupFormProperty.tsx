@@ -45,7 +45,7 @@ export default function StartupFormProperty({
             required=""
           />
         </div>
-        <div className="col-span-2">
+        {/* <div className="col-span-2">
           <TextArea
             title="What is your current interest rate?"
             register={register}
@@ -56,7 +56,7 @@ export default function StartupFormProperty({
             patternValue=""
             required=""
           />
-        </div>
+        </div> */}
         <div className="col-span-2">
           <TextArea
             title="How much current funding did you raise before starting your business?"
