@@ -17,7 +17,7 @@ export default function ScrollButton({
         color === 'white'
           ? 'border-white text-white'
           : 'border-black text-black'
-      } mx-auto  ${addedClass ? addedClass : ''}`}
+      } ${addedClass ? addedClass : ''}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
