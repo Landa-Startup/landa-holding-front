@@ -43,6 +43,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         id="my-drawer-3"
         type="checkbox"
         className="drawer-toggle"
+        aria-label="Menu Toggle"
         ref={drawerRef}
       />
       <div className="relative flex flex-col drawer-content">
