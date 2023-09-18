@@ -27,10 +27,10 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
-        <ScrollButton scrollTo="Courses" addedClass="mt-5 md:-mt-5" />
+        <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-5 md:-mt-5" />
       </div>
       <svg
-        className="absolute top-0 left-[683px] hidden md:block"
+        className="absolute -top-7 left-[683px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="47"
         height="178"

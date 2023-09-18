@@ -32,7 +32,7 @@ export default function Second() {
           </div>
         </div>
       </div>
-      <ScrollButton scrollTo="Roadmap-2" />
+      <ScrollButton scrollTo="Roadmap-2" addedClass='mx-auto md:ml-28'/>
       <svg
         className="absolute bottom-0 right-[345px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"

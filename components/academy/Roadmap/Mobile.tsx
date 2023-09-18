@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Mobile() {
   return (
     <div
-      className="flex flex-col h-screen bg-[#F1F8EC] relative"
+      className="md:hidden flex flex-col h-screen bg-[#F1F8EC] relative"
       id="Roadmap-3M"
     >
       <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
@@ -27,7 +27,7 @@ export default function Mobile() {
           </ul>
         </div>
       </div>
-      <ScrollButton scrollTo="Roadmap-4" />
+      <ScrollButton scrollTo="Roadmap-4" addedClass="mx-auto" />
       <svg
         className="absolute bottom-0 right-[345px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"

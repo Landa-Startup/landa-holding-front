@@ -8,7 +8,7 @@ export default function Fourth() {
       className="flex flex-col h-screen bg-[#263238] text-white relative"
       id="Roadmap-3"
     >
-      <div className="flex flex-col md:flex-row-reverse justify-evenly py-8 z-10 px-10 space-y-5">
+      <div className="flex flex-col md:flex-row-reverse justify-evenly pyb-8 pt-16 z-10 px-10 space-y-5">
         <Image
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Office work-amico 1.svg'}
@@ -30,21 +30,25 @@ export default function Fourth() {
           </div>
         </div>
       </div>
-      <ScrollButton scrollTo="Roadmap-4" color="white" />
+      <ScrollButton
+        scrollTo="Roadmap-4"
+        color="white"
+        addedClass="mx-auto md:ml-28"
+      />
       <svg
-        className="absolute top-0 left-[655px] hidden md:block"
+        className="absolute top-0 left-[550px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
-        width="408"
-        height="314"
-        viewBox="0 0 408 314"
+        width="358"
+        height="492"
+        viewBox="0 0 358 492"
         fill="none"
       >
         <path
-          d="M41.4075 2.19727C40.2696 13.5766 31.9552 25.1025 27.4884 35.2015C20.0991 51.9077 16.7802 67 12.9952 86.2862C10.5001 99 9.00014 109 5.24641 125.461C0.5 168.5 -2.42545 221.726 15.5782 262.643C45.9345 331.635 112.764 367.285 177.155 401.118C201.156 413.728 227.681 421.11 249.764 437.279C264.108 447.78 278.756 458.52 293.387 468.561C337.294 498.693 367.604 538.097 377.189 590.82C378.606 598.614 383.338 605.308 385.512 612.919C390.75 631.251 392.37 647.248 394.122 667.017C398.184 712.858 405.602 759.422 405.602 805.491"
-          stroke="#FFFBE6"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeDasharray="6 6"
+          d="M355.602 490.491C355.602 444.422 348.184 397.858 344.122 352.017C342.37 332.248 340.75 316.251 335.512 297.919C333.338 290.308 328.606 283.614 327.189 275.82C317.603 223.097 287.294 183.693 243.387 153.561C228.756 143.52 214.108 132.78 199.765 122.279C177.681 106.11 151.156 98.7284 127.155 86.1176C82.0459 62.4161 35.7405 37.8231 1.61621 1.5"
+          stroke="#F1F8EC"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-dasharray="6 6"
         />
       </svg>
       <svg
