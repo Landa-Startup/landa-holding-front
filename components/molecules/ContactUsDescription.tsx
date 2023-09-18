@@ -3,7 +3,10 @@ import Phone from '../atoms/IconPhone';
 import Email from '../atoms/IconEmail';
 import Location from '../atoms/IconLocation';
 import Link from 'next/link';
-
+import IconInstagram from '../atoms/IconInstagram';
+import IconWhatApp from '../atoms/IconWhatsApp';
+import IconLinkedinB from '../atoms/IconLinkedinB';
+import IconEmailB from '../atoms/IconEmailB';
 export default function ContactUsDescription() {
   return (
     <div>
@@ -15,6 +18,20 @@ export default function ContactUsDescription() {
         based on the investment priorities of developing the nurtured
         capabilities of individuals.
       </p>
+      <div className="flex flex-row space-x-3 ">
+        <Link href={'#'}>
+          <IconInstagram />
+        </Link>
+        <Link href={'#'}>
+          <IconWhatApp />
+        </Link>
+        <Link href={'#'}>
+          <IconEmailB />
+        </Link>
+        <Link href={'#'}>
+          <IconLinkedinB />
+        </Link>
+      </div>
       <div className="flex my-3">
         <Phone />
         <ul className="mx-4">
