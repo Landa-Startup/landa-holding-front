@@ -75,15 +75,15 @@ export default function Partners() {
 
   return (
     <div className="grid grid-cols-4 bg-[#FAFAFA] p-16 gap-16">
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-2 gap-8">
         {logosLeft.map((role, index) => (
           <Image
-            className="w-32 h-3w-32 object-contain"
+            className="w-28 h-28 object-contain"
             key={index}
             src={`/static/images/Home/contact/${role.number}.png`}
             alt={role.alt}
             width={130}
-            height={50}
+            height={130}
           />
         ))}
       </div>
@@ -101,7 +101,7 @@ export default function Partners() {
         </p>
         <Button size="notVisit" text="Join Us" goto="/" bgColor="Primary" />
       </div>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-2 gap-8">
         {logosRight.map((role, index) => (
           <Image
             className="w-32 h-3w-32 object-contain"
