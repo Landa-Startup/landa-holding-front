@@ -67,7 +67,7 @@ export default function HomeCardsContainer() {
     <div className="relative bg-whiteGold text-black">
       {/* Background SVG */}
       <svg
-        className="absolute top-[110px] hidden md:block"
+        className="absolute top-[130px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="1092"
         height="2573"
