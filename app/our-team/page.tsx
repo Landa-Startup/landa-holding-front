@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import PersonalTab from '@/components/atoms/cards/PersonalTab';
 import { Metadata } from 'next';
+import TeamRolesContainer from '@/components/templates/TeamRolesContainer';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Our Team',
@@ -207,6 +208,7 @@ export default function TeamPage() {
   return (
     <div>
       <Banner image="/static/images/our-team/Frame2916.png " title="Our Team" />
+      <TeamRolesContainer />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:px-44 py-5 bg-[#FAFAFA]">
         {/* map over personals. */}
         {persons.map((person, index) => (
