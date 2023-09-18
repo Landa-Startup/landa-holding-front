@@ -44,9 +44,9 @@ export default function Second() {
         <path
           d="M243.963 2C245.618 16.791 251.817 31.6754 256.156 46.2502C269.026 89.4737 280.453 132.582 294.949 175.506C305.228 205.942 313 243 323.5 274.5C333.166 336.302 309.908 387.86 276.5 422C208 492 10.5 494 1.49999 542.5"
           stroke="#3D5656"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-dasharray="6 6"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeDasharray="6 6"
         />
       </svg>
     </div>
