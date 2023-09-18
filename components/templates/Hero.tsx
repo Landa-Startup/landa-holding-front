@@ -89,6 +89,7 @@ export default function Hero({
             size="notVisit"
             // bgColor={buttonBg}
             addedClass={buttonBg ? 'md:hidden' : 'block'}
+            goto="/"
           />
         ) : (
           <></>

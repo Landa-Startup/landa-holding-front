@@ -17,7 +17,7 @@ export default function ContactUs() {
           review.
         </p>
         <Link href={'/partner-membership'}>
-          <Button text="Join Us" size="visit" />
+          <Button text="Join Us" size="visit" goto="/" />
         </Link>
       </div>
       <div className="flex gap-20 md:h-full relative mt-5 md:my-0 md:mb-0 ml-5 mr-5">
