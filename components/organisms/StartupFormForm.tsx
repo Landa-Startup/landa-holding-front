@@ -13,6 +13,7 @@ import StartupFormTrialProduct from './StartupFormTrialProduct';
 import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from './base/NotificationSendForm';
+import TextArea from '../atoms/TextArea';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 enum Type {
@@ -274,7 +275,7 @@ export default function StartupFormForm() {
             className="select select-bordered w-full max-w-xs mt-4"
             onChange={handleItemChange}
           >
-            <option value={'IDEA'} selected>
+            <option value={'IDEA'} defaultChecked>
               Idea
             </option>
             <option value={'MVP'}>MVP</option>
@@ -295,13 +296,13 @@ export default function StartupFormForm() {
           {(() => {
             if (selectedRadio == 'MVP') {
               return (
-                <StartupFormMVP
-                  register={register}
-                  errors={errors}
-                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
-                  handlePitchDeckFileChange={handlePitchDeckFileChange}
-                  handleFinancialFileChange={handleFinancialFileChange}
-                />
+                  <StartupFormMVP
+                    register={register}
+                    errors={errors}
+                    handleBusinessPlanFileChange={handleBusinessPlanFileChange}
+                    handlePitchDeckFileChange={handlePitchDeckFileChange}
+                    handleFinancialFileChange={handleFinancialFileChange}
+                  />
               );
             } else {
               return <div></div>;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Chevron from '../atoms/Chevron';
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function AerialViewBusinessTeam() {
   return (
@@ -27,12 +27,12 @@ export default function AerialViewBusinessTeam() {
       </div>
       <div className="ems-center justify-center">
         <Chevron direction="left" />
-        <div className="lg:w-[1000px] md:w-[700px] p-5 flex flex-col items-center bg-neutral-500 bg-opacity-60 w-[360px] md:h-[360px]">
+        <div className="md:w-[1000px] p-5 flex flex-col items-center backdrop-blur-2xl w-[360px] md:h-[360px]">
           <div className="flex md:flex-col md:items-center md:w-full">
-            {' '}
-            <div className="relative md:ml-2 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
+            <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
               {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
               <Image
+                loading="lazy"
                 className="w-14 h-14 md:w-[108px] md:h-[104px] border"
                 src="/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg"
                 width={500}
@@ -52,31 +52,42 @@ export default function AerialViewBusinessTeam() {
                   Investor
                 </div>
                 <div className="inline-flex gap-3 mt-2 md:hidden">
-                  <Link href={"https://www.linkedin.com/in/morteza-jafari-5b40b63a"}>
-                  <Image
-                    className="w-4 h-4"
-                    src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
-                    alt="Linkedin"
-                    width={50}
-                    height={50}
-                  />
-                  </Link>
-                  <Link href={"https://mortezajafari.ca/"}>
-                  <Image
-                    className="w-4 h-4"
-                    src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
-                    alt="Website"
-                    width={50}
-                    height={50}
-                  />
-                  </Link>
-                  <Link href={"mailto:www.morteza_jafari49@yahoo.com"}>
+                  <Link
+                    href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
+                  >
                     <Image
-                        className="w-4 h-4"
-                        src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
-                        alt="Email"
-                        width={50}
-                        height={50}
+                      loading="lazy"
+                      className="w-4 h-4"
+                      src={
+                        '/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'
+                      }
+                      alt="Linkedin"
+                      width={50}
+                      height={50}
+                    />
+                  </Link>
+                  <Link href={'https://mortezajafari.ca/'}>
+                    <Image
+                      loading="lazy"
+                      className="w-4 h-4"
+                      src={
+                        '/static/images/59f5308a62b217b056f54ef59eeb58e2.png'
+                      }
+                      alt="Website"
+                      width={50}
+                      height={50}
+                    />
+                  </Link>
+                  <Link href={'mailto:www.morteza_jafari49@yahoo.com'}>
+                    <Image
+                      loading="lazy"
+                      className="w-4 h-4"
+                      src={
+                        '/static/images/e0058a18e539cf27599b846c81814c35.png'
+                      }
+                      alt="Email"
+                      width={50}
+                      height={50}
                     />
                   </Link>
                 </div>
@@ -91,41 +102,58 @@ export default function AerialViewBusinessTeam() {
                 brighter future.
               </div>
               <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
-                <Link href={"https://www.linkedin.com/in/morteza-jafari-5b40b63a"}>
-                <Image
-                  className="w-7 h-w-7"
-                  src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
-                  alt="Linkedin"
-                  width={50}
-                  height={50}
-                />
+                <Link
+                  href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
+                >
+                  <Image
+                    loading="lazy"
+                    className="w-7 h-w-7"
+                    src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
+                    alt="Linkedin"
+                    width={50}
+                    height={50}
+                  />
                 </Link>
-                <Link href={"https://mortezajafari.ca/"}>
-                <Image
-                  className="w-7 h-w-7"
-                  src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
-                  alt="Website"
-                  width={50}
-                  height={50}
-                />
+                <Link href={'https://mortezajafari.ca/'}>
+                  <Image
+                    loading="lazy"
+                    className="w-7 h-w-7"
+                    src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
+                    alt="Website"
+                    width={50}
+                    height={50}
+                  />
                 </Link>
-                <Link href={"mailto:www.morteza_jafari49@yahoo.com"}>
-                <Image
-                  className="w-7 h-w-7"
-                  src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
-                  alt="Linkedin"
-                  width={50}
-                  height={50}
-                />
+                <Link href={'mailto:www.morteza_jafari49@yahoo.com'}>
+                  <Image
+                    loading="lazy"
+                    className="w-7 h-w-7"
+                    src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
+                    alt="Linkedin"
+                    width={50}
+                    height={50}
+                  />
                 </Link>
               </div>
             </div>
           </div>
           <div className="justify-start items-start gap-[12px] md:gap-[19px] inline-flex mt-5">
-            <button className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] bg-primary rounded-full" />
-            <button className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white" />
-            <button className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white" />
-            <button className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white" />
+            <button
+              aria-label="Comments Navigation"
+              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] bg-primary rounded-full"
+            />
+            <button
+              aria-label="Comments Navigation"
+              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white"
+            />
+            <button
+              aria-label="Comments Navigation"
+              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white"
+            />
+            <button
+              aria-label="Comments Navigation"
+              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white"
+            />
           </div>
           <div className="w-[283.01px] h-[0px]border border-white"></div>
         </div>

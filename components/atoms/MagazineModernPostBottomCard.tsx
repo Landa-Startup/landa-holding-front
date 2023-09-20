@@ -11,7 +11,13 @@ export default function MagazineModernPostBottomCard({
   return (
     <div className="px-4 mb-1">
       <div className="flex justify-center">
-        <Image src={image} alt="Landa" width={330} height={430} />
+        <Image
+          loading="lazy"
+          src={image}
+          alt="Landa"
+          width={330}
+          height={430}
+        />
       </div>
       <div className="flex justify-start mt-3 mb-3">
         <p className="px-6 text-justify text-slate-950 text-bold">

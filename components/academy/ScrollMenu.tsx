@@ -62,7 +62,7 @@ export default function ScrollMenu() {
   ];
 
   return (
-    <div className="bg-[#3D5656] py-10">
+    <div className="bg-[#3D5656] py-10 md:h-screen" id="Courses">
       <div className="container mx-auto">
         <div className="text-center text-white text-2xl md:text-3xl font-normal leading-[50px] tracking-[11.20px]">
           LANDA ACADEMY
@@ -79,12 +79,12 @@ export default function ScrollMenu() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
+                strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
               />
@@ -112,12 +112,12 @@ export default function ScrollMenu() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
+                strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
               />

@@ -2,50 +2,71 @@ import Image from 'next/image';
 import React from 'react';
 import ScrollButton from './ScrollButton';
 
-export default function Second() {
+export default function Third() {
   return (
-    <div className="flex flex-col bg-[#FFFBE6] relative" id="Roadmap-2">
-      <div className="flex flex-col-reverse md:flex-row-reverse justify-evenly py-16 z-10">
+    <div
+      className="flex flex-col h-screen bg-[#80C555] text-white relative"
+      id="Roadmap-2"
+    >
+      <div className="flex flex-col md:flex-row justify-evenly pt-2 pb-8 z-10 px-10 space-y-4">
         <Image
+          loading="lazy"
           alt="Landa academy"
-          src={'static/images/Academy/Roadmap/Seminar-amico (1) 1.svg'}
+          src={'static/images/Academy/Roadmap/At the office-amico 2.svg'}
           width={500}
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="md:w-[500px] text-gray-600 text-5xl font-normal tracking-wider leading-snug">
-            Completing the Professional Course with the Best Teachers
+          <div className="md:w-[592px] text-4xl mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
+            Joining Landa Academy and benefiting from its facilities.
+          </div>
+          <ul className="hidden md:block text-[#3D5656] font-barlow text-xl font-medium leading-[25px] md:leading-[40px] tracking-[1px]">
+            <li>1.Personalized mentoring by industry professionals</li>
+            <li>2.Co-working spaces</li>
+            <li>3.Free participation at the next courses</li>
+            <li>4.Engagement in real projects and international startups</li>
+            <li>5.Talent identification of adolescent</li>
+            <li>6.Teaching Fundamentals of Entrepreneurship</li>
+            <li>7.How to work in international markets</li>
+          </ul>
+          <div className="justify-start items-start gap-2 inline-flex">
+            <div className="w-5 h-5 bg-[#80C555] rounded-full mt-3" />
+            <div className="w-[454px] text-xl font-normal font-barlow leading-10 text-justify"></div>
           </div>
         </div>
       </div>
-      <ScrollButton scrollTo="Roadmap-3" />
+      <ScrollButton
+        scrollTo="Roadmap-3"
+        color="white"
+        addedClass="mx-auto md:ml-auto md:mr-28"
+      />
       <svg
-        className="absolute top-0 left-[443px] hidden md:block"
+        className="absolute top-0 left-[620px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
-        width="432"
-        height="318"
-        viewBox="0 0 432 318"
+        width="367"
+        height="364"
+        viewBox="0 0 367 364"
         fill="none"
       >
         <path
-          d="M2 -1.95703C13.0468 5.81581 18.7636 17.2958 26.4223 27.1411C49.1349 56.3383 73.4656 84.3206 93.9773 114.7C108.521 136.241 128.556 157.6 148.752 176.029C175.212 200.174 204.333 222.086 238.682 240.17C286.983 265.598 372.774 300.102 430.054 316.15"
-          stroke="#3D5656"
+          d="M339.5 0.499585C377.5 -10.0014 349.5 -5.2906 339.5 0.499585ZM339.5 0.499585C287 15.0075 263.768 25.3335 221.5 94.4993C210.5 112.499 181.5 133.455 154.5 139.499C121 146.999 118.5 149.435 104.5 153.499C90.5 157.564 59.5 179.999 57.5 181.999C48.4653 191.034 41 199.999 28 223.001C14.329 247.19 11.2727 273.5 11.2727 290.015C11.2727 307.231 19.0948 337.789 11.2727 352.854C8.95374 357.32 7.7418 361.572 2.11914 361.572"
+          stroke="#FFFBE6"
           stroke-width="3"
           stroke-linecap="round"
           stroke-dasharray="6 6"
         />
       </svg>
       <svg
-        className="absolute bottom-0 left-[1023px] hidden md:block"
+        className="absolute bottom-0 left-[500px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
-        width="177"
-        height="477"
-        viewBox="0 0 177 477"
+        width="52"
+        height="314"
+        viewBox="0 0 52 314"
         fill="none"
       >
         <path
-          d="M66.6289 2.30176C68.2841 17.0928 74.4826 31.9771 78.8223 46.552C91.6923 89.7754 103.119 132.884 117.615 175.808C127.894 206.243 154.5 240.5 165 272C193 326.5 155.5 407.08 113 428C16.5 475.5 10.2923 518.821 1.50002 572"
-          stroke="#3D5656"
+          d="M41.4076 2.19727C40.2697 13.5766 31.9553 25.1025 27.4885 35.2015C20.0992 51.9077 16.7803 67 12.9953 86.2862C10.5002 99 9.00024 109 5.24651 125.461C0.5001 168.5 -2.42535 221.726 15.5783 262.643C24.2806 282.422 35.9803 299.459 49.7607 314.5"
+          stroke="#FFFBE6"
           stroke-width="3"
           stroke-linecap="round"
           stroke-dasharray="6 6"

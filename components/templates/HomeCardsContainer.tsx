@@ -14,11 +14,11 @@ export default function HomeCardsContainer() {
       addedClass: '',
       images: [
         {
-          src: '/static/images/Home/Investment/male-female-business-people-working-tablet-office.png',
+          src: '/static/images/Home main/male-female-business-people-working-tablet-office.png',
           alt: 'Landa Investment',
         },
         {
-          src: '/static/images/Home/Investment/Rectangle 1412.png',
+          src: '/static/images/Home main/Rectangle 1412.png',
           alt: 'Landa Investment',
         },
       ],
@@ -52,11 +52,11 @@ export default function HomeCardsContainer() {
       addedClass: 'mb-36',
       images: [
         {
-          src: '/static/images/Home/Academy/3390782c4ef216a1fb0b67f2cc41660d 1.png',
+          src: '/static/images/Home main/3390782c4ef216a1fb0b67f2cc41660d 1.png',
           alt: 'Landa Holding Academy',
         },
         {
-          src: '/static/images/Home/Academy/group-people-working-out-business-plan-office 1.png',
+          src: '/static/images/Home main/group-people-working-out-business-plan-office 1.png',
           alt: 'Landa Holding Academy',
         },
       ],
@@ -64,10 +64,10 @@ export default function HomeCardsContainer() {
   ];
 
   return (
-    <div className="relative bg-whiteGold text-black">
+    <div className="relative bg-whiteGold text-black" id="LandaHolding">
       {/* Background SVG */}
       <svg
-        className="absolute top-[110px] hidden md:block"
+        className="absolute top-[130px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="1092"
         height="2573"
@@ -78,7 +78,7 @@ export default function HomeCardsContainer() {
         <path
           d="M0 152.749H709.675M709.675 152.749V0M709.675 152.749H798.634M709.675 152.749V765.5M709.675 2573V2489M1092 851.338H709.675V765.5M709.675 765.5H517M709.675 765.5V1429M709.675 1429V1469V1576.5M709.675 1429H549.5M709.675 2489H926M709.675 2489V2252.5M709.675 1726H355M709.675 1726V2252.5M709.675 1726V1576.5M709.675 2252.5H597.5M709.675 1576.5H943"
           stroke="#AA8453"
-          strokeWidth="2" // Fixed attribute name from "stroke-width" to "strokeWidth"
+          strokeWidth="2"
         />
       </svg>
 

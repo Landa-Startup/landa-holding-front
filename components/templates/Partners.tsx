@@ -1,0 +1,118 @@
+import Image from 'next/image';
+import React from 'react';
+import Button from '../atoms/Button';
+
+export default function Partners() {
+  const logosLeft = [
+    {
+      number: 1,
+      alt: 'evimo',
+    },
+    {
+      number: 2,
+      alt: 'azad university',
+    },
+    {
+      number: 3,
+      alt: 'nekeoi',
+    },
+    {
+      number: 4,
+      alt: 'evimo',
+    },
+    {
+      number: 5,
+      alt: 'evimo',
+    },
+    {
+      number: 6,
+      alt: 'evimo',
+    },
+    {
+      number: 7,
+      alt: 'evimo',
+    },
+    {
+      number: 8,
+      alt: 'evimo',
+    },
+  ];
+
+  const logosRight = [
+    {
+      number: 9,
+      alt: 'evimo',
+    },
+    {
+      number: 10,
+      alt: 'evimo',
+    },
+    {
+      number: 11,
+      alt: 'evimo',
+    },
+    {
+      number: 12,
+      alt: 'evimo',
+    },
+    {
+      number: 13,
+      alt: 'evimo',
+    },
+    {
+      number: 14,
+      alt: 'evimo',
+    },
+    {
+      number: 15,
+      alt: 'evimo',
+    },
+    {
+      number: 16,
+      alt: 'evimo',
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
+      <div className="hidden md:grid grid-cols-2 gap-8">
+        {logosLeft.map((role, index) => (
+          <Image
+            className="w-28 h-28 object-contain"
+            key={index}
+            src={`/static/images/Home/contact/${role.number}.png`}
+            alt={role.alt}
+            width={130}
+            height={130}
+          />
+        ))}
+      </div>
+      <div className="col-span-4 md:col-span-2 gap-14 bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9">
+        <p className="text-primary text-xl md:text-4xl font-gilda">
+          Join To Our Business Partners
+        </p>
+        <p className="md:w-[522px] font-barlow text-base font-medium leading-7 tracking-[2.4px] text-justify text-black">
+          At Landa Holding, we welcome strategic affiliations with international
+          firms and qualified influencers alike. As an approved affiliate, you
+          will receive co-branded support and future representations that wield
+          substantial influence within the business landscape. To become an
+          affiliate, please complete our free questionnaire for our confidential
+          review.
+        </p>
+        <Button size="notVisit" text="Join Us" goto="/" bgColor="Primary" />
+      </div>
+      <div className="hidden md:grid grid-cols-2 gap-8">
+        {logosRight.map((role, index) => (
+          <Image
+            className="w-32 h-3w-32 object-contain"
+            key={index}
+            src={`/static/images/Home/contact/${role.number}.png`}
+            alt={role.alt}
+            width={130}
+            height={50}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

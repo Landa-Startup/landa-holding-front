@@ -3,11 +3,12 @@ import Image from 'next/image';
 
 export default function MagazineModernPostCard() {
   return (
-    <div className='px-16'>
-      <div className='py-10 mx-20 mb-8'>
+    <div className="px-16">
+      <div className="py-10 mx-20 mb-8">
         {/* Image */}
         <div className="flex flex-col justify-center">
           <Image
+            loading="lazy"
             className=""
             src={'/static/images/Magazine/Rectangle 2880.png'}
             alt="Landa"
@@ -31,10 +32,10 @@ export default function MagazineModernPostCard() {
         {/* Description */}
         <div className="flex justify-start">
           <p className="text-justify text-slate-950 font-bold">
-            Quisque pretium fermentum quam, sit amet cursus ante sollicitudin vel.
-            Morbi consequat risus consequat, porttitor orci sit amet, iaculis
-            nisl. Integer quis sapien neceli ultrices euismod sit amet id lacus.
-            Sed a imperdiet erat. Duis eu est dignissim lacus...
+            Quisque pretium fermentum quam, sit amet cursus ante sollicitudin
+            vel. Morbi consequat risus consequat, porttitor orci sit amet,
+            iaculis nisl. Integer quis sapien neceli ultrices euismod sit amet
+            id lacus. Sed a imperdiet erat. Duis eu est dignissim lacus...
           </p>
         </div>
       </div>

@@ -3,16 +3,16 @@ import First from './First';
 import Second from './Second';
 import Third from './Third';
 import Fourth from './Fourth';
-import Fifth from './Fifth';
+import Mobile from './Mobile';
 
 export default function RoadmapContainer() {
   return (
     <div className="flex flex-col">
       <First />
       <Second />
+      <Mobile />
       <Third />
       <Fourth />
-      <Fifth />
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default function HomeCardsRight({
   images: Array<{ src: string; alt: string }>;
 }) {
   return (
-    <div className="flex flex-col self-start md:self-center" id="LandaHolding">
+    <div className="flex flex-col self-start md:self-center">
       <div className="flex flex-col items-start md:items-center space-y-2 mt-9 md:mt-0">
         <span className="text-xl md:text-3xl tracking-[5px] md:tracking-[11px] font-condensed">
           Landa Holding
@@ -25,10 +25,12 @@ export default function HomeCardsRight({
             key={index}
           >
             <Image
+              loading="lazy"
               className="object-cover"
               src={image.src}
               alt={image.alt}
-              layout="fill"
+              fill
+              sizes="100vh"
             />
           </div>
         ))}

@@ -2,19 +2,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
-import Logo from '../molecules/Logo';
-import { usePathname } from 'next/navigation';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
   const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(true);
-  const router = usePathname();
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    { label: 'ABOUT', href: '/about' },
-    { label: 'CONTACT', href: '/contact' },
+    { label: 'ABOUT US', href: '/about' },
+    { label: 'CONTACT US', href: '/contact' },
     { label: 'OUR TEAM', href: '/our-team' },
   ];
   const submenuItems = [
@@ -41,15 +38,20 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   //   document.addEventListener('click', handleClickOutside);
   // }, []);
   return (
-    <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={drawerRef} />
-      <div className="drawer-content flex flex-col relative md:px-10">
-        <div className="w-full navbar bg-transparent text-white flex justify-between items-center md:px-1">
-          <div className="flex-none xl:hidden">
+    <div className="top-0 drawer">
+      <input
+        id="my-drawer-3"
+        type="checkbox"
+        className="drawer-toggle"
+        aria-label="Menu Toggle"
+        ref={drawerRef}
+      />
+      <div className="relative flex flex-col drawer-content">
+        <div className="fixed flex items-center justify-between w-full text-white bg-neutral-700 bg-opacity-80 navbar md:px-12 md:p-3 ">
+          <div className="flex-none mt-3 lg:hidden">
             <label
               htmlFor="my-drawer-3"
-              className="btn btn-square btn-ghost -mt-5"
-
+              className="-mt-5 btn btn-square btn-ghost"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,15 +91,15 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             <ul className="menu menu-horizontal flex justify-center space-x-10 text-xl font-condensed">
               {menuItems.map((item) => (
                 <li className="text-2xl h-9" key={item.label}>
-                  <Link href={item.href} className="hover:bg-white">
+                  <Link href={item.href} className="text-white hover:bg-white">
                     {item.label}
                   </Link>
                 </li>
               ))}
               <li className="h-9">
-                <details className="dropdown mb-32">
+                <details className="mb-32 dropdown">
                   <summary
-                    className="text-2xl hover:text-primary hover:bg-base-200"
+                    className="text-2xl hover:text-black hover:bg-base-200"
                     onClick={() => setIsMenuOpen(true)}
                   >
                     WORK WITH US
@@ -115,7 +117,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                       >
                         <Link
                           href={item.href}
-                          className="text-black border hover:text-primary hover:bg-base-200 p-5 font-bold"
+                          className="p-5 font-bold text-black border hover:text-primary hover:bg-base-200"
                         >
                           {item.label}
                         </Link>
@@ -131,7 +133,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full bg-base-200 text-xl">
+        <ul className="absolute h-full p-4 text-xl menu w-80 bg-base-200 top-[72px]">
           {menuItems.map((item) => (
             <li key={item.label} onClick={() => handleLinkClick()}>
               <Link href={item.href} className="">

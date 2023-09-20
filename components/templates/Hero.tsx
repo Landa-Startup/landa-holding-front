@@ -53,7 +53,6 @@ export default function Hero({
     <div
       style={{
         backgroundImage: `url('/static/images/Home/Hero/${backgroundImage}')`,
-        backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
       className="h-[400px] md:h-screen relative"
@@ -76,32 +75,36 @@ export default function Hero({
         >
           {currentTitle}
         </div>
-        <div className="text-center text-neutral-50 text-opacity-95 text-4xl font-light leading-10 tracking-widest">
+
+        <div className="text-center font-barlow text-white text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
         </div>
-        <div className="md:hidden text-center w-[250px] font-condensed text-neutral-50 text-[12px] md:text-4xl font-normal leading-3 md:leading-10 md:tracking-[2px]">
+        {/* <div className="hidden md:block text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
           Landa Holding is an international investment company active in Iran
           and Canada.
-        </div>
+        </div> */}
         {showButton ? (
           <Button
             text="Register Now"
             size="notVisit"
-            bgColor={buttonBg}
+            // bgColor={buttonBg}
             addedClass={buttonBg ? 'md:hidden' : 'block'}
+            goto="/"
           />
         ) : (
           <></>
         )}
         <Image
-          className="w-[103px] md:w-[200px] absolute right-0 bottom-0"
+          loading="lazy"
+          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 bottom-0"
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
           height={500}
         />
         <Link
-          className="absolute flex items-center justify-center w-7 h-7 md:w-12 h-w-5 md:h-12 border border-white rounded-full animate-bounce left-10 bottom-4"
+          aria-label="Scroll To Next Section"
+          className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
           href={'#LandaHolding'}
         >
           <svg

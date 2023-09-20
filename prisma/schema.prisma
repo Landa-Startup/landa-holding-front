@@ -111,7 +111,7 @@ model InvestorRegistration {
   countryOfResidence  String
   provinceOfResidence String
   companyName         String
-  investmentCeiling   String
+  interests           String
   preferredAreas      String
   howDidYouKnowUs     String
   createdAt           DateTime @default(now())
@@ -196,12 +196,11 @@ model product {
   file   String
 }
 
-
-model Enterpruner{
-  id Int @id @default(autoincrement())
-  email String
-  companyName String
-  phone String 
-  website String
+model Enterpruner {
+  id                  Int    @id @default(autoincrement())
+  email               String
+  companyName         String
+  phone               String
+  website             String
   fieldOfProfessional String
 }

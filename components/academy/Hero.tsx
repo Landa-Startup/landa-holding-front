@@ -24,6 +24,7 @@ export default function Hero({
   return (
     <div className="h-screen relative overflow-hidden bg-[#3D5656]">
       <Image
+        loading="lazy"
         className="absolute bottom-16 hidden md:block"
         src={'/static/images/Academy/Hero/leadership-amico 1.svg'}
         width={383}
@@ -31,6 +32,7 @@ export default function Hero({
         alt="Hero Illustration"
       />
       <Image
+        loading="lazy"
         className="absolute bottom-16 md:hidden"
         src={'/static/images/Academy/Hero/leadership-amico 1.svg'}
         width={214}
@@ -50,13 +52,15 @@ export default function Hero({
           <Button
             text="Register Now"
             size="notVisit"
-            bgColor={buttonBg}
+            bgColor="Yellow"
             addedClass={buttonBg ? 'md:hidden' : 'block'}
+            goto="/"
           />
         ) : (
           <></>
         )}
         <Image
+          loading="lazy"
           className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-28 md:right-0 -bottom-20"
           src={`/static/images/${leftImage}`}
           alt="Landa"
@@ -64,8 +68,9 @@ export default function Hero({
           height={500}
         />
         <Link
+          aria-label="Scroll To Next Section"
           className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
-          href={'#LandaHolding'}
+          href={'#Roadmap-1'}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
