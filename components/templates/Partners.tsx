@@ -99,7 +99,7 @@ export default function Partners() {
           affiliate, please complete our free questionnaire for our confidential
           review.
         </p>
-        <Button size="notVisit" text="Join Us" goto="/" bgColor="Primary" />
+        <Button size="notVisit" text="Join Us" goto="/partner-membership" bgColor="Primary" />
       </div>
       <div className="hidden md:grid grid-cols-2 gap-8">
         {logosRight.map((role, index) => (
