@@ -139,7 +139,7 @@ export default function Footer() {
               Center of Entrepreneurs
             </Link>
             <Link
-              href={'/business-partners'}
+              href={'/partner-membership'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
             >
               Our business partners
@@ -152,7 +152,7 @@ export default function Footer() {
             <br />
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
-              Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
+            Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
             +1 (416) 557-7622
