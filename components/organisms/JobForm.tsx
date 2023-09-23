@@ -116,7 +116,7 @@ export default function JobForm() {
         <>
           <div className="text-center">
             <p className="mb-20 font-serif text-2xl tracking-wide">
-              APPLY FORM
+              APPLY JOB FORM
             </p>
           </div>
           <div>

@@ -89,6 +89,9 @@ export default function StartupFormForm() {
   const [Send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
 
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('');
+
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRadio(event.target.value);
   };
@@ -144,6 +147,34 @@ export default function StartupFormForm() {
 
     fetchCsrfToken();
   }, []);
+
+  useEffect(() => {
+    const apiUrl = 'https://restcountries.com/v3.1/all';
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        // Process the data and set the countries state after sorting
+        const countryData = data.map((country: any) => ({
+          value: country.name.common,
+          text: country.name.common,
+        }));
+        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
+        setCountries(countryData);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
+  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCountry(event.target.value);
+
+    setFormData({
+      ...formData,
+      countryOfResidence: event.target.value, // Update the formData state
+    })
+  };
   
   const onSubmit = async (formData: StartupsFormData) => {
     setIsSubmitting(true);
@@ -276,7 +307,7 @@ export default function StartupFormForm() {
           <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <StartupFormPersonalInformation register={register} errors={errors} />
+          <StartupFormPersonalInformation register={register} errors={errors} selectedCountry={selectedCountry} handleCountryChange={handleCountryChange} countries={countries}/>
 
           <div>
             <p className="mb-4 text-4xl">Grows and Scale Up</p>

@@ -215,7 +215,7 @@ export default function InvestorRegistrationForm() {
                 onChange={handleCountryChange}
               >
                 <option value="" selected>Select a country</option>
-                {countries.map((country, index) => (
+                {countries.map((country:any, index:number) => (
                   <option key={index} value={country.text}>
                     {country.text}
                   </option>

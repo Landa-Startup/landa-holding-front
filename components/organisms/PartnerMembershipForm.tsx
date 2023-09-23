@@ -46,6 +46,10 @@ export default function PartnerMembershipForm() {
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState("");
 
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('');
+
+
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
@@ -54,18 +58,59 @@ export default function PartnerMembershipForm() {
 
     fetchCsrfToken();
   }, []);
+
+  useEffect(() => {
+    const apiUrl = 'https://restcountries.com/v3.1/all';
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        // Process the data and set the countries state after sorting
+        const countryData = data.map((country: any) => ({
+          value: country.name.common,
+          text: country.name.common,
+        }));
+        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
+        setCountries(countryData);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
+
+  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCountry(event.target.value);
+
+    setFormData({
+      ...formData,
+      countryOfResidence: event.target.value, // Update the formData state
+    })
+  };
     
   const onSubmit = async (data: PartnerMembershipFormData) => {
     setIsSubmitting(true);
     setSend(true);
+    const sendFormData = new FormData();
+
+    sendFormData.append('firstName', formData.firstName);
+    sendFormData.append('lastName', formData.lastName);
+    sendFormData.append('email', formData.email);
+    sendFormData.append('countryOfResidence', selectedCountry);
+    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
+    sendFormData.append('birthDate', String(formData.birthDate));
+    sendFormData.append('companyName', formData.companyName);
+    sendFormData.append('investmentCeiling', formData.investmentCeiling);
+    sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
+    sendFormData.append('preferredAreas', formData.preferredAreas);
     try {
       const response = await apiClient.post(
-        "partner-membership",
-        JSON.stringify(data),
+        'partner-membership',
+        sendFormData,
         {
           headers: {
-            "X-CSRFToken": csrfToken,
-            "Content-Type": "application/json",
+            'X-CSRFToken': csrfToken,
+            'Content-Type': 'application/json',
           },
         }
       );
@@ -164,6 +209,25 @@ export default function PartnerMembershipForm() {
             </div>
 
             <div className="col-span-1">
+              <label htmlFor="countrySelect" className='text-[#6b6b6b] dark:text-current'>Select a country:</label>
+              <select
+                id="countrySelect"
+                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                // name='countryOfResidence'
+                value={selectedCountry}
+                onChange={handleCountryChange}
+              >
+                <option value="" selected>Select a country</option>
+                {countries.map((country:any, index:number) => (
+                  <option key={index} value={country.text}>
+                    {country.text}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+
+            {/* <div className="col-span-1">
               <Input
                 register={register}
                 errors={errors}
@@ -177,7 +241,7 @@ export default function PartnerMembershipForm() {
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
-            </div>
+            </div> */}
 
             <div className="col-span-1">
               <Input

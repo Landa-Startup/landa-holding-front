@@ -41,12 +41,14 @@ export default function LoginForm() {
     fetchCsrfToken();
   }, []);
 
+  
+
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     setSend(true);
     try {
       const response = await apiClient.post(
-        "accounts/register",
+        "accounts/login",
         JSON.stringify(data),
         {
           headers: {
@@ -82,7 +84,7 @@ export default function LoginForm() {
             <Input
                 register={register}
                 errors={errors}
-                nameInput="email"
+                nameInput="username"
                 type="text"
                 label="Email"
                 required="First Name is Required."
