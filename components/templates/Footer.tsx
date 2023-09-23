@@ -152,19 +152,19 @@ export default function Footer() {
             <br />
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
-            Young street, Toronto, Canada
+              Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
             +1 (416) 557-7622
           </div>
           <div className="text-base font-normal text-justify text-neutral-400 border-t border-t-white pt-1">
-            Eastern Daneshvar street, Tehran, Iran
+            No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
           </div>
           <div className="text-base font-normal text-justify text-neutral-400 border-b border-b-white pb-1">
-            02188030167
+            09120539563
           </div>
           <div className="text-base font-normal text-neutral-400">
-            Saadat Abad Ave, Isfahan, Iran
+            Tala Complex, Saadat Abad St, Isfahan, Iran
           </div>
           <div className="text-base font-normal text-neutral-400">
             03131311914
@@ -177,6 +177,6 @@ export default function Footer() {
           LandaHolding
         </Link>
       </div>
-    </div>
+    </div >
   );
 }
