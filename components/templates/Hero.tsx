@@ -96,7 +96,7 @@ export default function Hero({
         )}
         <Image
           loading="lazy"
-          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 bottom-0"
+          className="w-[365px] md:w-[412px] h-[420px] md:h-[560px] absolute -right-16 md:right-0 bottom-0"
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
