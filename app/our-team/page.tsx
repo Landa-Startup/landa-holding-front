@@ -239,7 +239,7 @@ export default function TeamPage() {
 
   return (
     <div>
-      <Banner image="/static/images/our-team/Frame2916.png " title="Our Team" />
+      <Banner image="/static/images/our-team/Header.png " title="Our Team" />
       <TeamRolesContainer />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:px-44 py-5 bg-[#FAFAFA]">
         {/* map over personals. */}
