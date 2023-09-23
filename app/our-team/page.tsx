@@ -52,7 +52,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a10.png',
       position: 'Manager',
-      name: 'Mernoosh Heibati',
+      name: 'Mehrnoosh Heibati',
       linkedIn: '',
     },
     {
