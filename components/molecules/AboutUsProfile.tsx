@@ -16,7 +16,7 @@ export default function AboutUsProfile() {
       },
     },
     {
-      image: '/static/images/About/4-1 1.png',
+      image: '/static/images/our-team/Personals/a1.png',
       title: 'Rasoul Moradimehr',
       description: 'CO-FOUNDER & CEO',
       links: {
@@ -27,7 +27,7 @@ export default function AboutUsProfile() {
       },
     },
     {
-      image: '/static/images/About/4-1 1 (1).png',
+      image: '/static/images/our-team/Personals/a2.png',
       title: 'Hadi Hasanpour',
       description: 'CO-FOUNDER & INVESTOR',
       links: {

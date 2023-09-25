@@ -52,7 +52,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a10.png',
       position: 'Manager',
-      name: 'Mernoosh Heibati',
+      name: 'Mehrnoosh Heibati',
       linkedIn: '',
     },
     {
@@ -239,7 +239,7 @@ export default function TeamPage() {
 
   return (
     <div>
-      <Banner image="/static/images/our-team/Frame2916.png " title="Our Team" />
+      <Banner image="/static/images/our-team/Header.png " title="Our Team" />
       <TeamRolesContainer />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center md:px-46 py-5 bg-[#FAFAFA] lg:grid-cols-3 lg: xl:grid-cols-4">
         {/* map over personals. */}
