@@ -57,7 +57,7 @@ export default function Hero({
       }}
       className="h-[400px] md:h-screen relative"
     >
-      <div className="flex flex-col items-center justify-center md:h-screen space-y-5 pt-24">
+      <div  className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
@@ -96,7 +96,7 @@ export default function Hero({
         )}
         <Image
           loading="lazy"
-          className="w-[365px] md:w-[412px] h-[390px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 bottom-0 "
+          className="w-[465px] md:w-[212px] md:mr-20  h-[397px] md:h-[260px] absolute -right-16 md:mr-9 bottom-0 m-auto"
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
