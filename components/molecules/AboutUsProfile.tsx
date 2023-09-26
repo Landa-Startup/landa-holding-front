@@ -5,7 +5,7 @@ export default function AboutUsProfile() {
   const cardsData = [
     {
       image:
-        '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
+        '/static/images/4-1.png',
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
       links: {
@@ -16,7 +16,7 @@ export default function AboutUsProfile() {
       },
     },
     {
-      image: '/static/images/About/4-1 1.png',
+      image: '/static/images/our-team/Personals/a1.png',
       title: 'Rasoul Moradimehr',
       description: 'CO-FOUNDER & CEO',
       links: {
@@ -27,7 +27,7 @@ export default function AboutUsProfile() {
       },
     },
     {
-      image: '/static/images/About/4-1 1 (1).png',
+      image: '/static/images/our-team/Personals/a2.png',
       title: 'Hadi Hasanpour',
       description: 'CO-FOUNDER & INVESTOR',
       links: {

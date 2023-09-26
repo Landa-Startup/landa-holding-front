@@ -19,16 +19,18 @@ export default function ContactUsDescription() {
         capabilities of individuals.
       </p>
       <div className="flex flex-row space-x-3 ">
-        <Link href={'#'}>
+        <Link
+          href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
+        >
           <IconInstagram />
         </Link>
-        <Link href={'#'}>
+        <Link href={'https://wa.me/989120539563'}>
           <IconWhatApp />
         </Link>
-        <Link href={'#'}>
+        <Link href={'mailto:info@landaholding.com'}>
           <IconEmailB />
         </Link>
-        <Link href={'#'}>
+        <Link href={'https://www.linkedin.com/company/landa-startup-inc'}>
           <IconLinkedinB />
         </Link>
       </div>
