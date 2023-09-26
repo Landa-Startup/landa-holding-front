@@ -43,7 +43,7 @@ export default function Footer() {
             </Link>
             <Link
               aria-label="Email"
-              href={'info@landaholding.com'}
+              href={'mailto:info@landaholding.com'}
               className="hover:text-primary"
             >
               <svg
