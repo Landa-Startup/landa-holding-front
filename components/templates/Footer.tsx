@@ -16,7 +16,7 @@ export default function Footer() {
             About Landa
             <br />
           </div>
-          <div className="mt-1 text-base font-normal text-justify text-neutral-400">
+          <div className="mt-1 text-base font-normal  text-neutral-400 md:mr-10">
             In Landa Academy, individuals will be trained based on their
             interests and capabilities. Necessary actions are taken at the Landa
             Acceleration Center to accelerate their unique abilities. Then,
@@ -91,7 +91,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col col-span-1 space-y-1">
+        <div className="flex flex-col col-span-1 space-y-1 md:mr-10">
           <div className="text-xl font-medium text-justify text-white">
             Explore
             <br />

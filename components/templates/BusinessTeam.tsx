@@ -20,7 +20,7 @@ export default function AerialViewBusinessTeam() {
             Landa Holding
             <br />
           </span>
-          <span className="text-white text-base md:text-[40px] font-normal">
+          <span className="text-white text-base md:text-[30px] font-normal">
             What Our Cooperation Members Say?
           </span>
         </div>

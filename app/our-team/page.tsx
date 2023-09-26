@@ -254,7 +254,7 @@ export default function TeamPage() {
     <div>
       <Banner image="/static/images/our-team/Header.png " title="Our Team" />
       <TeamRolesContainer />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center md:px-44 py-5 bg-[#FAFAFA]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center md:px-46 py-5 bg-[#FAFAFA] lg:grid-cols-3  xl:grid-cols-4 ">
         {/* map over personals. */}
         {persons.map((person, index) => (
           <PersonalTab
