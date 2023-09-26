@@ -42,11 +42,11 @@ export default function CourseCard({
       ) : (
         <></>
       )}
-      <button className="w-44 h-14 px-16 py-3.5 mt-11 bg-yellow-400 justify-center items-center gap-2.5 hidden md:group-hover:transition-opacity md:group-hover:duration-500 md:group-hover:inline-flex z-10">
+      {/* <button className="w-44 h-14 px-16 py-3.5 mt-11 bg-yellow-400 justify-center items-center gap-2.5 hidden md:group-hover:transition-opacity md:group-hover:duration-500 md:group-hover:inline-flex z-10">
         <div className="text-center text-white text-2xl font-normal">
           Check Now
         </div>
-      </button>
+      </button> */}
     </Link>
   );
 }
