@@ -219,7 +219,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a30.png',
       position: 'Front-end',
-      name: 'Ramtin Frozani',
+      name: 'Ramtin Foroozani',
       linkedIn: '',
     },
 
