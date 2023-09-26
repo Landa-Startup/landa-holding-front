@@ -14,7 +14,7 @@ export default function TeamRolesContainer() {
     'Digital Marketer',
   ];
   return (
-    <div className="bg-slate-50 flex justify-center gap-4 pt-10 pb-5">
+    <div className="bg-slate-50 flex justify-center gap-1 pt-10 pb-5 flex-wrap">
       {roles.map((role, index) => (
         <TeamRole key={index} title={role} />
       ))}

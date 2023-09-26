@@ -50,7 +50,7 @@ export default function AboutUsProfile() {
         </h1>
       </div>
 
-      <div className="flex flex-col mx-8 md:grid md:grid-cols-3 md:gap-8 md:mx-20 md:px-32">
+      <div className="flex flex-col mx-8 md:grid md:grid-cols-3 md:gap-8 md:mx-30 md:px-30 ">
         {cardsData.map((card, index) => (
           <AboutUsProfileCard
             key={card.title}
