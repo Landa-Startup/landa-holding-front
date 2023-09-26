@@ -5,7 +5,7 @@ export default function AboutUsProfile() {
   const cardsData = [
     {
       image:
-        '/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
+        '/static/images/4-1.png',
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
       links: {

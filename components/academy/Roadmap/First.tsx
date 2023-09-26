@@ -21,15 +21,15 @@ export default function Second() {
             Registration and participation in Optional courses
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
+            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3 " />
             <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.
             </div>
           </div>
-          <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
+          <div className="justify-start items-start gap-2 inline-flex ">
+            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3 " />
             <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
               Obtain A valid Certificate of achievement
             </div>
