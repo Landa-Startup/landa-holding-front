@@ -19,7 +19,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'Entrepreneurs', href: '/entrepreneurs' },
+    { label: 'ENTREPRENEURS', href: '/entrepreneurs' },
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -103,9 +103,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     WORK WITH US
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map((item) => (
                       <li
