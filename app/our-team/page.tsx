@@ -235,6 +235,19 @@ export default function TeamPage() {
       name: 'matin Janghorbani',
       linkedIn: '',
     },
+    {
+      image: '/static/images/our-team/Personals/a33.png',
+      position: 'Public Relations Officer',
+      name: 'Gelareh Bahrami',
+      linkedIn: '',
+    },
+    {
+      image: '/static/images/our-team/Personals/a34.png',
+      position: 'Graphic Designer',
+      name: 'Faezeh Khani',
+      linkedIn: '',
+    },
+
   ];
 
   return (
