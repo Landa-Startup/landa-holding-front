@@ -12,9 +12,9 @@ export default function AerialViewBusinessTeam() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="md:h-[598px] business-team flex justify-center items-center flex-col"
+      className="md:h-[598px] business-team flex justify-center items-center flex-col py-5"
     >
-      <div className="py-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
+      <div className="pb-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
         <div className="flex flex-col space-y-2 md:space-y-7 md:mb-5">
           <span className="text-white text-base md:text-xl font-normal">
             Landa Holding
