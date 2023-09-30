@@ -43,6 +43,7 @@ export default function Page() {
       ))} */}
 
       {/* Include other components */}
+      <HomeCardsContainer />
       { <LandaHoldingBlack /> }
       <LandaHoldingPriority />
       <AerialViewBusinessTeam />

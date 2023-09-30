@@ -104,12 +104,12 @@ export default function TeamPage() {
       linkedIn: '',
     },
 
-    {
-      image: '/static/images/our-team/Personals/a12.png',
-      position: 'Content Creator',
-      name: 'Maryam Eskandari',
-      linkedIn: '',
-    },
+    // {
+    //   image: '/static/images/our-team/Personals/a12.png',
+    //   position: 'Content Creator',
+    //   name: 'Maryam Eskandari',
+    //   linkedIn: '',
+    // },
     {
       image: '/static/images/our-team/Personals/a13.png',
       position: 'UX/UI Designer',
@@ -247,7 +247,6 @@ export default function TeamPage() {
       name: 'Faezeh Khani',
       linkedIn: '',
     },
-
   ];
 
   return (
