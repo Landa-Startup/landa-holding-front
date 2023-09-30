@@ -25,7 +25,7 @@ export default function AerialViewBusinessTeam() {
           </span>
         </div>
       </div>
-      <div className="ems-center justify-center">
+      <div className="flex items-center justify-center gap-1">
         <Chevron direction="left" />
         <div className="md:w-[750px] p-5 flex flex-col items-center backdrop-blur-2xl w-[360px] md:h-[360px]">
           <div className="flex md:flex-col md:items-center md:w-full">
