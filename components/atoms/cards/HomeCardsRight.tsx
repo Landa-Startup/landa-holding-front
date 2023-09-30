@@ -11,9 +11,6 @@ export default function HomeCardsRight({
   return (
     <div className="flex flex-col self-start md:self-center">
       <div className="flex flex-col items-start md:items-center space-y-2 mt-9 md:mt-0">
-        <span className="text-xl md:text-3xl tracking-[5px] md:tracking-[11px] font-condensed">
-          Landa Holding
-        </span>
         <span className="font-gilda text-4xl md:text-6xl tracking-[6.5px]">
           {titles}
         </span>

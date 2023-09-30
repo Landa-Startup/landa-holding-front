@@ -74,11 +74,11 @@ export default function Partners() {
   ];
 
   return (
-    <div className="grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
-      <div className="hidden md:grid grid-cols-2 gap-8">
+    <div className="flex flex-col md:grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
+      <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-2 md:order-1 mt-9">
         {logosLeft.map((role, index) => (
           <Image
-            className="w-28 h-28 object-contain"
+            className="w-20 md:w-32 h-20 md:h-32 object-contain"
             key={index}
             src={`/static/images/Home/contact/${role.number}.png`}
             alt={role.alt}
@@ -87,11 +87,11 @@ export default function Partners() {
           />
         ))}
       </div>
-      <div className="col-span-4 md:col-span-2 gap-14 bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9">
+      <div className="col-span-4 md:col-span-2 gap-6 md:gap-14 md:bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9 order-1">
         <p className="text-primary text-xl md:text-4xl font-gilda">
           Join To Our Business Partners
         </p>
-        <p className="md:w-[222px] md:ml-9 font-barlow text-base font-medium leading-7  tracking-[2.4px]  text-black lg:w-[422px]">
+        <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[2.1px] md:tracking-[2.4px]  text-black lg:w-[422px]">
           At Landa Holding, we welcome strategic affiliations with international
           firms and qualified influencers alike. As an approved affiliate, you
           will receive co-branded support and future representations that wield
@@ -99,17 +99,22 @@ export default function Partners() {
           affiliate, please complete our free questionnaire for our confidential
           review.
         </p>
-        <Button size="notVisit" text="Join Us" goto="/partner-membership" bgColor="Primary" />
+        <Button
+          size="notVisit"
+          text="Join Us"
+          goto="/partner-membership"
+          bgColor="Primary"
+        />
       </div>
-      <div className="hidden md:grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
         {logosRight.map((role, index) => (
           <Image
-            className="w-32 h-3w-32 object-contain"
+            className="w-20 md:w-32 h-20 md:h-32 object-contain"
             key={index}
             src={`/static/images/Home/contact/${role.number}.png`}
             alt={role.alt}
-            width={130}
-            height={50}
+            width={500}
+            height={500}
           />
         ))}
       </div>

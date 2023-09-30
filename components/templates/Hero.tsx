@@ -54,10 +54,11 @@ export default function Hero({
       style={{
         backgroundImage: `url('/static/images/Home/Hero/${backgroundImage}')`,
         backgroundSize: 'cover',
+        backgroundPositionX: '65%',
       }}
-      className="h-[calc(100vh-5rem)] md:h-screen relative overflow-hidden brightness-75"
+      className="h-[calc(100vh-4rem)] md:h-screen relative overflow-hidden brightness-75"
     >
-      <div  className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
+      <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
@@ -96,7 +97,8 @@ export default function Hero({
         )}
         <Image
           loading="lazy"
-          className="w-[305px] h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] w-[365px] h-[420px] xl:h-[560px] xl:w-[420px]   absolute -right-16 md:right-0 bottom-0 "
+          // className="w-[305px] h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] w-[365px] h-[420px] xl:h-[560px] xl:w-[420px]   absolute -right-16 md:right-0 bottom-0 "
+          className="w-[385px] h-[382px] sm:w-[305px] sm:h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] w-[365px] h-[420px] xl:h-[560px] xl:w-[420px]   absolute -right-16 md:right-0 bottom-0 "
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
