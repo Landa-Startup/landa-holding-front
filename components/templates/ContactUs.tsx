@@ -13,10 +13,10 @@ export default function ContactUs() {
           To become an affiliate, please complete our free questionnaire for our confidential review.
         </p>
         <Link href={'/partner-membership'}>
-          <Button text="Join Us" size="visit" />
+          <Button text="Join Us" size="visit" goto='/partner-membership' />
         </Link>
       </div>
-     <div className="flex gap-20  md:h-full relative mt-5 ma:my-0 md:mb-0 ml-5 mr-2">
+      <div className="flex gap-20  md:h-full relative mt-5 ma:my-0 md:mb-0 ml-5 mr-2">
         <div className="absolute top-0 w-full h-16 md:h-58  z-10" />
         <div className="absolute bottom-0 w-full h-16 md:h-60  via-transparent-white z-10" />
         <div className="flex flex-col justify-around ">
