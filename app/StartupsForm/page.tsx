@@ -15,7 +15,7 @@ export default function StartupValidationPage() {
       {/* Banner component with an image and title */}
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title="STARTUP FORM"
+        title="STARTUPS VALIDATION FORM"
       />
 
       {/* Render the StartupFormForm component */}
