@@ -16,8 +16,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   ];
   const submenuItems = [
     { label: 'CENTER OF INVESTOR', href: '/investor-registration' },
-    { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
-    { label: 'STARTUPS', href: '/StartupsForm' },
+    { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
+    { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
     { label: 'ENTREPRENEURS', href: '/entrepreneurs' },
   ];
