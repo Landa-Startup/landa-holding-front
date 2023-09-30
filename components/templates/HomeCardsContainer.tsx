@@ -15,11 +15,11 @@ export default function HomeCardsContainer() {
       images: [
         {
           src: '/static/images/Home main/male-female-business-people-working-tablet-office.png',
-          alt: 'Landa Investment',
+          alt: 'Investment',
         },
         {
           src: '/static/images/Home main/Rectangle 1412.png',
-          alt: 'Landa Investment',
+          alt: 'Investment',
         },
       ],
     },
@@ -34,11 +34,11 @@ export default function HomeCardsContainer() {
       images: [
         {
           src: '/static/images/Home/Acceleration/1.png',
-          alt: 'Landa Holding Acceleration Center',
+          alt: 'Acceleration Center',
         },
         {
           src: '/static/images/Home/Acceleration/2.png',
-          alt: 'Landa Holding Acceleration Center',
+          alt: 'Acceleration Center',
         },
       ],
     },
@@ -53,11 +53,11 @@ export default function HomeCardsContainer() {
       images: [
         {
           src: '/static/images/Home main/3390782c4ef216a1fb0b67f2cc41660d 1.png',
-          alt: 'Landa Holding Academy',
+          alt: 'Academy',
         },
         {
           src: '/static/images/Home main/group-people-working-out-business-plan-office 1.png',
-          alt: 'Landa Holding Academy',
+          alt: 'Academy',
         },
       ],
     },
