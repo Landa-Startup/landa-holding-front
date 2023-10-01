@@ -158,7 +158,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </li>
         </ul>
         <div className="bg-[#222] flex justify-between items-center absolute bottom-0 h-10 w-80 px-10">
-          <Link href={'#'}>
+          <Link href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -171,7 +171,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </svg>
           </Link>
 
-          <Link href={'#'}>
+          <Link href={'mailto:info@landaholding.com'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -184,7 +184,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </svg>
           </Link>
 
-          <Link href={'#'}>
+          <Link href={'https://wa.me/989120539563'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -197,7 +197,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </svg>
           </Link>
 
-          <Link href={'#'}>
+          <Link href={'https://www.linkedin.com/company/landa-startup-inc'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
