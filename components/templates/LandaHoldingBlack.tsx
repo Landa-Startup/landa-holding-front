@@ -15,7 +15,7 @@ export default function LandaHoldingBlack() {
         <path
           d="M70.5 0L70 145.875M70 293.75H237.5M70 293.75V145.875M70 293.75V588.5M70 145.875H0"
           stroke="#AA8453"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
       <svg
@@ -44,9 +44,9 @@ export default function LandaHoldingBlack() {
             width="338.964"
             height="460.295"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
