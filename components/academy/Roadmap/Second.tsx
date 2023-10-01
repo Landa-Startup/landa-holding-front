@@ -20,7 +20,7 @@ export default function Third() {
           <div className="md:w-[592px] text-4xl mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
             Joining Landa Academy and benefiting from its facilities.
           </div>
-          <ul className="hidden md:block text-[#FFFBE6] font-barlow text-xl font-medium leading-[25px] md:leading-[40px] tracking-[1px]">
+          <ul className="hidden text-[#3D5656] font-barlow text-lg font-medium leading-[25px] md:leading-[50px] tracking-[1px] space-y-3">
             <li>1.Personalized mentoring by industry professionals</li>
             <li>2.Co-working spaces</li>
             <li>3.Free participation at the next courses</li>
