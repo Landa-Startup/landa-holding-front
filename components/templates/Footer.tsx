@@ -34,7 +34,7 @@ export default function Footer() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
+                fill="gray"
                 className="w-5 h-5 bi bi-instagram"
                 viewBox="0 0 16 16"
               >
@@ -50,7 +50,7 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="gray"
                 className="w-5 h-5 bi bi-envelope"
                 viewBox="0 0 16 16"
               >
@@ -66,7 +66,7 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="gray"
                 className="w-5 h-5 bi bi-whatsapp"
                 viewBox="0 0 16 16"
               >
@@ -82,7 +82,7 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="gray"
                 className="w-5 h-5 bi bi-linkedin"
                 viewBox="0 0 16 16"
               >
