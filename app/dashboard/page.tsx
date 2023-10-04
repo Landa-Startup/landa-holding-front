@@ -1,30 +1,30 @@
 
-import { getTokenFromCookie, decodeToken } from '@/utils/auth';
+import nokies from 'nookies';
+import { GetServerSidePropsContext } from 'next';
 
-async function getData(req) {
-
-    const token = await getTokenFromCookie(req);
-
+async function getData(ctx: GetServerSidePropsContext) {
+    const cookies = nokies.get(ctx);
+    const token = cookies.token;
     if (!token) {
         return {
             redirect: {
-                destination: '/login',
+                destination: '/auth/login',
                 permanent: false
             }
         }
     }
 
-    const decoded = decodeToken(token);
-    const role = decoded.role;
+    // const decoded = decodeToken(token);
+    // const role = decoded.role;
 
-    if (role !== 'admin') {
-        return {
-            redirect: {
-                destination: '/',
-                permanent: false
-            }
-        }
-    }
+    // if (role !== 'admin') {
+    //     return {
+    //         redirect: {
+    //             destination: '/',
+    //             permanent: false
+    //         }
+    //     }
+    // }
 
     return {
         props: {
@@ -34,11 +34,8 @@ async function getData(req) {
 
 }
 
-export default async function Dashboard({ token }) {
-
-    // show admin dashboard UI
-    const data = await getData()
-
-    return <div>Admin Dashboard</div>
+export default async function Dashboard() {
+    // const data = await getData()
+    return <div>Dashboard</div>
 
 }

@@ -1,4 +1,4 @@
-import authService from '../serveices/authService'
+import authService from '../services/authService'
 import Cookies from 'js-cookie'
 
 export const useLogin = () => {
