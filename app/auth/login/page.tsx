@@ -1,24 +1,37 @@
-import { setTokenCookie } from '../utils/auth';
+// pages/login.js
+"use client"
+import { useState, useContext, FormEvent } from 'react';
+// import AuthContext from '@/contexts/AuthContext';
+import { login } from '../../../serveices/authService';
+export default function LoginPage() {
 
-export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = async (e) => {
+  console.log("adsf")
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // submit login form
-    
-    const token = await loginUser(formData);
-
-    setTokenCookie(token, req);
-
-    router.push('/dashboard');
-
+    await login(email, password);
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* login form */} 
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <input
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button type="submit">Login</button>
     </form>
+
   )
 
 }
