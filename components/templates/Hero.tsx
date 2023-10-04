@@ -56,7 +56,7 @@ export default function Hero({
         backgroundSize: 'cover',
         backgroundPositionX: '65%',
       }}
-      className="h-[calc(100vh-4rem)] md:h-screen relative overflow-hidden brightness-75"
+      className="h-[calc(100vh)] md:h-screen relative overflow-hidden brightness-75"
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
