@@ -4,9 +4,11 @@ import React from 'react';
 export default function HomeCardsRight({
   images,
   titles,
+  link,
 }: {
   titles: string;
   images: Array<{ src: string; alt: string }>;
+  link: string;
 }) {
   return (
     <div className="flex flex-col self-start md:self-center">

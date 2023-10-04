@@ -18,11 +18,11 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR TEAM', href: '/our-team' },
   ];
   const submenuItems = [
-    { label: 'CENTER OF INVESTOR', href: '/investor-registration' },
+    { label: 'INVESTOR CENTER', href: '/investor-registration' },
+    { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'Entrepreneurs', href: '/entrepreneurs' },
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);

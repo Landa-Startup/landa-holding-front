@@ -10,7 +10,7 @@ export default function HomeCardsContainer() {
       reverse: false,
       show: true,
       index: 1,
-      link: '/investment-registration',
+      link: '/investor-registration',
       addedClass: '',
       images: [
         {
@@ -29,7 +29,7 @@ export default function HomeCardsContainer() {
       reverse: true,
       show: true,
       index: 2,
-      link: '/startupsForm',
+      link: '/StartupsForm',
       addedClass: 'mb-28',
       images: [
         {
@@ -91,6 +91,7 @@ export default function HomeCardsContainer() {
           images={data.images}
           reverse={data.reverse}
           addedClass={data.addedClass}
+          link={data.link}
         />
       ))}
     </div>

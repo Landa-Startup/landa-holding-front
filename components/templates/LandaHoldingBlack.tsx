@@ -74,7 +74,7 @@ export default function LandaHoldingBlack() {
           strokeWidth="2"
         />
       </svg>
-      <div className="flex flex-col items-center justify-around md:items-start space-y-2 pt-6">
+      <div className="flex flex-col items-center justify-around md:items-start space-y-6 pt-6">
         <div className="flex flex-col md:items-start items-center self-start">
           <div className="flex flex-col">
             <span className="text-black text-xl font-gilda font-normal border-black w-[340px] hidden md:block">
@@ -105,7 +105,7 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
+        <button className="relative justify-start items-center gap-4 mt-10 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
           <Link href={'/investor-registration'}>
             <div className="text-white text-[24px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
               Register
@@ -132,7 +132,7 @@ export default function LandaHoldingBlack() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center justify-around md:items-start space-y-2 py-10 z-10">
+      <div className="flex flex-col items-center justify-around md:items-start space-y-6 py-10 z-10">
         <div className="flex flex-col md:items-start items-center">
           <div className="flex flex-col">
             <span className="text-black text-xl font-gilda font-normal border-black w-[340px] hidden md:block">

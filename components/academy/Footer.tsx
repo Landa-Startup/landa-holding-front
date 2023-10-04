@@ -130,13 +130,13 @@ export default function Footer() {
               href={'/'}
               className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
             >
-              Center of Investor
+              Investor Center
             </Link>
             <Link
               href={'/'}
               className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
             >
-              Center of Entrepreneurs
+              Entrepreneur Center
             </Link>
             <Link
               href={'/'}

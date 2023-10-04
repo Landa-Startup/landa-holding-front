@@ -15,11 +15,11 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR TEAM', href: '/our-team' },
   ];
   const submenuItems = [
-    { label: 'CENTER OF INVESTOR', href: '/investor-registration' },
+    { label: 'INVESTOR CENTER', href: '/investor-registration' },
+    { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
     { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'ENTREPRENEURS', href: '/entrepreneurs' },
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -85,7 +85,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
           <div className="justify-start hidden ml-32 xl:flex-1 xl:flex">
-            <ul className="flex justify-center space-x-10 text-xl menu menu-horizontal font-condensed">
+            <ul className="flex justify-center space-x-10 text-xl menu menu-horizontal font-condensed font-bold">
               {menuItems.map((item) => (
                 <li className="text-2xl h-9" key={item.label}>
                   <Link href={item.href} className="text-white hover:bg-white">
@@ -102,9 +102,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     Work With Us
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map((item) => (
                       <li
@@ -133,7 +132,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         <ul className="absolute h-full p-4 text-xl menu w-80 bg-[#F8F5F0] text-black top-[72px] space-y-5">
           {menuItems.map((item) => (
             <li
-              className="first:text-primary font-semibold"
+              className="first:text-primary font-condensed font-bold"
               key={item.label}
               onClick={() => handleLinkClick()}
             >
@@ -143,13 +142,13 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </li>
           ))}
           <li>
-            <Link className="font-semibold" href={'#'}>
+            <Link className="font-condensed font-bold" href={'#'}>
               FORMS
             </Link>
             <ul>
               {submenuItems.map((item) => (
                 <li key={item.label} onClick={() => handleLinkClick()}>
-                  <Link href={item.href} className="">
+                  <Link href={item.href} className="font-condensed">
                     {item.label}{' '}
                   </Link>
                 </li>
