@@ -96,7 +96,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <li className="h-9">
                 <details className="mb-32 dropdown">
                   <summary
-                    className="text-2xl hover:text-black hover:bg-base-200"
+                    className="text-2xl hover:white hover:bg-white"
                     onClick={() => setIsMenuOpen(true)}
                   >
                     Work With Us
