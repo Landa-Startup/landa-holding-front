@@ -13,19 +13,6 @@ async function getData(ctx: GetServerSidePropsContext) {
             }
         }
     }
-
-    // const decoded = decodeToken(token);
-    // const role = decoded.role;
-
-    // if (role !== 'admin') {
-    //     return {
-    //         redirect: {
-    //             destination: '/',
-    //             permanent: false
-    //         }
-    //     }
-    // }
-
     return {
         props: {
             token

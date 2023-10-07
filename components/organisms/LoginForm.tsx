@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form';
 import { LoginFormData } from '../../app/types/global';
 import { login } from '@/services/authService';
 import { useRouter } from 'next/navigation';
-
+import { parseCookies } from 'nookies';
+import { DecodedToken } from 'app/types/global';
 import NotificationSendForm from './base/NotificationSendForm';
 
 export default function LoginPage() {
@@ -19,8 +20,12 @@ export default function LoginPage() {
 
     const onSubmit = async (formData: LoginFormData) => {
         const user = await login(formData.email, formData.password);
-        if (user)
-            router.push('/dashboard');
+        if (user) {
+            // read from cookie
+            const cookies = parseCookies();
+            const currentUser: DecodedToken = JSON.parse(cookies.currentUser);
+            router.push(`/dashboard/${currentUser.role}`);
+        }
     }
 
     return (

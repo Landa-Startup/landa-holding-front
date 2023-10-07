@@ -131,6 +131,13 @@ interface LoginFormData {
   password: string;
 }
 
+interface DecodedToken {
+  exp: number;
+  iat: number;
+  role: string;
+  user_id: number;
+}
+
 export {
   ContactUSFormData,
   Type,
@@ -140,5 +147,6 @@ export {
   InvestorRegistrationFormData,
   JobFormData,
   Entrepreuneur,
-  LoginFormData
+  LoginFormData,
+  DecodedToken
 };
