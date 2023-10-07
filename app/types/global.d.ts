@@ -118,12 +118,24 @@ interface StartupsFormData {
   Idea: boolean;
 }
 
-interface Entrepreuneur{
+interface Entrepreuneur {
   email: string;
   companyName: string;
   phone: string;
   website: string;
   fieldOfProfessional: string;
+}
+
+interface LoginFormData {
+  email: string;
+  password: string;
+}
+
+interface DecodedToken {
+  exp: number;
+  iat: number;
+  role: string;
+  user_id: number;
 }
 
 export {
@@ -134,5 +146,7 @@ export {
   PartnerMembershipFormData,
   InvestorRegistrationFormData,
   JobFormData,
-  Entrepreuneur
+  Entrepreuneur,
+  LoginFormData,
+  DecodedToken
 };
