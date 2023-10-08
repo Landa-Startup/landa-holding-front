@@ -21,7 +21,7 @@ export default function page() {
         leftImage="Landa.svg"
         showButton={true}
       />
-      <div className="relative md:w-[490px] h-[284px] md:hiddenc mt-6">
+      <div className="relative md:w-[490px] h-[284px] md:hidden mt-6">
         <Image
           className=" object-cover"
           src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"

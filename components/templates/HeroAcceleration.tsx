@@ -30,11 +30,11 @@ export default function Hero({
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
-          } text-center font-barlow text-white text-4xl md:tracking-[12.6px] font-normal tracking-[7px]`}
+          } text-center font-barlow text-white text-2xl md:text-4xl md:tracking-[12.6px] font-normal tracking-[7px]`}
         >
           Landa Holding
         </div>
-        <div className="font-gilda text-6xl tracking-[6.4px] text-[#F8F5F0]">
+        <div className="font-gilda text-4xl text-center md:text-6xl tracking-[6.4px] text-[#F8F5F0]">
           Acceleration Center
         </div>
 
