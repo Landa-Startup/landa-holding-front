@@ -71,15 +71,15 @@ export default function page() {
         leftImage="Landa.svg"
         showButton={true}
       />
-      <div className="flex flex-col font-gilda px-28 py-16">
-        <span className="text-[#55422A] text-5xl leading-tight">
+      <div className="flex flex-col font-gilda px-28 py-16 items-center">
+        <span className="text-[#55422A] text-5xl leading-tight self-start">
           LANDA ACCELERATOR :
         </span>
-        <span className="text-[#AA8453] text-4xl leading-tight">
+        <span className="text-[#AA8453] text-4xl leading-tight self-start">
           Growth and Transformation into a Leading Startup
         </span>
-        <div className="flex gap-8 mt-6">
-          <div className="relative w-[481px] h-[284px]">
+        <div className="flex gap-12 mt-6">
+          <div className="relative w-[490px] h-[284px]">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -87,7 +87,7 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <p className="w-[619px] h-[248px] text-justify font-barlow text-base leading-7 tracking-[1.6px]">
+          <p className="w-[680px] h-[248px] text-justify font-barlow text-base leading-7 tracking-[1.6px]">
             Our accelerator division, as a leader in the field of startup
             acceleration and development on a global scale, assists individuals
             with innovative ideas and startup potential at all stages of launch
