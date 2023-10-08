@@ -1,9 +1,9 @@
 import Button from '@/components/atoms/Button';
 import Banner from '@/components/molecules/Banner';
+import AccelerationServices from '@/components/templates/AccelerationServices';
 import Hero from '@/components/templates/HeroAcceleration';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import React from 'react';
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -13,56 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function page() {
-  const services = [
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-    {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
-    },
-  ];
   return (
     <div>
       <Hero
@@ -71,15 +21,23 @@ export default function page() {
         leftImage="Landa.svg"
         showButton={true}
       />
-      <div className="flex flex-col font-gilda px-28 py-16 items-center">
-        <span className="text-[#55422A] text-5xl leading-tight self-start">
+      <div className="relative md:w-[490px] h-[284px] md:hiddenc mt-6">
+        <Image
+          className=" object-cover"
+          src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
+          alt="acceleration"
+          layout="fill"
+        />
+      </div>
+      <div className="flex flex-col font-gilda md:px-28 py-6 md:py-16 items-center">
+        <span className="text-[#55422A] ml-9 text-3xl md:text-5xl leading-tight self-start">
           LANDA ACCELERATOR :
         </span>
-        <span className="text-[#AA8453] text-4xl leading-tight self-start">
+        <span className="text-[#AA8453] ml-9 text-xl md:text-4xl leading-tight self-start">
           Growth and Transformation into a Leading Startup
         </span>
-        <div className="flex gap-12 mt-6">
-          <div className="relative w-[490px] h-[284px]">
+        <div className="flex flex-col md:flex-row gap-12 mt-6">
+          <div className="relative md:w-[490px] h-[284px] hidden md:block">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -87,7 +45,7 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <p className="w-[680px] h-[248px] text-justify font-barlow text-base leading-7 tracking-[1.6px]">
+          <p className="w-[340px] md:w-[680px] md:h-[248px] text-justify font-barlow text-base leading-7 tracking-[1.6px]">
             Our accelerator division, as a leader in the field of startup
             acceleration and development on a global scale, assists individuals
             with innovative ideas and startup potential at all stages of launch
@@ -99,9 +57,10 @@ export default function page() {
             on their journey.
           </p>
         </div>
-        <div className="bg-[#F7F3EE] w-[1205px] h-[646px] mt-16 relative px-8">
-          <div className="flex gap-2 mt-[77px]">
+        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-6 md:mt-16 relative px-8">
+          <div className="flex gap-2 mt-10 md:mt-[77px]">
             <svg
+              className="w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"
               width="33"
               height="32"
@@ -116,21 +75,23 @@ export default function page() {
                 fill="#CCB598"
               />
             </svg>
-            <span className="text-[#80633E] font-gilda text-3xl mx-2">
-              FORUGH ACCELERATOR :
-            </span>
-            <span className="text-[#AA8453] font-gilda text-3xl">
-              Igniting Ideas and Startups
-            </span>
+            <div className="flex flex-col md:flex-row">
+              <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2">
+                FORUGH ACCELERATOR :
+              </span>
+              <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
+                Igniting Ideas and Startups
+              </span>
+            </div>
           </div>
           <Image
-            className="absolute right-7 top-11"
+            className="absolute right-7 top-11 w-[52px] h-[44px]"
             src="/static/images/acceleration/Rectangle 2978.png"
             alt="FORUGH ACCELERATOR"
             width={71}
             height={60}
           />
-          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6">
+          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] pb-3 mt-6">
             <p>
               In the Landa Accelerator division, innovative ideas and startups
               are carefully examined and evaluated. After confirming the value
@@ -148,7 +109,7 @@ export default function page() {
             <span className="text-[#AA8453] font-gilda text-3xl mt-8">
               Accelerator Process
             </span>
-            <div className="grid grid-cols-2 font-barlow text-[#000] leading-9 z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 font-barlow text-[#000] leading-9 z-10">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -172,9 +133,10 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="bg-[#F7F3EE] w-[1205px] h-[646px] mt-12 relative px-8">
-          <div className="flex gap-2 mt-[77px]">
+        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-8">
+          <div className="flex gap-2 mt-6 md:mt-[77px]">
             <svg
+              className="w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"
               width="33"
               height="32"
@@ -190,16 +152,18 @@ export default function page() {
               />
             </svg>
             <div className="flex">
-              <span className="text-[#80633E] font-gilda text-3xl mx-2">
-                FARAZAMAN ACCELERATOR :
-              </span>
-              <span className="text-[#AA8453] font-gilda text-3xl">
-                Supporting Students and Youth
-              </span>
+              <div className="flex flex-col md:flex-row">
+                <span className="text-[#80633E] font-gilda text-xl md:text-3xl mx-2">
+                  FARAZAMAN ACCELERATOR :
+                </span>
+                <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
+                  Supporting Students and Youth
+                </span>
+              </div>
             </div>
           </div>
           <Image
-            className="absolute right-7 top-11"
+            className="absolute right-7 top-11 w-[46px] h-[46px]"
             src="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
             alt="FORUGH ACCELERATOR"
             width={71}
@@ -237,23 +201,7 @@ export default function page() {
           <span className="text-primary font-gilda text-3xl mt-12">
             Landa Accelerator Services
           </span>
-          <div className="grid grid-cols-3 gap-11 mt-8 border-b-2 pb-14">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="w-[343px] h-[115px] text-[#2B2115] overflow-hidden font-barlow text-xl rounded-sm bg-[#F7F3EE] flex justify-center items-center relative"
-              >
-                {service.title}
-                <Image
-                  className="absolute opacity-25 -bottom-8 -left-3"
-                  src={`/static/images/acceleration/${service.image}`}
-                  alt="forough"
-                  width={109}
-                  height={109}
-                />
-              </div>
-            ))}
-          </div>
+          <AccelerationServices />
         </div>
         <div className="flex font-barlow text-2xl leading-9 tracking-[2px] my-11 gap-2 text-[#55422A]">
           <svg
