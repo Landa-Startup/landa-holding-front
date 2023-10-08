@@ -43,10 +43,10 @@ export default function Partners() {
       number: 9,
       alt: 'evimo',
     },
-    {
-      number: 10,
-      alt: 'evimo',
-    },
+    // {
+    //   number: 10,
+    //   alt: 'evimo',
+    // },
     {
       number: 11,
       alt: 'evimo',
@@ -55,10 +55,10 @@ export default function Partners() {
       number: 12,
       alt: 'evimo',
     },
-    {
-      number: 13,
-      alt: 'evimo',
-    },
+    // {
+    //   number: 13,
+    //   alt: 'evimo',
+    // },
     {
       number: 14,
       alt: 'evimo',
@@ -67,10 +67,10 @@ export default function Partners() {
       number: 15,
       alt: 'evimo',
     },
-    {
-      number: 16,
-      alt: 'evimo',
-    },
+    // {
+    //   number: 16,
+    //   alt: 'evimo',
+    // },
   ];
 
   return (
@@ -121,14 +121,14 @@ export default function Partners() {
             height={500}
           />
         ))}
-        <div className='flex justify-center items-center w-[350px]'>
+        <div className='md:hidden flex justify-center items-center w-[350px]'>
           <Button
             size="visit"
             type="button"
             text="Visit Now"
             goto="/partner-membership"
             bgColor="Primary"
-            className='md:hidden'
+            className=''
           />
         </div>
 
