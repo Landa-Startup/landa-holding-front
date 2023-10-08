@@ -1,0 +1,288 @@
+import Button from '@/components/atoms/Button';
+import Banner from '@/components/molecules/Banner';
+import Hero from '@/components/templates/HeroAcceleration';
+import { Metadata } from 'next';
+import Image from 'next/image';
+import React from 'react';
+
+// Define metadata for the page
+export const metadata: Metadata = {
+  title: 'Landa Holding | Acceleration',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+};
+
+export default function page() {
+  const services = [
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+    {
+      title: 'Pitch deck preparation',
+      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+    },
+  ];
+  return (
+    <div>
+      <Hero
+        showLanda
+        backgroundImage="banner.png"
+        leftImage="Landa.svg"
+        showButton={true}
+      />
+      <div className="flex flex-col font-gilda px-28 py-16">
+        <span className="text-[#55422A] text-5xl leading-tight">
+          LANDA ACCELERATOR :
+        </span>
+        <span className="text-[#AA8453] text-4xl leading-tight">
+          Growth and Transformation into a Leading Startup
+        </span>
+        <div className="flex gap-8 mt-6">
+          <div className="relative w-[481px] h-[284px]">
+            <Image
+              className=" object-cover"
+              src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
+              alt="acceleration"
+              layout="fill"
+            />
+          </div>
+          <p className="w-[619px] h-[248px] text-justify font-barlow text-base leading-7 tracking-[1.6px]">
+            Our accelerator division, as a leader in the field of startup
+            acceleration and development on a global scale, assists individuals
+            with innovative ideas and startup potential at all stages of launch
+            and growth. Landa Accelerator aims to support the rapid development
+            and expansion of startups and talented students looking to turn
+            their ideas into high-performing businesses. We are in search of
+            enthusiastic individuals and teams with the necessary skills and
+            creativity to tackle challenges along the way as we accompany them
+            on their journey.
+          </p>
+        </div>
+        <div className="bg-[#F7F3EE] w-[1205px] h-[646px] mt-16 relative px-8">
+          <div className="flex gap-2 mt-[77px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              viewBox="0 0 33 32"
+              fill="none"
+            >
+              <circle
+                id="Ellipse 169"
+                cx="16.5"
+                cy="16"
+                r="16"
+                fill="#CCB598"
+              />
+            </svg>
+            <span className="text-[#80633E] font-gilda text-3xl mx-2">
+              FORUGH ACCELERATOR :
+            </span>
+            <span className="text-[#AA8453] font-gilda text-3xl">
+              Igniting Ideas and Startups
+            </span>
+          </div>
+          <Image
+            className="absolute right-7 top-11"
+            src="/static/images/acceleration/Rectangle 2978.png"
+            alt="FORUGH ACCELERATOR"
+            width={71}
+            height={60}
+          />
+          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6">
+            <p>
+              In the Landa Accelerator division, innovative ideas and startups
+              are carefully examined and evaluated. After confirming the value
+              of an idea, we provide investment and connect startups with
+              international networks to guide them through the development and
+              expansion process. Our goal is to help startups progress more
+              quickly and establish a strong presence in global markets.
+            </p>
+            <p className="mt-5">
+              Startups collaborating with us receive support from their early
+              stages to their transformation into large companies. We provide
+              you with opportunities to grow, achieve remarkable
+              accomplishments, and enter global markets.
+            </p>
+            <span className="text-[#AA8453] font-gilda text-3xl mt-8">
+              Accelerator Process
+            </span>
+            <div className="grid grid-cols-2 font-barlow text-[#000] leading-9 z-10">
+              <span>1. Idea generation for innovative business creation</span>
+              <span>2. Idea nurturing</span>
+              <span>3. Creating a pitch deck</span>
+              <span>4. Financial modeling</span>
+              <span>5. Mentorship programs</span>
+              <span>6. Networking</span>
+              <span>7. Co-working space</span>
+              <span>8. Digital marketing</span>
+              <span>9. Consultation for necessary permits</span>
+              <span>10. Seed investment</span>
+              <span>11. Market share expansion</span>
+              <span>12. Marketing and sales strategy</span>
+              <span>13. Business development</span>
+            </div>
+            <Image
+              className="absolute bottom-0 right-0 opacity-20"
+              src="/static/images/acceleration/87ac8df38c4ff428ee903bb8595ad970.png"
+              alt="forough"
+              width={521}
+              height={4221}
+            />
+          </div>
+        </div>
+        <div className="bg-[#F7F3EE] w-[1205px] h-[646px] mt-12 relative px-8">
+          <div className="flex gap-2 mt-[77px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              viewBox="0 0 33 32"
+              fill="none"
+            >
+              <circle
+                id="Ellipse 169"
+                cx="16.5"
+                cy="16"
+                r="16"
+                fill="#CCB598"
+              />
+            </svg>
+            <div className="flex">
+              <span className="text-[#80633E] font-gilda text-3xl mx-2">
+                FARAZAMAN ACCELERATOR :
+              </span>
+              <span className="text-[#AA8453] font-gilda text-3xl">
+                Supporting Students and Youth
+              </span>
+            </div>
+          </div>
+          <Image
+            className="absolute right-7 top-11"
+            src="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
+            alt="FORUGH ACCELERATOR"
+            width={71}
+            height={60}
+          />
+          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6">
+            <p>
+              As part of the higher education community, we, under the name of
+              Farazman, are committed to supporting and nurturing students and
+              youth in university-affiliated incubators and accelerators. We
+              believe that the future of careers lies in the hands of young
+              individuals, and we enable them to benefit from our resources and
+              experiences. By offering financial resources, technical
+              infrastructure, and access to global networks, we help students
+              and youth turn their ideas into reality and acquire the skills
+              needed for today&#39;s business world.
+            </p>
+            <p className="mt-5">
+              Additionally, we emphasize the importance of effective networking
+              and skill enhancement for students and startups through education
+              and mentorship. Our team consists of experienced mentors, both
+              domestic and international, to provide necessary guidance and
+              support to help you achieve the best results.
+            </p>
+          </div>
+          <Image
+            className="absolute bottom-0 right-0 opacity-20"
+            src="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
+            alt="forough"
+            width={521}
+            height={4221}
+          />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-primary font-gilda text-3xl mt-12">
+            Landa Accelerator Services
+          </span>
+          <div className="grid grid-cols-3 gap-11 mt-8 border-b-2 pb-14">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="w-[343px] h-[115px] text-[#2B2115] overflow-hidden font-barlow text-xl rounded-sm bg-[#F7F3EE] flex justify-center items-center relative"
+              >
+                {service.title}
+                <Image
+                  className="absolute opacity-25 -bottom-8 -left-3"
+                  src={`/static/images/acceleration/${service.image}`}
+                  alt="forough"
+                  width={109}
+                  height={109}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex font-barlow text-2xl leading-9 tracking-[2px] my-11 gap-2 text-[#55422A]">
+          <svg
+            className="mt-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            fill="none"
+          >
+            <circle
+              id="Ellipse 169"
+              cx="10.5"
+              cy="10.5"
+              r="10"
+              fill="#AA8453"
+            />
+          </svg>
+          If you have an innovative startup idea or are a student looking for
+          acceleration opportunities, we are waiting for your applications.
+        </div>
+        <Button
+          goto="/StartupsForm"
+          size="visit"
+          text="Register Now"
+          bgColor="Primary"
+          addedClass="mx-auto"
+        />
+      </div>
+    </div>
+  );
+}
