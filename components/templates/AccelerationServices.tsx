@@ -8,55 +8,55 @@ export default function AccelerationServices() {
   const services = [
     {
       title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      image: '1.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Mentoring',
+      image: '2.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Networking with suitable individuals',
+      image: '3.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Initial financing',
+      image: '4.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'MVP development',
+      image: '5.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Research and development',
+      image: '6.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Website design',
+      image: '7.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Business plan creation',
+      image: '8.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Idea brainstorming and development',
+      image: '9.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Co-working space',
+      image: '10.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Patent registration',
+      image: '11.png',
     },
     {
-      title: 'Pitch deck preparation',
-      image: 'cfda12787359d605ef7a3b3d9993e1b7.png',
+      title: 'Organizing startup pitch presentation events',
+      image: '12.png',
     },
   ];
 
-  const displayedServices = expanded ? services : services.slice(0, 5);
+  const displayedServices = expanded ? services : services.slice(0, 6);
 
   const toggleExpanded = () => {
     setExpanded((prev) => !prev);
@@ -78,14 +78,13 @@ export default function AccelerationServices() {
           />
         </div>
       ))}
-      <div className="flex mx-auto md:hidden items-center gap-2">
+      <div className="flex mx-auto items-center gap-2">
         <span
           className="font-gilda text-center cursor-pointer"
           onClick={toggleExpanded}
         >
           {expanded ? 'See Less' : 'See More'}
         </span>
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
