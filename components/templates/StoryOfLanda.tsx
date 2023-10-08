@@ -4,8 +4,8 @@ import React from 'react';
 
 export default function StoryOfLanda() {
   return (
-    <div className="flex flex-col px-32 py-14 gap-12">
-      <div className="flex gap-12">
+    <div className="flex flex-col px-32 py-14 gap-12 bg-[#F7F3EE]">
+      <div className="flex gap-12 text-[#000]">
         <div className="flex flex-col w-1/2 text-justify">
           <div className="w-[589px] h-[310px] relative">
             <Image
@@ -91,7 +91,7 @@ export default function StoryOfLanda() {
           </div>
         </div>
       </div>
-      <div className="flex gap-12">
+      <div className="flex gap-12 text-[#000]">
         <div className="w-1/2 text-justify">
           <span className="font-gilda text-3xl text-primary">
             VISION OF THE LANDA HOLDING
