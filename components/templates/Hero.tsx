@@ -31,7 +31,7 @@ export default function Hero({
         setIsTitleChanging(true); // Start the animation
         setTimeout(() => {
           setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-        }, 500); // Delay the title change slightly to allow animation
+        }, 500);
       }, 3000);
 
       return () => clearInterval(interval);
@@ -45,7 +45,6 @@ export default function Hero({
   }, [titleIndex, titles]);
 
   useEffect(() => {
-    // Reset the animation flag when the title changes
     setIsTitleChanging(false);
   }, [currentTitle]);
 
@@ -60,18 +59,16 @@ export default function Hero({
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
-          className={` ${
-            showLanda ? 'block' : 'hidden'
-          } text-center text-white text-xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
+          className={` ${showLanda ? 'block' : 'hidden'
+            } text-center text-white text-xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
         >
           Landa Holding
         </div>
         <div
-          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl ${
-            isTitleChanging
+          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl ${isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
-              : '' // Apply spin animation class when the title is changing
-          }`}
+              : ''
+            }`}
           style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
         >
           {currentTitle}
@@ -80,15 +77,10 @@ export default function Hero({
         <div className="text-center font-barlow text-white text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
         </div>
-        {/* <div className="hidden md:block text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
-          Landa Holding is an international investment company active in Iran
-          and Canada.
-        </div> */}
         {showButton ? (
           <Button
             text="Register Now"
             size="notVisit"
-            // bgColor={buttonBg}
             addedClass={buttonBg ? 'md:hidden' : 'block'}
             goto="/"
           />
@@ -97,8 +89,7 @@ export default function Hero({
         )}
         <Image
           loading="lazy"
-          // className="w-[305px] h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] w-[365px] h-[420px] xl:h-[560px] xl:w-[420px]   absolute -right-16 md:right-0 bottom-0 "
-          className="w-[385px] h-[382px] sm:w-[305px] sm:h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] w-[365px] h-[420px] xl:h-[560px] xl:w-[420px]   absolute -right-16 md:right-0 bottom-0 "
+          className="w-[300px] h-[300px] sm:w-[305px] sm:h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] xl:h-[560px] xl:w-[420px] absolute -right-16 md:right-0 bottom-0 "
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
