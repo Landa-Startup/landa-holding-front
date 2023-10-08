@@ -99,13 +99,17 @@ export default function Partners() {
           affiliate, please complete our free questionnaire for our confidential
           review.
         </p>
-        <Button
-          size="notVisit"
-          text="Join Us"
-          goto="/partner-membership"
-          bgColor="Primary"
-        />
+        <div className=''>
+          <Button
+            size="notVisit"
+            text="Join Us"
+            goto="/partner-membership"
+            bgColor="Primary"
+          />
+        </div>
+
       </div>
+
       <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
         {logosRight.map((role, index) => (
           <Image
@@ -117,7 +121,19 @@ export default function Partners() {
             height={500}
           />
         ))}
+        <div className='flex justify-center items-center w-[350px]'>
+          <Button
+            size="visit"
+            type="button"
+            text="Visit Now"
+            goto="/partner-membership"
+            bgColor="Primary"
+            className='md:hidden'
+          />
+        </div>
+
       </div>
+
     </div>
   );
 }

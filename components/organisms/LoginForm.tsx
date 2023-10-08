@@ -38,7 +38,6 @@ export default function LoginPage() {
                             type="email"
                             {...register('email', {
                                 required: 'Your email is required.',
-                                // pattern: {
                                 //     value: /^[a-z ,.'-]+$/i,
                                 //     message: 'Enter a valid email.',
                                 // },
