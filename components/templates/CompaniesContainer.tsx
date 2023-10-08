@@ -1,0 +1,54 @@
+import React from 'react';
+import CompaniesCard from './CompaniesCard';
+
+export default function CompaniesContainer() {
+  const companies = [
+    {
+      name: 'Landa Trip',
+      logo: '1.png',
+    },
+    {
+      name: 'IRImmigration',
+      logo: '2.png',
+    },
+    {
+      name: 'ACADEMY',
+      logo: '3.png',
+    },
+    {
+      name: 'TOLU ROSHAN',
+      logo: '4.png',
+    },
+    {
+      name: 'DIACO',
+      logo: '5.png',
+    },
+    {
+      name: 'VISION RAFT',
+      logo: '6.png',
+    },
+    {
+      name: 'FARAZAMAN',
+      logo: '7.png',
+    },
+    {
+      name: 'Handi Crafts',
+      logo: '8.png',
+    },
+    {
+      name: 'Foruogh',
+      logo: '9.png',
+    },
+    {
+      name: 'LANDA GENE',
+      logo: '10.png',
+    },
+  ];
+  return (
+    <div className="grid grid-cols-5 gap-14">
+      {companies.map((company, index) => (
+        <CompaniesCard key={index} name={company.name} logo={company.logo} />
+      ))}
+    </div>
+  );
+}
