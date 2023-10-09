@@ -29,11 +29,11 @@ export default function page() {
           layout="fill"
         />
       </div>
-      <div className="flex flex-col font-gilda md:px-28 py-6 md:py-16 items-center">
-        <span className="text-[#55422A] ml-9 text-3xl md:text-5xl leading-tight self-start">
+      <div className="flex flex-col font-gilda md:px-36 py-6 md:py-16 items-center text-left">
+        <span className="text-[#55422A] ml-7 md:ml-9 text-3xl md:text-5xl leading-tight self-start">
           LANDA ACCELERATOR :
         </span>
-        <span className="text-[#AA8453] ml-9 text-xl md:text-4xl leading-tight self-start">
+        <span className="text-[#AA8453] ml-7 md:ml-9 text-xl md:text-4xl leading-tight self-start">
           Growth and Transformation into a Leading Startup
         </span>
         <div className="flex flex-col md:flex-row gap-12 mt-6">
@@ -58,7 +58,7 @@ export default function page() {
           </p>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-6 md:mt-16 relative px-8">
-          <div className="flex gap-2 mt-10 md:mt-[77px]">
+          <div className="flex items-center gap-2 mt-10 md:mt-[77px]">
             <svg
               className="w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"
