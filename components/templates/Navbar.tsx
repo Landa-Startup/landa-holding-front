@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
+import IconDown from '../atoms/IconDown';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
