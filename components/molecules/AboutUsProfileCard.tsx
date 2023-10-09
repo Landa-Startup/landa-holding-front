@@ -16,13 +16,14 @@ export default function AboutUsProfileCard({
   return (
     <div className="container mb-6 shadow-lg bg-whiteGold mx-auto w-fit h-fit border">
       <Link href="#">
-        <Image
-          loading="lazy"
-          alt={`${title} Image`}
-          width={266}
-          height={254}
-          src={image}
-        />
+        <div className="w-[350px] md:w-[400px] h-[350px] md:h-[400px] relative">
+          <Image
+            loading="lazy"
+            alt={`${title} Image`}
+            layout="fill"
+            src={image}
+          />
+        </div>
       </Link>
 
       <div className="flex items-center justify-center p-2 mt-6 space-x-3">

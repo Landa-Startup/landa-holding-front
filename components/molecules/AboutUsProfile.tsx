@@ -4,8 +4,7 @@ import AboutUsProfileCard from './AboutUsProfileCard';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image:
-        '/static/images/4-1.png',
+      image: '/static/images/4-1.png',
       title: 'MORTEZA JAFARI',
       description: 'International Relations',
       links: {
@@ -41,7 +40,7 @@ export default function AboutUsProfile() {
 
   return (
     <div className="bg-[#FAFAFA]">
-      <div className="flex flex-col mx-8 py-5 text-black justify-items-center md:ps-24 md:ms-28">
+      <div className="flex flex-col mx-8 py-5 text-black justify-items-center">
         <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl">
           PROFESSIONALS
         </h2>
@@ -50,7 +49,7 @@ export default function AboutUsProfile() {
         </h1>
       </div>
 
-      <div className="flex flex-col mx-8 md:grid md:grid-cols-3 md:gap-8 md:mx-30 md:px-30 ">
+      <div className="flex flex-col mx-auto md:grid md:grid-cols-3 md:gap-8 md:mx-30 md:px-30 ">
         {cardsData.map((card, index) => (
           <AboutUsProfileCard
             key={card.title}
