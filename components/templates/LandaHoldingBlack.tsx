@@ -5,7 +5,7 @@ export default function LandaHoldingBlack() {
   return (
     <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-[#ffffff] py-5 md:py-10 space-y-5 md:h-[590px]">
       <svg
-        className="absolute left-[41.85%] hidden md:block"
+        className="absolute left-[41.85%] ml-[71.18px] mb-[1px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
         height="589"
