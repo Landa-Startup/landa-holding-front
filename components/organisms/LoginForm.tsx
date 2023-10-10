@@ -74,6 +74,7 @@ export default function LoginPage() {
           <input
             id="email"
             type="email"
+            required
             {...register('email', {
               required: 'Your email is required.',
               //     value: /^[a-z ,.'-]+$/i,
@@ -93,6 +94,7 @@ export default function LoginPage() {
           <input
             id="password"
             type="password"
+            required
             {...register('password', {
               required: 'Your password is required.',
               minLength: {
