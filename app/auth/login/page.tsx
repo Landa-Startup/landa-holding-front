@@ -1,17 +1,18 @@
 // pages/login.js
-"use client"
-import LoginForm from '@/components/organisms/LoginForm'
-import Banner from '@/components/molecules/Banner';
+import LoginForm from '@/components/organisms/LoginForm';
+import { Metadata } from 'next';
+
+// Define metadata for the page
+export const metadata: Metadata = {
+  title: 'Landa Holding | Login',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+};
 
 export default function LoginPage() {
-
   return (
     <div>
-      <Banner
-        image="/static/images/Contact/37b76f28c1c41b4ea18163cf2fba85ab.png"
-        title="Contact Us"
-      />
       <LoginForm />
     </div>
-  )
+  );
 }
