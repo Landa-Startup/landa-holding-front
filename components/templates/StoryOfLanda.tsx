@@ -92,7 +92,7 @@ export default function StoryOfLanda() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-12 text-[#000]">
-        <div className="flex flex-col md:w-1/2 md:text-justify px-10">
+        <div className="flex flex-col md:w-1/2 px-10">
           <span className="font-gilda text-3xl text-primary">
             VISION OF THE LANDA HOLDING
           </span>

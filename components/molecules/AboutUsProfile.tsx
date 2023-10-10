@@ -44,7 +44,7 @@ export default function AboutUsProfile() {
 
   return (
     <div className="bg-[#FAFAFA]">
-      <div className="flex flex-col mx-8 py-5 text-black justify-items-center">
+      <div className="flex flex-col ml-8 lg:ml-64 mx-8 py-5 text-black justify-items-center">
         <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl">
           PROFESSIONALS
         </h2>
