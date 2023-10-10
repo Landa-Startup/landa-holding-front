@@ -10,7 +10,7 @@ export default function AboutUsProfile() {
       links: {
         linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
         whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
-        email: 'www.morteza_jafari49@yahoo.com',
+        email: 'mailto:morteza_jafari49@yahoo.com',
         website: 'https://mortezajafari.ca/',
       },
     },
