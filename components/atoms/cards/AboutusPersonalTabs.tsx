@@ -1,27 +1,37 @@
 import React from 'react';
 import Link from 'next/link';
 import IconLinkedin from '../IconLinkedin';
+import IconRoundedEmail from '../IconRoundedEmail';
+import IconRoundedInstagram from '../IconInstagramRounded';
+import IconWeb from '../IconWeb';
+import IconInstagram from '../IconInstagram';
 
-export default function PersonalTab({
+export default function AboutusPersonalTabs({
   image,
   name,
   position,
   linkedIn,
+  email,
+  website,
+  instagram,
 }: {
   image: string;
   name: string;
   position: string;
   linkedIn: string;
+  email: string;
+  website: string;
+  instagram: string;
 }) {
   return (
     <div
-      className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col justify-between items-center"
+      className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col  items-center"
       style={{
         backgroundImage: `url(${image})`,
         backgroundPosition: 'center',
       }}
     >
-      <div className="flex flex-col p-4 space-y-2 self-start">
+      <div className="flex flex-col p-2  self-start">
         <Link
           href={linkedIn}
           className="text-white rounded-full bg-[#222] p-2 opacity-75"
@@ -38,12 +48,27 @@ export default function PersonalTab({
           </svg>
         </Link>
       </div>
-      <div className="flex flex-col items-center px-4 pb-4 text-white  ">
-        <span className="font-normal text-lg">{name}</span>
-        <div className='font-light w-full flex items-center justify-center border-t-2 '>
-        <span className="font-light border-t-3 ">{position}</span>
+
+      <div className=" pl-2 pb-2 self-start">
+        <Link href= {email} >
+        <IconRoundedEmail />
+      </Link>
+      </div>
+      <div className=" pl-2 pb-2 self-start" >
+            <Link href={website} >
+            <IconWeb/>
+          </Link>
+      </div>
+      <div className=" pl-2 self-start opacity-75  " >
+        <Link href={instagram}>
+        <IconRoundedInstagram/>
+        </Link>
+      </div>
+      <div className="flex flex-col items-center px-4 pb-4 mt-40 lg:mt44  ">
+        <span className="font-normal text-lg text-black">{name}</span>
+        <div className="font-light w-full flex items-center justify-center  ">
+          <span className="font-light border-t-3 ">{position}</span>
         </div>
-        
       </div>
     </div>
   );

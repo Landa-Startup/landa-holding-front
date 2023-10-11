@@ -67,7 +67,7 @@ export default function page() {
               viewBox="0 0 33 32"
               fill="none"
             >
-              <circle
+              <circle 
                 id="Ellipse 169"
                 cx="16.5"
                 cy="16"
@@ -134,7 +134,7 @@ export default function page() {
           </div>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-8">
-          <div className="flex gap-2 mt-6 md:mt-[77px]">
+          <div className="flex gap-2 mt-6 md:mt-[77px] items-center ">
             <svg
               className="w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +143,7 @@ export default function page() {
               viewBox="0 0 33 32"
               fill="none"
             >
-              <circle
+              <circle 
                 id="Ellipse 169"
                 cx="16.5"
                 cy="16"
@@ -153,7 +153,7 @@ export default function page() {
             </svg>
             <div className="flex">
               <div className="flex flex-col md:flex-row">
-                <span className="text-[#80633E] font-gilda text-xl md:text-3xl mx-2">
+                <span className="text-[#80633E] font-gilda text-xl md:text-3xl mx-2 ">
                   FARAZAMAN ACCELERATOR :
                 </span>
                 <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
