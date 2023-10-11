@@ -113,10 +113,10 @@ export default function page() {
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
-              <span>4. Financial modeling</span>
+              <span>4. Financial modelling</span>
               <span>5. Mentorship programs</span>
               <span>6. Networking</span>
-              <span>7. Co-working space</span>
+              <span>7. Cooperative workspace</span>
               <span>8. Digital marketing</span>
               <span>9. Consultation for necessary permits</span>
               <span>10. Seed investment</span>
@@ -157,7 +157,7 @@ export default function page() {
                   FARAZAMAN ACCELERATOR :
                 </span>
                 <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
-                  Supporting Students and Youth
+                  Supporting Students and the Youth
                 </span>
               </div>
             </div>

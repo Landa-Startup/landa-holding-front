@@ -43,7 +43,7 @@ export default function AccelerationServices() {
       image: '9.png',
     },
     {
-      title: 'Co-working space',
+      title: 'Cooperative workspace',
       image: '10.png',
     },
     {
@@ -51,7 +51,7 @@ export default function AccelerationServices() {
       image: '11.png',
     },
     {
-      title: 'Organizing startup pitch presentation events',
+      title: 'Organizing startup presentation events',
       image: '12.png',
     },
   ];

@@ -9,22 +9,22 @@ import NotificationSendForm from './base/NotificationSendForm';
 import TextArea from '../atoms/TextArea';
 
 export default function InvestorRegistrationForm() {
-  const initialInvestorRegistrationFormData : InvestorRegistrationFormData ={
+  const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
     firstName: '',
     lastName: '',
     birthDate: new Date(),
     email: '',
     countryOfResidence: '',
     provinceOfResidence: '',
-    streetAddress:'',
-    streetAddressLine2:'' ,
+    streetAddress: '',
+    streetAddressLine2: '',
     postalCode: '',
-    companyName:'' ,
-    interests:'' ,
-    positionInTeam: '', 
-    preferredAreas:'',
-    howDidYouKnowUs:'',
-};
+    companyName: '',
+    interests: '',
+    positionInTeam: '',
+    preferredAreas: '',
+    howDidYouKnowUs: '',
+  };
 
 
   const {
@@ -34,7 +34,7 @@ export default function InvestorRegistrationForm() {
     reset,
   } = useForm<InvestorRegistrationFormData>({
     mode: 'onBlur',
-    defaultValues: initialInvestorRegistrationFormData ,
+    defaultValues: initialInvestorRegistrationFormData,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -64,8 +64,8 @@ export default function InvestorRegistrationForm() {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset (initialInvestorRegistrationFormData );
-      setFormData(initialInvestorRegistrationFormData );
+      reset(initialInvestorRegistrationFormData);
+      setFormData(initialInvestorRegistrationFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000);
@@ -74,8 +74,8 @@ export default function InvestorRegistrationForm() {
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
-      reset (initialInvestorRegistrationFormData );
-      setFormData(initialInvestorRegistrationFormData );
+      reset(initialInvestorRegistrationFormData);
+      setFormData(initialInvestorRegistrationFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds  
@@ -127,11 +127,11 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="birthDate"
                 type="date"
-                label="Birth Date"
-                required="Birth Date is Required."
+                label="Date of Birth"
+                required="Date of Birth is Required."
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
-                patternMessage="Please enter a valid Birth Date (e.g., 2001/02/11)"
-                placeholder="Enter your Birth Date"
+                patternMessage="Please enter a valid Date of Birth(e.g., 2001/02/11)"
+                placeholder="Enter your Date of Birth"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -175,11 +175,11 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="provinceOfResidence"
                 type="text"
-                label="Province of Residence"
-                required="Province of Residence is Required."
+                label="City Of Residence"
+                required="City Of Residence is Required."
                 patternValue=""
                 patternMessage=""
-                placeholder="Enter your Province of Residence"
+                placeholder="Enter your City Of Residence"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -218,7 +218,7 @@ export default function InvestorRegistrationForm() {
             </div>
 
             <div className="col-span-1 md:col-span-2">
-            <TextArea
+              <TextArea
                 title="Preferred Areas for Investment"
                 register={register}
                 errors={errors}
@@ -231,8 +231,8 @@ export default function InvestorRegistrationForm() {
             </div>
 
             <div className="col-span-1 md:col-span-2">
-            <TextArea
-                title="How did you get to know us?*"
+              <TextArea
+                title="How did you hear about us?*"
                 register={register}
                 errors={errors}
                 placeholder="Description"
@@ -253,7 +253,7 @@ export default function InvestorRegistrationForm() {
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification}/>
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification} />
       </div>
     </>
   );

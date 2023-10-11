@@ -21,7 +21,7 @@ export default function AerialViewBusinessTeam() {
             <br />
           </span>
           <span className="text-white text-base md:text-[30px] font-normal">
-            What Our Cooperation Members Say?
+            What Our Cooperation Members Say
           </span>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function AerialViewBusinessTeam() {
                     />
                   </Link>
                   <Link href={'https://mortezajafari.ca/'}
-                  target="_blank">
+                    target="_blank">
                     <Image
                       loading="lazy"
                       className="w-4 h-4"
@@ -118,7 +118,7 @@ export default function AerialViewBusinessTeam() {
                   />
                 </Link>
                 <Link href={'https://mortezajafari.ca/'}
-                target="_blank">
+                  target="_blank">
                   <Image
                     loading="lazy"
                     className="w-7 h-w-7"

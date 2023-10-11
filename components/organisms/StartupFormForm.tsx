@@ -254,7 +254,7 @@ export default function StartupFormForm() {
       <div className="container m-10 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <StartupFormTitle />
         <div>
-          <p className="mb-4 text-4xl">Personal information</p>
+          <p className="mb-4 text-4xl">Personal Information</p>
         </div>
 
         <div>
@@ -264,7 +264,7 @@ export default function StartupFormForm() {
           <StartupFormPersonalInformation register={register} errors={errors} />
 
           <div>
-            <p className="mb-4 text-4xl">Grows and Scale Up</p>
+            <p className="mb-4 text-4xl">Growth and Scale-up</p>
           </div>
           <div>
             <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
@@ -278,9 +278,9 @@ export default function StartupFormForm() {
             <option value={'IDEA'} defaultChecked>
               Idea
             </option>
-            <option value={'MVP'}>MVP</option>
-            <option value={'FisrtSale'}>FisrtSale</option>
-            <option value={'SaleDevelopment'}>SaleDevelopment</option>
+            <option value={'MVP'}>MVP(Minimum Viable Product)</option>
+            <option value={'FisrtSale'}>Fisrt Sale</option>
+            <option value={'SaleDevelopment'}>Sale Development</option>
           </select>
           {/* idea section */}
           {(() => {
@@ -296,13 +296,13 @@ export default function StartupFormForm() {
           {(() => {
             if (selectedRadio == 'MVP') {
               return (
-                  <StartupFormMVP
-                    register={register}
-                    errors={errors}
-                    handleBusinessPlanFileChange={handleBusinessPlanFileChange}
-                    handlePitchDeckFileChange={handlePitchDeckFileChange}
-                    handleFinancialFileChange={handleFinancialFileChange}
-                  />
+                <StartupFormMVP
+                  register={register}
+                  errors={errors}
+                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
+                  handlePitchDeckFileChange={handlePitchDeckFileChange}
+                  handleFinancialFileChange={handleFinancialFileChange}
+                />
               );
             } else {
               return <div></div>;

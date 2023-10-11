@@ -33,7 +33,7 @@ export default function LandaHoldingPriority() {
       image: '/static/images/Home/Priority/process 2.png',
     },
     {
-      title: 'Tourism services',
+      title: 'Tourism Services',
       image: '/static/images/Home/Priority/world 2.png',
     },
   ];

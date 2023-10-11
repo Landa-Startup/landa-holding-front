@@ -7,7 +7,7 @@ export default function InvestorRegistrationTitle() {
         <p className='font-serif text-2xl mb-20 tracking-wide'>INVESTOR CENTER FORM</p>
       </div>
       <div>
-        <p className='text-4xl mb-4'>Personal information</p>
+        <p className='text-4xl mb-4'>Personal Information</p>
       </div>
       <div>
         <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
