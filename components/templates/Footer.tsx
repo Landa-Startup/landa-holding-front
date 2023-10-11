@@ -173,7 +173,7 @@ export default function Footer() {
             +98 (912) 0539563
           </div>
           <div className="text-base font-normal text-neutral-400">
-            Tala Complex, Sa'adat Abad Street, Isfahan, Iran
+            Tala Complex, Saadat Abad Street, Isfahan, Iran
           </div>
           <div className="text-base font-normal text-neutral-400">
             +98 (313) 1311914
