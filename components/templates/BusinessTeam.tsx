@@ -21,7 +21,7 @@ export default function AerialViewBusinessTeam() {
             <br />
           </span>
           <span className="text-white text-base md:text-[30px] font-normal">
-            What Our Cooperation Members Say?
+            What Our Cooperation Members Say
           </span>
         </div>
       </div>
@@ -54,6 +54,7 @@ export default function AerialViewBusinessTeam() {
                 <div className="inline-flex gap-3 mt-2 md:hidden">
                   <Link
                     href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
+                    target="_blank"
                   >
                     <Image
                       loading="lazy"
@@ -66,7 +67,8 @@ export default function AerialViewBusinessTeam() {
                       height={50}
                     />
                   </Link>
-                  <Link href={'https://mortezajafari.ca/'}>
+                  <Link href={'https://mortezajafari.ca/'}
+                    target="_blank">
                     <Image
                       loading="lazy"
                       className="w-4 h-4"
@@ -104,6 +106,7 @@ export default function AerialViewBusinessTeam() {
               <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
                 <Link
                   href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
+                  target="_blank"
                 >
                   <Image
                     loading="lazy"
@@ -114,7 +117,8 @@ export default function AerialViewBusinessTeam() {
                     height={50}
                   />
                 </Link>
-                <Link href={'https://mortezajafari.ca/'}>
+                <Link href={'https://mortezajafari.ca/'}
+                  target="_blank">
                   <Image
                     loading="lazy"
                     className="w-7 h-w-7"

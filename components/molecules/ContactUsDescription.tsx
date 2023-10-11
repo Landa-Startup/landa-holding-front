@@ -21,16 +21,20 @@ export default function ContactUsDescription() {
       <div className="flex flex-row space-x-3 ">
         <Link
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
+          target="_blank"
         >
           <IconInstagram />
         </Link>
-        <Link href={'https://wa.me/989120539563'}>
+        <Link href={'https://wa.me/989120539563'} target="_blank">
           <IconWhatApp />
         </Link>
         <Link href={'mailto:info@landaholding.com'}>
           <IconEmailB />
         </Link>
-        <Link href={'https://www.linkedin.com/company/landa-startup-inc'}>
+        <Link
+          href={'https://www.linkedin.com/company/landa-startup-inc'}
+          target="_blank"
+        >
           <IconLinkedinB />
         </Link>
       </div>

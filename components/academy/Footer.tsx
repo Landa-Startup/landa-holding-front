@@ -31,6 +31,7 @@ export default function Footer() {
                 'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='
               }
               className="hover:text-primary"
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +62,7 @@ export default function Footer() {
               aria-label="Whatsapp"
               href={'https://wa.me/989120539563'}
               className="hover:text-primary"
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,6 +79,7 @@ export default function Footer() {
               aria-label="Linkedin"
               href={'https://www.linkedin.com/company/landa-startup-inc'}
               className="hover:text-primary"
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +155,7 @@ export default function Footer() {
             <br />
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
-            Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
+            No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
             +1 (416) 557-7622

@@ -11,9 +11,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    { label: 'ABOUT', href: '/about' },
-    { label: 'ACCELERATION', href: '/acceleration' },
-    { label: 'CONTACT', href: '/contact' },
+    { label: 'ABOUT US', href: '/about' },
+    // { label: 'ACCELERATION', href: '/acceleration' },
+    { label: 'CONTACT US', href: '/contact' },
     { label: 'OUR TEAM', href: '/our-team' },
   ];
   const submenuItems = [
@@ -31,14 +31,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     }
     drawerRef.current.click();
   };
-  // const handleClickOutside = (event: Event) => {
-  //   if (menuRef.current && !menuRef.current.contains(event.target)) {
-  //     setIsMenuOpen(false);
-  //   }
-  // };
-  // useEffect(() => {
-  //   document.addEventListener('click', handleClickOutside);
-  // }, []);
   return (
     <div className="top-0 drawer">
       <input
@@ -101,7 +93,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     className="text-2xl hover:white hover:bg-white"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    Work With Us
+                    FORMS
                   </summary>
                   <ul
                     className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
@@ -164,7 +156,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </li>
         </ul>
         <div className="bg-[#222] flex justify-between items-center absolute bottom-0 h-10 w-80 px-10">
-          <Link href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}>
+          <Link href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
+          target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -190,7 +183,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </svg>
           </Link>
 
-          <Link href={'https://wa.me/989120539563'}>
+          <Link href={'https://wa.me/989120539563'}
+          target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -203,7 +197,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </svg>
           </Link>
 
-          <Link href={'https://www.linkedin.com/company/landa-startup-inc'}>
+          <Link href={'https://www.linkedin.com/company/landa-startup-inc'}
+          target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

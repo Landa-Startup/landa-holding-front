@@ -12,7 +12,7 @@ module.exports = {
         primary: '#AA8453',
         whiteGold: '#F8F5F0',
       },
-    },
+    },    
   },
   plugins: [require('daisyui')],
   daisyui: {

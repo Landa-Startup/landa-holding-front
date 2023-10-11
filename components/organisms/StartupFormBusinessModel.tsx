@@ -16,7 +16,7 @@ export default function StartupFormBusinessModel({
 }: {
   register: any;
   errors: any;
-  handleFinancialFileChange:any;
+  handleFinancialFileChange: any;
 
 }) {
 
@@ -94,17 +94,17 @@ export default function StartupFormBusinessModel({
           />
         </div>
         <div className="col-start-1 col-span-1">
-        <label className="text-[#6b6b6b] dark:text-current">If your plan has a financial model, please upload</label>
-        <div className='flex justify-center '>
-          <input
-            type="file"
-            className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
-            {...register('financialFile', {
-              required: '',
-            })}
-            onChange={handleFinancialFileChange} // must use onChange event handler after register
-          />
-        </div>
+          <label className="text-[#6b6b6b] dark:text-current">If your plan has a financial model, please upload</label>
+          <div className='flex justify-center '>
+            <input
+              type="file"
+              className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
+              {...register('financialFile', {
+                required: '',
+              })}
+              onChange={handleFinancialFileChange} // must use onChange event handler after register
+            />
+          </div>
         </div>
         <div className="col-start-1 col-span-2">
           <TextArea
@@ -120,7 +120,7 @@ export default function StartupFormBusinessModel({
         </div>
         <div className="col-span-2">
           <TextArea
-            title="How did you get to know us?"
+            title="How did you hear about us?"
             register={register}
             errors={errors}
             placeholder="Description"

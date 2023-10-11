@@ -13,9 +13,9 @@ export default function LatestStartups() {
 
     {
       image: '/static/images/Home/Startups/diaco.png',
-      title: 'Diaco',
+      title: 'DIACO',
       description:
-        'Diaco is an open innovation platform which acts as an intermediate between technology seekers and providers to fulfill their technological demands.',
+        'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
       link: 'https://irdiaco.ca/',
     },
     {
