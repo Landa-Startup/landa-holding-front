@@ -10,9 +10,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    { label: 'ABOUT', href: '/about' },
+    { label: 'ABOUT US', href: '/about' },
     // { label: 'ACCELERATION', href: '/acceleration' },
-    { label: 'CONTACT', href: '/contact' },
+    { label: 'CONTACT US', href: '/contact' },
     { label: 'OUR TEAM', href: '/our-team' },
   ];
   const submenuItems = [
@@ -92,7 +92,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     className="text-2xl hover:white hover:bg-white"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    Work With Us
+                    FORMS
                   </summary>
                   <ul
                     className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'

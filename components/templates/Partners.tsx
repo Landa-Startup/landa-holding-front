@@ -90,7 +90,7 @@ export default function Partners() {
         </div>
         <div className="col-span-4 md:col-span-2 gap-6 md:gap-14 md:bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9 order-1">
           <p className="text-primary text-xl md:text-4xl font-gilda">
-            Join To Our Business Partners
+            Join Our Business Partners
           </p>
           <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[2.1px] md:tracking-[2.4px]  text-black lg:w-[422px]">
             At Landa Holding, we welcome strategic affiliations with international

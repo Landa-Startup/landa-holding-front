@@ -110,13 +110,13 @@ export default function Footer() {
               href={'/about'}
               className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
             >
-              About
+              About Us
             </Link>
             <Link
               href={'/contact'}
               className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
             >
-              Contact
+              Contact Us
             </Link>
             <Link
               href={'/our-team'}
@@ -151,7 +151,7 @@ export default function Footer() {
               href={'/partner-membership'}
               className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
             >
-              Our business partners
+              Our Business Partners
             </Link>
           </div>
         </div>
@@ -161,22 +161,22 @@ export default function Footer() {
             <br />
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
-            Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
+            No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
             +1 (416) 557-7622
           </div>
           <div className="text-base font-normal text-justify text-neutral-400 border-t border-t-white pt-1">
-            No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran
+            No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran
           </div>
           <div className="text-base font-normal text-justify text-neutral-400 border-b border-b-white pb-1">
-            09120539563
+            +98 (912) 0539563
           </div>
           <div className="text-base font-normal text-neutral-400">
-            Tala Complex, Saadat Abad St, Isfahan, Iran
+            Tala Complex, Sa'adat Abad Street, Isfahan, Iran
           </div>
           <div className="text-base font-normal text-neutral-400">
-            03131311914
+            +98 (313) 1311914
           </div>
         </div>
       </div>

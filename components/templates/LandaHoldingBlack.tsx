@@ -89,19 +89,19 @@ export default function LandaHoldingBlack() {
         <div className="w-[320px] md:w-[434px]">
           <ul className="text-black text-[14px] font-normal leading-6 list-disc pl-4 font-barlow space-y-2 ml-0">
             <li className="leading-7 md:leading-10">
-              Global Investment Opportunities within Your Reach.
+              Global investment opportunities within your reach.
             </li>
             <li className="leading-7 md:leading-10">
-              Access to a Network of Successful Entrepreneurs and Investors.
+              Access to a network of successful entrepreneurs and investors.
             </li>
             <li className="leading-7 md:leading-10">
-              Exclusive Insights and Expert Analysis for Informed Decisions.
+              Exclusive insights and expert analysis for informed decisions.
             </li>
             <li className="leading-7 md:leading-10">
-              Collaborative Environment for Joint Ventures and Partnerships.
+              Collaborative environment for joint ventures and partnerships.
             </li>
             <li className="leading-7 md:leading-10">
-              Accelerated Growth Potential through Diversified Investments.
+              Accelerated growth potential through diversified investments.
             </li>
           </ul>
         </div>
@@ -147,14 +147,14 @@ export default function LandaHoldingBlack() {
         <div className="w-[380px] md:w-[500px] px-6">
           <ul className="text-black text-[14px] font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
             <li className="leading-7">
-              Global Networking Opportunities for Collaboration and Partnerships
+              Global networking opportunities for collaboration and partnerships
             </li>
             <li className="leading-7">
               Access to all videos of pitches, industry trend presentations and
               panel discussions
             </li>
             <li className="leading-7">
-              Attending events of the Entrepreneurs Center
+              Attending events of the entrepreneurs center
             </li>
             <li className="leading-7">
               Meetings with top business leaders and entrepreneurs
