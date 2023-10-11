@@ -29,7 +29,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a11.png',
             position: 'Case Manager',
-            name: 'Mahsa Esmaili',
+            name: 'Mahsa Esmaeili',
             linkedIn: '',
             category: 'manager'
         },
@@ -43,14 +43,14 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a4.png',
             position: 'Public Relations Officer',
-            name: 'Kholod Hariri',
+            name: 'Kholoud Hariri',
             linkedIn: '',
             category: 'public relations officer'
         },
         {
             image: '/static/images/our-team/Personals/a5.png',
             position: 'Accountant',
-            name: 'Ali Solaimani',
+            name: 'Ali Soleimani',
             linkedIn: '',
             category: 'accountant'
         },
@@ -64,7 +64,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a7.png',
             position: 'Full stack',
-            name: 'Sajad Momeni',
+            name: 'Sajjad Momeni',
             linkedIn: '',
             category: 'mentor'
         },
@@ -101,7 +101,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a15.png',
             position: 'Junior Back-end',
-            name: 'Fateme Safi',
+            name: 'Fatemeh Safi',
             linkedIn: '',
             category: 'programmer'
         },
@@ -116,7 +116,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a17.png',
             position: 'Front-end',
-            name: 'Fahime Sajadie',
+            name: 'Fahimeh Sajjadi',
             linkedIn: '',
             category: 'programmer'
         },
@@ -145,7 +145,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a21.png',
             position: 'Graphic Designer',
-            name: 'Hoda Mehdi',
+            name: 'Hoda Mahdi',
             linkedIn: '',
             category: 'designer'
         },
@@ -181,7 +181,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a26.png',
             position: 'Word Press Developer',
-            name: 'Roham Arablo',
+            name: 'Roham Arabloo',
             linkedIn: '',
             category: 'programmer'
         },
@@ -196,7 +196,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a28.png',
             position: 'Front-end',
-            name: 'Mahdi Salmanzade',
+            name: 'Mahdi Salmanzadeh',
             linkedIn: '',
             category: 'programmer'
         },
@@ -225,7 +225,7 @@ export default function TeamPersons() {
         {
             image: '/static/images/our-team/Personals/a32.png',
             position: 'Front-end',
-            name: 'matin Janghorbani',
+            name: 'Matin Janghorbani',
             linkedIn: '',
             category: 'programmer'
         },
