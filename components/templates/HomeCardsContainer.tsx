@@ -29,7 +29,7 @@ export default function HomeCardsContainer() {
       reverse: true,
       show: true,
       index: 2,
-      link: '/StartupsForm',
+      link: '/acceleration',
       addedClass: 'mb-28',
       images: [
         {

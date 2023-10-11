@@ -43,10 +43,10 @@ export default function Partners() {
       number: 9,
       alt: 'evimo',
     },
-    // {
-    //   number: 10,
-    //   alt: 'evimo',
-    // },
+    {
+      number: 10,
+      alt: 'evimo',
+    },
     {
       number: 11,
       alt: 'evimo',
