@@ -53,7 +53,7 @@ export default function AboutUsProfile() {
         </h1>
       </div>
 
-      <div className="lg:flex lg:flex-row lg:ml-64 lg:gap-3 lg:pb-28 grid grid-cols-1 gap-3 mx-auto pb-16 ml-8 space-y-16 mb-8">
+      <div className="lg:flex lg:flex-row lg:ml-64 lg:gap-3 lg:pb-28 grid grid-cols-1 gap-3 mx-auto pb-16 ml-8  mb-8">
         {cardsData.map((card, index) => (
           <AboutusPersonalTabs
             key={index}

@@ -73,18 +73,28 @@ export default function HomeOurTeam() {
                     Our Team
                 </span>
             </div>
-            <div>
-                <div className="grid grid-cols-1  gap-5 xl:grid-cols-4  place-items-center mx-5 md:grid-cols-2 lg:grid-cols-2 ">
+            <div className='flex items-center justify-center'>
+                <p className='md:container md:mx-auto md:px-16 text-center md:text-left'>Our team of experts is comprised of professionals who are passionate about their work, and have an extensive background in a wide variety of applications, and are willing to help at any time.</p>
+                {/* <Link href={"/our-team"}>
+                    <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-24 mt-8  flex px-10 py-2 font-barlow">
+                        View More
+                    </button>
+                </Link> */}
+            </div>
+            <div className='hidden md:block'>
+
+                <div className="grid grid-cols-1  gap-5 xl:grid-cols-4 mx-5 md:grid-cols-2 lg:grid-cols-2 ">
                     {items.map((item, index) => (
                         <PersonalTab key={index} image={item.image} name={item.name} position={item.position} linkedIn={item.linkedIn} />
                     ))}
                 </div>
-                <Link href={"/our-team"}>
-                    <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-24 mt-8  flex px-10 py-2 font-barlow">
-                        View More
-                    </button>
-                </Link>{' '}
+
             </div>
+            <Link href={"/our-team"}>
+                <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
+                    View More
+                </button>
+            </Link>{' '}
         </div>
     );
 }
