@@ -74,7 +74,7 @@ export default function Hero({
           {currentTitle}
         </div>
 
-        <div className="text-center font-barlow text-white text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
+        <div className="text-center font-condensed text-white text-opacity-95 text-2xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
         </div>
         {showButton ? (
