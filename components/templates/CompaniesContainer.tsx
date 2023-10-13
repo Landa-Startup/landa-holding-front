@@ -4,12 +4,12 @@ import CompaniesCard from './CompaniesCard';
 export default function CompaniesContainer() {
   const companies = [
     {
-      name: 'Landa Trip',
+      name: 'LANDA TRIP',
       logo: '1.png',
       link: "https://landatrip.com/"
     },
     {
-      name: 'IRImmigration',
+      name: 'IRIMMIGRATION',
       logo: '2.png',
       link: "https://irimmigration.com/"
     },
@@ -39,12 +39,12 @@ export default function CompaniesContainer() {
       link: 'https://landaholding.com/acceleration'
     },
     {
-      name: 'Handi Crafts',
+      name: 'HANDI CRAFTS',
       logo: '8.png',
       link: '#'
     },
     {
-      name: 'Foruogh',
+      name: 'FOROUGH',
       logo: '9.png',
       link: '#'
     },
@@ -57,7 +57,7 @@ export default function CompaniesContainer() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-14">
       {companies.map((company, index) => (
-        <CompaniesCard key={index} name={company.name} logo={company.logo} link={company.link}/>
+        <CompaniesCard key={index} name={company.name} logo={company.logo} link={company.link} />
       ))}
     </div>
   );
