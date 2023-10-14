@@ -51,11 +51,11 @@ export default function StartupFormPersonalInformation({
           errors={errors}
           nameInput="birthDate"
           type="date"
-          label="Birth Date"
-          required="Birth Date is Required."
+          label="Date of Birth"
+          required="Date of Birth is Required."
           patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
-          patternMessage="Please enter a valid Birth Date (e.g., 2001/02/11)"
-          placeholder="Enter your Birth Date"
+          patternMessage="Please enter a valid Date of Birth (e.g., 2001/02/11)"
+          placeholder="Enter your Date of Birth"
           className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
           labelClass="text-[#6b6b6b] dark:text-current"
         />
@@ -109,11 +109,11 @@ export default function StartupFormPersonalInformation({
           errors={errors}
           nameInput="provinceOfResidence"
           type="text"
-          label="Province of Residence"
-          required="Province of Residence is Required."
+          label="City Of Residence"
+          required="City Of Residence is Required."
           patternValue="^[A-Za-z]+$"
           patternMessage="Only Alphabetic Characters are Allowed."
-          placeholder="Enter your Province of Residence"
+          placeholder="Enter your City Of Residence"
           className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
           labelClass="text-[#6b6b6b] dark:text-current"
         />

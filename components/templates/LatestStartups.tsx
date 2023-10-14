@@ -13,9 +13,9 @@ export default function LatestStartups() {
 
     {
       image: '/static/images/Home/Startups/diaco.png',
-      title: 'Diaco',
+      title: 'DIACO',
       description:
-        'Diaco is an open innovation platform which acts as an intermediate between technology seekers and providers to fulfill their technological demands.',
+        'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
       link: 'https://irdiaco.ca/',
     },
     {
@@ -35,13 +35,13 @@ export default function LatestStartups() {
             <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[3.5px] md:tracking-[5.60px] font-condensed ps-1">
               LANDA HOLDING
             </div>
-            <div className="text-primary text-4xl md:text-[64px] font-normal font-condensed tracking-[3.5px] md:tracking-[5.60px] md:mt-3">
+            <div className="text-primary text-4xl md:text-[44px] font-normal font-condensed tracking-[3.5px] md:tracking-[5.60px] md:mt-3">
               LATEST STARTUPS
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-2">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-10 mt-3 md:mt-10">
+        <div className="flex justify-center mt-2 ">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-3 md:gap-10 mt-3 md:mt-10 ">
             {cardData.map((data, index) => (
               <LatestStartupsCard
                 key={index}

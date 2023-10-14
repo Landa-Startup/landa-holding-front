@@ -15,6 +15,7 @@ import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from './base/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
+
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 enum Type {
   IDEA = 'IDEA',
@@ -300,7 +301,7 @@ export default function StartupFormForm() {
       <div className="container m-10 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <StartupFormTitle />
         <div>
-          <p className="mb-4 text-4xl">Personal information</p>
+          <p className="mb-4 text-4xl">Personal Information</p>
         </div>
 
         <div>
@@ -310,7 +311,7 @@ export default function StartupFormForm() {
           <StartupFormPersonalInformation register={register} errors={errors} selectedCountry={selectedCountry} handleCountryChange={handleCountryChange} countries={countries}/>
 
           <div>
-            <p className="mb-4 text-4xl">Grows and Scale Up</p>
+            <p className="mb-4 text-4xl">Growth and Scale-up</p>
           </div>
           <div>
             <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
@@ -321,13 +322,12 @@ export default function StartupFormForm() {
             className="select select-bordered w-full max-w-xs mt-4"
             onChange={handleItemChange}
           >
-            <option value={''} selected>Please Select Option</option>
-            <option value={'IDEA'}>
+            <option value={'IDEA'} defaultChecked>
               Idea
             </option>
-            <option value={'MVP'}>MVP</option>
-            <option value={'FisrtSale'}>FisrtSale</option>
-            <option value={'SaleDevelopment'}>SaleDevelopment</option>
+            <option value={'MVP'}>MVP(Minimum Viable Product)</option>
+            <option value={'FisrtSale'}>Fisrt Sale</option>
+            <option value={'SaleDevelopment'}>Sale Development</option>
           </select>
           {/* idea section */}
           {(() => {

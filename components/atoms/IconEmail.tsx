@@ -11,7 +11,7 @@ export default function Email() {
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <rect width="50" height="50" fill="url(#pattern3)" />
+        <rect width="35" height="35" fill="url(#pattern3)" />
         <defs>
           <pattern
             id="pattern3"

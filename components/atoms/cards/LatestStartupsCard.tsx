@@ -21,6 +21,7 @@ export default function LatestStartupsCard({
 
         {/* Image */}
         <Image
+          loading="lazy"
           alt={image}
           className="w-[124px] md:w-[249px] h-[116px] md:h-[216px] left-[71px] md:left-[55px] top-2 md:top-[18px] absolute object-contain group-hover:scale-110 transition-all"
           src={image}
@@ -37,7 +38,7 @@ export default function LatestStartupsCard({
         </div>
 
         {/* Description */}
-        <div className="w-[225px] md:w-[320px] left-[16px] top-[170px] md:top-[310px] md:bottom-20 absolute text-neutral-800 text-sm md:text-base font-normal leading-[15px] font-barlow">
+        <div className=" text-left w-[225px] md:w-[320px] left-[16px] top-[170px] md:top-[310px] md:bottom-20 absolute text-neutral-800 text-sm md:text-base font-normal leading-[15px] font-barlow ">
           {description}
         </div>
 

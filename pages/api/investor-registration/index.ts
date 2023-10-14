@@ -10,7 +10,7 @@ interface FormData {
   countryOfResidence: string;
   provinceOfResidence: string;
   companyName: string;
-  investmentCeiling: string;
+  interests: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
 }
@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         countryOfResidence:formData.countryOfResidence,
         provinceOfResidence : formData.provinceOfResidence,
         companyName : formData.companyName,
-        investmentCeiling : formData.investmentCeiling,
+        interests : formData.interests,
         preferredAreas:formData.preferredAreas,
         howDidYouKnowUs : formData.howDidYouKnowUs,
 

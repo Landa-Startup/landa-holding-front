@@ -18,13 +18,15 @@ export default function InvestorRegistrationForm() {
     email: '',
     countryOfResidence: '',
     provinceOfResidence: '',
+    streetAddressLine2: '',
+    postalCode: '',
     companyName: '',
-    investmentCeiling: '',
+    interests: '',
     positionInTeam: '',
     preferredAreas: '',
     howDidYouKnowUs: '',
-    interestes:'',
   };
+
 
   const {
     register,
@@ -98,7 +100,6 @@ export default function InvestorRegistrationForm() {
     sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
     sendFormData.append('birthDate', String(formData.birthDate));
     sendFormData.append('companyName', formData.companyName);
-    sendFormData.append('investmentCeiling', formData.investmentCeiling);
     sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
     sendFormData.append('preferredAreas', formData.preferredAreas);
     sendFormData.append('interestes', formData.interestes);
@@ -180,11 +181,11 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="birthDate"
                 type="date"
-                label="Birth Date"
-                required="Birth Date is Required."
+                label="Date of Birth"
+                required="Date of Birth is Required."
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
-                patternMessage="Please enter a valid Birth Date (e.g., 2001/02/11)"
-                placeholder="Enter your Birth Date"
+                patternMessage="Please enter a valid Date of Birth(e.g., 2001/02/11)"
+                placeholder="Enter your Date of Birth"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -244,11 +245,11 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="provinceOfResidence"
                 type="text"
-                label="Province of Residence"
-                required="Province of Residence is Required."
+                label="City Of Residence"
+                required="City Of Residence is Required."
                 patternValue=""
                 patternMessage=""
-                placeholder="Enter your Province of Residence"
+                placeholder="Enter your City Of Residence"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -274,11 +275,11 @@ export default function InvestorRegistrationForm() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="interestes"
+                nameInput="interests"
                 type="text"
-                label="Interestes"
-                required="Interestes is Required."
-                placeholder="Enter your Interestes"
+                label="Interests"
+                required="Interests is Required."
+                placeholder="Enter your Interests"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -301,7 +302,7 @@ export default function InvestorRegistrationForm() {
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title="How did you get to know us?*"
+                title="How did you hear about us?*"
                 register={register}
                 errors={errors}
                 placeholder="Description"
@@ -322,12 +323,7 @@ export default function InvestorRegistrationForm() {
             </button>
           </div>
         </form>
-        <NotificationSendForm
-          submitting={isSubmitting}
-          success={isSuccess}
-          sendStatus={send}
-          show={showNotification}
-        />
+        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification} />
       </div>
     </>
   );

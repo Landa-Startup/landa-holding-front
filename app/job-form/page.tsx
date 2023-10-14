@@ -5,7 +5,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Jobs',
-  description: '',
+  description:
+    'Explore the Landa Holding Apply Form and take the first step towards exciting opportunities. Share your qualifications and interests with us as you apply for roles within our organization. Join us in shaping a brighter future together.',
 };
 
 export default function ApplyFormPage() {

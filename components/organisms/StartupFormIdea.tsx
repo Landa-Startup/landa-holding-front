@@ -27,7 +27,7 @@ export default function StartupFormIdea({
           required="this is required"
         />
         <TextArea
-          title="How did you get to know us?*"
+          title="How did you hear about us?*"
           register={register}
           errors={errors}
           placeholder="Description"

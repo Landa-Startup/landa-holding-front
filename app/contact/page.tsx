@@ -6,7 +6,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Contact',
-  description: '',
+  description:
+    'Contact Landa Holding to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.',
 };
 
 export default function ContactUsPage() {
@@ -16,7 +17,7 @@ export default function ContactUsPage() {
       {/* Banner Component */}
       <Banner
         image="/static/images/Contact/37b76f28c1c41b4ea18163cf2fba85ab.png"
-        title="Contact Us"
+        title="CONTACT US"
       />
 
       {/* Main Content Grid */}

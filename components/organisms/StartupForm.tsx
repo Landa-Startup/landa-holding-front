@@ -346,7 +346,7 @@
 // //           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
 // //             <div className="h-[17px]">
 // //               <span className="text-base font-normal text-black">
-// //                 Province of Residence
+// //                 City Of Residence
 // //               </span>
 // //               <span className="text-base font-normal text-stone-500">*</span>
 // //             </div>
@@ -500,7 +500,7 @@
 //           <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
 //             <div className="h-[17px]">
 //               <span className="text-base font-normal text-black">
-//                 Province of Residence
+//                 City Of Residence
 //               </span>
 //               <span className="text-base font-normal text-stone-500">*</span>
 //             </div>
@@ -541,7 +541,7 @@
 // //             required=''
 // //           />
 // //                     <TextArea
-// //             title="How did you get to know us?*"
+// //             title="How did you hear about us?*"
 // //             halfSize={false}
 // //             register={register}
 // //             errors={errors}
@@ -565,7 +565,7 @@
 //             required=""
 //           />
 //           <TextArea
-//             title="How did you get to know us?*"
+//             title="How did you hear about us?*"
 //             halfSize={false}
 //             register={register}
 //             errors={errors}
@@ -696,7 +696,7 @@
 // //               <div className="w-[297px] h-[75px] px-[11px] py-[5px] flex-col justify-start items-start gap-2 inline-flex">
 // //                 <div className="h-[17px]">
 // //                   <span className="text-base font-normal text-black">
-// //                     Province of Residence
+// //                     City Of Residence
 // //                   </span>
 // //                   <span className="text-base font-normal text-stone-500">
 // //                     *
@@ -746,7 +746,7 @@
 //               required=''
 //             />
 //                       <TextArea
-//               title="How did you get to know us?*"
+//               title="How did you hear about us?*"
 //               halfSize={false}
 //               register={register}
 //               errors={errors}
@@ -1024,7 +1024,7 @@
 //               patternValue=""
 //               required=""
 //             />
-//             How did you get to know us?*
+//             How did you hear about us?*
 //             <span className="text-black">Business model</span>
 //             <TextArea
 //               title="Describe the method of monetization of your plan?*"
@@ -1062,7 +1062,7 @@
 //             required=""
 //           />
 //           <TextArea
-//             title="How did you get to know us?*"
+//             title="How did you hear about us?*"
 //             halfSize={false}
 //             register={register}
 //             errors={errors}
@@ -1280,7 +1280,7 @@
 //           />
 
 //           <TextArea
-//             title="How did you get to know us?*"
+//             title="How did you hear about us?*"
 //             halfSize={false}
 //             register={register}
 //             errors={errors}
@@ -1628,7 +1628,7 @@
 //           />
 
 //           <TextArea
-//             title="How did you get to know us?*"
+//             title="How did you hear about us?*"
 //             halfSize={true}
 //             register={register}
 //             errors={errors}

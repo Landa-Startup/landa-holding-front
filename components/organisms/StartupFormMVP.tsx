@@ -15,14 +15,12 @@ export default function StartupFormMVP({
   handlePitchDeckFileChange,
   handleBusinessPlanFileChange,
   handleFinancialFileChange,
-
-
 }: {
   register: any;
   errors: any;
-  handlePitchDeckFileChange:any;
-  handleBusinessPlanFileChange:any;
-  handleFinancialFileChange:any;
+  handlePitchDeckFileChange: any;
+  handleBusinessPlanFileChange: any;
+  handleFinancialFileChange: any;
 }) {
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
@@ -42,7 +40,7 @@ export default function StartupFormMVP({
 
   return (
     <>
-      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+      <div className="grid grid-cols-1 mt-6 mb-2 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
         <YesRadioButton
           title="Do you have Pitch deck?"
           register={register}
@@ -52,8 +50,7 @@ export default function StartupFormMVP({
           handleRadioChange={handleRadioPitchChange}
           selectedRadio={selectedRadioPitch}
           handleChangeFile={handlePitchDeckFileChange}
-          fileName='pitchDeckFile'
-
+          fileName="pitchDeckFile"
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -64,12 +61,14 @@ export default function StartupFormMVP({
           handleRadioChange={handleRadioBusinessChange}
           selectedRadio={selectedRadioBusiness}
           handleChangeFile={handleBusinessPlanFileChange}
-          fileName='businessPlanFile'
-
+          fileName="businessPlanFile"
         />
       </div>
       {(() => {
-        if ((Boolean(selectedRadioBusiness) === false) && (Boolean(selectedRadioPitch)) === false) {
+        if (
+          Boolean(selectedRadioBusiness) === false &&
+          Boolean(selectedRadioPitch) === false
+        ) {
           return (
             <div>
               <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -105,13 +104,44 @@ export default function StartupFormMVP({
                   />
                 </div>
               </div>
-              <StartupFormProblem register={register} errors={errors}/>
-              <StartupFormSolutions register={register} errors={errors}/>
-              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange}/>
+              <StartupFormProblem register={register} errors={errors} />
+              <StartupFormSolutions register={register} errors={errors} />
+              <StartupFormBusinessModel
+                register={register}
+                errors={errors}
+                handleFinancialFileChange={handleFinancialFileChange}
+              />
             </div>
           );
-        }else{
-          return <div></div>;
+        } else {
+          return (
+            <div>
+              <div className="col-start-1 col-span-2">
+                <TextArea
+                  title="Have you previously cooperated with investors or accelerators?"
+                  register={register}
+                  errors={errors}
+                  placeholder="Description"
+                  nameTextArea="cooperatedWithInvestors"
+                  patternMessage=""
+                  patternValue=""
+                  required=""
+                />
+              </div>
+              <div className="col-span-2">
+                <TextArea
+                  title="How did you hear about us?"
+                  register={register}
+                  errors={errors}
+                  placeholder="Description"
+                  nameTextArea="getToKnowUs"
+                  patternMessage=""
+                  patternValue=""
+                  required=""
+                />
+              </div>
+            </div>
+          );
         }
       })()}
     </>

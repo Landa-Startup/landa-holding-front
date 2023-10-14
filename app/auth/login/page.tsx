@@ -1,6 +1,18 @@
-import Login from '@/components/templates/Login';
-import React from 'react';
+// pages/login.js
+import LoginForm from '@/components/organisms/LoginForm';
+import { Metadata } from 'next';
 
-export default function page() {
-  return <Login />;
+// Define metadata for the page
+export const metadata: Metadata = {
+  title: 'Landa Holding | Login',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+};
+
+export default function LoginPage() {
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
 }

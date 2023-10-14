@@ -111,7 +111,7 @@ model InvestorRegistration {
   countryOfResidence  String
   provinceOfResidence String
   companyName         String
-  Interestes          String
+  interests           String
   preferredAreas      String
   howDidYouKnowUs     String
   createdAt           DateTime @default(now())

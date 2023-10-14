@@ -3,36 +3,59 @@ import Phone from '../atoms/IconPhone';
 import Email from '../atoms/IconEmail';
 import Location from '../atoms/IconLocation';
 import Link from 'next/link';
-
+import IconInstagram from '../atoms/IconInstagram';
+import IconWhatApp from '../atoms/IconWhatsApp';
+import IconLinkedinB from '../atoms/IconLinkedinB';
+import IconEmailB from '../atoms/IconEmailB';
 export default function ContactUsDescription() {
   return (
     <div>
-      <h1 className="text-5xl font-light">Landa Holding</h1>
+      <h1 className="text-5xl font-light font-gilda">Landa Holding</h1>
       <p className="my-5 text-base text-justify">
-        In Landa Holding, individuals will be trained based on their interests
+        In Landa academy, individuals will be trained based on their interests
         and capabilities. Necessary actions are taken at the Landa Acceleration
         Center to accelerate their unique abilities. Then, investment is made
         based on the investment priorities of developing the nurtured
         capabilities of individuals.
       </p>
+      <div className="flex flex-row space-x-3 ">
+        <Link
+          href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
+          target="_blank"
+        >
+          <IconInstagram />
+        </Link>
+        <Link href={'https://wa.me/989120539563'} target="_blank">
+          <IconWhatApp />
+        </Link>
+        <Link href={'mailto:info@landaholding.com'}>
+          <IconEmailB />
+        </Link>
+        <Link
+          href={'https://www.linkedin.com/company/landa-startup-inc'}
+          target="_blank"
+        >
+          <IconLinkedinB />
+        </Link>
+      </div>
       <div className="flex my-3">
         <Phone />
         <ul className="mx-4">
           <li className="font-semibold">Phone Call</li>
           {/* TODO: create component for below icons */}
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
-              <span>Canada:</span>
+              <span>Toronto:</span>
               <span className="text-[#AA8453]">+1 (416) 557-7622</span>
             </Link>
           </li>
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Tehran:</span>
               <span className="text-[#AA8453]">02188030167</span>
             </Link>
           </li>
-          <li>
+          <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Isfahan:</span>
               <span className="text-[#AA8453]">03131311914</span>
@@ -58,10 +81,8 @@ export default function ContactUsDescription() {
           <span className="font-semibold">Address</span>
           <ul className="mx-4 list-disc space-y-3">
             <li>Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
-            <li>
-              A3 Unit,Daneshvar tower, Eastern Daneshvar street, Tehran, Iran
-            </li>
-            <li>C5 Unit,Tala Building, Saadat Abad Ave, Isfahan, Iran</li>
+            <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
+            <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
           </ul>
         </div>
       </div>

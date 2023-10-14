@@ -6,24 +6,29 @@
 /* Define custom fonts with @font-face */
 @font-face {
   font-family: 'Gilda Display';
-  src: url('../public/static/fonts/GildaDisplay-Regular.ttf') format('truetype');
+  src: url('../public/static/fonts/GildaDisplay-Regular.ttf'),
+    local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Barlow';
-  src: url('../public/static/fonts/Barlow-Regular.ttf') format('truetype');
+  src: url('../public/static/fonts/Barlow-Regular.ttf'),
+    local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Condensed';
-  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf')
-    format('truetype');
+  src: url('../public/static/fonts/BarlowCondensed-Regular.ttf'),
+    local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Smooth scroll behavior for HTML */
@@ -42,7 +47,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #999999;
+  background-color: rgb(250 204 21);
   border-radius: 4px;
 }
 
@@ -77,26 +82,6 @@ img {
 /* Translate .btn2 span on hover */
 .btn2:hover span {
   transform: translateX(0);
-}
-
-/* Keyframe animation for "zoomIn" */
-@keyframes zoomIn {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-
-/* Apply "zoomIn" animation with custom timing */
-.zoom-in-animation {
-  animation: zoomIn 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
-}
-
-/* Class for opacity transition */
-.title-transition {
-  transition: opacity 0.5s ease-in-out; /* Add transition property for opacity */
 }
 
 /* Create a gradient overlay for elements with class "courses-overlay" */

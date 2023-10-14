@@ -3,26 +3,28 @@ import { Metadata } from 'next';
 import Hero from '@/components/templates/Hero';
 import LandaHoldingPriority from '@/components/templates/LandaHoldingPriority';
 import LatestStartups from '@/components/templates/LatestStartups';
-import ContactUs from '@/components/templates/ContactUs';
 import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 import AerialViewBusinessTeam from '@/components/templates/BusinessTeam';
 import HomeCardsContainer from '@/components/templates/HomeCardsContainer';
+import Partners from '@/components/templates/Partners';
+import HomeOurTeam from '@/components/templates/HomeOurTeam';
 
-// Define metadata for the page
 export const metadata: Metadata = {
   title: 'Landa Holding',
-  description: 'Page Desc',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
 export default function Page() {
   return (
     <div className="relative">
+
       {/* Hero section */}
       <Hero
         showLanda
         titles={['Acceleration', 'Investment', 'Academy']}
         subTitle="Feel The Future"
-        backgroundImage="businessman.png"
+        backgroundImage="Hero.png"
         leftImage="Landa.svg"
         showButton={false}
       />
@@ -31,9 +33,10 @@ export default function Page() {
       <HomeCardsContainer />
       <LandaHoldingBlack />
       <LandaHoldingPriority />
-      <AerialViewBusinessTeam />
+      <HomeOurTeam />
+      {/* <AerialViewBusinessTeam /> */}
       <LatestStartups />
-      <ContactUs />
+      <Partners />
     </div>
   );
 }

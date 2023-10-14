@@ -14,7 +14,7 @@ export default function Hero({
   showButton,
 }: {
   showLanda: boolean;
-  titles: string[] | string;
+  titles: string[];
   subTitle: string;
   buttonBg?: string;
   backgroundImage: string;
@@ -31,7 +31,7 @@ export default function Hero({
         setIsTitleChanging(true); // Start the animation
         setTimeout(() => {
           setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-        }, 500); // Delay the title change slightly to allow animation
+        }, 500);
       }, 3000);
 
       return () => clearInterval(interval);
@@ -45,7 +45,6 @@ export default function Hero({
   }, [titleIndex, titles]);
 
   useEffect(() => {
-    // Reset the animation flag when the title changes
     setIsTitleChanging(false);
   }, [currentTitle]);
 
@@ -53,54 +52,51 @@ export default function Hero({
     <div
       style={{
         backgroundImage: `url('/static/images/Home/Hero/${backgroundImage}')`,
-        backgroundPosition: 'center',
         backgroundSize: 'cover',
+        backgroundPositionX: '65%',
       }}
-      className="h-screen relative overflow-hidden"
+      className="h-[calc(100vh)] md:h-screen relative overflow-hidden brightness-75"
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
         <div
-          className={` ${
-            showLanda ? 'block' : 'hidden'
-          } text-center text-white text-2xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
+          className={` ${showLanda ? 'block' : 'hidden'
+            } text-center text-white text-xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
         >
           Landa Holding
         </div>
         <div
-          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-[3.6px] font-gilda text-center text-opacity-95 text-3xl ${
-            isTitleChanging
+          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl ${isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
-              : '' // Apply spin animation class when the title is changing
-          }`}
+              : ''
+            }`}
           style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
         >
           {currentTitle}
         </div>
-        <div className="hidden md:block text-center font-barlow text-neutral-50 text-opacity-95 text-4xl font-semibold leading-10 tracking-[2px]">
+
+        <div className="text-center font-condensed text-white text-opacity-95 text-2xl font-semibold leading-10 tracking-[2px]">
           {subTitle}
-        </div>
-        <div className="md:hidden text-center w-[300px] font-barlow text-neutral-50 text-[20px] md:text-4xl font-normal leading-8 md:leading-10 md:tracking-[2px]">
-          Landa Holding is an international investment company active in Iran
-          and Canada.
         </div>
         {showButton ? (
           <Button
             text="Register Now"
             size="notVisit"
-            bgColor={buttonBg}
             addedClass={buttonBg ? 'md:hidden' : 'block'}
+            goto="/"
           />
         ) : (
           <></>
         )}
         <Image
-          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-16 md:right-0 bottom-0"
+          loading="lazy"
+          className="w-[300px] h-[300px] sm:w-[305px] sm:h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] xl:h-[560px] xl:w-[420px] absolute -right-16 md:right-0 bottom-0 "
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}
           height={500}
         />
-        <Link
+        {/* <Link
+          aria-label="Scroll To Next Section"
           className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
           href={'#LandaHolding'}
         >
@@ -117,7 +113,7 @@ export default function Hero({
               d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
             />
           </svg>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
