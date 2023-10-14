@@ -18,8 +18,6 @@ export default function InvestorRegistrationForm() {
     email: '',
     countryOfResidence: '',
     provinceOfResidence: '',
-    streetAddressLine2: '',
-    postalCode: '',
     companyName: '',
     interests: '',
     positionInTeam: '',
@@ -102,7 +100,7 @@ export default function InvestorRegistrationForm() {
     sendFormData.append('companyName', formData.companyName);
     sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
     sendFormData.append('preferredAreas', formData.preferredAreas);
-    sendFormData.append('interestes', formData.interestes);
+    sendFormData.append('interests', formData.interests);
 
 
     try {

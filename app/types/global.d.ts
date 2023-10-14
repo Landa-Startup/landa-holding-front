@@ -47,7 +47,6 @@ interface InvestorRegistrationFormData {
   positionInTeam: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
-  interestes: string;
 }
 
 // Define an interface for partner membership form data
