@@ -92,7 +92,7 @@ export default function Partners() {
           <p className="text-primary text-xl md:text-4xl font-gilda">
             Join Our Business Partners
           </p>
-          <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[2.1px] md:tracking-[2.4px]  text-black lg:w-[422px]">
+          <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[2.1px] md:tracking-[2.4px]  text-black lg:w-[422px] text-center">
             At Landa Holding, we welcome strategic affiliations with international
             firms and qualified influencers alike. As an approved affiliate, you
             will receive co-branded support and future representations that wield

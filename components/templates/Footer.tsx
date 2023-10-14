@@ -17,12 +17,12 @@ export default function Footer() {
             <br />
           </div>
           <div className="mt-1 text-base font-normal  text-neutral-400 md:mr-10">
-            In Landa Academy, individuals will be trained based on their
+            {/* In Landa Academy, individuals will be trained based on their
             interests and capabilities. Necessary actions are taken at the Landa
             Acceleration Center to accelerate their unique abilities. Then,
             investment is made based on the investment priorities of developing
-            the nurtured capabilities of individuals.
-            <br />
+            the nurtured capabilities of individuals. */}
+            Landa Holding distinguishes itself through extensive charity work and world-class transaction capabilities that enable private business growth. The company connects reliable global investors to top startup opportunities by linking idea holders with relevant service providers.            <br />
           </div>
           <div className="w-[126px] h-[22px] flex flex-row justify-between items-center mt-2 ">
             <Link

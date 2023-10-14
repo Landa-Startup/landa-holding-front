@@ -20,24 +20,25 @@ export default function StoryOfLanda() {
           </span>
           <div className="flex flex-col text-[#000] font-barlow space-y-4">
             <p>
-              Landa International Holding commenced its activities in 2017 under
+              {/* Landa International Holding commenced its activities in 2017 under
               the name of FarshTech Investment Company and continued its
               operations as &quot;Tolo-e Roshan Pasargad&quot; with registration
-              number 70300 in Iran and Canada.
+              number 70300 in Iran and Canada. */}
+              Landa International Holding started its activity in Canada in 2017 as a company in the field of investment in startup planning, business planning, and collecting resources to develop pioneering startup businesses. After years of success and many successful projects, in 2021, Landa Holding was identified as a federal company, certified and verified in both Canada and Iran. This aim has been pursued since then even more thoroughly and passionately than ever.
             </p>
             <div className="flex flex-col">
-              <p>
+              {/* <p>
                 Furthermore, on January 1, 2021, Landa Holding transformed into
                 Federal Company.
-              </p>
-              <Link
+              </p> */}
+              {/* <Link
                 className="text-primary"
                 href={
                   'https://chat.google.com/dm/pz6RjUAAAAE/hCbpJ4Uw-54/hCbpJ4Uw-54?cls=10'
                 }
               >
                 Chat
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

@@ -34,6 +34,7 @@ export default function AboutusPersonalTabs({
       <div className="flex flex-col p-2  self-start">
         <Link
           href={linkedIn}
+          target='_blank'
           className="text-white rounded-full bg-[#222] p-2 opacity-75"
         >
           <svg
@@ -50,18 +51,18 @@ export default function AboutusPersonalTabs({
       </div>
 
       <div className=" pl-2 pb-2 self-start">
-        <Link href= {email} >
-        <IconRoundedEmail />
-      </Link>
+        <a href={email} >
+          <IconRoundedEmail />
+        </a>
       </div>
       <div className=" pl-2 pb-2 self-start" >
-            <Link href={website} >
-            <IconWeb/>
-          </Link>
+        <Link href={website} target='_blank'>
+          <IconWeb />
+        </Link>
       </div>
       <div className=" pl-2 self-start opacity-75  " >
-        <Link href={instagram}>
-        <IconRoundedInstagram/>
+        <Link href={instagram} target='_blank'>
+          <IconRoundedInstagram />
         </Link>
       </div>
       <div className="flex flex-col items-center px-4 pb-4 mt-40 lg:mt44  ">
