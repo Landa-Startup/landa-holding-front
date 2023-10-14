@@ -1,7 +1,17 @@
+'use client'
+import { DecodedToken } from 'app/types/global';
 import Image from 'next/image';
-import React from 'react';
+import { parseCookies } from 'nookies';
+import React, { useEffect, useState } from 'react';
 
 export default function Navbar() {
+  const [userData,setUserData] = useState<DecodedToken>({});
+  useEffect(() => {
+    const cookies = parseCookies();
+    const currentUser: DecodedToken = JSON.parse(cookies.currentUser);
+    setUserData(currentUser);
+  }, [])
+  console.log(userData)
   return (
     <div className="flex h-[calc(100vh)-5px]">
       <div className="flex bg-primary w-2/12 h-16 items-end pl-9 pb-2">
@@ -43,13 +53,13 @@ export default function Navbar() {
             <div className="w-10 h-10 relative">
               <Image
                 className="rounded-full border border-black"
-                src="/static/images/our-team/Personals/a10.png"
+                src={userData.image}
                 alt="Manager"
                 layout="fill"
               />
             </div>
             <div className="flex text-[#222] text-xl tracking-[0.5px] items-center gap-2">
-              <span>Mehrnoosh Heibati</span>
+              <span>{userData.first_name} {userData.last_name}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"

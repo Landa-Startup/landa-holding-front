@@ -15,11 +15,10 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <div>
-      <Navbar />
       <div className="w-[calc(100vh)-5px] h-screen flex space-x">
         <LeftSection />
         <MainSection />
-        <RightSection />
+        {/* <RightSection /> */}
       </div>
     </div>
   );

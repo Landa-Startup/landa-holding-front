@@ -7,20 +7,19 @@ import React from 'react';
 
 // Define metadata for the page
 export const metadata: Metadata = {
-  title: 'Landa Holding | Panel (Manager)',
+  title: 'Landa Holding | Panel (Employer)',
   description:
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
 export default function page() {
-
   return (
-    <div className='md:mt-24'>
+    <div>
       <Navbar />
       <div className="w-[calc(100vh)-5px] h-screen flex space-x">
         <LeftSection />
         <MainSection />
-        {/* <RightSection /> */}
+        <RightSection />
       </div>
     </div>
   );

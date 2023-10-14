@@ -133,6 +133,9 @@ interface DecodedToken {
   iat: number;
   role: string;
   user_id: number;
+  first_name: string;
+  last_name: string;
+  image: string;
 }
 
 export {
