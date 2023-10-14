@@ -98,7 +98,7 @@ export default function LoginPage() {
             {...register('password', {
               required: 'Your password is required.',
               minLength: {
-                value: 8,
+                value: 5,
                 message: 'Your password must be at least 8 characters long.',
               },
             })}
