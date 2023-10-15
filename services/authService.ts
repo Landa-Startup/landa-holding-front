@@ -7,7 +7,7 @@ import { DecodedToken } from 'app/types/global';
 const TOKEN_EXPIRATION_TIME = 30 * 60 * 1000; // 30 minutes
 
 export async function login(email: string, password: string) {
-    const response = await fetch('https://panel.landaholding.com/accounts/api/token/', {
+    const response = await fetch('http://localhost:8000/accounts/api/token/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
