@@ -30,6 +30,7 @@ export default function LoginPage() {
       // read from cookie
       const cookies = parseCookies();
       const currentUser: DecodedToken = JSON.parse(cookies.currentUser);
+      
       router.push(`/dashboard/${currentUser.role}`);
     }
   };

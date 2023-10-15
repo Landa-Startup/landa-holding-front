@@ -11,6 +11,7 @@ export default function Navbar() {
     const currentUser: DecodedToken = JSON.parse(cookies.currentUser);
     setUserData(currentUser);
   }, [])
+  userData.image = userData.image
   console.log(userData)
   return (
     <div className="flex h-[calc(100vh)-5px]">

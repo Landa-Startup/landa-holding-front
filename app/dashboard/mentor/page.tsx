@@ -19,7 +19,7 @@ export default function page() {
       <div className="w-[calc(100vh)-5px] h-screen flex space-x">
         <LeftSection />
         <MainSection />
-        <RightSection />
+        {/* <RightSection /> */}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { parseCookies } from 'nookies';
 import { DecodedToken } from 'app/types/global';
 export default function MainSection() {  
+
   return (
     <div className="overflow-x-auto mx-auto mt-10">
       <table className='table table-sm md:table-md lg:table-lg'>
