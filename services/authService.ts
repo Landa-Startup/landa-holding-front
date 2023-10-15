@@ -18,6 +18,7 @@ export async function login(email: string, password: string) {
     if (response.ok) {
         const { access } = await response.json();
         const decodedToken = jwtDecode<DecodedToken>(access);
+        decodedToken.jwt = access;
         // console.log(decodedToken);
         if (decodedToken) {
             setCookie(null, 'currentUser', JSON.stringify(decodedToken), {
