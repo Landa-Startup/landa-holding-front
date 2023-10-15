@@ -4,9 +4,13 @@ import ScrollButton from './ScrollButton';
 
 export default function Second() {
   return (
-    <div className="flex flex-col h-screen bg-[#FFFBE6] relative" id="Roadmap-1">
+    <div
+      className="flex flex-col h-screen bg-[#FFFBE6] relative"
+      id="Roadmap-1"
+    >
       <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
         <Image
+          loading="lazy"
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Seminar-amico (1) 1.svg'}
           width={500}
@@ -17,22 +21,22 @@ export default function Second() {
             Registration and participation in Optional courses
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
-            <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
+            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
+            <div className="w-[280px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.
             </div>
           </div>
-          <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
+          <div className="justify-start items-start gap-2 inline-flex ">
+            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
             <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
               Obtain A valid Certificate of achievement
             </div>
           </div>
         </div>
       </div>
-      <ScrollButton scrollTo="Roadmap-2" addedClass='mx-auto md:ml-28'/>
+      <ScrollButton scrollTo="Roadmap-2" addedClass="mx-auto md:ml-28" />
       <svg
         className="absolute bottom-0 right-[345px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,14 @@ export default function MagazineStartUpsCard({
     <div className="mb-16">
       {/* Image */}
       <div className="flex justify-center">
-        <Image className="" src={image} alt={title} width={320} height={420} />
+        <Image
+          loading="lazy"
+          className=""
+          src={image}
+          alt={title}
+          width={320}
+          height={420}
+        />
       </div>
 
       {/* Date */}

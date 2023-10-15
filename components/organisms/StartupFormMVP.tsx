@@ -130,7 +130,7 @@ export default function StartupFormMVP({
               </div>
               <div className="col-span-2">
                 <TextArea
-                  title="How did you get to know us?"
+                  title="How did you hear about us?"
                   register={register}
                   errors={errors}
                   placeholder="Description"

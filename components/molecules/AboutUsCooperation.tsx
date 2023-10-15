@@ -7,9 +7,9 @@ export default function AboutUsCooperation() {
     <div className="h-full py-10 text-center text-white bg-neutral-800">
       <div className="text-center">
         <p className="tracking-widest">LANDA HOLDING</p>
-        <p className="text-5xl not-italic leading-normal font-gilda">
-          Ceorporation
-        </p>
+        {/* <p className="text-5xl not-italic leading-normal font-gilda">
+          Cooperation
+        </p> */}
       </div>
       <div className="grid grid-cols-1 gap-10 px-10 md:grid-cols-2 lg:px-28">
         <div className="col-span-1">
@@ -30,6 +30,7 @@ export default function AboutUsCooperation() {
             <span className="mr-3">More</span>
             <Link href="/investor-registration">
               <Image
+                loading="lazy"
                 width={40}
                 height={40}
                 className="inline"
@@ -56,6 +57,7 @@ export default function AboutUsCooperation() {
             <span className="mr-3">More</span>
             <Link href="/partner-membership">
               <Image
+                loading="lazy"
                 width={40}
                 height={40}
                 className="inline"

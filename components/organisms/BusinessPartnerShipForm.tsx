@@ -97,9 +97,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your Name*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.fullName ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.fullName ? 'border-red-500' : ''
+                }`}
             />
             {errors.fullName && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -163,9 +162,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your Company Name*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.companyName ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.companyName ? 'border-red-500' : ''
+                }`}
             />
             {errors.companyName && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -189,9 +187,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your Phone Number*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.phoneNumber ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.phoneNumber ? 'border-red-500' : ''
+                }`}
             />
             {errors.phoneNumber && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -213,9 +210,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your Country Of Esidence*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.countryOfResidence ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.countryOfResidence ? 'border-red-500' : ''
+                }`}
             />
             {errors.countryOfResidence && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -237,9 +233,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your Country Of Esidence*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.streetAddressLine2 ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.streetAddressLine2 ? 'border-red-500' : ''
+                }`}
             />
             {errors.streetAddressLine2 && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -261,9 +256,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your Investment Ceiling*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.investmentCeiling ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.investmentCeiling ? 'border-red-500' : ''
+                }`}
             />
             {errors.investmentCeiling && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -283,9 +277,8 @@ export default function BusinessPartnerShiphtmlform() {
                 required: 'Your Birth Time is required.',
               })}
               placeholder="Your Birth Time*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.birthTime ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.birthTime ? 'border-red-500' : ''
+                }`}
             />
             {errors.birthTime && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -294,22 +287,21 @@ export default function BusinessPartnerShiphtmlform() {
             )}
             <br />
             <label htmlFor="" className="block mb-1 text-slate-950">
-              Province Of Residence
+              City Of Residence
             </label>
             <input
               id="provinceOfResidence"
               type="text"
               {...register('provinceOfResidence', {
-                required: 'Your province Of Residence is required.',
+                required: 'Your City Of Residence is required.',
                 pattern: {
                   value: /^[a-z ,.'-]+$/i,
-                  message: 'Enter a valid province Of Residence.',
+                  message: 'Enter a valid City Of Residence.',
                 },
               })}
-              placeholder="Your province Of Residence*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.provinceOfResidence ? 'border-red-500' : ''
-              }`}
+              placeholder="Your City Of Residence*"
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.provinceOfResidence ? 'border-red-500' : ''
+                }`}
             />
             {errors.provinceOfResidence && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -331,9 +323,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your zip Code*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.zipCode ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.zipCode ? 'border-red-500' : ''
+                }`}
             />
             {errors.zipCode && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -355,9 +346,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Your Position In Team*"
-              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.yourPositionInTeam ? 'border-red-500' : ''
-              }`}
+              className={`bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.yourPositionInTeam ? 'border-red-500' : ''
+                }`}
             />
             {errors.yourPositionInTeam && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -382,9 +372,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="Preferred Investment*"
-              className={`w-full bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.preferredInvestment ? 'border-red-500' : ''
-              }`}
+              className={`w-full bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.preferredInvestment ? 'border-red-500' : ''
+                }`}
             />
             {errors.preferredInvestment && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">
@@ -394,7 +383,7 @@ export default function BusinessPartnerShiphtmlform() {
           </div>
           <div className="mb-16">
             <label htmlFor="" className="block mb-2 text-slate-950">
-              How did you get to know us? *
+              How did you hear about us? *
             </label>
             <input
               id="way Know Us"
@@ -407,9 +396,8 @@ export default function BusinessPartnerShiphtmlform() {
                 },
               })}
               placeholder="way KnowUs*"
-              className={`w-full bg-amber-100 px-2 py-1 rounded-md shadow-md ${
-                errors.wayKnowUs ? 'border-red-500' : ''
-              }`}
+              className={`w-full bg-amber-100 px-2 py-1 rounded-md shadow-md ${errors.wayKnowUs ? 'border-red-500' : ''
+                }`}
             />
             {errors.wayKnowUs && (
               <p className="text-sm text-yellow-500 mb-4 mt-0.5">

@@ -9,6 +9,7 @@ export default function Logo({ route }: { route: 'holding' | 'academy' }) {
       <Link href={route === 'holding' ? '/' : '/academy'}>
         <div className="flex flex-col md:flex-row items-end">
           <Image
+            loading="lazy"
             className="w-10 h-10 md:w-12 md:h-14"
             src={
               route === 'holding'

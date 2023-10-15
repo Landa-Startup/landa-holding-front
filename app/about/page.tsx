@@ -5,10 +5,13 @@ import AboutUsProfile from '@/components/molecules/AboutUsProfile';
 import Banner from '@/components/molecules/Banner';
 import AboutUsCard from '@/components/molecules/AboutUsCard';
 import { Metadata } from 'next';
+import SubsidiaryCompanies from '@/components/templates/SubsidiaryCompanies';
+import StoryOfLanda from '@/components/templates/StoryOfLanda';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | About',
-  description: '',
+  description:
+    'Learn about Landa Holding, a forward-thinking company dedicated to innovation and excellence. Discover our mission, values, and the team behind our success. Join us on our journey towards a brighter future.',
 };
 
 export default function Page() {
@@ -43,8 +46,10 @@ export default function Page() {
         image="/static/images/aerial-view-business-team.png"
       />
       <AboutUsLandaHolding />
-      <AboutUsCooperation />
-      <div className="bg-whiteGold md:my-20 md:mx-12">
+      <SubsidiaryCompanies />
+      <StoryOfLanda />
+      {/* <AboutUsCooperation /> */}
+      {/* <div className="bg-whiteGold md:my-20 md:mx-12">
         {cards.map((card, index) => (
           <AboutUsCard
             reverse={card.reverse}
@@ -56,7 +61,7 @@ export default function Page() {
             link={card.link}
           />
         ))}
-      </div>
+      </div> */}
       <AboutUsProfile />
     </div>
   );

@@ -12,7 +12,7 @@ type ButtonProps = DetailedHTMLProps<
   type?: 'button' | 'reset' | 'submit';
   addedClass?: string;
   bgColor?: 'Primary' | 'Yellow';
-  goto?: string;
+  goto: string;
 };
 
 export default function Button({

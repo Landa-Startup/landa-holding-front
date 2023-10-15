@@ -4,11 +4,13 @@ import Button from '../Button';
 interface HomeCardsLeftProps {
   text: string;
   addedClass?: string;
+  link: string;
 }
 
 export default function HomeCardsLeft({
   text,
   addedClass,
+  link,
 }: HomeCardsLeftProps) {
   return (
     <div
@@ -22,7 +24,7 @@ export default function HomeCardsLeft({
           size="visit"
           type="button"
           text="Visit Now"
-          goto="/StartupsForm"
+          goto={link}
           bgColor="Primary"
         />
       </div>

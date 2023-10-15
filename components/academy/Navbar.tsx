@@ -18,11 +18,11 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'OUR TEAM', href: '/our-team' },
   ];
   const submenuItems = [
-    { label: 'CENTER OF INVESTOR', href: '/investor-registration' },
+    { label: 'INVESTOR CENTER', href: '/investor-registration' },
+    { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
     { label: 'OUR BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS', href: '/StartupsForm' },
     { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'Entrepreneurs', href: '/entrepreneurs' },
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -87,7 +87,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     className="text-2xl hover:text-primary hover:bg-base-200"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    WORK WITH US
+                    FORMS
                   </summary>
                   <ul
                     className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${

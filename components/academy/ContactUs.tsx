@@ -8,7 +8,7 @@ export default function ContactUs() {
         <div className="md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-2xl md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="md:w-[413px] md:h-[58px] text-center text-black text-3xl md:text-5xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px]">
+        <div className="md:w-[413px] md:h-[58px] text-center text-black text-3xl md:text-5xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px] ">
           Contact Us
         </div>
       </div>
@@ -32,6 +32,7 @@ export default function ContactUs() {
         Visit Now
       </button>
       <Image
+        loading="lazy"
         className="-mb-4 md:absolute md:-left-16 md:-bottom-[5px]"
         src={'/static/images/Academy/Collab-pana 1.svg'}
         alt="Academy Contact Us"

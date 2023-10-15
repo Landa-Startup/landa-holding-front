@@ -32,6 +32,12 @@
       "@/types/*": [
         "types/*"
       ],
+      "@/services/*": [
+        "services/*"
+      ],
+      "@/router/*": [
+        "router/*"
+      ],
     },
     "plugins": [
       {

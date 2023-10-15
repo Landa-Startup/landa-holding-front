@@ -79,7 +79,7 @@ export default function LandaMagazine() {
               </svg>
             </button>
           </div>
-          <Button text="Read More" size="visit" addedClass='self-center'/>
+          <Button text="Read More" size="visit" addedClass='self-center' goto='/'/>
         </div>
       </div>
     </div>

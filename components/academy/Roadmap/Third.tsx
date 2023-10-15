@@ -10,6 +10,7 @@ export default function Fourth() {
     >
       <div className="flex flex-col md:flex-row-reverse justify-evenly pyb-8 pt-16 z-10 px-10 space-y-5">
         <Image
+          loading="lazy"
           alt="Landa academy"
           src={'static/images/Academy/Roadmap/Office work-amico 1.svg'}
           width={500}
@@ -46,7 +47,7 @@ export default function Fourth() {
         <path
           d="M355.602 490.491C355.602 444.422 348.184 397.858 344.122 352.017C342.37 332.248 340.75 316.251 335.512 297.919C333.338 290.308 328.606 283.614 327.189 275.82C317.603 223.097 287.294 183.693 243.387 153.561C228.756 143.52 214.108 132.78 199.765 122.279C177.681 106.11 151.156 98.7284 127.155 86.1176C82.0459 62.4161 35.7405 37.8231 1.61621 1.5"
           stroke="#F1F8EC"
-          stroke-width="3"
+          strokeWidth="3"
           stroke-linecap="round"
           stroke-dasharray="6 6"
         />
