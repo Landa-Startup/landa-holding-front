@@ -49,7 +49,7 @@ export default function AboutUsProfile() {
           PROFESSIONALS
         </h2>
         <h1 className="text-3xl font-normal leading-normal font-gilda md:text-4xl">
-          Managing Directors
+          Board of Directors
         </h1>
       </div>
 
