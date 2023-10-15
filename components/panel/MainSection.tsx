@@ -1,60 +1,87 @@
-'use client'
+'use client';
 import React, { useEffect } from 'react';
 import { parseCookies } from 'nookies';
 import { DecodedToken } from 'app/types/global';
-export default function MainSection() {  
-
+import Table from './Table';
+export default function MainSection() {
   return (
-    <div className="overflow-x-auto mx-auto mt-10">
-      <table className='table table-sm md:table-md lg:table-lg'>
-        {/* head */}
-        <thead>
-          <tr className="bg-tableHeader text-stone-500">
-            <th></th>
-            <th>Employee Name</th>
-            <th>Employer Name</th>
-            <th>Type Of Leave</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* row 1 */}
-          <tr>
-            <th>1</th>
-            <td>Cy Ganderton</td>
-            <td>Quality Control Specialist</td>
-            <td>illness</td>
-            <td>2023/07/12</td>
-            <td>12:30</td>
-            <td className="badge badge-success md:mt-2.5">accent</td>
-          </tr>
-          {/* row 2 */}
-          <tr>
-            <th>2</th>
-            <td>Hart Hagerty</td>
-            <td>Desktop Support Technician</td>
-            <td>entitlement</td>
-            <td>2023/07/12</td>
-            <td>12:30</td>
-            <td className="badge badge-info md:mt-2.5">accent</td>
-
-          </tr>
-          {/* row 3 */}
-          <tr>
-            <th>3</th>
-            <td>Brice Swyre</td>
-            <td>Tax Accountant</td>
-            <td>entitlement</td>
-            <td>2023/07/12</td>
-            <td>12:30</td>
-            <td className="badge badge-error  md:mt-2.5">accent</td>
-
-          </tr>
-          
-        </tbody>
-      </table>
+    <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
+      <Table
+        header="Employees leave permissions"
+        tableHead={[
+          'No.',
+          'Employee Name',
+          'Employer Name',
+          'Type Of Leave',
+          'Date',
+          'Time',
+          'Status',
+        ]}
+        tableData={[
+          {
+            employerName: 'Cy Ganderton',
+            employeeName: 'Quality Control Specialist',
+            typeOfLeave: 'illness',
+            date: '2023/07/12',
+            time: '12:30',
+            status: 'Approved',
+          },
+          {
+            employerName: 'Cy Ganderton',
+            employeeName: 'Quality Control Specialist',
+            typeOfLeave: 'illness',
+            date: '2023/07/12',
+            time: '12:30',
+            status: 'Pending',
+          },
+          {
+            employerName: 'Cy Ganderton',
+            employeeName: 'Quality Control Specialist',
+            typeOfLeave: 'illness',
+            date: '2023/07/12',
+            time: '12:30',
+            status: 'Rejected',
+          },
+        ]}
+      />
+      <Table
+        header="Employers leave permissions"
+        tableHead={[
+          'No.',
+          'Employee Name',
+          'Employer Name',
+          'Type Of Leave',
+          'Date',
+          'Time',
+          'Status',
+        ]}
+        tableData={[
+          {
+            employerName: 'Cy Ganderton',
+            employeeName: 'Quality Control Specialist',
+            typeOfLeave: 'illness',
+            date: '2023/07/12',
+            time: '12:30',
+            status: 'Approved',
+          },
+          {
+            employerName: 'Cy Ganderton',
+            employeeName: 'Quality Control Specialist',
+            typeOfLeave: 'illness',
+            date: '2023/07/12',
+            time: '12:30',
+            status: 'Pending',
+          },
+          {
+            employerName: 'Cy Ganderton',
+            employeeName: 'Quality Control Specialist',
+            typeOfLeave: 'illness',
+            date: '2023/07/12',
+            time: '12:30',
+            status: 'Rejected',
+          },
+        ]}
+      />
     </div>
   );
 }
