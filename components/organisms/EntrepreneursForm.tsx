@@ -32,7 +32,7 @@ export default function EntrepreneursForm() {
   // TODO: change Send to send(start with small letter)
   const [Send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -43,18 +43,17 @@ export default function EntrepreneursForm() {
     fetchCsrfToken();
   }, []);
 
-
   const onSubmit = async (data: Entrepreuneur) => {
     setIsSubmitting(true);
     setSend(true);
     try {
       const response = await apiClient.post(
-        "entrepreuneur-form",
+        'entrepreuneur-form',
         JSON.stringify(data),
         {
           headers: {
-            "X-CSRFToken": csrfToken,
-            "Content-Type": "application/json",
+            'X-CSRFToken': csrfToken,
+            'Content-Type': 'application/json',
           },
         }
       );
@@ -170,7 +169,6 @@ export default function EntrepreneursForm() {
                 patternMessage={''}
               />
             </div>
-
           </div>
           <div className="text-center">
             <button

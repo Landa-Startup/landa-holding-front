@@ -29,7 +29,7 @@ export default function ContactUsForm() {
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -45,12 +45,12 @@ export default function ContactUsForm() {
     setSend(true);
     try {
       const response = await apiClient.post(
-        "contactUs-form",
+        'contactUs-form',
         JSON.stringify(formData),
         {
           headers: {
-            "X-CSRFToken": csrfToken,
-            "Content-Type": "application/json",
+            'X-CSRFToken': csrfToken,
+            'Content-Type': 'application/json',
           },
         }
       );
@@ -92,8 +92,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Name*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.name ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.name ? 'border-red-500' : ''
+              }`}
             />
             {errors.name && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -113,8 +114,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Email*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.email ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.email ? 'border-red-500' : ''
+              }`}
             />
             {errors.email && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -134,8 +136,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Number*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.number ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.number ? 'border-red-500' : ''
+              }`}
             />
             {errors.number && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -155,8 +158,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Subject*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.subject ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.subject ? 'border-red-500' : ''
+              }`}
             />
             {errors.subject && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -169,8 +173,9 @@ export default function ContactUsForm() {
             {...register('message', { required: 'Message is required.' })}
             rows={4}
             cols={20}
-            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${errors.message ? 'border-red-500' : ''
-              }`}
+            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${
+              errors.message ? 'border-red-500' : ''
+            }`}
             placeholder="Message*"
           ></textarea>
           {errors.message && (

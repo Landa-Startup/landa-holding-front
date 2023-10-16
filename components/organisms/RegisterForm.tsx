@@ -26,15 +26,15 @@ export default function RegisterForm() {
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
 
-  const [formData, setFormData] = useState<FormData>(
-    initialFormData
-  );
+  const [formData, setFormData] = useState<FormData>(initialFormData);
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
+      const token = await GetCsrfToken(
+        'https://panel.landaholding.com/get-csrf-token'
+      );
       setCsrfToken(token);
     }
 
@@ -46,12 +46,12 @@ export default function RegisterForm() {
     setSend(true);
     try {
       const response = await apiClient.post(
-        "accounts/register",
+        'accounts/register',
         JSON.stringify(data),
         {
           headers: {
-            "X-CSRFToken": csrfToken,
-            "Content-Type": "application/json",
+            'X-CSRFToken': csrfToken,
+            'Content-Type': 'application/json',
           },
         }
       );
@@ -72,11 +72,11 @@ export default function RegisterForm() {
       setFormData(initialFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
-      }, 10000); // 10 seconds in milliseconds  
+      }, 10000); // 10 seconds in milliseconds
     }
   };
   return (
-    <div className='container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent'>
+    <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <Input
@@ -106,11 +106,12 @@ export default function RegisterForm() {
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>
-        <div className=''>
-          <button className="ml-auto btn btn-accent" type='submit'>Register</button>
-
+        <div className="">
+          <button className="ml-auto btn btn-accent" type="submit">
+            Register
+          </button>
         </div>
       </form>
     </div>
-  )
+  );
 }

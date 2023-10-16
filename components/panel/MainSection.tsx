@@ -14,11 +14,10 @@ interface TableData {
 }
 
 export default function MainSection() {
-
   const [data, setData] = useState<TableData[]>([]);
 
   useEffect(() => {
-    fetchData('http://localhost:8000/panel/get-vacation-forms')
+    fetchData('https://panel.landaholding.com/panel/get-vacation-forms')
       .then((result) => {
         setData(result);
       })
@@ -26,7 +25,7 @@ export default function MainSection() {
         console.error('Error fetching data:', error);
       });
   }, []);
-  console.log(data)
+  console.log(data);
   return (
     <div>
 

@@ -80,10 +80,10 @@ export default function JobForm() {
     try {
       console.log('new form data ', formData);
 
-      const response = await apiClient.post("apply-job-form", sendFormData, {
+      const response = await apiClient.post('apply-job-form', sendFormData, {
         headers: {
-          "content-type": "multipart/form-data",
-          "X-CSRFToken": csrfToken,
+          'content-type': 'multipart/form-data',
+          'X-CSRFToken': csrfToken,
         },
       });
 
@@ -116,11 +116,13 @@ export default function JobForm() {
         <>
           <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
             <>
-              <div className='text-center'>
-                <p className='mb-20 font-serif text-2xl tracking-wide'>Apply job Form</p>
+              <div className="text-center">
+                <p className="mb-20 font-serif text-2xl tracking-wide">
+                  Apply job Form
+                </p>
               </div>
               <div>
-                <p className='mb-4 text-4xl'>Personal Information</p>
+                <p className="mb-4 text-4xl">Personal Information</p>
               </div>
               <div>
                 <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
@@ -187,26 +189,24 @@ export default function JobForm() {
                     className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
-
                 </div>
-                <div className='col-span-1'>
+                <div className="col-span-1">
                   <label htmlFor="cvFileInput">CV File:</label>
                   <input
                     type="file"
                     id="cvFileInput"
                     className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
-                    {...register("cvFile", {
+                    {...register('cvFile', {
                       required: 'CV File is Required',
                     })}
                     onChange={handleChangeFile} // must use onChange event handler after register
                   />
-                  {errors["cvFile"] && (
+                  {errors['cvFile'] && (
                     <span className="mt-4 text-sm text-yellow-500">
-                      {errors["cvFile"].message?.toString()}
+                      {errors['cvFile'].message?.toString()}
                     </span>
                   )}
                 </div>
-
               </div>
               <div className="text-center">
                 <button
@@ -218,7 +218,12 @@ export default function JobForm() {
                 </button>
               </div>
             </form>
-            <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification} />
+            <NotificationSendForm
+              submitting={isSubmitting}
+              success={isSuccess}
+              sendStatus={send}
+              show={showNotification}
+            />
           </div>
         </>
         <form onSubmit={handleSubmit(onSubmit)}>
