@@ -13,73 +13,76 @@ interface TableData {
   status: string;
 }
 
-export default function MainSection() {  
+export default function MainSection() {
 
   const [data, setData] = useState<TableData[]>([]);
 
   useEffect(() => {
     fetchData('http://localhost:8000/panel/get-vacation-forms')
       .then((result) => {
-        setData(result); 
+        setData(result);
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);  
+        console.error('Error fetching data:', error);
       });
   }, []);
   console.log(data)
   return (
-    <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
-      <Table
-        header="Employees leave permissions"
-        tableHead={[
-          'No.',
-          'Employee Name',
-          'Employer Name',
-          'Type Of Leave',
-          'Date',
-          'Time',
-          'Status',
-        ]}
-        tableData={data}
-      />
-      <Table
-        header="Employers leave permissions"
-        tableHead={[
-          'No.',
-          'Employee Name',
-          'Employer Name',
-          'Type Of Leave',
-          'Date',
-          'Time',
-          'Status',
-        ]}
-        tableData={[
-          {
-            employerName: 'Cy Ganderton',
-            employeeName: 'Quality Control Specialist',
-            typeOfLeave: 'illness',
-            date: '2023/07/12',
-            time: '12:30',
-            status: 'Approved',
-          },
-          {
-            employerName: 'Cy Ganderton',
-            employeeName: 'Quality Control Specialist',
-            typeOfLeave: 'illness',
-            date: '2023/07/12',
-            time: '12:30',
-            status: 'Pending',
-          },
-          {
-            employerName: 'Cy Ganderton',
-            employeeName: 'Quality Control Specialist',
-            typeOfLeave: 'illness',
-            date: '2023/07/12',
-            time: '12:30',
-            status: 'Rejected',
-          },
-        ]}
-      />
+    <div>
+
     </div>
+    // <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
+    //   <Table
+    //     header="Employees leave permissions"
+    //     tableHead={[
+    //       'No.',
+    //       'Employee Name',
+    //       'Employer Name',
+    //       'Type Of Leave',
+    //       'Date',
+    //       'Time',
+    //       'Status',
+    //     ]}
+    //     tableData={data}
+    //   />
+    //   <Table
+    //     header="Employers leave permissions"
+    //     tableHead={[
+    //       'No.',
+    //       'Employee Name',
+    //       'Employer Name',
+    //       'Type Of Leave',
+    //       'Date',
+    //       'Time',
+    //       'Status',
+    //     ]}
+    //     tableData={[
+    //       {
+    //         employerName: 'Cy Ganderton',
+    //         employeeName: 'Quality Control Specialist',
+    //         typeOfLeave: 'illness',
+    //         date: '2023/07/12',
+    //         time: '12:30',
+    //         status: 'Approved',
+    //       },
+    //       {
+    //         employerName: 'Cy Ganderton',
+    //         employeeName: 'Quality Control Specialist',
+    //         typeOfLeave: 'illness',
+    //         date: '2023/07/12',
+    //         time: '12:30',
+    //         status: 'Pending',
+    //       },
+    //       {
+    //         employerName: 'Cy Ganderton',
+    //         employeeName: 'Quality Control Specialist',
+    //         typeOfLeave: 'illness',
+    //         date: '2023/07/12',
+    //         time: '12:30',
+    //         status: 'Rejected',
+    //       },
+    //     ]}
+    //   />
+    // </div>
   );
 }
