@@ -7,35 +7,37 @@ import { DecodedToken } from 'app/types/global';
 const TOKEN_EXPIRATION_TIME = 30 * 60 * 1000; // 30 minutes
 
 export async function login(email: string, password: string) {
-    const response = await fetch('http://localhost:8000/accounts/api/token/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-    });
-
-    if (response.ok) {
-        const { access } = await response.json();
-        const decodedToken = jwtDecode<DecodedToken>(access);
-        decodedToken.jwt = access;
-        // console.log(decodedToken);
-        if (decodedToken) {
-            setCookie(null, 'currentUser', JSON.stringify(decodedToken), {
-                maxAge: TOKEN_EXPIRATION_TIME,
-                path: '/',
-            });
-            // console.log("cookies:", parseCookies());
-            // setCookie(null, 'refreshToken', refreshToken, {
-            //     maxAge: 30 * 24 * 60 * 60, // 30 days
-            //     path: '/',
-            // });
-        }
-        return decodedToken;
-
-    } else {
-        throw new Error('Failed to login');
+  const response = await fetch(
+    'https://panel.landaholding.com/accounts/api/token/',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
     }
+  );
+
+  if (response.ok) {
+    const { access } = await response.json();
+    const decodedToken = jwtDecode<DecodedToken>(access);
+    decodedToken.jwt = access;
+    // console.log(decodedToken);
+    if (decodedToken) {
+      setCookie(null, 'currentUser', JSON.stringify(decodedToken), {
+        maxAge: TOKEN_EXPIRATION_TIME,
+        path: '/',
+      });
+      // console.log("cookies:", parseCookies());
+      // setCookie(null, 'refreshToken', refreshToken, {
+      //     maxAge: 30 * 24 * 60 * 60, // 30 days
+      //     path: '/',
+      // });
+    }
+    return decodedToken;
+  } else {
+    throw new Error('Failed to login');
+  }
 }
 // export async function refreshAccessToken() {
 //     const refreshToken = parseCookies(null).refreshToken;

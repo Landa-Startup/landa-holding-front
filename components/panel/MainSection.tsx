@@ -13,20 +13,19 @@ interface TableData {
   status: string;
 }
 
-export default function MainSection() {  
-
+export default function MainSection() {
   const [data, setData] = useState<TableData[]>([]);
 
   useEffect(() => {
-    fetchData('http://localhost:8000/panel/get-vacation-forms')
+    fetchData('https://panel.landaholding.com/panel/get-vacation-forms')
       .then((result) => {
-        setData(result); 
+        setData(result);
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);  
+        console.error('Error fetching data:', error);
       });
   }, []);
-  console.log(data)
+  console.log(data);
   return (
     <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
       <Table
