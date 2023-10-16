@@ -33,7 +33,7 @@ export default function ContactUsForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
       setCsrfToken(token);
     }
 

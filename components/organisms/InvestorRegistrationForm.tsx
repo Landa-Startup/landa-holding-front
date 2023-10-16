@@ -50,7 +50,7 @@ export default function InvestorRegistrationForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken('http://localhost:8000/get-csrf-token');
+      const token = await GetCsrfToken('https://panel.landaholding.com/get-csrf-token');
       setCsrfToken(token);
     }
     fetchCsrfToken();
@@ -214,7 +214,7 @@ export default function InvestorRegistrationForm() {
                 onChange={handleCountryChange}
               >
                 <option value="" selected>Select a country</option>
-                {countries.map((country:any, index:number) => (
+                {countries.map((country: any, index: number) => (
                   <option key={index} value={country.text}>
                     {country.text}
                   </option>

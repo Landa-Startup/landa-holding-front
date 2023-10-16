@@ -36,7 +36,7 @@ export default function EntrepreneursForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
       setCsrfToken(token);
     }
 
@@ -173,21 +173,21 @@ export default function EntrepreneursForm() {
 
           </div>
           <div className="text-center">
-          <button
-            type="submit"
-            className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
-            disabled={Send}
-          >
-            {Send ? 'Submitting ....' : 'Submit'}
-          </button>
-        </div>
+            <button
+              type="submit"
+              className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
+              disabled={Send}
+            >
+              {Send ? 'Submitting ....' : 'Submit'}
+            </button>
+          </div>
         </form>
         <NotificationSendForm
-        submitting={isSubmitting}
-        success={isSuccess}
-        sendStatus={Send}
-        show={showNotification}
-      />
+          submitting={isSubmitting}
+          success={isSuccess}
+          sendStatus={Send}
+          show={showNotification}
+        />
       </div>
     </>
   );

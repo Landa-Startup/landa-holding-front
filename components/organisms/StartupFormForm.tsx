@@ -142,7 +142,7 @@ export default function StartupFormForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
       setCsrfToken(token);
     }
 
@@ -176,7 +176,7 @@ export default function StartupFormForm() {
       countryOfResidence: event.target.value, // Update the formData state
     })
   };
-  
+
   const onSubmit = async (formData: StartupsFormData) => {
     setIsSubmitting(true);
     setSend(true);
@@ -308,7 +308,7 @@ export default function StartupFormForm() {
           <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <StartupFormPersonalInformation register={register} errors={errors} selectedCountry={selectedCountry} handleCountryChange={handleCountryChange} countries={countries}/>
+          <StartupFormPersonalInformation register={register} errors={errors} selectedCountry={selectedCountry} handleCountryChange={handleCountryChange} countries={countries} />
 
           <div>
             <p className="mb-4 text-4xl">Growth and Scale-up</p>
