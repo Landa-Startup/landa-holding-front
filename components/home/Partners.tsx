@@ -92,15 +92,15 @@ export default function Partners() {
           <p className="text-primary text-xl md:text-4xl font-gilda">
             Join Our Business Partners
           </p>
-          <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[2.1px] md:tracking-[2.4px]  text-black lg:w-[422px] text-center">
-            At Landa Holding, we welcome strategic affiliations with international
-            firms and qualified influencers alike. As an approved affiliate, you
-            will receive co-branded support and future representations that wield
-            substantial influence within the business landscape. To become an
-            affiliate, please complete our free questionnaire for our confidential
-            review.
+          <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[1.6px] md:tracking-[2.4px]  text-black lg:w-[500px] text-center">
+            At Landa Holding, we welcome strategic affiliations with
+            international firms and qualified influencers alike. As an approved
+            affiliate, you will receive co-branded support and future
+            representations that wield substantial influence within the business
+            landscape. To become an affiliate, please complete our free
+            questionnaire for our confidential review.
           </p>
-          <div className=''>
+          <div className="">
             <Button
               size="notVisit"
               text="Join Us"
@@ -108,7 +108,6 @@ export default function Partners() {
               bgColor="Primary"
             />
           </div>
-
         </div>
 
         <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
@@ -123,21 +122,17 @@ export default function Partners() {
             />
           ))}
         </div>
-
-
       </div>
-      <div className='md:hidden flex justify-center items-center  p-5'>
+      <div className="md:hidden flex justify-center items-center  p-5">
         <Button
           size="visit"
           type="button"
           text="Visit Now"
           goto="/partner-membership"
           bgColor="Primary"
-          className=''
+          className=""
         />
       </div>
     </div>
-
-
   );
 }

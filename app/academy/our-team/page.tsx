@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '@/components/common/Banner';
 import PersonalTab from '@/components/common/PersonalTab';
 import { Metadata } from 'next';
-import TeamRolesContainer from '@/components/templates/TeamRolesContainer';
+import TeamRolesContainer from 'app/academy/our-team/TeamRolesContainer';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Our Team',
