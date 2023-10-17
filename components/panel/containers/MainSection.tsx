@@ -38,8 +38,7 @@ export default function MainSection() {
   }, []);
   console.log(employee);
   return (
-    <>
-      <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
+      <div className="flex flex-col gap-14 overflow-x-auto md:mx-auto mt-10 ml-4">
         <Table
           header="Employees leave permissions"
           tableHead={[
@@ -66,8 +65,7 @@ export default function MainSection() {
           ]}
           tableData={employee}
         />
-      </div>
       <LeaveForm />
-    </>
+      </div>
   );
 }

@@ -23,7 +23,7 @@ export default function LeaveForm() {
           leave permission Form
         </span>
       </div>
-      <div className="grid grid-cols-3 gap-9">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
         <LeaveFormRadio
           title="Leave (daily - hourly)"
           items={['Hourly leave', 'Day off']}
