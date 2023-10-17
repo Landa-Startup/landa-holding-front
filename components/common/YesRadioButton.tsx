@@ -57,6 +57,7 @@ export default function YesRadioButton({
           <div className="flex justify-center">
             <input
               type="file"
+              required
               className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
               {...register(fileName, { required: '' })}
               onChange={handleChangeFile} // Use onChange event handler after register
