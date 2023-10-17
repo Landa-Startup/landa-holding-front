@@ -57,7 +57,7 @@ export default function page() {
             on their journey.
           </p>
         </div>
-        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-6 md:mt-16 relative px-8">
+        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-8">
           <div className="flex items-center gap-2 mt-10 md:mt-[77px]">
             <svg
               className="w-4 h-4"
@@ -91,7 +91,7 @@ export default function page() {
             width={71}
             height={60}
           />
-          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] pb-3 mt-6">
+          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] pb-3 mt-6 md:ml-48 lg:ml-20 xl:ml-0">
             <p>
               In the Landa Accelerator division, innovative ideas and startups
               are carefully examined and evaluated. After confirming the value
@@ -109,7 +109,7 @@ export default function page() {
             <span className="text-[#AA8453] font-gilda text-3xl mt-8">
               Accelerator Process
             </span>
-            <div className="grid grid-cols-1 md:grid-cols-2 font-barlow text-[#000] leading-9 z-10">
+            <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-4 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 ">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>

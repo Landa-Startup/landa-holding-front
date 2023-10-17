@@ -30,7 +30,7 @@ export default function StartupFormProperty({
           nameTextArea="startupRevenue"
           patternMessage=""
           patternValue=""
-          required=""
+          required="this is required!"
         />
         </div>
         <div className="col-span-2">
@@ -42,7 +42,7 @@ export default function StartupFormProperty({
             nameTextArea="monthlyIncome"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
         {/* <div className="col-span-2">
@@ -66,7 +66,7 @@ export default function StartupFormProperty({
             nameTextArea="currentRaisedFunding"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
         <div className="col-span-2">
@@ -78,7 +78,7 @@ export default function StartupFormProperty({
             nameTextArea="neededCapital"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
 
