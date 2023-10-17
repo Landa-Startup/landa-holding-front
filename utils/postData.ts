@@ -1,26 +1,25 @@
-// utils/fetchData.ts
-
 import { DecodedToken } from 'app/types/global';
 import { parseCookies } from 'nookies';
 
-export async function fetchData(url: string) {
+export async function postData(url: string, body: object): Promise<Response> {
   const cookies = parseCookies();
   const currentUser: DecodedToken | null = JSON.parse(cookies.currentUser);
   const jwt = currentUser?.jwt;
-  // url = `${process.env.DJANGO_HOST_URL}${url}`;
   try {
-    const response = await fetch(url, {
+    const fetchResponse = await fetch(url, {
+      method: 'POST',
       headers: {
         Authorization: `Bearer ${jwt}`,
+        'Content-Type': 'application/json',
       },
+      body: JSON.stringify(body),
     });
-
-    if (!response.ok) {
+    if (!fetchResponse.ok) {
       throw new Error('Network response was not ok');
     }
 
-    const data = await response.json();
-    return data;
+    const responseData = await fetchResponse.json();
+    return responseData;
   } catch (error) {
     console.error('Error fetching data:', error);
     throw error;

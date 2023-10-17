@@ -15,18 +15,28 @@ interface TableData {
 
 export default function MainSection() {  
 
-  const [data, setData] = useState<TableData[]>([]);
+  const [employer, setEmployer] = useState<TableData[]>([]);
+  const [employee, setEmployee] = useState<TableData[]>([]);
 
   useEffect(() => {
+    // employer data
+    fetchData('http://localhost:8000/panel/staff-vacation-form')
+      .then((result) => {
+        setEmployer(result); 
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);  
+      });
+    // employee data
     fetchData('http://localhost:8000/panel/get-vacation-forms')
       .then((result) => {
-        setData(result); 
+        setEmployee(result); 
       })
       .catch((error) => {
         console.error('Error fetching data:', error);  
       });
   }, []);
-  console.log(data)
+  console.log(employee)
   return (
     <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
       <Table
@@ -40,7 +50,7 @@ export default function MainSection() {
           'Time',
           'Status',
         ]}
-        tableData={data}
+        tableData={employer}
       />
       <Table
         header="Employers leave permissions"
@@ -53,32 +63,7 @@ export default function MainSection() {
           'Time',
           'Status',
         ]}
-        tableData={[
-          {
-            employerName: 'Cy Ganderton',
-            employeeName: 'Quality Control Specialist',
-            typeOfLeave: 'illness',
-            date: '2023/07/12',
-            time: '12:30',
-            status: 'Approved',
-          },
-          {
-            employerName: 'Cy Ganderton',
-            employeeName: 'Quality Control Specialist',
-            typeOfLeave: 'illness',
-            date: '2023/07/12',
-            time: '12:30',
-            status: 'Pending',
-          },
-          {
-            employerName: 'Cy Ganderton',
-            employeeName: 'Quality Control Specialist',
-            typeOfLeave: 'illness',
-            date: '2023/07/12',
-            time: '12:30',
-            status: 'Rejected',
-          },
-        ]}
+        tableData={employee}
       />
     </div>
   );
