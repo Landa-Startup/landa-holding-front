@@ -1,4 +1,7 @@
 import React from 'react';
+import LeaveFormRadio from './LeaveFormRadio';
+import LeaveFormFromTo from './LeaveFormFromTo';
+import LeaveFormDate from './LeaveFormDate';
 
 export default function LeaveForm() {
   return (
@@ -21,33 +24,25 @@ export default function LeaveForm() {
         </span>
       </div>
       <div className="grid grid-cols-3 gap-9">
-        <div className="flex flex-col">
-          <span className="font-barlow text-base">Leave (daily - hourly)*</span>
-          <div className="flex gap-9 p-5">
-            <div className="flex gap-4">
-              <input
-                className="radio"
-                type="radio"
-                name="leave"
-                value="daily"
-              />
-              <label className="font-barlow text-sm text-[#939393]">
-                Hourly leave
-              </label>
-            </div>
-            <div className="flex gap-4">
-              <input
-                className="radio"
-                type="radio"
-                name="leave"
-                value="Hourly"
-              />
-              <label className="font-barlow text-sm text-[#939393]">
-                Leave (daily - hourly)*
-              </label>
-            </div>
-          </div>
-        </div>
+        <LeaveFormRadio
+          title="Leave (daily - hourly)"
+          items={['Hourly leave', 'Day off']}
+        />
+        <LeaveFormFromTo title="I want leave from" />
+        <LeaveFormDate title="From Date" />
+        <LeaveFormDate title="To Date" />
+        <LeaveFormRadio
+          title="Type of leave"
+          items={['entitlement', 'illness']}
+        />
+      </div>
+      <div className="flex">
+        <button className="bg-primary text-white font-barlow text-base font-semibold px-8 py-2 rounded-lg mt-8">
+          Submit
+        </button>
+        <button className="bg-[#F8F5F0] text-primary font-barlow text-base font-semibold px-8 py-2 rounded-lg mt-8 ml-4">
+          Cancel
+        </button>
       </div>
     </div>
   );
