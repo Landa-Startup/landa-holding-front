@@ -99,7 +99,7 @@ interface StartupsFormData {
   cooperatedWithInvestors: string;
   financial: boolean;
   financialFile?: File | '';
-  customerCharacteristic:  string;
+  customerCharacteristic: string;
   currentCustomers: string;
   estimatedMarketSize: string;
   totalTamSamSom: string;
@@ -139,6 +139,20 @@ interface DecodedToken {
   jwt: string;
 }
 
+interface TableData {
+  first_name: string;
+  last_name: string;
+  start_time: string;
+  end_time: string;
+  status: string;
+  employerName: string;
+  employeeName: string;
+  typeOfLeave: string;
+  date: string;
+  time: string;
+}
+
+
 export {
   ContactUSFormData,
   Type,
@@ -149,5 +163,6 @@ export {
   JobFormData,
   Entrepreuneur,
   LoginFormData,
-  DecodedToken
+  DecodedToken,
+  TableData
 };

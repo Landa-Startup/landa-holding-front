@@ -25,7 +25,6 @@ export default function InvestorRegistrationForm() {
     howDidYouKnowUs: '',
   };
 
-
   const {
     register,
     handleSubmit,
@@ -50,7 +49,7 @@ export default function InvestorRegistrationForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken('http://localhost:8000/get-csrf-token');
+      const token = await GetCsrfToken('https://panel.landaholding.com/get-csrf-token');
       setCsrfToken(token);
     }
     fetchCsrfToken();
@@ -81,10 +80,10 @@ export default function InvestorRegistrationForm() {
     setFormData({
       ...formData,
       countryOfResidence: event.target.value, // Update the formData state
-    })
+    });
   };
 
-  console.log(selectedCountry)
+  console.log(selectedCountry);
 
   const onSubmit = async (formData: InvestorRegistrationFormData) => {
     setIsSubmitting(true);
@@ -101,7 +100,6 @@ export default function InvestorRegistrationForm() {
     sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
     sendFormData.append('preferredAreas', formData.preferredAreas);
     sendFormData.append('interests', formData.interests);
-
 
     try {
       const response = await apiClient.post(
@@ -205,7 +203,12 @@ export default function InvestorRegistrationForm() {
               />
             </div>
             <div className="col-span-1">
-              <label htmlFor="countrySelect" className='text-[#6b6b6b] dark:text-current'>Select a country:</label>
+              <label
+                htmlFor="countrySelect"
+                className="text-[#6b6b6b] dark:text-current"
+              >
+                Select a country:
+              </label>
               <select
                 id="countrySelect"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
@@ -214,7 +217,7 @@ export default function InvestorRegistrationForm() {
                 onChange={handleCountryChange}
               >
                 <option value="" selected>Select a country</option>
-                {countries.map((country:any, index:number) => (
+                {countries.map((country: any, index: number) => (
                   <option key={index} value={country.text}>
                     {country.text}
                   </option>
@@ -321,7 +324,12 @@ export default function InvestorRegistrationForm() {
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification} />
+        <NotificationSendForm
+          submitting={isSubmitting}
+          success={isSuccess}
+          sendStatus={send}
+          show={showNotification}
+        />
       </div>
     </>
   );

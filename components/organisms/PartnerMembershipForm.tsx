@@ -25,7 +25,6 @@ export default function PartnerMembershipForm() {
     howDidYouKnowUs: '',
   };
 
-
   const {
     register,
     handleSubmit,
@@ -44,15 +43,14 @@ export default function PartnerMembershipForm() {
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
 
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
 
-
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
       setCsrfToken(token);
     }
 
@@ -78,16 +76,15 @@ export default function PartnerMembershipForm() {
       });
   }, []);
 
-
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
 
     setFormData({
       ...formData,
       countryOfResidence: event.target.value, // Update the formData state
-    })
+    });
   };
-    
+
   const onSubmit = async (data: PartnerMembershipFormData) => {
     setIsSubmitting(true);
     setSend(true);
@@ -115,7 +112,6 @@ export default function PartnerMembershipForm() {
         }
       );
 
-
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
@@ -133,10 +129,9 @@ export default function PartnerMembershipForm() {
       setFormData(initialPartnerMembershipFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
-      }, 10000); // 10 seconds in milliseconds  
+      }, 10000); // 10 seconds in milliseconds
     }
   };
-
 
   return (
     <>
@@ -209,7 +204,12 @@ export default function PartnerMembershipForm() {
             </div>
 
             <div className="col-span-1">
-              <label htmlFor="countrySelect" className='text-[#6b6b6b] dark:text-current'>Select a country:</label>
+              <label
+                htmlFor="countrySelect"
+                className="text-[#6b6b6b] dark:text-current"
+              >
+                Select a country:
+              </label>
               <select
                 id="countrySelect"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
@@ -217,15 +217,16 @@ export default function PartnerMembershipForm() {
                 value={selectedCountry}
                 onChange={handleCountryChange}
               >
-                <option value="" selected>Select a country</option>
-                {countries.map((country:any, index:number) => (
+                <option value="" selected>
+                  Select a country
+                </option>
+                {countries.map((country: any, index: number) => (
                   <option key={index} value={country.text}>
                     {country.text}
                   </option>
                 ))}
               </select>
             </div>
-
 
             {/* <div className="col-span-1">
               <Input
@@ -314,7 +315,12 @@ export default function PartnerMembershipForm() {
             </button>
           </div>
         </form>
-        <NotificationSendForm submitting={isSubmitting} success={isSuccess} sendStatus={send} show={showNotification} />
+        <NotificationSendForm
+          submitting={isSubmitting}
+          success={isSuccess}
+          sendStatus={send}
+          show={showNotification}
+        />
       </div>
     </>
   );

@@ -32,29 +32,28 @@ export default function EntrepreneursForm() {
   // TODO: change Send to send(start with small letter)
   const [Send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
       setCsrfToken(token);
     }
 
     fetchCsrfToken();
   }, []);
 
-
   const onSubmit = async (data: Entrepreuneur) => {
     setIsSubmitting(true);
     setSend(true);
     try {
       const response = await apiClient.post(
-        "entrepreuneur-form",
+        'entrepreuneur-form',
         JSON.stringify(data),
         {
           headers: {
-            "X-CSRFToken": csrfToken,
-            "Content-Type": "application/json",
+            'X-CSRFToken': csrfToken,
+            'Content-Type': 'application/json',
           },
         }
       );
@@ -170,24 +169,23 @@ export default function EntrepreneursForm() {
                 patternMessage={''}
               />
             </div>
-
           </div>
           <div className="text-center">
-          <button
-            type="submit"
-            className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
-            disabled={Send}
-          >
-            {Send ? 'Submitting ....' : 'Submit'}
-          </button>
-        </div>
+            <button
+              type="submit"
+              className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
+              disabled={Send}
+            >
+              {Send ? 'Submitting ....' : 'Submit'}
+            </button>
+          </div>
         </form>
         <NotificationSendForm
-        submitting={isSubmitting}
-        success={isSuccess}
-        sendStatus={Send}
-        show={showNotification}
-      />
+          submitting={isSubmitting}
+          success={isSuccess}
+          sendStatus={Send}
+          show={showNotification}
+        />
       </div>
     </>
   );
