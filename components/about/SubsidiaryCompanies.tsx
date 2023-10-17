@@ -1,5 +1,5 @@
 import React from 'react';
-import CompaniesContainer from './CompaniesContainer';
+import CompaniesContainer from '../home/CompaniesContainer';
 
 export default function SubsidiaryCompanies() {
   return (

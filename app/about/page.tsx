@@ -5,8 +5,8 @@ import AboutUsProfile from '@/components/about/AboutUsProfile';
 import Banner from '@/components/common/Banner';
 import AboutUsCard from '@/components/about/AboutUsCard';
 import { Metadata } from 'next';
-import SubsidiaryCompanies from '@/components/templates/SubsidiaryCompanies';
-import StoryOfLanda from '@/components/templates/StoryOfLanda';
+import SubsidiaryCompanies from '@/components/about/SubsidiaryCompanies';
+import StoryOfLanda from '@/components/about/StoryOfLanda';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | About',

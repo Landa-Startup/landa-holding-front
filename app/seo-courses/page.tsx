@@ -1,6 +1,6 @@
 import React from 'react';
 import SeoCourses from '@/components/academy/SeoCourses';
-import Hero from '@/components/templates/Hero';
+import Hero from '@/components/home/Hero';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
