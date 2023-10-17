@@ -4,10 +4,10 @@ import { DecodedToken } from 'app/types/global';
 import { parseCookies } from 'nookies';
 
 export async function fetchData(url: string) {
-      const cookies = parseCookies();
-    const currentUser: DecodedToken | null = JSON.parse(cookies.currentUser);
-    const jwt = currentUser?.jwt
-
+  const cookies = parseCookies();
+  const currentUser: DecodedToken | null = JSON.parse(cookies.currentUser);
+  const jwt = currentUser?.jwt;
+  // url = `${process.env.DJANGO_HOST_URL}${url}`;
   try {
     const response = await fetch(url, {
       headers: {

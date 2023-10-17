@@ -1,7 +1,7 @@
-import Button from '@/components/atoms/Button';
-import Banner from '@/components/molecules/Banner';
-import AccelerationServices from '@/components/templates/AccelerationServices';
-import Hero from '@/components/templates/HeroAcceleration';
+import Button from '@/components/common/Button';
+import Banner from '@/components/common/Banner';
+import AccelerationServices from '@/components/acceleration/AccelerationServices';
+import Hero from '@/components/acceleration/HeroAcceleration';
 import { Metadata } from 'next';
 import Image from 'next/image';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactUsForm from '@/components/organisms/ContactUsForm';
-import ContactUsDescription from '@/components/molecules/ContactUsDescription';
-import Banner from '@/components/molecules/Banner';
+import ContactUsForm from '@/components/contact/ContactUsForm';
+import ContactUsDescription from '@/components/common/ContactUsDescription';
+import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

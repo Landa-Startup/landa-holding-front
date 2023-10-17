@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import Navbar from '@/components/templates/Navbar';
+import Navbar from '@/components/common/Navbar';
 
 describe('Navbar', () => {
   it('renders Home link', () => {

@@ -34,7 +34,7 @@ export default function Table({
         </svg>
         <span>{header}</span>
       </div>
-      <table className="table table-sm md:table-md lg:table-lg table-zebra">
+      <table className="table table-sm md:table-md lg:table-lg table-zebra overflow-x-auto max-w-screen-sm">
         {/* head */}
         <thead>
           <tr className="bg-tableHeader text-stone-500">
