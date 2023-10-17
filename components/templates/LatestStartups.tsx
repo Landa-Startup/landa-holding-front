@@ -1,5 +1,5 @@
 import React from 'react';
-import LatestStartupsCard from '../atoms/cards/LatestStartupsCard';
+import LatestStartupsCard from '../home/LatestStartupsCard';
 
 export default function LatestStartups() {
   const cardData = [

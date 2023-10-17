@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import TeamRolesContainer from './TeamRolesContainer';
-import PersonalTab from '../atoms/cards/PersonalTab';
+import PersonalTab from '../common/PersonalTab';
 
 export default function TeamPersons() {
     const persons = [

@@ -1,6 +1,6 @@
 import React from 'react';
-import LandaMagazineCard from '../atoms/cards/LandaMagazineCard';
-import Button from '../atoms/Button';
+import LandaMagazineCard from '../magazine/LandaMagazineCard';
+import Button from '../common/Button';
 
 export default function LandaMagazine() {
   const cardData = [

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import Chevron from '../atoms/Chevron';
+import Chevron from '../common/Chevron';
 import Link from 'next/link';
 
 export default function AerialViewBusinessTeam() {

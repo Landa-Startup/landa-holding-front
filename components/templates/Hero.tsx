@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import Button from '../atoms/Button';
+import Button from '../common/Button';
 
 export default function Hero({
   showLanda,

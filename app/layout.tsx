@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '@/components/templates/Footer';
 import './globals.css';
 import Navbar from '@/components/templates/Navbar';
-import ScrollUpButton from '@/components/atoms/ScrollUpButton';
+import ScrollUpButton from '@/components/common/ScrollUpButton';
 
 export default function RootLayout({
   children,

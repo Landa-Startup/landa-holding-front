@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import Banner from '@/components/molecules/Banner';
+import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 import TeamPersons from '@/components/templates/TeamPersons';
 

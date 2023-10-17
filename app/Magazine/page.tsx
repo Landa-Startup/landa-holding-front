@@ -1,7 +1,7 @@
 import React from 'react';
-import MagazineStartUps from '@/components/molecules/MagazineStartUps';
-import MagazineModernPost from '@/components/atoms/MagazineModernPost';
-import Banner from '@/components/molecules/Banner';
+import MagazineStartUps from '@/components/magazine/MagazineStartUps';
+import MagazineModernPost from '@/components/magazine/MagazineModernPost';
+import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

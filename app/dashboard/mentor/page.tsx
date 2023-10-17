@@ -1,7 +1,7 @@
-import LeftSection from '@/components/panel/LeftSection';
-import MainSection from '@/components/panel/MainSection';
-import Navbar from '@/components/panel/Navbar';
-import RightSection from '@/components/panel/RightSection';
+import LeftSection from '@/components/panel/containers/LeftSection';
+import MainSection from '@/components/panel/containers/MainSection';
+import Navbar from '@/components/panel/containers/Navbar';
+import RightSection from '@/components/panel/containers/RightSection';
 import { Metadata } from 'next';
 import React from 'react';
 

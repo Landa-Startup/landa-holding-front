@@ -1,5 +1,5 @@
 import React from 'react';
-import PersonalTab from '@/components/atoms/cards/PersonalTab';
+import PersonalTab from '@/components/common/PersonalTab';
 import Link from 'next/link';
 
 export default function HomeOurTeam() {

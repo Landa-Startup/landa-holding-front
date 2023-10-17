@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeCards from '../atoms/cards/HomeCards';
+import HomeCards from '../home/HomeCards';
 
 export default function HomeCardsContainer() {
   // Define data for the text card containers

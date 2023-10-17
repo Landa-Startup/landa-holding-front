@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import Button from '../atoms/Button';
+import Button from '../common/Button';
 import Link from 'next/link';
 
 export default function ContactUs() {
