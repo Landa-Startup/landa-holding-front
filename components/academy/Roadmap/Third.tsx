@@ -22,7 +22,7 @@ export default function Fourth() {
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
             <div className="w-5 h-5 bg-[#80C555] rounded-full mt-3" />
-            <div className="w-[454px] text-xl font-normal font-barlow leading-10 text-justify">
+            <div className="w-[454px] text-xl font-normal font-barlow leading-10 text-justify mb-3">
               After completing the intensive 6-month academy program, you will
               have the opportunity to officially work alongside experienced
               mentors on startups and international projects to gain valuable
