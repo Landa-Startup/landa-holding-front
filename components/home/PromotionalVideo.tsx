@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Play from '../icons/PlayButton/Play';
 export default function PromotionalVideo() {
   return (
     <div
@@ -21,18 +21,7 @@ export default function PromotionalVideo() {
         </div>
         <div className="relative w-24 h-w-24 p-6 font-light text-center text-white border-2 rounded-full opacity-100 border-primary font-futura b4">
           <div className="circle h-1 w-1 top-1/2 left-1/2 bg-white rounded-full absolute  z-[-10]"></div>
-          <svg
-            className="w-12 h-w-12 text-primary"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
+          <Play />
         </div>
       </div>
     </div>

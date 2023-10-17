@@ -4,6 +4,7 @@ import AccelerationServices from '@/components/acceleration/AccelerationServices
 import Hero from '@/components/acceleration/HeroAcceleration';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import PrimaryDot from '@/components/icons/acceleration/PrimaryDot';
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -59,22 +60,7 @@ export default function page() {
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-6 md:mt-16 relative px-8">
           <div className="flex items-center gap-2 mt-10 md:mt-[77px]">
-            <svg
-              className="w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="33"
-              height="32"
-              viewBox="0 0 33 32"
-              fill="none"
-            >
-              <circle 
-                id="Ellipse 169"
-                cx="16.5"
-                cy="16"
-                r="16"
-                fill="#CCB598"
-              />
-            </svg>
+            <PrimaryDot />
             <div className="flex flex-col md:flex-row">
               <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2">
                 FORUGH ACCELERATOR :
@@ -135,22 +121,7 @@ export default function page() {
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-8">
           <div className="flex gap-2 mt-6 md:mt-[77px] items-center ">
-            <svg
-              className="w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="33"
-              height="32"
-              viewBox="0 0 33 32"
-              fill="none"
-            >
-              <circle 
-                id="Ellipse 169"
-                cx="16.5"
-                cy="16"
-                r="16"
-                fill="#CCB598"
-              />
-            </svg>
+            <PrimaryDot />
             <div className="flex">
               <div className="flex flex-col md:flex-row">
                 <span className="text-[#80633E] font-gilda text-xl md:text-3xl mx-2 ">
@@ -204,22 +175,7 @@ export default function page() {
           <AccelerationServices />
         </div>
         <div className="flex font-barlow text-2xl leading-9 tracking-[2px] my-11 gap-2 text-[#55422A]">
-          <svg
-            className="mt-2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 21 21"
-            fill="none"
-          >
-            <circle
-              id="Ellipse 169"
-              cx="10.5"
-              cy="10.5"
-              r="10"
-              fill="#AA8453"
-            />
-          </svg>
+          <PrimaryDot addedClass="mt-2" />
           If you have an innovative startup idea or are a student looking for
           acceleration opportunities, we are waiting for your applications.
         </div>

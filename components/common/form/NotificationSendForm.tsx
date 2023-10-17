@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Check from '@/components/icons/common/Check';
+
 export default function NotificationSendForm({
   submitting,
   success,
   sendStatus,
-  show
+  show,
 }: {
   submitting: boolean;
   success: boolean;
@@ -15,19 +17,7 @@ export default function NotificationSendForm({
     <div className="w-64 mx-auto mt-5 lg:w-96">
       {success && submitting && !sendStatus && show && (
         <div className="alert alert-success">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="stroke-current shrink-0 h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+          <Check />
           <span>Form Submitted Successfully.</span>
         </div>
       )}
