@@ -57,7 +57,7 @@ export default function HomeCardsContainer() {
           alt: 'Academy',
         },
         {
-          src: '/static/images/Home main/group-people-working-out-business-plan-office 1.png',
+          src: '/static/images/Home main/a38.jpeg',
           alt: 'Academy',
         },
       ],

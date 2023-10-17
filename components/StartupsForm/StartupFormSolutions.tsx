@@ -46,7 +46,7 @@ export default function StartupFormSolutions({
             nameTextArea="solution"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
         <div className="col-span-2">

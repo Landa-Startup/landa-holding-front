@@ -26,7 +26,7 @@ export default function AboutusPersonalTabs({
 }) {
   return (
     <div
-      className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col  items-center"
+      className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col  items-center md:ml-12 lg:mt-20"
       style={{
         backgroundImage: `url(${image})`,
         backgroundPosition: 'center',
