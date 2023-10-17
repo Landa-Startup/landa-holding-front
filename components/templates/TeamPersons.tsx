@@ -49,10 +49,10 @@ export default function TeamPersons() {
         },
         {
             image: '/static/images/our-team/Personals/a35.png',
-            position: 'Director of public relations',
+            position: 'Public Relations Officer',
             name: 'Arash Aryanik',
             linkedIn: '',
-            category: 'Director of public relations'
+            category: 'public relations officer'
         },
         {
             image: '/static/images/our-team/Personals/a5.png',
