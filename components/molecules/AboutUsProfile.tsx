@@ -5,6 +5,18 @@ import AboutusPersonalTabs from '../atoms/cards/AboutusPersonalTabs';
 export default function AboutUsProfile() {
   const cardsData = [
     {
+      image: '/static/images/our-team/Personals/a1.png',
+      name: 'Rasoul Moradimehr',
+      position: ' CEO',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
+        whatsapp: 'wa.me/+989134233863',
+        email: 'mailto:rasoulmoradimehr@gmail.com',
+        website: 'https://moradimehr.com/',
+        instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
+      },
+    },
+     {
       image: '/static/images/4-1.png',
       name: 'MORTEZA JAFARI',
       position: 'International Relations',
@@ -17,21 +29,9 @@ export default function AboutUsProfile() {
       },
     },
     {
-      image: '/static/images/our-team/Personals/a1.png',
-      name: 'Rasoul Moradimehr',
-      position: 'CO-FOUNDER & CEO',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
-        whatsapp: 'wa.me/+989134233863',
-        email: 'mailto:rasoulmoradimehr@gmail.com',
-        website: 'https://moradimehr.com/',
-        instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
-      },
-    },
-    {
       image: '/static/images/our-team/Personals/a2.png',
       name: 'Hadi Hasanpour',
-      position: 'CO-FOUNDER & INVESTOR',
+      position: 'COTB',
       links: {
         linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
         whatsapp: 'https://wa.me/+12892693933',
