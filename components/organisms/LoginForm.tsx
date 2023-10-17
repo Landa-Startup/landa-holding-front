@@ -30,7 +30,7 @@ export default function LoginPage() {
       // read from cookie
       const cookies = parseCookies();
       const currentUser: DecodedToken = JSON.parse(cookies.currentUser);
-      
+
       router.push(`/dashboard/${currentUser.role}`);
     }
   };
@@ -59,14 +59,14 @@ export default function LoginPage() {
         <span className="text-black text-xl">LANDA</span>
       </div>
       <Image
-        className="absolute right-28 bottom-0 z-10"
+        className=" hidden md:block absolute md:right-28 md:bottom-0 md:z-10"
         src="/static/images/panel/login/blur.png"
         alt="Landa Blur"
-        width={600}
+        width={589}
         height={800}
       />
 
-      <div className="w-9/12 bg-[#CCB598] h-screen flex flex-col items-center justify-center space-y-11">
+      <div className="w-full md:w-9/12 bg-[#CCB598] h-screen flex flex-col items-center justify-center space-y-11">
         <span className="font-condensed text-7xl text-white">Login</span>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -83,7 +83,7 @@ export default function LoginPage() {
               // },
             })}
             placeholder="Email"
-            className={`w-[548px] h-[75px] input input-bordered bg-white/50 backdrop-blur-lg border border-gray-200 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary ${
+            className={`md:w-[548px] md:h-[75px] w-[300px] input input-bordered bg-white/50 backdrop-blur-lg border border-gray-200 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary ${
               errors.email ? 'border-red-500' : ''
             }`}
           />
@@ -104,7 +104,7 @@ export default function LoginPage() {
               },
             })}
             placeholder="Password"
-            className={`w-[548px] h-[75px] input input-bordered bg-white/50 backdrop-blur-lg border border-gray-200 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary ${
+            className={`md:w-[548px] md:h-[75px] w-[300px] input input-bordered bg-white/50 backdrop-blur-lg border border-gray-200 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary ${
               errors.password ? 'border-red-500' : ''
             }`}
           />
@@ -146,8 +146,8 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      <div className="w-3/12 bg-[#fff] h-screen relative overflow-hidden">
-        <div className="w-[600px] h-[800px]">
+      <div className="md:w-[589px] bg-[#fff] h-screen relative overflow-hidden">
+        <div className="hidden md:block md:w-[589px] md:h-[802px]">
           <Image
             className="absolute"
             src="/static/images/panel/login/notBlur.png"

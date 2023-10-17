@@ -138,11 +138,13 @@ export default function StartupFormForm() {
     initialStartupsFormData
   );
 
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("http://localhost:8000/get-csrf-token");
+      const token = await GetCsrfToken(
+        'https://panel.landaholding.com/get-csrf-token'
+      );
       setCsrfToken(token);
     }
 
@@ -174,9 +176,9 @@ export default function StartupFormForm() {
     setFormData({
       ...formData,
       countryOfResidence: event.target.value, // Update the formData state
-    })
+    });
   };
-  
+
   const onSubmit = async (formData: StartupsFormData) => {
     setIsSubmitting(true);
     setSend(true);
@@ -251,10 +253,10 @@ export default function StartupFormForm() {
     sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
     sendFormData.append('neededCapital', formData.neededCapital);
     try {
-      const response = await apiClient.post("startups-form", sendFormData, {
+      const response = await apiClient.post('startups-form', sendFormData, {
         headers: {
-          "content-type": "multipart/form-data",
-          "X-CSRFToken": csrfToken,
+          'content-type': 'multipart/form-data',
+          'X-CSRFToken': csrfToken,
         },
       });
 
@@ -267,7 +269,7 @@ export default function StartupFormForm() {
       setSend(false);
       reset(initialStartupsFormData); // Reset the form after successful submission
       setFormData(initialStartupsFormData);
-      setSelectedRadio('')
+      setSelectedRadio('');
       console.log('Form data sent successfully!');
       const timeout = setTimeout(() => {
         setShowNotification(false);
@@ -280,7 +282,7 @@ export default function StartupFormForm() {
       console.error('Error sending form data:', error);
       reset(initialStartupsFormData); // Reset the form after successful submission
       setFormData(initialStartupsFormData); // reset states after successful submission
-      setSelectedRadio('')
+      setSelectedRadio('');
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
@@ -293,8 +295,7 @@ export default function StartupFormForm() {
     { value: '3', label: '3' },
   ];
 
-  console.log(selectedRadio)
-
+  console.log(selectedRadio);
 
   return (
     <>
@@ -308,7 +309,13 @@ export default function StartupFormForm() {
           <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <StartupFormPersonalInformation register={register} errors={errors} selectedCountry={selectedCountry} handleCountryChange={handleCountryChange} countries={countries}/>
+          <StartupFormPersonalInformation
+            register={register}
+            errors={errors}
+            selectedCountry={selectedCountry}
+            handleCountryChange={handleCountryChange}
+            countries={countries}
+          />
 
           <div>
             <p className="mb-4 text-4xl">Growth and Scale-up</p>

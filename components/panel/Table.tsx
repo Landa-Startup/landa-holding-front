@@ -1,11 +1,10 @@
 import React from 'react';
 
 interface TableData {
-  employeeName: string;
-  employerName: string;
-  typeOfLeave: string;
-  date: string;
-  time: string;
+  first_name: string;
+  last_name: string;
+  start_time: string;
+  end_time: string;
   status: string;
 }
 
@@ -49,11 +48,11 @@ export default function Table({
             <tr key={index}>
               <td>{index + 1}</td>
               {/* Add this line to display the row number */}
-              <td>{data.employeeName}</td>
-              <td>{data.employerName}</td>
-              <td>{data.typeOfLeave}</td>
-              <td>{data.date}</td>
-              <td>{data.time}</td>
+              <td>{data.first_name}</td>
+              <td>{data.last_name}</td>
+              {/* <td>{data.typeOfLeave}</td> */}
+              <td>{data.end_time}</td>
+              <td>{data.start_time}</td>
               <td
                 className={`badge badge-${
                   data.status === 'Approved'
