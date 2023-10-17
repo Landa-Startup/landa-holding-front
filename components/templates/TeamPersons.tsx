@@ -48,6 +48,13 @@ export default function TeamPersons() {
             category: 'public relations officer'
         },
         {
+            image: '/static/images/our-team/Personals/a35.png',
+            position: 'Director of public relations',
+            name: 'Arash Aryanik',
+            linkedIn: '',
+            category: 'Director of public relations'
+        },
+        {
             image: '/static/images/our-team/Personals/a5.png',
             position: 'Accountant',
             name: 'Ali Soleimani',
