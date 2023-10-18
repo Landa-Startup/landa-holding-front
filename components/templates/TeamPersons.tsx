@@ -195,7 +195,7 @@ export default function TeamPersons() {
 
         {
             image: '/static/images/our-team/Personals/a27.png',
-            position: 'Back-end',
+            position: 'Full Stack',
             name: 'Meraj Bighamian',
             linkedIn: '',
             category: 'programmer'

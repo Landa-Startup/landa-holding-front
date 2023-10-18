@@ -33,7 +33,7 @@ export default function StartupFormTargetMarket({
           nameTextArea="customerCharacteristic"
           patternMessage=""
           patternValue=""
-          required=""
+          required="this is required!"
         />
         </div>
         <div className="col-span-2">
@@ -45,7 +45,7 @@ export default function StartupFormTargetMarket({
             nameTextArea="currentCustomers"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
         <div className="col-span-2">
@@ -57,7 +57,7 @@ export default function StartupFormTargetMarket({
             nameTextArea="estimatedMarketSize"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
         {/* <div className="col-span-2">

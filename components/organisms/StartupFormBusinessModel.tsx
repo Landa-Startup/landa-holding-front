@@ -78,7 +78,7 @@ export default function StartupFormBusinessModel({
             nameTextArea="monetizationOfYourPlan"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
         <div className="col-span-2">
@@ -90,7 +90,7 @@ export default function StartupFormBusinessModel({
             nameTextArea="structureOfYourSales"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is requried!"
           />
         </div>
         <div className="col-start-1 col-span-1">
@@ -115,7 +115,7 @@ export default function StartupFormBusinessModel({
             nameTextArea="cooperatedWithInvestors"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
         <div className="col-span-2">
@@ -127,7 +127,7 @@ export default function StartupFormBusinessModel({
             nameTextArea="getToKnowUs"
             patternMessage=""
             patternValue=""
-            required=""
+            required="this is required!"
           />
         </div>
       </div>
