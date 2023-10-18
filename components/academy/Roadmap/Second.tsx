@@ -5,7 +5,7 @@ import ScrollButton from './ScrollButton';
 export default function Third() {
   return (
     <div
-      className="flex flex-col h-[780px] bg-[#80C555] text-white relative"
+      className="flex flex-col h-[850px] md:h-screen bg-[#80C555] text-white relative"
       id="Roadmap-2"
     >
       <div className="flex flex-col md:flex-row justify-evenly pt-2 pb-8 z-10 px-10 space-y-4">
