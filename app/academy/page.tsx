@@ -15,8 +15,9 @@ export const metadata: Metadata = {
 
 export default function SeoCoursePage() {
   return (
-    <div className="bg-[#F1F8EC]">
+    <div className="bg-[#F1F8EC]  ">
       {/* Hero Section */}
+      
       <Hero
         showLanda={false}
         title="Landa Academy"
@@ -25,6 +26,7 @@ export default function SeoCoursePage() {
         backgroundImage="586df33bf776763ec00a0ed6ea0528cb.jpg"
         leftImage="academy.png"
       />
+
 
       {/* Roadmap Section */}
       <RoadmapContainer />

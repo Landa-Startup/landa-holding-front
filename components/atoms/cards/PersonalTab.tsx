@@ -38,9 +38,12 @@ export default function PersonalTab({
           </svg>
         </Link>
       </div>
-      <div className="flex flex-col items-center border-t-2 px-4 pb-4 text-white">
+      <div className="flex flex-col items-center px-4 pb-4 text-white  ">
         <span className="font-normal text-lg">{name}</span>
-        <span className="font-light">{position}</span>
+        <div className='font-light w-full flex items-center justify-center border-t-2 '>
+        <span className="font-light border-t-3 ">{position}</span>
+        </div>
+        
       </div>
     </div>
   );

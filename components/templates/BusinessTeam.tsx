@@ -12,22 +12,22 @@ export default function AerialViewBusinessTeam() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="md:h-[598px] business-team flex justify-center items-center flex-col"
+      className="md:h-[598px] business-team flex justify-center items-center flex-col py-5"
     >
-      <div className="py-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
+      <div className="pb-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
         <div className="flex flex-col space-y-2 md:space-y-7 md:mb-5">
           <span className="text-white text-base md:text-xl font-normal">
             Landa Holding
             <br />
           </span>
-          <span className="text-white text-base md:text-[40px] font-normal">
-            What Our Cooperation Members Say?
+          <span className="text-white text-base md:text-[30px] font-normal">
+            What Our Cooperation Members Say
           </span>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex items-center justify-center gap-1">
         <Chevron direction="left" />
-        <div className="md:w-[1000px] p-5 flex flex-col items-center backdrop-blur-2xl w-[360px] md:h-[360px]">
+        <div className="md:w-[750px] p-5 flex flex-col items-center backdrop-blur-2xl w-[360px] md:h-[360px]">
           <div className="flex md:flex-col md:items-center md:w-full">
             <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
               {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
@@ -41,11 +41,11 @@ export default function AerialViewBusinessTeam() {
               />
               <div className="md:hidden w-[170px] h-0 left-[115px] top-[170px] absolute origin-top-left -rotate-90 bg-white border border-white"></div>
               <div className="hidden md:block w-[230px] h-[1px] left-0 top-[120px] absolute bg-white border border-white"></div>
-              <div className="flex flex-col justify-center md:items-start gap-[3px] text-center items-center">
-                <div className=" text-white text-base md:text-xl font-medium font-barlow">
+              <div className="flex flex-col justify-center md:items-start gap-[3px] text-center items-center ">
+                <div className=" text-white text-base md:text-xl font-medium font-barlow inline-flex md:w-48">
                   Morteza Jafari
                 </div>
-                <div className="text-white text-xs md:text-base font-normal font-barlow">
+                <div className="text-white text-xs md:text-base font-normal font-barlow ">
                   Founder of IRimmigration
                 </div>
                 <div className=" text-white text-xs md:text-[15px] font-normal font-gilda mt-1">
@@ -54,6 +54,7 @@ export default function AerialViewBusinessTeam() {
                 <div className="inline-flex gap-3 mt-2 md:hidden">
                   <Link
                     href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
+                    target="_blank"
                   >
                     <Image
                       loading="lazy"
@@ -66,7 +67,8 @@ export default function AerialViewBusinessTeam() {
                       height={50}
                     />
                   </Link>
-                  <Link href={'https://mortezajafari.ca/'}>
+                  <Link href={'https://mortezajafari.ca/'}
+                    target="_blank">
                     <Image
                       loading="lazy"
                       className="w-4 h-4"
@@ -104,6 +106,7 @@ export default function AerialViewBusinessTeam() {
               <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
                 <Link
                   href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
+                  target="_blank"
                 >
                   <Image
                     loading="lazy"
@@ -114,7 +117,8 @@ export default function AerialViewBusinessTeam() {
                     height={50}
                   />
                 </Link>
-                <Link href={'https://mortezajafari.ca/'}>
+                <Link href={'https://mortezajafari.ca/'}
+                  target="_blank">
                   <Image
                     loading="lazy"
                     className="w-7 h-w-7"

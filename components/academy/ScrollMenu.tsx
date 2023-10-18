@@ -70,7 +70,7 @@ export default function ScrollMenu() {
         <div className="text-center text-white text-4xl md:text-5xl font-normal leading-[50px] tracking-[3.20px] mb-12">
           Our Courses
         </div>
-        <div className="flex flex-row items-center mx-5">
+        <div className="ems-center mx-5">
           <button
             className="bg-gray-700 text-white px-4 py-2 rounded-l hidden md:block"
             onClick={() => handleScroll(-200)} // Adjust scroll offset as needed

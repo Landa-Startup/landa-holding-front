@@ -12,23 +12,29 @@ export default function ContactUsDescription() {
     <div>
       <h1 className="text-5xl font-light font-gilda">Landa Holding</h1>
       <p className="my-5 text-base text-justify">
-        In Landa Holding, individuals will be trained based on their interests
+        In Landa academy, individuals will be trained based on their interests
         and capabilities. Necessary actions are taken at the Landa Acceleration
         Center to accelerate their unique abilities. Then, investment is made
         based on the investment priorities of developing the nurtured
         capabilities of individuals.
       </p>
       <div className="flex flex-row space-x-3 ">
-        <Link href={'#'}>
+        <Link
+          href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
+          target="_blank"
+        >
           <IconInstagram />
         </Link>
-        <Link href={'#'}>
+        <Link href={'https://wa.me/989120539563'} target="_blank">
           <IconWhatApp />
         </Link>
-        <Link href={'#'}>
+        <Link href={'mailto:info@landaholding.com'}>
           <IconEmailB />
         </Link>
-        <Link href={'#'}>
+        <Link
+          href={'https://www.linkedin.com/company/landa-startup-inc'}
+          target="_blank"
+        >
           <IconLinkedinB />
         </Link>
       </div>
@@ -74,7 +80,7 @@ export default function ContactUsDescription() {
         <div className="flex flex-col ml-2">
           <span className="font-semibold">Address</span>
           <ul className="mx-4 list-disc space-y-3">
-            <li>Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
+            <li>No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
             <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
             <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
           </ul>

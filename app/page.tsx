@@ -7,8 +7,8 @@ import LandaHoldingBlack from '@/components/templates/LandaHoldingBlack';
 import AerialViewBusinessTeam from '@/components/templates/BusinessTeam';
 import HomeCardsContainer from '@/components/templates/HomeCardsContainer';
 import Partners from '@/components/templates/Partners';
+import HomeOurTeam from '@/components/templates/HomeOurTeam';
 
-// Define metadata for the page
 export const metadata: Metadata = {
   title: 'Landa Holding',
   description:
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="relative">
+
       {/* Hero section */}
       <Hero
         showLanda
@@ -32,7 +33,8 @@ export default function Page() {
       <HomeCardsContainer />
       <LandaHoldingBlack />
       <LandaHoldingPriority />
-      <AerialViewBusinessTeam />
+      <HomeOurTeam />
+      {/* <AerialViewBusinessTeam /> */}
       <LatestStartups />
       <Partners />
     </div>

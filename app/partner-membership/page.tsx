@@ -14,7 +14,7 @@ export default function AffiliateFormPage() {
     <>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title="BUSINESS PARTNER FORM"
+        title="BUSINESS PARTNERS"
       />
       <PartnerMembershipForm />
     </>

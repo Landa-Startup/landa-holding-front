@@ -20,7 +20,7 @@ export default function Gallery() {
             quality={100}
             alt="Gallery Photo"
             className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
-            src="/static/images/Academy/gallery/Rectangle 3024.png"
+            src="/static/images/Academy/gallery/1.png"
           />
           <Image
             loading="lazy"
@@ -29,7 +29,7 @@ export default function Gallery() {
             quality={100}
             alt="Gallery Photo"
             className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
-            src="/static/images/Academy/gallery/Rectangle 3025.png"
+            src="/static/images/Academy/gallery/2.png"
           />
           <Image
             loading="lazy"
@@ -38,7 +38,7 @@ export default function Gallery() {
             quality={100}
             alt="Gallery Photo"
             className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
-            src="/static/images/Academy/gallery/Rectangle 3026.png"
+            src="/static/images/Academy/gallery/3.png"
           />
           <Image
             loading="lazy"
@@ -47,7 +47,7 @@ export default function Gallery() {
             quality={100}
             alt="Gallery Photo"
             className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
-            src="/static/images/Academy/gallery/Rectangle 3027.png"
+            src="/static/images/Academy/gallery/4.png"
           />
           <Image
             loading="lazy"
@@ -56,7 +56,7 @@ export default function Gallery() {
             quality={100}
             alt="Gallery Photo"
             className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
-            src="/static/images/Academy/gallery/Rectangle 3028.png"
+            src="/static/images/Academy/gallery/5.png"
           />
           <Image
             loading="lazy"
@@ -65,11 +65,16 @@ export default function Gallery() {
             quality={100}
             alt="Gallery Photo"
             className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
-            src="/static/images/Academy/gallery/Rectangle 3029.png"
+            src="/static/images/Academy/gallery/6.png"
           />
         </div>
         <div className="mx-auto">
-          <Button size="visit" bgColor="Yellow" text="Visit Now" goto="/" />
+          <Button
+            size="visit"
+            bgColor="Yellow"
+            text="Visit Now"
+            goto="/academy/gallery"
+          />
         </div>
       </div>
     </div>

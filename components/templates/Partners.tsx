@@ -55,10 +55,10 @@ export default function Partners() {
       number: 12,
       alt: 'evimo',
     },
-    {
-      number: 13,
-      alt: 'evimo',
-    },
+    // {
+    //   number: 13,
+    //   alt: 'evimo',
+    // },
     {
       number: 14,
       alt: 'evimo',
@@ -67,52 +67,77 @@ export default function Partners() {
       number: 15,
       alt: 'evimo',
     },
-    {
-      number: 16,
-      alt: 'evimo',
-    },
+    // {
+    //   number: 16,
+    //   alt: 'evimo',
+    // },
   ];
 
   return (
-    <div className="grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
-      <div className="hidden md:grid grid-cols-2 gap-8">
-        {logosLeft.map((role, index) => (
-          <Image
-            className="w-28 h-28 object-contain"
-            key={index}
-            src={`/static/images/Home/contact/${role.number}.png`}
-            alt={role.alt}
-            width={130}
-            height={130}
-          />
-        ))}
+    <div>
+      <div className="flex flex-col md:grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
+        <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-2 md:order-1 mt-9">
+          {logosLeft.map((role, index) => (
+            <Image
+              className="w-20 md:w-32 h-20 md:h-32 object-contain"
+              key={index}
+              src={`/static/images/Home/contact/${role.number}.png`}
+              alt={role.alt}
+              width={130}
+              height={130}
+            />
+          ))}
+        </div>
+        <div className="col-span-4 md:col-span-2 gap-6 md:gap-14 md:bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9 order-1">
+          <p className="text-primary text-xl md:text-4xl font-gilda">
+            Join Our Business Partners
+          </p>
+          <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[2.1px] md:tracking-[2.4px]  text-black lg:w-[422px] text-center">
+            At Landa Holding, we welcome strategic affiliations with international
+            firms and qualified influencers alike. As an approved affiliate, you
+            will receive co-branded support and future representations that wield
+            substantial influence within the business landscape. To become an
+            affiliate, please complete our free questionnaire for our confidential
+            review.
+          </p>
+          <div className=''>
+            <Button
+              size="notVisit"
+              text="Join Us"
+              goto="/partner-membership"
+              bgColor="Primary"
+            />
+          </div>
+
+        </div>
+
+        <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
+          {logosRight.map((role, index) => (
+            <Image
+              className="w-20 md:w-32 h-20 md:h-32 object-contain"
+              key={index}
+              src={`/static/images/Home/contact/${role.number}.png`}
+              alt={role.alt}
+              width={500}
+              height={500}
+            />
+          ))}
+        </div>
+
+
       </div>
-      <div className="col-span-4 md:col-span-2 gap-14 bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9">
-        <p className="text-primary text-xl md:text-4xl font-gilda">
-          Join To Our Business Partners
-        </p>
-        <p className="md:w-[522px] font-barlow text-base font-medium leading-7 tracking-[2.4px] text-justify text-black">
-          At Landa Holding, we welcome strategic affiliations with international
-          firms and qualified influencers alike. As an approved affiliate, you
-          will receive co-branded support and future representations that wield
-          substantial influence within the business landscape. To become an
-          affiliate, please complete our free questionnaire for our confidential
-          review.
-        </p>
-        <Button size="notVisit" text="Join Us" goto="/" bgColor="Primary" />
-      </div>
-      <div className="hidden md:grid grid-cols-2 gap-8">
-        {logosRight.map((role, index) => (
-          <Image
-            className="w-32 h-3w-32 object-contain"
-            key={index}
-            src={`/static/images/Home/contact/${role.number}.png`}
-            alt={role.alt}
-            width={130}
-            height={50}
-          />
-        ))}
+      <div className='md:hidden flex justify-center items-center  p-5'>
+        <Button
+          size="visit"
+          type="button"
+          text="Visit Now"
+          goto="/partner-membership"
+          bgColor="Primary"
+          className=''
+        />
       </div>
     </div>
+
+
   );
 }
