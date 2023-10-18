@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Mobile() {
   return (
     <div
-      className="md:hidden flex flex-col h-screen bg-[#F1F8EC] relative"
+      className="md:hidden flex flex-col h-[900px] bg-[#F1F8EC] relative"
       id="Roadmap-3M"
     >
       <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
