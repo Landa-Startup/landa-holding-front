@@ -83,12 +83,7 @@ export default function StoryOfLanda() {
               brain surgery procedures, starting its activities in 2019 with a
               specialized team.
             </li>
-            <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">C You</span>, a startup
-              in pharmaceutical distribution, with software innovation and a
-              suitable product for elderly homes and healthcare centers,
-              attracted the attention of Landa Association investors in 2023.
-            </li>
+            
           </ul>
         </div>
       </div>
@@ -135,16 +130,7 @@ export default function StoryOfLanda() {
 
             
           </div>
-          <div
-          ></div>
-          <Image
-              width={789}
-            height={243}
-            quality={100}
-            alt="OurTeam"
-            className="w-[444px]  md:w-[789px] h-[284px] md:h-[443px]"
-            src="/static/images/Academy/gallery/1.png" />
-           <div className= "flex flex-col self-start md:self-center "></div>
+
           
           <p>
             First and foremost, it&apos;s essential to understand that the most
