@@ -1,7 +1,7 @@
 import React from 'react';
 import PersonalTab from '@/components/atoms/cards/PersonalTab';
 import Link from 'next/link';
-
+import Image from 'next/image'
 export default function HomeOurTeam() {
     const items = [
         {
@@ -80,21 +80,22 @@ export default function HomeOurTeam() {
                         View More
                     </button>
                 </Link> */}
+            
             </div>
-            <div className='hidden md:block'>
-
-                <div className="grid grid-cols-1  gap-5 xl:grid-cols-4 mx-5 md:grid-cols-2 lg:grid-cols-2 ">
-                    {items.map((item, index) => (
-                        <PersonalTab key={index} image={item.image} name={item.name} position={item.position} linkedIn={item.linkedIn} />
-                    ))}
-                </div>
-
-            </div>
-            <Link href={"/our-team"}>
+            
+            <Image  
+            width={789}
+            height={243}
+            quality={100}
+            alt="OurTeam"
+            className="w-[444px] md:w-[789px] h-[284px] md:h-[443px] object-cover object-scale-down"
+            src="/static/images/Academy/gallery/a36.jpg" />
+             <Link href={"/our-team"}>
                 <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
                     View More
                 </button>
             </Link>{' '}
         </div>
+        
     );
 }

@@ -83,17 +83,12 @@ export default function StoryOfLanda() {
               brain surgery procedures, starting its activities in 2019 with a
               specialized team.
             </li>
-            <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">C You</span>, a startup
-              in pharmaceutical distribution, with software innovation and a
-              suitable product for elderly homes and healthcare centers,
-              attracted the attention of Landa Association investors in 2023.
-            </li>
+            
           </ul>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-12 text-[#000]">
-        <div className="flex flex-col md:w-1/2 px-10">
+      <div className="flex flex-col md:flex-col gap-12 text-[#000]">
+        <div className="flex flex-col md:w-full px-10">
           <span className="font-gilda text-3xl text-primary">
             VISION OF THE LANDA HOLDING
           </span>
@@ -131,6 +126,12 @@ export default function StoryOfLanda() {
           <span className="font-gilda text-3xl text-primary">
             Key Differentiating Factors:
           </span>
+          <div>
+
+            
+          </div>
+
+          
           <p>
             First and foremost, it&apos;s essential to understand that the most
             critical aspect is the mental model and perspective behind these key
@@ -138,7 +139,7 @@ export default function StoryOfLanda() {
             can create various points of distinction.
           </p>
           <span className="text-primary font-bold">What sets us apart:</span>
-          <ul className="px-4">
+          <ul className="px-4 ">
             <li className="list-decimal">
               Specialized Screening and Analysis of Startups: We specialize in
               screening and analyzing startups, creating opportunities for
@@ -172,6 +173,7 @@ export default function StoryOfLanda() {
               collaboration with other investment centers and investment
               communities. Entrepreneurs seeking capital from multiple investor
               groups benefit from this collaboration.
+              
             </li>
           </ul>
         </div>

@@ -15,7 +15,7 @@ export default function PersonalTab({
 }) {
   return (
     <div
-      className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col justify-between items-center"
+      className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col justify-between items-center "
       style={{
         backgroundImage: `url(${image})`,
         backgroundPosition: 'center',

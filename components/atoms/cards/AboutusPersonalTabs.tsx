@@ -50,7 +50,7 @@ export default function AboutusPersonalTabs({
         </Link>
       </div>
 
-      <div className=" pl-2 pb-2 self-start">
+      <div className=" pl-2 pb-2 self-start text-white">
         <a href={email} >
           <IconRoundedEmail />
         </a>
@@ -60,7 +60,7 @@ export default function AboutusPersonalTabs({
           <IconWeb />
         </Link>
       </div>
-      <div className=" pl-2 self-start opacity-75  " >
+      <div className=" pl-2 self-start opacity-75" >
         <Link href={instagram} target='_blank'>
           <IconRoundedInstagram />
         </Link>

@@ -251,6 +251,10 @@ export default function StartupFormForm() {
 
   return (
     <>
+    <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto dark:bg-transparent " >   
+      <p className="font-serif text-3xl pb-3 pt-0 tracking-wide md:pt-0 md:text-5xl lg:text-6xl lg:pt-10  xl:text-7xl text-white sm:mt-0 ">Startup Validation Form</p>
+      <p className="lg:font-serif text-2xl pt-0 pb-10 tracking-wide text-white md:pt-0 md:pb-10 lg:pb-10 ">Your Project</p>
+    </div>
       <div className="container m-10 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <StartupFormTitle />
         <div>
