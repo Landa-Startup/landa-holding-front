@@ -7,6 +7,7 @@ import AboutUsCard from '@/components/molecules/AboutUsCard';
 import { Metadata } from 'next';
 import SubsidiaryCompanies from '@/components/templates/SubsidiaryCompanies';
 import StoryOfLanda from '@/components/templates/StoryOfLanda';
+import KeyDifferentiating from '@/components/KeyDifferentiating';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | About',
@@ -62,6 +63,7 @@ export default function Page() {
           />
         ))}
       </div> */}
+      <KeyDifferentiating />
       <AboutUsProfile />
     </div>
   );

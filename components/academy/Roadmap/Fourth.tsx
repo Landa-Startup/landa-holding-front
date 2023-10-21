@@ -20,8 +20,8 @@ export default function Fifth() {
         height={430}
       />
       <div className="justify-start items-start gap-2 inline-flex pb-5 order-3">
-        <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3" />
-        <div className="md:w-[500px] text-black font-barlow text-xl font-medium leading-10 tracking-[1px] text-justify">
+        <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3 flex-shrink-0" />
+        <div className="md:w-[500px] text-black font-barlow text-xl font-medium leading-10 tracking-[1px]">
           Following a year of active participation within Landa, you will
           receive a credible and verifiable Canadian work experience certificate
           from us.
