@@ -42,9 +42,10 @@ export default function CoursesCardContainer() {
     },
   ];
   return (
-    <div className="grid grid-cols-2 gap-16 justify-items-center px-32">
+    <div className="grid grid-cols-2 md:gap-16 gap-y-5 justify-items-center md:px-32 mx-2">
       {courses.map((course, index) => (
         <CoursesCard
+          id={index}
           key={index}
           title={course.title}
           isActive={course.active}

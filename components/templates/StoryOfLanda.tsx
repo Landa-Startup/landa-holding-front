@@ -4,8 +4,8 @@ import React from 'react';
 
 export default function StoryOfLanda() {
   return (
-    <div className="flex flex-col md:px-32 py-10 md:py-14 gap-12 bg-[#F7F3EE]">
-      <div className="flex flex-col md:flex-row gap-12 text-[#000]">
+    <div className="flex flex-col pt-10 md:pt-14 gap-12 bg-[#F7F3EE]">
+      <div className="flex flex-col md:flex-row gap-12 text-[#000] md:px-32">
         <div className="flex flex-col md:w-1/2 text-justify px-10">
           <div className="w-screen -ml-10 md:w-[589px] h-[310px] md:h-[310px] relative">
             <Image
@@ -24,7 +24,14 @@ export default function StoryOfLanda() {
               the name of FarshTech Investment Company and continued its
               operations as &quot;Tolo-e Roshan Pasargad&quot; with registration
               number 70300 in Iran and Canada. */}
-              Landa International Holding started its activity in Canada in 2017 as a company in the field of investment in startup planning, business planning, and collecting resources to develop pioneering startup businesses. After years of success and many successful projects, in 2021, Landa Holding was identified as a federal company, certified and verified in both Canada and Iran. This aim has been pursued since then even more thoroughly and passionately than ever.
+              Landa International Holding started its activity in Canada in 2017
+              as a company in the field of investment in startup planning,
+              business planning, and collecting resources to develop pioneering
+              startup businesses. After years of success and many successful
+              projects, in 2021, Landa Holding was identified as a federal
+              company, certified and verified in both Canada and Iran. This aim
+              has been pursued since then even more thoroughly and passionately
+              than ever.
             </p>
             <div className="flex flex-col">
               {/* <p>
@@ -87,9 +94,9 @@ export default function StoryOfLanda() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col md:flex-col gap-12 text-[#000]">
-        <div className="flex flex-col md:w-full px-10">
-          <span className="font-gilda text-3xl text-primary">
+      <div className="flex flex-col md:flex-row gap-12 text-[#000]">
+        <div className="flex flex-col bg-[#FFF] px-5 md:px-32 py-5 md:py-16">
+          <span className="font-gilda text-2xl md:text-3xl text-primary text-center md:text-start">
             VISION OF THE LANDA HOLDING
           </span>
           <div className="flex flex-col space-y-4 mt-5">

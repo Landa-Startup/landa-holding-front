@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SearchInput() {
   return (
-    <div className="relative text-gray-400 focus-within:text-gray-600 w-[722px] h-[56px] flex items-center mx-auto my-11">
+    <div className="relative text-gray-400 focus-within:text-gray-600 mx-3 md:w-[722px] h-[56px] flex items-center md:mx-auto my-11">
       <span className="absolute inset-y-0 left-2 flex items-center pl-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
