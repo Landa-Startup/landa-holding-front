@@ -30,7 +30,7 @@ export default function HomeCardsContainer() {
       show: true,
       index: 2,
       link: '/acceleration',
-      addedClass: 'mb-28',
+      addedClass: '',
       images: [
         {
           src: '/static/images/Home main/3.jpg',
@@ -49,7 +49,7 @@ export default function HomeCardsContainer() {
       show: false,
       index: 3,
       link: '#',
-      addedClass: 'mb-36',
+      addedClass: '',
       images: [
         {
           src: '/static/images/Home main/5.jpg',
