@@ -80,7 +80,7 @@ export default function ContactUsDescription() {
         <div className="flex flex-col ml-2">
           <span className="font-semibold">Address</span>
           <ul className="mx-4 list-disc space-y-3">
-            <li>Suite 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
+            <li>No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
             <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
             <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
           </ul>

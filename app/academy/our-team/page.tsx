@@ -200,7 +200,7 @@ export default function TeamPage() {
 
     {
       image: '/static/images/our-team/Personals/a27.png',
-      position: 'Back-end',
+      position: 'Full Stack',
       name: 'Meraj Bighamian',
       linkedIn: '',
     },
