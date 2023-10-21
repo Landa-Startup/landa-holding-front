@@ -21,7 +21,7 @@ export default function page() {
         leftImage="Landa.svg"
         showButton={true}
       />
-      <div className="relative md:w-[490px] h-[284px] md:hidden mt-6 sm:block hidden">
+      <div className="relative md:w-[490px] h-[284px] md:hidden mt-6 sm:block hidden ">
         <Image
           className=" object-cover"
           src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -37,7 +37,7 @@ export default function page() {
           Growth and Transformation into a Leading Startup
         </span>
         <div className="flex flex-col md:flex-row gap-12 mt-6">
-          <div className="relative md:w-[490px] h-[284px] hidden md:block">
+          <div className="relative md:w-[490px] h-[284px] hidden md:block lg:ml-4">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -45,7 +45,7 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <p className="w-[340px] md:w-[680px] md:h-[248px] text-justify font-barlow text-base leading-7 tracking-[1.6px]">
+          <p className="w-[340px] md:w-[680px] md:h-[248px] text-justify font-barlow text-base leading-10 tracking-[1.6px]">
             Our accelerator division, as a leader in the field of startup
             acceleration and development on a global scale, assists individuals
             with innovative ideas and startup potential at all stages of launch
@@ -109,7 +109,7 @@ export default function page() {
             <span className="text-[#AA8453] font-gilda text-3xl mt-8">
               Accelerator Process
             </span>
-            <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-7 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 ">
+            <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-10 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 ">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
