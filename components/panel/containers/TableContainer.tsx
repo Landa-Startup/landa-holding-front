@@ -6,6 +6,15 @@ export default function TableContainer() {
     <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
       <Table
         header="Employees leave permissions"
+        tableHead={[
+          'No.',
+          'Employee Name',
+          'Employer Name',
+          'Type Of Leave',
+          'Date',
+          'Time',
+          'Status',
+        ]}
         tableData={[
           {
             employerName: 'Cy Ganderton',

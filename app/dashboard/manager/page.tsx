@@ -1,6 +1,7 @@
 import LeftSection from '@/components/panel/containers/LeftSection';
 import MainSection from '@/components/panel/containers/MainSection';
 import Navbar from '@/components/panel/containers/Navbar';
+import PageContainer from '@/components/panel/containers/PageContainer';
 import RightSection from '@/components/panel/containers/RightSection';
 import { Metadata } from 'next';
 import React from 'react';
@@ -13,15 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function page() {
-
   return (
-    <div className='md:mt-24'>
-      <Navbar />
-      <div className="w-[calc(100vh)-5px] h-screen flex space-x">
-        <LeftSection />
-        <MainSection />
-        {/* <RightSection /> */}
-      </div>
-    </div>
+    <>
+      <PageContainer />
+    </>
   );
 }

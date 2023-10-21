@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { parseCookies } from 'nookies';
 import { DecodedToken } from 'app/types/global';
 import { useRouter } from 'next/navigation';
@@ -15,7 +15,7 @@ interface TableData {
   status: string;
 }
 
-export default function MainSection() {
+export default function MainSection({ children }: { children: ReactNode }) {
   const cookies = parseCookies();
   const currentUser: DecodedToken | null = JSON.parse(cookies.currentUser);
 
@@ -52,7 +52,7 @@ export default function MainSection() {
         console.error('Error fetching data:', error);
       });
   };
- 
+
   useEffect(() => {
     if (currentUser?.role == 'manager') {
       // employer data
@@ -66,7 +66,7 @@ export default function MainSection() {
   console.log(employee);
   return (
     <div className="flex flex-col gap-14 overflow-x-auto mx-auto mt-10">
-      {(() => {
+      {/* {(() => {
         if (currentUser?.role === 'manager') {
           return (
             <Table
@@ -130,9 +130,11 @@ export default function MainSection() {
         } else {
           return <div></div>;
         }
-      })()}
-      <LeaveForm />
+      })()} */}
+
+      {/* <LeaveForm /> */}
+
+      {children}
     </div>
-   
   );
 }
