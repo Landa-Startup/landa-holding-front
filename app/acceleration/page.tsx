@@ -109,7 +109,7 @@ export default function page() {
             <span className="text-[#AA8453] font-gilda text-3xl mt-8">
               Accelerator Process
             </span>
-            <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-4 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 ">
+            <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-7 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 ">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -123,6 +123,7 @@ export default function page() {
               <span>11. Market share expansion</span>
               <span>12. Marketing and sales strategy</span>
               <span>13. Business development</span>
+              <span>14. Preparation and valuation of business plans</span>
             </div>
             <Image
               className="absolute bottom-0 right-0 opacity-20"
