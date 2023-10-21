@@ -4,8 +4,8 @@ import React from 'react';
 
 export default function StoryOfLanda() {
   return (
-    <div className="flex flex-col pt-10 md:pt-14 gap-12 bg-[#F7F3EE]">
-      <div className="flex flex-col md:flex-row gap-12 text-[#000] md:px-32">
+    <div className="flex flex-col md:px-32 py-10 md:py-14 gap-12 bg-[#F7F3EE]">
+      <div className="flex flex-col md:flex-row gap-12 text-[#000]">
         <div className="flex flex-col md:w-1/2 text-justify px-10">
           <div className="w-screen -ml-10 md:w-[589px] h-[310px] md:h-[310px] relative">
             <Image
@@ -24,14 +24,7 @@ export default function StoryOfLanda() {
               the name of FarshTech Investment Company and continued its
               operations as &quot;Tolo-e Roshan Pasargad&quot; with registration
               number 70300 in Iran and Canada. */}
-              Landa International Holding started its activity in Canada in 2017
-              as a company in the field of investment in startup planning,
-              business planning, and collecting resources to develop pioneering
-              startup businesses. After years of success and many successful
-              projects, in 2021, Landa Holding was identified as a federal
-              company, certified and verified in both Canada and Iran. This aim
-              has been pursued since then even more thoroughly and passionately
-              than ever.
+              Landa International Holding started its activity in Canada in 2017 as a company in the field of investment in startup planning, business planning, and collecting resources to develop pioneering startup businesses. After years of success and many successful projects, in 2021, Landa Holding was identified as a federal company, certified and verified in both Canada and Iran. This aim has been pursued since then even more thoroughly and passionately than ever.
             </p>
             <div className="flex flex-col">
               {/* <p>
@@ -100,8 +93,8 @@ export default function StoryOfLanda() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-12 text-[#000]">
-        <div className="flex flex-col bg-[#FFF] px-5 md:px-32 py-5 md:py-16">
-          <span className="font-gilda text-2xl md:text-3xl text-primary text-center md:text-start">
+        <div className="flex flex-col md:w-1/2 px-10">
+          <span className="font-gilda text-3xl text-primary">
             VISION OF THE LANDA HOLDING
           </span>
           <div className="flex flex-col space-y-4 mt-5">
@@ -133,6 +126,54 @@ export default function StoryOfLanda() {
               shopping, and educational platforms.
             </p>
           </div>
+        </div>
+        <div className="flex flex-col md:w-1/2 md:text-justify px-10">
+          <span className="font-gilda text-3xl text-primary">
+            Key Differentiating Factors:
+          </span>
+          <p>
+            First and foremost, it&apos;s essential to understand that the most
+            critical aspect is the mental model and perspective behind these key
+            differentiating factors. The way we perceive and approach a business
+            can create various points of distinction.
+          </p>
+          <span className="text-primary font-bold">What sets us apart:</span>
+          <ul className="px-4">
+            <li className="list-decimal">
+              Specialized Screening and Analysis of Startups: We specialize in
+              screening and analyzing startups, creating opportunities for
+              members to learn from each other.
+            </li>
+            <li className="list-decimal">
+              Members Invest Directly: Members invest directly in startups of
+              their choice, creating an environment where no member feels
+              pressured to invest, and no member misses out on potential
+              investment opportunities.
+            </li>
+            <li className="list-decimal">
+              Focus on Building Investor Connections: Our primary approach is to
+              foster connections among members, involving not only charitable
+              activities but also numerous entertaining activities and social
+              events.
+            </li>
+            <li className="list-decimal">
+              Value Supporters&apos;Financial Contributions: We highly value the
+              financial contributions of our supporters. Their opinions and
+              guidance contribute to all aspects of the holding&apos;s
+              operations.
+            </li>
+            <li className="list-decimal">
+              Inclusive Structure: Our structure provides an opportunity for
+              entrepreneurs to engage with reputable investors who have the
+              capacity to invest at the startup level.
+            </li>
+            <li className="list-decimal">
+              Collaboration with Other Investment Centers: We welcome
+              collaboration with other investment centers and investment
+              communities. Entrepreneurs seeking capital from multiple investor
+              groups benefit from this collaboration.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
