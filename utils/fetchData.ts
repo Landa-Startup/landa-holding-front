@@ -7,7 +7,8 @@ export async function fetchData(url: string) {
   const cookies = parseCookies();
   const currentUser: DecodedToken | null = JSON.parse(cookies.currentUser);
   const jwt = currentUser?.jwt;
-  // url = `${process.env.DJANGO_HOST_URL}${url}`;
+  url = `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}${url}`;
+  console.log(url)
   try {
     const response = await fetch(url, {
       headers: {
