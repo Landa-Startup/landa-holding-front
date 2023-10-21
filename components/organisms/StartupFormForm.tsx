@@ -256,7 +256,7 @@ export default function StartupFormForm() {
       <p className="lg:font-serif text-2xl pt-0 pb-10 tracking-wide text-white md:pt-0 md:pb-10 lg:pb-10 ">Your Project</p>
     </div>
       <div className="container m-10 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <StartupFormTitle />
+        {/* <StartupFormTitle /> */}
         <div>
           <p className="mb-4 text-4xl">Personal Information</p>
         </div>
