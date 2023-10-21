@@ -1,0 +1,25 @@
+{
+    "back-to-home": "Back to home",
+    "h1": "A second page, to demonstrate routing",
+    "title": "Second page",
+    "aboutUs": {
+        "title": "À propos de nous",
+        "cards": [
+            {
+                "title": "Landa Holding",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam eu tincidunt feugiat, velit elit bibendum sapien, vel bibendum sapien elit euismod diam.",
+                "link": "/StartupsForm"
+            },
+            {
+                "title": "Centre d'accélération",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam eu tincidunt feugiat, velit elit bibendum sapien, vel bibendum sapien elit euismod diam.",
+                "link": "/StartupsForm"
+            },
+            {
+                "title": "Académie",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam eu tincidunt feugiat, velit elit bibendum sapien, vel bibendum sapien elit euismod diam.",
+                "link": "/academy"
+            }
+        ]
+    }
+}
