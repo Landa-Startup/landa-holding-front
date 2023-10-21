@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '@/components/molecules/Banner';
 import PersonalTab from '@/components/atoms/cards/PersonalTab';
 import { Metadata } from 'next';
-import TeamRolesContainer from '@/components/templates/TeamRolesContainer';
+// import TeamRolesContainer from '@/components/templates/TeamRolesContainer';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Our Team',
@@ -11,30 +11,30 @@ export const metadata: Metadata = {
 };
 
 export default function TeamPage() {
-  const jobLinks = [
-    'all',
-    'Manager',
-    'Word Press Developer',
-    'Programmer',
-    'Graphic Designer',
-    'Content Creator',
-    'Accountant',
-    'Public Relations Officer',
-    'Digital Marketer',
-    'CEO',
-    'COTB',
-    'Secretary',
-    'CTO',
-    'Full stack',
-    'Manager',
-    'Case Manager',
-    'UX/UI Designer',
-    'Junior Back-end',
-    'Application Developer',
-    'UI designer',
-    'Front-end',
-    'Back-end',
-  ];
+  // const jobLinks = [
+  //   'all',
+  //   'Manager',
+  //   'Word Press Developer',
+  //   'Programmer',
+  //   'Graphic Designer',
+  //   'Content Creator',
+  //   'Accountant',
+  //   'Public Relations Officer',
+  //   'Digital Marketer',
+  //   'CEO',
+  //   'COTB',
+  //   'Secretary',
+  //   'CTO',
+  //   'Full Stack',
+  //   'Manager',
+  //   'Case Manager',
+  //   'UX/UI Designer',
+  //   'Junior Back-end',
+  //   'Application Developer',
+  //   'UI designer',
+  //   'Front-end',
+  //   'Back-end',
+  // ];
 
   const persons = [
     {
@@ -58,7 +58,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a11.png',
       position: 'Case Manager',
-      name: 'Mahsa Esmaili',
+      name: 'Mahsa Esmaile',
       linkedIn: '',
     },
     {
@@ -70,13 +70,13 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a4.png',
       position: 'Public Relations Officer',
-      name: 'Kholod Hariri',
+      name: 'Kholoud Hariri',
       linkedIn: '',
     },
     {
       image: '/static/images/our-team/Personals/a5.png',
       position: 'Accountant',
-      name: 'Ali Solaimani',
+      name: 'Ali Soleimani',
       linkedIn: '',
     },
     {
@@ -87,8 +87,8 @@ export default function TeamPage() {
     },
     {
       image: '/static/images/our-team/Personals/a7.png',
-      position: 'Full stack',
-      name: 'Sajad Momeni',
+      position: 'Full Stack',
+      name: 'Sajjad Momeni',
       linkedIn: '',
     },
     {
@@ -101,13 +101,6 @@ export default function TeamPage() {
       image: '/static/images/our-team/Personals/a9.png',
       position: 'Digital Marketer',
       name: 'Ehsan Aliakbari',
-      linkedIn: '',
-    },
-
-    {
-      image: '/static/images/our-team/Personals/a12.png',
-      position: 'Content Creator',
-      name: 'Maryam Eskandari',
       linkedIn: '',
     },
     {
@@ -126,7 +119,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a15.png',
       position: 'Junior Back-end',
-      name: 'Fateme Safi',
+      name: 'Fatemeh Safi',
       linkedIn: '',
     },
     {
@@ -138,7 +131,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a17.png',
       position: 'Front-end',
-      name: 'Fahime Sajadie',
+      name: 'Fahimeh Sajjadi',
       linkedIn: '',
     },
     {
@@ -163,7 +156,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a21.png',
       position: 'Graphic Designer',
-      name: 'Hoda Mehdi',
+      name: 'Hoda Mahdi',
       linkedIn: '',
     },
     {
@@ -200,22 +193,22 @@ export default function TeamPage() {
 
     {
       image: '/static/images/our-team/Personals/a27.png',
-      position: 'Back-end',
+      position: 'Full Stack',
       name: 'Meraj Bighamian',
       linkedIn: '',
     },
     {
       image: '/static/images/our-team/Personals/a28.png',
       position: 'Front-end',
-      name: 'Mahdi Salmanzade',
+      name: 'Mahdi Salmanzadeh',
       linkedIn: '',
     },
-    {
-      image: '/static/images/our-team/Personals/a29.png',
-      position: 'Front-end',
-      name: 'Mahrokh Lotfi',
-      linkedIn: '',
-    },
+    // {
+    //   image: '/static/images/our-team/Personals/a29.png',
+    //   position: 'Front-end',
+    //   name: 'Mahrokh Lotfi',
+    //   linkedIn: '',
+    // },
     {
       image: '/static/images/our-team/Personals/a30.png',
       position: 'Front-end',
@@ -232,7 +225,7 @@ export default function TeamPage() {
     {
       image: '/static/images/our-team/Personals/a32.png',
       position: 'Front-end',
-      name: 'matin Janghorbani',
+      name: 'Matin Janghorbani',
       linkedIn: '',
     },
     {
@@ -247,6 +240,7 @@ export default function TeamPage() {
       name: 'Faezeh Khani',
       linkedIn: '',
     },
+
   ];
 
   return (
