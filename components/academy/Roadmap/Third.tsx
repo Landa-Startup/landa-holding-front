@@ -5,7 +5,7 @@ import ScrollButton from './ScrollButton';
 export default function Fourth() {
   return (
     <div
-      className="flex flex-col h-screen bg-[#263238] text-white relative"
+      className="flex flex-col h-[850px] bg-[#263238] text-white relative"
       id="Roadmap-3"
     >
       <div className="flex flex-col md:flex-row-reverse justify-evenly pyb-8 pt-16 z-10 px-10 space-y-5">

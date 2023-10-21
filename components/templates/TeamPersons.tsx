@@ -48,6 +48,13 @@ export default function TeamPersons() {
             category: 'public relations officer'
         },
         {
+            image: '/static/images/our-team/Personals/a35.png',
+            position: 'Public Relations Officer',
+            name: 'Arash Aryanik',
+            linkedIn: '',
+            category: 'public relations officer'
+        },
+        {
             image: '/static/images/our-team/Personals/a5.png',
             position: 'Accountant',
             name: 'Ali Soleimani',
@@ -188,7 +195,7 @@ export default function TeamPersons() {
 
         {
             image: '/static/images/our-team/Personals/a27.png',
-            position: 'Back-end',
+            position: 'Full Stack',
             name: 'Meraj Bighamian',
             linkedIn: '',
             category: 'programmer'
