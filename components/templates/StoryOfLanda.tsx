@@ -83,12 +83,7 @@ export default function StoryOfLanda() {
               brain surgery procedures, starting its activities in 2019 with a
               specialized team.
             </li>
-            <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">C You</span>, a startup
-              in pharmaceutical distribution, with software innovation and a
-              suitable product for elderly homes and healthcare centers,
-              attracted the attention of Landa Association investors in 2023.
-            </li>
+
           </ul>
         </div>
       </div>
