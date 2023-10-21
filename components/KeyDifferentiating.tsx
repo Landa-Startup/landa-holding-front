@@ -54,8 +54,9 @@ export default function KeyDifferentiating() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 hidden md:block">
+      <div className="mt-10 hidden md:block group">
         <Image
+          className="group-hover:animate-pulse duration-2000 "
           src="/static/images/Home/KeyDifferentiating/Vector 58.png"
           alt="Landa Key Differentiating"
           width={586}
