@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import ScrollButton from './ScrollButton';
+import Button from '@/components/atoms/Button';
 
 export default function Fifth() {
   return (
@@ -28,7 +29,7 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
-        <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-5 md:-mt-5" />
+        <Button goto="/" size="not" text="Register" bgColor="Yellow" />
       </div>
       <svg
         className="absolute -top-7 left-[683px] hidden md:block"
