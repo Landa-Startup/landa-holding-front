@@ -1,37 +1,48 @@
 import React from 'react';
+import ClipboardData from '../icons/Panel/ClipboardData';
 
-interface TableData {
+interface employer {
   first_name: string;
   last_name: string;
+  code: string;
+  email:string;
+  id_number: string;
+  phone_number: string;
+}
+interface user {
+  first_name: string;
+  last_name: string;
+  email:string;
+  code: string;
+  id_number: string;
+  phone_number: string;
+  employer: employer;
+}
+
+interface TableData {
+  user: user;
   start_time: string;
   end_time: string;
   status: string;
+  vacation_status:string;
 }
 
 export default function Table({
   header,
   tableHead,
   tableData,
+  tableType,
 }: {
   header: string;
   tableHead: string[];
   tableData: TableData[];
+  tableType: string;
 }) {
+  // console.log(tableData.user.first_name)
   return (
     <div>
       <div className="flex gap-2 font-medium text-3xl border-b-2 border-black pb-4 mb-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="36"
-          height="36"
-          fill="currentColor"
-          className="bi bi-clipboard-data"
-          viewBox="0 0 16 16"
-        >
-          <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z" />
-          <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
-          <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
-        </svg>
+        <ClipboardData />
         <span>{header}</span>
       </div>
       <table className="table table-sm md:table-md lg:table-lg table-zebra overflow-x-auto max-w-screen-sm">
@@ -44,28 +55,95 @@ export default function Table({
           </tr>
         </thead>
         <tbody>
-          {tableData.map((data, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              {/* Add this line to display the row number */}
-              <td>{data.first_name}</td>
-              <td>{data.last_name}</td>
-              {/* <td>{data.typeOfLeave}</td> */}
-              <td>{data.end_time}</td>
-              <td>{data.start_time}</td>
-              <td
-                className={`badge badge-${
-                  data.status === 'Approved'
-                    ? 'success'
-                    : data.status === 'Pending'
-                    ? 'info'
-                    : 'error'
-                } md:mt-2.5`}
-              >
-                {data.status}
-              </td>
-            </tr>
-          ))}
+          {(() => {
+            if (tableType == 'employee') {
+              return (
+                <>
+                  {' '}
+                  {tableData.map((data, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      {/* Add this line to display the row number */}
+                      <td>{data.user.first_name} {data.user.last_name}</td>
+                      <td>{data.vacation_status}</td>
+                      <td>{data.end_time}</td>
+                      <td>{data.start_time}</td>
+                      <td
+                        className={`badge badge-${
+                          data.status === 'Approved'
+                            ? 'success'
+                            : data.status === 'Pending'
+                            ? 'info'
+                            : 'error'
+                        } md:mt-2.5`}
+                      >
+                        {data.status}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              );
+            } else if (tableType == 'my') {
+              return (
+                <>
+                  {' '}
+                  {tableData.map((data, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      {/* Add this line to display the row number */}
+                      {/* <td>{data.first_name}</td>
+                      <td>{data.last_name}</td> */}
+                      {/* <td>{data.typeOfLeave}</td> */}
+                      <td>{data.end_time}</td>
+                      <td>{data.start_time}</td>
+                      <td
+                        className={`badge badge-${
+                          data.status === 'Approved'
+                            ? 'success'
+                            : data.status === 'Pending'
+                            ? 'info'
+                            : 'error'
+                        } md:mt-2.5`}
+                      >
+                        {data.status}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              );
+            } else if (tableType == 'all') {
+              return (
+                <>
+                  {' '}
+                  {tableData.map((data, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      {/* Add this line to display the row number */}
+                      <td>{data.user.first_name} {data.user.last_name}</td>
+                      <td>{data.user.employer.first_name} {data.user.employer.last_name}</td>
+                      <td>{data.vacation_status}</td>
+                      <td>{data.end_time}</td>
+                      <td>{data.start_time}</td> 
+                      <td
+                        className={`badge badge-${
+                          data.status === 'Approved'
+                            ? 'success'
+                            : data.status === 'Pending'
+                            ? 'info'
+                            : 'error'
+                        } md:mt-2.5`}
+                      >
+                        {data.status}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              );
+            } else {
+              return <></>;
+            }
+          })()}
+
         </tbody>
       </table>
     </div>

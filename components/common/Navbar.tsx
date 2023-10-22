@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
+import IconDown from '../icons/IconDown';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -95,8 +96,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     FORMS
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
-                      }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
+                      isMenuOpen ? '' : 'hidden'
+                    }`}
                   >
                     {submenuItems.map((item) => (
                       <li
@@ -135,9 +137,13 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </li>
           ))}
           <li>
-            <Link className="font-condensed font-bold" href={'#'}>
-              FORMS
-            </Link>
+            <div className="">
+              <Link className="font-condensed font-bold" href={'#'}>
+                FORMS
+              </Link>
+              <IconDown />
+            </div>
+
             <ul>
               {submenuItems.map((item) => (
                 <li key={item.label} onClick={() => handleLinkClick()}>
@@ -150,8 +156,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </li>
         </ul>
         <div className="bg-[#222] flex justify-between items-center absolute bottom-0 h-10 w-80 px-10">
-          <Link href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
-          target="_blank">
+          <Link
+            href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -177,8 +185,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </svg>
           </Link>
 
-          <Link href={'https://wa.me/989120539563'}
-          target="_blank">
+          <Link href={'https://wa.me/989120539563'} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -191,8 +198,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </svg>
           </Link>
 
-          <Link href={'https://www.linkedin.com/company/landa-startup-inc'}
-          target="_blank">
+          <Link
+            href={'https://www.linkedin.com/company/landa-startup-inc'}
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

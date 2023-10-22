@@ -48,6 +48,13 @@ export default function TeamPersons() {
             category: 'public relations officer'
         },
         {
+            image: '/static/images/our-team/Personals/a35.png',
+            position: 'Public Relations Officer',
+            name: 'Arash Aryanik',
+            linkedIn: '',
+            category: 'public relations officer'
+        },
+        {
             image: '/static/images/our-team/Personals/a5.png',
             position: 'Accountant',
             name: 'Ali Soleimani',
@@ -176,7 +183,7 @@ export default function TeamPersons() {
             position: 'Content Creator',
             name: 'Tiam Safarian',
             linkedIn: '',
-            category: 'digital marketer'
+            category: 'content creator'
         },
         {
             image: '/static/images/our-team/Personals/a26.png',

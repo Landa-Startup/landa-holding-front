@@ -4,6 +4,7 @@ import AccelerationServices from '@/components/acceleration/AccelerationServices
 import Hero from '@/components/acceleration/HeroAcceleration';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import PrimaryDot from '@/components/icons/acceleration/PrimaryDot';
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -57,24 +58,9 @@ export default function page() {
             on their journey.
           </p>
         </div>
-        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-6 md:mt-16 relative px-8">
+        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-8">
           <div className="flex items-center gap-2 mt-10 md:mt-[77px]">
-            <svg
-              className="w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="33"
-              height="32"
-              viewBox="0 0 33 32"
-              fill="none"
-            >
-              <circle 
-                id="Ellipse 169"
-                cx="16.5"
-                cy="16"
-                r="16"
-                fill="#CCB598"
-              />
-            </svg>
+            <PrimaryDot />
             <div className="flex flex-col md:flex-row">
               <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2">
                 FORUGH ACCELERATOR :
@@ -91,7 +77,7 @@ export default function page() {
             width={71}
             height={60}
           />
-          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] pb-3 mt-6">
+          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] pb-3 mt-6 md:ml-48 lg:ml-20 xl:ml-0">
             <p>
               In the Landa Accelerator division, innovative ideas and startups
               are carefully examined and evaluated. After confirming the value
@@ -109,7 +95,7 @@ export default function page() {
             <span className="text-[#AA8453] font-gilda text-3xl mt-8">
               Accelerator Process
             </span>
-            <div className="grid grid-cols-1 md:grid-cols-2 font-barlow text-[#000] leading-9 z-10">
+            <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-4 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 ">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -135,22 +121,7 @@ export default function page() {
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-8">
           <div className="flex gap-2 mt-6 md:mt-[77px] items-center ">
-            <svg
-              className="w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="33"
-              height="32"
-              viewBox="0 0 33 32"
-              fill="none"
-            >
-              <circle 
-                id="Ellipse 169"
-                cx="16.5"
-                cy="16"
-                r="16"
-                fill="#CCB598"
-              />
-            </svg>
+            <PrimaryDot />
             <div className="flex">
               <div className="flex flex-col md:flex-row">
                 <span className="text-[#80633E] font-gilda text-xl md:text-3xl mx-2 ">
@@ -204,22 +175,7 @@ export default function page() {
           <AccelerationServices />
         </div>
         <div className="flex font-barlow text-2xl leading-9 tracking-[2px] my-11 gap-2 text-[#55422A]">
-          <svg
-            className="mt-2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 21 21"
-            fill="none"
-          >
-            <circle
-              id="Ellipse 169"
-              cx="10.5"
-              cy="10.5"
-              r="10"
-              fill="#AA8453"
-            />
-          </svg>
+          <PrimaryDot addedClass="mt-2" />
           If you have an innovative startup idea or are a student looking for
           acceleration opportunities, we are waiting for your applications.
         </div>
