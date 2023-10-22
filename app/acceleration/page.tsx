@@ -204,7 +204,7 @@ export default function page() {
           </span>
           <AccelerationServices />
         </div>
-        <div className="flex font-barlow text-2xl leading-9 tracking-[2px] my-11 gap-2 text-[#55422A]">
+        <div className="flex font-barlow text-2xl leading-9 tracking-[2px] my-11 gap-2 text-[#55422A] text-justify">
           <svg
             className="mt-2"
             xmlns="http://www.w3.org/2000/svg"
