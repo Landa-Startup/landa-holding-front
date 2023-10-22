@@ -1,12 +1,22 @@
 import React from 'react';
 import ClipboardData from '../icons/Panel/ClipboardData';
 
-interface user {
+interface employer {
   first_name: string;
   last_name: string;
   code: string;
+  email:string;
   id_number: string;
   phone_number: string;
+}
+interface user {
+  first_name: string;
+  last_name: string;
+  email:string;
+  code: string;
+  id_number: string;
+  phone_number: string;
+  employer: employer;
 }
 
 interface TableData {
@@ -14,6 +24,7 @@ interface TableData {
   start_time: string;
   end_time: string;
   status: string;
+  vacation_status:string;
 }
 
 export default function Table({
@@ -47,15 +58,14 @@ export default function Table({
           {(() => {
             if (tableType == 'employee') {
               return (
-                <div>
+                <>
                   {' '}
                   {tableData.map((data, index) => (
                     <tr key={index}>
                       <td>{index + 1}</td>
                       {/* Add this line to display the row number */}
-                      <td>{data.user.first_name}</td>
-                      <td>{data.user.last_name}</td>
-                      {/* <td>{data.typeOfLeave}</td> */}
+                      <td>{data.user.first_name} {data.user.last_name}</td>
+                      <td>{data.vacation_status}</td>
                       <td>{data.end_time}</td>
                       <td>{data.start_time}</td>
                       <td
@@ -71,11 +81,11 @@ export default function Table({
                       </td>
                     </tr>
                   ))}
-                </div>
+                </>
               );
             } else if (tableType == 'my') {
               return (
-                <div>
+                <>
                   {' '}
                   {tableData.map((data, index) => (
                     <tr key={index}>
@@ -99,19 +109,19 @@ export default function Table({
                       </td>
                     </tr>
                   ))}
-                </div>
+                </>
               );
             } else if (tableType == 'all') {
               return (
-                <div>
+                <>
                   {' '}
                   {tableData.map((data, index) => (
                     <tr key={index}>
                       <td>{index + 1}</td>
                       {/* Add this line to display the row number */}
-                      <td>{data.user.first_name}</td>
-                      <td>{data.user.last_name}</td>
-                      {/* <td>{data.typeOfLeave}</td> */}
+                      <td>{data.user.first_name} {data.user.last_name}</td>
+                      <td>{data.user.employer.first_name} {data.user.employer.last_name}</td>
+                      <td>{data.vacation_status}</td>
                       <td>{data.end_time}</td>
                       <td>{data.start_time}</td> 
                       <td
@@ -127,10 +137,10 @@ export default function Table({
                       </td>
                     </tr>
                   ))}
-                </div>
+                </>
               );
             } else {
-              return <div></div>;
+              return <></>;
             }
           })()}
 

@@ -5,19 +5,32 @@ import { parseCookies } from 'nookies';
 import { DecodedToken } from 'app/types/global';
 import { fetchData } from '@/utils/fetchData';
 
-interface user {
+
+interface employer {
   first_name: string;
   last_name: string;
   code: string;
+  email:string;
   id_number: string;
   phone_number: string;
 }
+interface user {
+  first_name: string;
+  last_name: string;
+  email:string;
+  code: string;
+  id_number: string;
+  phone_number: string;
+  employer: employer;
+}
+
 
 interface TableData {
   user: user;
   start_time: string;
   end_time: string;
   status: string;
+  vacation_status:string;
 }
 
 export default function TableContainer() {
@@ -103,7 +116,6 @@ export default function TableContainer() {
                 header="Employers leave permissions"
                 tableHead={[
                   'No.',
-                  'Employee Name',
                   'Employer Name',
                   'Type Of Leave',
                   'Date',

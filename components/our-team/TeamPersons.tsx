@@ -183,7 +183,7 @@ export default function TeamPersons() {
             position: 'Content Creator',
             name: 'Tiam Safarian',
             linkedIn: '',
-            category: 'digital marketer'
+            category: 'content creator'
         },
         {
             image: '/static/images/our-team/Personals/a26.png',
