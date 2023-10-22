@@ -44,7 +44,7 @@ export default function Page() {
     <div>
       <Banner
         title="About Us"
-        image="/static/images/aerial-view-business-team.png"
+        image="/static/images/a52.jpeg"
       />
       <AboutUsLandaHolding />
       <SubsidiaryCompanies />
