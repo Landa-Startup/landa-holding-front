@@ -72,10 +72,9 @@ export default function LeaveForm() {
   const onSubmit = async (formData: LeaveFormData) => {
     setIsSubmitting(true);
     setSend(true);
-
     const sendFormData = new FormData();
-    sendFormData.append('start_time', String(formData.leaveStartDate)+'T'+formData.leaveStartTime);
-    sendFormData.append('end_time', String(formData.leaveEndDate)+'T'+formData.leaveEndTime);
+    sendFormData.append('start_time', String(`${formData.leaveStartDate}T${formData.leaveStartTime}`));
+    sendFormData.append('end_time', String(`${formData.leaveEndDate}T${formData.leaveEndTime}`));
     sendFormData.append('vacation_status', String(formData.leaveType));
     sendFormData.append('user', String(user_id));
 
