@@ -48,7 +48,7 @@ export default function TeamPersons() {
             category: 'public relations officer'
         },
         {
-            image: '/static/images/our-team/Personals/a35.png',
+            image: '/static/images/our-team/Personals/a35.jpeg',
             position: 'Public Relations Officer',
             name: 'Arash Aryanik',
             linkedIn: '',
@@ -195,7 +195,7 @@ export default function TeamPersons() {
 
         {
             image: '/static/images/our-team/Personals/a27.png',
-            position: 'Back-end',
+            position: 'Full Stack',
             name: 'Meraj Bighamian',
             linkedIn: '',
             category: 'programmer'

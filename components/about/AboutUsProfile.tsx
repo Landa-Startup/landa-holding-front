@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutUsProfileCard from './AboutUsProfileCard';
-import AboutusPersonalTabs from '../atoms/cards/AboutusPersonalTabs';
+import AboutusPersonalTabs from './AboutusPersonalTabs';
 
 export default function AboutUsProfile() {
   const cardsData = [

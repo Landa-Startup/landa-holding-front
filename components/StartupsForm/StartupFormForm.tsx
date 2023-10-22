@@ -1,15 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import Input from '../common/form/Input';
-import Select from '../common/form/Select';
-import InvestorRegistrationTitle from 'app/types/global';
 import { StartupsFormData } from '../../app/types/global';
 import StartupFormTitle from './StartupFormTitle';
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
 import StartupFormMVP from './StartupFormMVP';
-import StartupFormTrialProduct from './StartupFormTrialProduct';
 import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from '../common/form/NotificationSendForm';

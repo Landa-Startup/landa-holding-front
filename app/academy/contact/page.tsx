@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactUsForm from '@/components/contact/ContactUsForm';
+import ContactUsForm from '@/components/common/form/ContactUsForm';
 import ContactUsDescription from '@/components/common/ContactUsDescription';
 import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
