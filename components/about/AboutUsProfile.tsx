@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutUsProfileCard from './AboutUsProfileCard';
+// import AboutUsProfileCard from './AboutUsProfileCard';
 import AboutusPersonalTabs from './AboutusPersonalTabs';
 
 export default function AboutUsProfile() {
@@ -16,7 +16,7 @@ export default function AboutUsProfile() {
         instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
       },
     },
-     {
+    {
       image: '/static/images/4-1.png',
       name: 'MORTEZA JAFARI',
       position: 'International Relations',
@@ -53,7 +53,7 @@ export default function AboutUsProfile() {
         </h1>
       </div>
 
-      <div className="lg:flex lg:flex-row lg:ml-64 lg:gap-3 lg:pb-28 grid grid-cols-1  mx-auto pb-16 ml-8 md:space-x-12 space-y-20 mb-8">
+      <div className="lg:flex lg:flex-row lg:justify-center  lg:pb-28 grid grid-cols-1  mx-auto pb-16 ml-8 md:space-x-12 space-y-20 mb-8 lg:ml-0">
         {cardsData.map((card, index) => (
           <AboutusPersonalTabs
             key={index}

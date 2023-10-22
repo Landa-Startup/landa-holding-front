@@ -5,7 +5,7 @@ import ScrollButton from './ScrollButton';
 export default function Second() {
   return (
     <div
-      className="flex flex-col h-screen bg-[#FFFBE6] relative"
+      className="flex flex-col h-[850px] bg-[#FFFBE6] relative"
       id="Roadmap-1"
     >
       <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
@@ -22,7 +22,7 @@ export default function Second() {
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
             <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
-            <div className="w-[280px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
+            <div className="w-[280px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify md:w-[500px]">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.

@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function GalleryImageCard({ src }: { src: string }) {
   return (
-    <div className="relative w-[555px] h-[416px]">
+    <div className="relative w-[170px] md:w-[555px] h-[100px] md:h-[416px]">
       <Image
         className="object-cover rounded-sm"
         src={src}

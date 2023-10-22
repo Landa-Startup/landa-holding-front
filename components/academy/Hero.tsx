@@ -23,7 +23,7 @@ export default function Hero({
   showButton?: boolean;
 }) {
   return (
-    <div className="h-screen relative overflow-hidden bg-[#3D5656]">
+    <div className="h-[850px] relative overflow-hidden bg-[#3D5656]">
       <Image
         loading="lazy"
         className="absolute bottom-16 hidden md:block"
@@ -62,7 +62,7 @@ export default function Hero({
         )}
         <Image
           loading="lazy"
-          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-28 md:right-0 -bottom-20"
+          className="w-[300px] md:w-[412px] h-[400px] md:h-[560px] absolute -right-28 md:right-0 -bottom-20"
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={412}

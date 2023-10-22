@@ -15,11 +15,11 @@ export default function HomeCardsContainer() {
       addedClass: '',
       images: [
         {
-          src: '/static/images/Home main/male-female-business-people-working-tablet-office.png',
+          src: '/static/images/Home main/2.jpg',
           alt: 'Investment',
         },
         {
-          src: '/static/images/Home main/Rectangle 1412.png',
+          src: '/static/images/Home main/1.jpg',
           alt: 'Investment',
         },
       ],
@@ -31,14 +31,14 @@ export default function HomeCardsContainer() {
       show: true,
       index: 2,
       link: '/acceleration',
-      addedClass: 'mb-28',
+      addedClass: '',
       images: [
         {
-          src: '/static/images/Home/Acceleration/1.png',
+          src: '/static/images/Home main/3.jpg',
           alt: 'Acceleration Center',
         },
         {
-          src: '/static/images/Home/Acceleration/2.png',
+          src: '/static/images/Home main/4.jpg',
           alt: 'Acceleration Center',
         },
       ],
@@ -50,14 +50,14 @@ export default function HomeCardsContainer() {
       show: false,
       index: 3,
       link: '#',
-      addedClass: 'mb-36',
+      addedClass: '',
       images: [
         {
-          src: '/static/images/Home main/3390782c4ef216a1fb0b67f2cc41660d 1.png',
+          src: '/static/images/Home main/5.jpg',
           alt: 'Academy',
         },
         {
-          src: '/static/images/Home main/a38.jpeg',
+          src: '/static/images/Home main/6.jpg',
           alt: 'Academy',
         },
       ],

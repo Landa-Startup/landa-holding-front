@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ContactUs() {
   return (
-    <div className="relative md:w-[1440px] md:h-[694px] md:pl-[121px] md:pr-[120px] md:pt-[38px] md:pb-[104px] pt-5 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex">
+    <div className="relative md:w-[1440px] md:h-[694px] md:pl-[121px] md:pr-[120px] md:pt-[38px] md:pb-[104px] pt-5 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto">
       <div className="self-center flex-col  items-center inline-flex">
         <div className="md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-2xl md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
           LANDA ACADEMY

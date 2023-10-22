@@ -1,26 +1,30 @@
+import Link from 'next/link';
 import React from 'react';
 
 export default function CoursesCard({
+  id,
   title,
   isActive,
   backgroundImage,
 }: {
+  id: number;
   title: string;
   isActive?: boolean;
   backgroundImage: string;
 }) {
   return (
-    <div
+    <Link
+      href={'/courses/' + (id + 1)}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className={`relative flex flex-col justify-center items-center w-[556px] h-[486px] rounded-sm group ${
+      className={`relative flex flex-col justify-center items-center w-[170px] md:w-[556px] h-[170px] md:h-[486px] rounded-sm group ${
         isActive ? 'border-2 border-[#FDD30A9E]' : ''
       }`}
     >
-      <span className="font-barlow text-5xl font-medium tracking-[2.4px] text-white">
+      <span className="font-barlow md:text-5xl font-medium tracking-[2.4px] text-white">
         {title}
       </span>
       <div
@@ -30,6 +34,6 @@ export default function CoursesCard({
       >
         Register Now
       </div>
-    </div>
+    </Link>
   );
 }

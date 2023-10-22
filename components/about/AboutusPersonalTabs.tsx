@@ -4,8 +4,6 @@ import IconLinkedin from '../icons/IconLinkedin';
 import IconRoundedEmail from '../icons/IconRoundedEmail';
 import IconRoundedInstagram from '../icons/IconInstagramRounded';
 import IconWeb from '../icons/IconWeb';
-import IconInstagram from '../icons/IconInstagram';
-import LinkedIn from '../icons/about/LinkedIn';
 
 export default function AboutusPersonalTabs({
   image,
@@ -38,7 +36,7 @@ export default function AboutusPersonalTabs({
           target="_blank"
           className="text-white rounded-full bg-[#222] p-2 opacity-75"
         >
-          <linkedIn />
+          <IconLinkedin />
         </Link>
       </div>
 
