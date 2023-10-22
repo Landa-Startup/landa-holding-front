@@ -10,28 +10,28 @@ export default function TeamPersons() {
             position: 'CEO',
             name: 'Dr.Rasoul Moradimehr',
             linkedIn: '',
-            category: 'manager'
+            category: 'managers'
         },
         {
             image: '/static/images/our-team/Personals/a2.png',
             position: 'COTB',
             name: 'Dr.Hadi Hasanpour',
             linkedIn: '',
-            category: 'manager'
+            category: 'managers'
         },
         {
             image: '/static/images/our-team/Personals/a10.png',
             position: 'Manager',
             name: 'Mehrnoosh Heibati',
             linkedIn: '',
-            category: 'manager'
+            category: 'managers'
         },
         {
             image: '/static/images/our-team/Personals/a11.png',
             position: 'Case Manager',
             name: 'Mahsa Esmaeili',
             linkedIn: '',
-            category: 'manager'
+            category: 'managers'
         },
         {
             image: '/static/images/our-team/Personals/a3.png',
@@ -66,21 +66,21 @@ export default function TeamPersons() {
             position: 'CTO',
             name: 'Iman Nasr',
             linkedIn: '',
-            category: 'mentor'
+            category: 'mentors'
         },
         {
             image: '/static/images/our-team/Personals/a7.png',
             position: 'Full stack',
             name: 'Sajjad Momeni',
             linkedIn: '',
-            category: 'mentor'
+            category: 'mentors'
         },
         {
             image: '/static/images/our-team/Personals/a8.png',
             position: 'Full Stack',
             name: 'Amin Asgarian',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
 
         },
         {
@@ -95,14 +95,14 @@ export default function TeamPersons() {
             position: 'UX/UI Designer',
             name: 'Ariana Shafie',
             linkedIn: '',
-            category: 'designer'
+            category: 'designers'
         },
         {
             image: '/static/images/our-team/Personals/a14.png',
             position: 'UX/UI Designer',
             name: 'Arshia Nasiri',
             linkedIn: '',
-            category: 'designer'
+            category: 'designers'
         },
 
         {
@@ -110,14 +110,14 @@ export default function TeamPersons() {
             position: 'Junior Back-end',
             name: 'Fatemeh Safi',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a16.png',
             position: 'Full Stack',
             name: 'Sobhan Emami',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
 
         },
         {
@@ -125,14 +125,14 @@ export default function TeamPersons() {
             position: 'Front-end',
             name: 'Fahimeh Sajjadi',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a18.png',
             position: 'Front-end',
             name: 'Saman Karchegani',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
 
         {
@@ -140,28 +140,28 @@ export default function TeamPersons() {
             position: 'Front-end',
             name: 'Mohsen Kiani',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a20.png',
             position: 'Application Developer',
             name: 'Ali Khavari',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a21.png',
             position: 'Graphic Designer',
             name: 'Hoda Mahdi',
             linkedIn: '',
-            category: 'designer'
+            category: 'designers'
         },
         {
             image: '/static/images/our-team/Personals/a22.png',
             position: 'Graphic Designer',
             name: 'Aynaz Reisi',
             linkedIn: '',
-            category: 'designer'
+            category: 'designers'
         },
 
         {
@@ -169,28 +169,28 @@ export default function TeamPersons() {
             position: 'Content Creator',
             name: 'Mahtab Hafizi',
             linkedIn: '',
-            category: 'content creator'
+            category: 'content creators'
         },
         {
             image: '/static/images/our-team/Personals/a24.png',
             position: 'UI designer',
             name: 'Saba Mokhtari',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a25.png',
             position: 'Content Creator',
             name: 'Tiam Safarian',
             linkedIn: '',
-            category: 'digital marketer'
+            category: 'content creators'
         },
         {
             image: '/static/images/our-team/Personals/a26.png',
             position: 'Word Press Developer',
             name: 'Roham Arabloo',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
 
         {
@@ -198,28 +198,28 @@ export default function TeamPersons() {
             position: 'Full Stack',
             name: 'Meraj Bighamian',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a28.png',
             position: 'Front-end',
             name: 'Mahdi Salmanzadeh',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a29.png',
             position: 'Front-end',
             name: 'Mahrokh Lotfi',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a30.png',
             position: 'Front-end',
             name: 'Ramtin Foroozani',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
 
         {
@@ -227,14 +227,14 @@ export default function TeamPersons() {
             position: 'Front-end',
             name: 'Barad Dehghani',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a32.png',
             position: 'Front-end',
             name: 'Matin Janghorbani',
             linkedIn: '',
-            category: 'programmer'
+            category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a33.png',
@@ -248,19 +248,19 @@ export default function TeamPersons() {
             position: 'Graphic Designer',
             name: 'Faezeh Khani',
             linkedIn: '',
-            category: 'designer'
+            category: 'designers'
         },
     ];
     const roles = [
         'All',
-        'Manager',
-        'Mentor',
-        'Programmer',
+        'Managers',
+        'Mentors',
+        'Programmers',
         // 'Product Designer',
-        "Designer",
-        'Content Creator',
+        "Designers",
+        'Content Creators',
         'Accountant',
-        'Public Relations ',
+        'Public Relations',
         'Digital Marketer',
         'Secretary'
     ];
