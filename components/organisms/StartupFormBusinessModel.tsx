@@ -71,7 +71,7 @@ export default function StartupFormBusinessModel({
             <hr className=" dark:border-[#222222CC] mb-5 mt-0 " />
           </div>
           <div>
-            <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
+            
           </div>
           <TextArea
             title="Describe the method of monetization of your plan?*"
