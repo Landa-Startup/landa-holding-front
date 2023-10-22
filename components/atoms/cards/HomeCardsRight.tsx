@@ -20,7 +20,7 @@ export default function HomeCardsRight({
       <div className="flex space-x-7">
         {images.map((image, index) => (
           <div
-            className="relative w-64 h-96 mt-5 md:first:mt-44 last:mt-14 hidden md:block"
+            className="relative w-64 h-96 mt-5 md:first:mt-44 last:mt-14 hidden md:block lg:mb-0"
             key={index}
           >
             <Image
