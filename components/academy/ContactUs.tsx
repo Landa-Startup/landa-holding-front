@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import PhoneInput from './PhoneNumberInput';
 
 export default function ContactUs() {
   return (
@@ -23,10 +24,7 @@ export default function ContactUs() {
             placeholder="Last Name"
           ></input>
         </div>
-        <textarea
-          className="w-[360px] md:w-[794px] h-[84px] md:h-[185px] relative bg-yellow-50 border border-yellow-400 pl-5 mt-1 md:mt-7"
-          placeholder="Description"
-        />
+        <PhoneInput />
       </div>
       <button className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white">
         Visit Now

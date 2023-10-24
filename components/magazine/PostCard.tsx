@@ -4,13 +4,13 @@ import Button from '../common/Button';
 import Link from 'next/link';
 
 export default function PostCard({
-  index,
+  slug,
   image,
   date,
   title,
   description,
 }: {
-  index: string;
+  slug: string;
   image: string;
   date: string;
   title: string;
@@ -30,14 +30,14 @@ export default function PostCard({
         {date}
       </span>
       <Link
-        href={`/magazine/${index}`}
+        href={`/magazine/${slug}`}
         className="font-gilda text-xl tracking-[2.8px] hover:text-primary"
       >
         {title}
       </Link>
       <p className="font-barlow text-justify text-[#6B6B6B]">{description}</p>
       <Button
-        goto={`/magazine${index}`}
+        goto={`/magazine/${slug}`}
         text="Read More"
         size="notVisit"
         bgColor="Primary"
