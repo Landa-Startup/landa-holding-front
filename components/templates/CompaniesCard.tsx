@@ -23,7 +23,7 @@ export default function CompaniesCard({
           />
 
         </div>
-        <span className="font-gilda text-xl md:text-2xl leading-6 bg-neutral-500 w-full text-center text-white py-2">
+        <span className="font-gilda text-sm md:text-lg leading-6 bg-neutral-500 w-full text-center text-white py-2 ">
           {name}
         </span>
       </div>

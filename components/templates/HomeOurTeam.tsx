@@ -88,7 +88,7 @@ export default function HomeOurTeam() {
             height={243}
             quality={100}
             alt="OurTeam"
-            className="w-[444px] md:w-[789px] h-[284px] md:h-[443px] object-cover object-scale-down"
+            className="w-[444px] md:w-[1192px] h-[284px] md:h-[693px] object-cover object-scale-down"
             src="/static/images/Academy/gallery/a36.jpg" />
              <Link href={"/our-team"}>
                 <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">

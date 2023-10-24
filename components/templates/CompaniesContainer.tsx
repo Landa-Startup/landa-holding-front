@@ -11,7 +11,7 @@ export default function CompaniesContainer() {
     {
       name: 'IRIMMIGRATION',
       logo: '2.png',
-      link: "https://irimmigration.com/"
+      link: "https://Irimmigration.ca"
     },
     {
       name: 'ACADEMY',
@@ -21,17 +21,17 @@ export default function CompaniesContainer() {
     {
       name: 'TOLU ROSHAN',
       logo: '4.png',
-      link: 'https://landaholding.com/acceleration'
+      link: '/investment'
     },
     {
       name: 'DIACO',
       logo: '5.png',
-      link: 'https://irdiaco.ca/',
+      link: 'https://Diacocenter.com',
     },
     {
       name: 'VISION RAFT',
       logo: '6.png',
-      link: 'https://invigorated-drop-231359.framer.app',
+      link: 'https://Visionraft.com',
     },
     {
       name: 'FARAZAMAN',
@@ -46,7 +46,7 @@ export default function CompaniesContainer() {
     {
       name: 'FOROUGH',
       logo: '9.png',
-      link: '#'
+      link: '/acceleration'
     },
     {
       name: 'LANDA GENE',
