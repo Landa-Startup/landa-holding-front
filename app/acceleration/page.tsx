@@ -1,9 +1,10 @@
-import Button from '@/components/atoms/Button';
-import Banner from '@/components/molecules/Banner';
-import AccelerationServices from '@/components/templates/AccelerationServices';
-import Hero from '@/components/templates/HeroAcceleration';
+import Button from '@/components/common/Button';
+import Banner from '@/components/common/Banner';
+import AccelerationServices from '@/components/acceleration/AccelerationServices';
+import Hero from '@/components/acceleration/HeroAcceleration';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import PrimaryDot from '@/components/icons/acceleration/PrimaryDot';
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -29,11 +30,11 @@ export default function page() {
           layout="fill"
         />
       </div>
-      <div className="flex flex-col font-gilda md:px-36 py-6 md:py-16 items-center text-left">
-        <span className="text-[#55422A] ml-7 md:ml-9 text-3xl md:text-5xl leading-tight self-start">
+      <div className="flex flex-col font-gilda md:px-28 py-6 md:py-16 items-center text-left">
+        <span className="text-[#55422A] ml-7 md:ml-0 text-3xl md:text-5xl leading-tight self-start">
           LANDA ACCELERATOR :
         </span>
-        <span className="text-[#AA8453] ml-7 md:ml-9 text-xl md:text-4xl leading-tight self-start">
+        <span className="text-[#AA8453] ml-7 md:ml-0 text-xl md:text-4xl leading-tight self-start">
           Growth and Transformation into a Leading Startup
         </span>
         <div className="flex flex-col md:flex-row gap-12 mt-6">
@@ -45,36 +46,13 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <p className="w-[340px] md:w-[680px] md:h-[248px] text-justify font-barlow text-base leading-10 tracking-[1.6px]">
-            Our accelerator division, as a leader in the field of startup
-            acceleration and development on a global scale, assists individuals
-            with innovative ideas and startup potential at all stages of launch
-            and growth. Landa Accelerator aims to support the rapid development
-            and expansion of startups and talented students looking to turn
-            their ideas into high-performing businesses. We are in search of
-            enthusiastic individuals and teams with the necessary skills and
-            creativity to tackle challenges along the way as we accompany them
-            on their journey.
+          <p className="w-[340px] md:w-[680px] md:h-[248px] text-justify font-barlow text-base leading-6 tracking-[1.6px]">
+            Our accelerator division, as a leader in the field of startup acceleration and development on a global scale, assists individuals with innovative ideas and startup potentials at all stages, from launch and growth to success. Landa Accelerator aims to support the rapid development and expansion of startups and talented students looking to turn their ideas into high-performing businesses. We are in search of enthusiastic individuals and teams with the necessary skills and creativity to tackle challenges along the way as we accompany them on their journey and these young and well trained experts will be the one we invest in. There is a long way between the start of a business and success, and this is what our company is able to accelerate, which is the main aim in Landa Acceleration Center.
           </p>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-8">
           <div className="flex items-center gap-2 mt-10 md:mt-[77px]">
-            <svg
-              className="w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="33"
-              height="32"
-              viewBox="0 0 33 32"
-              fill="none"
-            >
-              <circle 
-                id="Ellipse 169"
-                cx="16.5"
-                cy="16"
-                r="16"
-                fill="#CCB598"
-              />
-            </svg>
+            <PrimaryDot />
             <div className="flex flex-col md:flex-row">
               <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2">
                 FORUGH ACCELERATOR :
@@ -109,7 +87,9 @@ export default function page() {
             <span className="text-[#AA8453] font-gilda text-3xl mt-8">
               Accelerator Process
             </span>
-            <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-10 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 ">
+            {/* <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-10 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 "> */}
+            <div className="grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-4">
+
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -136,22 +116,7 @@ export default function page() {
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-8">
           <div className="flex gap-2 mt-6 md:mt-[77px] items-center ">
-            <svg
-              className="w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="33"
-              height="32"
-              viewBox="0 0 33 32"
-              fill="none"
-            >
-              <circle 
-                id="Ellipse 169"
-                cx="16.5"
-                cy="16"
-                r="16"
-                fill="#CCB598"
-              />
-            </svg>
+            <PrimaryDot />
             <div className="flex">
               <div className="flex flex-col md:flex-row">
                 <span className="text-[#80633E] font-gilda text-xl md:text-3xl mx-2 ">
@@ -204,12 +169,12 @@ export default function page() {
           </span>
           <AccelerationServices />
         </div>
-        <div className="flex font-barlow text-2xl leading-9 tracking-[2px] my-11 gap-2 text-[#55422A] text-justify">
+        <div className="flex text-center md:text-left font-barlow text-xl leading-9 tracking-[2px] md:mx-10 my-11 gap-2 text-[#55422A]">
           <svg
-            className="mt-2"
+            className="hidden md:block mt-3"
             xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
+            width="18"
+            height="18"
             viewBox="0 0 21 21"
             fill="none"
           >

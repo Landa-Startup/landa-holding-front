@@ -1,5 +1,5 @@
 // pages/login.js
-import LoginForm from '@/components/organisms/LoginForm';
+import LoginForm from '@/components/auth/login/LoginForm';
 import { Metadata } from 'next';
 
 // Define metadata for the page

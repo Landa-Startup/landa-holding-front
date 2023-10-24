@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
-import Logo from '../molecules/Logo';
+import Logo from '../common/Logo';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {

@@ -1,12 +1,10 @@
 import React from 'react';
-import AboutUsCooperation from '@/components/molecules/AboutUsCooperation';
-import AboutUsLandaHolding from '@/components/molecules/AboutUsLandaHolding';
-import AboutUsProfile from '@/components/molecules/AboutUsProfile';
-import Banner from '@/components/molecules/Banner';
-import AboutUsCard from '@/components/molecules/AboutUsCard';
+import AboutUsLandaHolding from '@/components/about/AboutUsLandaHolding';
+import AboutUsProfile from '@/components/about/AboutUsProfile';
+import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
-import SubsidiaryCompanies from '@/components/templates/SubsidiaryCompanies';
-import StoryOfLanda from '@/components/templates/StoryOfLanda';
+import SubsidiaryCompanies from '@/components/about/SubsidiaryCompanies';
+import StoryOfLanda from '@/components/about/StoryOfLanda';
 import KeyDifferentiating from '@/components/KeyDifferentiating';
 
 export const metadata: Metadata = {
