@@ -8,6 +8,13 @@ import TagsContainer from '@/components/magazine/TagsContainer';
 import Landa from '@/components/icons/magazine/Landa';
 import FetchBlogData from '@/utils/FetchBlogData';
 import MagazineCardsContainer from '@/components/magazine/MagazineCardsContainer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Magazine',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+};
 
 export default function MagazinePage() {
   return (
