@@ -55,26 +55,28 @@ export default function Hero({
         backgroundSize: 'cover',
         backgroundPositionX: '65%',
       }}
-      className="h-[calc(100vh)] md:h-screen relative overflow-hidden brightness-75"
+      className="h-[calc(100vh)] md:h-screen relative overflow-hidden"
     >
-      <div className="flex flex-col items-center justify-center md:h-screen space-y-5 py-36">
+      <div className="flex flex-col items-center justify-center md:h-screen space-y-7 md:space-y-8 py-36">
         <div
-          className={` ${showLanda ? 'block' : 'hidden'
-            } text-center text-white text-xl md:tracking-[11.20px] font-condensed font-normal tracking-[7px]`}
+          className={` ${
+            showLanda ? 'block' : 'hidden'
+          } text-center text-white text-3xl md:text-4xl md:tracking-[12.6px] font-barlow font-bold tracking-[7px]`}
         >
           Landa Holding
         </div>
         <div
-          className={`md:text-right text-neutral-50 md:text-6xl font-normal tracking-widest font-gilda text-center text-opacity-95 text-2xl ${isTitleChanging
+          className={`md:text-right text-neutral-50 text-5xl md:text-7xl font-normal tracking-[6.4px] font-gilda text-center text-opacity-95 ${
+            isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
               : ''
-            }`}
+          }`}
           style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
         >
           {currentTitle}
         </div>
 
-        <div className="text-center font-condensed text-white text-opacity-95 text-2xl font-semibold leading-10 tracking-[2px]">
+        <div className="text-center font-mono text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
           {subTitle}
         </div>
         {showButton ? (
