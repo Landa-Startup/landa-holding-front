@@ -86,7 +86,7 @@ export default function PartnerMembershipForm() {
     });
   };
 
-  const onSubmit = async (data: PartnerMembershipFormData) => {
+  const onSubmit = async (formData: PartnerMembershipFormData) => {
     setIsSubmitting(true);
     setSend(true);
     const sendFormData = new FormData();

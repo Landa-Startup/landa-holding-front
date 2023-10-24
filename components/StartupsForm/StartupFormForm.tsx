@@ -329,7 +329,10 @@ export default function StartupFormForm() {
             className="select select-bordered w-full max-w-xs mt-4"
             onChange={handleItemChange}
           >
-            <option value={'IDEA'} defaultChecked>
+            <option defaultChecked>
+              Select Your Option
+            </option>
+            <option value={'IDEA'}>
               Idea
             </option>
             <option value={'MVP'}>MVP(Minimum Viable Product)</option>

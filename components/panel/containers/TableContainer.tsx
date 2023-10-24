@@ -41,7 +41,7 @@ export default function TableContainer() {
   const [employee, setEmployee] = useState<TableData[]>([]);
   const [myData, setMyData] = useState<TableData[]>([]);
   const getAllData = () => {
-    fetchData('panel/get-vacation-forms')
+    fetchData('/panel/get-vacation-forms')
       .then((result) => {
         setAllData(result);
       })
@@ -51,7 +51,7 @@ export default function TableContainer() {
   };
   const employeeData = () => {
     // employee data
-    fetchData('panel/staff-vacation-form')
+    fetchData('/panel/staff-vacation-form')
       .then((result) => {
         setEmployee(result);
       })
@@ -62,7 +62,7 @@ export default function TableContainer() {
 
   const fetchMyData = () => {
     // my data
-    fetchData('panel/my-vacation-form')
+    fetchData('/panel/my-vacation-form')
       .then((result) => {
         setMyData(result);
         console.log('mentor');
@@ -80,7 +80,6 @@ export default function TableContainer() {
     } else if (currentUser?.role == 'mentor') {
       employeeData();
       fetchMyData();
-      console.log('haha');
     }
   }, []);
   return (
