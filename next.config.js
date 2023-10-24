@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['res.cloudinary.com', 'panel-back.landaholding.com'],
+    domains: [
+      'res.cloudinary.com',
+      'panel-back.landaholding.com',
+      'panel.landaholding.com',
+    ],
   },
 };
 

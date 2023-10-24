@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import ScrollButton from './ScrollButton';
-import Button from '@/components/atoms/Button';
+import Button from '@/components/common/Button';
 
 export default function Fifth() {
   return (
