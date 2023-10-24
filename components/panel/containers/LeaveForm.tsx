@@ -12,7 +12,7 @@ import apiClient from '@/utils/api';
 import { DecodedToken } from 'app/types/global';
 import { parseCookies } from 'nookies';
 import Input from '@/components/common/form/Input';
-
+import RadioButton from '@/components/common/RadioButton';
 interface LeaveFormData {
   leaveType: number;
   leaveStartDate: Date;
@@ -51,6 +51,12 @@ export default function LeaveForm() {
   const [Send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
 
+  // handle radio button
+  const [selectedRadio, setSelectedRadio] = useState('1');
+  const handleRadio = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedRadio(event.target.value);
+  };
+  console.log(selectedRadio);
 
   const router = useRouter();
 
@@ -75,7 +81,7 @@ export default function LeaveForm() {
     const sendFormData = new FormData();
     sendFormData.append('start_time', String(`${formData.leaveStartDate}T${formData.leaveStartTime}`));
     sendFormData.append('end_time', String(`${formData.leaveEndDate}T${formData.leaveEndTime}`));
-    sendFormData.append('vacation_status', String(formData.leaveType));
+    sendFormData.append('vacation_status', String(selectedRadio));
     sendFormData.append('user', String(user_id));
 
 
@@ -162,12 +168,19 @@ export default function LeaveForm() {
         />
         {/* <LeaveFormDate title="From Date" /> */}
         {/* <LeaveFormDate title="To Date" /> */}
-        <LeaveFormRadio
-          title="Type of leave"
-          items={['entitlement', 'illness']}
-          register={register}
-          errors={errors}
+
+        <RadioButton
+        register={register}
+        errors={errors}
+        name='vacation_status'
+        required='this is required!'
+        selectedRadio={selectedRadio}
+        handleRadioChange={handleRadio}
+        title='Type Of Leave Form'
         />
+
+
+        Radio
       </div>
       <div className="flex">
         <button
