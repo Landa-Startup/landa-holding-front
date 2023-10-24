@@ -62,13 +62,16 @@ export default function StartupFormBusinessModel({
 
   return (
     <>
-      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+  <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2">
-          <div>
-            <p className="text-3xl mb-3">Business Model</p>
+          <div className="bg-[#222222CC]">
+            <p className="text-3xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] lg:w-[650px] border-b ">
+              Business Model
+            </p>
+            <hr className=" dark:border-[#222222CC] mb-5 mt-0 " />
           </div>
           <div>
-            <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
+            
           </div>
           <TextArea
             title="Describe the method of monetization of your plan?*"
