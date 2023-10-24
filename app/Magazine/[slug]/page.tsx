@@ -1,8 +1,10 @@
 import React from 'react';
+import MagazineCardContainer from '@/components/magazine/MagazineCardContainer';
 
 export default function page({ params }: { params: { slug: string } }) {
-  // fetch post from backend
-  //...
-  
-  return <div>page: {params.slug}</div>;
+  return (
+    <div>
+      <MagazineCardContainer url={params.slug} />;
+    </div>
+  );
 }
