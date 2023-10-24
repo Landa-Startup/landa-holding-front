@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import MagazineStartUps from '@/components/magazine/MagazineStartUps';
 import MagazineModernPost from '@/components/magazine/MagazineModernPost';
 import Banner from '@/components/common/Banner';
