@@ -1,7 +1,7 @@
 import CoursesCardContainer from '@/components/academy/CoursesCardContainer';
 import SearchInput from '@/components/academy/SearchInput';
-import Banner from '@/components/molecules/Banner';
-import Pagination from '@/components/molecules/Pagination';
+import Banner from '@/components/common/Banner';
+import Pagination from '@/components/common/Pagination';
 import { Metadata } from 'next';
 import React from 'react';
 

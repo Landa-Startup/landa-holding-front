@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from '@/components/molecules/Banner';
-import PartnerMembershipForm from '@/components/organisms/PartnerMembershipForm';
+import Banner from '@/components/common/Banner';
+import PartnerMembershipForm from '@/components/partner-membership/PartnerMembershipForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
