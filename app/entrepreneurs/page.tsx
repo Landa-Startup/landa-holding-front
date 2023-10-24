@@ -1,6 +1,6 @@
-import Banner from '@/components/molecules/Banner';
+import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
-import EntrepreneursForm from '@/components/organisms/EntrepreneursForm';
+import EntrepreneursForm from '@/components/entrepreneurs/EntrepreneursForm';
 
 import React from 'react';
 
