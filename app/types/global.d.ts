@@ -152,6 +152,15 @@ interface TableData {
   time: string;
 }
 
+interface MagazineData {
+  title: string;
+  description: string;
+  thumbnail: string;
+  slug: string;
+  date: string;
+  file: string;
+}
+
 
 export {
   ContactUSFormData,
@@ -164,5 +173,6 @@ export {
   Entrepreuneur,
   LoginFormData,
   DecodedToken,
-  TableData
+  TableData,
+  MagazineData
 };

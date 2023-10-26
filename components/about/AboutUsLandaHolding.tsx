@@ -16,8 +16,7 @@ export default function AboutUsLandaHolding() {
           high-quality transaction flow. Landa Holding aims to gather reliable
           investors together from all over the world and introduce the best
           investment opportunities for start-up businesses. */}
-          Landa Holding is distinctive and distinguished from others in the same market and what makes us unique is our extensive charitable activities and world-class transaction flow, which facilitate the process of private business development. Landa Holding aims to attract reliable investors from all over the world and recommend the best investment opportunities for startup businesses, and to establish the right environment and connections between the idea holders and providers of services for this matter.
-        </p>
+          We are a team of Angel Investors who help you make your own team, define your business model, and increase the value of your startup in international markets. What distinguishes us and makes us unique is our assistance in attracting resources and investment, inviting international investors and business associates, in addition to our entrepreneurs, that will all lead to success. Landa Holding aims to gather all resources from all over the world and introduce the best investment opportunities for start-up businesses.        </p>
       </div>
       <Image
         className="brightness-95 contrast-[1.15] drop-shadow-md"

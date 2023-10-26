@@ -30,11 +30,11 @@ export default function AboutusPersonalTabs({
         backgroundPosition: 'center',
       }}
     >
-      <div className="flex flex-col p-2  self-start">
+      <div className="pl-2 pb-2 mt-1 self-start">
         <Link
           href={linkedIn}
           target="_blank"
-          className="text-white rounded-full bg-[#222] p-2 opacity-75"
+          className=""
         >
           <IconLinkedin />
         </Link>
