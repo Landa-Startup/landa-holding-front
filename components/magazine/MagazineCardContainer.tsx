@@ -18,7 +18,7 @@ export default function MagazineCardContainer({ url }: { url: string }) {
     }
 
     fetchData();
-  }, []); // The empty dependency array ensures this runs only on component mount
+  }, [url]); // Add 'url' to the dependency array
 
   return (
     <div>
