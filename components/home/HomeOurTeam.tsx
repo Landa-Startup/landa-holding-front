@@ -24,6 +24,7 @@ export default function HomeOurTeam() {
       </div>
 
       <Image
+        loading="lazy"
         width={789}
         height={243}
         quality={100}
@@ -32,6 +33,7 @@ export default function HomeOurTeam() {
         src="/static/images/Home/OurTeam/desktop.jpg"
       />
       <Image
+        loading="lazy"
         width={375}
         height={200}
         quality={100}
@@ -40,7 +42,7 @@ export default function HomeOurTeam() {
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
       <Link href={"/our-team"}>
-        <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
+        <button className="justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
           View More
         </button>
       </Link>{' '}
