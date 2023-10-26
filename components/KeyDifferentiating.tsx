@@ -61,6 +61,7 @@ export default function KeyDifferentiating() {
           alt="Landa Key Differentiating"
           width={586}
           height={741}
+          loading="lazy"
         />
       </div>
     </div>

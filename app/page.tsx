@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="relative">
-
       {/* Hero section */}
       <Hero
         showLanda

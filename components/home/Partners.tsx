@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Button from '../common/Button';
+import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 
 export default function Partners() {
   const logosLeft = [
@@ -100,7 +101,7 @@ export default function Partners() {
             landscape. To become an affiliate, please complete our free
             questionnaire for our confidential review.
           </p>
-          <div className="">
+          <div>
             <Button
               size="notVisit"
               text="Join Us"
@@ -130,9 +131,9 @@ export default function Partners() {
           text="Visit Now"
           goto="/partner-membership"
           bgColor="Primary"
-          className=""
         />
       </div>
+      <PartnersDiamondsContainer/>
     </div>
   );
 }

@@ -28,6 +28,7 @@ export default function page() {
           src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
           alt="acceleration"
           layout="fill"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col font-gilda md:px-28 py-6 md:py-16 items-center text-left">
@@ -44,10 +45,23 @@ export default function page() {
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
               alt="acceleration"
               layout="fill"
+              loading="lazy"
             />
           </div>
           <p className="w-[340px] md:w-[680px] md:h-[248px] text-justify font-barlow text-base leading-6 tracking-[1.6px]">
-            Our accelerator division, as a leader in the field of startup acceleration and development on a global scale, assists individuals with innovative ideas and startup potentials at all stages, from launch and growth to success. Landa Accelerator aims to support the rapid development and expansion of startups and talented students looking to turn their ideas into high-performing businesses. We are in search of enthusiastic individuals and teams with the necessary skills and creativity to tackle challenges along the way as we accompany them on their journey and these young and well trained experts will be the one we invest in. There is a long way between the start of a business and success, and this is what our company is able to accelerate, which is the main aim in Landa Acceleration Center.
+            Our accelerator division, as a leader in the field of startup
+            acceleration and development on a global scale, assists individuals
+            with innovative ideas and startup potentials at all stages, from
+            launch and growth to success. Landa Accelerator aims to support the
+            rapid development and expansion of startups and talented students
+            looking to turn their ideas into high-performing businesses. We are
+            in search of enthusiastic individuals and teams with the necessary
+            skills and creativity to tackle challenges along the way as we
+            accompany them on their journey and these young and well trained
+            experts will be the one we invest in. There is a long way between
+            the start of a business and success, and this is what our company is
+            able to accelerate, which is the main aim in Landa Acceleration
+            Center.
           </p>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-8">
@@ -68,6 +82,7 @@ export default function page() {
             alt="FORUGH ACCELERATOR"
             width={71}
             height={60}
+            loading="lazy"
           />
           <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] pb-3 mt-6 md:ml-48 lg:ml-20 xl:ml-0">
             <p>
@@ -89,7 +104,6 @@ export default function page() {
             </span>
             {/* <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-10 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 "> */}
             <div className="grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-4">
-
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -111,6 +125,7 @@ export default function page() {
               alt="forough"
               width={521}
               height={4221}
+              loading="lazy"
             />
           </div>
         </div>
@@ -134,6 +149,7 @@ export default function page() {
             alt="FORUGH ACCELERATOR"
             width={71}
             height={60}
+            loading="lazy"
           />
           <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6">
             <p>
@@ -161,6 +177,7 @@ export default function page() {
             alt="forough"
             width={521}
             height={4221}
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col">
