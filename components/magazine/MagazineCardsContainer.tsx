@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import PostCard from './PostCard';
 import FetchBlogData from '@/utils/FetchBlogData';
+import { MagazineData } from 'app/types/global';
 export default function MagazineCardsContainer() {
-  const [cardData, setCardData] = useState([]);
+  const [cardData, setCardData] = useState<MagazineData[]>();
 
   useEffect(() => {
     // Inside the useEffect, fetch the data and update the state
@@ -21,7 +22,7 @@ export default function MagazineCardsContainer() {
 
   return (
     <div className="flex flex-col gap-16 col-span-2">
-      {cardData.map((card, index) => (
+      {cardData?.map((card, index) => (
         <PostCard
           slug={card.slug}
           key={index}

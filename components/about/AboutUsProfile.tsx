@@ -17,7 +17,7 @@ export default function AboutUsProfile() {
       },
     },
     {
-      image: '/static/images/4-1.png',
+      image: '/static/images/about/mjafari.jpg',
       name: 'MORTEZA JAFARI',
       position: 'International Relations',
       links: {
