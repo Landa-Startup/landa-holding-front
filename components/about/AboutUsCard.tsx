@@ -45,8 +45,8 @@ const AboutUsCard = ({
                 loading="lazy"
                 alt={`Image for ${title}`}
                 src={image}
-                layout="fill" // Set layout to 'fill'
-                objectFit="cover" // Set objectFit to 'cover'
+                layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>
@@ -63,8 +63,8 @@ const AboutUsCard = ({
                 loading="lazy"
                 alt={`Image for ${title}`}
                 src={image}
-                layout="fill" // Set layout to 'fill'
-                objectFit="cover" // Set objectFit to 'cover'
+                layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>
