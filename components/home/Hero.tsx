@@ -55,6 +55,7 @@ export default function Hero({
         backgroundSize: 'cover',
         backgroundPositionX: '65%',
       }}
+      data-bgset={`/static/images/Home/Hero/${backgroundImage} [(max-width: 640px)] | /static/images/Home/Hero/${backgroundImage}`}
       className="h-[calc(100vh)] md:h-screen relative overflow-hidden"
     >
       <div className="flex flex-col items-center justify-center md:h-screen space-y-7 md:space-y-8 py-36">
