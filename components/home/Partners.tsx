@@ -80,6 +80,7 @@ export default function Partners() {
         <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-2 md:order-1 mt-9">
           {logosLeft.map((role, index) => (
             <Image
+              loading='lazy'
               className="w-20 md:w-32 h-20 md:h-32 object-contain"
               key={index}
               src={`/static/images/Home/contact/${role.number}.png`}
@@ -114,6 +115,7 @@ export default function Partners() {
         <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
           {logosRight.map((role, index) => (
             <Image
+              loading='lazy'
               className="w-20 md:w-32 h-20 md:h-32 object-contain"
               key={index}
               src={`/static/images/Home/contact/${role.number}.png`}
@@ -133,7 +135,7 @@ export default function Partners() {
           bgColor="Primary"
         />
       </div>
-      <PartnersDiamondsContainer/>
+      {/* <PartnersDiamondsContainer/> */}
     </div>
   );
 }
