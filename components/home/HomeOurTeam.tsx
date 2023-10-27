@@ -73,7 +73,7 @@ export default function HomeOurTeam() {
         </span>
       </div>
       <div className="flex items-center justify-center">
-        <p className="mx-40">
+        <p className="md:mx-40 text-center">
           Our team of experts is comprised of professionals who are passionate
           about their work, and have an extensive background in a wide variety
           of applications, and are willing to help at any time.
