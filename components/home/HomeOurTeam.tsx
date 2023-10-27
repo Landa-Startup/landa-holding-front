@@ -83,7 +83,6 @@ export default function HomeOurTeam() {
         loading="lazy"
         width={789}
         height={243}
-        quality={100}
         alt="OurTeam"
         className="hidden md:block w-[444px] md:w-[1192px] h-[284px] md:h-[693px] object-cover"
         src="/static/images/Home/OurTeam/desktop.jpg"
@@ -92,7 +91,6 @@ export default function HomeOurTeam() {
         loading="lazy"
         width={375}
         height={200}
-        quality={100}
         alt="OurTeam"
         className="object-cover md:hidden"
         src="/static/images/Home/OurTeam/mobile.jpeg"
