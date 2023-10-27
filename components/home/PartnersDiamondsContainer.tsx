@@ -2,18 +2,18 @@ import React from 'react';
 import PartnersDiamond from './PartnersDiamond';
 
 export default function PartnersDiamondsContainer() {
-  const partners = [
+  const partners1 = [
     {
       number: 1,
       alt: 'evimo',
     },
     {
       number: 2,
-      alt: 'azad university',
+      alt: 'azad',
     },
     {
       number: 3,
-      alt: 'nekeoi',
+      alt: 'nekoei',
     },
     {
       number: 4,
@@ -27,6 +27,8 @@ export default function PartnersDiamondsContainer() {
       number: 6,
       alt: 'evimo',
     },
+  ];
+  const partners2 = [
     {
       number: 7,
       alt: 'evimo',
@@ -47,14 +49,16 @@ export default function PartnersDiamondsContainer() {
       number: 11,
       alt: 'evimo',
     },
+  ];
+  const partners3 = [
     {
       number: 12,
       alt: 'evimo',
     },
-    // {
-    //   number: 13,
-    //   alt: 'evimo',
-    // },
+    {
+      number: 13,
+      alt: 'evimo',
+    },
     {
       number: 14,
       alt: 'evimo',
@@ -63,19 +67,36 @@ export default function PartnersDiamondsContainer() {
       number: 15,
       alt: 'evimo',
     },
-    // {
-    //   number: 16,
-    //   alt: 'evimo',
-    // },
   ];
   return (
-    <div className="grid grid-cols-7 mx-[450px] pb-20 pt-48">
-      {partners.map((partner) => (
-        <PartnersDiamond
-          key={partner.number}
-          backgroundImage={partner.number}
-        />
-      ))}
+    <div className="flex flex-col">
+      <div className="flex flex-wrap pt-48 mx-auto gap-14">
+        {partners1.map((partner, index) => (
+          <PartnersDiamond
+            key={partner.number}
+            backgroundImage={partner.number}
+            name={partner.alt}
+          />
+        ))}
+      </div>
+      <div className="flex flex-wrap gap-14 mx-auto">
+        {partners2.map((partner, index) => (
+          <PartnersDiamond
+            key={partner.number}
+            backgroundImage={partner.number}
+            name={partner.alt}
+          />
+        ))}
+      </div>
+      <div className="flex flex-wrap pb-20  mx-auto gap-14">
+        {partners3.map((partner, index) => (
+          <PartnersDiamond
+            key={partner.number}
+            backgroundImage={partner.number}
+            name={partner.alt}
+          />
+        ))}
+      </div>
     </div>
   );
 }
