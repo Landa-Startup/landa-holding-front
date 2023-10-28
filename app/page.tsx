@@ -32,8 +32,8 @@ export default function Page() {
       <LandaHoldingBlack />
       <LandaHoldingPriority />
       <HomeOurTeam />
-      <LatestStartups />
-      <Partners />
+      {/* <LatestStartups />
+      <Partners /> */}
     </div>
   );
 }
