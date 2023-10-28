@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import TeamRolesContainer from '../../app/academy/our-team/TeamRolesContainer';
+import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from '../common/PersonalTab';
 
 export default function TeamPersons() {
