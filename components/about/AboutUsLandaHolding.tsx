@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutUsLandaHolding() {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-evenly pt-5 md:py-32 bg-[#FAFAFA] lg:flex flex-row">
+    <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-evenly pt-5 md:py-32 bg-[#FAFAFA]">
       <div className="text-black p-3 space-y-2">
         <p className="text-3xl text-center font-semibold font-gilda">
           About Landa Holding

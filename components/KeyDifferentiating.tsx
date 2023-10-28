@@ -8,7 +8,7 @@ export default function KeyDifferentiating() {
         <span className="font-gilda text-2xl md:text-3xl leading-5 text-primary">
           Key Differentiating Factors:
         </span>
-        <div className="font-barlow leading-6 md:w-[550px] text-black gap-2">
+        <div className="font-barlow leading-6 md:w-[350px] lg:w-[450px] xl:w-[550px] text-black gap-2">
           <p>
             First and foremost, it&apos;s essential to understand that the most
             critical aspect is the mental model and perspective behind these key

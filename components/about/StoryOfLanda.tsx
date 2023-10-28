@@ -5,9 +5,9 @@ import React from 'react';
 export default function StoryOfLanda() {
   return (
     <div className="flex flex-col md:px-32 py-10 md:py-14 gap-12 bg-[#F7F3EE]">
-      <div className="flex flex-col md:flex-row gap-12 text-[#000]">
-        <div className="flex flex-col md:w-1/2 text-justify px-10">
-          <div className="w-screen -ml-10 md:w-[589px] h-[310px] md:h-[310px] relative">
+      <div className="flex flex-col lg:flex-row gap-12 text-[#000]">
+        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 text-justify px-10">
+          <div className="w-screen -ml-10 lg:w-[449px] xl:w-[589px] md:w-[500px] h-[310px] md:h-[310px] relative ">
             <Image
               className="object-cover"
               src="/static/images/About/story/1.png"
@@ -41,7 +41,7 @@ export default function StoryOfLanda() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:w-1/2 md:text-justify px-10">
+        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 md:text-justify px-10">
           <span className="text-primary font-gilda text-3xl">
             LANDA Startups
           </span>
@@ -86,8 +86,8 @@ export default function StoryOfLanda() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-12 text-[#000]">
-        <div className="flex flex-col md:w-1/2 px-10">
+      <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-12 text-[#000]">
+        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 px-10">
           <span className="font-gilda text-3xl text-primary">
             VISION OF THE LANDA HOLDING
           </span>
@@ -121,7 +121,7 @@ export default function StoryOfLanda() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:w-1/2 md:text-justify px-10">
+        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 md:text-justify px-10">
           <span className="font-gilda text-3xl text-primary">
             Key Differentiating Factors:
           </span>
