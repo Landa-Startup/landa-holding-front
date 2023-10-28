@@ -26,24 +26,11 @@ export default function SeoCoursePage() {
         backgroundImage="586df33bf776763ec00a0ed6ea0528cb.jpg"
         leftImage="academy.png"
       />
-
-
-      {/* Roadmap Section */}
       <RoadmapContainer />
-
-      {/* Promote Course Section
-      <PromoteCourse image="/static/images/Academy/Frame 37625.png" /> */}
-
-      {/* Scroll Section */}
+      <PromoteCourse image="/static/images/Academy/Frame 37625.png" /> *
       <ScrollMenu />
-
-      {/* Video Section */}
-      <Video />
-
-      {/* Gallery Section */}
+      {/* <Video /> */}
       <Gallery />
-
-      {/* Contact Us Section */}
       <ContactUs />
     </div>
   );

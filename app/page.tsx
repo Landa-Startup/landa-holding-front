@@ -4,7 +4,6 @@ import Hero from '@/components/home/Hero';
 import LandaHoldingPriority from '@/components/home/LandaHoldingPriority';
 import LatestStartups from '@/components/home/LatestStartups';
 import LandaHoldingBlack from '@/components/home/LandaHoldingBlack';
-import AerialViewBusinessTeam from '@/components/home/BusinessTeam';
 import HomeCardsContainer from '@/components/home/HomeCardsContainer';
 import Partners from '@/components/home/Partners';
 import HomeOurTeam from '@/components/home/HomeOurTeam';
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="relative">
-
       {/* Hero section */}
       <Hero
         showLanda

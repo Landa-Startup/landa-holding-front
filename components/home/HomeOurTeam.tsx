@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 export default function HomeOurTeam() {
   const items = [
     {
@@ -8,56 +8,56 @@ export default function HomeOurTeam() {
       position: 'Secretary',
       name: 'Lida Parvizi',
       linkedIn: '',
-      category: 'secretary'
+      category: 'secretary',
     },
     {
       image: '/static/images/our-team/Personals/a6.png',
       position: 'CTO',
       name: 'Iman Nasr',
       linkedIn: '',
-      category: 'mentor'
+      category: 'mentor',
     },
     {
       image: '/static/images/our-team/Personals/a33.png',
       position: 'Public Relations Officer',
       name: 'Gelareh Bahrami',
       linkedIn: '',
-      category: 'public relations officer'
+      category: 'public relations officer',
     },
     {
       image: '/static/images/our-team/Personals/a7.png',
       position: 'Full stack',
       name: 'Sajjad Momeni',
       linkedIn: '',
-      category: 'mentor'
+      category: 'mentor',
     },
     {
       image: '/static/images/our-team/Personals/a5.png',
       position: 'Accountant',
       name: 'Ali Solaimani',
       linkedIn: '',
-      category: 'accountant'
+      category: 'accountant',
     },
     {
       image: '/static/images/our-team/Personals/a13.png',
       position: 'UX/UI Designer',
       name: 'Ariana Shafie',
       linkedIn: '',
-      category: 'designer'
+      category: 'designer',
     },
     {
       image: '/static/images/our-team/Personals/a9.png',
       position: 'Digital Marketer',
       name: 'Ehsan Aliakbari',
       linkedIn: '',
-      category: "digital marketer"
+      category: 'digital marketer',
     },
     {
       image: '/static/images/our-team/Personals/a21.png',
       position: 'Graphic Designer',
       name: 'Hoda Mahdi',
       linkedIn: '',
-      category: 'designer'
+      category: 'designer',
     },
   ];
 
@@ -72,38 +72,34 @@ export default function HomeOurTeam() {
           Our Team
         </span>
       </div>
-      <div className='flex items-center justify-center'>
-        <p className='md:container md:mx-auto md:px-16 text-center md:text-left'>Our team of experts is comprised of professionals who are passionate about their work, and have an extensive background in a wide variety of applications, and are willing to help at any time.</p>
-        {/* <Link href={"/our-team"}>
-                    <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-24 mt-8  flex px-10 py-2 font-barlow">
-                        View More
-                    </button>
-                </Link> */}
-
+      <div className="flex items-center justify-center">
+        <p className="md:mx-40 text-center">
+          Our team of experts is comprised of professionals who are passionate
+          about their work, and have an extensive background in a wide variety
+          of applications, and are willing to help at any time.
+        </p>
       </div>
-
       <Image
+        loading="lazy"
         width={789}
         height={243}
-        quality={100}
         alt="OurTeam"
-        className="hidden md:block w-[444px] md:w-[1192px] h-[284px] md:h-[693px] object-cover object-scale-down"
+        className="hidden md:block w-[444px] md:w-[1192px] h-[284px] md:h-[693px] object-cover"
         src="/static/images/Home/OurTeam/desktop.jpg"
       />
       <Image
+        loading="lazy"
         width={375}
         height={200}
-        quality={100}
         alt="OurTeam"
-        className="object-cover object-scale-down md:hidden"
+        className="object-cover md:hidden"
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
-      <Link href={"/our-team"}>
-        <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
+      <Link href={'/our-team'}>
+        <button className="justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
           View More
         </button>
       </Link>{' '}
     </div>
-
   );
 }

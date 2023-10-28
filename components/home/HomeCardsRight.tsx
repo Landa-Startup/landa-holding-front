@@ -29,7 +29,6 @@ export default function HomeCardsRight({
               src={image.src}
               alt={image.alt}
               fill
-              sizes="100vh"
             />
           </div>
         ))}

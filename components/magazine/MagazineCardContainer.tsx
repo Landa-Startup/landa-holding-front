@@ -1,8 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import FetchBlogData from '@/utils/FetchBlogData';
+import { MagazineData } from 'app/types/global';
 export default function MagazineCardContainer({ url }: { url: string }) {
-  const [cardData, setCardData] = useState([]);
+  const [cardData, setCardData] = useState<MagazineData>();
 
   useEffect(() => {
     // Inside the useEffect, fetch the data and update the state
@@ -17,14 +18,14 @@ export default function MagazineCardContainer({ url }: { url: string }) {
     }
 
     fetchData();
-  }, []); // The empty dependency array ensures this runs only on component mount
+  }, [url]); // Add 'url' to the dependency array
 
   return (
     <div>
       <div className="flex flex-col">
         <div className="flex gap-2">
           <span>title:</span>
-          <span>{cardData.title}</span>
+          <span>{cardData?.title}</span>
         </div>
       </div>
     </div>
