@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   // output: "export",
-  // distDir: 'out',
+  distDir: 'out',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://landaholding.com' : '',
   images: {
     domains: [
       'res.cloudinary.com',
