@@ -103,7 +103,7 @@ export default function page() {
               Accelerator Process
             </span>
             {/* <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-10 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 "> */}
-            <div className="grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-4">
+            <div className="grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-4 ">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -134,11 +134,11 @@ export default function page() {
             <PrimaryDot />
             <div className="flex">
               <div className="flex flex-col md:flex-row">
-                <span className="text-[#80633E] font-gilda text-xl md:text-3xl mx-2 ">
+                <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2 ">
                   FARAZAMAN ACCELERATOR :
                 </span>
                 <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
-                  Supporting Students and the Youth
+                  Supporting the Youth
                 </span>
               </div>
             </div>

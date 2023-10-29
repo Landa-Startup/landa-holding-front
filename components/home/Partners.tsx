@@ -135,7 +135,7 @@ export default function Partners() {
           bgColor="Primary"
         />
       </div>
-      <PartnersDiamondsContainer/>
+      {/* <PartnersDiamondsContainer/> */}
     </div>
   );
 }
