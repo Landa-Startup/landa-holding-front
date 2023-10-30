@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import CourseCard from './CourseCard';
+import ArrowUp from '../icons/common/ArrowUp';
 
 export default function ScrollMenu() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -64,31 +65,18 @@ export default function ScrollMenu() {
   return (
     <div className="bg-[#3D5656] py-10 md:h-screen" id="Courses">
       <div className="container mx-auto">
-        <div className="text-center text-white text-2xl md:text-3xl font-normal leading-[50px] tracking-[11.20px]">
+        <div className="font-condensed text-center text-white text-2xl md:text-3xl font-normal leading-[50px] tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="text-center text-white text-4xl md:text-5xl font-normal leading-[50px] tracking-[3.20px] mb-12">
+        <div className="font-gilda text-center text-white text-4xl md:text-5xl font-normal leading-[50px] tracking-[3.20px] mb-12">
           Our Courses
         </div>
-        <div className="ems-center mx-5">
+        <div className="flex items-center mx-5">
           <button
-            className="bg-gray-700 text-white px-4 py-2 rounded-l hidden md:block"
+            className="bg-gray-700 text-white md:px-4 md:py-2 p-2 md:rounded-l rounded-full"
             onClick={() => handleScroll(-200)} // Adjust scroll offset as needed
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
-              />
-            </svg>
+            <ArrowUp />
           </button>
           <div
             className="flex overflow-x-scroll md:overflow-x-hidden whitespace-nowrap mx-2 gap-4 md:gap-12 md:h-[486px]"
@@ -105,7 +93,7 @@ export default function ScrollMenu() {
             ))}
           </div>
           <button
-            className="bg-gray-700 text-white px-4 py-2 rounded-r hidden md:block"
+            className="bg-gray-700 text-white md:px-4 md:py-2 p-2 md:rounded-r rounded-full"
             onClick={() => handleScroll(200)} // Adjust scroll offset as needed
           >
             <svg

@@ -42,9 +42,6 @@ interface InvestorRegistrationFormData {
   email: string;
   countryOfResidence: string;
   provinceOfResidence: string;
-  streetAddress: string;
-  streetAddressLine2: string;
-  postalCode: string;
   companyName: string;
   interests: string;
   positionInTeam: string;
@@ -72,7 +69,7 @@ interface JobFormData {
   lastName: string;
   email: string;
   phoneNumber: string;
-  cvFile?: any | null;
+  cvFile?: File | '';
 }
 
 // Define an interface for startups form data
@@ -87,9 +84,9 @@ interface StartupsFormData {
   ideaExplanation: string;
   getToKnowUs: string;
   pitchDeck: boolean;
-  pitchDeckFile?: File | null;
+  pitchDeckFile?: File | '';
   businessPlan: boolean;
-  businessPlanFile?: File | null;
+  businessPlanFile?: File | '';
   productName: string;
   siteAddress: string;
   customerProblem: string;
@@ -98,10 +95,10 @@ interface StartupsFormData {
   scalable: string;
   monetizationOfYourPlan: string;
   structureOfYourSales: string;
-  financialModelFile?: File | null;
+  financialModelFile?: File | '';
   cooperatedWithInvestors: string;
   financial: boolean;
-  financialFile?: File | null;
+  financialFile?: File | '';
   customerCharacteristic: string;
   currentCustomers: string;
   estimatedMarketSize: string;
@@ -136,7 +133,34 @@ interface DecodedToken {
   iat: number;
   role: string;
   user_id: number;
+  first_name: string;
+  last_name: string;
+  image: string;
+  jwt: string;
 }
+
+interface TableData {
+  first_name: string;
+  last_name: string;
+  start_time: string;
+  end_time: string;
+  status: string;
+  employerName: string;
+  employeeName: string;
+  typeOfLeave: string;
+  date: string;
+  time: string;
+}
+
+interface MagazineData {
+  title: string;
+  description: string;
+  thumbnail: string;
+  slug: string;
+  date: string;
+  file: string;
+}
+
 
 export {
   ContactUSFormData,
@@ -148,5 +172,7 @@ export {
   JobFormData,
   Entrepreuneur,
   LoginFormData,
-  DecodedToken
+  DecodedToken,
+  TableData,
+  MagazineData
 };

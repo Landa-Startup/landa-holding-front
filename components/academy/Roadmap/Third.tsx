@@ -5,7 +5,7 @@ import ScrollButton from './ScrollButton';
 export default function Fourth() {
   return (
     <div
-      className="flex flex-col h-screen bg-[#263238] text-white relative"
+      className="flex flex-col h-[850px] bg-[#263238] text-white relative"
       id="Roadmap-3"
     >
       <div className="flex flex-col md:flex-row-reverse justify-evenly pyb-8 pt-16 z-10 px-10 space-y-5">
@@ -22,7 +22,7 @@ export default function Fourth() {
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
             <div className="w-5 h-5 bg-[#80C555] rounded-full mt-3" />
-            <div className="w-[454px] text-xl font-normal font-barlow leading-10 text-justify">
+            <div className="w-[454px] text-xl font-normal font-barlow leading-10">
               After completing the intensive 6-month academy program, you will
               have the opportunity to officially work alongside experienced
               mentors on startups and international projects to gain valuable
@@ -34,7 +34,7 @@ export default function Fourth() {
       <ScrollButton
         scrollTo="Roadmap-4"
         color="white"
-        addedClass="mx-auto md:ml-28"
+        addedClass="mx-auto md:ml-28 mt-2 md:mt-0"
       />
       <svg
         className="absolute top-0 left-[550px] hidden md:block"

@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from '@/components/molecules/Banner';
-import JobForm from '@/components/organisms/JobForm';
+import Banner from '@/components/common/Banner';
+import JobForm from '@/components/job-form/JobForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function ApplyFormPage() {
     <>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title="APPLY JOB FORM"
+        title="APPLY JOB"
       />
       <JobForm />
     </>

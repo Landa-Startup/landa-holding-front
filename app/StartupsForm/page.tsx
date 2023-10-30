@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from '@/components/molecules/Banner';
-import StartupFormForm from '@/components/organisms/StartupFormForm';
+import Banner from '@/components/common/Banner';
+import StartupFormForm from '@/components/StartupsForm/StartupFormForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

@@ -2,7 +2,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import Button from '../atoms/Button';
+import Button from '../common/Button';
+import ArrowDown from '../icons/hero/ArrowDown';
 
 export default function Hero({
   showLanda,
@@ -22,7 +23,7 @@ export default function Hero({
   showButton?: boolean;
 }) {
   return (
-    <div className="h-screen relative overflow-hidden bg-[#3D5656]">
+    <div className="h-[850px] relative overflow-hidden bg-[#3D5656]">
       <Image
         loading="lazy"
         className="absolute bottom-16 hidden md:block"
@@ -61,7 +62,7 @@ export default function Hero({
         )}
         <Image
           loading="lazy"
-          className="w-[365px] md:w-[412px] h-[497px] md:h-[560px] absolute -right-28 md:right-0 -bottom-20"
+          className="w-[300px] md:w-[412px] h-[400px] md:h-[560px] absolute -right-28 md:right-0 -bottom-20"
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={412}
@@ -72,19 +73,7 @@ export default function Hero({
           className="absolute flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-white rounded-full animate-bounce left-7 md:left-10 bottom-4"
           href={'#Roadmap-1'}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            className="text-white bi bi-arrow-down"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fillRule="evenodd"
-              d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-            />
-          </svg>
+          <ArrowDown />
         </Link>
       </div>
     </div>
