@@ -7,6 +7,7 @@ import SubsidiaryCompanies from '@/components/about/SubsidiaryCompanies';
 import StoryOfLanda from '@/components/about/StoryOfLanda';
 import KeyDifferentiating from '@/components/KeyDifferentiating';
 
+
 export const metadata: Metadata = {
   title: 'Landa Holding | About',
   description:

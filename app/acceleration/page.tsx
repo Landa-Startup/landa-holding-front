@@ -39,7 +39,7 @@ export default function page() {
           Growth and Transformation into a Leading Startup
         </span>
         <div className="flex flex-col md:flex-row gap-12 mt-6">
-          <div className="relative md:w-[490px] h-[284px] hidden md:block lg:ml-4">
+          <div className="relative md:w-[490px] h-[284px] hidden md:block xl:ml-4 lg:ml-6">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -48,7 +48,7 @@ export default function page() {
               loading="lazy"
             />
           </div>
-          <p className="w-[340px] md:w-[680px] md:h-[248px] text-justify font-barlow text-base leading-6 tracking-[1.6px]">
+          <p className="w-[340px] lg:w-[680px] lg:pr-2 md:h-[248px] md:w-[550px] text-justify font-barlow text-base leading-6 tracking-[1.6px]">
             Our accelerator division, as a leader in the field of startup
             acceleration and development on a global scale, assists individuals
             with innovative ideas and startup potentials at all stages, from
@@ -64,7 +64,7 @@ export default function page() {
             Center.
           </p>
         </div>
-        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-8">
+        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-2 md:px-8 lg:px-8 xl:px-8">
           <div className="flex items-center gap-2 mt-10 md:mt-[77px]">
             <PrimaryDot />
             <div className="flex flex-col md:flex-row">
@@ -103,7 +103,7 @@ export default function page() {
               Accelerator Process
             </span>
             {/* <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-10 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 "> */}
-            <div className="grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-4 ">
+            <div className="grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-6 text-xs md:text-sm lg:text-sm xl:text-sm">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -129,12 +129,12 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-8">
+        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-2 px-2 md:px-8 lg:px-8 xl:px-8">
           <div className="flex gap-2 mt-6 md:mt-[77px] items-center ">
             <PrimaryDot />
             <div className="flex">
-              <div className="flex flex-col md:flex-row">
-                <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2 ">
+              <div className="flex flex-col md:flex-row ml-0">
+                <span className="text-[#80633E] font-gilda text-xl md:text-3xl  ">
                   FARAZAMAN ACCELERATOR :
                 </span>
                 <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
@@ -144,7 +144,7 @@ export default function page() {
             </div>
           </div>
           <Image
-            className="absolute right-7 top-11 w-[46px] h-[46px]"
+            className="absolute right-1 top-8 w-[46px] h-[46px]"
             src="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
             alt="FORUGH ACCELERATOR"
             width={71}
