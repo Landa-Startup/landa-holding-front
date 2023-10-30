@@ -65,7 +65,7 @@ export default function page() {
           </p>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-2 md:px-8 lg:px-8 xl:px-8">
-          <div className="flex items-center gap-2 mt-10 md:mt-[77px]">
+          <div className="flex items-center gap-2 mt-10 md:mt-[77px] md:pl-48 lg:pl-20 xl:pl-0">
             <PrimaryDot />
             <div className="flex flex-col md:flex-row">
               <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2">
@@ -103,7 +103,7 @@ export default function page() {
               Accelerator Process
             </span>
             {/* <div className="grid grid-cols-1 md:grid md:grid-rows-6 md:grid-flow-col md:gap-10 md:leading-4 font-barlow text-[#000] leading-9 z-10 lg:grid-rows-6 "> */}
-            <div className="grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-6 text-xs md:text-sm lg:text-sm xl:text-sm">
+            <div className="grid grid-cols-1 font-barlow text-[#000] z-10 mt-6 gap-6 text-xs md:text-sm md:grid-cols-2 lg:text-sm lg:grid-cols-2 xl:text-sm xl:grid-cols-2">
               <span>1. Idea generation for innovative business creation</span>
               <span>2. Idea nurturing</span>
               <span>3. Creating a pitch deck</span>
@@ -130,14 +130,14 @@ export default function page() {
           </div>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-2 px-2 md:px-8 lg:px-8 xl:px-8">
-          <div className="flex gap-2 mt-6 md:mt-[77px] items-center ">
+          <div className="flex gap-2 mt-6 md:mt-[77px] items-center md:pl-48 lg:pl-20 xl:pl-0">
             <PrimaryDot />
             <div className="flex">
               <div className="flex flex-col md:flex-row ml-0">
-                <span className="text-[#80633E] font-gilda text-xl md:text-3xl  ">
+                <span className="text-[#80633E] font-gilda text-xl md:text-3xl">
                   FARAZAMAN ACCELERATOR :
                 </span>
-                <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
+                <span className="text-[#AA8453] font-gilda text-base md:text-3xl ml-2">
                   Supporting the Youth
                 </span>
               </div>
@@ -151,7 +151,7 @@ export default function page() {
             height={60}
             loading="lazy"
           />
-          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6">
+          <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6 md:pl-48 lg:pl-20 xl:pl-0">
             <p>
               As part of the higher education community, we, under the name of
               Farazman, are committed to supporting and nurturing students and
