@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p ${PORT:-8080}",
+    "start": "next start",
     "lint": "next lint",
     "export": "next export",
     "test": "jest --watch",
@@ -39,7 +39,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.2",
-    "sharp": "^0.32.6",
     "stream": "^0.0.2"
   },
   "devDependencies": {
