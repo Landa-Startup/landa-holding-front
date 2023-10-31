@@ -99,10 +99,10 @@ export default function TeamPersons() {
         },
         {
             image: '/static/images/our-team/Personals/a14.png',
-            position: 'UX/UI Designer',
+            position: 'Product Designer',
             name: 'Arshia Nasiri',
             linkedIn: 'https://www.linkedin.com/in/marshian03',
-            category: 'designers'
+            category: 'product designer'
         },
 
         {
@@ -256,7 +256,7 @@ export default function TeamPersons() {
         'Managers',
         'Mentors',
         'Programmers',
-        // 'Product Designer',
+        'Product Designer',
         "Designers",
         'Content Creators',
         'Accountant',
