@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <Navbar> {/* Navbar */}
           <main>{children}</main> {/* Main Content */}
-          <div className="bottom-0 w-full">
+          <div className="bottom-0 w-full mr-0 md:w-[1000px] lg:w-[1200px] xl:w-[1800px]">
             <Footer /> {/* Footer */}
             <ScrollUpButton /> {/* Scroll Up Button */}
           </div>
