@@ -31,11 +31,11 @@ export default function page() {
           loading="lazy"
         />
       </div>
-      <div className="flex flex-col font-gilda md:px-28 py-6 md:py-16 items-center text-left">
+      <div className="flex flex-col font-gilda md:px-10 py-6 md:py-16 items-center text-left">
         <span className="text-[#55422A] ml-7 md:ml-0 text-3xl md:text-5xl leading-tight self-start">
           LANDA ACCELERATOR :
         </span>
-        <span className="text-[#AA8453] ml-7 md:ml-0 text-xl md:text-4xl leading-tight self-start">
+        <span className="text-[#AA8453] ml-7 md:ml-0 text-sm md:text-3xl leading-tight self-start">
           Growth and Transformation into a Leading Startup
         </span>
         <div className="flex flex-col md:flex-row gap-12 mt-6">
