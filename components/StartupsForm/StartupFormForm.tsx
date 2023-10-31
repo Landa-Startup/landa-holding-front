@@ -207,7 +207,7 @@ export default function StartupFormForm() {
     sendFormData.append('email', formData.email);
     sendFormData.append('countryOfResidence', formData.countryOfResidence);
     sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('type', formData.type);
+    sendFormData.append('type', selectedRadio);
     sendFormData.append('birthDate', String(formData.birthDate));
     sendFormData.append('ideaExplanation', formData.ideaExplanation);
     sendFormData.append('getToKnowUs', formData.getToKnowUs);
