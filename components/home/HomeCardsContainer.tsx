@@ -49,7 +49,7 @@ export default function HomeCardsContainer() {
       reverse: false,
       show: false,
       index: 3,
-      link: '#',
+      link: 'https://academy.landaholding.com',
       addedClass: '',
       images: [
         {
@@ -57,7 +57,7 @@ export default function HomeCardsContainer() {
           alt: 'Academy',
         },
         {
-          src: '/static/images/Home main/6.jpg',
+          src: '/static/images/Home main/7.jpeg',
           alt: 'Academy',
         },
       ],
