@@ -9,7 +9,7 @@ export default function TeamPersons() {
             image: '/static/images/our-team/Personals/a1.png',
             position: 'CEO',
             name: 'Dr.Rasoul Moradimehr',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
             category: 'managers'
         },
         {
@@ -23,7 +23,7 @@ export default function TeamPersons() {
             image: '/static/images/our-team/Personals/a10.png',
             position: 'Manager',
             name: 'Mehrnoosh Heibati',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/mehrnoosh-heibati-62b117223/',
             category: 'managers'
         },
         {
@@ -37,35 +37,35 @@ export default function TeamPersons() {
             image: '/static/images/our-team/Personals/a3.png',
             position: 'Secretary',
             name: 'Lida Parvizi',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/lida-parvizi-ab7b8721a/',
             category: 'secretary'
         },
         {
             image: '/static/images/our-team/Personals/a4.png',
             position: 'Public Relations Officer',
             name: 'Kholoud Hariri',
-            linkedIn: '',
+            linkedIn: 'linkedin.com/in/kholoud-hariri-b83b96222',
             category: 'public relations officer'
         },
         {
             image: '/static/images/our-team/Personals/a35.jpg',
             position: 'Director of Public Relations',
             name: 'Arash Aryanik',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/arash-aryanik-58b97885/',
             category: 'public relations officer'
         },
         {
             image: '/static/images/our-team/Personals/a5.png',
             position: 'Accountant',
             name: 'Ali Soleimani',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/ali-soleymani-b761b6223/',
             category: 'accountant'
         },
         {
             image: '/static/images/our-team/Personals/a6.png',
             position: 'CTO',
             name: 'Iman Nasr',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/iman-nasr-esfahani',
             category: 'mentors'
         },
         {
@@ -84,10 +84,10 @@ export default function TeamPersons() {
 
         },
         {
-            image: '/static/images/our-team/Personals/a9.png',
+            image: '/static/images/our-team/Personals/a.82.png',
             position: 'Digital Marketer',
             name: 'Ehsan Aliakbari',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/ehsan-aliakbari',
             category: "digital marketer"
         },
         {
@@ -116,7 +116,7 @@ export default function TeamPersons() {
             image: '/static/images/our-team/Personals/a16.png',
             position: 'Full Stack',
             name: 'Sobhan Emami',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/sobhan-emami/',
             category: 'programmers'
 
         },
@@ -182,7 +182,7 @@ export default function TeamPersons() {
             image: '/static/images/our-team/Personals/a25.png',
             position: 'Content Creator',
             name: 'Tiam Safarian',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/tiam-safarian-616933230/',
             category: 'content creators'
         },
         {
@@ -197,14 +197,14 @@ export default function TeamPersons() {
             image: '/static/images/our-team/Personals/a27.png',
             position: 'Full Stack',
             name: 'Meraj Bighamian',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/meraj-bighamian-7034581a3',
             category: 'programmers'
         },
         {
             image: '/static/images/our-team/Personals/a28.png',
             position: 'Front-end',
             name: 'Mahdi Salmanzadeh',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/mehdisa/',
             category: 'programmers'
         },
         {
@@ -218,7 +218,7 @@ export default function TeamPersons() {
             image: '/static/images/our-team/Personals/a30.png',
             position: 'Front-end',
             name: 'Ramtin Foroozani',
-            linkedIn: '',
+            linkedIn: 'https://www.linkedin.com/in/ramtin-foroozani-04b390272/',
             category: 'programmers'
         },
 
