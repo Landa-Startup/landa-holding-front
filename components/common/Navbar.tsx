@@ -78,7 +78,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
           </div>
-          <div className="justify-start hidden ml-32 xl:flex-1 xl:flex">
+          <div className="justify-start hidden ml-36 xl:flex-1 xl:flex">
             <ul className="flex justify-center space-x-10 text-xl menu menu-horizontal font-condensed font-bold">
               {menuItems.map((item) => (
                 <li className="text-2xl h-9" key={item.label}>
