@@ -295,10 +295,10 @@ export default function StartupFormForm() {
 
   return (
     <>
-    <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto ">   
-      <p className="font-serif text-3xl pb-3 pt-0 tracking-wide md:pt-0 md:text-5xl lg:text-6xl lg:pt-10  xl:text-7xl text-white sm:mt-0 ">Startup Validation Form</p>
-      <p className="lg:font-serif text-2xl pt-0 pb-10 tracking-wide text-white md:pt-0 md:pb-10 lg:pb-10 ">Your Project</p>
-    </div>
+      <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto ">
+        <p className="font-serif text-3xl pb-3 pt-0 tracking-wide md:pt-0 md:text-5xl lg:text-6xl lg:pt-10  xl:text-7xl text-white sm:mt-0 ">Startup Validation Form</p>
+        {/* <p className="lg:font-serif text-2xl pt-0 pb-10 tracking-wide text-white md:pt-0 md:pb-10 lg:pb-10 ">Your Project</p> */}
+      </div>
       <div className="container m-10 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         {/* <StartupFormTitle /> */}
         <div>
@@ -306,7 +306,7 @@ export default function StartupFormForm() {
         </div>
 
         <div>
-          <hr className="border-[#000000] dark:border-[#ffffff] mb-5"/>
+          <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <StartupFormPersonalInformation
@@ -318,14 +318,14 @@ export default function StartupFormForm() {
           />
 
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-        <div className="col-span-2">
-          <div className="bg-[#222222CC]">
-            <p className="text-xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] md:text-3xl lg:w-[450px] xl:w-[650px] lg:text-3xl border-b ">
-              Growth and Scale-up
-            </p>
-            <hr className=" dark:border-[#222222CC] mb-5 mt-0 " />
-          </div>
-          </div>
+            <div className="col-span-2">
+              <div className="bg-[#222222CC]">
+                <p className="text-xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] md:text-3xl lg:w-[450px] xl:w-[650px] lg:text-3xl border-b ">
+                  Growth and Scale-up
+                </p>
+                <hr className=" dark:border-[#222222CC] mb-5 mt-0 " />
+              </div>
+            </div>
           </div>
           <label htmlFor="">Select Your Status: </label>
           <br />
@@ -405,7 +405,7 @@ export default function StartupFormForm() {
             <button
               disabled={Boolean(!selectedRadio)}
               type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
+              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white dark:text-current"
             >
               {Send ? 'Submiting ....' : 'Submit'}
             </button>

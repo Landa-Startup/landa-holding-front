@@ -318,7 +318,7 @@ export default function InvestorRegistrationForm() {
             <button
               disabled={send}
               type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
+              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white dark:text-current"
             >
               {send ? 'Submitting ....' : 'Submit'}
             </button>
