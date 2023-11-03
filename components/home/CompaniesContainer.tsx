@@ -26,12 +26,12 @@ export default function CompaniesContainer() {
     {
       name: 'DIACO',
       logo: '5.png',
-      link: 'https://Diacocenter.com',
+      link: 'https://diacocenter.com',
     },
     {
       name: 'VISION RAFT',
       logo: '6.png',
-      link: 'https://Visionraft.com',
+      link: 'https://visionraft.com',
     },
     {
       name: 'FARAZAMAN',

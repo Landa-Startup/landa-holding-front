@@ -16,14 +16,14 @@ export default function LatestStartups() {
       title: 'DIACO',
       description:
         'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
-      link: 'https://irdiaco.ca/',
+      link: 'https://diacocenter.com',
     },
     {
       image: '/static/images/Home/Startups/vision-raft.png',
       title: 'VISION RAFT',
       description:
         'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
-      link: 'https://invigorated-drop-231359.framer.app',
+      link: 'https://visionraft.com',
     },
   ];
 
