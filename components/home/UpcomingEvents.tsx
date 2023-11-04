@@ -3,7 +3,7 @@ import Button from '../common/Button';
 
 export default function UpcomingEvents() {
   return (
-    <div className="h-[480px] relative bg-whiteGold">
+    <div className="h-[480px] relative bg-[#FAFAFA]">
       <div className="left-20 md:left-[185px] top-10 md:top-[29px] absolute text-neutral-800 text-2xl md:text-4xl font-normal font-gilda">
         UPCOMING EVENT
       </div>
@@ -27,7 +27,13 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          {/* <Button text="Register" size="register" addedClass="block" /> */}
+          <Button
+            goto="/"
+            text="Register"
+            size="register"
+            addedClass="block"
+            bgColor="Primary"
+          />
         </div>
         <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
@@ -48,7 +54,13 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          {/* <Button text="Register" size="register" addedClass="block" /> */}
+          <Button
+            goto="/"
+            text="Register"
+            size="register"
+            addedClass="block"
+            bgColor="Primary"
+          />
         </div>
         <div className="self-stretch justify-between items-center flex md:w-[1100px]">
           <div className="flex items-center justify-start gap-1 md:gap-16">
@@ -69,7 +81,13 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          {/* <Button text="Register" size="register" addedClass="block" /> */}
+          <Button
+            goto="/"
+            text="Register"
+            size="register"
+            addedClass="block"
+            bgColor="Primary"
+          />
         </div>
       </div>
       <div className="w-16 h-[313.88px] left-10 md:left-[121px] top-[52px] absolute hidden md:block">
