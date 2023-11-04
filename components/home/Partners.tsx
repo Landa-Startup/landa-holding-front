@@ -76,14 +76,14 @@ export default function Partners() {
 
   return (
     <div className="flex flex-col items-center my-6 gap-12">
-      <span className="text-4xl text-primary">
+      <span className="text-3xl md:text-4xl text-primary">
         Join Our Business Affiliates
       </span>
       <div
         ref={scrollContainerRef}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="overflow-x-hidden gap-14 grid grid-flow-col w-[calc(100%-2%)]"
+        className="overflow-x-scroll md:overflow-x-hidden gap-14 grid grid-flow-col w-[calc(100%-2%)]"
       >
         {logos.map((logo) => (
           <PartnersStartupCard
