@@ -21,7 +21,7 @@ export default function Page() {
       <Hero
         showLanda
         titles={['Acceleration', 'Investment', 'Academy']}
-        subTitle="Feel The Future"
+        subTitle='"Feel The Future"'
         backgroundImage="Hero.png"
         leftImage="Landa.svg"
         showButton={false}
@@ -34,7 +34,6 @@ export default function Page() {
       <HomeOurTeam />
       <LatestStartups />
       <Partners />
-
     </div>
   );
 }
