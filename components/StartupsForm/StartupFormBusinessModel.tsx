@@ -101,7 +101,7 @@ export default function StartupFormBusinessModel({
           <div className='flex justify-center '>
             <input
               type="file"
-              className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
+              className="bg-[#f9f6f3] mt-3 p-5 w-full rounded-lg"
               {...register('financialFile', {
                 required: '',
               })}

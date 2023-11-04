@@ -17,8 +17,8 @@ export default function RadioButtonGroup({
 }) {
   return (
     <div>
-      <label className="text-[#6b6b6b] dark:text-current">{title}</label>
-      <div className="bg-[#f9f6f3] dark:bg-[#1D232A] p-4 rounded-lg w-full mt-3 mb-1 drop-shadow-lg">
+      <label className="text-[#6b6b6b]">{title}</label>
+      <div className="bg-[#f9f6f3] p-4 rounded-lg w-full mt-3 mb-1 drop-shadow-lg">
         {options.map((option) => (
           <label key={option.value} className="flex items-center my-4">
             <input
