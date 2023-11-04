@@ -65,10 +65,10 @@ export default function page() {
             and do not engage in manufacturing, sales of products or services,
             or any other operational activities. Their main purpose is to
             possess majority stock or membership interests in other companies,
-            giving rise to the term 'pure holding company.' In contrast, some
+            giving rise to the term &apos;pure holding company.&apos; In contrast, some
             holding companies not only hold ownership stakes in subsidiaries but
             also conduct their own business operations. These are known as
-            'mixed holding companies. Additionally, there are other categories
+            &apos;mixed holding companies. Additionally, there are other categories
             of holding companies, such as immediate and intermediate holding
             companies. These types of holding companies are themselves owned by
             other holding companies or larger businesses.
@@ -171,10 +171,10 @@ export default function page() {
             ownership control and do not engage in manufacturing, sales of
             products or services, or any other operational activities. Their
             main purpose is to possess majority stock or membership interests in
-            other companies, giving rise to the term 'pure holding company.' In
+            other companies, giving rise to the term &apos;pure holding company.&apos; In
             contrast, some holding companies not only hold ownership stakes in
             subsidiaries but also conduct their own business operations. These
-            are known as 'mixed holding companies. Additionally, there are other
+            are known as &apos;mixed holding companies. Additionally, there are other
             categories of holding companies, such as immediate and intermediate
             holding companies. These types of holding companies are themselves
             owned by other holding companies or larger businesses.
@@ -204,7 +204,7 @@ export default function page() {
             and provide ongoing resources for your ideas to thrive.
           </p>
           <p>
-            -Dont wait for opportunities to come knocking. Be the driver of your
+            -Don&apos;t wait for opportunities to come knocking. Be the driver of your
             own success by venturing into entrepreneurship and unleashing your
             limitless creativity and innovation at Landa Holding -Experience the
             freedom of entrepreneurship, where you have the power to turn your
