@@ -1,141 +1,100 @@
+'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
+import PartnersStartupCard from './PartnersStartupCard';
 
 export default function Partners() {
-  const logosLeft = [
-    {
-      number: 1,
-      alt: 'evimo',
-    },
+  const logos = [
     {
       number: 2,
+      title: 'Islamic Azad University of Isfahan(Khorasgan)',
+      description:
+        'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
       alt: 'azad university',
     },
     {
       number: 3,
+      title: 'Dr. Nekui Educational Holding',
+      description:
+        'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
       alt: 'nekeoi',
     },
-    {
-      number: 4,
-      alt: 'evimo',
-    },
-    {
-      number: 5,
-      alt: 'evimo',
-    },
-    {
-      number: 6,
-      alt: 'evimo',
-    },
+
     {
       number: 7,
+      title: 'ASIAHITECH',
+      description:
+        'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
       alt: 'evimo',
     },
     {
       number: 8,
+      title: 'Chamber of Commerce, Industries, Mines and Agriculture',
+      description:
+        'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
       alt: 'evimo',
     },
   ];
 
-  const logosRight = [
-    {
-      number: 9,
-      alt: 'evimo',
-    },
-    {
-      number: 10,
-      alt: 'evimo',
-    },
-    {
-      number: 11,
-      alt: 'evimo',
-    },
-    {
-      number: 12,
-      alt: 'evimo',
-    },
-    // {
-    //   number: 13,
-    //   alt: 'evimo',
-    // },
-    {
-      number: 14,
-      alt: 'evimo',
-    },
-    {
-      number: 15,
-      alt: 'evimo',
-    },
-    // {
-    //   number: 16,
-    //   alt: 'evimo',
-    // },
-  ];
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const [isScrolling, setIsScrolling] = useState(true); // Control scrolling with a Boolean state
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+
+    function scrollAutomatically() {
+      const scrollSpeed = 50; // Adjust this value to control the scroll speed.
+      const scrollAmount = 1;
+      if (scrollContainer != null && isScrolling) {
+        // Check if scrolling is allowed
+        const isScrollingLeft = scrollContainer.scrollLeft > 0;
+
+        if (!isScrollingLeft) {
+          scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+        } else {
+          scrollContainer.scrollLeft -= scrollAmount;
+        }
+      }
+    }
+
+    const intervalId = setInterval(scrollAutomatically, 50); // Adjust the interval as needed.
+
+    return () => clearInterval(intervalId);
+  }, [isScrolling]); // Add isScrolling as a dependency
+
+  // Add event listeners to stop automatic scroll on mouse enter
+  const handleMouseEnter = () => {
+    setIsScrolling(false); // Stop scrolling
+  };
+
+  // Add event listener to resume automatic scroll on mouse leave
+  const handleMouseLeave = () => {
+    setIsScrolling(true); // Resume scrolling
+  };
 
   return (
-    <div>
-      <div className="flex flex-col md:grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
-        <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-2 md:order-1 mt-9">
-          {logosLeft.map((role, index) => (
-            <Image
-              loading='lazy'
-              className="w-20 md:w-32 h-20 md:h-32 object-contain"
-              key={index}
-              src={`/static/images/Home/contact/${role.number}.png`}
-              alt={role.alt}
-              width={130}
-              height={130}
-            />
-          ))}
-        </div>
-        <div className="col-span-4 md:col-span-2 gap-6 md:gap-14 md:bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9 order-1">
-          <p className="text-primary text-xl md:text-4xl font-gilda">
-            Join Our Business Partners
-          </p>
-          <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[1.6px] md:tracking-[2.4px]  text-black lg:w-[500px] text-center">
-            At Landa Holding, we welcome strategic affiliations with
-            international firms and qualified influencers alike. As an approved
-            affiliate, you will receive co-branded support and future
-            representations that wield substantial influence within the business
-            landscape. To become an affiliate, please complete our free
-            questionnaire for our confidential review.
-          </p>
-          <div>
-            <Button
-              size="notVisit"
-              text="Join Us"
-              goto="/partner-membership"
-              bgColor="Primary"
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
-          {logosRight.map((role, index) => (
-            <Image
-              loading='lazy'
-              className="w-20 md:w-32 h-20 md:h-32 object-contain"
-              key={index}
-              src={`/static/images/Home/contact/${role.number}.png`}
-              alt={role.alt}
-              width={500}
-              height={500}
-            />
-          ))}
-        </div>
+    <div className="flex flex-col items-center my-6 gap-12">
+      <span className="text-3xl md:text-4xl text-primary">
+        Join Our Business Affiliates
+      </span>
+      <div
+        ref={scrollContainerRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="overflow-x-scroll md:overflow-x-hidden gap-14 grid grid-flow-col w-[calc(100%-2%)]"
+      >
+        {logos.map((logo) => (
+          <PartnersStartupCard
+            key={logo.number}
+            logo={logo.number}
+            title={logo.title}
+            description={logo.description}
+          />
+        ))}
       </div>
-      <div className="md:hidden flex justify-center items-center  p-5">
-        <Button
-          size="visit"
-          type="button"
-          text="Visit Now"
-          goto="/partner-membership"
-          bgColor="Primary"
-        />
-      </div>
-      {/* <PartnersDiamondsContainer/> */}
+      <Button goto="/" size="visit" text="JOIN US" bgColor="Primary" />
     </div>
   );
 }

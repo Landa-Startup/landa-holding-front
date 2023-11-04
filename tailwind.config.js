@@ -7,13 +7,14 @@ module.exports = {
         gilda: ['Gilda Display', 'serif'],
         barlow: ['Barlow', 'serif'],
         condensed: ['Condensed', 'serif'],
+        montserrat: ['Montserrat', 'serif'],
       },
       colors: {
         primary: '#AA8453',
         whiteGold: '#F8F5F0',
         tableHeader: '#DDCEBA',
       },
-    },    
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {

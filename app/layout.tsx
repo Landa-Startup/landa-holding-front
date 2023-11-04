@@ -15,12 +15,11 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <Navbar> {/* Navbar */}
+        <Navbar>
+          {/* Navbar */}
           <main>{children}</main> {/* Main Content */}
-          <div className="bottom-0 w-full mr-0 md:w-[1000px] lg:w-[1200px] xl:w-[1800px]">
-            <Footer /> {/* Footer */}
-            <ScrollUpButton /> {/* Scroll Up Button */}
-          </div>
+          <Footer />
+          <ScrollUpButton /> {/* Scroll Up Button */}
         </Navbar>
       </body>
     </html>

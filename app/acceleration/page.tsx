@@ -18,8 +18,8 @@ export default function page() {
     <div>
       <Hero
         showLanda
-        backgroundImage="banner.png"
-        leftImage="Landa.svg"
+        backgroundImage="/static/images/acceleration/banner.png"
+        leftImage="/static/images/Landa.svg"
         showButton={true}
       />
       <div className="relative md:w-[490px] h-[284px] md:hidden mt-6 sm:block hidden ">
