@@ -24,10 +24,10 @@ export default function YesRadioButton({
   return (
     <div>
       {/* Label for the radio buttons */}
-      <label className="text-[#6b6b6b] dark:text-current">{title}</label>
+      <label className="text-[#6b6b6b]">{title}</label>
       <div className="flex flex-col">
         {/* Radio buttons for 'Yes' and 'No' */}
-        <div className="flex flex-row mt-4 bg-[#f9f6f3] dark:bg-[#1D232A] p-4 rounded-lg drop-shadow-lg">
+        <div className="flex flex-row mt-4 bg-[#f9f6f3] p-4 rounded-lg drop-shadow-lg">
           <label className="flex flex-column mr-10 ">
             <input
               type="radio"
@@ -58,7 +58,7 @@ export default function YesRadioButton({
             <input
               type="file"
               required
-              className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
+              className="bg-[#f9f6f3] mt-3 p-5 w-full rounded-lg"
               {...register(fileName, { required: 'this file is requied!' })}
               onChange={handleChangeFile} // Use onChange event handler after register
             />

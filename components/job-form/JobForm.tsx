@@ -194,7 +194,7 @@ export default function JobForm() {
                   <input
                     type="file"
                     id="cvFileInput"
-                    className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
+                    className="bg-[#f9f6f3] mt-3 p-5 w-full rounded-lg"
                     {...register('cvFile', {
                       required: 'CV File is Required',
                     })}
@@ -210,7 +210,7 @@ export default function JobForm() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
+                  className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
                   disabled={send}
                 >
                   {send ? 'Submitting ....' : 'Submit'}
