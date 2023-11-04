@@ -32,7 +32,7 @@ export default function Footer() {
             top startup opportunities by linking idea holders with relevant
             service providers. <br />
           </div>
-          <div className="w-[126px] h-[22px] flex flex-row justify-between items-center mt-2 ">
+          <div className="w-[126px] h-[22px] flex flex-row justify-between items-center mt-2 text-white">
             <Link
               aria-label="Instagram"
               href={
