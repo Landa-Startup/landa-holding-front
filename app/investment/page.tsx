@@ -1,4 +1,4 @@
-import Hero from '@/components/acceleration/HeroAcceleration';
+import Hero from '@/components/investment/HeroInvestment';
 import Button from '@/components/common/Button';
 import UpcomingEvents from '@/components/home/UpcomingEvents';
 import Link from '@/components/icons/Link';
@@ -9,6 +9,7 @@ import React from 'react';
 export default function page() {
   return (
     <div>
+      {/* TODO: we have multiple hero with same styles. make one component for all */}
       <Hero
         backgroundImage="/static/images/investment/hero.png"
         showLanda
@@ -25,6 +26,7 @@ export default function page() {
               What is an investment holding company?
             </span>
           </div>
+          {/* TODO: make component these texts */}
           <p className="leading-8 tracking-[1.6px] font-barlow">
             In the realm of finance, various types of firms engage in investing
             in other companies. However, what sets holding companies apart is
@@ -57,7 +59,7 @@ export default function page() {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
             <span className="text-2xl md:text-4xl text-primary font-gilda">
-              Types of holding companies
+              Types of Holding Companies
             </span>
           </div>
           <p className="leading-7 tracking-[1.6px] font-barlow">
@@ -84,7 +86,7 @@ export default function page() {
             />
           </div>
           <span className="text-2xl md:text-4xl text-primary font-gilda">
-            Landa investment strategy
+            Landa Investment Strategy
           </span>
           <p className="leading-7 tracking-[1.6px] font-barlow">
             Landa Investment Center is mainly focused on attracting investors
@@ -106,7 +108,7 @@ export default function page() {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
             <span className="text-2xl md:text-4xl text-primary font-gilda">
-              Investment in startups
+              Investment in Startups
             </span>
           </div>
           <p className="leading-8 tracking-[1.6px] font-barlow">
@@ -136,7 +138,7 @@ export default function page() {
             />
           </div>
           <span className="text-2xl md:text-4xl text-primary font-gilda">
-            Our vision and mission
+            Our Vision and Mission
           </span>
           <p className="leading-7 tracking-[1.6px] font-barlow">
             It is our vision to evaluate and identify the most promising and
@@ -167,7 +169,7 @@ export default function page() {
         </div>
         <div className="flex flex-col">
           <p className="leading-8 tracking-[1.6px] font-barlow">
-            Lorem Lorem lorem holding companies are primarily focused on
+            Landa holding companies are primarily focused on
             ownership control and do not engage in manufacturing, sales of
             products or services, or any other operational activities. Their
             main purpose is to possess majority stock or membership interests in
@@ -217,24 +219,28 @@ export default function page() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <FeaturesCards
+            link="/StartupsForm"
             title="1. Idea"
             description="Present your idea and identify the best opportunity for success, plan your path to launch and precisely set the steps, and find the right team of experts to help you take the steps one after another. Remember that the first step is the longest stride. You must remember to validate the profitability of your idea because low profitability and high investment risks lead to failure."
           />
           <FeaturesCards
+            link="/StartupsForm"
             title="2. MVP (minimum viable product)"
             description="MVP is a version of a product with just enough features to be usable by early customers who can then provide feedback for future product development. This way, you are able to create the tangible product that provides the best and most appealing user experience for the most economical cost, an that can challenge and validate assumptions about a product's requirements."
           />
           <FeaturesCards
+            link="/StartupsForm"
             title="3. Frist Sale"
             description="In business, product development (PD) covers the complete process of bringing a new product to market, renewing an existing product and introducing a product in a new market. You need to create a brand that helps you stand out from competitors by connecting with the values and emotions of your target customer. Among various business considerations, product design and the transformation into a product available for sale, and finally the means for it to generate income are the most important factors."
           />
           <FeaturesCards
+            link="/StartupsForm"
             title="4. Sale Development"
             description="Collaborate with manufacturers to ensure a high quality product delivered to buyers' doors that exceeds customer expectations. Sales development is usually an organization that sits between the marketing and sales functions of a business and is responsible for the front-end of the sales cycle including identifying, connecting with, and qualifying leads. They normally set up qualified meetings between a salesperson and potential buyers with a high probability of purchasing a product."
           />
         </div>
       </div>
-      <UpcomingEvents />
+      {/* <UpcomingEvents /> */}
     </div>
   );
 }

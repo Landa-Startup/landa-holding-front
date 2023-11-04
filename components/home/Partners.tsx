@@ -94,7 +94,7 @@ export default function Partners() {
           />
         ))}
       </div>
-      <Button goto="/" size="visit" text="JOIN US" bgColor="Primary" />
+      <Button goto="/partner-membership" size="visit" text="JOIN US" bgColor="Primary" />
     </div>
   );
 }
