@@ -44,7 +44,7 @@ export default function page() {
             specific business unit.
           </p>
         </div>
-        <div className="w-[320px] md:w-[477px] h-[300px] md:h-[450px] relative">
+        <div className="w-[320px] md:w-[600px] h-[300px] md:h-[450px] relative">
           <Image
             className="object-cover"
             src="/static/images/investment/1.jpg"
