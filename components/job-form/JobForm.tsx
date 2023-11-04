@@ -116,10 +116,10 @@ export default function JobForm() {
     </div>
       <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <>
-          <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+          <div className="container m-16 px-5 lg:p-0 mx-auto bg-[#faf8f5] dark:bg-transparent">
             <>
               <div className="text-center">
-                <p className="mb-20 pt-10 text-xl font-serif lg:text-6xl tracking-wide">
+                <p className="mb-20 pt-10 lg:pt-0 text-3xl font-serif lg:text-6xl md:text-5xl tracking-wide">
                 Work With Us
                 </p>
               </div>
