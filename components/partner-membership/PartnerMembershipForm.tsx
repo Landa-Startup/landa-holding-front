@@ -149,7 +149,7 @@ export default function PartnerMembershipForm() {
                 type="text"
                 label="First Name"
                 required="First Name is Required."
-                patternValue=""
+                patternValue="^[a-z ]+$"
                 patternMessage=""
                 placeholder="Enter your First Name"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
@@ -165,7 +165,7 @@ export default function PartnerMembershipForm() {
                 type="text"
                 label="Last Name"
                 required="Last Name is Required."
-                patternValue=""
+                patternValue="^[a-z ]+$"
                 patternMessage=""
                 placeholder="Enter your Last Name"
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
@@ -310,7 +310,7 @@ export default function PartnerMembershipForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white dark:text-current"
+              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
               disabled={send}
             >
               {send ? 'Submitting ....' : 'Submit'}

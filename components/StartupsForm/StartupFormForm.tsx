@@ -207,7 +207,7 @@ export default function StartupFormForm() {
     sendFormData.append('email', formData.email);
     sendFormData.append('countryOfResidence', formData.countryOfResidence);
     sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('type', formData.type);
+    sendFormData.append('type', selectedRadio);
     sendFormData.append('birthDate', String(formData.birthDate));
     sendFormData.append('ideaExplanation', formData.ideaExplanation);
     sendFormData.append('getToKnowUs', formData.getToKnowUs);
@@ -405,7 +405,7 @@ export default function StartupFormForm() {
             <button
               disabled={Boolean(!selectedRadio)}
               type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white dark:text-current"
+              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
             >
               {Send ? 'Submiting ....' : 'Submit'}
             </button>

@@ -7,13 +7,14 @@ module.exports = {
         gilda: ['Gilda Display', 'serif'],
         barlow: ['Barlow', 'serif'],
         condensed: ['Condensed', 'serif'],
+        montserrat: ['Montserrat', 'serif'],
       },
       colors: {
         primary: '#AA8453',
         whiteGold: '#F8F5F0',
         tableHeader: '#DDCEBA',
       },
-    },    
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
@@ -25,5 +26,8 @@ module.exports = {
     rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
     prefix: '', // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+  },
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'], // remove 'dark' 
   },
 };
