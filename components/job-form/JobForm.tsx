@@ -195,9 +195,9 @@ export default function JobForm() {
                     type="file"
                     id="cvFileInput"
                     className="bg-[#f9f6f3] mt-3 p-5 w-full rounded-lg"
-                    {...register('cvFile', {
-                      required: 'CV File is Required',
-                    })}
+                    // {...register('cvFile', {
+                    //   required: 'CV File is Required',
+                    // })}
                     onChange={handleCvFileChange} // must use onChange event handler after register
                   />
                   {errors['cvFile'] && (

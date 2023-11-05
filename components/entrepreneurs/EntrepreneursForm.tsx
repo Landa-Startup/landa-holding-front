@@ -87,7 +87,7 @@ export default function EntrepreneursForm() {
 
   return (
     <>
-      <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+      <div className="container m-16 p-5 md:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <EntrepreneursTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
