@@ -12,29 +12,70 @@ export default function Partners() {
       title: 'Islamic Azad University of Isfahan(Khorasgan)',
       description:
         'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
-      alt: 'azad university',
+      alt: 'Islamic Azad University of Isfahan(Khorasgan)',
     },
     {
       number: 3,
       title: 'Dr. Nekui Educational Holding',
       description:
         'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
-      alt: 'nekeoi',
+      alt: 'Dr. Nekui Educational Holding',
     },
-
+    {
+      number: 4,
+      title: 'University of Kashan',
+      description:
+        'Since 1399, we started cooperating with Kashan University in the field of acceleration center',
+      alt: 'University of Kashan',
+    },
     {
       number: 7,
       title: 'ASIAHITECH',
       description:
         'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
-      alt: 'evimo',
+      alt: 'ASIAHITECH',
     },
     {
       number: 8,
       title: 'Chamber of Commerce, Industries, Mines and Agriculture',
       description:
         'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
-      alt: 'evimo',
+      alt: 'Chamber of Commerce, Industries, Mines and Agriculture',
+    },
+    {
+      number: 2,
+      title: 'Islamic Azad University of Isfahan(Khorasgan)',
+      description:
+        'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
+      alt: 'Islamic Azad University of Isfahan(Khorasgan)',
+    },
+    {
+      number: 3,
+      title: 'Dr. Nekui Educational Holding',
+      description:
+        'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
+      alt: 'Dr. Nekui Educational Holding',
+    },
+    {
+      number: 4,
+      title: 'University of Kashan',
+      description:
+        'Since 1399, we started cooperating with Kashan University in the field of acceleration center',
+      alt: 'University of Kashan',
+    },
+    {
+      number: 7,
+      title: 'ASIAHITECH',
+      description:
+        'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
+      alt: 'ASIAHITECH',
+    },
+    {
+      number: 8,
+      title: 'Chamber of Commerce, Industries, Mines and Agriculture',
+      description:
+        'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
+      alt: 'Chamber of Commerce, Industries, Mines and Agriculture',
     },
   ];
 
@@ -94,7 +135,12 @@ export default function Partners() {
           />
         ))}
       </div>
-      <Button goto="/" size="visit" text="JOIN US" bgColor="Primary" />
+      <Button
+        goto="/partner-membership"
+        size="visit"
+        text="JOIN US"
+        bgColor="Primary"
+      />
     </div>
   );
 }

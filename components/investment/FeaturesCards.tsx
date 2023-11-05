@@ -4,16 +4,18 @@ import Button from '../common/Button';
 export default function FeaturesCards({
   title,
   description,
+  link,
 }: {
   title: string;
   description: string;
+  link: string;
 }) {
   return (
     <div className="flex flex-col bg-white  md:w-[580px] p-8">
       <span className="font-gilda text-2xl text-primary">{title}</span>
       <p className="font-barlow text-base leading-7">{description}</p>
       <Button
-        goto="/"
+        goto={link}
         size="not"
         text="Register"
         addedClass="self-end"

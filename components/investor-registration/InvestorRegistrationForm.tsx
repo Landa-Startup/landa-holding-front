@@ -146,7 +146,7 @@ export default function InvestorRegistrationForm() {
                 nameInput="firstName"
                 type="text"
                 label="First Name"
-                required="First Name is Required."
+                required=""
                 patternValue=""
                 patternMessage=""
                 placeholder="Enter your First Name"

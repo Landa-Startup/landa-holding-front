@@ -11,7 +11,7 @@ export default function HomeCardsContainer() {
       reverse: false,
       show: true,
       index: 1,
-      link: '/investor-registration',
+      link: '/investment',
       addedClass: '',
       images: [
         {
