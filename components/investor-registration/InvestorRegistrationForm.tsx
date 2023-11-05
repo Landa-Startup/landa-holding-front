@@ -9,21 +9,11 @@ import TextArea from '../common/TextArea';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import Input from '../common/form/Input';
+import { initialInvestorRegistrationFormData } from '../../app/initials/initObjects'
+import { countryList } from '@/utils/statics';
+import { CountriesDataInterface } from '../../app/types/global'
 
 export default function InvestorRegistrationForm() {
-  const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
-    firstName: '',
-    lastName: '',
-    birthDate: new Date(),
-    email: '',
-    countryOfResidence: '',
-    provinceOfResidence: '',
-    companyName: '',
-    interests: '',
-    positionInTeam: '',
-    preferredAreas: '',
-    howDidYouKnowUs: '',
-  };
 
   const {
     register,
@@ -40,7 +30,7 @@ export default function InvestorRegistrationForm() {
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState(Array<CountriesDataInterface>);
   const [selectedCountry, setSelectedCountry] = useState('');
 
   const [formData, setFormData] = useState<InvestorRegistrationFormData>(
@@ -56,22 +46,28 @@ export default function InvestorRegistrationForm() {
   }, []);
 
   useEffect(() => {
-    const apiUrl = 'https://restcountries.com/v3.1/all';
+    // const apiUrl = 'https://restcountries.com/v3.1/all';
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        // Process the data and set the countries state after sorting
-        const countryData = data.map((country: any) => ({
-          value: country.name.common,
-          text: country.name.common,
-        }));
-        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
-        setCountries(countryData);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
+    // fetch(apiUrl)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     // Process the data and set the countries state after sorting
+    //     const countryData = data.map((country: any) => ({
+    //       value: country.name.common,
+    //       text: country.name.common,
+    //     }));
+    //     countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
+    //     setCountries(countryData);
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error fetching data:', error);
+    //   });
+
+    const countriesData = countryList.map((country: string) => ({
+      value : country,
+      text : country,
+    }))
+    setCountries(countriesData);
   }, []);
 
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

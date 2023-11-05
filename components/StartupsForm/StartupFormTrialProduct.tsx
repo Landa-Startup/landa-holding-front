@@ -43,7 +43,7 @@ export default function StartupFormTrialProduct({
   return (
     <>
       <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-      <YesRadioButton
+        <YesRadioButton
           title="Do you have Pitch deck?"
           register={register}
           errors={errors}

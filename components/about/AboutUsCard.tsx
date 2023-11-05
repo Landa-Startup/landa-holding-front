@@ -1,15 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
-type AboutUsCardProps = {
-  title: string;
-  text: string;
-  image: string;
-  reverse: boolean;
-  description: string;
-  link: string;
-};
+import { AboutUsCardProps } from 'app/types/global';
 
 const AboutUsCard = ({
   title,

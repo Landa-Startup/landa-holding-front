@@ -6,15 +6,10 @@ import { ContactUSFormData } from '../../../app/types/global';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import NotificationSendForm from './NotificationSendForm';
+import { ContactFormData } from 'app/initials/initObjects';
 
 export default function ContactUsForm() {
-  const initialFormData: ContactUSFormData = {
-    name: '',
-    email: '',
-    number: '',
-    subject: '',
-    message: '',
-  };
+
 
   const {
     register,
@@ -23,7 +18,7 @@ export default function ContactUsForm() {
     reset,
   } = useForm<ContactUSFormData>({
     mode: 'onBlur',
-    defaultValues: initialFormData,
+    defaultValues: ContactFormData,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,7 +58,7 @@ export default function ContactUsForm() {
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000);
-      reset(initialFormData); // Reset the form after successful submission
+      reset(ContactFormData); // Reset the form after successful submission
       console.log('Form data sent successfully!');
     } catch (error) {
       setShowNotification(true);

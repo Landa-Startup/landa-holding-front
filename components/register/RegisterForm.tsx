@@ -4,15 +4,11 @@ import Input from '../common/form/Input'
 import { useForm } from 'react-hook-form';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
-interface FormData {
-  email: string;
-  password: string;
-}
+import { FormData } from 'app/types/global';
+import { RegisterationFormData } from 'app/initials/initObjects';
+
 export default function RegisterForm() {
-  const initialFormData: FormData = {
-    email: '',
-    password: ''
-  }
+
   const {
     register,
     handleSubmit,
@@ -20,7 +16,7 @@ export default function RegisterForm() {
     reset,
   } = useForm<FormData>({
     mode: 'onBlur',
-    defaultValues: initialFormData,
+    defaultValues: RegisterationFormData,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
@@ -28,7 +24,7 @@ export default function RegisterForm() {
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
 
-  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [formData, setFormData] = useState<FormData>(RegisterationFormData);
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -58,8 +54,8 @@ export default function RegisterForm() {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset(initialFormData);
-      setFormData(initialFormData);
+      reset(RegisterationFormData);
+      setFormData(RegisterationFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000);
@@ -68,8 +64,8 @@ export default function RegisterForm() {
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
-      reset(initialFormData);
-      setFormData(initialFormData);
+      reset(RegisterationFormData);
+      setFormData(RegisterationFormData);
       const timeout = setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds

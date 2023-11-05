@@ -1,65 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { items } from '../../utils/statics'
+
+
 export default function HomeOurTeam() {
-  const items = [
-    {
-      image: '/static/images/our-team/Personals/a3.png',
-      position: 'Secretary',
-      name: 'Lida Parvizi',
-      linkedIn: '',
-      category: 'secretary',
-    },
-    {
-      image: '/static/images/our-team/Personals/a6.png',
-      position: 'CTO',
-      name: 'Iman Nasr',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a33.png',
-      position: 'Public Relations Officer',
-      name: 'Gelareh Bahrami',
-      linkedIn: '',
-      category: 'public relations officer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a7.png',
-      position: 'Full stack',
-      name: 'Sajjad Momeni',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a5.png',
-      position: 'Accountant',
-      name: 'Ali Solaimani',
-      linkedIn: '',
-      category: 'accountant',
-    },
-    {
-      image: '/static/images/our-team/Personals/a13.png',
-      position: 'UX/UI Designer',
-      name: 'Ariana Shafie',
-      linkedIn: '',
-      category: 'designer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a9.png',
-      position: 'Digital Marketer',
-      name: 'Ehsan Aliakbari',
-      linkedIn: '',
-      category: 'digital marketer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a21.png',
-      position: 'Graphic Designer',
-      name: 'Hoda Mahdi',
-      linkedIn: '',
-      category: 'designer',
-    },
-  ];
 
   return (
     <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">

@@ -1,31 +1,9 @@
 import React from 'react';
 import LandaMagazineCard from '../magazine/LandaMagazineCard';
 import Button from '../common/Button';
+import { cardData2 } from '@/utils/statics';
 
 export default function LandaMagazine() {
-  const cardData = [
-    {
-      title: 'Benefits of Spa Treatments',
-      image:
-        '/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png',
-      type: 'Acceleration',
-      date: 'apr 27',
-    },
-    {
-      title: 'Fitness Center',
-      image:
-        '/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png',
-      type: 'Investment',
-      date: 'apr 27',
-    },
-    {
-      title: 'Benefits of Spa Treatments',
-      image:
-        '/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png',
-      type: 'Investment',
-      date: 'apr 27',
-    },
-  ];
 
   return (
     // TODO: create commponent for show repeated parts. because codes are almost same and just written few times
@@ -53,7 +31,7 @@ export default function LandaMagazine() {
               </svg>
             </button>
             <div className="grid overflow-auto grid-cols-3 gap-4 h-[570px]">
-              {cardData.map((data, index) => (
+              {cardData2.map((data, index) => (
                 <LandaMagazineCard
                   key={index}
                   title={data.title}

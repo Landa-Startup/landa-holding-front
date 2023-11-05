@@ -6,15 +6,9 @@ import { JobFormData } from '../../app/types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
+import { initialJobFormData } from '../../app/initials/initObjects'
 
 export default function JobForm() {
-  const initialJobFormData: JobFormData = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    cvFile: '' as File | '',
-  };
 
   const {
     register,

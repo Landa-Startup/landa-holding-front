@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { StartupsFormData } from '../../app/types/global';
-import StartupFormTitle from './StartupFormTitle';
+import { initialStartupsFormData } from '../../app/initials/initObjects'
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
 import StartupFormMVP from './StartupFormMVP';
@@ -11,58 +11,12 @@ import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
+import { countryList } from '@/utils/statics';
+import { CountriesDataInterface } from '../../app/types/global'
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
-enum Type {
-  IDEA = 'IDEA',
-  MVP = 'MVP',
-  TRIAL = 'TRIAL',
-  FisrtSale = 'FisrtSale',
-  SaleDevelopment = 'SaleDevelopment',
-}
 
 export default function StartupFormForm() {
-  const initialStartupsFormData: StartupsFormData = {
-    firstName: '',
-    lastName: '',
-    birthDate: new Date(),
-    email: '',
-    countryOfResidence: '',
-    provinceOfResidence: '',
-    type: Type.IDEA,
-    ideaExplanation: '',
-    getToKnowUs: '',
-    pitchDeck: true,
-    pitchDeckFile: '' as File | '',
-    businessPlan: true,
-    businessPlanFile: '' as File | '',
-    productName: '',
-    siteAddress: '',
-    customerProblem: '',
-    solution: '',
-    productLevel: '',
-    scalable: '',
-    monetizationOfYourPlan: '',
-    structureOfYourSales: '',
-    financialModelFile: '' as File | '',
-    cooperatedWithInvestors: '',
-    financial: true,
-    financialFile: '' as File | '',
-    customerCharacteristic: '',
-    currentCustomers: '',
-    estimatedMarketSize: '',
-    totalTamSamSom: '',
-    startupRevenue: '',
-    monthlyIncome: '',
-    currentInterestRate: '',
-    currentRaisedFunding: '',
-    neededCapital: '',
-    MVP: false,
-    FirstSale: false,
-    TrialProduct: false,
-    SaleDevelopment: false,
-    Idea: false,
-  };
 
   const {
     register,
@@ -86,7 +40,7 @@ export default function StartupFormForm() {
   const [Send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
 
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState(Array<CountriesDataInterface>);
   const [selectedCountry, setSelectedCountry] = useState('');
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -148,22 +102,28 @@ export default function StartupFormForm() {
   }, []);
 
   useEffect(() => {
-    const apiUrl = 'https://restcountries.com/v3.1/all';
+    // const apiUrl = 'https://restcountries.com/v3.1/all';
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        // Process the data and set the countries state after sorting
-        const countryData = data.map((country: any) => ({
-          value: country.name.common,
-          text: country.name.common,
-        }));
-        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
-        setCountries(countryData);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
+    // fetch(apiUrl)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     // Process the data and set the countries state after sorting
+    //     const countryData = data.map((country: any) => ({
+    //       value: country.name.common,
+    //       text: country.name.common,
+    //     }));
+    //     countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
+    //     setCountries(countryData);
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error fetching data:', error);
+    //   });
+
+    const countriesData = countryList.map((country: string) => ({
+      value : country,
+      text : country,
+    }))
+    setCountries(countriesData);
   }, []);
 
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

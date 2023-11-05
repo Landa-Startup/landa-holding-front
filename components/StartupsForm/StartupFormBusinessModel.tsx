@@ -20,45 +20,6 @@ export default function StartupFormBusinessModel({
 
 }) {
 
-  const preparationStatsOption = [
-    {
-      value: 'The basic principle has been observed.',
-      label: 'The basic principle has been observed.',
-    },
-    {
-      value: 'The technology concept has been formulated.',
-      label: 'The technology concept has been formulated.',
-    },
-    {
-      value: 'Experimental proof of concept.',
-      label: 'Experimental proof of concept.',
-    },
-    {
-      value: 'The confirmed technology in laboratory.',
-      label: 'The confirmed technology in laboratory.',
-    },
-    {
-      value: 'The confirmed technology in the environmental conditions',
-      label: 'The confirmed technology in the environmental conditions',
-    },
-    {
-      value: 'The presented technology in the environmental conditions',
-      label: 'The presented technology in the environmental conditions',
-    },
-    {
-      value: 'Show the system prototype in the mvp operating environment.',
-      label: 'Show the system prototype in the mvp operating environment.',
-    },
-    {
-      value: 'The proved realistic system in the operating environment.',
-      label: 'The proved realistic system in the operating environment.',
-    },
-    {
-      value: 'A complete and qualified system.',
-      label: 'A complete and qualified system.',
-    },
-  ];
-
 
   return (
     <>

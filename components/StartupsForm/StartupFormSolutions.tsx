@@ -5,6 +5,7 @@ import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../common/TextArea';
 import RadioButtonGroup from '../common/RadioButtonGroup';
+import { preparationStatsOption } from '../../utils/statics'
 
 export default function StartupFormSolutions({
   register,
@@ -13,20 +14,6 @@ export default function StartupFormSolutions({
   register:any;
   errors:any;
 }){
-
-
-
-  const preparationStatsOption = [
-    { value: 'basicPrinciple', label: 'The basic principle has been observed.' },
-    { value: 'technologyConcept', label: 'The technology concept has been formulated.' },
-    { value: 'exprimentalProof', label: 'Experimental proof of concept.' },
-    { value: 'confirmedTechnologyLab', label: 'The confirmed technology in laboratory.' },
-    { value: 'confirmedTechnologyEnv', label: 'The confirmed technology in the environmental conditions' },
-    { value: 'presentedTechnologyEnv', label: 'The presented technology in the environmental conditions' },
-    { value: 'systemPrototypeInMvp', label: 'Show the system prototype in the mvp operating environment.' },
-    { value: 'realisticSystem', label: 'The proved realistic system in the operating environment.' },
-    { value: 'qualifiedSystem', label: 'A complete and qualified system.' },
-  ];
 
   return (
     <>

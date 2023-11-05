@@ -2,60 +2,10 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import ArrowDown from '../icons/acceleration/ArrowDown';
+import { services } from '../../utils/statics';
 
 export default function AccelerationServices() {
   const [expanded, setExpanded] = useState(true);
-
-  const services = [
-    {
-      title: 'Pitch deck preparation',
-      image: '1.png',
-    },
-    {
-      title: 'Mentoring',
-      image: '2.png',
-    },
-    {
-      title: 'Networking with suitable individuals',
-      image: '3.png',
-    },
-    {
-      title: 'Initial financing',
-      image: '4.png',
-    },
-    {
-      title: 'MVP development',
-      image: '5.png',
-    },
-    {
-      title: 'Research and development',
-      image: '6.png',
-    },
-    {
-      title: 'Website design',
-      image: '7.png',
-    },
-    {
-      title: 'Business plan creation',
-      image: '8.png',
-    },
-    {
-      title: 'Idea brainstorming and development',
-      image: '9.png',
-    },
-    {
-      title: 'Cooperative workspace',
-      image: '10.png',
-    },
-    {
-      title: 'Patent registration',
-      image: '11.png',
-    },
-    {
-      title: 'Organizing startup presentation events',
-      image: '12.png',
-    },
-  ];
 
   const displayedServices = expanded ? services : services.slice(0, 6);
 

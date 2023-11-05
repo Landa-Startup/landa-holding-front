@@ -2,77 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
+import { logosLeft } from '../../utils/statics'
+import { logosRight } from '../../utils/statics'
 
 export default function Partners() {
-  const logosLeft = [
-    {
-      number: 1,
-      alt: 'evimo',
-    },
-    {
-      number: 2,
-      alt: 'azad university',
-    },
-    {
-      number: 3,
-      alt: 'nekeoi',
-    },
-    {
-      number: 4,
-      alt: 'evimo',
-    },
-    {
-      number: 5,
-      alt: 'evimo',
-    },
-    {
-      number: 6,
-      alt: 'evimo',
-    },
-    {
-      number: 7,
-      alt: 'evimo',
-    },
-    {
-      number: 8,
-      alt: 'evimo',
-    },
-  ];
-
-  const logosRight = [
-    {
-      number: 9,
-      alt: 'evimo',
-    },
-    {
-      number: 10,
-      alt: 'evimo',
-    },
-    {
-      number: 11,
-      alt: 'evimo',
-    },
-    {
-      number: 12,
-      alt: 'evimo',
-    },
-    // {
-    //   number: 13,
-    //   alt: 'evimo',
-    // },
-    {
-      number: 14,
-      alt: 'evimo',
-    },
-    {
-      number: 15,
-      alt: 'evimo',
-    },
-    // {
-    //   number: 16,
-    //   alt: 'evimo',
-    // },
-  ];
 
   return (
     <div>
