@@ -5,6 +5,7 @@ import Link from '@/components/icons/Link';
 import FeaturesCards from '@/components/investment/FeaturesCards';
 import Image from 'next/image';
 import React from 'react';
+import Certificate from '@/components/investment/Certificate';
 
 export default function page() {
   return (
@@ -67,13 +68,13 @@ export default function page() {
             and do not engage in manufacturing, sales of products or services,
             or any other operational activities. Their main purpose is to
             possess majority stock or membership interests in other companies,
-            giving rise to the term &apos;pure holding company.&apos; In contrast, some
-            holding companies not only hold ownership stakes in subsidiaries but
-            also conduct their own business operations. These are known as
-            &apos;mixed holding companies. Additionally, there are other categories
-            of holding companies, such as immediate and intermediate holding
-            companies. These types of holding companies are themselves owned by
-            other holding companies or larger businesses.
+            giving rise to the term &apos;pure holding company.&apos; In
+            contrast, some holding companies not only hold ownership stakes in
+            subsidiaries but also conduct their own business operations. These
+            are known as &apos;mixed holding companies. Additionally, there are
+            other categories of holding companies, such as immediate and
+            intermediate holding companies. These types of holding companies are
+            themselves owned by other holding companies or larger businesses.
           </p>
         </div>
         <div className="flex flex-col gap-4">
@@ -156,30 +157,23 @@ export default function page() {
             Certificate of Incorporation
           </span>
           <div className="flex items-end">
-            <div className="w-[477px] h-[435px] relative">
-              <Image
-                src="/static/images/investment/Incorporation-page-001 1 (3).png"
-                alt="Certificate"
-                layout="fill"
-                quality={100}
-              />
-            </div>
+            <Certificate />
             <Link size={32} addedClass="-ml-10 mb-3 z-10" />
           </div>
         </div>
         <div className="flex flex-col">
           <p className="leading-8 tracking-[1.6px] font-barlow">
-            Landa holding companies are primarily focused on
-            ownership control and do not engage in manufacturing, sales of
-            products or services, or any other operational activities. Their
-            main purpose is to possess majority stock or membership interests in
-            other companies, giving rise to the term &apos;pure holding company.&apos; In
+            Landa holding companies are primarily focused on ownership control
+            and do not engage in manufacturing, sales of products or services,
+            or any other operational activities. Their main purpose is to
+            possess majority stock or membership interests in other companies,
+            giving rise to the term &apos;pure holding company.&apos; In
             contrast, some holding companies not only hold ownership stakes in
             subsidiaries but also conduct their own business operations. These
-            are known as &apos;mixed holding companies. Additionally, there are other
-            categories of holding companies, such as immediate and intermediate
-            holding companies. These types of holding companies are themselves
-            owned by other holding companies or larger businesses.
+            are known as &apos;mixed holding companies. Additionally, there are
+            other categories of holding companies, such as immediate and
+            intermediate holding companies. These types of holding companies are
+            themselves owned by other holding companies or larger businesses.
           </p>
           <Button
             goto="/"
@@ -206,15 +200,15 @@ export default function page() {
             and provide ongoing resources for your ideas to thrive.
           </p>
           <p>
-            -Don&apos;t wait for opportunities to come knocking. Be the driver of your
-            own success by venturing into entrepreneurship and unleashing your
-            limitless creativity and innovation at Landa Holding -Experience the
-            freedom of entrepreneurship, where you have the power to turn your
-            passion into a purpose-driven business that leaves a lasting legacy
-            by being at Landa Holding. -By becoming a part of Landa Holding,
-            embrace the thrill and rewards of entrepreneurship, where every
-            decision you make and every obstacle you overcome adds to your
-            journey of growth and achievement.
+            -Don&apos;t wait for opportunities to come knocking. Be the driver
+            of your own success by venturing into entrepreneurship and
+            unleashing your limitless creativity and innovation at Landa Holding
+            -Experience the freedom of entrepreneurship, where you have the
+            power to turn your passion into a purpose-driven business that
+            leaves a lasting legacy by being at Landa Holding. -By becoming a
+            part of Landa Holding, embrace the thrill and rewards of
+            entrepreneurship, where every decision you make and every obstacle
+            you overcome adds to your journey of growth and achievement.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
