@@ -1,6 +1,6 @@
 import React from 'react';
 import CompaniesCard from './CompaniesCard';
-import { companies } from '@/utils/statics';
+import { companies } from '../../app/[lang]/statics';
 
 export default function CompaniesContainer() {
 

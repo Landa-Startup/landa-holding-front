@@ -289,6 +289,14 @@ interface CountriesDataInterface {
   text: string
 }
 
+interface CardsList {
+  title: string,
+  text: string,
+  image: string,
+  reverse: boolean,
+  link: string
+}
+
 
 export {
   ContactUSFormData,
@@ -301,6 +309,7 @@ export {
   CountriesDataInterface,
   ServicesInterface,
   AboutUsCardProps,
+  CardsList,
   ImagesInterface,
   WorkFieldsInterface,
   SportsInterface,

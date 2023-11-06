@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import ArrowDown from '../icons/acceleration/ArrowDown';
-import { services } from '../../utils/statics';
+import { services } from '../../app/[lang]/statics';
 
 export default function AccelerationServices() {
   const [expanded, setExpanded] = useState(true);

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Lines from '../icons/LandaHoldingBlack/Lines';
 import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
+import UlList from '../List/UlList';
 
 export default function LandaHoldingBlack() {
   return (
@@ -19,7 +20,9 @@ export default function LandaHoldingBlack() {
             </span>
           </div>
         </div>
-        <div className="w-[320px] md:w-[434px]">
+        #TODO: move to lang files
+        #TODO: make a component
+        {/* <div className="w-[320px] md:w-[434px]">
           <ul className="text-black text-[14px] font-normal leading-6 list-disc pl-4 font-barlow space-y-2 ml-0">
             <li className="leading-7 md:leading-10">
               Global investment opportunities within your reach.
@@ -37,7 +40,15 @@ export default function LandaHoldingBlack() {
               Accelerated growth potential through diversified investments.
             </li>
           </ul>
-        </div>
+        </div> */}
+
+        <UlList
+          list={['Global investment opportunities within your reach.', 'Access to a network of successful entrepreneurs and investors.', 'Exclusive insights and expert analysis for informed decisions.', 'Collaborative environment for joint ventures and partnerships.', 'Accelerated growth potential through diversified investments.']} 
+          style1='w-[320px] md:w-[434px]'
+          style2='leading-6 space-y-2 ml-0'
+          style3='leading-7 md:leading-10'
+        />
+
         <button className="relative justify-start items-center gap-4 mt-10 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
           <Link href={'/investor-registration'}>
             <div className="text-white text-[24px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
@@ -66,14 +77,13 @@ export default function LandaHoldingBlack() {
             </span>
           </div>
         </div>
-        <div className="w-[380px] md:w-[500px] px-6">
+        {/* <div className="w-[380px] md:w-[500px] px-6">
           <ul className="text-black text-[14px] font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
             <li className="leading-7">
               Global networking opportunities for collaboration and partnerships
             </li>
             <li className="leading-7">
-              Access to all videos of pitches, industry trend presentations and
-              panel discussions
+              Access to all videos of pitches, industry trend presentations and panel discussions. 
             </li>
             <li className="leading-7">
               Attending events of the entrepreneurs center
@@ -82,14 +92,21 @@ export default function LandaHoldingBlack() {
               Meetings with top business leaders and entrepreneurs
             </li>
             <li className="leading-7">
-              Participation in seasonal meetings with other international
-              entrepreneurs
+              Participation in seasonal meetings with other international entrepreneurs .
             </li>
             <li className="leading-7">
               Online platform for connecting with other entrepreneurs
             </li>
           </ul>
-        </div>
+        </div> */}
+
+
+        <UlList
+          list={['Global networking opportunities for collaboration and partnerships', 'Access to all videos of pitches, industry trend presentations and panel discussions.', 'Attending events of the entrepreneurs center', 'Meetings with top business leaders and entrepreneurs', 'Participation in seasonal meetings with other international entrepreneurs .' , 'Online platform for connecting with other entrepreneurs']} 
+          style1='w-[380px] md:w-[500px] px-6'
+          style2='leading-8 md:mt-4'
+          style3='leading-7'
+        />
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
           <Link href={'/entrepreneurs'}>
             <div className="text-white text-[24px] md:text-[32px] tracking-[1.5px] font-normal leading-6 font-condensed">

@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeCards from './HomeCards';
 import Lines from '../icons/Home/Lines';
-import { cardData } from '@/utils/statics';
+import { cardData } from '../../app/[lang]/statics';
 
 export default function HomeCardsContainer() {
   // Define data for the text card containers

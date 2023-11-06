@@ -1,6 +1,6 @@
 import React from 'react';
 import LatestStartupsCard from './LatestStartupsCard';
-import { cardData3 } from '@/utils/statics';
+import { cardData3 } from '../../app/[lang]/statics';
 
 export default function LatestStartups() {
 

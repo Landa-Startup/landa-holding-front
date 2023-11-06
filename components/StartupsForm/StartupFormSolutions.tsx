@@ -5,7 +5,7 @@ import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../common/TextArea';
 import RadioButtonGroup from '../common/RadioButtonGroup';
-import { preparationStatsOption } from '../../utils/statics'
+import { preparationStatsOption } from '../../app/[lang]/statics'
 
 export default function StartupFormSolutions({
   register,

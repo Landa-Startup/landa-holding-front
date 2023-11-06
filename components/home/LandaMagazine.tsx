@@ -1,7 +1,7 @@
 import React from 'react';
 import LandaMagazineCard from '../magazine/LandaMagazineCard';
 import Button from '../common/Button';
-import { cardData2 } from '@/utils/statics';
+import { cardData2 } from '../../app/[lang]/statics';
 
 export default function LandaMagazine() {
 

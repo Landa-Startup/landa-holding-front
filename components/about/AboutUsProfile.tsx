@@ -1,7 +1,7 @@
 import React from 'react';
 // import AboutUsProfileCard from './AboutUsProfileCard';
 import AboutusPersonalTabs from './AboutusPersonalTabs';
-import { cardsData } from '@/utils/statics';
+import { cardsData } from '../../app/[lang]/statics';
 
 export default function AboutUsProfile() {
 

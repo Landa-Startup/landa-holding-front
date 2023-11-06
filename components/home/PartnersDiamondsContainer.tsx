@@ -1,6 +1,6 @@
 import React from 'react';
 import PartnersDiamond from './PartnersDiamond';
-import { partners1, partners2, partners3 } from '@/utils/statics';
+import { partners1, partners2, partners3 } from '../../app/[lang]/statics';
 
 export default function PartnersDiamondsContainer() {
 

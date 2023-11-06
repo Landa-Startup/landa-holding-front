@@ -10,7 +10,7 @@ import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import Input from '../common/form/Input';
 import { initialInvestorRegistrationFormData } from '../../app/initials/initObjects'
-import { countryList } from '@/utils/statics';
+import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
 
 export default function InvestorRegistrationForm() {

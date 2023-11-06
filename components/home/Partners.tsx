@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
-import { logosLeft } from '../../utils/statics'
-import { logosRight } from '../../utils/statics'
+import { logosLeft } from '../../app/[lang]/statics'
+import { logosRight } from '../../app/[lang]/statics'
 
 export default function Partners() {
 

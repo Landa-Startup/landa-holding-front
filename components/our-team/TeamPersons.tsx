@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from '../common/PersonalTab'
-import { persons } from '@/utils/statics';
-import { roles } from '@/utils/statics';
+import { persons } from '../../app/[lang]/statics';
+import { roles } from '../../app/[lang]/statics';
 
 export default function TeamPersons() {
 

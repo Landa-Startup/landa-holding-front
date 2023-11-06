@@ -1,6 +1,6 @@
 import React from 'react';
 import GalleryImageCard from './GalleryImageCard';
-import { images } from '@/utils/statics';
+import { images } from '../../app/[lang]/statics';
 
 export default function GalleryImageCardContainer() {
 

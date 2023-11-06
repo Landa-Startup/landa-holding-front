@@ -9,7 +9,7 @@ import TextArea from '../common/TextArea';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import { initialPartnerMembershipFormData } from '../../app/initials/initObjects'
-import { countryList } from '@/utils/statics';
+import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
 
 // import { PartnerMembership } from '@prisma/client';
