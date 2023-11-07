@@ -129,7 +129,7 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-2 px-2 md:px-8 lg:px-8 xl:px-8">
+        <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-2 md:px-8 lg:px-8 xl:px-8">
           <div className="flex gap-2 mt-6 md:mt-[77px] items-center md:pl-48 lg:pl-20 xl:pl-0">
             <PrimaryDot />
             <div className="flex">

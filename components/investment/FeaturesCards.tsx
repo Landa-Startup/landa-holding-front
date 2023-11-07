@@ -16,7 +16,7 @@ export default function FeaturesCards({
       <p className="font-barlow text-base leading-7">{description}</p>
       <Button
         goto={link}
-        size="not"
+        size="visit"
         text="Register"
         addedClass="self-end"
         bgColor="Primary"

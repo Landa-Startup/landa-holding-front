@@ -12,11 +12,12 @@ export default function Certificate() {
 
   return (
     <Link href="/static/images/investment/Incorporation-page-001 1 (3).png">
-      <div className="w-[477px] h-[435px] relative" onClick={showModal}>
+      <div onClick={showModal}>
         <Image
           src="/static/images/investment/Incorporation-page-001 1 (3).png"
           alt="Certificate"
-          layout="fill"
+          width={1000}
+          height={1000}
         />
         {isOpen && (
           <ImageModal
