@@ -11,7 +11,7 @@ export default function PartnersStartupCard({
   description: string;
 }) {
   return (
-    <div className="p-5 gap-4 w-[400px] h-[220px] bg-whiteGold flex items-start rounded-md">
+    <div className="p-5 gap-4 w-[400px] h-[220px] bg-whiteGold flex items-start rounded-md select-none">
       <Image
         className="object-contain"
         src={`/static/images/Home/contact/${logo}.png`}
