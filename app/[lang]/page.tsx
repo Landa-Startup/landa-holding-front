@@ -8,19 +8,25 @@ import HomeCardsContainer from '@/components/home/HomeCardsContainer';
 import Partners from '@/components/home/Partners';
 import HomeOurTeam from '@/components/home/HomeOurTeam';
 
+import { useTranslation } from '../i18n'
+
 export const metadata: Metadata = {
   title: 'Landa Holding',
   description:
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default function Page() {
+export async function Page({ params: { lng } } : { params: { lng: string } }) {
+
+  const { t } = await useTranslation(lng, "")
+
+
   return (
     <div className="relative">
       {/* Hero section */}
       <Hero
         showLanda
-        titles={['Acceleration', 'Investment', 'Academy']}
+        titles={[t("Acceleration"), t("Investment"), t("Academy")]}
         subTitle="Feel The Future"
         backgroundImage="Hero.png"
         leftImage="Landa.svg"

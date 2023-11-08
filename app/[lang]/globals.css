@@ -6,7 +6,7 @@
 /* Define custom fonts with @font-face */
 @font-face {
   font-family: 'Gilda Display';
-  src: url('../public/static/fonts/GildaDisplay-Regular.ttf'),
+  src: url('../../public/static/fonts/GildaDisplay-Regular.ttf'),
     local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Barlow';
-  src: url('../public/static/fonts/Barlow-Regular.ttf'),
+  src: url('../../public/static/fonts/Barlow-Regular.ttf'),
     local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -24,8 +24,8 @@
 
 @font-face {
   font-family: 'Condensed';
-  src: url('../public/static/fonts/BarlowCondensed-Regular.woff2') format('woff2'),
-    url('../public/static/fonts/BarlowCondensed-Regular.ttf') format('truetype');
+  src: url('../../public/static/fonts/BarlowCondensed-Regular.woff2') format('woff2'),
+    url('../../public/static/fonts/BarlowCondensed-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

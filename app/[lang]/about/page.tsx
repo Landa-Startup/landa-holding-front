@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 import SubsidiaryCompanies from '@/components/about/SubsidiaryCompanies';
 import StoryOfLanda from '@/components/about/StoryOfLanda';
 import KeyDifferentiating from '@/components/KeyDifferentiating';
-import { cards } from '../[lang]/statics';
+import { cards } from '../../[lang]/statics';
 
 
 export const metadata: Metadata = {
