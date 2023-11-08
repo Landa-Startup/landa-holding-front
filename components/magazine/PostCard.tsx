@@ -35,7 +35,7 @@ export default function PostCard({
       >
         {title}
       </Link>
-      <p className="font-barlow text-justify text-[#6B6B6B]">{description}</p>
+      <div className='font-barlow text-justify text-[#6B6B6B]' dangerouslySetInnerHTML={{ __html: description }} />
       <Button
         goto={`/magazine/${slug}`}
         text="Read More"

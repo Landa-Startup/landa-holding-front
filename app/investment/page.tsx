@@ -6,6 +6,13 @@ import FeaturesCards from '@/components/investment/FeaturesCards';
 import Image from 'next/image';
 import React from 'react';
 import Certificate from '@/components/investment/Certificate';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Investment',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+};
 
 export default function page() {
   return (
@@ -102,7 +109,7 @@ export default function page() {
           src="/static/images/investment/logo 1.png"
           alt="Logo"
           layout="fill"
-          className="object-contain py-10"
+          className="object-contain py-10 -z-10"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 bg-[#F7F3EE]">
@@ -184,7 +191,7 @@ export default function page() {
         </div>
       </div>
       <div className="bg-[#F7F3EE] py-10 md:py-16 px-8 md:px-28">
-        <div className="font-barlow text-2xl leading-10">
+        <div className="leading-8 tracking-[1.6px] font-barlow">
           <p>
             At Landa Holding, our objective is to identify innovative start-up
             projects, minimize risks, and foster success for our trusted

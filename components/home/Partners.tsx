@@ -80,7 +80,10 @@ export default function Partners() {
   ];
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-  const [isScrolling, setIsScrolling] = useState(true); // Control scrolling with a Boolean state
+  const [isScrolling, setIsScrolling] = useState(true);
+  const [dragging, setDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -103,7 +106,7 @@ export default function Partners() {
     const intervalId = setInterval(scrollAutomatically, 50); // Adjust the interval as needed.
 
     return () => clearInterval(intervalId);
-  }, [isScrolling]); // Add isScrolling as a dependency
+  }, [isScrolling]);
 
   // Add event listeners to stop automatic scroll on mouse enter
   const handleMouseEnter = () => {
@@ -115,6 +118,26 @@ export default function Partners() {
     setIsScrolling(true); // Resume scrolling
   };
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setDragging(true);
+    setStartX(e.clientX);
+    setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!dragging) return;
+
+    if (scrollContainerRef.current) {
+      const x = e.clientX;
+      const walk = (x - startX) * 1; // You can adjust the factor for smoother or faster scrolling
+      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    }
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
+
   return (
     <div className="flex flex-col items-center my-6 gap-12">
       <span className="text-3xl md:text-4xl text-primary">
@@ -124,7 +147,10 @@ export default function Partners() {
         ref={scrollContainerRef}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="overflow-x-scroll md:overflow-x-hidden gap-14 grid grid-flow-col w-[calc(100%-2%)]"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        className="overflow-x-scroll md:overflow-x-hidden gap-12 grid grid-flow-col w-[calc(100%-2%)] cursor-pointer"
       >
         {logos.map((logo) => (
           <PartnersStartupCard
