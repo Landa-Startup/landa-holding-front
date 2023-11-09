@@ -4,20 +4,25 @@ import ContactUsDescription from '@/components/common/ContactUsDescription';
 import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 
+import { useTranslation } from '../../i18n'
+
 export const metadata: Metadata = {
   title: 'Landa Holding | Contact',
   description:
     'Contact Landa Holding to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.',
 };
 
-export default function ContactUsPage() {
+export default async function ContactUsPage({ params: { lng } } : { params: { lng: string } }) {
   // Renamed the component for better naming
+
+  const { t } = await useTranslation(lng, "");
+
   return (
     <div>
       {/* Banner Component */}
       <Banner
         image="/static/images/Contact/37b76f28c1c41b4ea18163cf2fba85ab.png"
-        title="CONTACT US"
+        title={`${t("CONTACT US")}`}
       />
 
       {/* Main Content Grid */}

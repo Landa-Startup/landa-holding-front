@@ -6,7 +6,7 @@ import { ContactUSFormData } from '../../../app/types/global';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import NotificationSendForm from './NotificationSendForm';
-import { ContactFormData } from 'app/initials/initObjects';
+import { ContactFormData } from '../../../app/initials/initObjects';
 
 export default function ContactUsForm() {
 

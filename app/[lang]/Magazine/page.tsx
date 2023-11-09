@@ -10,16 +10,21 @@ import FetchBlogData from '@/utils/FetchBlogData';
 import MagazineCardsContainer from '@/components/magazine/MagazineCardsContainer';
 import { Metadata } from 'next';
 
+import { useTranslation } from '../../i18n'
+
 export const metadata: Metadata = {
   title: 'Landa Holding | Magazine',
   description:
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default function MagazinePage() {
+export default async function MagazinePage({ params: { lng } } : { params: { lng: string } }) {
+
+  const { t } = await useTranslation(lng, "");
+
   return (
     <div className="relative">
-      <Banner image="/static/images/Magazine/hero.png" title="Magazine" />
+      <Banner image="/static/images/Magazine/hero.png" title={`${t("Magazine")}`} />
       <div className="grid grid-cols-3 my-32 mx-28 gap-20">
         <MagazineCardsContainer />
         <div className="flex flex-col gap-12 col-span-1">

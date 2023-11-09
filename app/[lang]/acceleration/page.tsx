@@ -6,6 +6,8 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import PrimaryDot from '@/components/icons/acceleration/PrimaryDot';
 
+import { useTranslation } from '../../i18n'
+
 // Define metadata for the page
 export const metadata: Metadata = {
   title: 'Landa Holding | Acceleration',
@@ -13,12 +15,15 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default function page() {
+export default async function page({ params: { lng } } : { params: { lng: string } }) {
+
+  const { t } = await useTranslation(lng, "");
+
   return (
     <div>
       <Hero
         showLanda
-        titles="Acceleration"
+        titles={`${t("Acceleration")}`}
         backgroundImage="banner.png"
         leftImage="Landa.svg"
         showButton={true}

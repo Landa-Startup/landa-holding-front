@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export async function Page({ params: { lng } } : { params: { lng: string } }) {
+export default async function Page({ params: { lng } } : { params: { lng: string } }) {
 
-  const { t } = await useTranslation(lng, "")
+  const { t } = await useTranslation(lng, "");
 
 
   return (
@@ -26,7 +26,7 @@ export async function Page({ params: { lng } } : { params: { lng: string } }) {
       {/* Hero section */}
       <Hero
         showLanda
-        titles={[t("Acceleration"), t("Investment"), t("Academy")]}
+        titles={[t('Acceleration'), t('Investment'), t('Academy')]}
         subTitle="Feel The Future"
         backgroundImage="Hero.png"
         leftImage="Landa.svg"

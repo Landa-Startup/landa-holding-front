@@ -7,7 +7,7 @@ import EntrepreneursTitle from './EntrepreneursTitle';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import apiClient from '@/utils/api';
 import GetCsrfToken from '@/utils/get-csrf-token';
-import { initialFormData } from 'app/initials/initObjects';
+import { initialFormData } from '../../app/initials/initObjects';
 
 export default function EntrepreneursForm() {
 
