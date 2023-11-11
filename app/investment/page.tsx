@@ -7,6 +7,7 @@ import Image from 'next/image';
 import React from 'react';
 import Certificate from '@/components/investment/Certificate';
 import { Metadata } from 'next';
+import FeaturesCardsContainer from '@/components/investment/FeaturesCardsContainer';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Investment',
@@ -158,7 +159,7 @@ export default function page() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 items-end">
+      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 items-center">
         <div className="flex flex-col gap-6">
           <span className="text-2xl md:text-4xl text-primary font-gilda">
             Certificate of Incorporation
@@ -187,6 +188,7 @@ export default function page() {
             size="not"
             text="Federal Canada Corporation Information"
             bgColor="Primary"
+            addedClass='w-full'
           />
         </div>
       </div>
@@ -218,28 +220,7 @@ export default function page() {
             you overcome adds to your journey of growth and achievement.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <FeaturesCards
-            link="/StartupsForm"
-            title="1. Idea"
-            description="Present your idea and identify the best opportunity for success, plan your path to launch and precisely set the steps, and find the right team of experts to help you take the steps one after another. Remember that the first step is the longest stride. You must remember to validate the profitability of your idea because low profitability and high investment risks lead to failure."
-          />
-          <FeaturesCards
-            link="/StartupsForm"
-            title="2. MVP (minimum viable product)"
-            description="MVP is a version of a product with just enough features to be usable by early customers who can then provide feedback for future product development. This way, you are able to create the tangible product that provides the best and most appealing user experience for the most economical cost, an that can challenge and validate assumptions about a product's requirements."
-          />
-          <FeaturesCards
-            link="/StartupsForm"
-            title="3. Frist Sale"
-            description="In business, product development (PD) covers the complete process of bringing a new product to market, renewing an existing product and introducing a product in a new market. You need to create a brand that helps you stand out from competitors by connecting with the values and emotions of your target customer. Among various business considerations, product design and the transformation into a product available for sale, and finally the means for it to generate income are the most important factors."
-          />
-          <FeaturesCards
-            link="/StartupsForm"
-            title="4. Sale Development"
-            description="Collaborate with manufacturers to ensure a high quality product delivered to buyers' doors that exceeds customer expectations. Sales development is usually an organization that sits between the marketing and sales functions of a business and is responsible for the front-end of the sales cycle including identifying, connecting with, and qualifying leads. They normally set up qualified meetings between a salesperson and potential buyers with a high probability of purchasing a product."
-          />
-        </div>
+        <FeaturesCardsContainer />
       </div>
       {/* <UpcomingEvents /> */}
     </div>
