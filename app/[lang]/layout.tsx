@@ -4,30 +4,29 @@ import './globals.css';
 import Navbar from '@/components/common/Navbar';
 import ScrollUpButton from '@/components/common/ScrollUpButton';
 
-import { dir } from 'i18next'
+import { dir } from 'i18next';
 
-import { languages } from '../i18n/setting'
+const languages = ['en', 'fa'];
 
 export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }))
+  return languages.map((lng) => ({ lng }));
 }
 
 export default function RootLayout({
   children,
-  params: {
-    lng
-  }
+  params: { lng },
 }: {
   children: React.ReactNode;
-  params: { lng: string }
+  params: { lng: string };
 }) {
   return (
-    <html lang={lng} dir='ltr'>
+    <html lang={lng} dir={dir(lng)}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <Navbar> {/* Navbar */}
+        <Navbar>
+          {/* Navbar */}
           <main>{children}</main> {/* Main Content */}
           <div className="bottom-0 w-full">
             <Footer /> {/* Footer */}
