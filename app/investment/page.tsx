@@ -109,7 +109,7 @@ export default function page() {
           src="/static/images/investment/logo 1.png"
           alt="Logo"
           layout="fill"
-          className="object-contain py-10 -z-10"
+          className="object-contain pb-[500px] md:pb-10 md:pt-10 -z-10"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 bg-[#F7F3EE]">
