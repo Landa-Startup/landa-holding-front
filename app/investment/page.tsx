@@ -35,7 +35,7 @@ export default function page() {
             </span>
           </div>
           {/* TODO: make component these texts */}
-          <p className="leading-8 tracking-[1.6px] font-barlow">
+          <p className="leading-8 tracking-[1px] font-barlow text-justify">
             In the realm of finance, various types of firms engage in investing
             in other companies. However, what sets holding companies apart is
             their ability to acquire a controlling stake that grants them the
@@ -70,7 +70,7 @@ export default function page() {
               Types of Holding Companies
             </span>
           </div>
-          <p className="leading-7 tracking-[1.6px] font-barlow">
+          <p className="leading-7 tracking-[1px] font-barlow text-justify">
             Many holding companies are primarily focused on ownership control
             and do not engage in manufacturing, sales of products or services,
             or any other operational activities. Their main purpose is to
@@ -96,7 +96,7 @@ export default function page() {
           <span className="text-2xl md:text-4xl text-primary font-gilda">
             Landa Investment Strategy
           </span>
-          <p className="leading-7 tracking-[1.6px] font-barlow">
+          <p className="leading-7 tracking-[1px] font-barlow text-justify">
             Landa Investment Center is mainly focused on attracting investors
             from all over the world and investing collected resources in
             innovative, scalable, and promising startups with international
@@ -119,7 +119,7 @@ export default function page() {
               Investment in Startups
             </span>
           </div>
-          <p className="leading-8 tracking-[1.6px] font-barlow">
+          <p className="leading-8 tracking-[1px] font-barlow text-justify">
             Investing in a startup has the potential to yield noticeable
             returns, yet it isn’t a risk-free enterprise. There are no
             guarantees that a fledgling company will take off, and if it fails,
@@ -148,7 +148,7 @@ export default function page() {
           <span className="text-2xl md:text-4xl text-primary font-gilda">
             Our Vision and Mission
           </span>
-          <p className="leading-7 tracking-[1.6px] font-barlow">
+          <p className="leading-7 tracking-[1px] font-barlow text-justify">
             It is our vision to evaluate and identify the most promising and
             innovative startup plans in order to minimize the risks of failure
             for the investors who confide in our company, and our mission to to
@@ -169,7 +169,7 @@ export default function page() {
           </div>
         </div>
         <div className="flex flex-col">
-          <p className="leading-8 tracking-[1.6px] font-barlow">
+          <p className="leading-8 tracking-[1px] font-barlow text-justify">
             Landa holding companies are primarily focused on ownership control
             and do not engage in manufacturing, sales of products or services,
             or any other operational activities. Their main purpose is to
@@ -191,7 +191,7 @@ export default function page() {
         </div>
       </div>
       <div className="bg-[#F7F3EE] py-10 md:py-16 px-8 md:px-28">
-        <div className="leading-8 tracking-[1.6px] font-barlow">
+        <div className="leading-8 tracking-[1px] font-barlow text-justify">
           <p>
             At Landa Holding, our objective is to identify innovative start-up
             projects, minimize risks, and foster success for our trusted
