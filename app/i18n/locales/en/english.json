@@ -1,15 +1,16 @@
 {
-    "titles": {
-        "About Us": "About Us",
-        "Acceleration": "Acceleration",
-        "CONTACT US": "CONTACT US",
-        "ENTREPRENEUR CENTER": "ENTREPRENEUR CENTER",
-        "INVESTOR CENTER": "INVESTOR CENTER",
-        "APPLY JOB": "APPLY JOB",
-        "Magazine": "Magazine",
-        "Our Team": "Our Team",
-        "BUSINESS PARTNERS": "BUSINESS PARTNERS",
-        "SEO COURSE": "SEO COURSE",
-        "STARTUPS VALIDATION FORM": "STARTUPS VALIDATION FORM"
-    }
+  "titles": {
+    "About Us": "About Us",
+    "Acceleration": "Acceleration",
+    "CONTACT US": "CONTACT US",
+    "ENTREPRENEUR CENTER": "ENTREPRENEUR CENTER",
+    "INVESTOR CENTER": "INVESTOR CENTER",
+    "APPLY JOB": "APPLY JOB",
+    "Magazine": "Magazine",
+    "Our Team": "Our Team",
+    "BUSINESS PARTNERS": "BUSINESS PARTNERS",
+    "SEO COURSE": "SEO COURSE",
+    "STARTUPS VALIDATION FORM": "STARTUPS VALIDATION FORM",
+    "Feel The Future": "Feel The Future"
+  }
 }
