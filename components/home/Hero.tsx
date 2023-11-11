@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Button from '../common/Button';
+import { useTranslation } from 'app/i18n';
 
 export default function Hero({
   showLanda,
@@ -37,8 +38,8 @@ export default function Hero({
 
       return () => clearInterval(interval);
     } else {
-      setCurrentTitle(titles)
-      setIsTitleChanging(false)
+      setCurrentTitle(titles);
+      setIsTitleChanging(false);
       setNotArray(true);
     }
   }, [titles]);
@@ -47,7 +48,7 @@ export default function Hero({
     if (Array.isArray(titles)) {
       setCurrentTitle(titles[titleIndex]);
     } else {
-      setCurrentTitle(titles)
+      setCurrentTitle(titles);
       setNotArray(true);
     }
   }, [titleIndex, titles]);
@@ -56,7 +57,7 @@ export default function Hero({
     if (Array.isArray(titles)) {
       setIsTitleChanging(false);
     }
-  }, [currentTitle]);
+  }, [currentTitle, titles]);
 
   return (
     <div
@@ -78,7 +79,9 @@ export default function Hero({
         </div>
         <div
           className={`${
-            notArray ? "text-black text-5xl font-gilda text-center md:text-right md:text-7xl" : "md:text-right text-neutral-50 text-5xl md:text-7xl font-normal tracking-[6.4px] font-gilda text-center text-opacity-95"
+            notArray
+              ? 'text-black text-5xl font-gilda text-center md:text-right md:text-7xl'
+              : 'md:text-right text-neutral-50 text-5xl md:text-7xl font-normal tracking-[6.4px] font-gilda text-center text-opacity-95'
           } ${
             isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
@@ -90,7 +93,7 @@ export default function Hero({
         </div>
 
         <div className="text-center font-mono text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
-          {subTitle ? subTitle : ""}
+          {subTitle ? subTitle : ''}
         </div>
         {showButton ? (
           <Button

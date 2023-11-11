@@ -1,7 +1,8 @@
+import { useTranslation } from 'app/i18n';
 import Image from 'next/image';
 import React from 'react';
 
-export default function HomeCardsRight({
+export default async function HomeCardsRight({
   images,
   titles,
   link,
@@ -10,11 +11,13 @@ export default function HomeCardsRight({
   images: Array<{ src: string; alt: string }>;
   link: string;
 }) {
+  const { t } = await useTranslation('fa', 'translation');
+
   return (
     <div className="flex flex-col self-start md:self-center">
       <div className="flex flex-col items-start md:items-center space-y-2 mt-9 md:mt-0">
         <span className="font-gilda text-4xl md:text-6xl tracking-[6.5px]">
-          {titles}
+          {t(titles)}
         </span>
       </div>
       <div className="flex space-x-7">
