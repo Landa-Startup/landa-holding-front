@@ -41,7 +41,7 @@ export default function page() {
         <div className="flex flex-col md:flex-row gap-12 mt-6">
           <div className="relative md:w-[490px] h-[284px] hidden md:block xl:ml-4 lg:ml-6">
             <Image
-              className=" object-cover"
+              className="object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
               alt="acceleration"
               layout="fill"
