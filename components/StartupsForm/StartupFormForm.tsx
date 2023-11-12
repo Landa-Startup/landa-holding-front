@@ -11,6 +11,7 @@ import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
+import { useRouter,useSearchParams } from 'next/navigation';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 enum Type {
@@ -73,8 +74,13 @@ export default function StartupFormForm() {
     mode: 'onBlur',
     defaultValues: initialStartupsFormData,
   });
+  const router = useRouter();
+  
+  const searchParams:any|null= useSearchParams()
+  const query = searchParams.get('type') 
+  console.log(query)
+  const [selectedRadio, setSelectedRadio] = useState(query);
 
-  const [selectedRadio, setSelectedRadio] = useState('');
 
   // useEffect(() => {
   //   setSelectedRadio('IDEA');
@@ -88,7 +94,7 @@ export default function StartupFormForm() {
 
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
-
+  
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRadio(event.target.value);
   };
@@ -291,7 +297,7 @@ export default function StartupFormForm() {
     { value: '3', label: '3' },
   ];
 
-  console.log(selectedRadio);
+  // console.log(selectedRadio);
 
   return (
     <>
@@ -332,6 +338,7 @@ export default function StartupFormForm() {
           <select
             className="select select-bordered w-full max-w-xs mt-4"
             onChange={handleItemChange}
+            value={selectedRadio}
           >
             <option defaultChecked>
               Select Your Option
