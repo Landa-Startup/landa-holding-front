@@ -4,7 +4,7 @@ import LatestStartupsCard from './LatestStartupsCard';
 export default function LatestStartups() {
   const cardData = [
     {
-      image: '/static/images/Home/Startups/vector.png',
+      image: '/static/images/Home/Startups/Frame 38190.png',
       title: 'LANDA TRIP',
       description:
         'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
