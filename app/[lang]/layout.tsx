@@ -13,6 +13,20 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
+// Define data for the text card containers
+interface GenerateMetadataProps {
+  params: {
+    lng: string;
+  };
+}
+
+export async function GenerateMetadata({
+  params: { lng },
+}: GenerateMetadataProps) {
+  const { t } = await useTranslation(lng as string, 'home');
+  return { title: t('h1') };
+}
+
 export default async function RootLayout({
   children,
   params: { lng },
@@ -20,7 +34,8 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lng: string };
 }) {
-  const { t } = await useTranslation('fa', 'home');
+  const { t } = await useTranslation(lng, 'home');
+
 
   return (
     <html lang={lng} dir={dir(lng)}>

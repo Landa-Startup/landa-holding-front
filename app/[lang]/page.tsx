@@ -16,12 +16,26 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
+// Define data for the text card containers
+interface GenerateMetadataProps {
+  params: {
+    lng: string;
+  };
+}
+
+export async function GenerateMetadata({
+  params: { lng },
+}: GenerateMetadataProps) {
+  const { t } = await useTranslation(lng as string, 'home');
+  return { title: t('h1') };
+}
+
 export default async function Page({
   params: { lng },
 }: {
   params: { lng: string };
 }) {
-  const { t } = await useTranslation('fa', 'home');
+  const { t } = await useTranslation(lng, 'home');
 
   return (
     <div className="relative">
