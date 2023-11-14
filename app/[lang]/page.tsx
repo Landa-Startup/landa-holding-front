@@ -21,22 +21,19 @@ export default async function Page({
 }: {
   params: { lng: string };
 }) {
-  const { t } = await useTranslation('fa', 'translation');
+  const { t } = await useTranslation('fa', 'home');
 
   return (
     <div className="relative">
       {/* Hero section */}
       <Hero
         showLanda
-        titles={[
-          t('titles.Acceleration'),
-          t('titles.Investment'),
-          t('titles.Academy'),
-        ]}
-        subTitle={t('titles.Feel The Future')}
+        titles={[t('Acceleration'), t('Investment'), t('Academy')]}
+        subTitle={t('hero_subtitle')}
         backgroundImage="Hero.png"
         leftImage="Landa.svg"
         showButton={false}
+        landa={t('Landa Holding')}
       />
 
       {/* Include other components */}

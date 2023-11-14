@@ -3,8 +3,11 @@ import React from 'react';
 import Lines from '../icons/LandaHoldingBlack/Lines';
 import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
 import UlList from '../List/UlList';
+import { useTranslation } from 'app/i18n';
 
-export default function LandaHoldingBlack() {
+export default async function LandaHoldingBlack() {
+  const { t } = await useTranslation('fa', 'translation');
+
   return (
     <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-[#ffffff] py-5 md:py-10 space-y-5 md:h-[590px]">
       <Lines />
@@ -12,16 +15,15 @@ export default function LandaHoldingBlack() {
         <div className="flex flex-col md:items-start items-center self-start">
           <div className="flex flex-col">
             <span className="text-black text-xl font-gilda font-normal border-black w-[340px] hidden md:block">
-              LANDA HOLDING
+              {t('LANDA HOLDING')}
             </span>
             <span className="text-black text-4xl font-gilda font-normal border-b md:border-none border-black w-[340px] pb-3 text-center md:text-start">
-              Investment Center
+              {t('Investment Center')}
               <br />
             </span>
           </div>
         </div>
-        #TODO: move to lang files
-        #TODO: make a component
+        #TODO: move to lang files #TODO: make a component
         {/* <div className="w-[320px] md:w-[434px]">
           <ul className="text-black text-[14px] font-normal leading-6 list-disc pl-4 font-barlow space-y-2 ml-0">
             <li className="leading-7 md:leading-10">
@@ -41,18 +43,22 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div> */}
-
         <UlList
-          list={['Global investment opportunities within your reach.', 'Access to a network of successful entrepreneurs and investors.', 'Exclusive insights and expert analysis for informed decisions.', 'Collaborative environment for joint ventures and partnerships.', 'Accelerated growth potential through diversified investments.']} 
-          style1='w-[320px] md:w-[434px]'
-          style2='leading-6 space-y-2 ml-0'
-          style3='leading-7 md:leading-10'
+          list={[
+            'Global investment opportunities within your reach.',
+            'Access to a network of successful entrepreneurs and investors.',
+            'Exclusive insights and expert analysis for informed decisions.',
+            'Collaborative environment for joint ventures and partnerships.',
+            'Accelerated growth potential through diversified investments.',
+          ]}
+          style1="w-[320px] md:w-[434px]"
+          style2="leading-6 space-y-2 ml-0"
+          style3="leading-7 md:leading-10"
         />
-
         <button className="relative justify-start items-center gap-4 mt-10 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
           <Link href={'/investor-registration'}>
             <div className="text-white text-[24px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
-              Register
+              {t('Register')}
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">
@@ -69,10 +75,10 @@ export default function LandaHoldingBlack() {
         <div className="flex flex-col md:items-start items-center">
           <div className="flex flex-col">
             <span className="text-black text-xl font-gilda font-normal border-black w-[340px] hidden md:block">
-              LANDA HOLDING
+              {t('LANDA HOLDING')}
             </span>
             <span className="text-black text-4xl font-gilda font-normal border-b  md:border-none border-black w-[340px] pb-3 text-center md:text-start">
-              Entrepreneur Center
+              {t('Entrepreneurs Center')}
               <br />
             </span>
           </div>
@@ -100,17 +106,23 @@ export default function LandaHoldingBlack() {
           </ul>
         </div> */}
 
-
         <UlList
-          list={['Global networking opportunities for collaboration and partnerships', 'Access to all videos of pitches, industry trend presentations and panel discussions.', 'Attending events of the entrepreneurs center', 'Meetings with top business leaders and entrepreneurs', 'Participation in seasonal meetings with other international entrepreneurs .' , 'Online platform for connecting with other entrepreneurs']} 
-          style1='w-[380px] md:w-[500px] px-6'
-          style2='leading-8 md:mt-4'
-          style3='leading-7'
+          list={[
+            'Global networking opportunities for collaboration and partnerships',
+            'Access to all videos of pitches, industry trend presentations and panel discussions.',
+            'Attending events of the entrepreneurs center',
+            'Meetings with top business leaders and entrepreneurs',
+            'Participation in seasonal meetings with other international entrepreneurs .',
+            'Online platform for connecting with other entrepreneurs',
+          ]}
+          style1="w-[380px] md:w-[500px] px-6"
+          style2="leading-8 md:mt-4"
+          style3="leading-7"
         />
         <button className="relative justify-start items-center gap-4 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
           <Link href={'/entrepreneurs'}>
             <div className="text-white text-[24px] md:text-[32px] tracking-[1.5px] font-normal leading-6 font-condensed">
-              Register
+              {t('Register')}
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">

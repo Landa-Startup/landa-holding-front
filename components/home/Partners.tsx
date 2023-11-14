@@ -2,10 +2,12 @@ import Image from 'next/image';
 import React from 'react';
 import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
-import { logosLeft } from '../../app/[lang]/statics'
-import { logosRight } from '../../app/[lang]/statics'
+import { logosLeft } from '../../app/[lang]/statics';
+import { logosRight } from '../../app/[lang]/statics';
+import { useTranslation } from 'app/i18n';
 
-export default function Partners() {
+export default async function Partners() {
+  const { t } = await useTranslation('fa', 'translation');
 
   return (
     <div>
@@ -13,7 +15,7 @@ export default function Partners() {
         <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-2 md:order-1 mt-9">
           {logosLeft.map((role, index) => (
             <Image
-              loading='lazy'
+              loading="lazy"
               className="w-20 md:w-32 h-20 md:h-32 object-contain"
               key={index}
               src={`/static/images/Home/contact/${role.number}.png`}
@@ -25,7 +27,7 @@ export default function Partners() {
         </div>
         <div className="col-span-4 md:col-span-2 gap-6 md:gap-14 md:bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9 order-1">
           <p className="text-primary text-xl md:text-4xl font-gilda">
-            Join Our Business Partners
+            {t('Join Our Business Partners')}
           </p>
           <p className="md:w-[222px] md:ml-9 font-barlow text-sm md:text-base font-medium leading-7 tracking-[1.6px] md:tracking-[2.4px]  text-black lg:w-[500px] text-center">
             At Landa Holding, we welcome strategic affiliations with
@@ -48,7 +50,7 @@ export default function Partners() {
         <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
           {logosRight.map((role, index) => (
             <Image
-              loading='lazy'
+              loading="lazy"
               className="w-20 md:w-32 h-20 md:h-32 object-contain"
               key={index}
               src={`/static/images/Home/contact/${role.number}.png`}

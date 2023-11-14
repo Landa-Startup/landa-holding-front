@@ -1,20 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { items } from '../../app/[lang]/statics'
+import { items } from '../../app/[lang]/statics';
+import { useTranslation } from 'app/i18n';
 
-
-export default function HomeOurTeam() {
+export default async function HomeOurTeam() {
+  const { t } = await useTranslation('fa', 'translation');
 
   return (
     <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
       <div className="ml-5 xl:ml-40 lg:self-start flex flex-col items-center">
         <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
-          Landa Holding
+          {t('LANDA HOLDING')}
           <br />
         </span>
         <span className="text-5xl font-normal tracking-widest text-black font-condensed ">
-          Our Team
+          {t('Our Team')}
         </span>
       </div>
       <div className="flex items-center justify-center">
@@ -42,9 +43,9 @@ export default function HomeOurTeam() {
       />
       <Link href={'/our-team'}>
         <button className="justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
-          View More
+          {t('View More')}
         </button>
-      </Link>{' '}
+      </Link>
     </div>
   );
 }

@@ -1,8 +1,11 @@
 import React from 'react';
 import LatestStartupsCard from './LatestStartupsCard';
 import { cardData3 } from '../../app/[lang]/statics';
+import { t } from 'i18next';
+import { useTranslation } from 'app/i18n';
 
-export default function LatestStartups() {
+export default async function LatestStartups() {
+  const { t } = await useTranslation('fa', 'translation');
 
   return (
     <div>
@@ -10,10 +13,10 @@ export default function LatestStartups() {
         <div className="flex-col justify-start items-start md:ml-44 md:self-start">
           <div className="flex flex-col items-center md:items-start">
             <div className="text-neutral-800 text-sm md:text-base font-normal tracking-[3.5px] md:tracking-[5.60px] font-condensed ps-1">
-              LANDA HOLDING
+              {t('LANDA HOLDING')}
             </div>
             <div className="text-primary text-4xl md:text-[44px] font-normal font-condensed tracking-[3.5px] md:tracking-[5.60px] md:mt-3">
-              LATEST STARTUPS
+              {t('Latest Startups')}
             </div>
           </div>
         </div>

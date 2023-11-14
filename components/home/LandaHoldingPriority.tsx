@@ -2,18 +2,20 @@ import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
 import Image from 'next/image';
 import { cardData1 } from '../../app/[lang]/statics';
+import { useTranslation } from 'app/i18n';
 
-export default function LandaHoldingPriority() {
+export default async function LandaHoldingPriority() {
+  const { t } = await useTranslation('fa', 'translation');
 
   return (
     <div className="w-full xl:h-[613px] py-10 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
       <div className="ml-5 xl:ml-40 lg:self-start flex flex-col items-center">
         <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
-          Landa Holding
+          {t('LANDA HOLDING')}
           <br />
         </span>
         <span className="text-5xl font-normal tracking-widest text-black font-condensed ">
-          Priorities
+          {t('Priorities')}
         </span>
       </div>
       <div>
@@ -21,7 +23,7 @@ export default function LandaHoldingPriority() {
           {cardData1.map((data, index) => (
             <LandaHoldingPriorityCard
               key={index}
-              title={data.title}
+              title={t(data.title)}
               image={data.image}
             />
           ))}

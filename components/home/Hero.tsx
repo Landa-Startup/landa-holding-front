@@ -13,6 +13,7 @@ export default function Hero({
   backgroundImage,
   leftImage,
   showButton,
+  landa,
 }: {
   showLanda: boolean;
   titles: string[] | string;
@@ -21,6 +22,7 @@ export default function Hero({
   backgroundImage: string;
   leftImage: string;
   showButton?: boolean;
+  landa: string;
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState('');
@@ -75,7 +77,7 @@ export default function Hero({
             showLanda ? 'block' : 'hidden'
           } text-center text-white text-3xl md:text-4xl md:tracking-[12.6px] font-barlow font-bold tracking-[7px]`}
         >
-          Landa Holding
+          {landa}
         </div>
         <div
           className={`${

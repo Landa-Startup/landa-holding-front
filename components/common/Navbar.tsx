@@ -4,26 +4,21 @@ import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
 import IconDown from '../icons/IconDown';
 
-export default function Navbar({ children }: { children: React.ReactNode }) {
+export default function Navbar({
+  children,
+  forms_navbar,
+  menuItems,
+  submenuItems,
+}: {
+  children: React.ReactNode;
+  forms_navbar: string;
+  menuItems: { label: string; href: string }[];
+  submenuItems: { label: string; href: string }[];
+}) {
   const drawerRef = useRef<HTMLInputElement>(null);
   const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
-  const menuItems = [
-    { label: 'HOME', href: '/' },
-    { label: 'ABOUT US', href: '/about' },
-    // { label: 'ACCELERATION', href: '/acceleration' },
-    { label: 'CONTACT US', href: '/contact' },
-    { label: 'OUR TEAM', href: '/our-team' },
-  ];
-  const submenuItems = [
-    { label: 'INVESTOR CENTER', href: '/investor-registration' },
-    { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
-    { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
-    { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-    { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'acceleration', href: '/acceleration' },
-  ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
     if (!drawerRef.current) {
@@ -94,7 +89,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     className="text-2xl hover:white hover:bg-white"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    FORMS
+                    {forms_navbar}
                   </summary>
                   <ul
                     className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
@@ -125,7 +120,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="absolute h-full p-4 text-xl menu w-80 bg-[#F8F5F0] text-black top-[72px] space-y-5">
+        <ul className="absolute h-full p-4 text-xl menu w-80 bg-[#F8F5F0] text-black top-[72px] space-y-5 md:hidden">
           {menuItems.map((item) => (
             <li
               className="first:text-primary font-condensed font-bold"
@@ -156,7 +151,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </ul>
           </li>
         </ul>
-        <div className="bg-[#222] flex justify-between items-center absolute bottom-0 h-10 w-80 px-10">
+        <div className="bg-[#222] flex justify-between items-center absolute bottom-0 h-10 w-80 px-10 md:hidden">
           <Link
             href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
             target="_blank"
