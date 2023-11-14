@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { items } from '../../app/[lang]/statics'
+import Button from '../common/Button';
 
 
 export default function HomeOurTeam() {
@@ -41,9 +42,14 @@ export default function HomeOurTeam() {
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
       <Link href={'/our-team'}>
-        <button className="justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
-          View More
-        </button>
+        <Button
+          text='View More'
+          type='button'
+          size='visit'
+          addedClass='justify-items-center mx-auto md:mt-8 flex px-10 py-2 font-barlow'
+          bgColor="Primary"
+          goto=''
+        />
       </Link>{' '}
     </div>
   );

@@ -72,6 +72,13 @@ interface JobFormData {
   cvFile?: File | '';
 }
 
+interface LandaGeneFormData {
+  name: string;
+  phone: string;
+  email: string;
+  company: string;
+}
+
 // Define an interface for startups form data
 interface StartupsFormData {
   firstName: string;
@@ -312,6 +319,7 @@ export {
   CardsList,
   ImagesInterface,
   WorkFieldsInterface,
+  LandaGeneFormData,
   SportsInterface,
   AboutUsDataInterface,
   StartUpsInterface,

@@ -6,6 +6,7 @@ import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import { FormData } from 'app/types/global';
 import { RegisterationFormData } from 'app/initials/initObjects';
+import Button from '../common/Button';
 
 export default function RegisterForm() {
 
@@ -103,9 +104,14 @@ export default function RegisterForm() {
           />
         </div>
         <div className="">
-          <button className="ml-auto btn btn-accent" type="submit">
-            Register
-          </button>
+            <Button
+              text='Register'
+              type='submit'
+              size=''
+              addedClass='ml-auto btn btn-accent'
+              bgColor="Primary"
+              goto=''
+            />
         </div>
       </form>
     </div>

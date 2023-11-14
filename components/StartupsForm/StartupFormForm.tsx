@@ -13,10 +13,33 @@ import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
+import Select from '../common/form/Select';
+import Button from '../common/Button';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
 export default function StartupFormForm() {
+
+  enum Type {
+    IDEA = 'IDEA',
+    MVP = 'MVP',
+    TRIAL = 'TRIAL',
+    FisrtSale = 'FisrtSale', // Typo: Should be "FirstSale"
+    SaleDevelopment = 'SaleDevelopment',
+  }
+
+  const Types = [
+    Type.IDEA,
+    Type.MVP,
+    Type.TRIAL,
+    Type.FisrtSale,
+    Type.SaleDevelopment
+  ]
+
+  const typesData = Types.map((type: string) => ({
+    value : type,
+    label : type,
+  }))
 
   const {
     register,
@@ -125,6 +148,11 @@ export default function StartupFormForm() {
     }))
     setCountries(countriesData);
   }, []);
+
+  const countriesData = countryList.map((country: string) => ({
+    value : country,
+    label : country,
+  }))
 
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
@@ -278,7 +306,7 @@ export default function StartupFormForm() {
           />
 
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-        <div className="col-span-2">
+          <div className="col-span-2">
           <div className="bg-[#222222CC]">
             <p className="text-xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] md:text-3xl lg:w-[450px] xl:w-[650px] lg:text-3xl border-b ">
               Growth and Scale-up
@@ -287,22 +315,29 @@ export default function StartupFormForm() {
           </div>
           </div>
           </div>
-          <label htmlFor="">Select Your Status: </label>
+          <Select
+            register={register}
+            errors={errors}
+            nameInput='statusSelect'
+            label='Select Your Status: '
+            required='Your Status is Required'
+            className='select select-bordered w-full max-w-xs mt-4'
+            labelClass='text-[#6b6b6b] dark:text-current'
+            placeholder='Select Your Status'
+            options={typesData}
+          />
           <br />
-          <select
-            className="select select-bordered w-full max-w-xs mt-4"
-            onChange={handleItemChange}
-          >
-            <option defaultChecked>
-              Select Your Option
-            </option>
-            <option value={'IDEA'}>
-              Idea
-            </option>
-            <option value={'MVP'}>MVP(Minimum Viable Product)</option>
-            <option value={'FisrtSale'}>Fisrt Sale</option>
-            <option value={'SaleDevelopment'}>Sale Development</option>
-          </select>
+          <Select
+            register={register}
+            errors={errors}
+            nameInput='countrySelect'
+            label='Select a country: '
+            required='Your Country is Required'
+            className='select select-bordered w-full max-w-xs mt-4'
+            labelClass='text-[#6b6b6b] dark:text-current'
+            placeholder='Select a Country'
+            options={countriesData}
+          />
           {/* idea section */}
           {(() => {
             if (selectedRadio == 'IDEA') {
@@ -362,13 +397,15 @@ export default function StartupFormForm() {
             }
           })()}
           <div className="text-start mt-10 ml-1">
-            <button
+            <Button
+              text={Send ? 'Submitting ....' : 'Submit'}
+              type='submit'
+              size=''
+              addedClass='mt-3 btn btn-wide text-white dark:text-current'
+              bgColor="Primary"
+              goto=''
               disabled={Boolean(!selectedRadio)}
-              type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
-            >
-              {Send ? 'Submiting ....' : 'Submit'}
-            </button>
+            />
           </div>
           <NotificationSendForm
             submitting={isSubmitting}

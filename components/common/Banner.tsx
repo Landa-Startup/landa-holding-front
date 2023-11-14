@@ -8,14 +8,14 @@ export default function Banner({
   title: string;
 }) {
   return (
-    <div className="relative">
+    <div className="relative h-screen md:h-auto snap-start">
       <div
         style={{
           backgroundImage: `url(${image})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className="h-[250px] lg:h-[512px] absolute inset-0"
+        className="h-full lg:h-[512px] absolute inset-0"
       ></div>
 
       <div className="h-[250px] lg:h-[512px] justify-center lg:justify-start flex items-stretch relative ">

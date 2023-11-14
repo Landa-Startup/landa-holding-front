@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Button from '@/components/common/Button';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -24,7 +25,8 @@ export default function Login() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Log In</button>
+      <Button text="Log In" type='button' size={''} addedClass='' bgColor="Primary" goto={"handleLogin"}/>
+      {/* <button onClick={handleLogin}>Log In</button> */}
     </div>
   );
 }

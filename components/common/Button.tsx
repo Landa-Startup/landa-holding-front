@@ -1,18 +1,20 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
 
 // Define the ButtonProps type
+// go to prop causes a redirext
 type ButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > & {
-  text: string;
+  text: string | ReactNode;
   size: string;
   type?: 'button' | 'reset' | 'submit';
   addedClass?: string;
   bgColor?: 'Primary' | 'Yellow';
   goto: string;
+  disabled?: boolean;
 };
 
 export default function Button({
@@ -22,6 +24,7 @@ export default function Button({
   addedClass,
   bgColor,
   goto,
+  disabled = false
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
@@ -30,7 +33,9 @@ export default function Button({
 
   return (
     <button
-      onClick={() => router.push(goto || '/')}
+      onClick={() => {
+        goto ? router.push(goto || '/') : ""
+      }}
       className={`btn2 ${
         isVisitSize
           ? 'w-[135px] md:w-[219px] h-[32px] md:h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px]'

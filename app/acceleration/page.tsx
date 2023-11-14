@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default function page() {
+export default function page({ params: { lng }} : { params: { lng: string }} ) {
   return (
     <div>
       <Hero
@@ -25,7 +25,7 @@ export default function page() {
       />
       <div className="relative md:w-[490px] h-[284px] md:hidden mt-6 sm:block hidden ">
         <Image
-          className=" object-cover"
+          className="object-cover"
           src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
           alt="acceleration"
           layout="fill"

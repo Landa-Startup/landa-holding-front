@@ -28,7 +28,7 @@ export default function Select({
       <label htmlFor={nameInput} className={labelClass}>
         {label}
       </label>
-
+      {/* TO DO : select placeholder has a problem */}
       <select
         id={nameInput}
         {...register(nameInput, {

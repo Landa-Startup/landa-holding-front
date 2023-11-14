@@ -12,6 +12,8 @@ export default function Input({
   patternMessage,
   className,
   labelClass,
+  containerClass,
+  inputValue
 }: {
   register: any;
   errors: any;
@@ -24,11 +26,13 @@ export default function Input({
   placeholder:string;
   className:string;
   labelClass:string;
+  containerClass?: string;
+  inputValue?: string;
 }) {
   
   let value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
-    <div>
+    <div className={containerClass}>
       <label htmlFor={nameInput} className={labelClass }>
         {label}
       </label>

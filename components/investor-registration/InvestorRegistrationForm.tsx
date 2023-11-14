@@ -12,6 +12,7 @@ import Input from '../common/form/Input';
 import { initialInvestorRegistrationFormData } from '../../app/initials/initObjects'
 import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
+import Button from '../common/Button';
 
 export default function InvestorRegistrationForm() {
 
@@ -69,6 +70,13 @@ export default function InvestorRegistrationForm() {
     }))
     setCountries(countriesData);
   }, []);
+
+  const countriesData = countryList.map((country: string) => ({
+    value : country,
+    label : country,
+  }))
+
+  console.log(countriesData[0]);
 
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
@@ -198,7 +206,18 @@ export default function InvestorRegistrationForm() {
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
             </div>
-            <div className="col-span-1">
+            <Select
+              register={register}
+              errors={errors}
+              nameInput='countrySelect'
+              label='Select a country:'
+              required=''
+              className='col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]'
+              labelClass='text-[#6b6b6b] dark:text-current'
+              placeholder='Select a Country'
+              options={countriesData}
+            />
+            {/* <div className="col-span-1">
               <label
                 htmlFor="countrySelect"
                 className="text-[#6b6b6b] dark:text-current"
@@ -219,7 +238,7 @@ export default function InvestorRegistrationForm() {
                   </option>
                 ))}
               </select>
-            </div>
+            </div> */}
             {/* <div className="col-span-1
               <Input
                 register={register}
@@ -311,13 +330,15 @@ export default function InvestorRegistrationForm() {
             </div>
           </div>
           <div className="text-center">
-            <button
+            <Button
+              text={send ? 'Submitting ....' : 'Submit'}
+              type='submit'
+              size=''
+              addedClass='mt-3 btn btn-wide text-white dark:text-current'
+              bgColor="Primary"
+              goto=''
               disabled={send}
-              type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
-            >
-              {send ? 'Submitting ....' : 'Submit'}
-            </button>
+            />
           </div>
         </form>
         <NotificationSendForm

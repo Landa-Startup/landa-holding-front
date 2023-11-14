@@ -8,6 +8,7 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import apiClient from '@/utils/api';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import { initialFormData } from 'app/initials/initObjects';
+import Button from '../common/Button';
 
 export default function EntrepreneursForm() {
 
@@ -24,7 +25,7 @@ export default function EntrepreneursForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
   // TODO: change Send to send(start with small letter)
-  const [Send, setSend] = useState(false);
+  const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
 
@@ -165,19 +166,20 @@ export default function EntrepreneursForm() {
             </div>
           </div>
           <div className="text-center">
-            <button
-              type="submit"
-              className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
-              disabled={Send}
-            >
-              {Send ? 'Submitting ....' : 'Submit'}
-            </button>
+            <Button
+            text={send ? 'Submitting ....' : 'Submit'}
+            size=''
+            type='submit'
+            addedClass='mt-3 btn btn-wide btn-neutral bg-primary border-none text-white'
+            bgColor="Primary"
+            goto=''
+            />
           </div>
         </form>
         <NotificationSendForm
           submitting={isSubmitting}
           success={isSuccess}
-          sendStatus={Send}
+          sendStatus={send}
           show={showNotification}
         />
       </div>

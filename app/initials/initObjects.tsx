@@ -5,6 +5,7 @@ import { InvestorRegistrationFormData } from '../../app/types/global';
 import { Entrepreuneur } from '../../app/types/global';
 import { ContactUSFormData } from '../types/global';
 import { FormData } from '../types/global';
+import { LandaGeneFormData } from '../types/global';
 
 enum Type {
     IDEA = 'IDEA',
@@ -77,6 +78,13 @@ const initialStartupsFormData: StartupsFormData = {
     cvFile: '' as File | '',
   };
 
+  const initialApplicationFormData: LandaGeneFormData = {
+    name: '',
+    phone: '',
+    email: '',
+    company: '',
+  };
+
   const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
     firstName: '',
     lastName: '',
@@ -119,5 +127,6 @@ const initialStartupsFormData: StartupsFormData = {
     initialInvestorRegistrationFormData,
     initialFormData,
     ContactFormData,
-    RegisterationFormData
+    RegisterationFormData,
+    initialApplicationFormData
   }

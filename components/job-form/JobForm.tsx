@@ -2,11 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
+import UploadInput from '../common/UploadInput';
 import { JobFormData } from '../../app/types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import { initialJobFormData } from '../../app/initials/initObjects'
+import Button from '../common/Button';
 
 export default function JobForm() {
 
@@ -183,32 +185,18 @@ export default function JobForm() {
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
-                <div className="col-span-1">
-                  <label htmlFor="cvFileInput">CV File:</label>
-                  <input
-                    type="file"
-                    id="cvFileInput"
-                    className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
-                    {...register('cvFile', {
-                      required: 'CV File is Required',
-                    })}
-                    onChange={handleCvFileChange} // must use onChange event handler after register
-                  />
-                  {errors['cvFile'] && (
-                    <span className="mt-4 text-sm text-yellow-500">
-                      {errors['cvFile'].message?.toString()}
-                    </span>
-                  )}
-                </div>
+                <UploadInput title='CV File:' />
               </div>
               <div className="text-center">
-                <button
-                  type="submit"
-                  className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] dark:hover:bg-[#21282f] dark:bg-[#2b333d] text-white dark:text-current"
+                <Button
+                  text={send ? 'Submitting ....' : 'Submit'}
+                  type='submit'
+                  size=''
+                  addedClass='mt-3 btn btn-wide text-white dark:text-current'
+                  bgColor="Primary"
+                  goto=''
                   disabled={send}
-                >
-                  {send ? 'Submitting ....' : 'Submit'}
-                </button>
+                />
               </div>
             </form>
             <NotificationSendForm

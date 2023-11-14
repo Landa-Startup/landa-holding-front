@@ -3,6 +3,7 @@ import React from 'react';
 import Lines from '../icons/LandaHoldingBlack/Lines';
 import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
 import UlList from '../List/UlList';
+import Button from '../common/Button';
 
 export default function LandaHoldingBlack() {
   return (
@@ -20,8 +21,8 @@ export default function LandaHoldingBlack() {
             </span>
           </div>
         </div>
-        #TODO: move to lang files
-        #TODO: make a component
+        {/* #TODO: move to lang files
+        #TODO: make a component */}
         {/* <div className="w-[320px] md:w-[434px]">
           <ul className="text-black text-[14px] font-normal leading-6 list-disc pl-4 font-barlow space-y-2 ml-0">
             <li className="leading-7 md:leading-10">
