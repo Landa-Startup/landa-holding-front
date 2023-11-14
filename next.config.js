@@ -9,7 +9,7 @@ const nextConfig = {
       'res.cloudinary.com',
       'panel-back.landaholding.com',
       'panel.landaholding.com',
-      'landaholding.com'
+      'landaholding.com',
     ],
   },
 };
