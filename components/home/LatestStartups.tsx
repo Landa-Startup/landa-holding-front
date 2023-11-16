@@ -5,15 +5,15 @@ export default function LatestStartups() {
   const cardData = [
     {
       image: '/static/images/Home/Startups/Frame 38190.png',
-      title: 'LANDA TRIP',
+      title: 'LANDA Gene',
       description:
-        'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
+        'Landa trip is an innovative startup company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
       link: 'https://landatrip.com/',
     },
 
     {
       image: '/static/images/Home/Startups/unnamed 2.png',
-      title: 'DIACO',
+      title: 'LANDA Handicraft',
       description:
         'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
       link: 'https://irdiaco.ca/',
