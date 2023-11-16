@@ -12,6 +12,8 @@ import Input from './Input';
 import TextArea from '../TextArea';
 import Button from '../Button';
 
+import { submitContactForm } from 'pages/api/contact-us';
+
 export default function ContactUsForm() {
 
 
@@ -31,6 +33,10 @@ export default function ContactUsForm() {
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
 
+  const [formData, setFormData] = useState<ContactUSFormData>(
+    ContactFormData
+  );
+
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
@@ -43,36 +49,43 @@ export default function ContactUsForm() {
   }, []);
 
   const onSubmit = async (formData: ContactUSFormData) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
-    try {
-      const response = await apiClient.post(
-        'contactUs-form',
-        JSON.stringify(formData),
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+  
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    const res = submitContactForm(formData, csrfToken).then((response) => {
+      console.log(response);
+
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
-      }, 10000);
       reset(ContactFormData); // Reset the form after successful submission
-      console.log('Form data sent successfully!');
-    } catch (error) {
+      setFormData(ContactFormData);
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds
+    }).catch((error) => {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      console.error('Error sending form data:', error);
-      const timeout = setTimeout(() => {
+      reset(ContactFormData);
+      setFormData(ContactFormData);
+  
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    })
   };
 
   return (

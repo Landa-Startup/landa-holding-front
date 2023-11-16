@@ -1,4 +1,5 @@
 import React from 'react';
+import UploadInput from './UploadInput';
 
 export default function YesRadioButton({
   title,
@@ -54,13 +55,9 @@ export default function YesRadioButton({
 
         {/* Conditional file input */}
         {selectedRadio === 'true' && (
-          <div className="flex justify-center">
-            <input
-              type="file"
-              required
-              className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
-              {...register(fileName, { required: 'this file is requied!' })}
-              onChange={handleChangeFile} // Use onChange event handler after register
+          <div className="flex my-4 justify-center">
+            <UploadInput
+              title=''
             />
             {errors[fileName] && (
               <span className="mt-4 text-sm text-yellow-500">

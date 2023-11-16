@@ -10,6 +10,7 @@ import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
+import { handleRadioChange } from '@/utils/functions';
 
 export default function StartupFormSaleDevelopment({
   register,
@@ -27,26 +28,9 @@ export default function StartupFormSaleDevelopment({
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
-  const handleRadioPitchChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioPitch(event.target.value);
-  };
-
   const [selectedRadioBusiness, setSelectedRadioBusiness] = useState('');
 
-  const handleRadioBusinessChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioBusiness(event.target.value);
-  };
   const [selectedRadioFinancial, setSelectedRadioFinancial] = useState('');
-
-  const handleRadioFinancialChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioFinancial(event.target.value);
-  };
 
   return (
     <>
@@ -57,7 +41,7 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="pitch-deck"
-          handleRadioChange={handleRadioPitchChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, "pitch", setSelectedRadioPitch)}}
           selectedRadio={selectedRadioPitch}
           handleChangeFile={handlePitchDeckFileChange}
           fileName='pitchDeckFile'
@@ -68,7 +52,7 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="business-plan"
-          handleRadioChange={handleRadioBusinessChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, "business", setSelectedRadioBusiness)}}
           selectedRadio={selectedRadioBusiness}
           handleChangeFile={handleBusinessPlanFileChange}
           fileName='businessPlanFile'
@@ -130,7 +114,7 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="financial-plan"
-          handleRadioChange={handleRadioFinancialChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, "financial", setSelectedRadioFinancial)}}
           selectedRadio={selectedRadioFinancial}
           handleChangeFile={handleFinancialFileChange}
           fileName='financialFile'
@@ -141,8 +125,8 @@ export default function StartupFormSaleDevelopment({
             if (Boolean(selectedRadioFinancial) === false) {
               return (
                 <div>
-                        <StartupFormTargetMarket register={register} errors={errors}/>
-                    <StartupFormProperty register={register} errors={errors}/>
+                  <StartupFormTargetMarket register={register} errors={errors}/>
+                  <StartupFormProperty register={register} errors={errors}/>
                 </div>
               );
             }else{
@@ -152,17 +136,4 @@ export default function StartupFormSaleDevelopment({
 
     </>
   );
-}
-
-{
-  /* <TextArea
-            title="Explain your idea in 5 lines?*"
-            register={register}
-            errors={errors}
-            placeholder="Description"
-            nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />*/
 }

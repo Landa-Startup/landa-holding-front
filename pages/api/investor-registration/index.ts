@@ -1,49 +1,34 @@
-// Import PrismaClient from your Prisma generated client file
-import { NextApiRequest, NextApiResponse } from 'next';
-import prisma from '@/lib/prisma';
+import { InvestorRegistrationFormData } from '../../../app/types/global';
+import { initialInvestorRegistrationFormData } from '../../../app/initials/initObjects'
+import apiClient from '@/utils/api';
+import { UseFormReset } from 'react-hook-form';
+import exp from 'constants';
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  birthDate: Date;
-  email: string;
-  countryOfResidence: string;
-  provinceOfResidence: string;
-  companyName: string;
-  interests: string;
-  preferredAreas: string;
-  howDidYouKnowUs: string;
+const sendFormData = new FormData();
+
+async function submitInvestorRegistrationForm(
+  formData: InvestorRegistrationFormData,
+  csrfToken: string,
+) {
+  try {
+    const response = await apiClient.post(
+      'investor-registration',
+      sendFormData, {
+        headers: {
+          'content-type': 'multipart/form-data',
+          'X-CSRFToken': csrfToken,
+        },
+      }
+    );
+    console.log('Form data sent successfully!');
+
+    return response;
+  } catch (error) {
+    console.error('Error sending form data:', error);
+  }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    try {
-      const formData: FormData = req.body;
-      console.log('Received form data:', formData);
-      formData.birthDate = new Date(formData.birthDate)
-      // Save the form data to the database using Prisma Client
-      const savedFormData = await prisma.investorRegistration.create({ data: {
-        birthDate :formData.birthDate,
-        firstName : formData.firstName,
-        lastName : formData.lastName,
-        email: formData.email,
-        countryOfResidence:formData.countryOfResidence,
-        provinceOfResidence : formData.provinceOfResidence,
-        companyName : formData.companyName,
-        interests : formData.interests,
-        preferredAreas:formData.preferredAreas,
-        howDidYouKnowUs : formData.howDidYouKnowUs,
 
-      }});
-
-      console.log('Saved form data:', savedFormData);
-
-      res.status(200).json({ message: 'Form data received and processed successfully.' });
-    } catch (error) {
-      console.error('Error processing form data:', error);
-      res.status(500).json({ error: 'An error occurred while processing form data.' });
-    }
-  } else {
-    res.status(405).end();
-  }
+export {
+  submitInvestorRegistrationForm
 }

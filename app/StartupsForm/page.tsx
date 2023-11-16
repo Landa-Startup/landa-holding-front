@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function StartupValidationPage() {
   return (
-    <>
+    <div>
       {/* Banner component with an image and title */}
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
@@ -20,6 +20,6 @@ export default function StartupValidationPage() {
 
       {/* Render the StartupFormForm component */}
       <StartupFormForm />
-    </>
+    </div>
   );
 }

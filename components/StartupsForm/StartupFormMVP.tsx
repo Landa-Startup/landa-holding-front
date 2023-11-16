@@ -8,6 +8,7 @@ import NoRadioButton from '../common/NoRadioButton';
 import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
+import { handleRadioChange } from '@/utils/functions';
 
 export default function StartupFormMVP({
   register,
@@ -24,19 +25,7 @@ export default function StartupFormMVP({
 }) {
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
-  const handleRadioPitchChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioPitch(event.target.value);
-  };
-
   const [selectedRadioBusiness, setSelectedRadioBusiness] = useState('');
-
-  const handleRadioBusinessChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioBusiness(event.target.value);
-  };
 
   return (
     <>
@@ -47,7 +36,7 @@ export default function StartupFormMVP({
           errors={errors}
           required="Please choose an option"
           name="pitch-deck"
-          handleRadioChange={handleRadioPitchChange}
+          handleRadioChange={(e: React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioPitch)}}
           selectedRadio={selectedRadioPitch}
           handleChangeFile={handlePitchDeckFileChange}
           fileName="pitchDeckFile"
@@ -58,7 +47,7 @@ export default function StartupFormMVP({
           errors={errors}
           required="Please choose an option"
           name="business-plan"
-          handleRadioChange={handleRadioBusinessChange}
+          handleRadioChange={(e: React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioBusiness)}}
           selectedRadio={selectedRadioBusiness}
           handleChangeFile={handleBusinessPlanFileChange}
           fileName="businessPlanFile"

@@ -15,6 +15,8 @@ import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
 import Select from '../common/form/Select';
 import Button from '../common/Button';
+import { handleFileChange } from '@/utils/functions';
+import { submitStartupsForm } from 'pages/api/startups-form';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -53,14 +55,10 @@ export default function StartupFormForm() {
 
   const [selectedRadio, setSelectedRadio] = useState('');
 
-  // useEffect(() => {
-  //   setSelectedRadio('IDEA');
-  // }, []);
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
-  // TODO: change Send to send(start with small letter)
-  const [Send, setSend] = useState(false);
+
+  const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
 
   const [countries, setCountries] = useState(Array<CountriesDataInterface>);
@@ -78,34 +76,6 @@ export default function StartupFormForm() {
   const [filePost3, setFilePost3] = useState<{ financialFile: File | '' }>({
     financialFile: '',
   });
-
-  const handlePitchDeckFileChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const pitchDeckFile = event.target.files && event.target.files[0];
-    if (event.target.files && event.target.files.length > 0) {
-      setFilePost2({ pitchDeckFile: event.target.files[0] });
-    }
-  };
-
-  const handleBusinessPlanFileChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    if (event.target.files && event.target.files.length > 0) {
-      setFilePost({ businessPlanFile: event.target.files[0] });
-    }
-    // const businessPlanFile = event.target.files && event.target.files[0];
-    // setFilePost({businessPlanFile: event.target.files[0]})
-  };
-
-  const handleFinancialFileChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const financialFile = event.target.files && event.target.files[0];
-    if (event.target.files && event.target.files.length > 0) {
-      setFilePost3({ financialFile: event.target.files[0] });
-    }
-  };
 
   const [formData, setFormData] = useState<StartupsFormData>(
     initialStartupsFormData
@@ -125,35 +95,13 @@ export default function StartupFormForm() {
   }, []);
 
   useEffect(() => {
-    // const apiUrl = 'https://restcountries.com/v3.1/all';
-
-    // fetch(apiUrl)
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     // Process the data and set the countries state after sorting
-    //     const countryData = data.map((country: any) => ({
-    //       value: country.name.common,
-    //       text: country.name.common,
-    //     }));
-    //     countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
-    //     setCountries(countryData);
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error fetching data:', error);
-    //   });
-
     const countriesData = countryList.map((country: string) => ({
       value : country,
       text : country,
     }))
     setCountries(countriesData);
   }, []);
-
-  const countriesData = countryList.map((country: string) => ({
-    value : country,
-    label : country,
-  }))
-
+  
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
 
@@ -164,126 +112,70 @@ export default function StartupFormForm() {
   };
 
   const onSubmit = async (formData: StartupsFormData) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
+  
+    // Create a FormData object for form data.
     const sendFormData = new FormData();
-    // TODO: fix this condition for other field
-    if (filePost.businessPlanFile) {
-      sendFormData.append(
-        'businessPlanFile',
-        filePost.businessPlanFile,
-        filePost.businessPlanFile.name
-      );
+  
+    // Handle conditional file attachments.
+    const filePostMap = {
+      businessPlanFile: filePost.businessPlanFile,
+      pitchDeckFile: filePost2.pitchDeckFile,
+      financialFile: filePost3.financialFile,
+    };
+  
+    for (const [fieldName, file] of Object.entries(filePostMap)) {
+      if (file) {
+        sendFormData.append(fieldName, file, file.name);
+      }
     }
-    if (filePost2.pitchDeckFile) {
-      sendFormData.append(
-        'pitchDeckFile',
-        filePost2.pitchDeckFile,
-        filePost2.pitchDeckFile.name
-      );
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Convert file objects to Blob and append them.
+    if (formData.pitchDeckFile) {
+      sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
     }
-    if (filePost3.financialFile) {
-      sendFormData.append(
-        'financialFile',
-        filePost3.financialFile,
-        filePost3.financialFile.name
-      );
+  
+    if (formData.businessPlanFile) {
+      sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
     }
-    console.log(formData.birthDate);
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('countryOfResidence', formData.countryOfResidence);
-    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('type', formData.type);
-    sendFormData.append('birthDate', String(formData.birthDate));
-    sendFormData.append('ideaExplanation', formData.ideaExplanation);
-    sendFormData.append('getToKnowUs', formData.getToKnowUs);
-    sendFormData.append('pitchDeck', String(formData.pitchDeck));
-    sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
-    sendFormData.append('businessPlan', String(formData.businessPlan));
-    sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
-    sendFormData.append('productName', formData.productName);
-    sendFormData.append('siteAddress', formData.siteAddress);
-    sendFormData.append('customerProblem', formData.customerProblem);
-    sendFormData.append('solution', formData.solution);
-    sendFormData.append('productLevel', formData.productLevel);
-    sendFormData.append('scalable', formData.scalable);
-    sendFormData.append(
-      'monetizationOfYourPlan',
-      formData.monetizationOfYourPlan
-    );
-    sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
-    sendFormData.append(
-      'financialModelFile',
-      formData.financialModelFile as Blob
-    );
-    sendFormData.append(
-      'cooperatedWithInvestors',
-      formData.cooperatedWithInvestors
-    );
-    sendFormData.append('financial', String(formData.financial));
-    sendFormData.append('financialFile', formData.financialFile as Blob);
-    sendFormData.append(
-      'customerCharacteristic',
-      formData.customerCharacteristic
-    );
-    sendFormData.append('currentCustomers', formData.currentCustomers);
-    sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
-    sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
-    sendFormData.append('startupRevenue', formData.startupRevenue);
-    sendFormData.append('monthlyIncome', formData.monthlyIncome);
-    sendFormData.append('currentInterestRate', formData.currentInterestRate);
-    sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
-    sendFormData.append('neededCapital', formData.neededCapital);
-    try {
-      const response = await apiClient.post('startups-form', sendFormData, {
-        headers: {
-          'content-type': 'multipart/form-data',
-          'X-CSRFToken': csrfToken,
-        },
-      });
-
-      //       if (!response.ok) {
-      //         throw new Error('Network response was not ok');
-      //       }
-
+  
+    if (formData.financialModelFile) {
+      sendFormData.append('financialModelFile', formData.financialModelFile as Blob);
+    }
+  
+    // Send the form data to the API.
+    const res = submitStartupsForm(formData, setFormData, csrfToken).then(() => {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset(initialStartupsFormData); // Reset the form after successful submission
-      setFormData(initialStartupsFormData);
-      setSelectedRadio('');
-      console.log('Form data sent successfully!');
-      const timeout = setTimeout(() => {
+      reset(initialStartupsFormData); // Country does not reset
+
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    } catch (error) {
+    }).catch(() => {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      //TODO: remove below code after testing
-      console.error('Error sending form data:', error);
-      reset(initialStartupsFormData); // Reset the form after successful submission
-      setFormData(initialStartupsFormData); // reset states after successful submission
-      setSelectedRadio('');
-      const timeout = setTimeout(() => {
+      reset(initialStartupsFormData);
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    })
   };
 
-  const test = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
-
-  console.log(selectedRadio);
-
   return (
-    <>
-    <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto ">   
+    <div>
+    <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto">   
       <p className="font-serif text-3xl pb-3 pt-0 tracking-wide md:pt-0 md:text-5xl lg:text-6xl lg:pt-10  xl:text-7xl text-white sm:mt-0 ">Startup Validation Form</p>
       <p className="lg:font-serif text-2xl pt-0 pb-10 tracking-wide text-white md:pt-0 md:pb-10 lg:pb-10 ">Your Project</p>
     </div>
@@ -325,20 +217,9 @@ export default function StartupFormForm() {
             labelClass='text-[#6b6b6b] dark:text-current'
             placeholder='Select Your Status'
             options={typesData}
+            handleChange={handleItemChange}
           />
           <br />
-          <Select
-            register={register}
-            errors={errors}
-            nameInput='countrySelect'
-            label='Select a country: '
-            required='Your Country is Required'
-            className='select select-bordered w-full max-w-xs mt-4'
-            labelClass='text-[#6b6b6b] dark:text-current'
-            placeholder='Select a Country'
-            options={countriesData}
-          />
-          {/* idea section */}
           {(() => {
             if (selectedRadio == 'IDEA') {
               return <StartupFormIdea register={register} errors={errors} />;
@@ -347,17 +228,15 @@ export default function StartupFormForm() {
             }
           })()}
 
-          {/* MVP section */}
-
           {(() => {
             if (selectedRadio == 'MVP') {
               return (
                 <StartupFormMVP
                   register={register}
                   errors={errors}
-                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
-                  handlePitchDeckFileChange={handlePitchDeckFileChange}
-                  handleFinancialFileChange={handleFinancialFileChange}
+                  handleBusinessPlanFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost)}}
+                  handlePitchDeckFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost2)}}
+                  handleFinancialFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost3)}}
                 />
               );
             } else {
@@ -371,9 +250,9 @@ export default function StartupFormForm() {
                 <StartupFormFirstSale
                   register={register}
                   errors={errors}
-                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
-                  handlePitchDeckFileChange={handlePitchDeckFileChange}
-                  handleFinancialFileChange={handleFinancialFileChange}
+                  handleBusinessPlanFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost)}}
+                  handlePitchDeckFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost2)}}
+                  handleFinancialFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost3)}}
                 />
               );
             } else {
@@ -387,9 +266,9 @@ export default function StartupFormForm() {
                 <StartupFormSaleDevelopment
                   register={register}
                   errors={errors}
-                  handleBusinessPlanFileChange={handleBusinessPlanFileChange}
-                  handlePitchDeckFileChange={handlePitchDeckFileChange}
-                  handleFinancialFileChange={handleFinancialFileChange}
+                  handleBusinessPlanFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost)}}
+                  handlePitchDeckFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost2)}}
+                  handleFinancialFileChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleFileChange(e, setFilePost3)}}
                 />
               );
             } else {
@@ -398,7 +277,7 @@ export default function StartupFormForm() {
           })()}
           <div className="text-start mt-10 ml-1">
             <Button
-              text={Send ? 'Submitting ....' : 'Submit'}
+              text={send ? 'Submitting ....' : 'Submit'}
               type='submit'
               size=''
               addedClass='mt-3 btn btn-wide text-white dark:text-current'
@@ -410,11 +289,11 @@ export default function StartupFormForm() {
           <NotificationSendForm
             submitting={isSubmitting}
             success={isSuccess}
-            sendStatus={Send}
+            sendStatus={send}
             show={showNotification}
           />
         </form>
       </div>
-    </>
+    </div>
   );
 }

@@ -9,6 +9,7 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import Button from '../common/Button';
+import { submitLandaApplicationForm } from 'pages/api/landa-gene';
 
 export default function LandaGene() {
 
@@ -21,6 +22,10 @@ export default function LandaGene() {
     mode: 'onBlur',
     defaultValues: initialApplicationFormData,
   });
+
+  const [formData, setFormData] = useState<LandaGeneFormData>(
+    initialApplicationFormData
+  );
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
@@ -37,47 +42,51 @@ export default function LandaGene() {
     fetchCsrfToken();
   }, []);
 
-  const onSubmit = async (data: LandaGeneFormData) => {
+  const onSubmit = async (formData: LandaGeneFormData) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
-    try {
-      const response = await apiClient.post(
-        'landa-gene-application-form',
-        JSON.stringify(data),
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      // if (!response.ok) {
-      //   console.error('Failed to submit form data.');
-      // }
-      console.log(response.data.message);
+  
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    submitLandaApplicationForm(formData, setFormData, csrfToken).then((response) => {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
-      }, 10000);
-      reset(initialApplicationFormData);
+      reset(initialApplicationFormData); // Country does not reset
+      setFormData(initialApplicationFormData);
       console.log('Form data sent successfully!');
-    } catch (error) {
-      console.log(error);
+  
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds
+      console.log(response);
+    }).catch((error) => {
+      console.error('Error sending form data:', error);
+
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      console.error('Error sending form data:', error);
-      const timeout = setTimeout(() => {
+      reset(initialApplicationFormData);
+      setFormData(initialApplicationFormData);
+  
+      setTimeout(() => {
         setShowNotification(false);
-      }, 10000);
-      timeout;
-    }
-  }
+      }, 10000); // 10 seconds in milliseconds
+    })
+  };
 
   return (
-    <div className='w-full flex flex-col items-start gap-[3px] h-screen overflow-scroll snap-start'>
+    <div className='w-full flex flex-col items-start gap-[3px]'>
         <div className='w-full flex flex-col md:flex-row md:justify-around md:gap-4 items-center p-4'>
           <div className='flex p-0 flex-col items-center gap-[4px]'>
             <div className='flex p-0 items-start relative'>
@@ -105,7 +114,7 @@ export default function LandaGene() {
         </div>
 
         <div className='w-full flex flex-col md:flex-row-reverse md:justify-around items-center p-4'>
-          <div className='flex shrink-0 w-full md:w-1/2 h-auto md:h-[500px] lg:h-[400px] lg:w-1/3 p-4'>
+          <div className='flex shrink-0 w-full md:w-1/2 h-auto md:h-[500px] lg:h-[450px] lg:w-2/5 p-4'>
             {/* <Image
               src="/static/images/gene-1.png"
               alt="gene-1"
@@ -118,7 +127,7 @@ export default function LandaGene() {
             />
           </div>
 
-          <div className='flex w-full md:w-1/2 lg:w-2/3 p-4 items-center shrink-0'>
+          <div className='flex w-full md:w-1/2 lg:w-3/5 p-4 items-center shrink-0'>
             <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal md:leading-[28px] lg:text-[25px] md:mt-2 tracking-[0px] lg:leading-[40px] text-justify'>
               The medical treatment you or your family members receive may be altered based on the
               results of genetic testing, which searches for alterations in your DNA known as mutations or
@@ -133,8 +142,8 @@ export default function LandaGene() {
           </div>
         </div>
 
-        <div className='w-full flex flex-col md:flex-row md:justify-around items-center p-4'>
-          <div className='flex shrink-0 w-full md:w-1/2 h-auto md:h-[450px] lg:h-[400px] lg:w-2/5 p-4'>
+        <div className='w-full flex flex-col md:flex-row md:justify-between items-center p-4'>
+          <div className='flex shrink-0 w-full md:w-1/2 h-auto md:h-[350px] lg:h-[370px] lg:w-1/3 p-4'>
             {/* <Image
               src="/static/images/gene-1.png"
               alt="gene-1"
@@ -147,8 +156,8 @@ export default function LandaGene() {
             />
           </div>
 
-          <div className='flex w-full md:w-3/5 p-4 items-center shrink-0'>
-            <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal lg:text-[25px] md:leading-[45px] tracking-[0px] text-justify'>
+          <div className='flex w-full md:w-1/2 lg:w-2/3 p-4 items-center shrink-0'>
+            <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal md:leading-[28px] lg:text-[25px] md:mt-2 tracking-[0px] lg:leading-[50px] text-justify'>
               The monitoring of DNA mutations and alterations through genetic testing has several
               beneficial consequences for public health and disease prevention. Cancer risk due to inherited
               mutations can be identified, for instance, by means of genetic testing. Various samples of blood and

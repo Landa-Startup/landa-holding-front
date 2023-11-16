@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 
+// TO DO : mobile design of file input should change
+
 export default function UploadInput({ title }: { title: string }) {
   return (
-    <div className="flex-col justify-center items-center gap-2.5 inline-flex">
+    <div className="flex-col justify-center items-center gap-2.5 inline-flex max-w-full">
       {/* Label for the upload input */}
       <div className="text-neutral-800 text-[15px] font-normal">{title}</div>
 

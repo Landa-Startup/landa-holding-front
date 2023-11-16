@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className='h-screen md:h-auto snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scroll-smooth'>
+    <div>
       <Banner
         image="/static/images/gene.jpg"
         title="LANDA GENE"

@@ -4,7 +4,7 @@ import { JobFormData } from '../../app/types/global';
 import { InvestorRegistrationFormData } from '../../app/types/global';
 import { Entrepreuneur } from '../../app/types/global';
 import { ContactUSFormData } from '../types/global';
-import { FormData } from '../types/global';
+import { FormData } from 'app/types/global';
 import { LandaGeneFormData } from '../types/global';
 
 enum Type {

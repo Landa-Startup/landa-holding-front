@@ -9,6 +9,8 @@ import apiClient from '@/utils/api';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import { initialFormData } from 'app/initials/initObjects';
 import Button from '../common/Button';
+import { submitEntrepreneurForm } from 'pages/api/entrepreneurs';
+import { error } from 'console';
 
 export default function EntrepreneursForm() {
 
@@ -29,6 +31,10 @@ export default function EntrepreneursForm() {
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
 
+  const [formData, setFormData] = useState<Entrepreuneur>(
+    initialFormData
+  );
+
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
@@ -38,40 +44,44 @@ export default function EntrepreneursForm() {
     fetchCsrfToken();
   }, []);
 
-  const onSubmit = async (data: Entrepreuneur) => {
+  const onSubmit = async (formData: Entrepreuneur) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
-    try {
-      const response = await apiClient.post(
-        'entrepreuneur-form',
-        JSON.stringify(data),
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      // if (!response.ok) {
-      //   console.error('Failed to submit form data.');
-      // }
+  
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    const res = submitEntrepreneurForm(formData, csrfToken).then((response) => {
+      console.log(response);
+
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      const timeout = setTimeout(() => {
+      reset(initialFormData); // country does not reset
+      setFormData(initialFormData);
+      setTimeout(() => {
         setShowNotification(false);
-      }, 10000);
-      reset(initialFormData); // Reset the form after successful submission
-      console.log('Form data sent successfully!');
-    } catch (error) {
+      }, 10000); // 10 seconds in milliseconds
+    }).catch((error) => {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      console.error('Error sending form data:', error);
-      const timeout = setTimeout(() => {
+      reset(initialFormData);
+      setFormData(initialFormData);
+  
+      setTimeout(() => {
         setShowNotification(false);
-      }, 10000); // 10 seconds in milliseconds;
-    }
+      }, 10000); // 10 seconds in milliseconds
+    })
   };
 
   const test = [

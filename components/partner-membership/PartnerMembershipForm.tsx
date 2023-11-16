@@ -13,6 +13,7 @@ import { initialPartnerMembershipFormData } from '../../app/initials/initObjects
 import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
 import Button from '../common/Button';
+import { submitPartnerMembershipForm } from 'pages/api/partner-membership';
 
 // import { PartnerMembership } from '@prisma/client';
 
@@ -52,22 +53,6 @@ export default function PartnerMembershipForm() {
   }, []);
 
   useEffect(() => {
-    // const apiUrl = 'https://restcountries.com/v3.1/all';
-
-    // fetch(apiUrl)
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     // Process the data and set the countries state after sorting
-    //     const countryData = data.map((country: any) => ({
-    //       value: country.name.common,
-    //       text: country.name.common,
-    //     }));
-    //     countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
-    //     setCountries(countryData);
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error fetching data:', error);
-    //   });
 
     const countriesData = countryList.map((country: string) => ({
       value : country,
@@ -91,56 +76,44 @@ export default function PartnerMembershipForm() {
   };
 
   const onSubmit = async (formData: PartnerMembershipFormData) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
+  
+    // Create a FormData object for form data.
     const sendFormData = new FormData();
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('countryOfResidence', selectedCountry);
-    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('birthDate', String(formData.birthDate));
-    sendFormData.append('companyName', formData.companyName);
-    sendFormData.append('investmentCeiling', formData.investmentCeiling);
-    sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
-    sendFormData.append('preferredAreas', formData.preferredAreas);
-    console.log("send form data:", sendFormData)
-
-    try {
-      const response = await apiClient.post(
-        'partner-membership',
-        sendFormData,
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    const res = await submitPartnerMembershipForm(formData, setFormData, csrfToken).then((response) => {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset(initialPartnerMembershipFormData);
-      setFormData(initialPartnerMembershipFormData);
-      const timeout = setTimeout(() => {
+      reset(initialPartnerMembershipFormData); // Country does not reset
+
+      setTimeout(() => {
         setShowNotification(false);
-      }, 10000);
-    } catch (error) {
+      }, 10000); // 10 seconds in milliseconds
+    }).catch((error) => {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      console.error('Error sending form data:', error);
       reset(initialPartnerMembershipFormData);
-      setFormData(initialPartnerMembershipFormData);
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    })
+
   };
 
   return (
-    <>
+    <div>
       <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <PartnerMembershipTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -219,48 +192,9 @@ export default function PartnerMembershipForm() {
               labelClass='text-[#6b6b6b] dark:text-current'
               placeholder='Select a Country'
               options={countriesData}
+              handleChange={handleCountryChange}
+              selected={selectedCountry}
             />
-
-            {/* <div className="col-span-1">
-              <label
-                htmlFor="countrySelect"
-                className="text-[#6b6b6b] dark:text-current"
-              >
-                Select a country:
-              </label>
-              <select
-                id="countrySelect"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                // name='countryOfResidence'
-                value={selectedCountry}
-                onChange={handleCountryChange}
-              >
-                <option value="" selected>
-                  Select a country
-                </option>
-                {countries.map((country: any, index: number) => (
-                  <option key={index} value={country.text}>
-                    {country.text}
-                  </option>
-                ))}
-              </select>
-            </div> */}
-
-            {/* <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="countryOfResidence"
-                type="text"
-                label="Country of Residence"
-                required="Country of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Country of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div> */}
 
             <div className="col-span-1">
               <Input
@@ -342,6 +276,6 @@ export default function PartnerMembershipForm() {
           show={showNotification}
         />
       </div>
-    </>
+    </div>
   );
 }

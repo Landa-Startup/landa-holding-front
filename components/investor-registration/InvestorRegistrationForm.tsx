@@ -13,6 +13,7 @@ import { initialInvestorRegistrationFormData } from '../../app/initials/initObje
 import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
 import Button from '../common/Button';
+import { submitInvestorRegistrationForm } from 'pages/api/investor-registration';
 
 export default function InvestorRegistrationForm() {
 
@@ -90,51 +91,43 @@ export default function InvestorRegistrationForm() {
   console.log(selectedCountry);
 
   const onSubmit = async (formData: InvestorRegistrationFormData) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
+  
+    // Create a FormData object for form data.
     const sendFormData = new FormData();
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    submitInvestorRegistrationForm(formData, csrfToken).then((response) => {
+      console.log(response);
 
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('countryOfResidence', selectedCountry);
-    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('birthDate', String(formData.birthDate));
-    sendFormData.append('companyName', formData.companyName);
-    sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
-    sendFormData.append('preferredAreas', formData.preferredAreas);
-    sendFormData.append('interests', formData.interests);
-
-    try {
-      const response = await apiClient.post(
-        'investor-registration',
-        sendFormData,
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset(initialInvestorRegistrationFormData);
+      reset(initialInvestorRegistrationFormData); // Country does not reset
       setFormData(initialInvestorRegistrationFormData);
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         setShowNotification(false);
-      }, 10000);
-    } catch (error) {
+      }, 10000); // 10 seconds in milliseconds
+    }).catch((error) => {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      console.error('Error sending form data:', error);
       reset(initialInvestorRegistrationFormData);
       setFormData(initialInvestorRegistrationFormData);
-      const timeout = setTimeout(() => {
+  
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    })
   };
 
   return (
@@ -211,11 +204,13 @@ export default function InvestorRegistrationForm() {
               errors={errors}
               nameInput='countrySelect'
               label='Select a country:'
-              required=''
+              required='Your Country is Required'
               className='col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]'
               labelClass='text-[#6b6b6b] dark:text-current'
               placeholder='Select a Country'
               options={countriesData}
+              handleChange={handleCountryChange}
+              selected={selectedCountry}
             />
             {/* <div className="col-span-1">
               <label
