@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        gilda: ['Gilda Display', 'serif'],
-        barlow: ['Barlow', 'serif'],
-        condensed: ['Condensed', 'serif'],
+        gilda: ['Gilda Display', 'Alexandria'],
+        barlow: ['Barlow', 'IranYekan'],
+        condensed: ['Condensed', 'Markazi'],
       },
       colors: {
         primary: '#AA8453',

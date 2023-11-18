@@ -24,8 +24,35 @@
 
 @font-face {
   font-family: 'Condensed';
-  src: url('../../public/static/fonts/BarlowCondensed-Regular.woff2') format('woff2'),
-    url('../../public/static/fonts/BarlowCondensed-Regular.ttf') format('truetype');
+  src: url('../../public/static/fonts/BarlowCondensed-Regular.woff2')
+      format('woff2'),
+    url('../../public/static/fonts/BarlowCondensed-Regular.ttf')
+      format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../../public/static/fonts/Alexandria-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IranYekan';
+  src: url('../../public/static/fonts/Iranyekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Markazi';
+  src: url('../../public/static/fonts/MarkaziText-Regular.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
