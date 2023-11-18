@@ -36,7 +36,6 @@ export default async function RootLayout({
 }) {
   const { t } = await useTranslation(lng, 'home');
 
-
   return (
     <html lang={lng} dir={dir(lng)}>
       <head>
