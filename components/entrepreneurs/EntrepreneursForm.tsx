@@ -11,6 +11,7 @@ import { initialFormData } from 'app/initials/initObjects';
 import Button from '../common/Button';
 import { submitEntrepreneurForm } from 'pages/api/entrepreneurs';
 import { error } from 'console';
+import { useSubmit } from 'providers/StateProvider';
 
 export default function EntrepreneursForm() {
 
@@ -24,12 +25,20 @@ export default function EntrepreneursForm() {
     defaultValues: initialFormData,
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
-  // TODO: change Send to send(start with small letter)
-  const [send, setSend] = useState(false);
-  const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState('');
+  const {
+    isSubmitting, 
+    isSuccess, 
+    send, 
+    showNotification, 
+    csrfToken, 
+    handleTokenChange, 
+    handleSubmitingChange,
+    handleSuccessChange,
+    handleSendChange,
+    handleNotifChange,
+    handleChangeSuccess,
+    handleChangeReject
+  } = useSubmit();
 
   const [formData, setFormData] = useState<Entrepreuneur>(
     initialFormData
@@ -38,7 +47,7 @@ export default function EntrepreneursForm() {
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
-      setCsrfToken(token);
+      handleTokenChange(token);
     }
 
     fetchCsrfToken();
@@ -46,8 +55,8 @@ export default function EntrepreneursForm() {
 
   const onSubmit = async (formData: Entrepreuneur) => {
     // Set loading and sending states.
-    setIsSubmitting(true);
-    setSend(true);
+    handleSubmitingChange(true);
+    handleSendChange(true);
   
     // Create a FormData object for form data.
     const sendFormData = new FormData();
@@ -63,32 +72,24 @@ export default function EntrepreneursForm() {
     const res = submitEntrepreneurForm(formData, csrfToken).then((response) => {
       console.log(response);
 
-      setIsSuccess(true);
-      setShowNotification(true);
-      setSend(false);
+      console.log(isSubmitting);
+
+      handleChangeSuccess();
       reset(initialFormData); // country does not reset
       setFormData(initialFormData);
       setTimeout(() => {
-        setShowNotification(false);
+        handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
     }).catch((error) => {
-      setShowNotification(true);
-      setSend(false);
-      setIsSuccess(false);
+      handleChangeReject();
       reset(initialFormData);
       setFormData(initialFormData);
   
       setTimeout(() => {
-        setShowNotification(false);
+        handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
     })
   };
-
-  const test = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
 
   return (
     <>
