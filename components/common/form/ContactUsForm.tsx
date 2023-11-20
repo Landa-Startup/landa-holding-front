@@ -102,7 +102,7 @@ export default function ContactUsForm() {
             type='text'
             label=''
             required='Your Name is required.'
-            patternValue="/^[a-z ,.'-]+$/i"
+            patternValue=""
             patternMessage='Enter a valid Name.'
             placeholder='Your Name*'
             className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.name ? 'border-red-500' : ''}`}
@@ -117,7 +117,7 @@ export default function ContactUsForm() {
             type='email'
             label=''
             required='Your Email is required.'
-            patternValue="/^[a-z ,.'-]+$/i"
+            patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             patternMessage='Enter a valid email address.'
             placeholder='Your Email*'
             className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.email ? 'border-red-500' : ''}`}
@@ -132,7 +132,7 @@ export default function ContactUsForm() {
             type='text'
             label=''
             required='Your Number is required.'
-            patternValue="/^[a-z ,.'-]+$/i"
+            patternValue=""
             patternMessage='Enter a valid number.'
             placeholder='Your Number*'
             className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.number ? 'border-red-500' : ''}`}
@@ -147,7 +147,7 @@ export default function ContactUsForm() {
             type='text'
             label=''
             required='Your Subject is required.'
-            patternValue="/^[a-z ,.'-]+$/i"
+            patternValue=""
             patternMessage='Enter a valid Subject.'
             placeholder='Your Subject*'
             className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.subject ? 'border-red-500' : ''}`}
@@ -168,8 +168,7 @@ export default function ContactUsForm() {
             cols={20}
           />
         </div>
-        <div className="text-center">
-          <Button
+        <Button
             text={send ? 'Submitting ....' : 'Submit'}
             size=''
             type='submit'
@@ -177,7 +176,6 @@ export default function ContactUsForm() {
             bgColor="Primary"
             goto=''
           />
-        </div>
       </form>
       <NotificationSendForm
         submitting={isSubmitting}

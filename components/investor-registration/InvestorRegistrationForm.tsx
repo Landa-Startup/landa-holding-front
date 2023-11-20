@@ -212,43 +212,6 @@ export default function InvestorRegistrationForm() {
               handleChange={handleCountryChange}
               selected={selectedCountry}
             />
-            {/* <div className="col-span-1">
-              <label
-                htmlFor="countrySelect"
-                className="text-[#6b6b6b] dark:text-current"
-              >
-                Select a country:
-              </label>
-              <select
-                id="countrySelect"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                // name='countryOfResidence'
-                value={selectedCountry}
-                onChange={handleCountryChange}
-              >
-                <option value="" selected>Select a country</option>
-                {countries.map((country: any, index: number) => (
-                  <option key={index} value={country.text}>
-                    {country.text}
-                  </option>
-                ))}
-              </select>
-            </div> */}
-            {/* <div className="col-span-1
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="countryOfResidence"
-                type="text"
-                label="Country of Residence"
-                required="Country of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Country of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div> */}
 
             <div className="col-span-1">
               <Input
