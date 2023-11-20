@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Button from '../common/Button';
 
@@ -89,13 +88,8 @@ export default function Hero({
           {currentTitle}
         </div>
 
-<<<<<<< HEAD
-        <div className="text-center font-montserrat text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
-          {subTitle}
-=======
         <div className="text-center font-mono text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
           {subTitle ? subTitle : ""}
->>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
         </div>
         {showButton ? (
           <Button

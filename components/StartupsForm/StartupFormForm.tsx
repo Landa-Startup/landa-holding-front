@@ -10,17 +10,13 @@ import StartupFormFirstSale from './StartupFormFirstSale';
 import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
-import apiClient from '@/utils/api';
-<<<<<<< HEAD
-import { useRouter,useSearchParams } from 'next/navigation';
-=======
 import { countryList } from '../../app/[lang]/statics';
 import { CountriesDataInterface } from '../../app/types/global'
 import Select from '../common/form/Select';
 import Button from '../common/Button';
 import { handleFileChange } from '@/utils/functions';
 import { submitStartupsForm } from 'pages/api/startups-form';
->>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
+import { useSearchParams } from 'next/navigation';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -56,7 +52,6 @@ export default function StartupFormForm() {
     mode: 'onBlur',
     defaultValues: initialStartupsFormData,
   });
-  const router = useRouter();
   
   const searchParams:any|null= useSearchParams()
   const query = searchParams.get('type') 
@@ -156,75 +151,13 @@ export default function StartupFormForm() {
     if (formData.businessPlanFile) {
       sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
     }
-<<<<<<< HEAD
-    console.log(formData.birthDate);
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('countryOfResidence', formData.countryOfResidence);
-    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('type', selectedRadio);
-    sendFormData.append('birthDate', String(formData.birthDate));
-    sendFormData.append('ideaExplanation', formData.ideaExplanation);
-    sendFormData.append('getToKnowUs', formData.getToKnowUs);
-    sendFormData.append('pitchDeck', String(formData.pitchDeck));
-    sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
-    sendFormData.append('businessPlan', String(formData.businessPlan));
-    sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
-    sendFormData.append('productName', formData.productName);
-    sendFormData.append('siteAddress', formData.siteAddress);
-    sendFormData.append('customerProblem', formData.customerProblem);
-    sendFormData.append('solution', formData.solution);
-    sendFormData.append('productLevel', formData.productLevel);
-    sendFormData.append('scalable', formData.scalable);
-    sendFormData.append(
-      'monetizationOfYourPlan',
-      formData.monetizationOfYourPlan
-    );
-    sendFormData.append('structureOfYourSales', formData.structureOfYourSales);
-    sendFormData.append(
-      'financialModelFile',
-      formData.financialModelFile as Blob
-    );
-    sendFormData.append(
-      'cooperatedWithInvestors',
-      formData.cooperatedWithInvestors
-    );
-    sendFormData.append('financial', String(formData.financial));
-    sendFormData.append('financialFile', formData.financialFile as Blob);
-    sendFormData.append(
-      'customerCharacteristic',
-      formData.customerCharacteristic
-    );
-    sendFormData.append('currentCustomers', formData.currentCustomers);
-    sendFormData.append('estimatedMarketSize', formData.estimatedMarketSize);
-    sendFormData.append('totalTamSamSom', formData.totalTamSamSom);
-    sendFormData.append('startupRevenue', formData.startupRevenue);
-    sendFormData.append('monthlyIncome', formData.monthlyIncome);
-    sendFormData.append('currentInterestRate', formData.currentInterestRate);
-    sendFormData.append('currentRaisedFunding', formData.currentRaisedFunding);
-    sendFormData.append('neededCapital', formData.neededCapital);
-    try {
-      const response = await apiClient.post('startups-form', sendFormData, {
-        headers: {
-          'content-type': 'multipart/form-data',
-          'X-CSRFToken': csrfToken,
-        },
-      });
-
-      //       if (!response.ok) {
-      //         throw new Error('Network response was not ok');
-      //       }
-
-=======
   
     if (formData.financialModelFile) {
       sendFormData.append('financialModelFile', formData.financialModelFile as Blob);
     }
   
     // Send the form data to the API.
-    const res = submitStartupsForm(formData, setFormData, csrfToken).then(() => {
->>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
+    submitStartupsForm(formData, setFormData, csrfToken).then(() => {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
@@ -244,17 +177,6 @@ export default function StartupFormForm() {
     })
   };
 
-<<<<<<< HEAD
-  const test = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
-
-  // console.log(selectedRadio);
-
-=======
->>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
   return (
     <div>
     <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto">   
@@ -302,25 +224,6 @@ export default function StartupFormForm() {
             handleChange={handleItemChange}
           />
           <br />
-<<<<<<< HEAD
-          <select
-            className="select select-bordered w-full max-w-xs mt-4"
-            onChange={handleItemChange}
-            value={selectedRadio}
-          >
-            <option defaultChecked>
-              Select Your Option
-            </option>
-            <option value={'IDEA'}>
-              Idea
-            </option>
-            <option value={'MVP'}>MVP(Minimum Viable Product)</option>
-            <option value={'FisrtSale'}>Fisrt Sale</option>
-            <option value={'SaleDevelopment'}>Sale Development</option>
-          </select>
-          {/* idea section */}
-=======
->>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
           {(() => {
             if (selectedRadio == 'IDEA') {
               return <StartupFormIdea register={register} errors={errors} />;
@@ -385,15 +288,7 @@ export default function StartupFormForm() {
               bgColor="Primary"
               goto=''
               disabled={Boolean(!selectedRadio)}
-<<<<<<< HEAD
-              type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
-            >
-              {Send ? 'Submiting ....' : 'Submit'}
-            </button>
-=======
             />
->>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
           </div>
           <NotificationSendForm
             submitting={isSubmitting}

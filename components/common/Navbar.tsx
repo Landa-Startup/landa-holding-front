@@ -1,12 +1,11 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-
+import "./Navbar.css";
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
-  const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const menuItems = [
@@ -21,12 +20,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
     { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-<<<<<<< HEAD
     { label: 'Work With Us', href: '/job-form' },
-=======
-    { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'acceleration', href: '/acceleration' },
->>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -220,16 +214,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </Link>
         </div>
       </div>
-      <style jsx>{`
-        .children {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-        }
-      `}</style>
+
     </div>
   );
 }
