@@ -10,6 +10,8 @@ import NotificationSendForm from '../../common/form/NotificationSendForm';
 import Image from 'next/image';
 import Telephone from '@/components/icons/auth/Login/Telephone';
 import Landa from '@/components/icons/auth/Login/Landa';
+import Input from '@/components/common/form/Input';
+import Button from '@/components/common/Button';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -106,13 +108,21 @@ export default function LoginPage() {
               <input type="checkbox" className="checkbox border border-white" />
             </label>
           </div>
-          <button
+          <Button
+            text={send ? 'Submitting ....' : 'Submit'}
+            size=''
+            type='submit'
+            addedClass='mt-3 btn btn-wide btn-neutral bg-primary rounded-sm border-none text-white self-center'
+            bgColor="Primary"
+            goto={""}
+          />
+          {/* <button
             type="submit"
             className="mt-3 btn btn-wide btn-neutral bg-primary rounded-sm border-none text-white self-center"
             disabled={send}
           >
             {send ? 'Submitting ....' : 'Submit'}
-          </button>
+          </button> */}
         </form>
         <div className="flex gap-2 items-center absolute left-32 bottom-11">
           <Telephone />

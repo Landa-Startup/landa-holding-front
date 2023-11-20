@@ -4,6 +4,8 @@ import './globals.css';
 import Navbar from '@/components/common/Navbar';
 import ScrollUpButton from '@/components/common/ScrollUpButton';
 
+import { dir } from 'i18next'
+
 export default function RootLayout({
   children,
 }: {

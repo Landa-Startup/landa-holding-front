@@ -1,11 +1,6 @@
 import React from 'react';
 import Button from '../common/Button';
-
-interface HomeCardsLeftProps {
-  text: string;
-  addedClass?: string;
-  link: string;
-}
+import { HomeCardsLeftProps } from 'app/types/global';
 
 export default function HomeCardsLeft({
   text,

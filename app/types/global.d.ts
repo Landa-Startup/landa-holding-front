@@ -72,6 +72,13 @@ interface JobFormData {
   cvFile?: File | '';
 }
 
+interface LandaGeneFormData {
+  name: string;
+  phone: string;
+  email: string;
+  company: string;
+}
+
 // Define an interface for startups form data
 interface StartupsFormData {
   firstName: string;
@@ -161,10 +168,165 @@ interface MagazineData {
   file: string;
 }
 
+interface FormData {
+  email: string;
+  password: string;
+}
+
+interface imageList {
+  src: string,
+  alt: string
+}
+
+interface personArrayInterface {
+  image: string,
+  position: string,
+  name: string,
+  linkedIn: string,
+  category: string
+}
+
+interface CompaniesArrayInterface {
+  name: string,
+  logo: string,
+  link: string
+}
+
+
+interface CompanySectionsInterface {
+  title: string,
+  text: string,
+  reverse: boolean,
+  show: boolean,
+  index: number,
+  link: string,
+  addedClass: string,
+  images: imageList[]
+}
+
+interface WorkFieldsInterface {
+  title: string,
+  image: string
+}
+
+
+interface ServicesInterface {
+  title: string,
+  image: string
+}
+
+
+interface SportsInterface {
+  title: string,
+  image: string,
+  type: string,
+  date: string,
+}
+
+interface StartUpsInterface {
+  image: string,
+  title: string,
+  description: string,
+  link: string,
+}
+
+interface LogosInterface {
+  number: number,
+  alt: string
+}
+
+interface HomeCardsProps {
+  titles: string;
+  text: string;
+  images: Array<{ src: string; alt: string }>;
+  reverse?: boolean;
+  addedClass?: string;
+  link: string;
+}
+
+interface HomeCardsLeftProps {
+  text: string;
+  addedClass?: string;
+  link: string;
+}
+
+interface ImagesInterface {
+  src: string
+}
+
+
+interface CoursesInterface {
+  title: string,
+  image: string,
+  date: string,
+  active: boolean
+}
+
+interface LinksInterface {
+  linkedin: string,
+  whatsapp: string,
+  email: string,
+  website: string,
+  instagram: string,
+}
+
+interface AboutUsDataInterface {
+  image: string,
+  name: string,
+  position: string,
+  links: LinksInterface
+}
+
+interface AboutUsCardProps  {
+  title: string;
+  text: string;
+  image: string;
+  reverse: boolean;
+  description: string;
+  link: string;
+};
+
+interface PreparationListInterface {
+  value: string,
+  label: string
+}
+
+interface CountriesDataInterface {
+  value: string,
+  text: string
+}
+
+interface CardsList {
+  title: string,
+  text: string,
+  image: string,
+  reverse: boolean,
+  link: string
+}
+
 
 export {
   ContactUSFormData,
   Type,
+  FormData,
+  HomeCardsProps,
+  personArrayInterface,
+  CompaniesArrayInterface,
+  CompanySectionsInterface,
+  CountriesDataInterface,
+  ServicesInterface,
+  AboutUsCardProps,
+  CardsList,
+  ImagesInterface,
+  WorkFieldsInterface,
+  LandaGeneFormData,
+  SportsInterface,
+  AboutUsDataInterface,
+  StartUpsInterface,
+  CoursesInterface,
+  LogosInterface,
+  PreparationListInterface,
+  HomeCardsLeftProps,
   BusinessPartnerShipFormData,
   StartupsFormData,
   PartnerMembershipFormData,

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
+<<<<<<< HEAD
 import PartnersStartupCard from './PartnersStartupCard';
 
 export default function Partners() {
@@ -137,6 +138,12 @@ export default function Partners() {
   const handleMouseUp = () => {
     setDragging(false);
   };
+=======
+import { logosLeft } from '../../app/[lang]/statics'
+import { logosRight } from '../../app/[lang]/statics'
+
+export default function Partners() {
+>>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
 
   return (
     <div className="flex flex-col items-center my-6 gap-12">

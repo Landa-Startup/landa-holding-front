@@ -1,7 +1,7 @@
 import Button from '@/components/common/Button';
 import Banner from '@/components/common/Banner';
 import AccelerationServices from '@/components/acceleration/AccelerationServices';
-import Hero from '@/components/acceleration/HeroAcceleration';
+import Hero from '@/components/home/Hero';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import PrimaryDot from '@/components/icons/acceleration/PrimaryDot';
@@ -13,18 +13,19 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default function page() {
+export default function page({ params: { lng }} : { params: { lng: string }} ) {
   return (
     <div>
       <Hero
         showLanda
-        backgroundImage="/static/images/acceleration/banner.png"
-        leftImage="/static/images/Landa.svg"
+        titles="Acceleration"
+        backgroundImage="banner.png"
+        leftImage="Landa.svg"
         showButton={true}
       />
       <div className="relative md:w-[490px] h-[284px] md:hidden mt-6 sm:block hidden ">
         <Image
-          className=" object-cover"
+          className="object-cover"
           src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
           alt="acceleration"
           layout="fill"
@@ -130,7 +131,7 @@ export default function page() {
           </div>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-2 md:px-8 lg:px-8 xl:px-8">
-          <div className="flex gap-2 mt-6 md:mt-[77px] items-center md:pl-48 lg:pl-20 xl:pl-0">
+          <div className="flex gap-2 mt-6 md:mt-[77px] items-center ">
             <PrimaryDot />
             <div className="flex">
               <div className="flex flex-col md:flex-row ml-0">

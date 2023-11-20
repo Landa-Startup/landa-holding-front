@@ -1,15 +1,7 @@
 import React from 'react';
 import HomeCardsLeft from './HomeCardsLeft';
 import HomeCardsRight from './HomeCardsRight';
-
-interface HomeCardsProps {
-  titles: string;
-  text: string;
-  images: Array<{ src: string; alt: string }>;
-  reverse?: boolean;
-  addedClass?: string;
-  link: string;
-}
+import { HomeCardsProps } from 'app/types/global';
 
 export default function HomeCards({
   titles,

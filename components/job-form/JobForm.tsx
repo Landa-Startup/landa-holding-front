@@ -2,19 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
+import UploadInput from '../common/UploadInput';
 import { JobFormData } from '../../app/types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
+import { initialJobFormData } from '../../app/initials/initObjects'
+import Button from '../common/Button';
+import { submitApplyJobForm } from 'pages/api/jobs';
 
 export default function JobForm() {
-  const initialJobFormData: JobFormData = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    cvFile: '' as File | '',
-  };
 
   const {
     register,
@@ -60,53 +57,45 @@ export default function JobForm() {
   };
 
   const onSubmit = async (formData: JobFormData) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
+  
+    // Create a FormData object for form data.
     const sendFormData = new FormData();
-
-    if (cvFileState.cvFile) {
-      sendFormData.append(
-        'cvFile',
-        cvFileState.cvFile,
-        cvFileState.cvFile.name
-      );
-    }
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('phoneNumber', formData.phoneNumber);
-
-    try {
-      console.log('new form data ', formData);
-
-      const response = await apiClient.post('apply-job-form', sendFormData, {
-        headers: {
-          'content-type': 'multipart/form-data',
-          'X-CSRFToken': csrfToken,
-        },
-      });
-
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    submitApplyJobForm(formData, setFormData, csrfToken).then((response) => {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset(initialJobFormData); // Reset the form after successful submission
+      reset(initialJobFormData); // Country does not reset
+
       setFormData(initialJobFormData);
-      console.log('Form data sent successfully!');
-      const timeout = setTimeout(() => {
+
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    } catch (error) {
+
+      console.log(response);
+    }).catch((error) => {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      //TODO: remove below code after testing
-      console.error('Error sending form data:', error);
-      reset(initialJobFormData); // Reset the form after successful submission
-      setFormData(initialJobFormData); // reset states after successful submission
-      const timeout = setTimeout(() => {
+      
+      setFormData(initialJobFormData);
+
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    })
   };
 
   return (
@@ -192,32 +181,18 @@ export default function JobForm() {
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
-                <div className="col-span-1">
-                  <label htmlFor="cvFileInput">CV File:</label>
-                  <input
-                    type="file"
-                    id="cvFileInput"
-                    className="bg-[#f9f6f3] mt-3 p-5 w-full rounded-lg"
-                    {...register('cvFile', {
-                      required: 'CV File is Required',
-                    })}
-                    onChange={handleCvFileChange} // must use onChange event handler after register
-                  />
-                  {errors['cvFile'] && (
-                    <span className="mt-4 text-sm text-yellow-500">
-                      {errors['cvFile'].message?.toString()}
-                    </span>
-                  )}
-                </div>
+                <UploadInput title='CV File:' />
               </div>
               <div className="text-center">
-                <button
-                  type="submit"
-                  className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
+                <Button
+                  text={send ? 'Submitting ....' : 'Submit'}
+                  type='submit'
+                  size=''
+                  addedClass='mt-3 btn btn-wide text-white dark:text-current'
+                  bgColor="Primary"
+                  goto=''
                   disabled={send}
-                >
-                  {send ? 'Submitting ....' : 'Submit'}
-                </button>
+                />
               </div>
             </form>
             <NotificationSendForm

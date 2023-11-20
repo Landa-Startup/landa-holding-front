@@ -10,6 +10,8 @@ export default function Select({
   className,
   labelClass,
   placeholder,
+  handleChange,
+  selected
 }: {
   register: any;
   errors: any;
@@ -20,6 +22,8 @@ export default function Select({
   className: string;
   labelClass: string;
   placeholder: string;
+  handleChange?: any;
+  selected?: string;
 }) {
   return (
     <>
@@ -28,16 +32,17 @@ export default function Select({
       <label htmlFor={nameInput} className={labelClass}>
         {label}
       </label>
-
+      {/* TO DO : select placeholder has a problem */}
       <select
         id={nameInput}
         {...register(nameInput, {
           required: required,
         })}
         className={className + (errors[nameInput] ? ' border-red-500' : '')}
+        onChange={handleChange}
       >
         <option disabled selected value={""}>
-          {placeholder}
+          {selected ? selected : placeholder}
         </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>

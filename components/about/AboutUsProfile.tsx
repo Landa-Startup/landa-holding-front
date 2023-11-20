@@ -1,46 +1,9 @@
 import React from 'react';
 // import AboutUsProfileCard from './AboutUsProfileCard';
 import AboutusPersonalTabs from './AboutusPersonalTabs';
+import { cardsData } from '../../app/[lang]/statics';
 
 export default function AboutUsProfile() {
-  const cardsData = [
-    {
-      image: '/static/images/our-team/Personals/a1.png',
-      name: 'Rasoul Moradimehr',
-      position: ' CEO',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
-        whatsapp: 'wa.me/+989134233863',
-        email: 'mailto:rasoulmoradimehr@gmail.com',
-        website: 'https://moradimehr.com/',
-        instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
-      },
-    },
-    {
-      image: '/static/images/about/mjafari.jpg',
-      name: 'MORTEZA JAFARI',
-      position: 'International Relations',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
-        whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
-        email: 'mailto:morteza_jafari49@yahoo.com',
-        website: 'https://mortezajafari.ca/',
-        instagram: 'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==',
-      },
-    },
-    {
-      image: '/static/images/our-team/Personals/a2.png',
-      name: 'Hadi Hasanpour',
-      position: 'COTB',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
-        whatsapp: 'https://wa.me/+12892693933',
-        email: 'mailto:hadihasanpor@gmail.com',
-        website: 'https://www.hadihasanpour.ca/',
-        instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
-      },
-    },
-  ];
 
   return (
     <div className="bg-[#FAFAFA]">

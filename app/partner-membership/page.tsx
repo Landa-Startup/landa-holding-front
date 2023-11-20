@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function AffiliateFormPage() {
   return (
-    <>
+    <div>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
         title="BUSINESS PARTNERS"
       />
       <PartnerMembershipForm />
-    </>
+    </div>
   );
 }

@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function InvestorRegistrationPage() {
   return (
-    <>
+    <div>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
         title="INVESTOR CENTER"
       />
       <InvestorRegistrationForm />
-    </>
+    </div>
   );
 }

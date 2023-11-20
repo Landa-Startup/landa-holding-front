@@ -1,65 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { items } from '../../app/[lang]/statics'
+import Button from '../common/Button';
+
+
 export default function HomeOurTeam() {
-  const items = [
-    {
-      image: '/static/images/our-team/Personals/a3.png',
-      position: 'Secretary',
-      name: 'Lida Parvizi',
-      linkedIn: '',
-      category: 'secretary',
-    },
-    {
-      image: '/static/images/our-team/Personals/a6.png',
-      position: 'CTO',
-      name: 'Iman Nasr',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a33.png',
-      position: 'Public Relations Officer',
-      name: 'Gelareh Bahrami',
-      linkedIn: '',
-      category: 'public relations officer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a7.png',
-      position: 'Full stack',
-      name: 'Sajjad Momeni',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a5.png',
-      position: 'Accountant',
-      name: 'Ali Solaimani',
-      linkedIn: '',
-      category: 'accountant',
-    },
-    {
-      image: '/static/images/our-team/Personals/a13.png',
-      position: 'UX/UI Designer',
-      name: 'Ariana Shafie',
-      linkedIn: '',
-      category: 'designer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a9.png',
-      position: 'Digital Marketer',
-      name: 'Ehsan Aliakbari',
-      linkedIn: '',
-      category: 'digital marketer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a21.png',
-      position: 'Graphic Designer',
-      name: 'Hoda Mahdi',
-      linkedIn: '',
-      category: 'designer',
-    },
-  ];
 
   return (
     <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
@@ -96,9 +42,14 @@ export default function HomeOurTeam() {
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
       <Link href={'/our-team'}>
-        <button className="justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
-          View More
-        </button>
+        <Button
+          text='View More'
+          type='button'
+          size='visit'
+          addedClass='justify-items-center mx-auto md:mt-8 flex px-10 py-2 font-barlow'
+          bgColor="Primary"
+          goto=''
+        />
       </Link>{' '}
     </div>
   );

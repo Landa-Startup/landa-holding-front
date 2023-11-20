@@ -9,7 +9,7 @@ import IconLinkedinB from '../icons/IconLinkedinB';
 import IconEmailB from '../icons/IconEmailB';
 export default function ContactUsDescription() {
   return (
-    <div>
+    <div className='snap-start overflow-scroll'>
       <h1 className="text-5xl font-light font-gilda">Landa Holding</h1>
       <p className="my-5 text-base text-justify">
         In Landa academy, individuals will be trained based on their interests

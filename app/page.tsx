@@ -1,18 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Hero from '@/components/home/Hero';
-import LandaHoldingPriority from '@/components/home/LandaHoldingPriority';
-import LatestStartups from '@/components/home/LatestStartups';
-import LandaHoldingBlack from '@/components/home/LandaHoldingBlack';
-import HomeCardsContainer from '@/components/home/HomeCardsContainer';
-import Partners from '@/components/home/Partners';
-import HomeOurTeam from '@/components/home/HomeOurTeam';
-
-export const metadata: Metadata = {
-  title: 'Landa Holding',
-  description:
-    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
-};
+import Link from 'next/link'
+import Hero from '@/components/home/Hero'
+import HomeCardsContainer from '@/components/home/HomeCardsContainer'
+import LandaHoldingBlack from '@/components/home/LandaHoldingBlack'
+import LandaHoldingPriority from '@/components/home/LandaHoldingPriority'
+import HomeOurTeam from '@/components/home/HomeOurTeam'
+import LatestStartups from '@/components/home/LatestStartups'
+import Partners from '@/components/home/Partners'
 
 export default function Page() {
   return (
@@ -20,8 +13,12 @@ export default function Page() {
       {/* Hero section */}
       <Hero
         showLanda
-        titles={['Acceleration', 'Investment', 'Academy']}
-        subTitle='"Feel The Future"'
+        titles={[
+          'Acceleration',
+          'Investment',
+          'Academy',
+        ]}
+        subTitle={'Feel The Future'}
         backgroundImage="Hero.png"
         leftImage="Landa.svg"
         showButton={false}
@@ -35,5 +32,5 @@ export default function Page() {
       <LatestStartups />
       <Partners />
     </div>
-  );
+  )
 }

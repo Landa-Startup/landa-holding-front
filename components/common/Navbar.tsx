@@ -21,7 +21,12 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
     { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
+<<<<<<< HEAD
     { label: 'Work With Us', href: '/job-form' },
+=======
+    { label: 'APPLY JOB', href: '/job-form' },
+    { label: 'acceleration', href: '/acceleration' },
+>>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);

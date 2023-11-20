@@ -1,9 +1,11 @@
 import React from 'react';
 import HomeCards from './HomeCards';
 import Lines from '../icons/Home/Lines';
+import { cardData } from '../../app/[lang]/statics';
 
 export default function HomeCardsContainer() {
   // Define data for the text card containers
+<<<<<<< HEAD
   const cardData = [
     {
       title: 'Investment',
@@ -63,6 +65,8 @@ export default function HomeCardsContainer() {
       ],
     },
   ];
+=======
+>>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
 
   return (
     <div className="relative bg-whiteGold text-black" id="LandaHolding">

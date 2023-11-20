@@ -9,21 +9,13 @@ import TextArea from '../common/TextArea';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import Input from '../common/form/Input';
+import { initialInvestorRegistrationFormData } from '../../app/initials/initObjects'
+import { countryList } from '../../app/[lang]/statics';
+import { CountriesDataInterface } from '../../app/types/global'
+import Button from '../common/Button';
+import { submitInvestorRegistrationForm } from 'pages/api/investor-registration';
 
 export default function InvestorRegistrationForm() {
-  const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
-    firstName: '',
-    lastName: '',
-    birthDate: new Date(),
-    email: '',
-    countryOfResidence: '',
-    provinceOfResidence: '',
-    companyName: '',
-    interests: '',
-    positionInTeam: '',
-    preferredAreas: '',
-    howDidYouKnowUs: '',
-  };
 
   const {
     register,
@@ -40,7 +32,7 @@ export default function InvestorRegistrationForm() {
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState(Array<CountriesDataInterface>);
   const [selectedCountry, setSelectedCountry] = useState('');
 
   const [formData, setFormData] = useState<InvestorRegistrationFormData>(
@@ -56,23 +48,36 @@ export default function InvestorRegistrationForm() {
   }, []);
 
   useEffect(() => {
-    const apiUrl = 'https://restcountries.com/v3.1/all';
+    // const apiUrl = 'https://restcountries.com/v3.1/all';
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        // Process the data and set the countries state after sorting
-        const countryData = data.map((country: any) => ({
-          value: country.name.common,
-          text: country.name.common,
-        }));
-        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
-        setCountries(countryData);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
+    // fetch(apiUrl)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     // Process the data and set the countries state after sorting
+    //     const countryData = data.map((country: any) => ({
+    //       value: country.name.common,
+    //       text: country.name.common,
+    //     }));
+    //     countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
+    //     setCountries(countryData);
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error fetching data:', error);
+    //   });
+
+    const countriesData = countryList.map((country: string) => ({
+      value : country,
+      text : country,
+    }))
+    setCountries(countriesData);
   }, []);
+
+  const countriesData = countryList.map((country: string) => ({
+    value : country,
+    label : country,
+  }))
+
+  console.log(countriesData[0]);
 
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
@@ -86,51 +91,43 @@ export default function InvestorRegistrationForm() {
   console.log(selectedCountry);
 
   const onSubmit = async (formData: InvestorRegistrationFormData) => {
+    // Set loading and sending states.
     setIsSubmitting(true);
     setSend(true);
+  
+    // Create a FormData object for form data.
     const sendFormData = new FormData();
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    submitInvestorRegistrationForm(formData, csrfToken).then((response) => {
+      console.log(response);
 
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('countryOfResidence', selectedCountry);
-    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('birthDate', String(formData.birthDate));
-    sendFormData.append('companyName', formData.companyName);
-    sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
-    sendFormData.append('preferredAreas', formData.preferredAreas);
-    sendFormData.append('interests', formData.interests);
-
-    try {
-      const response = await apiClient.post(
-        'investor-registration',
-        sendFormData,
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      reset(initialInvestorRegistrationFormData);
+      reset(initialInvestorRegistrationFormData); // Country does not reset
       setFormData(initialInvestorRegistrationFormData);
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         setShowNotification(false);
-      }, 10000);
-    } catch (error) {
+      }, 10000); // 10 seconds in milliseconds
+    }).catch((error) => {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      console.error('Error sending form data:', error);
       reset(initialInvestorRegistrationFormData);
       setFormData(initialInvestorRegistrationFormData);
-      const timeout = setTimeout(() => {
+  
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    })
   };
 
   return (
@@ -202,7 +199,20 @@ export default function InvestorRegistrationForm() {
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
             </div>
-            <div className="col-span-1">
+            <Select
+              register={register}
+              errors={errors}
+              nameInput='countrySelect'
+              label='Select a country:'
+              required='Your Country is Required'
+              className='col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]'
+              labelClass='text-[#6b6b6b] dark:text-current'
+              placeholder='Select a Country'
+              options={countriesData}
+              handleChange={handleCountryChange}
+              selected={selectedCountry}
+            />
+            {/* <div className="col-span-1">
               <label
                 htmlFor="countrySelect"
                 className="text-[#6b6b6b] dark:text-current"
@@ -223,7 +233,7 @@ export default function InvestorRegistrationForm() {
                   </option>
                 ))}
               </select>
-            </div>
+            </div> */}
             {/* <div className="col-span-1
               <Input
                 register={register}
@@ -315,13 +325,15 @@ export default function InvestorRegistrationForm() {
             </div>
           </div>
           <div className="text-center">
-            <button
+            <Button
+              text={send ? 'Submitting ....' : 'Submit'}
+              type='submit'
+              size=''
+              addedClass='mt-3 btn btn-wide text-white dark:text-current'
+              bgColor="Primary"
+              goto=''
               disabled={send}
-              type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
-            >
-              {send ? 'Submitting ....' : 'Submit'}
-            </button>
+            />
           </div>
         </form>
         <NotificationSendForm

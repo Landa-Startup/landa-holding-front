@@ -1,7 +1,9 @@
 import React from 'react';
 import LatestStartupsCard from './LatestStartupsCard';
+import { cardData3 } from '../../app/[lang]/statics';
 
 export default function LatestStartups() {
+<<<<<<< HEAD
   const cardData = [
     {
       image: '/static/images/Home/Startups/Frame 38190.png',
@@ -26,6 +28,8 @@ export default function LatestStartups() {
       link: 'https://invigorated-drop-231359.framer.app',
     },
   ];
+=======
+>>>>>>> f4b2d2db2aec1876c912447b78c2b0b8ef877be6
 
   return (
     <div>
@@ -42,7 +46,7 @@ export default function LatestStartups() {
         </div>
         <div className="flex justify-center mt-2 ">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-3 md:gap-10 mt-3 md:mt-10 ">
-            {cardData.map((data, index) => (
+            {cardData3.map((data, index) => (
               <LatestStartupsCard
                 key={index}
                 title={data.title}
