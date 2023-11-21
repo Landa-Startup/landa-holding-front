@@ -7,6 +7,7 @@ import LandaHoldingBlack from '@/components/home/LandaHoldingBlack';
 import HomeCardsContainer from '@/components/home/HomeCardsContainer';
 import Partners from '@/components/home/Partners';
 import HomeOurTeam from '@/components/home/HomeOurTeam';
+import AerialViewBusinessTeam from '@/components/home/BusinessTeam';
 
 export const metadata: Metadata = {
   title: 'Landa Holding',
@@ -33,6 +34,7 @@ export default function Page() {
       <LandaHoldingPriority />
       <HomeOurTeam />
       <LatestStartups />
+      <AerialViewBusinessTeam />
       <Partners />
     </div>
   );
