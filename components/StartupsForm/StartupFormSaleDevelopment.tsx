@@ -1,9 +1,6 @@
 
 import React,{useState} from 'react';
 import Input from '../common/form/Input';
-import { InvestorRegistrationFormData } from 'app/types/global';
-import { useForm } from 'react-hook-form';
-import TextArea from '../common/TextArea';
 import YesRadioButton from '../common/YesRadioButton';
 import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
@@ -41,7 +38,7 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="pitch-deck"
-          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, "pitch", setSelectedRadioPitch)}}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioPitch)}}
           selectedRadio={selectedRadioPitch}
           handleChangeFile={handlePitchDeckFileChange}
           fileName='pitchDeckFile'
@@ -52,7 +49,7 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="business-plan"
-          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, "business", setSelectedRadioBusiness)}}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioBusiness)}}
           selectedRadio={selectedRadioBusiness}
           handleChangeFile={handleBusinessPlanFileChange}
           fileName='businessPlanFile'
@@ -114,7 +111,7 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="financial-plan"
-          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, "financial", setSelectedRadioFinancial)}}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioFinancial)}}
           selectedRadio={selectedRadioFinancial}
           handleChangeFile={handleFinancialFileChange}
           fileName='financialFile'

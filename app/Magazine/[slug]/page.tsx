@@ -24,7 +24,7 @@ export default function Page() {
         {/* <Image src={cardData?.thumbnail} alt='thumbnail'/> */}
         <h1>{cardData?.title}</h1>
         <p>{cardData?.date}</p>
-        <div className='font-barlow text-justify text-[#6B6B6B]' dangerouslySetInnerHTML={{ __html: cardData?.description }} />
+        {/* <div className='font-barlow text-justify text-[#6B6B6B]' dangerouslySetInnerHTML={{ __html: cardData?.description }} /> */}
 
     </div>
   )

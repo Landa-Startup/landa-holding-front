@@ -33,7 +33,8 @@ export default function Button({
   const router = useRouter();
 
   return (
-    <button
+    <Link href={goto}>
+      <button
       onClick={() => {
         goto ? router.push(goto || '/') : ""
       }}
@@ -47,11 +48,7 @@ export default function Button({
       type={type}
       disabled={disabled}
     >
-      <span className="absolute inset-0 bg-black"></span>
-      <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
-        {text}
-      </span>
-      {isVisitSize && (
+        <span className="absolute inset-0 bg-black"></span>
         <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
           {text}
         </span>
