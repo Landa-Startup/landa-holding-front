@@ -131,19 +131,20 @@ export default function page() {
             They are putting down capital, in exchange for a portion of
             ownership in the startup and rights to its potential future profits.
           </p>
-          <div className="relative w-[561px] h-[168px] hidden md:block">
+          <div className="relative w-[330px] md:w-[561px] md:h-[168px] h-[300px]">
             <Image
-              src="/static/images/investment/Incorporation-page-001 1 (1).png"
+              className="object-cover"
+              src="/static/images/investment/Incorporation-page-001 1 (2).png"
               alt="Coin"
               layout="fill"
             />
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <div className="md:w-[575px] h-[230px] relative">
+          <div className="md:w-[575px] h-[230px] relative hidden md:block">
             <Image
               className="object-cover"
-              src="/static/images/investment/Incorporation-page-001 1 (2).png"
+              src="/static/images/investment/Incorporation-page-001 1 (5).png"
               alt="LANDA INVESTMENT"
               layout="fill"
             />
