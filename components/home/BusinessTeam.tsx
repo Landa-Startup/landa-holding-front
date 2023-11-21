@@ -1,9 +1,85 @@
+'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import Chevron from '../common/Chevron';
 import Link from 'next/link';
+import BusinessTeamCard from './BusinessTeamCard';
 
 export default function AerialViewBusinessTeam() {
+  const commentsData = [
+    {
+      name: 'Morteza Jafari',
+      roleInCompany: 'Founder of IRimmigration',
+      role: 'Investor',
+      profileImage: 'b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
+      commentDescription:
+        'It amazes me that Landa Holding offers a specialized environment for teenagers to enhance their knowledge and refine their unique skills. I have rarely seen another company with this feature. Hence, I appreciate their valuable initiative for trying to build a brighter future.',
+      linkedinLink: 'https://www.linkedin.com/in/johndoe',
+      personalWebsite: 'https://www.johndoe.com',
+      email: 'john.doe@example.com',
+    },
+    {
+      name: 'Jane Doe',
+      roleInCompany: 'Product Manager',
+      role: 'Product Lead',
+      profileImage: '/path/to/image.jpg',
+      commentDescription:
+        'It amazes me that Landa Holding offers a specialized environment for teenagers to enhance their knowledge and refine their unique skills. I have rarely seen another company with this feature. Hence, I appreciate their valuable initiative for trying to build a brighter future.',
+      linkedinLink: 'https://www.linkedin.com/in/janedoe',
+      personalWebsite: 'https://www.janedoe.com',
+      email: 'jane.doe@example.com',
+    },
+    {
+      name: 'Bob Smith',
+      roleInCompany: 'UX Designer',
+      role: 'Design Lead',
+      profileImage: '/path/to/image.jpg',
+      commentDescription:
+        'It amazes me that Landa Holding offers a specialized environment for teenagers to enhance their knowledge and refine their unique skills. I have rarely seen another company with this feature. Hence, I appreciate their valuable initiative for trying to build a brighter future.',
+      linkedinLink: 'https://www.linkedin.com/in/bobsmith',
+      personalWebsite: 'https://www.bobsmith.com',
+      email: 'bob.smith@example.com',
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // const startAutoChange = () => {
+  //   const updateIndex = () => {
+  //     setCurrentIndex((prevIndex) =>
+  //       prevIndex < commentsData.length - 1 ? prevIndex + 1 : 0
+  //     );
+
+  //     // Set a timeout for the next update after 5 seconds
+  //     setTimeout(updateIndex, 5000);
+  //   };
+
+  //   // Start the recursive update
+  //   updateIndex();
+  // };
+
+  // // Start auto change when the component mounts
+  // React.useEffect(() => {
+  //   startAutoChange();
+
+  //   // Cleanup (no need for clearInterval in this case)
+  // }, []);
+
+  const handleLeftChevronClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : commentsData.length - 1
+    );
+  };
+
+  const handleRightChevronClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex < commentsData.length - 1 ? prevIndex + 1 : 0
+    );
+  };
+  const handleCommentsNavigationClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div
       style={{
@@ -25,143 +101,37 @@ export default function AerialViewBusinessTeam() {
           </span>
         </div>
       </div>
-      <div className="flex items-center justify-center gap-1">
-        <Chevron direction="left" />
-        <div className="md:w-[750px] p-5 flex flex-col items-center backdrop-blur-2xl w-[360px] md:h-[360px]">
-          <div className="flex md:flex-col md:items-center md:w-full">
-            <div className="relative md:ml-20 md:self-start md:flex-row justify-start items-center gap-[13px] flex flex-col w-[35%]">
-              {/* TODO: image should go to this address: /static/images/home/business-team/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg */}
-              <Image
-                loading="lazy"
-                className="w-14 h-14 md:w-[108px] md:h-[104px] border"
-                src="/static/images/Home/Cooperation-members/b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg"
-                width={500}
-                height={500}
-                alt="Avatar"
-              />
-              <div className="md:hidden w-[170px] h-0 left-[115px] top-[170px] absolute origin-top-left -rotate-90 bg-white border border-white"></div>
-              <div className="hidden md:block w-[230px] h-[1px] left-0 top-[120px] absolute bg-white border border-white"></div>
-              <div className="flex flex-col justify-center md:items-start gap-[3px] text-center items-center ">
-                <div className=" text-white text-base md:text-xl font-medium font-barlow inline-flex md:w-48">
-                  Morteza Jafari
-                </div>
-                <div className="text-white text-xs md:text-base font-normal font-barlow ">
-                  Founder of IRimmigration
-                </div>
-                <div className=" text-white text-xs md:text-[15px] font-normal font-gilda mt-1">
-                  Investor
-                </div>
-                <div className="inline-flex gap-3 mt-2 md:hidden">
-                  <Link
-                    href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
-                    target="_blank"
-                  >
-                    <Image
-                      loading="lazy"
-                      className="w-4 h-4"
-                      src={
-                        '/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'
-                      }
-                      alt="Linkedin"
-                      width={50}
-                      height={50}
-                    />
-                  </Link>
-                  <Link href={'https://mortezajafari.ca/'}
-                    target="_blank">
-                    <Image
-                      loading="lazy"
-                      className="w-4 h-4"
-                      src={
-                        '/static/images/59f5308a62b217b056f54ef59eeb58e2.png'
-                      }
-                      alt="Website"
-                      width={50}
-                      height={50}
-                    />
-                  </Link>
-                  <Link href={'mailto:www.morteza_jafari49@yahoo.com'}>
-                    <Image
-                      loading="lazy"
-                      className="w-4 h-4"
-                      src={
-                        '/static/images/e0058a18e539cf27599b846c81814c35.png'
-                      }
-                      alt="Email"
-                      width={50}
-                      height={50}
-                    />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="p-2.5 pt-4 ml-3 justify-center items-center gap-3 inline-flex w-2/3 md:w-full">
-              <div className="text-stone-100 text-xs md:text-xl font-medium leading-[20px] md:leading-[28px] tracking-wider font-barlow md:w-[722px]">
-                It amazes me that Landa Holding offers a specialized environment
-                for teenagers to enhance their knowledge and refine their unique
-                skills. I have rarely seen another company with this feature. So
-                I appreciate their valuable initiative for trying to build a
-                brighter future.
-              </div>
-              <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
-                <Link
-                  href={'https://www.linkedin.com/in/morteza-jafari-5b40b63a'}
-                  target="_blank"
-                >
-                  <Image
-                    loading="lazy"
-                    className="w-7 h-w-7"
-                    src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
-                    alt="Linkedin"
-                    width={50}
-                    height={50}
-                  />
-                </Link>
-                <Link href={'https://mortezajafari.ca/'}
-                  target="_blank">
-                  <Image
-                    loading="lazy"
-                    className="w-7 h-w-7"
-                    src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
-                    alt="Website"
-                    width={50}
-                    height={50}
-                  />
-                </Link>
-                <Link href={'mailto:www.morteza_jafari49@yahoo.com'}>
-                  <Image
-                    loading="lazy"
-                    className="w-7 h-w-7"
-                    src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
-                    alt="Linkedin"
-                    width={50}
-                    height={50}
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
+      <div className="flex items-center justify-center md:gap-1">
+        <Chevron direction="left" onClick={handleLeftChevronClick} />
+        <div className="w-[340px] md:w-[750px] p-5 flex flex-col items-center justify-between backdrop-blur-2xl md:h-[360px]">
+          <BusinessTeamCard
+            name={commentsData[currentIndex].name}
+            roleInCompany={commentsData[currentIndex].roleInCompany}
+            role={commentsData[currentIndex].role}
+            profileImage={commentsData[currentIndex].profileImage}
+            linkedinLink={commentsData[currentIndex].linkedinLink}
+            email={commentsData[currentIndex].email}
+            personalWebsite={commentsData[currentIndex].personalWebsite}
+            commentDescription={commentsData[currentIndex].commentDescription}
+          />
+
           <div className="justify-start items-start gap-[12px] md:gap-[19px] inline-flex mt-5">
-            <button
-              aria-label="Comments Navigation"
-              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] bg-primary rounded-full"
-            />
-            <button
-              aria-label="Comments Navigation"
-              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white"
-            />
-            <button
-              aria-label="Comments Navigation"
-              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white"
-            />
-            <button
-              aria-label="Comments Navigation"
-              className="w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full border border-white"
-            />
+            {commentsData.map((_, index) => (
+              <button
+                key={index}
+                aria-label={`Comments Navigation ${index + 1}`}
+                className={`w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full ${
+                  currentIndex === index
+                    ? 'bg-primary transition-all duration-300'
+                    : 'border border-white transition-all duration-300'
+                }`}
+                onClick={() => handleCommentsNavigationClick(index)}
+              />
+            ))}
           </div>
           <div className="w-[283.01px] h-[0px]border border-white"></div>
         </div>
-        <Chevron direction="right" />
+        <Chevron direction="right" onClick={handleRightChevronClick} />
       </div>
     </div>
   );
