@@ -1,10 +1,9 @@
 import React from 'react';
 // import AboutUsProfileCard from './AboutUsProfileCard';
 import AboutusPersonalTabs from './AboutusPersonalTabs';
-import { cardsData } from '../../app/[lang]/statics';
+import { cardsData } from '../../app/[lng]/statics';
 
 export default function AboutUsProfile() {
-
   return (
     <div className="bg-[#FAFAFA]">
       <div className="flex flex-col ml-8 lg:ml-64 mx-8 py-5 text-black justify-items-center">

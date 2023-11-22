@@ -8,14 +8,13 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
-import { initialPartnerMembershipFormData } from '../../app/initials/initObjects'
-import { countryList } from '../../app/[lang]/statics';
-import { CountriesDataInterface } from '../../app/types/global'
+import { initialPartnerMembershipFormData } from '../../app/initials/initObjects';
+import { countryList } from '../../app/[lng]/statics';
+import { CountriesDataInterface } from '../../app/types/global';
 
 // import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm() {
-
   const {
     register,
     handleSubmit,
@@ -41,8 +40,10 @@ export default function PartnerMembershipForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      console.log("csrfToken", process.env.NEXT_PUBLIC_DJANGO_HOST_URL)
-      const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`);
+      console.log('csrfToken', process.env.NEXT_PUBLIC_DJANGO_HOST_URL);
+      const token = await GetCsrfToken(
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+      );
       setCsrfToken(token);
     }
 
@@ -68,9 +69,9 @@ export default function PartnerMembershipForm() {
     //   });
 
     const countriesData = countryList.map((country: string) => ({
-      value : country,
-      text : country,
-    }))
+      value: country,
+      text: country,
+    }));
     setCountries(countriesData);
   }, []);
 
@@ -97,7 +98,7 @@ export default function PartnerMembershipForm() {
     sendFormData.append('investmentCeiling', formData.investmentCeiling);
     sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
     sendFormData.append('preferredAreas', formData.preferredAreas);
-    console.log("send form data:", sendFormData)
+    console.log('send form data:', sendFormData);
 
     try {
       const response = await apiClient.post(

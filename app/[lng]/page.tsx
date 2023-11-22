@@ -17,18 +17,18 @@ export const metadata: Metadata = {
 };
 
 // Define data for the text card containers
-interface GenerateMetadataProps {
-  params: {
-    lng: string;
-  };
-}
+// interface GenerateMetadataProps {
+//   params: {
+//     lng: string;
+//   };
+// }
 
-export async function GenerateMetadata({
-  params: { lng },
-}: GenerateMetadataProps) {
-  const { t } = await useTranslation(lng as string, 'home');
-  return { title: t('h1') };
-}
+// export async function GenerateMetadata({
+//   params: { lng },
+// }: GenerateMetadataProps) {
+//   const { t } = await useTranslation(lng as string, 'home');
+//   return { title: t('h1') };
+// }
 
 export default async function Page({
   params: { lng },

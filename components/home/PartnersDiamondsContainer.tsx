@@ -1,9 +1,8 @@
 import React from 'react';
 import PartnersDiamond from './PartnersDiamond';
-import { partners1, partners2, partners3 } from '../../app/[lang]/statics';
+import { partners1, partners2, partners3 } from '../../app/[lng]/statics';
 
 export default function PartnersDiamondsContainer() {
-
   return (
     <div className="flex flex-col">
       <div className="flex flex-wrap pt-48 mx-auto gap-14">

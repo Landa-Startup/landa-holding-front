@@ -5,19 +5,18 @@ import { InvestorRegistrationFormData } from 'app/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../common/TextArea';
 import RadioButtonGroup from '../common/RadioButtonGroup';
-import { preparationStatsOption } from '../../app/[lang]/statics'
+import { preparationStatsOption } from '../../app/[lng]/statics';
 
 export default function StartupFormSolutions({
   register,
   errors,
-}:{
-  register:any;
-  errors:any;
-}){
-
+}: {
+  register: any;
+  errors: any;
+}) {
   return (
     <>
-<div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2">
           <div className="bg-[#222222CC]">
             <p className="text-3xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] lg:w-[450px] xl:w-[650px] border-b ">

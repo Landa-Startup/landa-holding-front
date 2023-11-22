@@ -9,12 +9,11 @@ import TextArea from '../common/TextArea';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import Input from '../common/form/Input';
-import { initialInvestorRegistrationFormData } from '../../app/initials/initObjects'
-import { countryList } from '../../app/[lang]/statics';
-import { CountriesDataInterface } from '../../app/types/global'
+import { initialInvestorRegistrationFormData } from '../../app/initials/initObjects';
+import { countryList } from '../../app/[lng]/statics';
+import { CountriesDataInterface } from '../../app/types/global';
 
 export default function InvestorRegistrationForm() {
-
   const {
     register,
     handleSubmit,
@@ -39,7 +38,9 @@ export default function InvestorRegistrationForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`);
+      const token = await GetCsrfToken(
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+      );
       setCsrfToken(token);
     }
     fetchCsrfToken();
@@ -64,9 +65,9 @@ export default function InvestorRegistrationForm() {
     //   });
 
     const countriesData = countryList.map((country: string) => ({
-      value : country,
-      text : country,
-    }))
+      value: country,
+      text: country,
+    }));
     setCountries(countriesData);
   }, []);
 
@@ -212,7 +213,9 @@ export default function InvestorRegistrationForm() {
                 value={selectedCountry}
                 onChange={handleCountryChange}
               >
-                <option value="" selected>Select a country</option>
+                <option value="" selected>
+                  Select a country
+                </option>
                 {countries.map((country: any, index: number) => (
                   <option key={index} value={country.text}>
                     {country.text}

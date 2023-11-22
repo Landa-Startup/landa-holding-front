@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
-import { logosLeft } from '../../app/[lang]/statics';
-import { logosRight } from '../../app/[lang]/statics';
+import { logosLeft } from '../../app/[lng]/statics';
+import { logosRight } from '../../app/[lng]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function Partners() {

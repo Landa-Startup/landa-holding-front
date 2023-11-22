@@ -1,10 +1,9 @@
 import React from 'react';
 import LandaMagazineCard from '../magazine/LandaMagazineCard';
 import Button from '../common/Button';
-import { cardData2 } from '../../app/[lang]/statics';
+import { cardData2 } from '../../app/[lng]/statics';
 
 export default function LandaMagazine() {
-
   return (
     // TODO: create commponent for show repeated parts. because codes are almost same and just written few times
     <div className="hidden md:block">
@@ -57,7 +56,12 @@ export default function LandaMagazine() {
               </svg>
             </button>
           </div>
-          <Button text="Read More" size="visit" addedClass='self-center' goto='/'/>
+          <Button
+            text="Read More"
+            size="visit"
+            addedClass="self-center"
+            goto="/"
+          />
         </div>
       </div>
     </div>

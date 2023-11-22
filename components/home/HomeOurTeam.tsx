@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { items } from '../../app/[lang]/statics';
+import { items } from '../../app/[lng]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function HomeOurTeam() {

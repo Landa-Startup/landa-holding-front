@@ -1,6 +1,6 @@
 import React from 'react';
 import LatestStartupsCard from './LatestStartupsCard';
-import { cardData3 } from '../../app/[lang]/statics';
+import { cardData3 } from '../../app/[lng]/statics';
 import { t } from 'i18next';
 import { useTranslation } from 'app/i18n';
 

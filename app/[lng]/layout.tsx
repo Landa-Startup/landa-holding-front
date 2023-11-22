@@ -14,18 +14,18 @@ export async function generateStaticParams() {
 }
 
 // Define data for the text card containers
-interface GenerateMetadataProps {
-  params: {
-    lng: string;
-  };
-}
+// interface GenerateMetadataProps {
+//   params: {
+//     lng: string;
+//   };
+// }
 
-export async function GenerateMetadata({
-  params: { lng },
-}: GenerateMetadataProps) {
-  const { t } = await useTranslation(lng as string, 'home');
-  return { title: t('h1') };
-}
+// export async function GenerateMetadata({
+//   params: { lng },
+// }: GenerateMetadataProps) {
+//   const { t } = await useTranslation(lng as string, 'home');
+//   return { title: t('h1') };
+// }
 
 export default async function RootLayout({
   children,
@@ -35,7 +35,7 @@ export default async function RootLayout({
   params: { lng: string };
 }) {
   const { t } = await useTranslation(lng, 'home');
-
+  console.log("language:", lng)
   return (
     <html lang={lng} dir={dir(lng)}>
       <head>

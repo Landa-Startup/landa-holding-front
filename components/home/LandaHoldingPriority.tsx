@@ -1,7 +1,7 @@
 import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
 import Image from 'next/image';
-import { cardData1 } from '../../app/[lang]/statics';
+import { cardData1 } from '../../app/[lng]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function LandaHoldingPriority() {

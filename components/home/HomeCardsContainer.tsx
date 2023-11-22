@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeCards from './HomeCards';
 import Lines from '../icons/Home/Lines';
-import { cardData } from '../../app/[lang]/statics';
+import { cardData } from '../../app/[lng]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function HomeCardsContainer() {

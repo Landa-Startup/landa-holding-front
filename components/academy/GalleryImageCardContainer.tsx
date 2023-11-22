@@ -1,9 +1,8 @@
 import React from 'react';
 import GalleryImageCard from './GalleryImageCard';
-import { images } from '../../app/[lang]/statics';
+import { images } from '../../app/[lng]/statics';
 
 export default function GalleryImageCardContainer() {
-
   return (
     <div
       className="grid
