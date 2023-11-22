@@ -36,7 +36,7 @@ export default async function Page({
   params: { lng: string };
 }) {
   const { t } = await useTranslation(lng, 'home');
-
+  console.log(t('cards'))
   return (
     <div className="relative">
       {/* Hero section */}
@@ -49,14 +49,20 @@ export default async function Page({
         showButton={false}
         landa={t('Landa Holding')}
       />
+      <p>{JSON.stringify(t('cards'))}</p>
+      
 
       {/* Include other components */}
-      <HomeCardsContainer />
+      {/* <HomeCardsContainer 
+      />
+
+
+      
       <LandaHoldingBlack />
       <LandaHoldingPriority />
       <HomeOurTeam />
       <LatestStartups />
-      <Partners />
+      <Partners /> */}
     </div>
   );
 }

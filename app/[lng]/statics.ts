@@ -1,4 +1,4 @@
-
+import i18next from "i18next"
 import {
   personArrayInterface, 
   CompaniesArrayInterface, 
@@ -13,6 +13,12 @@ import {
   PreparationListInterface,
   CardsList
 } from "../types/global";
+import { useTranslation } from "app/i18n";
+
+const useI18next = () => {
+  return i18next
+}
+const{t} = useI18next();
 
 let countryList: Array<string> = [
 	"Afghanistan",
@@ -644,9 +650,11 @@ const items: personArrayInterface[] = [
 ];
 
 
+
+
 const cardData: CompanySectionsInterface[] = [
     {
-      title: 'Investment',
+      title: "Investment", 
       text: 'At Landa Investment Center, we typically focus on investing in innovative, scalable startups with international market potential and the valuation of up to $5 million. We are a group of angel investors who can help you build your team, define your business model, and increase the value of your startup in global markets. With initial investment, capital raising, and access to a network of global investors, we will assist you in achieving success and increasing your business development.',
       reverse: false,
       show: true,
