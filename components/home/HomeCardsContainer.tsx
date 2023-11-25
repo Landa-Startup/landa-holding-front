@@ -12,7 +12,7 @@ export default function HomeCardsContainer() {
       show: true,
       index: 1,
       link: '/investment',
-      addedClass: '',
+      addedClass: 'md:pt-72',
       images: [
         {
           src: '/static/images/Home main/2.jpg',
@@ -31,7 +31,7 @@ export default function HomeCardsContainer() {
       show: true,
       index: 2,
       link: '/acceleration',
-      addedClass: '',
+      addedClass: 'md:py-32',
       images: [
         {
           src: '/static/images/Home main/3.jpg',
@@ -50,7 +50,7 @@ export default function HomeCardsContainer() {
       show: false,
       index: 3,
       link: '#',
-      addedClass: '',
+      addedClass: 'md:absolute top-[172px] left-[122px]',
       images: [
         {
           src: '/static/images/Home main/5.jpg',

@@ -40,12 +40,12 @@ export default function LandaHoldingPriority() {
 
   return (
     <div className="w-full xl:h-[613px] py-10 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
-      <div className="ml-5 xl:ml-40 lg:self-start flex flex-col items-center">
+      <div className="ml-5 xl:ml-40 lg:self-start flex flex-col">
         <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
           Landa Holding
           <br />
         </span>
-        <span className="text-5xl font-normal tracking-widest text-black font-condensed ">
+        <span className="text-5xl font-normal tracking-widest text-black font-gilda ">
           Priorities
         </span>
       </div>
