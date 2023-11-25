@@ -5,8 +5,8 @@ export default function IconWhatApp() {
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="33"
-        height="33"
+        width="28"
+        height="28"
         fill="#222222"
         className="bi bi-whatsapp"
         viewBox="0 0 16 16"
