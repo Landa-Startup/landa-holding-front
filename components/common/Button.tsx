@@ -13,7 +13,7 @@ type ButtonProps = DetailedHTMLProps<
   type?: 'button' | 'reset' | 'submit';
   addedClass?: string;
   bgColor?: 'Primary' | 'Yellow';
-  goto: string;
+  goto?: string;
 };
 
 export default function Button({
@@ -30,7 +30,7 @@ export default function Button({
   const router = useRouter();
 
   return (
-    <Link href={goto}>
+    <Link href={goto || '/'}>
       <button
         className={`btn2 ${
           isVisitSize
