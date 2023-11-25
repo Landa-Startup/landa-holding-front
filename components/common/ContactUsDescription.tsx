@@ -10,8 +10,10 @@ import IconEmailB from '../icons/IconEmailB';
 export default function ContactUsDescription() {
   return (
     <div>
-      <div className="w-[464px]">
-        <h1 className="text-5xl font-light font-gilda">Landa Holding</h1>
+      <div className="md:w-[464px] flex flex-col items-center md:items-start mb-5 mt-10 md:my-0">
+        <h1 className="text-4xl md:text-5xl font-light font-gilda">
+          Landa Holding
+        </h1>
         <p className="my-5 text-base text-justify">
           In Landa academy, individuals will be trained based on their interests
           and capabilities. Necessary actions are taken at the Landa

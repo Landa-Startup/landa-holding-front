@@ -24,7 +24,7 @@ export default function AboutUsPersonalTabs({
   instagram: string;
 }) {
   return (
-    <div className="w-[300px] md:w-[400px] h-[500px] rounded-sm flex flex-col justify-between mb-20 relative">
+    <div className="w-[300px] md:w-[400px] h-[500px] rounded-sm flex flex-col justify-between mb-5 md:mb-20 relative">
       <Image
         className="object-cover"
         src={image}

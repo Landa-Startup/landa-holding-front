@@ -189,7 +189,7 @@ export default function ContactUsForm() {
         <div className="text-center">
           <Button
             text={send ? 'Submitting ....' : 'Submit'}
-            size="not"
+            size="visit"
             type="submit"
             disabled={send}
             bgColor="Primary"

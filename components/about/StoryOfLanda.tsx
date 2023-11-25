@@ -76,11 +76,11 @@ export default function StoryOfLanda() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col px-10 md:px-32 py-10 md:py-14 bg-white">
+      <div className="flex flex-col px-10 md:px-32 md:py-14 bg-white">
         <span className="font-gilda text-3xl text-primary">
           VISION OF THE LANDA HOLDING
         </span>
-        <div className="flex flex-col space-y-4 mt-5">
+        <div className="flex flex-col space-y-4 my-5">
           <p>
             Landa offers a diverse range of services, including support for
             entrepreneurs and innovative startups, as well as investments in

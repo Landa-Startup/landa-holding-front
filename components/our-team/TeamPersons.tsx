@@ -288,7 +288,7 @@ export default function TeamPersons() {
   return (
     <div>
       <TeamRolesContainer onRoleSelect={handleRoleSelect} roles={roles} />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-12 px-36 bg-[#FAFAFA]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-12 md:px-36 justify-items-center bg-[#FAFAFA]">
         {filteredPersons.map((person, index) => (
           <PersonalTab
             key={index}

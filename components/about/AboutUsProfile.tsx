@@ -1,6 +1,6 @@
 import React from 'react';
 // import AboutUsProfileCard from './AboutUsProfileCard';
-import AboutUsPersonalTabs from '@/components/about/AboutusPersonalTabs';
+import AboutUsPersonalTabs from '@/components/about/AboutUsPersonalTabs';
 
 export default function AboutUsProfile() {
   const cardsData = [
@@ -47,7 +47,7 @@ export default function AboutUsProfile() {
 
   return (
     <div className="bg-white">
-      <div className="flex flex-col ml-36 mt-8 mb-11 text-black">
+      <div className="flex flex-col items-center md:items-start md:ml-36 mt-8 mb-11 text-black">
         <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl">
           PROFESSIONALS
         </h2>
@@ -56,7 +56,7 @@ export default function AboutUsProfile() {
         </h1>
       </div>
 
-      <div className="flex justify-center gap-5">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-5">
         {cardsData.map((card, index) => (
           <AboutUsPersonalTabs
             key={index}
