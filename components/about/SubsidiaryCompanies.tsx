@@ -7,7 +7,7 @@ export default function SubsidiaryCompanies() {
       <span className="text-3xl md:text-4xl leading-10 font-gilda text-primary">
         Subsidiary companies of Landa Holding
       </span>
-      <p className="my-4 font-barlow text-xl leading-8 text-justify">
+      <p className="mt-4 mb-16 font-barlow text-xl leading-8 text-justify">
         Landa International Holding consists of 10 active companies operating in
         Canada and Iran, with offices in the cities of Toronto, Vancouver,
         Tehran, and Isfahan. Our mission is to invest in creative entrepreneurs,

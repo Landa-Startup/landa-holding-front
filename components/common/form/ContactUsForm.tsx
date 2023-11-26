@@ -6,6 +6,7 @@ import { ContactUSFormData } from '../../../app/types/global';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import NotificationSendForm from './NotificationSendForm';
+import Button from '../Button';
 
 export default function ContactUsForm() {
   const initialFormData: ContactUSFormData = {
@@ -78,9 +79,7 @@ export default function ContactUsForm() {
 
   return (
     <div>
-      <h2 className="text-5xl font-light text-center font-gilda">
-        Reach us
-      </h2>
+      <h2 className="text-5xl font-light text-center font-gilda">Reach us</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-1 my-6 gap-y-5 gap-x-6 md:grid-cols-2">
           <div className="flex flex-col">
@@ -95,8 +94,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Name*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.name ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.name ? 'border-red-500' : ''
+              }`}
             />
             {errors.name && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -116,8 +116,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Email*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.email ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.email ? 'border-red-500' : ''
+              }`}
             />
             {errors.email && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -137,8 +138,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Number*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.number ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.number ? 'border-red-500' : ''
+              }`}
             />
             {errors.number && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -158,8 +160,9 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Subject*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.subject ? 'border-red-500' : ''
-                }`}
+              className={`w-full input input-bordered drop-shadow-lg bg-white ${
+                errors.subject ? 'border-red-500' : ''
+              }`}
             />
             {errors.subject && (
               <span className="mt-2 text-sm text-yellow-500">
@@ -172,8 +175,9 @@ export default function ContactUsForm() {
             {...register('message', { required: 'Message is required.' })}
             rows={4}
             cols={20}
-            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${errors.message ? 'border-red-500' : ''
-              }`}
+            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${
+              errors.message ? 'border-red-500' : ''
+            }`}
             placeholder="Message*"
           ></textarea>
           {errors.message && (
@@ -183,13 +187,14 @@ export default function ContactUsForm() {
           )}
         </div>
         <div className="text-center">
-          <button
+          <Button
+            text={send ? 'Submitting ....' : 'Submit'}
+            size="visit"
             type="submit"
-            className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
             disabled={send}
-          >
-            {send ? 'Submitting ....' : 'Submit'}
-          </button>
+            bgColor="Primary"
+            addedClass="mx-auto"
+          />
         </div>
       </form>
       <NotificationSendForm

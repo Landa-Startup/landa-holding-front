@@ -7,7 +7,7 @@ export default function LandaHoldingBlack() {
   return (
     <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-[#ffffff] py-5 md:py-10 space-y-5 md:h-[590px]">
       <Lines />
-      <div className="flex flex-col items-center justify-around md:items-start space-y-6 pt-6">
+      <div className="flex flex-col items-center justify-around md:items-start space-y-6 pt-3">
         <div className="flex flex-col md:items-start items-center self-start">
           <div className="flex flex-col">
             <span className="text-black text-xl font-gilda font-normal border-black w-[340px] hidden md:block">

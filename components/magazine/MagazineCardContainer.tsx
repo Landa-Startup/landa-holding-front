@@ -9,7 +9,7 @@ export default function MagazineCardContainer({ url }: { url: string }) {
     // Inside the useEffect, fetch the data and update the state
     async function fetchData() {
       try {
-        const data = await FetchBlogData(`/blog/details/${url}/?format=json`);
+        const data = await FetchBlogData(`blog/details/${url}/?format=json`);
         setCardData(data);
         console.log(data);
       } catch (error) {
