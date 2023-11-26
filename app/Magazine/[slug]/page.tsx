@@ -36,7 +36,7 @@ export default function Page() {
       <p>{cardData?.date}</p>
       <div
         className="font-barlow text-justify text-[#6B6B6B]"
-        dangerouslySetInnerHTML={{ __html: cardData?.description }}
+        dangerouslySetInnerHTML={{ __html: cardData?.description ?? "" }}
       />
     </div>
   );
