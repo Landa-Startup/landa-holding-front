@@ -122,7 +122,7 @@ export default function JobForm() {
                 </p>
               </div>
               <div>
-                <p className='py-5 text-xl text-justify font-barlow mb-8'>Landa Holding is dedicated to investing in creative people with innovative startup ideas. They provide these startups with the necessary resources for growth and success. The company is ready to attract technical and non-technical talent from all over the world and they offer flexible work arrangements including office and telecommuting options. Employees can expect professional growth opportunities, strong affiliations, international certifications, ongoing support, a multilingual environment, and more. Interested candidates can register on the company's website to join their talent pool and be considered for roles that match their skills and experience.</p>
+                <p className='py-5 text-xl text-justify font-barlow mb-8'>Landa Holding is dedicated to investing in creative people with innovative startup ideas. They provide these startups with the necessary resources for growth and success. The company is ready to attract technical and non-technical talent from all over the world and they offer flexible work arrangements including office and telecommuting options. Employees can expect professional growth opportunities, strong affiliations, international certifications, ongoing support, a multilingual environment, and more. Interested candidates can register on the company&apos;s website to join their talent pool and be considered for roles that match their skills and experience.</p>
               </div>
               <div>
                 <p className="mb-4 text-4xl">Personal Information</p>
