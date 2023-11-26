@@ -1,0 +1,160 @@
+'use client';
+import React, { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import Input from '../common/form/Input';
+import UploadInput from '../common/UploadInput';
+import { JobFormData } from '../../app/types/global';
+import NotificationSendForm from '../common/form/NotificationSendForm';
+import GetCsrfToken from '@/utils/get-csrf-token';
+import { initialJobFormData } from '../../app/initials/initObjects'
+import Button from '../common/Button';
+import { submitApplyJobForm } from 'pages/api/jobs';
+
+import { useSubmit } from 'providers/StateProvider';
+import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+
+export default function JobForm() {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<JobFormData>({
+    mode: 'onBlur',
+    defaultValues: initialJobFormData,
+  });
+  
+  const {
+    csrfToken, 
+    handleTokenChange, 
+    handleSubmitingChange,
+    handleSendChange,
+    handleNotifChange,
+    handleChangeSuccess,
+    handleChangeReject,
+    cvFileState,
+    handleCvFileChange
+  } = useSubmit();
+
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`);
+      handleTokenChange(token);
+    }
+    fetchCsrfToken();
+  }, []);
+
+  const onSubmit = async (formData: JobFormData) => {
+    // Set loading and sending states.
+    handleSubmitingChange(true);
+    handleSendChange(true);
+
+    console.log(formData);
+
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
+
+    const filePostMap = {
+      cvFile: cvFileState.cvFile
+    };
+  
+    for (const [fieldName, file] of Object.entries(filePostMap)) {
+      if (file) {
+        sendFormData.append(fieldName, file, file.name);
+      }
+    }
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+      else
+        sendFormData.append(fieldName, fieldValue[0]);
+    });
+  
+    // Send the form data to the API.
+    submitApplyJobForm(sendFormData, csrfToken).then((response) => {
+      handleChangeSuccess();
+      reset(initialJobFormData); // Country does not reset
+
+      console.log(response);
+
+      setTimeout(() => {
+        handleNotifChange(false);
+      }, 10000); // 10 seconds in milliseconds
+    }).catch((error) => {
+      handleChangeReject();
+
+      console.log(error);
+    
+
+      setTimeout(() => {
+        handleNotifChange(false);
+      }, 10000); // 10 seconds in milliseconds
+    })
+  };
+
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }))
+
+  return (
+    <>
+      <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+        <>
+          <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+            <>
+              <div className="text-center">
+                <p className="mb-20 font-serif text-2xl tracking-wide">
+                  Apply job Form
+                </p>
+              </div>
+              <div>
+                <p className="mb-4 text-4xl">Personal Information</p>
+              </div>
+              <div>
+                <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
+              </div>
+            </>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+
+                <PersonalInfoInput
+                  register={register}
+                  errors={errors}
+                  nameInputs={{
+                    firstName: "firstName",
+                    lastName: "lastName",
+                    email: "email",
+                    phoneNumber: "phoneNumber"
+                  }}
+                />
+
+                <UploadInput 
+                  title='CV File:'  
+                  register={register} 
+                  errors={errors} 
+                  handleChange={handleCvFileChange}
+                  nameInput="cvFile" 
+                />
+              </div>
+              <div className="text-center">
+                <Button
+                  type='submit'
+                  bgColor="Primary"
+                  disabled={errorsList[0] ? true : false}
+                />
+              </div>
+            </form>
+            <NotificationSendForm/>
+          </div>
+        </>
+
+
+      </div>
+    </>
+  );
+}
