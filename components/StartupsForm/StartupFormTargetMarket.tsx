@@ -1,7 +1,7 @@
 import { errors } from 'formidable';
 import * as React from 'react';
 import Input from '../common/form/Input';
-import { InvestorRegistrationFormData } from 'app/types/global';
+import { InvestorRegistrationFormData } from '@/types/global';
 import { useForm } from 'react-hook-form';
 import TextArea from '../common/TextArea';
 

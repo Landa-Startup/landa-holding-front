@@ -1,29 +1,23 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
-import Select from '../common/form/Select';
 import PartnerMembershipTitle from './PartnerMembershipTitle';
-import { PartnerMembershipFormData } from '../../app/types/global';
+import { PartnerMembershipFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
-import GetCsrfToken from '@/utils/get-csrf-token';
-import apiClient from '@/utils/api';
+import GetCsrfToken from '../../utils/get-csrf-token';
+import { initialPartnerMembershipFormData } from '../../initials/initObjects'
+import Button from '../common/Button';
+import { submitPartnerMembershipForm } from '../../pages/api/partner-membership';
+
+import { useSubmit } from '../../providers/StateProvider';
+import CountryInput from '../common/form/CountryInput';
+import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+
 // import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm() {
-  const initialPartnerMembershipFormData: PartnerMembershipFormData = {
-    firstName: '',
-    lastName: '',
-    birthDate: new Date(),
-    email: '',
-    countryOfResidence: '',
-    provinceOfResidence: '',
-    companyName: '',
-    investmentCeiling: '',
-    preferredAreas: '',
-    howDidYouKnowUs: '',
-  };
 
   const {
     register,
@@ -35,143 +29,84 @@ export default function PartnerMembershipForm() {
     defaultValues: initialPartnerMembershipFormData,
   });
 
-  const [formData, setFormData] = useState<PartnerMembershipFormData>(
-    initialPartnerMembershipFormData
-  );
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
-  const [send, setSend] = useState(false);
-  const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState('');
-
-  const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState('');
+  const {
+    csrfToken, 
+    handleTokenChange, 
+    handleSubmitingChange,
+    handleSuccessChange,
+    handleSendChange,
+    handleNotifChange,
+    handleChangeSuccess,
+    handleChangeReject
+  } = useSubmit();
 
   useEffect(() => {
     async function fetchCsrfToken() {
       console.log("csrfToken", process.env.NEXT_PUBLIC_DJANGO_HOST_URL)
       const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`);
-      setCsrfToken(token);
+      handleTokenChange(token);
     }
 
     fetchCsrfToken();
   }, []);
 
-  useEffect(() => {
-    const apiUrl = 'https://restcountries.com/v3.1/all';
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        // Process the data and set the countries state after sorting
-        const countryData = data.map((country: any) => ({
-          value: country.name.common,
-          text: country.name.common,
-        }));
-        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
-        setCountries(countryData);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-
-  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCountry(event.target.value);
-
-    setFormData({
-      ...formData,
-      countryOfResidence: event.target.value, // Update the formData state
-    });
-  };
-
   const onSubmit = async (formData: PartnerMembershipFormData) => {
-    setIsSubmitting(true);
-    setSend(true);
+    // Set loading and sending states.
+    handleSubmitingChange(true);
+    handleSendChange(true);
+  
+    // Create a FormData object for form data.
     const sendFormData = new FormData();
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('countryOfResidence', selectedCountry);
-    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('birthDate', String(formData.birthDate));
-    sendFormData.append('companyName', formData.companyName);
-    sendFormData.append('investmentCeiling', formData.investmentCeiling);
-    sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
-    sendFormData.append('preferredAreas', formData.preferredAreas);
-    console.log("send form data:", sendFormData)
+  
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+  
+    // Send the form data to the API.
+    submitPartnerMembershipForm(sendFormData, csrfToken).then((response) => {
+      handleChangeSuccess();
+      reset(initialPartnerMembershipFormData); // Country does not reset
 
-    try {
-      const response = await apiClient.post(
-        'partner-membership',
-        sendFormData,
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      console.log(response);
 
-      setIsSuccess(true);
-      setShowNotification(true);
-      setSend(false);
-      reset(initialPartnerMembershipFormData);
-      setFormData(initialPartnerMembershipFormData);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
-      }, 10000);
-    } catch (error) {
-      setShowNotification(true);
-      setSend(false);
-      setIsSuccess(false);
-      console.error('Error sending form data:', error);
-      reset(initialPartnerMembershipFormData);
-      setFormData(initialPartnerMembershipFormData);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
+      setTimeout(() => {
+        handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    }).catch((error) => {
+      handleChangeReject();
+      reset(initialPartnerMembershipFormData);
+      setTimeout(() => {
+        handleNotifChange(false);
+      }, 10000); // 10 seconds in milliseconds
+    })
+
   };
+
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }))
 
   return (
-    <>
+    <div>
       <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <PartnerMembershipTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="firstName"
-                type="text"
-                label="First Name"
-                required="First Name is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your First Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
 
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="lastName"
-                type="text"
-                label="Last Name"
-                required="Last Name is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Last Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
+            <PersonalInfoInput
+              register={register}
+              errors={errors}
+              nameInputs={{
+                firstName: "firstName",
+                lastName: "lastName",
+                email: "email",
+                phoneNumber: ""
+              }}
+            />
 
             <div className="col-span-1">
               <Input
@@ -189,78 +124,11 @@ export default function PartnerMembershipForm() {
               />
             </div>
 
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="email"
-                type="email"
-                label="Email Address"
-                required="Email Address is Required."
-                patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                patternMessage="Enter a Valid Email Address"
-                placeholder="Enter your Email Address"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
-
-            <div className="col-span-1">
-              <label
-                htmlFor="countrySelect"
-                className="text-[#6b6b6b] dark:text-current"
-              >
-                Select a country:
-              </label>
-              <select
-                id="countrySelect"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                // name='countryOfResidence'
-                value={selectedCountry}
-                onChange={handleCountryChange}
-              >
-                <option value="" selected>
-                  Select a country
-                </option>
-                {countries.map((country: any, index: number) => (
-                  <option key={index} value={country.text}>
-                    {country.text}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="countryOfResidence"
-                type="text"
-                label="Country of Residence"
-                required="Country of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Country of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div> */}
-
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="provinceOfResidence"
-                type="text"
-                label="City Of Residence"
-                required="City Of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your City Of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
+            <CountryInput
+              register={register}
+              errors={errors}
+              nameInput='countryOfResidence'
+            />
 
             <div className="col-span-1">
               <Input
@@ -308,22 +176,15 @@ export default function PartnerMembershipForm() {
             </div>
           </div>
           <div className="text-center">
-            <button
-              type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
-              disabled={send}
-            >
-              {send ? 'Submitting ....' : 'Submit'}
-            </button>
+            <Button
+              type='submit'
+              bgColor="Primary"
+              disabled={errorsList[0] ? true : false}
+            />
           </div>
         </form>
-        <NotificationSendForm
-          submitting={isSubmitting}
-          success={isSuccess}
-          sendStatus={send}
-          show={showNotification}
-        />
+        <NotificationSendForm/>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Hero from '@/components/home/Hero';
-import LandaHoldingPriority from '@/components/home/LandaHoldingPriority';
-import LatestStartups from '@/components/home/LatestStartups';
-import LandaHoldingBlack from '@/components/home/LandaHoldingBlack';
-import HomeCardsContainer from '@/components/home/HomeCardsContainer';
-import Partners from '@/components/home/Partners';
-import HomeOurTeam from '@/components/home/HomeOurTeam';
-import AerialViewBusinessTeam from '@/components/home/BusinessTeam';
+import Hero from '../components/home/Hero';
+import LandaHoldingPriority from '../components/home/LandaHoldingPriority';
+import LatestStartups from '../components/home/LatestStartups';
+import LandaHoldingBlack from '../components/home/LandaHoldingBlack';
+import HomeCardsContainer from '../components/home/HomeCardsContainer';
+import Partners from '../components/home/Partners';
+import HomeOurTeam from '../components/home/HomeOurTeam';
+import AerialViewBusinessTeam from '../components/home/BusinessTeam';
 
 export const metadata: Metadata = {
   title: 'Landa Holding',

@@ -1,15 +1,7 @@
 import React from 'react';
 import HomeCardsLeft from './HomeCardsLeft';
 import HomeCardsRight from './HomeCardsRight';
-
-interface HomeCardsProps {
-  titles: string;
-  text: string;
-  images: Array<{ src: string; alt: string }>;
-  reverse?: boolean;
-  addedClass?: string;
-  link: string;
-}
+import { HomeCardsProps } from '../../types/global';
 
 export default function HomeCards({
   titles,
@@ -26,7 +18,7 @@ export default function HomeCards({
 
   return (
     <div
-      className={`${flexDirectionClass} relative border-b-2 md:border-none last:border-none border-primary flex justify-between items-center px-9 md:px-32 py-5 md:py-32`}
+      className={`${flexDirectionClass} border-b-2 md:border-none last:border-none border-primary flex justify-between items-center px-9 md:px-32 py-5 md:py-32`}
     >
       <HomeCardsLeft text={text} addedClass={addedClass} link={link} />
       <HomeCardsRight images={images} titles={titles} link={link} />

@@ -14,7 +14,7 @@ export default function PostCard({
   image: string;
   date: string;
   title: string;
-  description: string;
+  description: string | TrustedHTML;
 }) {
   return (
     <div className="flex flex-col gap-4">
@@ -41,7 +41,6 @@ export default function PostCard({
         text="Read More"
         size="notVisit"
         bgColor="Primary"
-        addedClass="self-start"
       />
     </div>
   );

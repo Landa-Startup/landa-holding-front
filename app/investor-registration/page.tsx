@@ -1,7 +1,8 @@
 import React from 'react';
-import Banner from '@/components/common/Banner';
-import InvestorRegistrationForm from '@/components/investor-registration/InvestorRegistrationForm';
+import Banner from '../../components/common/Banner';
+import InvestorRegistrationForm from '../../components/investor-registration/InvestorRegistrationForm';
 import { Metadata } from 'next';
+import { SubmitProvider } from '../../providers/StateProvider';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Investors',
@@ -11,12 +12,14 @@ export const metadata: Metadata = {
 
 export default function InvestorRegistrationPage() {
   return (
-    <>
+    <div>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
         title="INVESTOR CENTER"
       />
-      <InvestorRegistrationForm />
-    </>
+      <SubmitProvider>
+        <InvestorRegistrationForm />
+      </SubmitProvider>
+    </div>
   );
 }

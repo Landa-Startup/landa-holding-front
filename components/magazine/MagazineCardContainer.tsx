@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import FetchBlogData from '@/utils/FetchBlogData';
-import { MagazineData } from 'app/types/global';
+import FetchBlogData from '../../utils/FetchBlogData';
+import { MagazineData } from '../../types/global';
 export default function MagazineCardContainer({ url }: { url: string }) {
   const [cardData, setCardData] = useState<MagazineData>();
 

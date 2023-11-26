@@ -9,7 +9,7 @@ import IconLinkedinB from '../icons/IconLinkedinB';
 import IconEmailB from '../icons/IconEmailB';
 export default function ContactUsDescription() {
   return (
-    <div>
+    <div className='h-full'>
       <div className="md:w-[464px] flex flex-col items-center md:items-start mb-5 mt-10 md:my-0">
         <h1 className="text-4xl md:text-5xl font-light font-gilda">
           Landa Holding
@@ -22,6 +22,7 @@ export default function ContactUsDescription() {
           the nurtured capabilities of individuals.
         </p>
       </div>
+
       <div className="flex flex-row space-x-3">
         <Link
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
@@ -42,7 +43,8 @@ export default function ContactUsDescription() {
           <IconLinkedinB />
         </Link>
       </div>
-      <div className="flex flex-col gap-4 mt-10">
+
+      <div className="flex flex-col gap-1 mt-10">
         <div className="flex">
           <Phone />
           <div className="flex flex-col">
@@ -70,6 +72,7 @@ export default function ContactUsDescription() {
             </ul>
           </div>
         </div>
+
         <div className="flex">
           <Email />
           <ul>

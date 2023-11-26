@@ -1,13 +1,22 @@
 'use client';
-import { MagazineData } from 'app/types/global';
+import { MagazineData } from '@/types/global';
 import Image from 'next/image';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+const preData : MagazineData = {
+  title: "",
+  description: "",
+  thumbnail: "",
+  slug: "",
+  date: "",
+  file: "",
+}
+
 export default function Page() {
   const pathname = usePathname();
   const slug = pathname?.replace('/magazine/', '');
-  const [cardData, setCardData] = useState<MagazineData>();
+  const [cardData, setCardData] = useState<MagazineData>(preData);
   useEffect(() => {
     async function fetchTags() {
       const response = await fetch(

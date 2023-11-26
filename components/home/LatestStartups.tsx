@@ -1,31 +1,8 @@
 import React from 'react';
 import LatestStartupsCard from './LatestStartupsCard';
+import { cardData3 } from '../../app/[lang]/statics';
 
 export default function LatestStartups() {
-  const cardData = [
-    {
-      image: '/static/images/Home/Startups/Frame 38190.png',
-      title: 'LANDA Gene',
-      description:
-        'Landa trip is an innovative startup company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
-      link: 'https://landatrip.com/',
-    },
-
-    {
-      image: '/static/images/Home/Startups/unnamed 2.png',
-      title: 'LANDA Handicraft',
-      description:
-        'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
-      link: 'https://irdiaco.ca/',
-    },
-    {
-      image: '/static/images/Home/Startups/vision raft.png',
-      title: 'VISION RAFT',
-      description:
-        'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
-      link: 'https://invigorated-drop-231359.framer.app',
-    },
-  ];
 
   return (
     <div>
@@ -42,7 +19,7 @@ export default function LatestStartups() {
         </div>
         <div className="flex justify-center mt-2 ">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-3 md:gap-10 mt-3 md:mt-10 ">
-            {cardData.map((data, index) => (
+            {cardData3.map((data, index) => (
               <LatestStartupsCard
                 key={index}
                 title={data.title}

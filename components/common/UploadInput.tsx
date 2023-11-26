@@ -1,11 +1,26 @@
 import Image from 'next/image';
 import React from 'react';
+import { UseFormRegister, FieldErrors } from 'react-hook-form';
 
-export default function UploadInput({ title }: { title: string }) {
+// TO DO : mobile design of file input should change
+
+export default function UploadInput({ 
+  title,
+  register,
+  errors,
+  nameInput,
+  handleChange
+ }: { 
+  title: string;
+  register: any;
+  errors: any;
+  nameInput: string;
+  handleChange: any;
+  }) {
   return (
-    <div className="flex-col justify-center items-center gap-2.5 inline-flex">
+    <div className="flex-col justify-center gap-2.5 inline-flex max-w-full">
       {/* Label for the upload input */}
-      <div className="text-neutral-800 text-[15px] font-normal">{title}</div>
+      <div className="text-neutral-800 text-[15px] text-left font-normal">{title}</div>
 
       {/* Container for the upload input */}
       <div className="px-6 py-2 rounded-md bg-stone-100 shadow justify-center items-center gap-[5px] inline-flex">
@@ -21,9 +36,22 @@ export default function UploadInput({ title }: { title: string }) {
 
         {/* The actual input */}
         <input
-          className="text-neutral-800 text-[13px] font-normal capitalize"
+          className={`text-neutral-800 text-[13px] font-normal capitalize ${errors[nameInput] ? ' border-red-500' : ''}`}
           type="file"
+          {...register(nameInput)}
+          onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
+            // setFileState({nameInput: e.target.files});
+            console.log(e.target.files ? e.target.files[0] : "");
+            if (e.target.files) {
+              handleChange(e.target.files[0]);
+            }
+          }}
         />
+        {errors[nameInput] && (
+          <span className="mt-4 text-sm text-yellow-500">
+            {errors[nameInput].message}
+          </span>
+        )}
       </div>
     </div>
   );

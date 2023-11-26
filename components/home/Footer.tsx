@@ -14,7 +14,7 @@ export default function Footer() {
   }
   return (
     <div className="flex flex-col p-8 bg-neutral-800 font-barlow">
-      <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
+      <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20 md:gap-4">
         <div className="flex flex-col md:w-[344px] mt-5">
           <div className="h-[25px] text-justify text-white text-xl font-medium">
             About Landa

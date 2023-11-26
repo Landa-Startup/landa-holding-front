@@ -1,85 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { items } from '../../app/[lang]/statics'
+import Button from '../common/Button';
+
+
 export default function HomeOurTeam() {
-  const items = [
-    {
-      image: '/static/images/our-team/Personals/a3.png',
-      position: 'Secretary',
-      name: 'Lida Parvizi',
-      linkedIn: '',
-      category: 'secretary',
-    },
-    {
-      image: '/static/images/our-team/Personals/a6.png',
-      position: 'CTO',
-      name: 'Iman Nasr',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a33.png',
-      position: 'Public Relations Officer',
-      name: 'Gelareh Bahrami',
-      linkedIn: '',
-      category: 'public relations officer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a7.png',
-      position: 'Full stack',
-      name: 'Sajjad Momeni',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a5.png',
-      position: 'Accountant',
-      name: 'Ali Solaimani',
-      linkedIn: '',
-      category: 'accountant',
-    },
-    {
-      image: '/static/images/our-team/Personals/a13.png',
-      position: 'UX/UI Designer',
-      name: 'Ariana Shafie',
-      linkedIn: '',
-      category: 'designer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a9.png',
-      position: 'Digital Marketer',
-      name: 'Ehsan Aliakbari',
-      linkedIn: '',
-      category: 'digital marketer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a21.png',
-      position: 'Graphic Designer',
-      name: 'Hoda Mahdi',
-      linkedIn: '',
-      category: 'designer',
-    },
-  ];
 
   return (
     <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
-      <div className="flex flex-col gap-2">
-        <div className="ml-5 xl:ml-40 flex flex-col items-center md:items-start gap-2">
-          <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
-            Landa Holding
-            <br />
-          </span>
-          <span className="text-5xl font-normal tracking-widest text-black font-gilda ">
-            Our Team
-          </span>
-        </div>
-        <div className="flex items-center justify-center">
-          <p className="md:mx-40 md:text-left text-center mx-6">
-            Our team of experts is comprised of professionals who are passionate
-            about their work, and have an extensive background in a wide variety
-            of applications, and are willing to help at any time.
-          </p>
-        </div>
+      <div className="ml-5 xl:ml-40 lg:self-start flex flex-col items-center">
+        <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
+          Landa Holding
+          <br />
+        </span>
+        <span className="text-5xl font-normal tracking-widest text-black font-condensed ">
+          Our Team
+        </span>
+      </div>
+      <div className="flex items-center justify-center">
+        <p className="md:mx-40 md:text-left text-center">
+          Our team of experts is comprised of professionals who are passionate
+          about their work, and have an extensive background in a wide variety
+          of applications, and are willing to help at any time.
+        </p>
       </div>
       <Image
         loading="lazy"
@@ -98,10 +42,13 @@ export default function HomeOurTeam() {
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
       <Link href={'/our-team'}>
-        <button className="justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
-          View More
-        </button>
-      </Link>{' '}
+        <Button
+          type='button'
+          size='visit'
+          bgColor="Primary"
+          goto=''
+        />
+      </Link>
     </div>
   );
 }

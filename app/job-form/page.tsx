@@ -1,7 +1,8 @@
 import React from 'react';
-import Banner from '@/components/common/Banner';
-import JobForm from '@/components/job-form/JobForm';
+import Banner from '../../components/common/Banner';
+import JobForm from '../../components/job-form/JobForm';
 import { Metadata } from 'next';
+import { SubmitProvider } from '../../providers/StateProvider';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Jobs',
@@ -11,12 +12,14 @@ export const metadata: Metadata = {
 
 export default function ApplyFormPage() {
   return (
-    <>
+    <div>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title="WORK WITH US"
+        title="APPLY JOB"
       />
-      <JobForm />
-    </>
+      <SubmitProvider>
+        <JobForm />
+      </SubmitProvider>
+    </div>
   );
 }

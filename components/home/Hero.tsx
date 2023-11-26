@@ -14,8 +14,8 @@ export default function Hero({
   showButton,
 }: {
   showLanda: boolean;
-  titles: string[];
-  subTitle: string;
+  titles: string[] | string;
+  subTitle?: string;
   buttonBg?: string;
   backgroundImage: string;
   leftImage: string;
@@ -24,6 +24,7 @@ export default function Hero({
   const [titleIndex, setTitleIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState('');
   const [isTitleChanging, setIsTitleChanging] = useState(false); // Track if the title is changing
+  const [notArray, setNotArray] = useState(false);
 
   useEffect(() => {
     if (Array.isArray(titles)) {
@@ -35,17 +36,26 @@ export default function Hero({
       }, 3000);
 
       return () => clearInterval(interval);
+    } else {
+      setCurrentTitle(titles)
+      setIsTitleChanging(false)
+      setNotArray(true);
     }
   }, [titles]);
 
   useEffect(() => {
     if (Array.isArray(titles)) {
       setCurrentTitle(titles[titleIndex]);
+    } else {
+      setCurrentTitle(titles)
+      setNotArray(true);
     }
   }, [titleIndex, titles]);
 
   useEffect(() => {
-    setIsTitleChanging(false);
+    if (Array.isArray(titles)) {
+      setIsTitleChanging(false);
+    }
   }, [currentTitle]);
 
   return (
@@ -67,7 +77,9 @@ export default function Hero({
           Landa Holding
         </div>
         <div
-          className={`md:text-right text-neutral-50 text-5xl md:text-7xl font-normal tracking-[6.4px] font-gilda text-center text-opacity-95 ${
+          className={`${
+            notArray ? "text-black text-5xl font-gilda text-center md:text-right md:text-7xl" : "md:text-right text-neutral-50 text-5xl md:text-7xl font-normal tracking-[6.4px] font-gilda text-center text-opacity-95"
+          } ${
             isTitleChanging
               ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
               : ''
@@ -77,14 +89,13 @@ export default function Hero({
           {currentTitle}
         </div>
 
-        <div className="text-center font-montserrat text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
-          {subTitle}
+        <div className="text-center font-mono text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
+          {subTitle ? subTitle : ""}
         </div>
         {showButton ? (
           <Button
             text="Register Now"
             size="notVisit"
-            addedClass={buttonBg ? 'md:hidden' : 'block'}
             goto="/"
           />
         ) : (

@@ -31,7 +31,6 @@ export default function UpcomingEvents() {
             goto="/"
             text="Register"
             size="register"
-            addedClass="block"
             bgColor="Primary"
           />
         </div>
@@ -58,7 +57,6 @@ export default function UpcomingEvents() {
             goto="/"
             text="Register"
             size="register"
-            addedClass="block"
             bgColor="Primary"
           />
         </div>
@@ -85,7 +83,6 @@ export default function UpcomingEvents() {
             goto="/"
             text="Register"
             size="register"
-            addedClass="block"
             bgColor="Primary"
           />
         </div>

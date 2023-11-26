@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Input from '../../common/form/Input';
 
 export default function Login() {
   const [email, setEmail] = useState('');

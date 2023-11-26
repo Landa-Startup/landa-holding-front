@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import PostCard from './PostCard';
 import FetchBlogData from '@/utils/FetchBlogData';
-import { MagazineData } from 'app/types/global';
+import { MagazineData } from '@/types/global';
 export default function MagazineCardsContainer() {
   const [cardData, setCardData] = useState<MagazineData[]>();
 

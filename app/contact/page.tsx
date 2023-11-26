@@ -1,8 +1,9 @@
 import React from 'react';
-import ContactUsForm from '@/components/common/form/ContactUsForm';
-import ContactUsDescription from '@/components/common/ContactUsDescription';
-import Banner from '@/components/common/Banner';
+import ContactUsForm from '../../components/common/form/ContactUsForm';
+import ContactUsDescription from '../../components/common/ContactUsDescription';
+import Banner from '../../components/common/Banner';
 import { Metadata } from 'next';
+import { SubmitProvider } from '../../providers/StateProvider';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Contact',
@@ -21,12 +22,14 @@ export default function ContactUsPage() {
       />
 
       {/* Main Content Grid */}
-      <div className="container grid grid-cols-1 gap-6 px-5 md:py-28 md:grid-cols-2 bg-[#FAFAFA] text-black">
+      <div className="container grid grid-cols-1 gap-6 mx-auto px-5 lg:px-28 py-28 md:flex md:flex-row md:justify-between bg-[#FAFAFA] text-black">
         {/* ContactUsDescription Component */}
         <ContactUsDescription />
 
         {/* ContactUsForm Component */}
-        <ContactUsForm />
+        <SubmitProvider>
+          <ContactUsForm />
+        </SubmitProvider>
       </div>
     </div>
   );

@@ -30,8 +30,7 @@
         "utils/*"
       ],
       "@/types/*": [
-        "types/*",
-        "aria-query"
+        "types/*"
       ],
       "@/services/*": [
         "services/*"

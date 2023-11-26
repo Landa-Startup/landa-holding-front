@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import UlList from '../List/UlList';
 
 export default function MagazineModernPostCard3() {
   return (
@@ -44,8 +45,18 @@ export default function MagazineModernPostCard3() {
               width={800}
               height={300}
             />
-            <div className="px-4 mt-3 text-slate-950">
-              {/* List */}
+            <UlList
+              list={[
+                "This is an item in the list, for example.", 
+                "This is another item in the list, for example.", 
+                "This is another item in the list, for example.", 
+                "This is another item in the list, for example."
+              ]}
+              style1="px-4 mt-3 text-slate-950"
+              style2="list-disc"
+              style3="my-2"
+            />
+            {/* <div className="px-4 mt-3 text-slate-950">
               <ul className="list-disc">
                 <li className="my-2">
                   This is an item in the list, for example.
@@ -60,7 +71,7 @@ export default function MagazineModernPostCard3() {
                   This is another item in the list, for example.
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1,15 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
-type AboutUsCardProps = {
-  title: string;
-  text: string;
-  image: string;
-  reverse: boolean;
-  description: string;
-  link: string;
-};
+import { AboutUsCardProps } from '../../types/global';
+import Button from '../common/Button';
 
 const AboutUsCard = ({
   title,
@@ -31,9 +24,16 @@ const AboutUsCard = ({
               {text}
             </p>
             <Link href={link}>
-              <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-24 mt-8  flex px-10 py-2 font-barlow">
+              <Button 
+                text='Visit Now' 
+                size={''} 
+                type='button'
+                bgColor="Primary"
+                goto={''}
+              />
+              {/* <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-24 mt-8  flex px-10 py-2 font-barlow">
                 Visit Now
-              </button>
+              </button> */}
             </Link>{' '}
           </div>
           <div className="col-span-1 md:pl-0">

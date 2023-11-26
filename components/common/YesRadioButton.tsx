@@ -1,4 +1,5 @@
 import React from 'react';
+import UploadInput from './UploadInput';
 
 export default function YesRadioButton({
   title,
@@ -8,7 +9,7 @@ export default function YesRadioButton({
   name,
   selectedRadio,
   handleRadioChange,
-  handleChangeFile,
+  handleFileChange,
   fileName,
 }: {
   title: string;
@@ -18,16 +19,31 @@ export default function YesRadioButton({
   name: string;
   selectedRadio: string;
   handleRadioChange: any;
-  handleChangeFile: any;
+  handleFileChange: any;
   fileName: string;
 }) {
+
+  let uploadInputTitle = ""
+  switch (title) {
+    case "Do you have Pitch deck?":
+      uploadInputTitle = "Pitch deck file"
+      break;
+    case "Do you have Business Plan?":
+      uploadInputTitle = "Business plan file"
+      break
+    case "Do you have Financial file?":
+      uploadInputTitle = "Financial file"
+    default:
+      break;
+  }
+
   return (
     <div>
       {/* Label for the radio buttons */}
-      <label className="text-[#6b6b6b]">{title}</label>
+      <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <div className="flex flex-col">
         {/* Radio buttons for 'Yes' and 'No' */}
-        <div className="flex flex-row mt-4 bg-[#f9f6f3] p-4 rounded-lg drop-shadow-lg">
+        <div className="flex flex-row mt-4 bg-[#f9f6f3] dark:bg-[#1D232A] p-4 rounded-lg drop-shadow-lg">
           <label className="flex flex-column mr-10 ">
             <input
               type="radio"
@@ -54,13 +70,13 @@ export default function YesRadioButton({
 
         {/* Conditional file input */}
         {selectedRadio === 'true' && (
-          <div className="flex justify-center">
-            <input
-              type="file"
-              required
-              className="bg-[#f9f6f3] mt-3 p-5 w-full rounded-lg"
-              {...register(fileName, { required: 'this file is requied!' })}
-              onChange={handleChangeFile} // Use onChange event handler after register
+          <div className="flex my-4 justify-center">
+            <UploadInput
+              title={uploadInputTitle}
+              nameInput={uploadInputTitle}
+              register={register}
+              errors={errors}
+              handleChange={handleFileChange}
             />
             {errors[fileName] && (
               <span className="mt-4 text-sm text-yellow-500">

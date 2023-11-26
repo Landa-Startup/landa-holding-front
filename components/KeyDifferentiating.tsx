@@ -4,7 +4,7 @@ import React from 'react';
 export default function KeyDifferentiating() {
   return (
     <div className="bg-[#FAFAFA] grid grid-cols-1 md:grid-cols-2 justify-items-end">
-      <div className="flex flex-col md:my-20 md:ml-28 px-10 md:px-32 py-10 md:py-14 gap-5">
+      <div className="flex flex-col my-5 md:my-20 mx-5 md:ml-28 gap-5">
         <span className="font-gilda text-2xl md:text-3xl leading-5 text-primary">
           Key Differentiating Factors:
         </span>
@@ -54,8 +54,9 @@ export default function KeyDifferentiating() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 hidden md:block">
+      <div className="mt-10 hidden md:block group">
         <Image
+          className="group-hover:animate-pulse duration-2000 "
           src="/static/images/Home/KeyDifferentiating/Vector 58.png"
           alt="Landa Key Differentiating"
           width={586}

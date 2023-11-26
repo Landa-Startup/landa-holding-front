@@ -1,4 +1,4 @@
-import { DecodedToken } from 'app/types/global';
+import { DecodedToken } from '@/types/global';
 import { parseCookies } from 'nookies';
 
 export async function postData(url: string, body: object): Promise<Response> {
