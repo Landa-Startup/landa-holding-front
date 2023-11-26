@@ -82,7 +82,6 @@ export default function PartnerMembershipForm() {
         handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
     })
-
   };
 
   const errorsList = Object.entries(errors).map(([name, value]) => ({
@@ -91,6 +90,7 @@ export default function PartnerMembershipForm() {
   }))
 
   return (
+    <div>
     <div>
       <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <PartnerMembershipTitle />
@@ -185,6 +185,7 @@ export default function PartnerMembershipForm() {
         </form>
         <NotificationSendForm/>
       </div>
+    </div>
     </div>
   );
 }

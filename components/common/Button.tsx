@@ -5,6 +5,7 @@ import { useSubmit } from '../../providers/StateProvider';
 
 // Define the ButtonProps type
 // go to prop causes a redirext
+// go to prop causes a redirext
 type ButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement

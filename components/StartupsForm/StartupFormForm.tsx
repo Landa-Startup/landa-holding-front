@@ -152,6 +152,7 @@ export default function StartupFormForm() {
   }))
 
   return (
+    <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto">   
     <div>
     <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto">   
       <p className="font-serif text-3xl pb-3 pt-0 tracking-wide md:pt-0 md:text-5xl lg:text-6xl lg:pt-10  xl:text-7xl text-white sm:mt-0 ">Startup Validation Form</p>
@@ -172,7 +173,7 @@ export default function StartupFormForm() {
             errors={errors}
           />
 
-          <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="col-span-2">
           <div className="col-span-2">
           <div className="bg-[#222222CC]">
             <p className="text-xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] md:text-3xl lg:w-[450px] xl:w-[650px] lg:text-3xl border-b ">
@@ -182,6 +183,18 @@ export default function StartupFormForm() {
           </div>
           </div>
           </div>
+          <Select
+            register={register}
+            errors={errors}
+            nameInput='statusSelect'
+            label='Select Your Status: '
+            required='Your Status is Required'
+            className='select select-bordered w-full max-w-xs mt-4'
+            labelClass='text-[#6b6b6b] dark:text-current'
+            placeholder='Select Your Status'
+            options={typesData}
+            handleChange={handleItemChange}
+          />
           <Select
             register={register}
             errors={errors}
@@ -249,6 +262,7 @@ export default function StartupFormForm() {
           <NotificationSendForm/>
         </form>
       </div>
+    </div>
     </div>
   );
 }

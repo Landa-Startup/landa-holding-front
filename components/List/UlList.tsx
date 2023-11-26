@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function UlList({list, style1, style2, style3} : {list: string[], style1:string, style2:string, style3:string}) {
   return (
     <div className={`${style1}`}>

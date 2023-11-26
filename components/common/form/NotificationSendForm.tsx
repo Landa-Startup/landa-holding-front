@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import Check from '../../../components/icons/common/Check';
 import { useSubmit } from '../../../providers/StateProvider';
 

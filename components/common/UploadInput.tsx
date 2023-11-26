@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { UseFormRegister, FieldErrors } from 'react-hook-form';
 
 // TO DO : mobile design of file input should change
 

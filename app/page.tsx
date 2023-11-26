@@ -21,8 +21,12 @@ export default function Page() {
       {/* Hero section */}
       <Hero
         showLanda
-        titles={['Acceleration', 'Investment', 'Academy']}
-        subTitle='"Feel The Future"'
+        titles={[
+          'Acceleration',
+          'Investment',
+          'Academy',
+        ]}
+        subTitle={'Feel The Future'}
         backgroundImage="Hero.png"
         leftImage="Landa.svg"
         showButton={false}
@@ -37,5 +41,5 @@ export default function Page() {
       <AerialViewBusinessTeam />
       <Partners />
     </div>
-  );
+  )
 }

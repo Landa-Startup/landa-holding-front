@@ -123,6 +123,8 @@ export default function StartupFormFirstSale({
             <div>
               <StartupFormTargetMarket register={register} errors={errors}/>
               <StartupFormProperty register={register} errors={errors}/>
+              <StartupFormTargetMarket register={register} errors={errors}/>
+              <StartupFormProperty register={register} errors={errors}/>
             </div>
           );
         }else{

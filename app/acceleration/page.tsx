@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   description:
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
-
 export default function page({ params: { lng }} : { params: { lng: string }} ) {
   return (
     <div>

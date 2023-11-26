@@ -38,6 +38,7 @@ export default function EntrepreneursForm() {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
       handleTokenChange(token);
+      handleTokenChange(token);
     }
 
     fetchCsrfToken();

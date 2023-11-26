@@ -36,7 +36,7 @@ export default function StartupFormTrialProduct({
           name="pitch-deck"
           handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioPitch)}}
           selectedRadio={selectedRadioPitch}
-          handleChangeFile={handlePitchDeckFileChange}
+          handleFileChange={handlePitchDeckFileChange}
           fileName='pitchDeckFile'
         />
         <YesRadioButton
@@ -47,7 +47,7 @@ export default function StartupFormTrialProduct({
           name="business-plan"
           handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioBusiness)}}
           selectedRadio={selectedRadioBusiness}
-          handleChangeFile={handleBusinessPlanFileChange}
+          handleFileChange={handleBusinessPlanFileChange}
           fileName='businessPlanFile'
         />
 
