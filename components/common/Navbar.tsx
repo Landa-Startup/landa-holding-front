@@ -21,7 +21,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
     { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-    { label: 'Work With Us', href: '/job-form' },
+    { label: 'WORK WITH US', href: '/job-form' },
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -96,9 +96,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                     FORMS
                   </summary>
                   <ul
-                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`p-2 space-y-1 shadow menu dropdown-content z-[1] bg-stone-100 rounded-box w-64 ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map((item) => (
                       <li

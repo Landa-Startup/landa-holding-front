@@ -111,17 +111,18 @@ export default function JobForm() {
 
   return (
     <>
-    <div className='container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent'>
-      <p className='text-2xl text-center font-barlow'>Landa Holding is dedicated to investing in creative people with innovative startup ideas. They provide these startups with the necessary resources for growth and success. The company is ready to attract technical and non-technical talent from all over the world and they offer flexible work arrangements including office and telecommuting options. Employees can expect professional growth opportunities, strong affiliations, international certifications, ongoing support, a multilingual environment, and more. Interested candidates can register on the company's website to join their talent pool and be considered for roles that match their skills and experience.</p>
-    </div>
+
       <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
         <>
           <div className="container m-16 px-5 lg:p-0 mx-auto bg-[#faf8f5] dark:bg-transparent">
             <>
               <div className="text-center">
-                <p className="mb-20 pt-10 lg:pt-0 text-3xl font-serif lg:text-6xl md:text-5xl tracking-wide">
-                Work With Us
+                <p className="mb-12 pt-10 lg:pt-0 text-3xl font-serif lg:text-6xl md:text-5xl tracking-wide">
+                  Work With Us
                 </p>
+              </div>
+              <div>
+                <p className='py-5 text-xl text-justify font-barlow mb-8'>Landa Holding is dedicated to investing in creative people with innovative startup ideas. They provide these startups with the necessary resources for growth and success. The company is ready to attract technical and non-technical talent from all over the world and they offer flexible work arrangements including office and telecommuting options. Employees can expect professional growth opportunities, strong affiliations, international certifications, ongoing support, a multilingual environment, and more. Interested candidates can register on the company's website to join their talent pool and be considered for roles that match their skills and experience.</p>
               </div>
               <div>
                 <p className="mb-4 text-4xl">Personal Information</p>
