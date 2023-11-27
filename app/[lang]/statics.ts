@@ -787,10 +787,6 @@ const cardData3: StartUpsInterface[] = [
 
 const logosLeft: LogosInterface[] = [
     {
-      number: 1,
-      alt: 'evimo',
-    },
-    {
       number: 2,
       alt: 'azad university',
     },
@@ -814,14 +810,18 @@ const logosLeft: LogosInterface[] = [
       number: 7,
       alt: 'evimo',
     },
-    {
-      number: 8,
-      alt: 'evimo',
-    },
+    // {
+    //   number: 8,
+    //   alt: 'evimo',
+    // },
 ];
 
 
 const logosRight: LogosInterface[] = [
+    {
+      number: 1,
+      alt: 'evimo',
+    },
     {
       number: 9,
       alt: 'evimo',
@@ -846,10 +846,10 @@ const logosRight: LogosInterface[] = [
       number: 14,
       alt: 'evimo',
     },
-    {
-      number: 15,
-      alt: 'evimo',
-    },
+    // {
+    //   number: 15,
+    //   alt: 'evimo',
+    // },
     // {
     //   number: 16,
     //   alt: 'evimo',

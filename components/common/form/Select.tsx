@@ -29,7 +29,7 @@ export default function Select({
   return (
     <div>
 
-      <label htmlFor={nameInput} className={labelClass}>
+      <label htmlFor={nameInput} className={`text-left ${labelClass}`}>
         {label}
       </label>
       {/* TO DO : select placeholder has a problem */}

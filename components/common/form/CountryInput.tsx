@@ -1,8 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import { initialInvestorRegistrationFormData } from '../../../initials/initObjects'
-import { InvestorRegistrationFormData } from '../../../types/global';
-import { UseFormRegister, FieldErrors } from 'react-hook-form';
 import { countryList } from '../../../app/[lang]/statics';
 import Select from '../../common/form/Select';
 import Input from '../../common/form/Input';

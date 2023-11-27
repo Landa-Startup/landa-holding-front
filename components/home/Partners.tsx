@@ -9,7 +9,8 @@ export default function Partners() {
   return (
     <div>
       <div className="flex flex-col md:grid grid-cols-4 bg-[#FAFAFA] p-5 md:p-16 md:gap-16">
-        <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-2 md:order-1 mt-9">
+
+        <div className="grid grid-cols-3 md:grid-cols-2 gap-12 w-[350px] order-1 pl-6 md:pl-0">
           {logosLeft.map((role, index) => (
             <Image
               loading='lazy'
@@ -22,7 +23,8 @@ export default function Partners() {
             />
           ))}
         </div>
-        <div className="col-span-4 md:col-span-2 gap-6 md:gap-14 md:bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9 order-1">
+
+        <div className="col-span-4 md:col-span-2 gap-6 md:gap-14 md:bg-[#F8F5F0] flex flex-col items-center justify-center p-5 md:p-9 order-2">
           <p className="text-primary text-xl md:text-4xl font-gilda">
             Join Our Business Partners
           </p>
@@ -43,7 +45,7 @@ export default function Partners() {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 md:grid-cols-2 gap-8 w-[350px] order-3">
+        <div className="grid grid-cols-3 md:grid-cols-2 gap-12 w-[350px] order-3 pl-6 md:pl-0">
           {logosRight.map((role, index) => (
             <Image
               loading='lazy'
@@ -56,6 +58,7 @@ export default function Partners() {
             />
           ))}
         </div>
+
       </div>
       <div className="md:hidden flex justify-center items-center  p-5">
         <Button

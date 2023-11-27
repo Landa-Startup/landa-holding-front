@@ -33,7 +33,7 @@ const initialStartupsFormData: StartupsFormData = {
     siteAddress: '',
     customerProblem: '',
     solution: '',
-    productLevel: '',
+    // productLevel: '',
     scalable: '',
     monetizationOfYourPlan: '',
     structureOfYourSales: '',
@@ -79,8 +79,9 @@ const initialStartupsFormData: StartupsFormData = {
   };
 
   const initialApplicationFormData: LandaGeneFormData = {
-    name: '',
-    phone: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
     email: '',
     company: '',
   };
@@ -102,7 +103,7 @@ const initialStartupsFormData: StartupsFormData = {
   const initialFormData: Entrepreuneur = {
     email: '',
     companyName: '',
-    phone: '',
+    phoneNumber: '',
     website: '',
     fieldOfProfessional: '',
   };
