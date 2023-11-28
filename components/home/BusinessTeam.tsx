@@ -22,7 +22,7 @@ export default function AerialViewBusinessTeam() {
       name: 'Jane Doe',
       roleInCompany: 'Product Manager',
       role: 'Product Lead',
-      profileImage: '/path/to/image.jpg',
+      profileImage: 'b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
       commentDescription:
         'For me, my time spent working with Landa Holdings with this extremely competent staff was an experience that I will never forget.',
       linkedinLink: 'https://www.linkedin.com/in/janedoe',
@@ -33,7 +33,7 @@ export default function AerialViewBusinessTeam() {
       name: 'Bob Smith',
       roleInCompany: 'UX Designer',
       role: 'Design Lead',
-      profileImage: '/path/to/image.jpg',
+      profileImage: 'b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
       commentDescription:
         'Landa Holding is home to a youthful and inventive workforce that is brimming with enthusiasm for all they do.',
       linkedinLink: 'https://www.linkedin.com/in/bobsmith',
