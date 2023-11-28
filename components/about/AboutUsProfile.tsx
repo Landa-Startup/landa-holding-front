@@ -5,7 +5,7 @@ import AboutUsPersonalTabs from '@/components/about/AboutUsPersonalTabs';
 export default function AboutUsProfile() {
   const cardsData = [
     {
-      image: '/static/images/About/moradimehr.png',
+      image: '/static/images/our-team/Personals/a1.png',
       name: 'Rasoul Moradimehr',
       position: ' CEO',
       links: {
@@ -48,7 +48,7 @@ export default function AboutUsProfile() {
   return (
     <div className="bg-white">
       <div className="flex flex-col items-center md:items-start md:ml-36 mt-8 mb-11 text-black">
-        <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl">
+        <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl ml-2">
           PROFESSIONALS
         </h2>
         <h1 className="text-3xl font-normal leading-normal font-gilda md:text-4xl">
