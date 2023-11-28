@@ -62,7 +62,7 @@ export default function HomeOurTeam() {
   ];
 
   return (
-    <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
+    <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex">
       <div className="flex flex-col gap-2">
         <div className="ml-5 xl:ml-40 flex flex-col items-center md:items-start gap-2">
           <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
