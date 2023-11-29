@@ -7,7 +7,7 @@ import SubsidiaryCompanies from '@/components/about/SubsidiaryCompanies';
 import StoryOfLanda from '@/components/about/StoryOfLanda';
 import KeyDifferentiating from '@/components/KeyDifferentiating';
 import { cards } from '../../[lng]/statics';
-
+import i18next from 'i18next';
 export const metadata: Metadata = {
   title: 'Landa Holding | About',
   description:
@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <div>
       <Banner title="About Us" image="/static/images/a52.jpeg" />
-      <AboutUsLandaHolding />
+      <AboutUsLandaHolding/>
       <SubsidiaryCompanies />
       <StoryOfLanda />
       {/* <AboutUsCooperation /> */}
