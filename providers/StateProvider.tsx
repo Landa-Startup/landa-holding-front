@@ -70,7 +70,7 @@ let value: {
 
 const SubmitContext = createContext(value);
 
-const SubmitProvider = ({ children } : { children : ReactNode }) => {
+const SubmitProvider = ({ children} : { children : ReactNode}) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(true);
@@ -155,7 +155,7 @@ const SubmitProvider = ({ children } : { children : ReactNode }) => {
             handleBusinessFileChange,
             handleFinancialFileChange,
             handlePitchFileChange,
-            handleCvFileChange
+            handleCvFileChange,
           }}
         >
             {children}

@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Button from '../common/Button';
+import { useTranslation } from 'app/i18n';
+import { translationCard } from '@/types/global';
 
 export default function Hero({
   showLanda,
@@ -11,19 +13,31 @@ export default function Hero({
   backgroundImage,
   leftImage,
   showButton,
+  lang,
+  title
 }: {
   showLanda: boolean;
-  titles: string[] | string;
+  titles: string[];
   subTitle?: string;
   buttonBg?: string;
   backgroundImage: string;
   leftImage: string;
   showButton?: boolean;
+  lang: string;
+  title: string;
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState('');
   const [isTitleChanging, setIsTitleChanging] = useState(false); // Track if the title is changing
   const [notArray, setNotArray] = useState(false);
+
+  // async function langMaker(lang: string) {
+  //   const { t } = await useTranslation(lang, "mainPage")
+
+  //   return t
+  // }
+
+  // const t = langMaker(lang);
 
   useEffect(() => {
     if (Array.isArray(titles)) {
@@ -71,9 +85,9 @@ export default function Hero({
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
-          } text-center text-white text-3xl md:text-4xl md:tracking-[12.6px] font-barlow font-bold tracking-[7px]`}
+          } text-center text-white text-3xl md:text-4xl font-barlow font-bold ${lang === "en" ? "tracking-[7px] md:tracking-[12.6px]" : "tracking-1 md:tracking-[2px]"}`}
         >
-          Landa Holding
+          {title}
         </div>
         <div
           className={`${
@@ -88,7 +102,7 @@ export default function Hero({
           {currentTitle}
         </div>
 
-        <div className="text-center font-mono text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
+        <div className={`text-center font-mono text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 ${lang === "en" ? "tracking-[4px]" : "tracking-[1px]"}`}>
           {subTitle ? subTitle : ""}
         </div>
         {showButton ? (
@@ -96,6 +110,7 @@ export default function Hero({
             text="Register Now"
             size="notVisit"
             goto="/"
+            lang={lang}
           />
         ) : (
           <></>

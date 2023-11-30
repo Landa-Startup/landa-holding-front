@@ -8,11 +8,13 @@ export default function LatestStartupsCard({
   title,
   description,
   link,
+  lang,
 }: {
   image: string;
   title: string;
   description: string;
   link: string;
+  lang: string;
 }) {
   return (
     <Link href={link} target="_blank">
@@ -31,15 +33,15 @@ export default function LatestStartupsCard({
         />
 
         {/* Decorative Lines */}
-        <div className="w-[155px] md:w-[298px] h-[0px] left-4 md:left-0 top-[160px] md:top-[295px] absolute border border-neutral-800"></div>
+        <div className={`w-[155px] md:w-[298px] h-[0px] ${lang === "en" ?"left-4" : "right-4"} ${lang === "en" ? "md:left-0" : "md:right-0"} top-[160px] md:top-[295px] absolute border border-neutral-800`}></div>
 
         {/* Title */}
-        <div className="left-4 top-[130px] md:top-[250px] absolute text-neutral-800 text-2xl font-normal font-gilda">
+        <div className={`absolute text-neutral-800 text-2xl font-normal font-gilda ${lang === "en" ? "left-4 top-[130px] md:top-[250px]" : "right-5 top-[125px] md:top-[255px]"}`}>
           {title}
         </div>
 
         {/* Description */}
-        <div className=" text-left w-[225px] md:w-[320px] left-[16px] top-[170px] md:top-[310px] md:bottom-20 absolute text-neutral-800 text-sm md:text-base font-normal leading-[15px] font-barlow ">
+        <div className={`text-left w-[225px] md:w-[320px] left-[16px] top-[170px] md:top-[310px] md:bottom-20 absolute text-neutral-800 text-sm md:text-base font-normal leading-[15px] font-barlow ${lang === "en" ? "text-left" : "text-right"}`}>
           {description}
         </div>
 

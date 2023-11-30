@@ -38,6 +38,9 @@
       ],
       "@/router/*": [
         "router/*"
+      ],
+      "@/i18n/*":[
+        "app/18n/*"
       ]
     },
     "plugins": [

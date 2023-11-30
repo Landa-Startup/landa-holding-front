@@ -1,8 +1,10 @@
-module.exports = {
-    i18n: {
+const { i18n } = require('./package.json');
 
-      locales: ['en', 'fa'], 
- 
-      defaultLocale: 'en'
-    },
-  }
+module.exports = {
+  i18n,
+  defaultNS: 'common',
+  defaultLanguage: 'en',
+  locales: ['en', 'fa'], // Add more locales as needed
+  otherLanguages: ['fa'],
+  localePath: './public/locales',
+};

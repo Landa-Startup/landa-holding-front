@@ -706,35 +706,43 @@ const cardData: CompanySectionsInterface[] = [
 
 const cardData1: WorkFieldsInterface[] = [
     {
-      title: 'Artificial Intelligence',
+      titleEN: 'Artificial Intelligence',
+      titleFA: 'هوش مصنوعی',
       image: '/static/images/Home/Priority/vr-glasses 2.png',
     },
     {
-      title: 'Virtual Reality',
+      titleEN: 'Virtual Reality',
+      titleFA: 'واقعیت مجازی',
       image: '/static/images/Home/Priority/system 2.png',
     },
     {
-      title: 'Renewable Energy',
+      titleEN: 'Renewable Energy',
+      titleFA: 'انرژی های تجدید پذیر',
       image: '/static/images/Home/Priority/online-shop 1.png',
     },
     {
-      title: 'The Environment',
+      titleEN: 'The Environment',
+      titleFA: 'محیط زیست',
       image: '/static/images/Home/Priority/planet-earth 1.png',
     },
     {
-      title: 'Entertainment',
+      titleEN: 'Entertainment',
+      titleFA: 'سرگرمی',
       image: '/static/images/Home/Priority/ai 2.png',
     },
     {
-      title: 'Biomedical Engineering',
+      titleEN: 'Biomedical Engineering',
+      titleFA: 'مهندسی پزشکی',
       image: '/static/images/Home/Priority/man 2.png',
     },
     {
-      title: 'Services for Teenagers',
+      titleEN: 'Services for Teenagers',
+      titleFA: 'خدمات برای نوجوانان',
       image: '/static/images/Home/Priority/process 2.png',
     },
     {
-      title: 'Tourism Services',
+      titleEN: 'Tourism Services',
+      titleFA: 'خدمات گردشگری',
       image: '/static/images/Home/Priority/world 2.png',
     },
 ];
@@ -765,21 +773,27 @@ const cardData2: SportsInterface[] = [
 const cardData3: StartUpsInterface[] = [
     {
       image: '/static/images/Home/Startups/trip.png',
-      title: 'LANDA TRIP',
-      description: 'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
+      titleEN: 'LANDA TRIP',
+      titleFA: 'لاندا تریپ',
+      descriptionEN: 'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
+      descriptionFA: 'لاندا تریپ یک شرکت نوآور نوآور است که دوره های آموزشی مفیدی را برای همه افراد علاقه مند و کسب و کار ایجاد، ترویج و اجرا می کند',
       link: 'https://landatrip.com/',
     },
 
     {
       image: '/static/images/Home/Startups/diaco.png',
-      title: 'DIACO',
-      description: 'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
+      titleEN: 'DIACO',
+      titleFA: 'دیاکو',
+      descriptionEN: 'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
+      descriptionFA: 'دیاکو یک پلتفرم نوآوری باز است که به عنوان یک واسطه بین جویندگان فناوری و ارائه دهندگان برای برآورده کردن خواسته های فناوری آنها عمل می کند',
       link: 'https://irdiaco.ca/',
     },
     {
       image: '/static/images/Home/Startups/vision-raft.png',
-      title: 'VISION RAFT',
-      description: 'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
+      titleEN: 'VISION RAFT',
+      titleFA: 'ویژن رفت',
+      descriptionEN: 'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
+      descriptionFA: 'این ویژن رفت است، یک پلتفرم واقعیت مجازی با تمرکز بر آموزش و سرگرمی جوانان که کیفیت یادگیری آنها را افزایش می دهد',
       link: 'https://invigorated-drop-231359.framer.app',
     },
 ];
@@ -930,57 +944,107 @@ const partners3: LogosInterface[] = [
 ];
 
 
-const services: ServicesInterface[] = [
+const servicesEN: ServicesInterface[] = [
     {
-      title: 'Pitch deck preparation',
-      image: '1.png',
+      "title": 'Pitch deck preparation',
+      "image": '1.png',
     },
     {
-      title: 'Mentoring',
-      image: '2.png',
+      "title": 'Mentoring',
+      "image": '2.png',
     },
     {
-      title: 'Networking with suitable individuals',
-      image: '3.png',
+      "title": 'Networking with suitable individuals',
+      "image": '3.png',
     },
     {
-      title: 'Initial financing',
-      image: '4.png',
+      "title": 'Initial financing',
+      "image": '4.png',
     },
     {
-      title: 'MVP development',
-      image: '5.png',
+      "title": 'MVP development',
+      "image": '5.png',
     },
     {
-      title: 'Research and development',
-      image: '6.png',
+      "title": 'Research and development',
+      "image": '6.png',
     },
     {
-      title: 'Website design',
-      image: '7.png',
+      "title": 'Website design',
+      "image": '7.png',
     },
     {
-      title: 'Business plan creation',
-      image: '8.png',
+      "title": 'Business plan creation',
+      "image": '8.png',
     },
     {
-      title: 'Idea brainstorming and development',
-      image: '9.png',
+      "title": 'Idea brainstorming and development',
+      "image": '9.png',
     },
     {
-      title: 'Cooperative workspace',
-      image: '10.png',
+      "title": 'Cooperative workspace',
+      "image": '10.png',
     },
     {
-      title: 'Patent registration',
-      image: '11.png',
+      "title": 'Patent registration',
+      "image": '11.png',
     },
     {
-      title: 'Organizing startup presentation events',
-      image: '12.png',
+      "title": 'Organizing startup presentation events',
+      "image": '12.png',
     },
 ];
 
+const servicesFA: ServicesInterface[] = [
+  {
+    "title": "آماده سازی فایل ارايه",
+    "image": '1.png',
+  },
+  {
+    "title": "منتورینگ",
+    "image": "2.png",
+  },
+  {
+    "title": "شبکه سازی با افراد مناسب",
+    "image": "3.png",
+  },
+  {
+    "title": "تامین مالی اولیه",
+    "image": "4.png",
+  },
+  {
+    "title": "توسعه MVP",
+    "image": "5.png",
+  },
+  {
+    "title": "تحقیق و توسعه",
+    "image": "6.png",
+  },
+  {
+    "title": "طراحی وب سایت",
+    "image": "7.png",
+  },
+  {
+    "title": "ایجاد طرح کسب و کار",
+    "image": "8.png",
+  },
+  {
+    "title": "طوفان فکری و توسعه ایده",
+    "image": "9.png",
+  },
+  {
+    "title": "فضای کار تعاونی",
+    "image": "10.png",
+  },
+  {
+    "title": "ثبت اختراع",
+    "image": "11.png",
+  },
+  {
+    "title": "برگزاری رویدادهای ارائه استارتاپ",
+    "image": "12.png",
+  },
+];
 
 const images: ImagesInterface[] = [
     {
@@ -1070,7 +1134,7 @@ const images: ImagesInterface[] = [
 ];
 
 
-const cardsData: AboutUsDataInterface[] = [
+const cardsDataEN: AboutUsDataInterface[] = [
     {
       image: '/static/images/our-team/Personals/a1.png',
       name: 'Rasoul Moradimehr',
@@ -1107,6 +1171,45 @@ const cardsData: AboutUsDataInterface[] = [
         instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
       },
     },
+];
+
+const cardsDataFA: AboutUsDataInterface[] = [
+  {
+    image: '/static/images/our-team/Personals/a1.png',
+    name: 'رسول مرادیمهر',
+    position: ' مدیر عامل',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
+      whatsapp: 'wa.me/+989134233863',
+      email: 'mailto:rasoulmoradimehr@gmail.com',
+      website: 'https://moradimehr.com/',
+      instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
+    },
+  },
+  {
+    image: '/static/images/about/mjafari.jpg',
+    name: 'مرتضی جعفری',
+    position: 'ارتباطات بین الملل',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
+      whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
+      email: 'mailto:morteza_jafari49@yahoo.com',
+      website: 'https://mortezajafari.ca/',
+      instagram: 'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==',
+    },
+  },
+  {
+    image: '/static/images/our-team/Personals/a2.png',
+    name: 'هادی حسن پور',
+    position: 'COTB',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
+      whatsapp: 'https://wa.me/+12892693933',
+      email: 'mailto:hadihasanpor@gmail.com',
+      website: 'https://www.hadihasanpour.ca/',
+      instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
+    },
+  },
 ];
 
 
@@ -1147,7 +1250,7 @@ const cards: CardsList[] = [
   },
 ];
 
-const acceleratorProcessItems = [
+const acceleratorProcessItemsEN = [
   "1. Idea generation for innovative business creation",
   "2. Idea nurturing",
   "3. Creating a pitch deck",
@@ -1162,6 +1265,23 @@ const acceleratorProcessItems = [
   "12. Marketing and sales strategy",
   "13. Business development",
   "14. Preparation and valuation of business plans",
+]
+
+const acceleratorProcessItemsFA = [
+  "تولید ایده برای ایجاد کسب و کار نوآورانه",
+  "پرورش دادن ایده",
+  "ساختن یک فایل ارايه",
+  "مدل سازی مالی",
+  "برنامه های منتورینگ",
+  "شبکه سازی",
+  "فضای کار تعاونی",
+  "بازاریابی دیجیتال",
+  "مشاوره جهت اخذ مجوزهای لازم",
+  "سرمایه گذاری در مرحله ایده",
+  "گسترش سهم بازار",
+  "استراتژی بازاریابی و فروش",
+  "توسعه تجاری",
+  "تهیه و ارزیابی طرح های تجاری",
 ]
 
 
@@ -1180,10 +1300,12 @@ export {
 	partners1,
 	partners2,
 	partners3,
-	services,
+	servicesEN,
+  servicesFA,
 	images,
-	cardsData,
+	cardsDataEN,
+  cardsDataFA,
   preparationStatsOption,
   cards,
-  acceleratorProcessItems
+  acceleratorProcessItemsEN
 }

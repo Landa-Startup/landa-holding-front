@@ -2,9 +2,12 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import ArrowDown from '../icons/acceleration/ArrowDown';
-import { services } from '../../app/[lang]/statics';
 
-export default function AccelerationServices() {
+import { ServicesInterface } from '../../types/global'
+
+export default function AccelerationServices(
+  {services} : {services : ServicesInterface[]}
+) {
   const [expanded, setExpanded] = useState(true);
 
   const displayedServices = expanded ? services : services.slice(0, 6);
@@ -14,7 +17,7 @@ export default function AccelerationServices() {
   };
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-11 mt-8 border-b-2 pb-14">
-      {displayedServices.map((service) => (
+      {services.map((service) => (
         <div
           className="md:w-[343px] h-[115px] text-[#2B2115] overflow-hidden font-barlow text-xl rounded-sm bg-[#F7F3EE] flex justify-center items-center relative"
           key={service.title}

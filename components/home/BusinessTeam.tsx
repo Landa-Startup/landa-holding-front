@@ -6,7 +6,9 @@ import Chevron from '../common/Chevron';
 import Link from 'next/link';
 import Button from '../common/Button';
 
-export default function AerialViewBusinessTeam() {
+export default function AerialViewBusinessTeam(
+  // {lang} : {lang: string}
+) {
   return (
     <div
       style={{

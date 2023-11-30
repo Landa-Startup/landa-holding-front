@@ -16,6 +16,7 @@ type ButtonProps = DetailedHTMLProps<
   bgColor?: 'Primary' | 'Yellow';
   goto?: string;
   disabled?: boolean;
+  lang: string
 };
 
 export default function Button({
@@ -24,7 +25,8 @@ export default function Button({
   type = 'button',
   bgColor,
   goto,
-  disabled = true
+  disabled = true,
+  lang,
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
@@ -32,6 +34,8 @@ export default function Button({
   const router = useRouter();
 
   const { send } = useSubmit();
+
+  console.log(lang);
 
   return (
     <button
@@ -49,11 +53,11 @@ export default function Button({
     >
       <span className="absolute inset-0 bg-black"></span>
       <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
-        {text ? text : `${isVisitSize ? "" : `${send ? 'Submitting ....' : 'Submit'}`}`}
+        {text ? text : `${isVisitSize ? "" : `${send ? `${lang === "en" ? 'Submitting ....' : 'در حال ثبت'}` : `${lang === "en" ? 'Submit' : 'ثبت'}`}`}`}
       </span>
       {isVisitSize && !text && (
         <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
-          {"Visit Now"}
+          {lang === "en" ? "Visit Now" : "مشاهده کنید"}
         </span>
       )}
     </button>

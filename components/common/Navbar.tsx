@@ -1,13 +1,16 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
+import { useTranslation } from 'app/i18n';
 
-export default function Navbar({ children }: { children: React.ReactNode }) {
+export default function Navbar({ children, lang }: { children: React.ReactNode, lang:string }) {
   const drawerRef = useRef<HTMLInputElement>(null);
-  const menuRef = useRef<HTMLDetailsElement>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  // const menuRef = useRef<HTMLDetailsElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // const { t } = await useTranslation(lang, "mainPage");
 
   const menuItems = [
     { label: 'HOME', href: '/' },
@@ -25,7 +28,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'acceleration', href: '/acceleration' },
   ];
   const handleLinkClick = () => {
-    // setIsMenuOpen(false);
+    setIsMenuOpen(false);
     if (!drawerRef.current) {
       console.log(drawerRef);
       return;

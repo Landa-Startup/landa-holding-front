@@ -1,6 +1,7 @@
 import React from 'react'
 import PrimaryDot from '../icons/acceleration/PrimaryDot'
 import Image from 'next/image'
+import { useTranslation } from 'app/i18n';
 
 type Props = {
     addedClass: string;
@@ -12,9 +13,10 @@ type Props = {
     textDown: string;
     secondImageSrc: string;
     itemsList?: Array<string>;
+    lang: string;
 }
 
-export default function AccelerationCard({
+export default async function AccelerationCard({
     addedClass,
     title,
     slogan,
@@ -23,14 +25,18 @@ export default function AccelerationCard({
     textUp,
     textDown,
     secondImageSrc,
-    itemsList
+    itemsList,
+    lang
 }: Props) {
+
+  const { t } = await useTranslation(lang, "acceleration");
+
   return (
     <>
-      <div className={`bg-[#F7F3EE] md:w-[1205px] relative px-2 md:px-8 lg:px-8 xl:px-8 ${addedClass}`}>
-        <div className='flex items-center gap-2 mt-8 md:mt-[77px]'>
+      <div className={`bg-[#F7F3EE] md:w-[1205px] relative px-2 md:px-8 lg:px-8 xl:px-8 ${addedClass}`} dir={t('lng') === "en" ? "ltr" : "rtl"}>
+        <div className='flex items-end gap-2 mt-8 md:mt-[77px]'>
             <PrimaryDot />
-            <div className='flex flex-col md:flex-row'>
+            <div className='flex flex-col items-start md:flex-row'>
                 <span className='text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2'>
                     {title}
                 </span>
@@ -48,18 +54,21 @@ export default function AccelerationCard({
           loading='lazy'
         />
         <div className='flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6 pb-3 md:ml-48 lg:ml-20 xl:ml-0'>
-            <p>{textUp}</p>
-            <p className='mt-5'>{textDown}</p>
+            <p className={`${t('lng') && "text-right"}`}>{textUp}</p>
+            <p className={`mt-5 ${t('lng') && "text-right"}`}>{textDown}</p>
         </div>
-        {itemsList && 
-          <span className='text-[#AA8453] font-gilda text-3xl mt-8'>
-            Accelerator Process
+        <div className='flex justify-start'>
+         {itemsList && 
+          <span className={`text-[#AA8453] font-gilda text-3xl mt-8 ${t('lng') === "en" ? "" : "text-right"}`}>
+            {t('AcceleratorProcess', {returnObjects: true})[0].title}
           </span>
-        }
+        }  
+        </div>
+       
         {itemsList && 
           <div className='grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-6 text-xs md:text-sm lg:text-sm xl:text-sm'>
             {itemsList?.map((item, index) => (
-                <span className='text-normal lg:text-lg'>{item}</span>
+                <span className={`${t('lng') === "en" ? "text-normal" : "text-right"} lg:text-lg`}>{item}</span>
             ))}
           </div>
         }

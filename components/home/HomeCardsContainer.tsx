@@ -3,7 +3,9 @@ import HomeCards from './HomeCards';
 import Lines from '../icons/Home/Lines';
 import { cardData } from '../../app/[lang]/statics';
 
-export default function HomeCardsContainer() {
+export default function HomeCardsContainer(
+  {lang} : {lang: string}
+) {
   // Define data for the text card containers
 
   return (
@@ -19,6 +21,7 @@ export default function HomeCardsContainer() {
           reverse={data.reverse}
           addedClass={data.addedClass}
           link={data.link}
+          lang={lang}
         />
       ))}
     </div>

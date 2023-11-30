@@ -205,7 +205,8 @@ interface CompanySectionsInterface {
 }
 
 interface WorkFieldsInterface {
-  title: string,
+  titleEN: string,
+  titleFA: string,
   image: string
 }
 
@@ -225,8 +226,10 @@ interface SportsInterface {
 
 interface StartUpsInterface {
   image: string,
-  title: string,
-  description: string,
+  titleEN: string,
+  titleFA: string,
+  descriptionEN: string,
+  descriptionFA: string,
   link: string,
 }
 
@@ -242,6 +245,7 @@ interface HomeCardsProps {
   reverse?: boolean;
   addedClass?: string;
   link: string;
+  lang: string;
 }
 
 interface HomeCardsLeftProps {
@@ -304,6 +308,36 @@ interface CardsList {
   link: string
 }
 
+interface translationCard {
+  title: "Investment",
+  text: string,
+  reverse: boolean,
+  show: boolean,
+  index: number,
+  link: string,
+  addedClass: string
+}
+
+// interface translation {
+//   Acceleration: "Acceleration",
+//   Investment: "Investment",
+//   Academy: "Academy",
+//   hero_subtitle: "Feel The Future",
+//   LandaHolding: "Landa Holding",
+//   "Home": "Home",
+//   "ABOUT US": "ABOUT US",
+//   "ACCELERATION": "ACCELERATION",
+//   "CONTACT US": "CONTACT US",
+//   "OUR TEAM": "OUR TEAM",
+//   "FORMS": "FORMS",
+//   "INVESTOR CENTER": "INVESTOR CENTER",
+//   "ENTREPRENEUR CENTER": "ENTREPRENEUR CENTER",
+//   "BUSINESS PARTNERS": "BUSINESS PARTNERS",
+//   "STARTUPS VALIDATION": "STARTUPS VALIDATION",
+//   "APPLY JOB": "APPLY JOB",
+//   "acceleration": "acceleration",
+// }
+
 
 export {
   ContactUSFormData,
@@ -335,5 +369,6 @@ export {
   LoginFormData,
   DecodedToken,
   TableData,
-  MagazineData
+  MagazineData,
+  translationCard
 };
