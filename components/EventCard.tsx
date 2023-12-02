@@ -63,7 +63,7 @@ export default function EventCard() {
               <div className="flex gap-2 items-center">
                 <Pin />
                 <span className="text-primary">
-                  Esfahan-Esfahan-nabsh Esfahan-p26
+                  Esfahan-Esfahan-nabsh Esfahan
                 </span>
               </div>
               <div className="flex gap-2 items-center">
