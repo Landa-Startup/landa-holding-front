@@ -135,22 +135,22 @@ export default function Footer() {
             <br />
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
-            No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada
+          No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada
           </div>
           <div className="text-base font-normal text-justify text-neutral-400">
-            +1 (416) 557-7622
+          +1 (289) 269-3933
           </div>
           <div className="text-base font-normal text-justify text-neutral-400 border-t border-t-white pt-1">
-            No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran
+          Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran
           </div>
           <div className="text-base font-normal text-justify text-neutral-400 border-b border-b-white pb-1">
-            +98 (912) 0539563
+          +98 (912) 0539563
           </div>
           <div className="text-base font-normal text-neutral-400">
-            Tala Complex, Saadat Abad Street, Isfahan, Iran
+          Office C, 5th Floor, Tala Complex, Sa'adat Abad Street, Isfahan, Iran
           </div>
           <div className="text-base font-normal text-neutral-400">
-            +98 (313) 1311914
+          +98 (313) 1311914
           </div>
         </div>
       </div>
