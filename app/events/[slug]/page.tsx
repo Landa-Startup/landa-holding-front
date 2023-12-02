@@ -2,7 +2,6 @@ import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 import React from 'react';
 import Image from 'next/image';
-import Input from '@/components/common/form/Input';
 import Calender from '@/components/icons/Panel/Calender';
 import Instagram from '@/components/icons/footer/Instagram';
 import Whatsapp from '@/components/icons/footer/Whatsapp';
@@ -72,9 +71,9 @@ export default function Page() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col">
       <Banner image="/static/images/EventsBanner.png" title="UPCOMING EVENTS" />
-      <div className="md:mx-28 md:my-16 p-6 border shadow-md rounded-sm">
+      <div className="md:mx-28 md:my-16 m-3 p-6 border shadow-md rounded-sm">
         <div className="flex flex-col md:flex-row justify-between gap-20">
           <div className="md:w-2/3 flex flex-col gap-4">
             {cardData.map((card, index) => {
