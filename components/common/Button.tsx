@@ -1,41 +1,33 @@
 'use client';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React, { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
-import { useSubmit } from '../../providers/StateProvider';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 // Define the ButtonProps type
-// go to prop causes a redirext
-// go to prop causes a redirext
 type ButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > & {
-  text?: string;
-  size?: string;
+  text: string;
+  size: string;
   type?: 'button' | 'reset' | 'submit';
+  addedClass?: string;
   bgColor?: 'Primary' | 'Yellow';
   goto?: string;
-  disabled?: boolean;
-  lang: string
 };
 
 export default function Button({
   text,
   size,
   type = 'button',
+  addedClass,
   bgColor,
-  goto,
-  disabled = true,
-  lang,
+  goto
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
 
   const router = useRouter();
-
-  const { send } = useSubmit();
-
-  console.log(lang);
 
   return (
     <Link href={goto || '/'} className={addedClass}>
@@ -51,9 +43,14 @@ export default function Button({
       >
         <span className="absolute inset-0 bg-black"></span>
         <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
-          {lang === "en" ? "Visit Now" : "مشاهده کنید"}
+          {text}
         </span>
-      )}
-    </button>
+        {isVisitSize && (
+          <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
+            {text}
+          </span>
+        )}
+      </button>
+    </Link>
   );
 }
