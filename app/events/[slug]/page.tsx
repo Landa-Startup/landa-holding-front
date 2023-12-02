@@ -1,4 +1,3 @@
-'use client';
 import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 import React from 'react';
@@ -9,11 +8,12 @@ import Instagram from '@/components/icons/footer/Instagram';
 import Whatsapp from '@/components/icons/footer/Whatsapp';
 import LinkedIn from '@/components/icons/footer/LinkedIn';
 import Button from '@/components/common/Button';
-// export const metadata: Metadata = {
-//   title: 'Landa Holding | Event',
-//   description:
-//     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
-// };
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Event',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+};
 
 export default function Page() {
   // const pathname = usePathname();
@@ -74,15 +74,15 @@ export default function Page() {
   return (
     <div>
       <Banner image="/static/images/EventsBanner.png" title="UPCOMING EVENTS" />
-      <div className="mx-28 my-16 p-6 border shadow-md rounded-sm">
-        <div className="flex justify-between gap-20">
-          <div className="w-2/3 flex flex-col gap-4">
+      <div className="md:mx-28 md:my-16 p-6 border shadow-md rounded-sm">
+        <div className="flex flex-col md:flex-row justify-between gap-20">
+          <div className="md:w-2/3 flex flex-col gap-4">
             {cardData.map((card, index) => {
               return (
                 <div key={index}>
                   <p className="font-barlow">{card.description1}</p>
                   <p className="font-barlow">{card.description2}</p>
-                  <div className="flex justify-around mt-5 mb-12">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-10 justify-around mt-5 mb-12 font-gilda">
                     {card.people.map((person, index) => {
                       return (
                         <div key={index} className="flex gap-2">
@@ -100,7 +100,7 @@ export default function Page() {
                     }, [])}
                   </div>
                   <p className="font-barlow">{card.description3}</p>
-                  <div className="grid grid-cols-2 gap-8 mt-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
                     <input
                       className="w-[350px] h-[50px] p-5 bg-[#FAFAFA] border border-[#E5E5E5] rounded-md"
                       type="text"
@@ -144,7 +144,7 @@ export default function Page() {
           </div>
           {cardData.map((card, index) => {
             return (
-              <div key={index} className="w-1/3">
+              <div key={index} className="md:w-1/3">
                 <Image
                   src={card.map}
                   alt={card.title}
@@ -200,7 +200,7 @@ export default function Page() {
                     <span>{card.date.endTime}</span>
                     <span>{card.date.end}</span>
                   </div>
-                  <button className="w-[174px] h-[50px] px-4 border border-black rounded-sm self-end">
+                  <button className="w-[174px] h-[50px] px-4 border border-black rounded-sm self-center md:self-end">
                     Add To Calender
                   </button>
                 </div>
@@ -215,9 +215,9 @@ export default function Page() {
                     <input
                       className="w-[350px] h-[50px] p-5 bg-[#FAFAFA] border border-[#E5E5E5]"
                       type="text"
-                      placeholder="HPP//ddkksso.ddkke.aalhb 23wwe..."
+                      placeholder="https://ddkksso.ddkke.aalhb.com"
                     />
-                    <button className="w-[118px] h-[50px] border border-black rounded-sm self-end text-xs">
+                    <button className="w-[118px] h-[50px] p-2 border border-black rounded-sm self-end text-xs">
                       Copy the link
                     </button>
                   </div>
