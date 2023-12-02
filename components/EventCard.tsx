@@ -71,14 +71,14 @@ export default function EventCard() {
                 <span className="text-primary">Investment</span>
               </div>
             </div>
+            <Button
+              size="visit"
+              text="Register"
+              goto="/"
+              addedClass="absolute bottom-6 right-6 self-center"
+              bgColor="Primary"
+            />
           </div>
-          <Button
-            size="visit"
-            text="Register"
-            goto="/"
-            addedClass="md:absolute bottom-6 right-6 self-center"
-            bgColor="Primary"
-          />
         </Link>
       ))}
     </div>
