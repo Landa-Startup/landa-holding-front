@@ -31,7 +31,7 @@ export default function EventCard() {
       {events.map((event, index) => (
         <Link
           key={index}
-          href={'event/' + event.slug}
+          href={'events/' + event.slug}
           className="flex flex-col md:flex-row gap-10 p-6 rounded-sm relative shadow-lg border-t border-black/10"
         >
           <Image
