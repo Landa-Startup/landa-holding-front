@@ -30,7 +30,7 @@ export default function Button({
   const router = useRouter();
 
   return (
-    <Link href={goto || '/'}>
+    <Link href={goto || '/'} className={addedClass}>
       <button
         className={`btn2 ${
           isVisitSize
