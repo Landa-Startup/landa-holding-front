@@ -32,14 +32,14 @@ export default function EventCard() {
         <Link
           key={index}
           href={'event/' + event.slug}
-          className="flex gap-10 px-4 py-6 rounded-sm relative shadow-lg border-t border-black/10"
+          className="flex flex-col md:flex-row gap-10 p-6 rounded-sm relative shadow-lg border-t border-black/10"
         >
           <Image
-            className="rounded-sm"
+            className="rounded-sm object-cover"
             alt="Event"
             src="/static/images/event1.png"
-            width={500}
-            height={320}
+            width={507}
+            height={356}
           />
           <div className="flex flex-col gap-4">
             <span className="font-gilda text-3xl">Lorem Ipsum</span>
@@ -55,7 +55,7 @@ export default function EventCard() {
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
             </p>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 font-gilda">
               <div className="flex gap-2 items-center">
                 <Calender />
                 <span className="text-primary">05/23/2024 Saturday</span>
@@ -72,12 +72,13 @@ export default function EventCard() {
               </div>
             </div>
           </div>
-          {/* <Button
-         size="not"
-         text="Register"
-         goto="/"
-         addedClass="absolute bottom-5 right-2"
-       /> */}
+          <Button
+            size="visit"
+            text="Register"
+            goto="/"
+            addedClass="md:absolute bottom-6 right-6 self-center"
+            bgColor="Primary"
+          />
         </Link>
       ))}
     </div>
