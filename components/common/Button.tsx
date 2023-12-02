@@ -38,24 +38,18 @@ export default function Button({
   console.log(lang);
 
   return (
-    <button
-      onClick={() => {
-        goto ? router.push(goto || '/') : ""
-      }}
-      className={`btn2 ${
-        isVisitSize
-          ? 'w-[135px] md:w-[219px] h-[32px] md:h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px]'
-          : 'w-full md:w-[235px] lg:w-[300px] md:flex h-11 pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px]'
-      } ${
-        bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
-      } px-10 py-5 relative border border-white uppercase tracking-wider leading-none overflow-hidden inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal hover:text-white mt-3 btn btn-wide dark:text-current`}
-      type={type}
-    >
-      <span className="absolute inset-0 bg-black"></span>
-      <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
-        {text ? text : `${isVisitSize ? "" : `${send ? `${lang === "en" ? 'Submitting ....' : 'در حال ثبت'}` : `${lang === "en" ? 'Submit' : 'ثبت'}`}`}`}
-      </span>
-      {isVisitSize && !text && (
+    <Link href={goto || '/'} className={addedClass}>
+      <button
+        className={`btn2 ${
+          isVisitSize
+            ? 'w-[135px] md:w-[219px] h-[32px] md:h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px]'
+            : 'hidden md:flex h-11 pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px]'
+        } ${
+          bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
+        } px-10 py-5 relative border border-white uppercase tracking-wider leading-none overflow-hidden inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal hover:text-white ${addedClass}`}
+        type={type}
+      >
+        <span className="absolute inset-0 bg-black"></span>
         <span className="absolute inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-medium leading-none">
           {lang === "en" ? "Visit Now" : "مشاهده کنید"}
         </span>
