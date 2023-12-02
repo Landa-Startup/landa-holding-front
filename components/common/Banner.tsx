@@ -8,7 +8,7 @@ export default function Banner({
   title: string;
 }) {
   return (
-    <div className="relative">
+    <div className="relative h-[650px]">
       {/* Background Image with Blur and Overlay */}
       <div
         style={{
@@ -16,15 +16,15 @@ export default function Banner({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className="h-[250px] lg:h-[512px] absolute inset-0 blur-[2px]"
+        className="h-[650px] lg:h-[512px] absolute inset-0 blur-[2px]"
       ></div>
 
       <div
-        className="h-[250px] lg:h-[512px] justify-center flex items-center relative"
+        className="h-[650px] lg:h-[512px] justify-center flex items-center relative"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} // Adding overlay with transparency
       >
         {/* Content Overlay */}
-        <div className="h-[250px] lg:h-[512px] justify-center lg:justify-start flex items-stretch relative">
+        <div className="h-[650px] lg:h-[512px] justify-center lg:justify-start flex items-stretch relative">
           <div className="flex flex-col justify-center items-center text-center lg:m-auto md:m-auto">
             {/* Text Content */}
             <p className="text-neutral-50 text-base font-normal tracking-[5.60px] font-condensed">
