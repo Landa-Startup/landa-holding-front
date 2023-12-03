@@ -65,25 +65,29 @@ export default function page() {
           </p>
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[756px] mt-6 md:mt-16 relative px-2 md:px-8 lg:px-8 xl:px-8">
-          <div className="flex items-center gap-2 mt-10 md:mt-[77px] md:pl-48 lg:pl-20 xl:pl-0">
-            <PrimaryDot />
-            <div className="flex flex-col md:flex-row">
-              <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2">
-                FORUGH ACCELERATOR :
-              </span>
-              <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
-                Igniting Ideas and Startups
-              </span>
+          <div className="flex items-center justify-between gap-2 mt-10 md:mt-[77px] md:pl-48 lg:pl-20 xl:pl-0">
+            <div className="w-[95%] flex justify-between md:justify-normal md:items-center">
+              <div className="flex items-center">
+                <PrimaryDot />
+              </div>
+              <div className="ml-4">
+                <span className="text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2">
+                  FORUGH ACCELERATOR :
+                </span>
+                <span className="text-[#AA8453] font-gilda text-base md:text-3xl">
+                  Igniting Ideas and Startups
+                </span>
+              </div>
             </div>
+            <Image
+              className="w-[52px] h-[44px] md:mb-6"
+              src="/static/images/acceleration/Rectangle 2978.png"
+              alt="FORUGH ACCELERATOR"
+              width={71}
+              height={60}
+              loading="lazy"
+            />
           </div>
-          <Image
-            className="absolute right-7 top-11 w-[52px] h-[44px]"
-            src="/static/images/acceleration/Rectangle 2978.png"
-            alt="FORUGH ACCELERATOR"
-            width={71}
-            height={60}
-            loading="lazy"
-          />
           <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] pb-3 mt-6 md:ml-48 lg:ml-20 xl:ml-0">
             <p>
               In the Landa Accelerator division, innovative ideas and startups
@@ -131,26 +135,32 @@ export default function page() {
         </div>
         <div className="bg-[#F7F3EE] md:w-[1205px] md:h-[646px] mt-12 relative pb-3 px-2 md:px-8 lg:px-8 xl:px-8">
           <div className="flex gap-2 mt-6 md:mt-[77px] items-center md:pl-48 lg:pl-20 xl:pl-0">
-            <PrimaryDot />
-            <div className="flex">
-              <div className="flex flex-col md:flex-row ml-0">
-                <span className="text-[#80633E] font-gilda text-xl md:text-3xl">
-                  FARAZAMAN ACCELERATOR :
-                </span>
-                <span className="text-[#AA8453] font-gilda text-base md:text-3xl ml-2">
-                  Supporting the Youth
-                </span>
+            <div className="w-[95%] flex justify-between md:justify-normal md:items-center">
+              <div className="flex items-center">
+                <PrimaryDot />
+              </div>
+              <div className="flex items-center">
+                <div className="flex flex-col md:flex-row ml-0">
+                  <div className="ml-4">
+                    <span className="text-[#80633E] font-gilda text-xl md:text-3xl">
+                      FARAZAMAN ACCELERATOR :
+                    </span>
+                    <span className="text-[#AA8453] font-gilda text-base md:text-3xl ml-2">
+                      Supporting the Youth
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
+            <Image
+              className="md:mb-8 w-[46px] h-[46px]"
+              src="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
+              alt="FORUGH ACCELERATOR"
+              width={71}
+              height={60}
+              loading="lazy"
+            />
           </div>
-          <Image
-            className="absolute right-1 top-8 w-[46px] h-[46px]"
-            src="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
-            alt="FORUGH ACCELERATOR"
-            width={71}
-            height={60}
-            loading="lazy"
-          />
           <div className="flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6 md:pl-48 lg:pl-20 xl:pl-0">
             <p>
               As part of the higher education community, we, under the name of

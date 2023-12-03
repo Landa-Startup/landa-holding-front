@@ -51,7 +51,7 @@ export default function Hero({
         )}
         <Image
           loading="lazy"
-          className="w-[385px] h-[382px] sm:w-[305px] sm:h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] w-[365px] h-[420px] xl:h-[560px] xl:w-[420px]   absolute -right-16 md:right-0 bottom-0 "
+          className="w-[385px] h-[382px]  sm:w-[305px] sm:h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] w-[365px] h-[420px] xl:h-[560px] xl:w-[420px]   absolute -right-16 md:right-0 bottom-0 "
           src={`${leftImage}`}
           alt="Landa"
           width={500}
