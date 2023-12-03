@@ -120,7 +120,7 @@ export default function page() {
               <span>14. Preparation and valuation of business plans</span>
             </div>
             <Image
-              className="absolute bottom-0 right-0 opacity-20"
+              className="absolute bottom-0 right-0 opacity-30 grayscale-[60%]"
               src="/static/images/acceleration/87ac8df38c4ff428ee903bb8595ad970.png"
               alt="forough"
               width={521}
