@@ -90,10 +90,10 @@ export default function EntrepreneursForm() {
 
   return (
     <>
-      <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+      <div className="container m-16 mx-auto bg-[#faf8f5] p-20 dark:bg-transparent">
         <EntrepreneursTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-span-1">
               <Input
                 register={register}
@@ -105,7 +105,7 @@ export default function EntrepreneursForm() {
                 patternValue=""
                 patternMessage=""
                 placeholder="Enter your Company Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
             </div>
@@ -130,7 +130,7 @@ export default function EntrepreneursForm() {
                 label="Website"
                 required="Website is Required."
                 placeholder="Enter your Website"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
                 patternMessage=""
@@ -146,7 +146,7 @@ export default function EntrepreneursForm() {
                 label="Field Of Professional"
                 required=" Field Of Professional is Required."
                 placeholder="Enter your Field Of Professional"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
                 patternMessage={''}

@@ -31,7 +31,7 @@ export default function Input({
   inputValue?: string;
 }) {
   
-  let value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
+  const value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
     <div className={containerClass}>
       <label htmlFor={nameInput} className={`pl-2 text-lg ${labelClass}`}>

@@ -30,7 +30,7 @@ const PersonalInfoInput = ({
             patternValue=""
             patternMessage=""
             placeholder="Enter your First Name"
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -46,7 +46,7 @@ const PersonalInfoInput = ({
             patternValue=""
             patternMessage=""
             placeholder="Enter your Last Name"
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -62,7 +62,7 @@ const PersonalInfoInput = ({
             patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             patternMessage="Enter a Valid Email Address"
             placeholder="Enter your Email Address"
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -78,7 +78,7 @@ const PersonalInfoInput = ({
             patternValue="^[0-9]{11}$"
             patternMessage="Enter a Valid Phone Number"
             placeholder="Enter your Phone Number"
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}

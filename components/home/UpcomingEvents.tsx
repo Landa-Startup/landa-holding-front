@@ -3,26 +3,26 @@ import Button from '../common/Button';
 
 export default function UpcomingEvents() {
   return (
-    <div className="h-[480px] relative bg-[#FAFAFA]">
-      <div className="left-20 md:left-[185px] top-10 md:top-[29px] absolute text-neutral-800 text-2xl md:text-4xl font-normal font-gilda">
+    <div className="relative h-[480px] bg-[#FAFAFA]">
+      <div className="absolute left-20 top-10 font-gilda text-2xl font-normal text-neutral-800 md:left-[185px] md:top-[29px] md:text-4xl">
         UPCOMING EVENT
       </div>
-      <div className="md:pr-[40px] left-[20px] md:left-[174px] top-[118px] absolute flex-col justify-center items-start gap-[18px] inline-flex">
-        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
-          <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
+      <div className="absolute left-[20px] top-[118px] inline-flex flex-col items-start justify-center gap-[18px] md:left-[174px] md:pr-[40px]">
+        <div className="flex items-center justify-between self-stretch md:w-[1100px]">
+          <div className="flex items-start justify-start gap-1 md:w-[307px] md:gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
-              <div className="text-4xl font-medium text-right text-primary">
+              <div className="text-right text-4xl font-medium text-primary">
                 08
               </div>
-              <div className="text-3xl font-medium text-right text-primary">
+              <div className="text-right text-3xl font-medium text-primary">
                 oct
               </div>
             </div>
             <div className="inline-flex flex-col items-start justify-start gap-2">
-              <div className="text-3xl font-medium text-right text-neutral-800 font-condensed">
+              <div className="text-right font-condensed text-3xl font-medium text-neutral-800">
                 Investment
               </div>
-              <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
+              <div className="font-condensed text-base font-normal tracking-widest text-neutral-400">
                 MONDAY/ 2023
               </div>
             </div>
@@ -34,21 +34,21 @@ export default function UpcomingEvents() {
             bgColor="Primary"
           />
         </div>
-        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
-          <div className="md:w-[307px] justify-start items-start gap-1 md:gap-16 flex">
+        <div className="flex items-center justify-between self-stretch md:w-[1100px]">
+          <div className="flex items-start justify-start gap-1 md:w-[307px] md:gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
-              <div className="text-4xl font-medium text-right text-primary">
+              <div className="text-right text-4xl font-medium text-primary">
                 11
               </div>
-              <div className="text-3xl font-medium text-right text-primary">
+              <div className="text-right text-3xl font-medium text-primary">
                 oct
               </div>
             </div>
             <div className="inline-flex flex-col items-start justify-start gap-2">
-              <div className="text-3xl font-medium text-right text-neutral-800 font-condensed">
+              <div className="text-right font-condensed text-3xl font-medium text-neutral-800">
                 Entrepreneur
               </div>
-              <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
+              <div className="font-condensed text-base font-normal tracking-widest text-neutral-400">
                 SATURDAY/ 2023
               </div>
             </div>
@@ -60,21 +60,21 @@ export default function UpcomingEvents() {
             bgColor="Primary"
           />
         </div>
-        <div className="self-stretch justify-between items-center flex md:w-[1100px]">
+        <div className="flex items-center justify-between self-stretch md:w-[1100px]">
           <div className="flex items-center justify-start gap-1 md:gap-16">
             <div className="inline-flex flex-col items-center justify-start px-8 font-condensed">
-              <div className="text-right text-primary text-[40px] font-medium">
+              <div className="text-right text-[40px] font-medium text-primary">
                 18
               </div>
-              <div className="text-3xl font-medium text-right text-primary">
+              <div className="text-right text-3xl font-medium text-primary">
                 oct
               </div>
             </div>
             <div className="inline-flex flex-col items-start justify-start gap-2">
-              <div className="text-3xl font-medium text-right text-neutral-800 font-condensed">
+              <div className="text-right font-condensed text-3xl font-medium text-neutral-800">
                 Investment
               </div>
-              <div className="text-base font-normal tracking-widest text-neutral-400 font-condensed">
+              <div className="font-condensed text-base font-normal tracking-widest text-neutral-400">
                 SUNDAY/ 2023
               </div>
             </div>
@@ -87,15 +87,15 @@ export default function UpcomingEvents() {
           />
         </div>
       </div>
-      <div className="w-16 h-[313.88px] left-10 md:left-[121px] top-[52px] absolute hidden md:block">
-        <div className="w-[306px] h-0 left-0 top-[307px] absolute origin-top-left -rotate-90 bg-neutral-800 border border-neutral-800"></div>
-        <div className="w-14 h-0 left-0 top-[103.03px] absolute bg-neutral-800 border border-neutral-800"></div>
-        <div className="w-14 h-0 left-0 top-[305px] absolute bg-neutral-800 border border-neutral-800"></div>
-        <div className="absolute top-0 left-0 h-0 border w-14 bg-neutral-800 border-neutral-800"></div>
-        <div className="w-14 h-0 left-0 top-[198.51px] absolute bg-neutral-800 border border-neutral-800"></div>
-        <div className="w-3 h-3 left-14 top-[97px] absolute bg-neutral-800 rounded-full border border-neutral-800" />
-        <div className="w-3 h-3 left-14 top-[194px] absolute bg-neutral-800 rounded-full border border-neutral-800" />
-        <div className="w-3 h-3 left-14 top-[300px] absolute bg-neutral-800 rounded-full border border-neutral-800" />
+      <div className="absolute left-10 top-[52px] hidden h-[313.88px] w-16 md:left-[121px] md:block">
+        <div className="absolute left-0 top-[307px] h-0 w-[306px] origin-top-left -rotate-90 border border-neutral-800 bg-neutral-800"></div>
+        <div className="absolute left-0 top-[103.03px] h-0 w-14 border border-neutral-800 bg-neutral-800"></div>
+        <div className="absolute left-0 top-[305px] h-0 w-14 border border-neutral-800 bg-neutral-800"></div>
+        <div className="absolute left-0 top-0 h-0 w-14 border border-neutral-800 bg-neutral-800"></div>
+        <div className="absolute left-0 top-[198.51px] h-0 w-14 border border-neutral-800 bg-neutral-800"></div>
+        <div className="absolute left-14 top-[97px] h-3 w-3 rounded-full border border-neutral-800 bg-neutral-800" />
+        <div className="absolute left-14 top-[194px] h-3 w-3 rounded-full border border-neutral-800 bg-neutral-800" />
+        <div className="absolute left-14 top-[300px] h-3 w-3 rounded-full border border-neutral-800 bg-neutral-800" />
       </div>
     </div>
   );

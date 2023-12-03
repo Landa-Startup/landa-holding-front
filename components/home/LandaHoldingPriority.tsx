@@ -11,18 +11,18 @@ export default async function LandaHoldingPriority(
   const { t } = await useTranslation(lang, "mainPage");
 
   return (
-    <div className="w-full xl:h-[613px] py-10 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
-      <div className="ml-5 xl:ml-40 lg:self-start flex flex-col items-center">
-        <span className={`text-black text-base font-normal ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px] text-xl"} font-condensed`}>
+    <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
+      <div className="ml-5 flex flex-col items-center lg:self-start xl:ml-40">
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "tracking-normal lg:mr-8"} text-black font-condensed`}>
+        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "tracking-normal lg:mr-8"} font-condensed text-black`}>
           {t('Priorities')}
         </span>
       </div>
       <div>
-        <div className="grid grid-cols-2  gap-5 xl:grid-cols-4  place-items-center mx-5 md:grid-cols-2 lg:grid-cols-2 ">
+        <div className="mx-5 grid  grid-cols-2 place-items-center  gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ">
           {cardData1.map((data, index) => (
             <LandaHoldingPriorityCard
               key={index}

@@ -85,11 +85,11 @@ export default function ContactUsForm() {
 
   return (
     <div>
-      <h2 className="text-5xl font-light text-center font-gilda">
+      <h2 className="text-center font-gilda text-5xl font-light">
         Reach us
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 my-4 h-full gap-y-5 gap-x-6 md:grid-cols-2">
+        <div className="my-4 grid h-full grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
 
           <PersonalInfoInput
             register={register}
@@ -113,7 +113,7 @@ export default function ContactUsForm() {
               patternValue=""
               patternMessage='Enter a valid Subject.'
               placeholder='Your Subject*'
-              className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
               labelClass='text-[#6b6b6b] dark:text-current'
               containerClass=''
             />

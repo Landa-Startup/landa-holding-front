@@ -9,16 +9,16 @@ export default function LandaMagazine() {
     // TODO: create commponent for show repeated parts. because codes are almost same and just written few times
     <div className="hidden md:block">
       {/* hide component on mobile */}
-      <div className="bg-neutral-800 flex justify-center py-5">
+      <div className="flex justify-center bg-neutral-800 py-5">
         <div className="flex flex-col">
-          <div className="text-white text-3xl my-10 md:text-[64px] font-normal font-gilda md:ml-16">
+          <div className="my-10 font-gilda text-3xl font-normal text-white md:ml-16 md:text-[64px]">
             LANDA MAGAZINE
           </div>
           <div className="flex flex-row items-center justify-center">
-            <button className="flex items-center justify-center w-12 h-12 mr-3 border border-white rounded-full">
+            <button className="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-white">
               {/* Left Arrow */}
               <svg
-                className="w-6 h-6 text-white transform"
+                className="h-6 w-6 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -30,7 +30,7 @@ export default function LandaMagazine() {
                 <path d="M19 12H5M12 19l-7-7 7-7" />
               </svg>
             </button>
-            <div className="grid overflow-auto grid-cols-3 gap-4 h-[570px]">
+            <div className="grid h-[570px] grid-cols-3 gap-4 overflow-auto">
               {cardData2.map((data, index) => (
                 <LandaMagazineCard
                   key={index}
@@ -41,10 +41,10 @@ export default function LandaMagazine() {
                 />
               ))}
             </div>
-            <button className="flex items-center justify-center w-12 h-12 ml-3 border border-white rounded-full">
+            <button className="ml-3 flex h-12 w-12 items-center justify-center rounded-full border border-white">
               {/* Right Arrow */}
               <svg
-                className="w-6 h-6 text-white"
+                className="h-6 w-6 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"

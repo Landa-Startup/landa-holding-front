@@ -27,7 +27,7 @@ export default async function page({ params: { lang }} : { params: { lang: strin
         showButton={true}
         lang={lang}
       />
-      <div className="relative md:w-[490px] h-[284px] md:hidden mt-6 sm:block hidden ">
+      <div className="relative mt-6 hidden h-[284px] sm:block md:hidden md:w-[490px] ">
         <Image
           className="object-cover"
           src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -36,15 +36,15 @@ export default async function page({ params: { lang }} : { params: { lang: strin
           loading="lazy"
         />
       </div>
-      <div className="flex flex-col font-gilda md:px-28 py-6 md:py-16 items-center text-left">
-        <span className={`text-[#55422A] ${t('lng') === "en" ? "ml-7 md:ml-0" : "mr-7 md:mr-0"} text-3xl md:text-5xl leading-tight self-start`}>
+      <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
+        <span className={`text-[#55422A] ${t('lng') === "en" ? "ml-7 md:ml-0" : "mr-7 md:mr-0"} self-start text-3xl leading-tight md:text-5xl`}>
           {t('LandaAccelerator', {returnObjects: true})[0].title}
         </span>
-        <span className={`text-[#AA8453] ${t('lng') === "en" ? "ml-7 md:ml-0" : "mr-7 md:mr-0"} text-xl md:text-4xl leading-tight self-start`}>
+        <span className={`text-[#AA8453] ${t('lng') === "en" ? "ml-7 md:ml-0" : "mr-7 md:mr-0"} self-start text-xl leading-tight md:text-4xl`}>
           {t('LandaAccelerator', {returnObjects: true})[0].subTitle}
         </span>
-        <div className={`flex flex-col md:flex-row mt-6 ${t('lng') === "en" ? "gap-12" : "gap-2"}`}>
-          <div className="relative md:w-[490px] h-[284px] hidden md:block xl:ml-4 lg:ml-6">
+        <div className={`mt-6 flex flex-col md:flex-row ${t('lng') === "en" ? "gap-12" : "gap-2"}`}>
+          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -53,7 +53,7 @@ export default async function page({ params: { lang }} : { params: { lang: strin
               loading="lazy"
             />
           </div>
-          <p className={`w-[340px] lg:w-[680px] lg:pr-2 md:h-[248px] md:w-[550px] text-justify font-barlow ${t('lng') === "en" ? "leading-6 text-base" : "leading-8 text-lg"} tracking-[1.6px]`}>
+          <p className={`w-[340px] text-justify font-barlow md:h-[248px] md:w-[550px] lg:w-[680px] lg:pr-2 ${t('lng') === "en" ? "text-base leading-6" : "text-lg leading-8"} tracking-[1.6px]`}>
           {t('LandaAccelerator', {returnObjects: true})[0].text}
           </p>
         </div>
@@ -84,14 +84,14 @@ export default async function page({ params: { lang }} : { params: { lang: strin
         />
 
         <div className={`flex flex-col ${t('lng') === "fa" && "items-start"}`}>
-          <span className="text-primary font-gilda text-3xl mt-12">
+          <span className="mt-12 font-gilda text-3xl text-primary">
             {t('LandaAcceleratorServices', {returnObjects: true})[0].title}
           </span>
           <AccelerationServices services={t('LandaAcceleratorServices', {returnObjects: true})[0].items} />
         </div>
-        <div className="flex text-center md:text-left font-barlow text-xl leading-9 tracking-[2px] md:mx-10 my-11 gap-2 text-[#55422A]">
+        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 tracking-[2px] text-[#55422A] md:mx-10 md:text-left">
           <svg
-            className="hidden md:block mt-3"
+            className="mt-3 hidden md:block"
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="18"

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWeb() {
   return (
-    <div className="flex items-center justify-center bg-black opacity-50 rounded-full w-7 h-7 text-white">
+    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-black text-white opacity-50">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

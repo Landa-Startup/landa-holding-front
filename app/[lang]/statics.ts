@@ -13,7 +13,7 @@ import {
   CardsList
 } from "../../types/global";
 
-let countryList: Array<string> = [
+const countryList: Array<string> = [
 	"Afghanistan",
 	"Albania",
 	"Algeria",

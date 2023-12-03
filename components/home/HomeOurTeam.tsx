@@ -13,13 +13,13 @@ export default async function HomeOurTeam(
   const { t } = await useTranslation(lang, "mainPage")
 
   return (
-    <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
-      <div className={`${t('lng') === "en" ? "ml-5 xl:ml-28 mr-10" : "mr-5 xl:mr-40"} lg:self-start flex flex-col `}>
-        <span className={`text-black text-base font-normal ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
+    <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
+      <div className={`${t('lng') === "en" ? "ml-5 mr-10 xl:ml-28" : "mr-5 xl:mr-40"} flex flex-col lg:self-start `}>
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "tracking-normal p-4"} text-black font-condensed`}>
+        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "p-4 tracking-normal"} font-condensed text-black`}>
           {t('OurTeam')}
           <br />
         </span>
@@ -36,7 +36,7 @@ export default async function HomeOurTeam(
         width={789}
         height={243}
         alt="OurTeam"
-        className="hidden md:block w-[444px] md:w-[1192px] h-[284px] md:h-[693px] object-cover"
+        className="hidden h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
         src="/static/images/Home/OurTeam/desktop.jpg"
       />
       <Image

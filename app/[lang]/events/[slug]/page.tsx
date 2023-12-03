@@ -73,19 +73,19 @@ export default function Page() {
   return (
     <div className="flex flex-col">
       <Banner image="/static/images/EventsBanner.png" title="UPCOMING EVENTS" />
-      <div className="md:mx-28 md:my-16 m-3 p-6 border shadow-md rounded-sm">
-        <div className="flex flex-col md:flex-row justify-between gap-20">
-          <div className="md:w-2/3 flex flex-col gap-4">
+      <div className="m-3 rounded-sm border p-6 shadow-md md:mx-28 md:my-16">
+        <div className="flex flex-col justify-between gap-20 md:flex-row">
+          <div className="flex flex-col gap-4 md:w-2/3">
             {cardData.map((card, index) => {
               return (
                 <div key={index}>
                   <p className="font-barlow">{card.description1}</p>
                   <p className="font-barlow">{card.description2}</p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-10 justify-around mt-5 mb-12 font-gilda">
+                  <div className="mb-12 mt-5 grid grid-cols-2 justify-around gap-10 font-gilda md:grid-cols-4">
                     {card.people.map((person, index) => {
                       return (
                         <div key={index} className="flex gap-2">
-                          <div className="w-8 h-8 relative">
+                          <div className="relative h-8 w-8">
                             <Image
                               className="rounded-full object-cover"
                               src={person.image}
@@ -99,23 +99,23 @@ export default function Page() {
                     }, [])}
                   </div>
                   <p className="font-barlow">{card.description3}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                  <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
                     <input
-                      className="w-[350px] h-[50px] p-5 bg-[#FAFAFA] border border-[#E5E5E5] rounded-md"
+                      className="h-[50px] w-[350px] rounded-md border border-[#E5E5E5] bg-[#FAFAFA] p-5"
                       type="text"
                       placeholder="Full Name"
                     />
                     <input
-                      className="w-[350px] h-[50px] p-5 bg-[#FAFAFA] border border-[#E5E5E5] rounded-md"
+                      className="h-[50px] w-[350px] rounded-md border border-[#E5E5E5] bg-[#FAFAFA] p-5"
                       type="text"
                       placeholder="email"
                     />
                     <input
-                      className="w-[350px] h-[50px] p-5 bg-[#FAFAFA] border border-[#E5E5E5] rounded-md"
+                      className="h-[50px] w-[350px] rounded-md border border-[#E5E5E5] bg-[#FAFAFA] p-5"
                       type="text"
                       placeholder="Number"
                     />
-                    <select className="w-[350px] h-[50px] pl-5 bg-[#FAFAFA] border border-[#E5E5E5] rounded-md">
+                    <select className="h-[50px] w-[350px] rounded-md border border-[#E5E5E5] bg-[#FAFAFA] pl-5">
                       <option value="Select a number" disabled defaultChecked>
                         Select a number
                       </option>
@@ -149,7 +149,7 @@ export default function Page() {
                   width={505}
                   height={320}
                 />
-                <div className="flex flex-col gap-4 text-primary mt-6">
+                <div className="mt-6 flex flex-col gap-4 text-primary">
                   <div className="flex items-center gap-2 font-gilda">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -198,24 +198,24 @@ export default function Page() {
                     <span>{card.date.endTime}</span>
                     <span>{card.date.end}</span>
                   </div>
-                  <button className="w-[174px] h-[50px] px-4 border border-black rounded-sm self-center md:self-end">
+                  <button className="h-[50px] w-[174px] self-center rounded-sm border border-black px-4 md:self-end">
                     Add To Calender
                   </button>
                 </div>
-                <div className="bg-[#F8F5F0] font-gilda p-6 rounded-sm mt-10">
+                <div className="mt-10 rounded-sm bg-[#F8F5F0] p-6 font-gilda">
                   <span className="text-xl">Event sharing</span>
-                  <div className="flex gap-5 my-6">
+                  <div className="my-6 flex gap-5">
                     <Instagram />
                     <Whatsapp />
                     <LinkedIn />
                   </div>
                   <div className="flex gap-2">
                     <input
-                      className="w-[350px] h-[50px] p-5 bg-[#FAFAFA] border border-[#E5E5E5]"
+                      className="h-[50px] w-[350px] border border-[#E5E5E5] bg-[#FAFAFA] p-5"
                       type="text"
                       placeholder="https://ddkksso.ddkke.aalhb.com"
                     />
-                    <button className="w-[118px] h-[50px] p-2 border border-black rounded-sm self-end text-xs">
+                    <button className="h-[50px] w-[118px] self-end rounded-sm border border-black p-2 text-xs">
                       Copy the link
                     </button>
                   </div>

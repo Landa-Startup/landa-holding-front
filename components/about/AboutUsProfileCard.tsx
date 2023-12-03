@@ -14,9 +14,9 @@ export default function AboutUsProfileCard({
   links: Record<string, string>;
 }) {
   return (
-    <div className="container mb-6 shadow-lg bg-whiteGold mx-auto w-fit h-fit border">
+    <div className="container mx-auto mb-6 h-fit w-fit border bg-whiteGold shadow-lg">
       <Link href="#">
-        <div className="w-[350px] md:w-[400px] h-[350px] md:h-[400px] relative">
+        <div className="relative h-[350px] w-[350px] md:h-[400px] md:w-[400px]">
           <Image
             loading="lazy"
             alt={`${title} Image`}
@@ -26,7 +26,7 @@ export default function AboutUsProfileCard({
         </div>
       </Link>
 
-      <div className="flex items-center justify-center p-2 mt-6 space-x-3">
+      <div className="mt-6 flex items-center justify-center space-x-3 p-2">
         {/* Add descriptive alt text for icons */}
         <Link href={links.whatsapp}>
           <Image
@@ -68,10 +68,10 @@ export default function AboutUsProfileCard({
 
       <div>
         <div className="text-center font-gilda">
-          <p className="mt-2 text-xl font-medium text-black font-Barlow">
+          <p className="font-Barlow mt-2 text-xl font-medium text-black">
             {title}
           </p>
-          <p className="text-gray-700 font-Barlow text-xs font-normal mt-2 mb-[16px]">
+          <p className="font-Barlow mb-[16px] mt-2 text-xs font-normal text-gray-700">
             {description}
           </p>
         </div>

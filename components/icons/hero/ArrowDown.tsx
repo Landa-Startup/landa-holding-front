@@ -7,7 +7,7 @@ export default function ArrowDown() {
       width="24"
       height="24"
       fill="currentColor"
-      className="text-white bi bi-arrow-down"
+      className="bi bi-arrow-down text-white"
       viewBox="0 0 16 16"
     >
       <path

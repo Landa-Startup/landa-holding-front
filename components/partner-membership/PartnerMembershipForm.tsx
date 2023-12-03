@@ -92,10 +92,10 @@ export default function PartnerMembershipForm() {
   return (
     <div>
     <div>
-      <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+      <div className="container m-16 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         <PartnerMembershipTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
 
             <PersonalInfoInput
               register={register}
@@ -119,7 +119,7 @@ export default function PartnerMembershipForm() {
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
                 patternMessage="Please enter a valid Date of Birth (e.g., 2001/02/11)"
                 placeholder="Enter your Date of Birth"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
             </div>
@@ -139,7 +139,7 @@ export default function PartnerMembershipForm() {
                 label="Company Name"
                 required="Company Name is Required."
                 placeholder="Enter your Company Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
                 patternMessage=""
@@ -155,7 +155,7 @@ export default function PartnerMembershipForm() {
                 label="Field Of Professional"
                 required="Investment Ceiling is Required."
                 placeholder="Enter your Investment Ceiling"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
                 patternMessage={''}

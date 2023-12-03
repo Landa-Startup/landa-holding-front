@@ -88,22 +88,22 @@ export default function AerialViewBusinessTeam() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="md:h-[598px] business-team flex justify-center items-center flex-col py-5"
+      className="business-team flex flex-col items-center justify-center py-5 md:h-[598px]"
     >
       <div className="pb-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
-        <div className="flex flex-col space-y-2 md:space-y-7 md:mb-5">
-          <span className="text-white text-base md:text-xl font-normal">
+        <div className="flex flex-col space-y-2 md:mb-5 md:space-y-7">
+          <span className="text-base font-normal text-white md:text-xl">
             Landa Holding
             <br />
           </span>
-          <span className="text-white text-base md:text-[30px] font-normal">
+          <span className="text-base font-normal text-white md:text-[30px]">
             What Our Cooperation Members Say
           </span>
         </div>
       </div>
       <div className="flex items-center justify-center md:gap-1">
         <Chevron direction="left" onClick={handleLeftChevronClick} />
-        <div className="w-[340px] md:w-[750px] p-5 flex flex-col items-center justify-between backdrop-blur-2xl md:h-[360px]">
+        <div className="flex w-[340px] flex-col items-center justify-between p-5 backdrop-blur-2xl md:h-[360px] md:w-[750px]">
           <BusinessTeamCard
             name={commentsData[currentIndex].name}
             roleInCompany={commentsData[currentIndex].roleInCompany}
@@ -115,12 +115,12 @@ export default function AerialViewBusinessTeam() {
             commentDescription={commentsData[currentIndex].commentDescription}
           />
 
-          <div className="justify-start items-start gap-[12px] md:gap-[19px] inline-flex mt-5">
+          <div className="mt-5 inline-flex items-start justify-start gap-[12px] md:gap-[19px]">
             {commentsData.map((_, index) => (
               <button
                 key={index}
                 aria-label={`Comments Navigation ${index + 1}`}
-                className={`w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full ${
+                className={`h-[10px] w-[10px] rounded-full md:h-[15px] md:w-[15px] ${
                   currentIndex === index
                     ? 'bg-primary transition-all duration-300'
                     : 'border border-white transition-all duration-300'
@@ -129,7 +129,7 @@ export default function AerialViewBusinessTeam() {
               />
             ))}
           </div>
-          <div className="w-[283.01px] h-[0px]border border-white"></div>
+          <div className="h-[0px]border w-[283.01px] border-white"></div>
         </div>
         <Chevron direction="right" onClick={handleRightChevronClick} />
       </div>

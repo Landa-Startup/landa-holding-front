@@ -25,18 +25,18 @@ export default function page() {
         leftImage="/static/images/investment/left.svg"
         showButton
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 bg-[#F7F3EE] items-end">
+      <div className="grid grid-cols-1 items-end gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col font-gilda whitespace-nowrap">
-            <span className="text-3xl md:text-5xl text-[#55422A]">
+          <div className="flex flex-col whitespace-nowrap font-gilda">
+            <span className="text-3xl text-[#55422A] md:text-5xl">
               LANDA INVESTMENT :
             </span>
-            <span className="text-lg md:text-4xl text-primary">
+            <span className="text-lg text-primary md:text-4xl">
               What is an investment holding company?
             </span>
           </div>
           {/* TODO: make component these texts */}
-          <p className="leading-8 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-8 tracking-[1px]">
             In the realm of finance, various types of firms engage in investing
             in other companies. However, what sets holding companies apart is
             their ability to acquire a controlling stake that grants them the
@@ -55,7 +55,7 @@ export default function page() {
             specific business unit.
           </p>
         </div>
-        <div className="w-[320px] md:w-[600px] h-[300px] md:h-[450px] relative">
+        <div className="relative h-[300px] w-[320px] md:h-[450px] md:w-[600px]">
           <Image
             className="object-cover"
             src="/static/images/investment/1.jpg"
@@ -66,14 +66,14 @@ export default function page() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 relative">
+      <div className="relative grid grid-cols-1 gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <span className="text-2xl md:text-4xl text-primary font-gilda">
+            <span className="font-gilda text-2xl text-primary md:text-4xl">
               Types of Holding Companies
             </span>
           </div>
-          <p className="leading-7 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-7 tracking-[1px]">
             Many holding companies are primarily focused on ownership control
             and do not engage in manufacturing, sales of products or services,
             or any other operational activities. Their main purpose is to
@@ -88,7 +88,7 @@ export default function page() {
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <div className="md:w-[575px] h-[171px] relative">
+          <div className="relative h-[171px] md:w-[575px]">
             <Image
               className="object-cover"
               src="/static/images/investment/Incorporation-page-001 1.png"
@@ -96,10 +96,10 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="font-gilda text-2xl text-primary md:text-4xl">
             Landa Investment Strategy
           </span>
-          <p className="leading-7 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-7 tracking-[1px]">
             Landa Investment Center is mainly focused on attracting investors
             from all over the world and investing collected resources in
             innovative, scalable, and promising startups with international
@@ -112,17 +112,17 @@ export default function page() {
           src="/static/images/investment/logo 1.png"
           alt="Logo"
           layout="fill"
-          className="object-contain pb-[500px] md:pb-10 md:pt-10 -z-10"
+          className="-z-10 object-contain pb-[500px] md:py-10"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 bg-[#F7F3EE]">
+      <div className="grid grid-cols-1 gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <span className="text-2xl md:text-4xl text-primary font-gilda">
+            <span className="font-gilda text-2xl text-primary md:text-4xl">
               Investment in Startups
             </span>
           </div>
-          <p className="leading-8 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-8 tracking-[1px]">
             Investing in a startup has the potential to yield noticeable
             returns, yet it isn’t a risk-free enterprise. There are no
             guarantees that a fledgling company will take off, and if it fails,
@@ -131,7 +131,7 @@ export default function page() {
             They are putting down capital, in exchange for a portion of
             ownership in the startup and rights to its potential future profits.
           </p>
-          <div className="relative w-[330px] md:w-[561px] md:h-[168px] h-[300px]">
+          <div className="relative h-[300px] w-[330px] md:h-[168px] md:w-[561px]">
             <Image
               className="object-cover"
               src="/static/images/investment/Incorporation-page-001 1 (2).png"
@@ -141,7 +141,7 @@ export default function page() {
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <div className="md:w-[575px] h-[230px] relative hidden md:block">
+          <div className="relative hidden h-[230px] md:block md:w-[575px]">
             <Image
               className="object-cover"
               src="/static/images/investment/Incorporation-page-001 1 (5).png"
@@ -149,10 +149,10 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="font-gilda text-2xl text-primary md:text-4xl">
             Our Vision and Mission
           </span>
-          <p className="leading-7 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-7 tracking-[1px]">
             It is our vision to evaluate and identify the most promising and
             innovative startup plans in order to minimize the risks of failure
             for the investors who confide in our company, and our mission to to
@@ -162,9 +162,9 @@ export default function page() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 items-center">
+      <div className="grid grid-cols-1 items-center gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="font-gilda text-2xl text-primary md:text-4xl">
             Certificate of Incorporation
           </span>
           <div className="flex items-end">
@@ -173,7 +173,7 @@ export default function page() {
           </div>
         </div>
         <div className="flex flex-col">
-          <p className="leading-8 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-8 tracking-[1px]">
             Landa holding companies are primarily focused on ownership control
             and do not engage in manufacturing, sales of products or services,
             or any other operational activities. Their main purpose is to
@@ -194,8 +194,8 @@ export default function page() {
           />
         </div>
       </div>
-      <div className="bg-[#F7F3EE] py-10 md:py-16 px-8 md:px-28">
-        <div className="leading-8 tracking-[1px] font-barlow text-justify">
+      <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
+        <div className="text-justify font-barlow leading-8 tracking-[1px]">
           <p>
             At Landa Holding, our objective is to identify innovative start-up
             projects, minimize risks, and foster success for our trusted

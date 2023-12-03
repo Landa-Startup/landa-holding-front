@@ -19,7 +19,7 @@ export default function FeaturesCards({
   }
 
   return (
-    <div className="flex flex-col bg-white  md:w-[580px] p-8">
+    <div className="flex flex-col bg-white  p-8 md:w-[580px]">
       <span className="font-gilda text-2xl text-primary">{title}</span>
       <p className="font-barlow text-base leading-7">{description}</p>
       <Button

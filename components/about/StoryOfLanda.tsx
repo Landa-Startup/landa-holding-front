@@ -13,10 +13,10 @@ export default async function StoryOfLanda(
   console.log(t('KeyDifferentiatingFactors', {returnObjects: true})[0])
 
   return (
-    <div className="flex flex-col md:px-32 py-10 md:py-14 gap-12 bg-[#F7F3EE]">
-      <div className="flex flex-col lg:flex-row gap-12 text-[#000]">
-        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 text-justify px-10">
-          <div className="w-screen -ml-10 lg:w-[449px] xl:w-[589px] md:w-[500px] h-[310px] md:h-[310px] relative ">
+    <div className="flex flex-col gap-12 bg-[#F7F3EE] py-10 md:px-32 md:py-14">
+      <div className="flex flex-col gap-12 text-[#000] lg:flex-row">
+        <div className="flex flex-col px-10 text-justify md:w-full lg:w-1/2 xl:w-1/2">
+          <div className="relative -ml-10 h-[310px] w-screen md:h-[310px] md:w-[500px] lg:w-[449px] xl:w-[589px] ">
             <Image
               className="object-cover"
               src="/static/images/About/story/1.png"
@@ -24,10 +24,10 @@ export default async function StoryOfLanda(
               layout="fill"
             />
           </div>
-          <span className="font-gilda text-3xl text-primary mt-9 mb-5">
+          <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
             {t('TheStoryOfLanda', {returnObjects: true})[0].title}
           </span>
-          <div className="flex flex-col text-[#000] font-barlow space-y-4">
+          <div className="flex flex-col space-y-4 font-barlow text-[#000]">
             <p>
             {t('TheStoryOfLanda', {returnObjects: true})[0].text}
             </p>
@@ -47,43 +47,43 @@ export default async function StoryOfLanda(
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 md:text-justify px-10">
-          <span className="text-primary font-gilda text-3xl">
+        <div className="flex flex-col px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
+          <span className="font-gilda text-3xl text-primary">
             {t('LANDAStartups', {returnObjects: true})[0].title}
           </span>
-          <ul className="flex flex-col space-y-3 mt-5">
+          <ul className="mt-5 flex flex-col space-y-3">
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Startup Academy</span>, a
+              <span className="font-bold text-primary">Startup Academy</span>, a
               startup with the aim of fostering and accelerating the growth of
               teenagers, has been operating since 2017 under the supervision of
               the FarshTech company.
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Landa Trip</span>, a
+              <span className="font-bold text-primary">Landa Trip</span>, a
               startup in the field of tourism and education with an
               international platform and professional artificial intelligence,
               began its activities in Iran in 2022.
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Diaco</span>, a startup
+              <span className="font-bold text-primary">Diaco</span>, a startup
               in the field of industry and automation, operates with CNC Wire
               Cut machines in Canada and markets in the United States and
               Europe.
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Vision Raft</span>, a
+              <span className="font-bold text-primary">Vision Raft</span>, a
               startup in the virtual world, children&apos;s education sector,
               expanded its operations in 2022 with the support of MTA
               Accelerator in Canada.
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Landa Handicraft</span>,
+              <span className="font-bold text-primary">Landa Handicraft</span>,
               a startup in the handicraft industry, an online store, and a
               reference point for handicrafts, attracted the necessary capital
               for platform development for the international market in 2023.
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Steady Skull</span>, a
+              <span className="font-bold text-primary">Steady Skull</span>, a
               startup in the medical field, developed a product to facilitate
               brain surgery procedures, starting its activities in 2019 with a
               specialized team.
@@ -92,12 +92,12 @@ export default async function StoryOfLanda(
           </ul>
         </div>
       </div>
-      <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-12 text-[#000]">
-        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 px-10">
+      <div className="flex flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
+        <div className="flex flex-col px-10 md:w-full lg:w-1/2 xl:w-1/2">
           <span className="font-gilda text-3xl text-primary">
           {t('VisionOfTheLanaHolding', {returnObjects: true})[0].title}
           </span>
-          <div className="flex flex-col space-y-4 mt-5">
+          <div className="mt-5 flex flex-col space-y-4">
             <p>
               {t('VisionOfTheLanaHolding', {returnObjects: true})[0].text1}
             </p>
@@ -109,8 +109,8 @@ export default async function StoryOfLanda(
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:w-full lg:w-1/2 xl:w-1/2 md:text-justify px-10">
-          <span className="font-gilda text-3xl text-primary mb-4">
+        <div className="flex flex-col px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
+          <span className="mb-4 font-gilda text-3xl text-primary">
             {t('KeyDifferentiatingFactors', {returnObjects: true})[0].title}
           </span>
           <p>
@@ -119,7 +119,7 @@ export default async function StoryOfLanda(
             differentiating factors. The way we perceive and approach a business
             can create various points of distinction.
           </p>
-          <span className="text-primary font-bold">What sets us apart:</span>
+          <span className="font-bold text-primary">What sets us apart:</span>
           <ul className="px-4">
             <li className="list-decimal">
               Specialized Screening and Analysis of Startups: We specialize in

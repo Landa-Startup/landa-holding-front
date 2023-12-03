@@ -9,14 +9,14 @@ import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function Footer() {
   function GetYear() {
-    var currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
     return currentYear;
   }
   return (
-    <div className="flex flex-col p-8 bg-neutral-800 font-barlow">
-      <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20 md:gap-4">
-        <div className="flex flex-col md:w-[344px] mt-5">
-          <div className="h-[25px] text-justify text-white text-xl font-medium">
+    <div className="flex flex-col bg-neutral-800 p-8 font-barlow">
+      <div className="flex flex-col justify-between space-y-5 md:flex-row md:gap-4 md:p-20">
+        <div className="mt-5 flex flex-col md:w-[344px]">
+          <div className="h-[25px] text-justify text-xl font-medium text-white">
             About Landa
             <br />
           </div>
@@ -32,7 +32,7 @@ export default function Footer() {
             top startup opportunities by linking idea holders with relevant
             service providers. <br />
           </div>
-          <div className="w-[126px] h-[22px] flex flex-row justify-between items-center mt-2 text-white">
+          <div className="mt-2 flex h-[22px] w-[126px] flex-row items-center justify-between text-white">
             <Link
               aria-label="Instagram"
               href={
@@ -68,82 +68,82 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col col-span-1 space-y-1 md:mr-10">
-          <div className="text-xl font-medium text-justify text-white">
+        <div className="col-span-1 flex flex-col space-y-1 md:mr-10">
+          <div className="text-justify text-xl font-medium text-white">
             Explore
             <br />
           </div>
           <div className="flex flex-col space-y-1">
             <Link
               href={'/'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               Home
             </Link>
             <Link
               href={'/about'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               About Us
             </Link>
             <Link
               href={'/contact'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               Contact Us
             </Link>
             <Link
               href={'/our-team'}
-              className="text-base font-normal text-neutral-400 hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               Our Team
             </Link>
           </div>
         </div>
-        <div className="flex flex-col col-span-1 space-y-1">
+        <div className="col-span-1 flex flex-col space-y-1">
           <div className="text-xl font-medium text-white">Forms</div>
-          <div className="inline-flex flex-col items-start self-stretch justify-start">
+          <div className="inline-flex flex-col items-start justify-start self-stretch">
             <Link
               href={'/StartupsForm'}
-              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               Startups
             </Link>
             <Link
               href={'/investor-registration'}
-              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               Investor Center
             </Link>
             <Link
               href={'/entrepreneurs'}
-              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               Entrepreneur Center
             </Link>
             <Link
               href={'/partner-membership'}
-              className="text-neutral-400 text-base font-normal hover:text-primary max-w-fit"
+              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
               Our Business Partners
             </Link>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col space-y-1 md:w-1/4 md:ml-1">
-          <div className="w-[93px] h-[30px]  text-white text-xl font-medium">
+        <div className="col-span-1 flex flex-col space-y-1 md:ml-1 md:w-1/4">
+          <div className="h-[30px] w-[93px]  text-xl font-medium text-white">
             Contact
             <br />
           </div>
-          <div className="text-base font-normal text-justify text-neutral-400">
+          <div className="text-justify text-base font-normal text-neutral-400">
           No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada
           </div>
-          <div className="text-base font-normal text-justify text-neutral-400">
+          <div className="text-justify text-base font-normal text-neutral-400">
           +1 (289) 269-3933
           </div>
-          <div className="text-base font-normal text-justify text-neutral-400 border-t border-t-white pt-1">
+          <div className="border-t border-t-white pt-1 text-justify text-base font-normal text-neutral-400">
           Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran
           </div>
-          <div className="text-base font-normal text-justify text-neutral-400 border-b border-b-white pb-1">
+          <div className="border-b border-b-white pb-1 text-justify text-base font-normal text-neutral-400">
           +98 (912) 0539563
           </div>
           <div className="text-base font-normal text-neutral-400">
@@ -154,7 +154,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch pt-4 text-center text-white border-t">
+      <div className="self-stretch border-t pt-4 text-center text-white">
         © Copyright {GetYear()} by{' '}
         <Link href={'/'} className="text-primary">
           LandaHolding

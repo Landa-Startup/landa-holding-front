@@ -27,7 +27,7 @@ export default function StartupFormMVP({
 
   return (
     <>
-      <div className="grid grid-cols-1 mt-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+      <div className="mb-12 mt-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <YesRadioButton
           title="Do you have Pitch deck?"
           register={register}
@@ -58,7 +58,7 @@ export default function StartupFormMVP({
         ) {
           return (
             <div>
-              <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+              <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
                 <div>
                   <Input
                     register={register}
@@ -70,7 +70,7 @@ export default function StartupFormMVP({
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder="Enter your Product Name"
-                    className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                    className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
@@ -86,7 +86,7 @@ export default function StartupFormMVP({
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder="Enter your Site Address"
-                    className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                    className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function StartupFormMVP({
         } else {
           return (
             <div>
-              <div className="col-start-1 col-span-2">
+              <div className="col-span-2 col-start-1">
                 <TextArea
                   title="Have you previously cooperated with investors or accelerators?"
                   register={register}

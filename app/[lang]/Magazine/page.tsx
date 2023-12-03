@@ -20,9 +20,9 @@ export default function MagazinePage() {
   return (
     <div className="relative">
       <Banner image="/static/images/Magazine/hero.png" title="Magazine" />
-      <div className="grid grid-cols-3 my-32 mx-28 gap-20">
+      <div className="mx-28 my-32 grid grid-cols-3 gap-20">
         <MagazineCardsContainer />
-        <div className="flex flex-col gap-12 col-span-1">
+        <div className="col-span-1 flex flex-col gap-12">
           <SearchInput />
           <CategoriesContainer />
           <TagsContainer />

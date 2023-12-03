@@ -40,20 +40,20 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex relative">
-      <div className="flex items-end absolute left-32 top-9">
+    <div className="relative flex">
+      <div className="absolute left-32 top-9 flex items-end">
         <Landa />
-        <span className="text-black text-xl">LANDA</span>
+        <span className="text-xl text-black">LANDA</span>
       </div>
       <Image
-        className=" hidden md:block absolute md:right-28 md:bottom-0 md:z-10"
+        className=" absolute hidden md:bottom-0 md:right-28 md:z-10 md:block"
         src="/static/images/panel/login/blur.png"
         alt="Landa Blur"
         width={589}
         height={800}
       />
 
-      <div className="w-full md:w-9/12 bg-[#CCB598] h-screen flex flex-col items-center justify-center space-y-11">
+      <div className="flex h-screen w-full flex-col items-center justify-center space-y-11 bg-[#CCB598] md:w-9/12">
         <span className="font-condensed text-7xl text-white">Login</span>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -70,7 +70,7 @@ export default function LoginPage() {
               // },
             })}
             placeholder="Email"
-            className={`md:w-[548px] md:h-[75px] w-[300px] input input-bordered bg-white/50 backdrop-blur-lg border border-gray-200 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary ${
+            className={`input input-bordered w-[300px] rounded-md border border-gray-200 bg-white/50 px-3 py-2 text-gray-700 backdrop-blur-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary md:h-[75px] md:w-[548px] ${
               errors.email ? 'border-red-500' : ''
             }`}
           />
@@ -91,7 +91,7 @@ export default function LoginPage() {
               },
             })}
             placeholder="Password"
-            className={`md:w-[548px] md:h-[75px] w-[300px] input input-bordered bg-white/50 backdrop-blur-lg border border-gray-200 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary ${
+            className={`input input-bordered w-[300px] rounded-md border border-gray-200 bg-white/50 px-3 py-2 text-gray-700 backdrop-blur-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary md:h-[75px] md:w-[548px] ${
               errors.password ? 'border-red-500' : ''
             }`}
           />
@@ -102,7 +102,7 @@ export default function LoginPage() {
           )}
           <div className="form-control self-start">
             <label className="label cursor-pointer flex-row-reverse gap-2">
-              <span className="label-text text-white font-barlow text-xl">
+              <span className="label-text font-barlow text-xl text-white">
                 Remember me
               </span>
               <input type="checkbox" className="checkbox border border-white" />
@@ -123,7 +123,7 @@ export default function LoginPage() {
             {send ? 'Submitting ....' : 'Submit'}
           </button> */}
         </form>
-        <div className="flex gap-2 items-center absolute left-32 bottom-11">
+        <div className="absolute bottom-11 left-32 flex items-center gap-2">
           <Telephone />
           <div className="flex flex-col text-black">
             <span>Reservation</span>
@@ -131,8 +131,8 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      <div className="md:w-[589px] bg-[#fff] h-screen relative overflow-hidden">
-        <div className="hidden md:block md:w-[589px] md:h-[802px]">
+      <div className="relative h-screen overflow-hidden bg-[#fff] md:w-[589px]">
+        <div className="hidden md:block md:h-[802px] md:w-[589px]">
           <Image
             className="absolute"
             src="/static/images/panel/login/notBlur.png"

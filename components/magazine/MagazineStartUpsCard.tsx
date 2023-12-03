@@ -26,19 +26,19 @@ export default function MagazineStartUpsCard({
 
       {/* Date */}
       <div className="flex flex-col justify-start px-20">
-        <h2 className="mt-4 text-2xl text-slate-950 font-bold">
+        <h2 className="mt-4 text-2xl font-bold text-slate-950">
           12 DECEMBER 2022
         </h2>
 
         {/* Title */}
-        <h2 className="mt-1 mb-6 text-2xl text-yellow-600 font-bold">
+        <h2 className="mb-6 mt-1 text-2xl font-bold text-yellow-600">
           {title}
         </h2>
       </div>
 
       {/* Description */}
       <div className="flex justify-start px-20">
-        <p className="text-justify text-slate-950 font-bold">{description}</p>
+        <p className="text-justify font-bold text-slate-950">{description}</p>
       </div>
     </div>
   );

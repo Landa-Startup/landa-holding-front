@@ -5,22 +5,22 @@ import UlList from '../List/UlList';
 export default function MagazineModernPostCard3() {
   return (
     <div className="px-16">
-      <div className="py-4 mx-20 mb-16">
+      <div className="mx-20 mb-16 py-4">
         {/* Date */}
         <div className="flex flex-col justify-start">
-          <h2 className="mt-1 text-2xl text-slate-950 font-bold">
+          <h2 className="mt-1 text-2xl font-bold text-slate-950">
             12 DECEMBER 2022
           </h2>
           <br />
           {/* Title */}
-          <h2 className="mt-1 text-2xl text-yellow-600 font-bold">
+          <h2 className="mt-1 text-2xl font-bold text-yellow-600">
             Newspaper Created as a Hobby
           </h2>
         </div>
 
         {/* Description */}
         <div className="flex flex-col justify-start">
-          <p className="my-5 text-justify text-slate-950 font-bold">
+          <p className="my-5 text-justify font-bold text-slate-950">
             Quisque pretium fermentum quam, sit amet cursus ante sollicitudin
             vel. Morbi consequat risus consequat, porttitor orci sit amet,
             iaculis nisl. Integer quis sapien neceli ultrices euismod sit amet
@@ -28,7 +28,7 @@ export default function MagazineModernPostCard3() {
           </p>
 
           {/* Additional Paragraph */}
-          <p className="my-5 text-justify text-slate-950 font-bold">
+          <p className="my-5 text-justify font-bold text-slate-950">
             Quisque pretium fermentum quam, sit amet cursus ante sollicitudin
             vel. Morbi consequat risus consequat, porttitor orci sit amet,
             iaculis nisl. Integer quis sapien neceli ultrices euismod sit amet

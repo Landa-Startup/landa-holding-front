@@ -18,15 +18,15 @@ export default async function LandaHoldingBlack(
   const L2FA = ["فرصت های شبکه جهانی برای همکاری و مشارکت", "دسترسی به تمام ویدئوهای مربوط به زمین، ارائه روند صنعت و بحث های پنل", "حضور در رویدادهای مرکز کارآفرینان", "جلسات با رهبران برتر کسب و کار و کارآفرینان", "شرکت در جلسات فصلی با سایر کارآفرینان بین المللی", "پلتفرم آنلاین برای ارتباط با سایر کارآفرینان"]
 
   return (
-    <div className={`flex flex-col md:flex-row justify-evenly md:justify-between ${t('lng') === "en" ? "md:pr-20 md:pl-36" : "md:pr-40 md:pl-20"} items-center relative bg-[#ffffff] py-5 md:py-10 space-y-5 md:h-[590px]`}>
+    <div className={`flex flex-col justify-evenly md:flex-row md:justify-between ${t('lng') === "en" ? "md:pl-36 md:pr-20" : "md:pl-20 md:pr-40"} relative items-center space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:py-10`}>
       <Lines />
       <div className="flex flex-col justify-around space-y-6 pt-8">
-        <div className="flex flex-col md:items-start items-center self-start">
+        <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-black text-base font-normal ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px] text-xl"} font-condensed`}>
+            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
               {t('LandaHolding')}
             </span>
-            <span className="text-black text-4xl font-gilda font-normal border-b md:border-none border-black w-[340px] pb-3 text-center md:text-start">
+            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
               {t('InvestorCenter')}
               <br />
             </span>
@@ -40,16 +40,16 @@ export default async function LandaHoldingBlack(
           style3='leading-4 md:leading-10 text-md'
         />
 
-        <button className={`relative justify-start items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
+        <button className={`relative mt-10 inline-flex items-center justify-start gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/investor-registration'}>
-            <div className="text-white text-[24px] md:text-[32px] pb-3 font-normal leading-6 tracking-[1.5px] font-condensed">
+            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}
             </div>
           </Link>
-          <div className="justify-start items-start gap-2.5 flex">
-            <div className="relative w-5 h-5">
-              <div className="absolute inset-0 bg-black border border-black transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
-              <div className="w-full h-full border pb-3 border-white">
+          <div className="flex items-start justify-start gap-2.5">
+            <div className="relative h-5 w-5">
+              <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
+              <div className="h-full w-full border border-white pb-3">
                 <ButtonArrow />
               </div>
             </div>
@@ -57,14 +57,14 @@ export default async function LandaHoldingBlack(
         </button>
       </div>
 
-      <div className="flex flex-col justify-around space-y-6 pt-8 z-10">
-        <div className="flex flex-col md:items-start items-center">
+      <div className="z-10 flex flex-col justify-around space-y-6 pt-8">
+        <div className="flex flex-col items-center md:items-start">
           <div className="flex flex-col">
-            <span className={`text-black text-base font-normal ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px] text-xl"} font-condensed`}>
+            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
               {t('LandaHolding')}
               <br />
             </span>
-            <span className="text-black text-4xl font-gilda font-normal border-b  md:border-none border-black w-[340px] pb-3 text-center md:text-start">
+            <span className="w-[340px] border-b border-black pb-3 text-center  font-gilda text-4xl font-normal text-black md:border-none md:text-start">
               {t('EntrepreneurCenter')}
               <br />
             </span>
@@ -77,16 +77,16 @@ export default async function LandaHoldingBlack(
           style2='space-y-2'
           style3='leading-4 md:leading-10 text-md'
         />
-        <button className={`relative justify-start items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
+        <button className={`relative mt-10 inline-flex items-center justify-start gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/entrepreneurs'}>
-            <div className="text-white text-[24px] md:text-[32px] tracking-[1.5px] font-normal pb-3 leading-6 font-condensed">
+            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}
             </div>
           </Link>
-          <div className="justify-start items-start gap-2.5 flex">
-            <div className="relative w-5 h-5">
-              <div className="absolute inset-0 bg-black border border-black transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
-              <div className="w-full h-full border pb-3 border-white">
+          <div className="flex items-start justify-start gap-2.5">
+            <div className="relative h-5 w-5">
+              <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
+              <div className="h-full w-full border border-white pb-3">
                 <ButtonArrow />
               </div>
             </div>

@@ -9,11 +9,11 @@ export default function LandaHoldingPriorityCard({
   image: string;
 }) {
   return (
-    <div className="w-44 h-24 md:w-72  md:h-40 flex justify-center relative border border-primary overflow-hidden">
+    <div className="relative flex h-24  w-44 justify-center overflow-hidden border border-primary md:h-40 md:w-72">
       {/* Background Image */}
       <Image
         loading="lazy"
-        className="absolute -right-2 md:-right-6 -bottom-2 md:-bottom-8 w-12 md:w-[120px] h-12 md:h-[120px] opacity-5"
+        className="absolute -bottom-2 -right-2 h-12 w-12 opacity-5 md:-bottom-8 md:-right-6 md:h-[120px] md:w-[120px]"
         src={image}
         alt=""
         width={500}
@@ -21,8 +21,8 @@ export default function LandaHoldingPriorityCard({
       />
 
       {/* Title Container */}
-      <div className="justify-center items-center gap-2.5 inline-flex">
-        <div className="flex items-center text-black text-base md:text-2xl font-normal font-gilda w-10 md:w-52 justify-center text-center">
+      <div className="inline-flex items-center justify-center gap-2.5">
+        <div className="flex w-10 items-center justify-center text-center font-gilda text-base font-normal text-black md:w-52 md:text-2xl">
           {title}
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function LandaHoldingPriorityCard({
       {/* Small Image Overlay */}
       <Image
         loading="lazy"
-        className="absolute top-2 left-2 w-8 md:w-[50px] h-8 md:h-[50px]"
+        className="absolute left-2 top-2 h-8 w-8 md:h-[50px] md:w-[50px]"
         src={image}
         alt="Landa Priority"
         width={500}

@@ -4,7 +4,7 @@ export default function Lines() {
   return (
     <>
       <svg
-        className="absolute md:left-[39.7%] ml-[32.5px] mb-[1px] hidden md:block"
+        className="absolute mb-[1px] ml-[32.5px] hidden md:left-[39.7%] md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
         height="589"

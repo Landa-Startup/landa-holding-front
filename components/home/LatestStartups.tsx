@@ -11,19 +11,19 @@ export default async function LatestStartups(
 
   return (
     <div dir={t('lng') === "en" ? "ltr" : "rtl"}>
-      <div className="flex flex-col p-5 bg-whiteGold items-center text-center">
-        <div className="flex-col justify-start items-start md:ml-44 md:self-start">
+      <div className="flex flex-col items-center bg-whiteGold p-5 text-center">
+        <div className="flex-col items-start justify-start md:ml-44 md:self-start">
           <div className="flex flex-col items-center md:items-start">
-            <div className={`text-neutral-800 text-sm md:text-base font-normal ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0 text-xl"} font-condensed ps-1`}>
+            <div className={`text-sm font-normal text-neutral-800 md:text-base ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0 text-xl"} ps-1 font-condensed`}>
               {t('LandaHolding')}
             </div>
-            <div className={`text-primary text-4xl md:text-[44px] font-normal ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0"} font-condensed md:mt-3`}>
+            <div className={`text-4xl font-normal text-primary md:text-[44px] ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0"} font-condensed md:mt-3`}>
               {t('LatestStartups')}
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-2 ">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-3 md:gap-10 mt-3 md:mt-10 ">
+        <div className="mt-2 flex justify-center ">
+          <div className="mt-3 grid grid-cols-1 gap-3 md:mt-10 md:grid-cols-1 md:gap-10 lg:grid-cols-1 xl:grid-cols-3 ">
             {cardData3.map((data, index) => (
               <LatestStartupsCard
                 key={index}

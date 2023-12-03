@@ -17,14 +17,14 @@ export default async function HomeCards({
 
   const { t } = await useTranslation(lang, "mainPage");
 
-  let value = t('lng') === "en" ? reverse : !reverse
+  const value = t('lng') === "en" ? reverse : !reverse
   const flexDirectionClass = value
     ? 'flex-col md:flex-row'
     : 'flex-col md:flex-row-reverse';
 
   return (
     <div
-      className={`${flexDirectionClass} border-b-2 md:border-none last:border-none border-primary flex justify-between items-center px-9 md:px-32 py-5 md:py-32`}
+      className={`${flexDirectionClass} flex items-center justify-between border-b-2 border-primary px-9 py-5 last:border-none md:border-none md:p-32`}
     >
       <HomeCardsLeft text={text} addedClass={addedClass} link={link} />
       <HomeCardsRight images={images} titles={titles} link={link} />

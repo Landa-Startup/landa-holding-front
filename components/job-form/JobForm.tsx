@@ -100,9 +100,9 @@ export default function JobForm() {
 
   return (
     <>
-      <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+      <div className="container m-16 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         <>
-          <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
+          <div className="container m-16 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
             <>
               <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
@@ -113,11 +113,11 @@ export default function JobForm() {
                 <p className="mb-4 text-4xl">Personal Information</p>
               </div>
               <div>
-                <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
+                <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
               </div>
             </>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
 
                 <PersonalInfoInput
                   register={register}

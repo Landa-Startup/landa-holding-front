@@ -11,12 +11,12 @@ export default async function AboutUsLandaHolding(
   // const translation = t('aboutLandaHolding', {returnObjects: true})[0]
 
   return (
-    <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-evenly pt-5 md:py-32 bg-[#FAFAFA]">
-      <div className="text-black p-3 space-y-2">
-        <p className="text-3xl text-center font-semibold font-gilda">
+    <div className="flex flex-col items-center justify-evenly bg-[#FAFAFA] pt-5 md:py-32 lg:flex-col xl:flex-row">
+      <div className="space-y-2 p-3 text-black">
+        <p className="text-center font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', {returnObjects: true})[0].title}
         </p>
-        <p className="lg:w-[687px]  text-justify  text-xl mt-4 md:mt-8 ml-0 md:mx-10 font-normal tracking-wide font-barlow mb-20">
+        <p className="mb-20  ml-0  mt-4 text-justify font-barlow text-xl font-normal tracking-wide md:mx-10 md:mt-8 lg:w-[687px]">
           {t('aboutLandaHolding', {returnObjects: true})[0].text}
         </p>
       </div>

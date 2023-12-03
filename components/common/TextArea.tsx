@@ -29,7 +29,7 @@ export default function TextArea({
   return (
     <div>
       {/* Label for the textarea */}
-      <label className="text-[#6b6b6b] dark:text-current pl-2 text-lg">{title}</label>
+      <label className="pl-2 text-lg text-[#6b6b6b] dark:text-current">{title}</label>
       <textarea
         rows={rows}
         cols={cols}

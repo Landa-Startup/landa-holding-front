@@ -33,14 +33,14 @@ export default async function AccelerationCard({
 
   return (
     <>
-      <div className={`bg-[#F7F3EE] md:w-[1205px] relative px-2 md:px-8 lg:px-8 xl:px-8 ${addedClass}`} dir={t('lng') === "en" ? "ltr" : "rtl"}>
-        <div className='flex items-end gap-2 mt-8 md:mt-[77px]'>
+      <div className={`relative bg-[#F7F3EE] px-2 md:w-[1205px] md:px-8 lg:px-8 xl:px-8 ${addedClass}`} dir={t('lng') === "en" ? "ltr" : "rtl"}>
+        <div className='mt-8 flex items-end gap-2 md:mt-[77px]'>
             <PrimaryDot />
             <div className='flex flex-col items-start md:flex-row'>
-                <span className='text-[#80633E] font-gilda text-xl md:text-3xl md:mx-2'>
+                <span className='font-gilda text-xl text-[#80633E] md:mx-2 md:text-3xl'>
                     {title}
                 </span>
-                <span className='text-[#AA8453] font-gilda text-base md:text-3xl'>
+                <span className='font-gilda text-base text-[#AA8453] md:text-3xl'>
                     {slogan}
                 </span>
             </div>
@@ -53,20 +53,20 @@ export default async function AccelerationCard({
           height={60}
           loading='lazy'
         />
-        <div className='flex flex-col font-barlow leading-[24px] tracking-[1.6px] text-[#000] mt-6 pb-3 md:ml-48 lg:ml-20 xl:ml-0'>
+        <div className='mt-6 flex flex-col pb-3 font-barlow leading-[24px] tracking-[1.6px] text-[#000] md:ml-48 lg:ml-20 xl:ml-0'>
             <p className={`${t('lng') && "text-right"}`}>{textUp}</p>
             <p className={`mt-5 ${t('lng') && "text-right"}`}>{textDown}</p>
         </div>
         <div className='flex justify-start'>
          {itemsList && 
-          <span className={`text-[#AA8453] font-gilda text-3xl mt-8 ${t('lng') === "en" ? "" : "text-right"}`}>
+          <span className={`mt-8 font-gilda text-3xl text-[#AA8453] ${t('lng') === "en" ? "" : "text-right"}`}>
             {t('AcceleratorProcess', {returnObjects: true})[0].title}
           </span>
         }  
         </div>
        
         {itemsList && 
-          <div className='grid grid-cols-2 font-barlow text-[#000] z-10 mt-6 gap-6 text-xs md:text-sm lg:text-sm xl:text-sm'>
+          <div className='z-10 mt-6 grid grid-cols-2 gap-6 font-barlow text-xs text-[#000] md:text-sm lg:text-sm xl:text-sm'>
             {itemsList?.map((item, index) => (
                 <span className={`${t('lng') === "en" ? "text-normal" : "text-right"} lg:text-lg`}>{item}</span>
             ))}

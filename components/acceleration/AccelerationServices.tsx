@@ -16,15 +16,15 @@ export default function AccelerationServices(
     setExpanded((prev) => !prev);
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-11 mt-8 border-b-2 pb-14">
+    <div className="mt-8 grid grid-cols-1 gap-4 border-b-2 pb-14 md:grid-cols-3 md:gap-11">
       {services.map((service) => (
         <div
-          className="md:w-[343px] h-[115px] text-[#2B2115] overflow-hidden font-barlow text-xl rounded-sm bg-[#F7F3EE] flex justify-center items-center relative"
+          className="relative flex h-[115px] items-center justify-center overflow-hidden rounded-sm bg-[#F7F3EE] font-barlow text-xl text-[#2B2115] md:w-[343px]"
           key={service.title}
         >
           <span>{service.title}</span>
           <Image
-            className="absolute opacity-25 -bottom-8 -left-3"
+            className="absolute -bottom-8 -left-3 opacity-25"
             src={`/static/images/acceleration/${service.image}`}
             alt="forough"
             width={109}

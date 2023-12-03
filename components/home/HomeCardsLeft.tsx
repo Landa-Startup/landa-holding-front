@@ -9,10 +9,10 @@ export default function HomeCardsLeft({
 }: HomeCardsLeftProps) {
   return (
     <div
-      className={`first:self-end order-2  lg:mb-0 md:mb-0 md:order-1 md:py-32 mt-3 ${addedClass}`}
+      className={`order-2 mt-3  first:self-end md:order-1 md:mb-0 md:py-32 lg:mb-0 ${addedClass}`}
     >
       <div className="flex flex-col items-center justify-center ">
-        <p className="font-barlow text-base md:text-xl leading-[30px] md:w-[491px] first:mb-0 mb-11 mt-10 text-justify">
+        <p className="mb-11 mt-10 text-justify font-barlow text-base leading-[30px] first:mb-0 md:w-[491px] md:text-xl">
           {text}
         </p>
         <Button

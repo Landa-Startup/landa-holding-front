@@ -12,10 +12,10 @@ export default function HomeCardsRight({
 }) {
   return (
     <div className="flex flex-col self-start md:self-center">
-      <div className="flex flex-col items-start md:items-center space-y-2 mt-9 md:mt-0">
+      <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">
         <div className="flex flex-col">
           <span className="font-condensed text-3xl tracking-[11px]">LANDA</span>
-          <span className="font-gilda text-4xl md:text-6xl tracking-[6.5px]">
+          <span className="font-gilda text-4xl tracking-[6.5px] md:text-6xl">
             {titles}
           </span>
         </div>
@@ -23,7 +23,7 @@ export default function HomeCardsRight({
       <div className="flex space-x-7">
         {images.map((image, index) => (
           <div
-            className="relative w-64 h-96 mt-5 md:first:mt-44 last:mt-14 hidden md:block lg:mb-0"
+            className="relative mt-5 hidden h-96 w-64 last:mt-14 md:block md:first:mt-44 lg:mb-0"
             key={index}
           >
             <Image
