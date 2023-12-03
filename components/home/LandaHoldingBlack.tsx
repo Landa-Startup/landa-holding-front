@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Lines from '../icons/LandaHoldingBlack/Lines';
-import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
+import ArrowRight from '../icons/common/ArrowRight';
 
 export default function LandaHoldingBlack() {
   return (
@@ -38,17 +38,17 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 mt-10 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
+        <button className="relative justify-start items-center gap-4 mt-10 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-[4px]">
           <Link href={'/investor-registration'}>
-            <div className="text-white text-[24px] md:text-[32px] font-normal leading-6 tracking-[1.5px] font-condensed">
+            <div className="text-white text-xl font-normal leading-6 tracking-[1.5px] font-condensed">
               Register
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">
-            <div className="relative w-5 h-5">
-              <div className="absolute inset-0 bg-black border border-black transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
-              <div className="w-full h-full border border-white">
-                <ButtonArrow />
+            <div className="relative w-4 h-4">
+              <div className="absolute inset-0"></div>
+              <div className="w-full h-full">
+                <ArrowRight />
               </div>
             </div>
           </div>
@@ -90,17 +90,17 @@ export default function LandaHoldingBlack() {
             </li>
           </ul>
         </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm">
+        <button className="relative justify-start items-center gap-4 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-[4px]">
           <Link href={'/entrepreneurs'}>
-            <div className="text-white text-[24px] md:text-[32px] tracking-[1.5px] font-normal leading-6 font-condensed">
+            <div className="text-white text-xl tracking-[1.5px] font-normal leading-6 font-condensed">
               Register
             </div>
           </Link>
           <div className="justify-start items-start gap-2.5 flex">
-            <div className="relative w-5 h-5">
-              <div className="absolute inset-0 bg-black border border-black transition duration-1000 ease-in-out opacity-0 hover:opacity-100"></div>
-              <div className="w-full h-full border border-white">
-                <ButtonArrow />
+            <div className="relative w-4 h-4">
+              <div className="absolute inset-0"></div>
+              <div className="w-full h-full">
+                <ArrowRight />
               </div>
             </div>
           </div>

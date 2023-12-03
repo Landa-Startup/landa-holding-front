@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ArrowRight from '../icons/common/ArrowRight';
 export default function HomeOurTeam() {
   const items = [
     {
@@ -98,10 +99,13 @@ export default function HomeOurTeam() {
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
       <Link href={'/our-team'}>
-        <button className="justify-items-center mx-auto bg-[#AA8453] text-white md:mt-8 flex px-10 py-2 font-barlow">
-          View More
+        <button className="flex items-center bg-[#AA8453] rounded-[4px] text-white md:mt-8  px-7 py-3 font-barlow">
+          <div>View More</div>
+          <div className="pl-2">
+            <ArrowRight />
+          </div>
         </button>
-      </Link>{' '}
+      </Link>
     </div>
   );
 }
