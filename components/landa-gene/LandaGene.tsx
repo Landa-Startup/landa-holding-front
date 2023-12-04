@@ -106,8 +106,8 @@ export default function LandaGene(
           <p className='text-blue font-sans text-[15px] font-[600] leading-normal md:text-[25px]'>LANDA GENE</p>
         </div>
 
-        <div className='flex w-full md:w-3/5 p-4 items-center shrink-0'>
-          <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal lg:text-[25px] md:leading-[30px] lg:leading-[40px] tracking-[0px] text-justify'>
+        <div className='flex w-full shrink-0 items-center p-4 md:w-3/5'>
+          <p className='w-full text-justify font-sans text-[15px] font-[400] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-[25px] lg:leading-[40px]'>
             {textUp}
           </p>
         </div>
@@ -127,8 +127,8 @@ export default function LandaGene(
           />
         </div>
 
-        <div className='flex w-full md:w-1/2 lg:w-3/5 p-4 items-center shrink-0'>
-          <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal md:leading-[28px] lg:text-[25px] md:mt-2 tracking-[0px] lg:leading-[40px] text-justify'>
+        <div className='flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-3/5'>
+          <p className='w-full text-justify font-sans text-[15px] font-[400] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[40px]'>
             {textMid}
           </p>
         </div>
@@ -148,17 +148,17 @@ export default function LandaGene(
           />
         </div>
 
-        <div className='flex w-full md:w-1/2 lg:w-2/3 p-4 items-center shrink-0'>
-          <p className='text-black w-full font-sans text-[15px] leading-normal md:leading-[28px] lg:text-[25px] md:mt-2 tracking-[0px] lg:leading-[50px] text-justify'>
+        <div className='flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-2/3'>
+          <p className='w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[50px]'>
             {textDown}
           </p>
         </div>
       </div>
 
-      <div className='w-full h-auto flex items-start px-[32px] py-[31px] bg-[#F8F5F0]'>
-        <div className='flex flex-col h-auto w-full justify-between items-center p-0'>
-          <div className='flex flex-col w-full items-start p-0'>
-            <p className={`w-full text-primary text-justify font-sans text-[18px]  leading-normal ${lang === "en" ? "md:tracking-[2px]" : ""}`}>
+      <div className='flex h-auto w-full items-start bg-[#F8F5F0] px-[32px] py-[31px]'>
+        <div className='flex h-auto w-full flex-col items-center justify-between p-0'>
+          <div className='flex w-full flex-col items-start p-0'>
+            <p className={`w-full text-justify font-sans text-[18px] leading-normal  text-primary ${lang === "en" ? "md:tracking-[2px]" : ""}`}>
               {formText}
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function LandaGene(
                   patternValue=""
                   patternMessage=""
                   placeholder={lang === "en" ? "Name of Your Organization, if applicable" : "نام شرکت خود را در صورت امکان وارد کنید"}
-                  className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                   containerClass='w-full'
                   labelClass=""
                 />

@@ -1,15 +1,10 @@
-import MagazineStartUps from '@/components/magazine/MagazineStartUps';
-import MagazineModernPost from '@/components/magazine/MagazineModernPost';
 import Banner from '@/components/common/Banner';
-import PostCard from '@/components/magazine/PostCard';
 import SearchInput from '@/components/magazine/SearchInput';
 import CategoriesContainer from '@/components/magazine/CategoriesContainer';
 import TagsContainer from '@/components/magazine/TagsContainer';
 import Landa from '@/components/icons/magazine/Landa';
-import FetchBlogData from '@/utils/FetchBlogData';
 import MagazineCardsContainer from '@/components/magazine/MagazineCardsContainer';
 import { Metadata } from 'next';
-import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Magazine',
@@ -23,12 +18,10 @@ export default async function MagazinePage({
   params: { lang: string };
 }) {
 
-  const { t } = await useTranslation(lang, "magazine")
-
   return (
     <div className="relative">
       <Banner image="/static/images/Magazine/hero.png" title="Magazine" lang={lang} />
-      <div className="grid grid-cols-3 my-32 mx-28 gap-20">
+      <div className="mx-28 my-32 grid grid-cols-3 gap-20">
         <MagazineCardsContainer />
         <div className="col-span-1 flex flex-col gap-12">
           <SearchInput />

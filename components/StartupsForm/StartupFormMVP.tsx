@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Input from '../common/form/Input';
 import TextArea from '../common/TextArea';
 import YesRadioButton from '../common/YesRadioButton';
-import NoRadioButton from '../common/NoRadioButton';
 import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';

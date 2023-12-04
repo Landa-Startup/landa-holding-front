@@ -29,11 +29,11 @@ export default function Hero({
             <div className="flex flex-col items-center justify-center space-y-5 py-36 md:h-screen">
                 <div
                     className={` ${showLanda ? 'block' : 'hidden'
-                        } text-center font-barlow text-white text-2xl md:text-4xl font-normal ${lang === "en" ? "tracking-[7px] md:tracking-[12.6px]" : "tracking-normal"}`}
+                        } text-center font-barlow text-2xl font-normal text-white md:text-4xl ${lang === "en" ? "tracking-[7px] md:tracking-[12.6px]" : "tracking-normal"}`}
                 >
                     {lang === "en" ? "Landa Holding" : "هلدینگ لاندا"}
                 </div>
-                <div className={`font-gilda text-4xl text-center md:text-6xl ${lang === "en" && "tracking-[6.4px]"} text-[#F8F5F0]`}>
+                <div className={`text-center font-gilda text-4xl md:text-6xl ${lang === "en" && "tracking-[6.4px]"} text-[#F8F5F0]`}>
                     {lang === "en" ? "Investment Center" : "مرکز سرمایه گذاری"}
                 </div>
 

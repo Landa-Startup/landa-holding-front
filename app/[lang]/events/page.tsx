@@ -2,7 +2,6 @@ import EventCardsContainer from '@/components/EventCardsContainer';
 import Banner from '@/components/common/Banner';
 import { useTranslation } from 'app/i18n';
 import { Metadata } from 'next';
-import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Events',
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default async function page({ params: { lang }} : { params: { lang: string }} ) {
+export default async function Page({ params: { lang } }: { params: { lang: string } }) {
 
   const { t } = await useTranslation(lang, "events")
 

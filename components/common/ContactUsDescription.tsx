@@ -16,11 +16,11 @@ export default async function ContactUsDescription(
 
   return (
     <div className='h-full' dir={t('lng') === "en" ? "ltr" : "rtl"}>
-      <div className="md:w-[464px] flex flex-col items-center md:items-start mb-5 mt-10 md:my-0">
-        <h1 className="text-4xl md:text-5xl font-light font-gilda">
+      <div className="mb-5 mt-10 flex flex-col items-center md:my-0 md:w-[464px] md:items-start">
+        <h1 className="font-gilda text-4xl font-light md:text-5xl">
           {t('LandaHolding')}
         </h1>
-        <p className="my-5 text-base text-justify">
+        <p className="my-5 text-justify text-base">
           {t('text')}
         </p>
       </div>
@@ -46,7 +46,7 @@ export default async function ContactUsDescription(
         </Link>
       </div>
 
-      <div className={`flex flex-col gap-1 mt-10`}>
+      <div className={`mt-10 flex flex-col gap-1`}>
         <div className="flex gap-5">
           <Phone />
           <div className="flex flex-col">
@@ -89,7 +89,7 @@ export default async function ContactUsDescription(
 
         <div className="flex gap-5">
           <Location />
-          <div className="flex flex-col ml-2">
+          <div className="ml-2 flex flex-col">
             <span className="font-semibold">{t('address')}</span>
             <ul className="mx-4 list-disc space-y-3">
               <li>No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada</li>

@@ -1,20 +1,10 @@
-'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
-import ArrowDown from '../icons/acceleration/ArrowDown';
-
 import { ServicesInterface } from '../../types/global'
 
 export default function AccelerationServices(
-  {services} : {services : ServicesInterface[]}
+  { services }: { services: ServicesInterface[] }
 ) {
-  const [expanded, setExpanded] = useState(true);
 
-  const displayedServices = expanded ? services : services.slice(0, 6);
-
-  const toggleExpanded = () => {
-    setExpanded((prev) => !prev);
-  };
   return (
     <div className="mt-8 grid grid-cols-1 gap-4 border-b-2 pb-14 md:grid-cols-3 md:gap-11">
       {services.map((service) => (

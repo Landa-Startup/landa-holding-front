@@ -1,5 +1,4 @@
 import Hero from '@/components/investment/HeroInvestment';
-// import Hero from '@/components/home/Hero';
 import Button from '@/components/common/Button';
 import Link from '@/components/icons/Link';
 import Image from 'next/image';
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default async function page(
+export default async function Page(
   {
     params: { lang },
   }: {
@@ -35,27 +34,18 @@ export default async function page(
         showButton
         lang={lang}
       />
-      {/* <Hero
-        showLanda
-        title={t('LandaHolding')}
-        titles={t('banner')}
-        backgroundImage='/static/images/investment/hero.png'
-        leftImage='/static/images/investment/left.svg'
-        showButton
-        lang={lang}
-      /> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 bg-[#F7F3EE] items-end">
+      <div className="grid grid-cols-1 items-end gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col font-gilda whitespace-nowrap">
-            <span className="text-3xl md:text-5xl text-[#55422A]">
+          <div className="flex flex-col whitespace-nowrap font-gilda">
+            <span className="text-3xl text-[#55422A] md:text-5xl">
               {t('LandaInvestment')}
             </span>
-            <span className="text-lg md:text-4xl text-primary">
+            <span className="text-lg text-primary md:text-4xl">
               {t('question')}
             </span>
           </div>
           {/* TODO: make component these texts */}
-          <p className="leading-8 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-8 tracking-[1px]">
             {t('text')}
           </p>
         </div>
@@ -73,11 +63,11 @@ export default async function page(
       <div className="relative grid grid-cols-1 gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <span className="text-2xl md:text-4xl text-primary font-gilda">
+            <span className="font-gilda text-2xl text-primary md:text-4xl">
               {t('typesTitle')}
             </span>
           </div>
-          <p className="leading-7 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-7 tracking-[1px]">
             {t('typesText')}
           </p>
         </div>
@@ -90,10 +80,10 @@ export default async function page(
               layout="fill"
             />
           </div>
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="font-gilda text-2xl text-primary md:text-4xl">
             {t('strategyTitle')}
           </span>
-          <p className="leading-7 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-7 tracking-[1px]">
             {t('strategyText')}
           </p>
         </div>
@@ -107,11 +97,11 @@ export default async function page(
       <div className="grid grid-cols-1 gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <span className="text-2xl md:text-4xl text-primary font-gilda">
+            <span className="font-gilda text-2xl text-primary md:text-4xl">
               {t('startUpInvestingTitle')}
             </span>
           </div>
-          <p className="leading-8 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-8 tracking-[1px]">
             {t('startUpInvestingText')}
           </p>
           <div className="relative h-[300px] w-[330px] md:h-[168px] md:w-[561px]">
@@ -132,17 +122,17 @@ export default async function page(
               layout="fill"
             />
           </div>
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="font-gilda text-2xl text-primary md:text-4xl">
             {t('visionTitle')}
           </span>
-          <p className="leading-7 tracking-[1px] font-barlow text-justify">
+          <p className="text-justify font-barlow leading-7 tracking-[1px]">
             {t('visionText')}
           </p>
         </div>
       </div>
       <div className="grid grid-cols-1 items-center gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="font-gilda text-2xl text-primary md:text-4xl">
             {t('certificate')}
           </span>
           <div className="flex items-end">
@@ -151,7 +141,7 @@ export default async function page(
           </div>
         </div>
         <div className="flex flex-col">
-          <p className={`tracking-[1px] font-barlow text-justify ${lang === "en" ? "leading-8" : "leading-10 text-lg"}`}>
+          <p className={`text-justify font-barlow tracking-[1px] ${lang === "en" ? "leading-8" : "text-lg leading-10"}`}>
             {t('focusText')}
           </p>
           <Button

@@ -39,7 +39,7 @@ export default async function LandaHoldingBlack(
           style3='leading-4 md:leading-10 text-md'
         />
 
-        <button className={`relative justify-center items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
+        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/investor-registration'}>
             <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}
@@ -56,8 +56,8 @@ export default async function LandaHoldingBlack(
         </button>
       </div>
 
-      <div className="flex flex-col justify-around space-y-6 pt-8 z-10">
-        <div className="flex flex-col md:items-start items-center self-start">
+      <div className="z-10 flex flex-col justify-around space-y-6 pt-8">
+        <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
               {t('LandaHolding')}
@@ -76,7 +76,7 @@ export default async function LandaHoldingBlack(
           style2='space-y-2 mr-8 md:mr-0'
           style3='leading-4 md:leading-10 text-md'
         />
-        <button className={`relative justify-center items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
+        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/entrepreneurs'}>
             <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}

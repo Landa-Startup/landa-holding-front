@@ -6,11 +6,7 @@ import { Metadata } from 'next';
 import SubsidiaryCompanies from '../../../components/about/SubsidiaryCompanies';
 import StoryOfLanda from '../../../components/about/StoryOfLanda';
 import KeyDifferentiating from '../../../components/KeyDifferentiating';
-import { cards } from '../../[lang]/statics';
 import { useTranslation } from 'app/i18n';
-
-
-
 
 export const metadata: Metadata = {
   title: 'Landa Holding | About',
@@ -36,20 +32,6 @@ export default async function Page({
       <AboutUsLandaHolding lang={lang} />
       <SubsidiaryCompanies lang={lang} />
       <StoryOfLanda lang={lang} />
-      {/* <AboutUsCooperation /> */}
-      {/* <div className="bg-whiteGold md:my-20 md:mx-12">
-        {cards.map((card, index) => (
-          <AboutUsCard
-            reverse={card.reverse}
-            key={index}
-            text={card.text}
-            title={card.title}
-            image={card.image}
-            description={''}
-            link={card.link}
-          />
-        ))}
-      </div> */}
       <KeyDifferentiating />
       <AboutUsProfile lang={lang} />
     </div>

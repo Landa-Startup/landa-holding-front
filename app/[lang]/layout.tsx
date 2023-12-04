@@ -5,7 +5,6 @@ import Navbar from '../../components/common/Navbar';
 import ScrollUpButton from '../../components/common/ScrollUpButton';
 
 // import { dir } from 'i18next'
-import { useTranslation } from 'app/i18n';
 export default function RootLayout({
   params: { lang },
   children,

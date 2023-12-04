@@ -87,7 +87,7 @@ export default function ContactUsForm(
 
   return (
     <div dir={lang === "en" ? "ltr" : "rtl"}>
-      <h2 className="text-5xl font-light text-center font-gilda">
+      <h2 className="text-center font-gilda text-5xl font-light">
         {lang === "en" ? "Reach us" : "با ما تماس بگیرید"}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -116,7 +116,7 @@ export default function ContactUsForm(
               patternValue=""
               patternMessage={lang === "en" ? "Enter a valid Subject." : "یک موضوع معتبر وارد کنید"}
               placeholder={lang === "en" ? "Your Subject*" : "موضوع"}
-              className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
               labelClass='text-[#6b6b6b] dark:text-current'
               containerClass=''
             />

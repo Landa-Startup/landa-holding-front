@@ -73,9 +73,9 @@ export default function Page({ params: { lang }} : { params: { lang: string }} )
   return (
     <div>
       <Banner image="/static/images/EventsBanner.png" title="UPCOMING EVENTS" lang={lang} />
-      <div className="mx-28 my-16 p-6 border shadow-md rounded-sm">
+      <div className="mx-28 my-16 rounded-sm border p-6 shadow-md">
         <div className="flex justify-between gap-20">
-          <div className="w-2/3 flex flex-col gap-4">
+          <div className="flex w-2/3 flex-col gap-4">
             {cardData.map((card, index) => {
               return (
                 <div key={index}>

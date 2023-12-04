@@ -1,10 +1,9 @@
 'use client';
 import { MagazineData } from '@/types/global';
-import Image from 'next/image';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const preData : MagazineData = {
+const preData: MagazineData = {
   title: "",
   description: "",
   thumbnail: "",

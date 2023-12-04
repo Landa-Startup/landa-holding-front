@@ -34,7 +34,7 @@ const PersonalInfoInput = ({
             patternValue=""
             patternMessage=""
             placeholder={lang === "en" ? "Enter your First Name" : " نام خود را وارد کنید"}
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -50,7 +50,7 @@ const PersonalInfoInput = ({
             patternValue=""
             patternMessage=""
             placeholder={lang === "en" ? "Enter your Last Name" : "نام خانوادگی خود را وارد کنید"}
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -66,7 +66,7 @@ const PersonalInfoInput = ({
             patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             patternMessage={lang === "en" ? "Enter a Valid Email Address" : "یک ایمیل معتبر وارد کنید"}
             placeholder={lang === "en" ? "Enter your Email Address" : "ایمیل خود را وارد کنید"}
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -82,7 +82,7 @@ const PersonalInfoInput = ({
             patternValue="^[0-9]{11}$"
             patternMessage={lang === "en" ? "Enter a Valid Phone Number" : "یک شماره تلفن معتبر وارد کنید"}
             placeholder={lang === "en" ? "Enter your Phone Number" : "شماره تلفن خود را وارد کنید"}
-            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}

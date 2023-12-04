@@ -1,14 +1,10 @@
-'use client';
 import Image from 'next/image';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
 
 //TODO: hero components
 export default async function Hero({
   showLanda,
-  buttonBg,
   backgroundImage,
   leftImage,
   showButton,

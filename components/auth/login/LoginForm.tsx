@@ -70,9 +70,8 @@ export default function LoginPage() {
               // },
             })}
             placeholder="Email"
-            className={`input input-bordered w-[300px] rounded-md border border-gray-200 bg-white/50 px-3 py-2 text-gray-700 backdrop-blur-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary md:h-[75px] md:w-[548px] ${
-              errors.email ? 'border-red-500' : ''
-            }`}
+            className={`input input-bordered w-[300px] rounded-md border border-gray-200 bg-white/50 px-3 py-2 text-gray-700 backdrop-blur-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary md:h-[75px] md:w-[548px] ${errors.email ? 'border-red-500' : ''
+              }`}
           />
           {errors.email && (
             <span className="mt-2 text-sm text-yellow-500">
@@ -91,9 +90,8 @@ export default function LoginPage() {
               },
             })}
             placeholder="Password"
-            className={`input input-bordered w-[300px] rounded-md border border-gray-200 bg-white/50 px-3 py-2 text-gray-700 backdrop-blur-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary md:h-[75px] md:w-[548px] ${
-              errors.password ? 'border-red-500' : ''
-            }`}
+            className={`input input-bordered w-[300px] rounded-md border border-gray-200 bg-white/50 px-3 py-2 text-gray-700 backdrop-blur-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary md:h-[75px] md:w-[548px] ${errors.password ? 'border-red-500' : ''
+              }`}
           />
           {errors.password && (
             <span className="mt-2 text-sm text-yellow-500">
