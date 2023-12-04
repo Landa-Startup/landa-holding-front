@@ -5,10 +5,12 @@ export default function HomeCardsRight({
   images,
   titles,
   link,
+  lang
 }: {
   titles: string;
   images: Array<{ src: string; alt: string }>;
   link: string;
+  lang: string;
 }) {
   return (
     <div className="flex flex-col self-start md:self-center">
@@ -23,7 +25,7 @@ export default function HomeCardsRight({
       <div className="flex space-x-7">
         {images.map((image, index) => (
           <div
-            className="relative mt-5 hidden h-96 w-64 last:mt-14 md:block md:first:mt-44 lg:mb-0"
+            className={`relative mt-5 hidden h-96 w-64 ${lang === "en" ? "last:mt-14" : "last:mt-[5.25rem]"} md:block md:first:mt-44 lg:mb-0`}
             key={index}
           >
             <Image

@@ -22,7 +22,7 @@ export default function RootLayout({
         <Navbar lang={lang}>
           {/* Navbar */}
           <main>{children}</main> {/* Main Content */}
-          <Footer />
+          <Footer lang={lang} />
           <ScrollUpButton /> {/* Scroll Up Button */}
         </Navbar>
       </body>

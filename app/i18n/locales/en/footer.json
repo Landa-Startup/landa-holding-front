@@ -1,0 +1,30 @@
+{
+    "lng": "en",
+    "dir": "ltr",
+    "about": {
+        "title": "About Landa",
+        "text": "Landa Holding distinguishes itself through extensive charity work and world-class transaction capabilities that enable private business growth. The company connects reliable global investors to top startup opportunities by linking idea holders with relevant service providers."
+    },
+    "explore": {
+        "title": "Explore",
+        "text": {
+            "home": "Home",
+            "about": "About Us",
+            "contact": "Contact Us",
+            "ourTeam": "Our Team"
+        }
+    },
+    "forms": {
+        "title": "Forms",
+        "text": {
+            "startUp": "Startups",
+            "investor": "Investor Center",
+            "entrepreneur": "Entrepreneur Center",
+            "prtners": "Our Business Partners"
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "text": ""
+    }
+}

@@ -31,7 +31,17 @@
       "show": true,
       "index": 1,
       "link": "/investor-registration",
-      "addedClass": ""
+      "addedClass": "",
+      "images": [
+        {
+          "src": "/static/images/Home main/2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/static/images/Home main/1.jpg",
+          "alt": ""
+        }
+      ]
     },
     {
       "title": "Acceleration",
@@ -39,7 +49,17 @@
       "reverse": true,
       "show": true,
       "index": 2,
-      "addedClass": ""
+      "addedClass": "",
+      "images": [
+        {
+          "src": "/static/images/Home main/3.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/static/images/Home main/4.jpg",
+          "alt": ""
+        }
+      ]
     },
     {
       "title": "Academy",
@@ -47,7 +67,17 @@
       "reverse": false,
       "show": false,
       "index": 3,
-      "addedClass": ""
+      "addedClass": "",
+      "images": [
+        {
+          "src": "/static/images/Home main/5.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/static/images/Home main/6.jpg",
+          "alt": ""
+        }
+      ]
     }
   ]
 }

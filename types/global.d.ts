@@ -252,6 +252,7 @@ interface HomeCardsLeftProps {
   text: string;
   addedClass?: string;
   link: string;
+  lang: string
 }
 
 interface ImagesInterface {

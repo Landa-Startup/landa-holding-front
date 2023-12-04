@@ -6,31 +6,29 @@ import Instagram from '../icons/footer/Instagram';
 import Envelope from '../icons/footer/Envelope';
 import Whatsapp from '../icons/footer/Whatsapp';
 import LinkedIn from '../icons/footer/LinkedIn';
+import { useTranslation } from 'app/i18n';
 
-export default function Footer() {
+export default async function Footer(
+  {lang} : {lang: string}
+) {
+
+  const { t } = await useTranslation(lang, "footer")
+
   function GetYear() {
     const currentYear = new Date().getFullYear();
     return currentYear;
   }
   return (
-    <div className="flex flex-col bg-neutral-800 p-8 font-barlow">
+    <div className="flex flex-col bg-neutral-800 p-8 font-barlow" dir={t('dir')}>
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:gap-4 md:p-20">
         <div className="mt-5 flex flex-col md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-white">
-            About Landa
+            {t('about', {returnObjects: true}).title}
             <br />
           </div>
-          <div className="mt-1 text-base font-normal  text-neutral-400 md:mr-10">
-            {/* In Landa Academy, individuals will be trained based on their
-            interests and capabilities. Necessary actions are taken at the Landa
-            Acceleration Center to accelerate their unique abilities. Then,
-            investment is made based on the investment priorities of developing
-            the nurtured capabilities of individuals. */}
-            Landa Holding distinguishes itself through extensive charity work
-            and world-class transaction capabilities that enable private
-            business growth. The company connects reliable global investors to
-            top startup opportunities by linking idea holders with relevant
-            service providers. <br />
+          <div className={`mt-1 text-base font-normal  text-neutral-400 ${lang === "en" ? "md:mr-10" : "md:ml-10"}`}>
+            {t('about', {returnObjects: true}).text}
+            <br />
           </div>
           <div className="mt-2 flex h-[22px] w-[126px] flex-row items-center justify-between text-white">
             <Link
@@ -70,7 +68,7 @@ export default function Footer() {
         </div>
         <div className="col-span-1 flex flex-col space-y-1 md:mr-10">
           <div className="text-justify text-xl font-medium text-white">
-            Explore
+            {t('explore', {returnObjects: true}).title}
             <br />
           </div>
           <div className="flex flex-col space-y-1">
@@ -78,60 +76,60 @@ export default function Footer() {
               href={'/'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              Home
+              {t('explore', {returnObjects: true}).text.home}
             </Link>
             <Link
               href={'/about'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              About Us
+              {t('explore', {returnObjects: true}).text.about}
             </Link>
             <Link
               href={'/contact'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              Contact Us
+              {t('explore', {returnObjects: true}).text.contact}
             </Link>
             <Link
               href={'/our-team'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              Our Team
+              {t('explore', {returnObjects: true}).text.ourTeam}
             </Link>
           </div>
         </div>
         <div className="col-span-1 flex flex-col space-y-1">
-          <div className="text-xl font-medium text-white">Forms</div>
+          <div className="text-xl font-medium text-white">{t('forms', {returnObjects: true}).title}</div>
           <div className="inline-flex flex-col items-start justify-start self-stretch">
             <Link
               href={'/StartupsForm'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              Startups
+              {t('forms', {returnObjects: true}).text.startUp}
             </Link>
             <Link
               href={'/investor-registration'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              Investor Center
+              {t('forms', {returnObjects: true}).text.investor}
             </Link>
             <Link
               href={'/entrepreneurs'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              Entrepreneur Center
+              {t('forms', {returnObjects: true}).text.entrepreneur}
             </Link>
             <Link
               href={'/partner-membership'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              Our Business Partners
+              {t('forms', {returnObjects: true}).text.partners}
             </Link>
           </div>
         </div>
         <div className="col-span-1 flex flex-col space-y-1 md:ml-1 md:w-1/4">
           <div className="h-[30px] w-[93px]  text-xl font-medium text-white">
-            Contact
+            {t('contact', {returnObjects: true}).title}
             <br />
           </div>
           <div className="text-justify text-base font-normal text-neutral-400">

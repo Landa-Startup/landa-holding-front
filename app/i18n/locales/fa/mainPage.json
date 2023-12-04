@@ -31,7 +31,17 @@
       "reverse": false,
       "show": true,
       "index": 1,
-      "addedClass": ""
+      "addedClass": "",
+            "images": [
+        {
+          "src": "/static/images/Home main/2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/static/images/Home main/1.jpg",
+          "alt": ""
+        }
+      ]
     },
     {
       "title": "شتاب‌دهندگی",
@@ -40,7 +50,17 @@
       "show": true,
       "index": 2,
 
-      "addedClass": ""
+      "addedClass": "",
+            "images": [
+        {
+          "src": "/static/images/Home main/2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/static/images/Home main/1.jpg",
+          "alt": ""
+        }
+      ]
     },
     {
       "title": "آکادمی",
@@ -48,7 +68,17 @@
       "reverse": false,
       "show": false,
       "index": 3,
-      "addedClass": ""
+      "addedClass": "",
+            "images": [
+        {
+          "src": "/static/images/Home main/2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/static/images/Home main/1.jpg",
+          "alt": ""
+        }
+      ]
     }
   ]
 }

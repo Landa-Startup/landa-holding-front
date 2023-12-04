@@ -6,6 +6,7 @@ export default function HomeCardsLeft({
   text,
   addedClass,
   link,
+  lang
 }: HomeCardsLeftProps) {
   return (
     <div
@@ -18,9 +19,9 @@ export default function HomeCardsLeft({
         <Button
           size="visit"
           type="button"
-          text="Visit Now"
           goto={link}
           bgColor="Primary"
+          lang={lang}
         />
       </div>
     </div>
