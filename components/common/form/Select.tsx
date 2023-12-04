@@ -27,9 +27,8 @@ export default function Select({
   selected?: string;
 }) {
   return (
-    <div>
-
-      <label htmlFor={nameInput} className={`text-left ${labelClass}`}>
+    <div className="flex flex-col">
+      <label htmlFor={nameInput} className={`text-left self-start px-2 ${labelClass}`}>
         {label}
       </label>
       {/* TO DO : select placeholder has a problem */}

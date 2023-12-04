@@ -19,6 +19,13 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
     { label: 'CONTACT US', href: '/contact' },
     { label: 'OUR TEAM', href: '/our-team' },
   ];
+  const menuItems1 = [
+    { label: 'HOME1', href: '/' },
+    { label: 'ABOUT US1', href: '/about' },
+    // { label: 'ACCELERATION', href: '/acceleration' },
+    { label: 'CONTACT US1', href: '/contact' },
+    { label: 'OUR TEAM1', href: '/our-team' },
+  ];
   const submenuItems = [
     { label: 'INVESTOR CENTER', href: '/investor-registration' },
     { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
