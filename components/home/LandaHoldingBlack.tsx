@@ -3,7 +3,6 @@ import React from 'react';
 import Lines from '../icons/LandaHoldingBlack/Lines';
 import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
 import UlList from '../List/UlList';
-import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
 
 export default async function LandaHoldingBlack(
@@ -40,7 +39,7 @@ export default async function LandaHoldingBlack(
           style3='leading-4 md:leading-10 text-md'
         />
 
-        <button className={`relative mt-10 inline-flex items-center justify-start gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
+        <button className={`relative justify-center items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
           <Link href={'/investor-registration'}>
             <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}
@@ -57,8 +56,8 @@ export default async function LandaHoldingBlack(
         </button>
       </div>
 
-      <div className="z-10 flex flex-col justify-around space-y-6 pt-8">
-        <div className="flex flex-col items-center md:items-start">
+      <div className="flex flex-col justify-around space-y-6 pt-8 z-10">
+        <div className="flex flex-col md:items-start items-center self-start">
           <div className="flex flex-col">
             <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
               {t('LandaHolding')}
@@ -73,11 +72,11 @@ export default async function LandaHoldingBlack(
 
         <UlList
           list={t('lng') === "en" ? L2EN : L2FA}  
-          style1={`w-[380px] md:w-[500px] ${t('lng') === "en" ? "pr-6" : "pl-6"}`}
-          style2='space-y-2'
+          style1={`w-[320px] md:w-[500px] ${t('lng') === "en" ? "pr-6" : "pl-6"}`}
+          style2='space-y-2 mr-8 md:mr-0'
           style3='leading-4 md:leading-10 text-md'
         />
-        <button className={`relative mt-10 inline-flex items-center justify-start gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
+        <button className={`relative justify-center items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
           <Link href={'/entrepreneurs'}>
             <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}

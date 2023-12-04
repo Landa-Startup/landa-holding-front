@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from '../../common/form/Input';
+import { useTranslation } from 'app/i18n';
 
 type Props = {
     register: any;
@@ -10,13 +11,16 @@ type Props = {
         email: string;
         phoneNumber: string;
     };
+    lang: string
 }
 
 const PersonalInfoInput = ({
     register,
     errors,
-    nameInputs
+    nameInputs,
+    lang
 }: Props) => {
+
   return (
     <>
         {nameInputs?.firstName && <div className="col-span-1">
@@ -25,12 +29,12 @@ const PersonalInfoInput = ({
             errors={errors}
             nameInput={nameInputs.firstName}
             type="text"
-            label={nameInputs.firstName}
-            required="First Name is Required."
+            label={lang === "en" ? "First Name" : "نام"}
+            required={lang === "en" ? "First Name is Required." : "نام الزامی است"}
             patternValue=""
             patternMessage=""
-            placeholder="Enter your First Name"
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            placeholder={lang === "en" ? "Enter your First Name" : " نام خود را وارد کنید"}
+            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -41,12 +45,12 @@ const PersonalInfoInput = ({
             errors={errors}
             nameInput={nameInputs.lastName}
             type="text"
-            label={nameInputs.lastName}
-            required="Last Name is Required."
+            label={lang === "en" ? "Last Name" : "نام خانوادگی"}
+            required={lang === "en" ? "Last Name is Required." : "نام خانوادگی الزامی است"}
             patternValue=""
             patternMessage=""
-            placeholder="Enter your Last Name"
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            placeholder={lang === "en" ? "Enter your Last Name" : "نام خانوادگی خود را وارد کنید"}
+            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -57,12 +61,12 @@ const PersonalInfoInput = ({
             errors={errors}
             nameInput={nameInputs.email}
             type="email"
-            label="Email Address"
-            required="Email Address is Required."
+            label={lang === "en" ? "Email Address" : "ایمیل"}
+            required={lang === "en" ? "Email Address is Required." : "ایمیل الزامی است"}
             patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-            patternMessage="Enter a Valid Email Address"
-            placeholder="Enter your Email Address"
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            patternMessage={lang === "en" ? "Enter a Valid Email Address" : "یک ایمیل معتبر وارد کنید"}
+            placeholder={lang === "en" ? "Enter your Email Address" : "ایمیل خود را وارد کنید"}
+            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}
@@ -73,12 +77,12 @@ const PersonalInfoInput = ({
             errors={errors}
             nameInput={nameInputs.phoneNumber}
             type="text"
-            label="Phone Number"
-            required="Phone Number is Required."
+            label={lang === "en" ? "Phone Number" : "شماره تلفن"}
+            required={lang === "en" ? "Phone Number is Required." : "شماره تلفن الزامی است"}
             patternValue="^[0-9]{11}$"
-            patternMessage="Enter a Valid Phone Number"
-            placeholder="Enter your Phone Number"
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            patternMessage={lang === "en" ? "Enter a Valid Phone Number" : "یک شماره تلفن معتبر وارد کنید"}
+            placeholder={lang === "en" ? "Enter your Phone Number" : "شماره تلفن خود را وارد کنید"}
+            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>}

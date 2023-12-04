@@ -9,11 +9,15 @@ export const metadata: Metadata = {
     'Meet the dedicated and talented individuals who make up the Landa Holding team. Learn about their expertise, passion, and commitment to excellence. Get to know the driving force behind our success.',
 };
 
-export default function TeamPage() {
+export default function TeamPage({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
   return (
-    <div>
-      <Banner image="/static/images/our-team/Header.png " title="Our Team" />
-      <TeamPersons />
+    <div dir={lang === "en" ? "ltr" : "rtl"}>
+      <Banner image="/static/images/our-team/Header.png " title="Our Team" lang={lang} />
+      <TeamPersons lang={lang} />
     </div>
   );
 }

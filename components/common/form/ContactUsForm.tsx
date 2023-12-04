@@ -11,7 +11,9 @@ import { PersonalInfoInput } from './PersonalInfoInput';
 import Input from './Input';
 import TextArea from '../TextArea';
 import Button from '../Button';
-export default function ContactUsForm() {
+export default function ContactUsForm(
+  {lang} : {lang: string}
+) {
 
   const {
     register,
@@ -84,9 +86,9 @@ export default function ContactUsForm() {
   }))
 
   return (
-    <div>
-      <h2 className="text-center font-gilda text-5xl font-light">
-        Reach us
+    <div dir={lang === "en" ? "ltr" : "rtl"}>
+      <h2 className="text-5xl font-light text-center font-gilda">
+        {lang === "en" ? "Reach us" : "با ما تماس بگیرید"}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="my-4 grid h-full grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
@@ -100,6 +102,7 @@ export default function ContactUsForm() {
               email: "email",
               phoneNumber: "number"
             }}
+            lang={lang}
           />
 
           <div className='col-span-1'>
@@ -108,12 +111,12 @@ export default function ContactUsForm() {
               errors={errors}
               nameInput='subject'
               type='text'
-              label='Subject'
-              required='Your Subject is required.'
+              label={lang === "en" ? "Subject" : "موضوع"}
+              required={lang === "en" ? 'Your Subject is required.' : 'موضوع الزامی است'}
               patternValue=""
-              patternMessage='Enter a valid Subject.'
-              placeholder='Your Subject*'
-              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+              patternMessage={lang === "en" ? "Enter a valid Subject." : "یک موضوع معتبر وارد کنید"}
+              placeholder={lang === "en" ? "Your Subject*" : "موضوع"}
+              className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
               labelClass='text-[#6b6b6b] dark:text-current'
               containerClass=''
             />
@@ -123,12 +126,12 @@ export default function ContactUsForm() {
             <TextArea
               register={register}
               errors={errors}
-              title='Message'
-              required='Message is required.'
+              title={lang === "en" ? "Message" : "پیام"}
+              required={lang === "en" ? "Message is required" : "پیام الزامی است"}
               nameTextArea='message'
               patternValue=''
               patternMessage=''
-              placeholder='Message*'
+              placeholder={lang === "en" ? "Message" : "پیام"}
               rows={4}
               cols={20}
             />
@@ -138,6 +141,7 @@ export default function ContactUsForm() {
             type='submit'
             bgColor="Primary"
             disabled={errorsList[0] ? true : false}
+            lang={lang}
           />
       </form>
       <NotificationSendForm/>

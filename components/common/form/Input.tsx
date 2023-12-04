@@ -14,7 +14,7 @@ export default function Input({
   className,
   labelClass,
   containerClass,
-  inputValue
+  inputValue,
 }: {
   register: any;
   errors: any;
@@ -34,7 +34,7 @@ export default function Input({
   const value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
     <div className={containerClass}>
-      <label htmlFor={nameInput} className={`pl-2 text-lg ${labelClass}`}>
+      <label htmlFor={nameInput} className={`px-2 text-lg ${labelClass}`}>
         {label}
       </label>
 

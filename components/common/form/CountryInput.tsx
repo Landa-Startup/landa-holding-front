@@ -13,12 +13,14 @@ type Props = {
     register: any;
     errors: any;
     nameInput: string;
+    lang: string;
 }
 
 export default function CountryInput({
     register,
     errors,
-    nameInput
+    nameInput,
+    lang
 }: Props) {
     const [selectedCountry, setSelectedCountry] = useState('');
 
@@ -32,11 +34,11 @@ export default function CountryInput({
           register={register}
           errors={errors}
           nameInput={nameInput}
-          label='Select a country:'
-          required='Your Country is Required'
-          className='input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
+          label={lang === "en" ? 'Select a country:' : 'یک کشور را انتخاب کنید:'}
+          required={lang === "en" ? 'Your Country is Required' : 'کشور شما الزامی است'}
+          className='col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]'
           labelClass='text-[#6b6b6b] dark:text-current'
-          placeholder='Select a Country'
+          placeholder={lang === "en" ? 'Select a country:' : 'یک کشور را انتخاب کنید:'}
           options={countriesData}
           handleChange={handleCountryChange}
           selected={selectedCountry}
@@ -48,12 +50,12 @@ export default function CountryInput({
             errors={errors}
             nameInput="provinceOfResidence"
             type="text"
-            label="City Of Residence"
-            required="City Of Residence is Required."
+            label={lang === "en" ? "City Of Residence" : "شهر محل سکونت"}
+            required={lang === "en" ? "City Of Residence is Required." : "شهر محل سکونت الزامی است"}
             patternValue=""
             patternMessage=""
-            placeholder="Enter your City Of Residence"
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            placeholder={lang === "en" ? "Enter your City Of Residence" : "شهر محل سکونت خود را وارد کنید"}
+            className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
         </div>
