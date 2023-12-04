@@ -1,6 +1,5 @@
 import React from 'react'
 import Input from '../../common/form/Input';
-import { useTranslation } from 'app/i18n';
 
 type Props = {
     register: any;

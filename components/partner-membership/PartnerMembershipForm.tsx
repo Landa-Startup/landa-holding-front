@@ -17,7 +17,9 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 
 // import { PartnerMembership } from '@prisma/client';
 
-export default function PartnerMembershipForm() {
+export default function PartnerMembershipForm(
+  {lang} : {lang: string}
+) {
 
   const {
     register,
@@ -93,7 +95,7 @@ export default function PartnerMembershipForm() {
     <div>
     <div>
       <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <PartnerMembershipTitle />
+        <PartnerMembershipTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
 
@@ -106,6 +108,7 @@ export default function PartnerMembershipForm() {
                 email: "email",
                 phoneNumber: ""
               }}
+              lang={lang}
             />
 
             <div className="col-span-1">
@@ -114,11 +117,11 @@ export default function PartnerMembershipForm() {
                 errors={errors}
                 nameInput="birthDate"
                 type="date"
-                label="Date of Birth"
-                required="Date of Birth is Required."
+                label={lang === "en" ? "Date of Birth" : "تاریخ تولد"}
+                required={lang === "en" ? "Date of Birth is Required." : "تاریخ تولد الزامی است"}
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
                 patternMessage="Please enter a valid Date of Birth (e.g., 2001/02/11)"
-                placeholder="Enter your Date of Birth"
+                placeholder={lang === "en" ? "Enter your Date of Birth" : "تاریخ تولد خود را وارد کنید"}
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -128,6 +131,7 @@ export default function PartnerMembershipForm() {
               register={register}
               errors={errors}
               nameInput='countryOfResidence'
+              lang={lang}
             />
 
             <div className="col-span-1">
@@ -136,9 +140,9 @@ export default function PartnerMembershipForm() {
                 errors={errors}
                 nameInput="companyName"
                 type="text"
-                label="Company Name"
-                required="Company Name is Required."
-                placeholder="Enter your Company Name"
+                label={lang === "en" ? "Company Name" : "نام شرکت"}
+                required={lang === "en" ? "Company Name is Required." : "نام شرکت الزامی است"}
+                placeholder={lang === "en" ? "Enter your Company Name" : "نام شرکت خود را وارد کنید"}
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -152,9 +156,9 @@ export default function PartnerMembershipForm() {
                 errors={errors}
                 nameInput="investmentCeiling"
                 type="text"
-                label="Field Of Professional"
-                required="Investment Ceiling is Required."
-                placeholder="Enter your Investment Ceiling"
+                label={lang === "en" ? "Investment Ceiling" : "سقف سرمایه گذاری"}
+                required={lang === "en" ? "Investment Ceiling is Required." : "سقف سرمایه گذاری الزامی است"} 
+                placeholder={lang === "en" ? "Enter your Investment Ceiling" : "سقف سرمایه گذاری خود را وارد کنید"}
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -164,14 +168,14 @@ export default function PartnerMembershipForm() {
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title="How did you hear about us?*"
+                title={lang === "en" ? "How did you hear about us?*" : "چگونه درباره ما شنیدید"}
                 register={register}
                 errors={errors}
-                placeholder="Description"
+                placeholder={lang === "en" ? "Description" : "توضیحات"}
                 nameTextArea="howDidYouKnowUs"
                 patternMessage=""
                 patternValue=""
-                required="This field is required"
+                required={lang === "en" ? "This field is required" : "پر کردن این قسمت الزامی است"}
               />
             </div>
           </div>
@@ -180,6 +184,7 @@ export default function PartnerMembershipForm() {
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
+              lang={lang}
             />
           </div>
         </form>

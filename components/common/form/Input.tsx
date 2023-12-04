@@ -33,8 +33,8 @@ export default function Input({
   
   let value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
-    <div className={containerClass}>
-      <label htmlFor={nameInput} className={`px-2 text-lg ${labelClass}`}>
+    <div className={`flex flex-col ${containerClass}`}>
+      <label htmlFor={nameInput} className={`px-2 text-lg self-start ${labelClass}`}>
         {label}
       </label>
 

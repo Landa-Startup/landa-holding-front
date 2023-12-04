@@ -3,6 +3,7 @@ import Banner from '../../../components/common/Banner';
 import StartupFormForm from '../../../components/StartupsForm/StartupFormForm';
 import { Metadata } from 'next';
 import { SubmitProvider } from '../../../providers/StateProvider';
+import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Startups',
@@ -10,18 +11,26 @@ export const metadata: Metadata = {
     'Explore the Landa Holding Startup Form and share your innovative ideas with us. We are interested in hearing from startups and entrepreneurs. Lets work together to bring your vision to life.',
 };
 
-export default function StartupValidationPage() {
+export default async function StartupValidationPage({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
+
+  const { t } = await useTranslation(lang, "startUp")
+
   return (
-    <div>
+    <div dir={t('dir')}>
       {/* Banner component with an image and title */}
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title="STARTUPS VALIDATION FORM"
+        title={t('banner')}
+        lang={lang}
       />
 
       {/* Render the StartupFormForm component */}
       <SubmitProvider>
-        <StartupFormForm />
+        <StartupFormForm lang={lang} />
       </SubmitProvider>
     </div>
   );
