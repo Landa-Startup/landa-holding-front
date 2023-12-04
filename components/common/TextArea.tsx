@@ -10,7 +10,7 @@ export default function TextArea({
   patternMessage,
   placeholder,
   rows,
-  cols
+  cols,
 }: {
   title: string;
   register: any;
@@ -21,7 +21,7 @@ export default function TextArea({
   patternMessage: string;
   placeholder: string;
   rows?: number;
-  cols?: number
+  cols?: number;
 }) {
   // Create a regular expression pattern for validation
   const pattern = new RegExp(patternValue);
@@ -29,7 +29,7 @@ export default function TextArea({
   return (
     <div>
       {/* Label for the textarea */}
-      <label className="text-[#6b6b6b] dark:text-current pl-2 text-lg">{title}</label>
+      <label className="text-[#6b6b6b] dark:text-current px-2 text-lg">{title}</label>
       <textarea
         rows={rows}
         cols={cols}

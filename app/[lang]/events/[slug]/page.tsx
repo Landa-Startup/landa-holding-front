@@ -15,7 +15,7 @@ import Button from '@/components/common/Button';
 //     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 // };
 
-export default function Page() {
+export default function Page({ params: { lang }} : { params: { lang: string }} ) {
   // const pathname = usePathname();
   // const slug = pathname?.replace('/magazine/', '');
   // const [cardData, setCardData] = useState<MagazineData>();
@@ -73,7 +73,7 @@ export default function Page() {
 
   return (
     <div>
-      <Banner image="/static/images/EventsBanner.png" title="UPCOMING EVENTS" />
+      <Banner image="/static/images/EventsBanner.png" title="UPCOMING EVENTS" lang={lang} />
       <div className="mx-28 my-16 p-6 border shadow-md rounded-sm">
         <div className="flex justify-between gap-20">
           <div className="w-2/3 flex flex-col gap-4">
@@ -136,6 +136,7 @@ export default function Page() {
                     size="visit"
                     text="Register"
                     bgColor="Primary"
+                    lang={lang}
                   />
                 </div>
               );

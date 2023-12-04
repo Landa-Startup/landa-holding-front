@@ -40,7 +40,7 @@ export default async function LandaHoldingBlack(
           style3='leading-4 md:leading-10 text-md'
         />
 
-        <button className={`relative justify-start items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
+        <button className={`relative justify-center items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
           <Link href={'/investor-registration'}>
             <div className="text-white text-[24px] md:text-[32px] pb-3 font-normal leading-6 tracking-[1.5px] font-condensed">
               {t('lng') === "en" ? "Register" : "ثبت نام"}
@@ -58,7 +58,7 @@ export default async function LandaHoldingBlack(
       </div>
 
       <div className="flex flex-col justify-around space-y-6 pt-8 z-10">
-        <div className="flex flex-col md:items-start items-center">
+        <div className="flex flex-col md:items-start items-center self-start">
           <div className="flex flex-col">
             <span className={`text-black text-base font-normal ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px] text-xl"} font-condensed`}>
               {t('LandaHolding')}
@@ -73,11 +73,11 @@ export default async function LandaHoldingBlack(
 
         <UlList
           list={t('lng') === "en" ? L2EN : L2FA}  
-          style1={`w-[380px] md:w-[500px] ${t('lng') === "en" ? "pr-6" : "pl-6"}`}
-          style2='space-y-2'
+          style1={`w-[320px] md:w-[500px] ${t('lng') === "en" ? "pr-6" : "pl-6"}`}
+          style2='space-y-2 mr-8 md:mr-0'
           style3='leading-4 md:leading-10 text-md'
         />
-        <button className={`relative justify-start items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
+        <button className={`relative justify-center items-center gap-4 mt-10 inline-flex ${t('lng') === "en" ? "" : "flex-row-reverse"} md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-sm`}>
           <Link href={'/entrepreneurs'}>
             <div className="text-white text-[24px] md:text-[32px] tracking-[1.5px] font-normal pb-3 leading-6 font-condensed">
               {t('lng') === "en" ? "Register" : "ثبت نام"}

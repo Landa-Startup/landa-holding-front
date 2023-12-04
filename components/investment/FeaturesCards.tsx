@@ -2,15 +2,18 @@
 import React, { ReactElement } from 'react';
 import Button from '../common/Button';
 import { useRouter } from 'next/navigation';
+import { language } from 'googleapis/build/src/apis/language';
 
 export default function FeaturesCards({
   title,
   description,
   link,
+  lang
 }: {
   title: string;
   description: string;
   link: string;
+  lang: string;
 }) {
   const router = useRouter();
 
@@ -25,10 +28,11 @@ export default function FeaturesCards({
       <Button
         goto={link}
         size="visit"
-        text="Register"
+        text={lang === "en" ? "Register" : "ثبت نام"}
         addedClass="self-end"
         bgColor="Primary"
         onClick={handleOnClick}
+        lang={lang}
       />
     </div>
   );

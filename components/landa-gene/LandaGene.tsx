@@ -12,7 +12,9 @@ import { submitLandaApplicationForm } from 'pages/api/landa-gene';
 import { useSubmit } from 'providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 
-export default function LandaGene() {
+export default function LandaGene(
+  {lang, textUp, textMid, textDown, formText} : {lang: string, textUp: string, textMid: string, textDown: string, formText: string}
+) {
 
   const {
     register,
@@ -106,13 +108,7 @@ export default function LandaGene() {
 
           <div className='flex w-full md:w-3/5 p-4 items-center shrink-0'>
             <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal lg:text-[25px] md:leading-[30px] lg:leading-[40px] tracking-[0px] text-justify'>
-            Landa Gene is an innovative and forward-thinking genetics start-up with the 
-            potential to transform the healthcare industry. Landa Gene was founded by
-            Landa International Holding Company as a subsidiary dedicated to identifying 
-            and preventing disease through genetic testing. We have helped individuals 
-            concerned about their health and the health of their loved ones build an 
-            effective communication bridge between themselves and medical specialists 
-            via the use of technology and AI.
+              {textUp}
             </p>
           </div>
         </div>
@@ -133,15 +129,7 @@ export default function LandaGene() {
 
           <div className='flex w-full md:w-1/2 lg:w-3/5 p-4 items-center shrink-0'>
             <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal md:leading-[28px] lg:text-[25px] md:mt-2 tracking-[0px] lg:leading-[40px] text-justify'>
-              The medical treatment you or your family members receive may be altered based on the
-              results of genetic testing, which searches for alterations in your DNA known as mutations or
-              variations. A genetic issue that increases your risk of cancer, for instance, can be diagnosed with this
-              method. Results from genetic testing that need only a blood or spit sample are often available within
-              a few weeks. Due to the fact that you share DNA with your relatives, it is possible that they, too, have
-              the same genetic alteration that you have been diagnosed with. To ensure that the correct individual
-              in your family is tested, that the proper test is ordered, that you receive your findings, and that you
-              are linked with the relevant physicians or specialists, we provide genetic counselling both before and
-              after genetic testing.
+              {textMid}
             </p>
           </div>
         </div>
@@ -162,12 +150,7 @@ export default function LandaGene() {
 
           <div className='flex w-full md:w-1/2 lg:w-2/3 p-4 items-center shrink-0'>
             <p className='text-black w-full font-sans text-[15px] font-[400] leading-normal md:leading-[28px] lg:text-[25px] md:mt-2 tracking-[0px] lg:leading-[50px] text-justify'>
-              The monitoring of DNA mutations and alterations through genetic testing has several
-              beneficial consequences for public health and disease prevention. Cancer risk due to inherited
-              mutations can be identified, for instance, by means of genetic testing. Various samples of blood and
-              saliva will be collected for this test. Because of the high degree of genetic similarity between
-              members of the same family, genetic testing has the potential benefit of revealing the existence of a
-              problem in different members of the same family.
+              {textDown}
             </p>
           </div>
         </div>
@@ -175,8 +158,8 @@ export default function LandaGene() {
         <div className='w-full h-auto flex items-start px-[32px] py-[31px] bg-[#F8F5F0]'>
           <div className='flex flex-col h-auto w-full justify-between items-center p-0'>
             <div className='flex flex-col w-full items-start p-0'>
-              <p className='w-full text-primary text-justify font-sans text-[18px] font-[700] leading-normal md:tracking-[2px]'>
-                Please fill out the following form to indicate your interest in collaborating with the Landa Gene startup or future opportunities:
+              <p className={`w-full text-primary text-justify font-sans text-[18px] font-[700] leading-normal ${lang === "en" ? "md:tracking-[2px]" : ""}`}>
+                {formText}
               </p>
             </div>
 
@@ -192,6 +175,7 @@ export default function LandaGene() {
                     email: "email",
                     phoneNumber: "phone"
                   }}
+                  lang={lang}
                 />
 
                 <div className="col-span-1">
@@ -200,11 +184,11 @@ export default function LandaGene() {
                     errors={errors}
                     nameInput="company"
                     type="text"
-                    label=""
+                    label={lang === "en" ? "Company Name" : "نام شرکت"}
                     required=""
                     patternValue=""
                     patternMessage=""
-                    placeholder="Name of Your Organization, if applicable"
+                    placeholder={lang === "en" ? "Name of Your Organization, if applicable" : "نام شرکت خود را در صورت امکان وارد کنید"}
                     className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                     containerClass='w-full'
                     labelClass=""
@@ -217,6 +201,7 @@ export default function LandaGene() {
                   type='submit'
                   bgColor="Primary"
                   disabled={errorsList[0] ? true : false}
+                  lang={lang}
                 />
               </div>
             </form>

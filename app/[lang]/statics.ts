@@ -265,7 +265,8 @@ let countryList: Array<string> = [
 	"Åland Islands"
 ];
 
-const persons: personArrayInterface[] = [
+const personsEN:
+ personArrayInterface[] = [
 	{
 		image: '/static/images/our-team/Personals/a1.png',
 		position: 'CEO',
@@ -482,7 +483,6 @@ const persons: personArrayInterface[] = [
 		linkedIn: '',
 		category: 'programmers'
 	},
-
 	{
 		image: '/static/images/our-team/Personals/a31.png',
 		position: 'Front-end',
@@ -513,8 +513,250 @@ const persons: personArrayInterface[] = [
 	},
 ];
 
+const personsFA:
+ personArrayInterface[] = [
+  {
+    image: '/static/images/our-team/Personals/a1.png', 
+    position: 'مدیرعامل',
+    name: 'دکتر رسول مرادی مهر',
+    linkedIn: '',
+    category: 'مدیران'
+  },
+  {
+    image: '/static/images/our-team/Personals/a2.png',
+    position: 'معاون فنی',
+    name: 'دکتر هادی حسن‌پور',
+    linkedIn: '',
+    category: 'مدیران'
+  },
+  {
+    image: '/static/images/our-team/Personals/a10.png',
+    position: 'مدیر',
+    name: 'مهرنوش حیبتی',
+    linkedIn: '',
+    category: 'مدیران'
+  },
+  {
+    image: '/static/images/our-team/Personals/a11.png',
+    position: 'مدیر پرونده',
+    name: 'مهسا اسماعیلی',
+    linkedIn: '',
+    category: 'مدیران'
+  },
+  {
+    image: '/static/images/our-team/Personals/a3.png',
+    position: 'منشی',
+    name: 'لیدا پرویزی',
+    linkedIn: '',
+    category: 'منشی'
+  },
+  {
+    image: '/static/images/our-team/Personals/a4.png',
+    position: 'روابط عمومی',
+    name: 'خلود حریری',
+    linkedIn: '',
+    category: 'روابط عمومی'
+  },
+  {
+    image: '/static/images/our-team/Personals/a35.jpg',
+    position: 'مدیر روابط عمومی',
+    name: 'آرش آریانیک',
+    linkedIn: '',
+    category: 'روابط عمومی'
+  },
+  {
+    image: '/static/images/our-team/Personals/a5.png',
+    position: 'حسابدار',
+    name: 'علی سلیمانی',
+    linkedIn: '', 
+    category: 'حسابدار'
+  },
+  {
+    image: '/static/images/our-team/Personals/a6.png',
+    position: 'معمار ارشد فناوری',
+    name: 'ایمان نصر',
+    linkedIn: '',
+    category: 'مربیان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a7.png',
+    position: 'تمام وقت',
+    name: 'سجاد مومنی',
+    linkedIn: '',
+    category: 'مربیان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a8.png',
+    position: 'تمام وقت',
+    name: 'امین اصغریان', 
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a9.png',
+    position: 'بازاریاب دیجیتال',
+    name: 'احسان علی‌اکبری',
+    linkedIn: '',
+    category: 'بازاریاب دیجیتال'
+  },
+  {
+    image: '/static/images/our-team/Personals/a13.png',
+    position: 'طراح تجربه کاربری', 
+    name: 'آریانا شفیعی',
+    linkedIn: '',
+    category: 'طراحان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a14.png', 
+    position: 'طراح تجربه کاربری',
+    name: 'آرشیا نصیری',
+    linkedIn: '',
+    category: 'طراحان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a15.png',
+    position: 'جونیور بک اند',
+    name: 'فاطمه صافی',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a16.png',
+    position: 'تمام وقت',
+    name: 'سبحان امامی',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a17.png',
+    position: 'فرانت اند', 
+    name: 'فهیمه سجادی',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a18.png',
+    position: 'فرانت اند',
+    name: 'سامان کرچگانی',
+    linkedIn: '',
+    category: 'برنامه نویسان' 
+  },
+  {
+    image: '/static/images/our-team/Personals/a19.png',
+    position: 'فرانت اند',
+    name: 'محسن کیانی',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a20.png',
+    position: 'توسعه دهنده برنامه',
+    name: 'علی خاوری',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a21.png',
+    position: 'طراح گرافیک', 
+    name: 'هدی مهدی',
+    linkedIn: '',
+    category: 'طراحان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a22.png',
+    position: 'طراح گرافیک',
+    name: 'ایناز رئیسی', 
+    linkedIn: '',
+    category: 'طراحان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a23.png', 
+    position: 'تولید کننده محتوا',
+    name: 'مهتاب حافظی',
+    linkedIn: '',
+    category: 'تولید کننده محتوا'
+  },
+  {
+    image: '/static/images/our-team/Personals/a24.png',
+    position: 'طراح رابط کاربری', 
+    name: 'صبا مختاری',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a25.png',
+    position: 'تولید کننده محتوا', 
+    name: 'تیام صفریان',
+    linkedIn: '',
+    category: 'تولید کننده محتوا'
+  },
+  { 
+    image: '/static/images/our-team/Personals/a26.png',
+    position: 'توسعه دهنده وردپرس',
+    name: 'روحام عربلو',
+    linkedIn: '', 
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a27.png',
+    position: 'تمام وقت', 
+    name: 'مراج بیغمیان',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a28.png',
+    position: 'فرانت اند',
+    name: 'مهدی سلمان زاده',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a29.png',
+    position: 'فرانت اند', 
+    name: 'ماهرخ لطفی',
+    linkedIn: '',
+    category: 'برنامه نویسان' 
+  },
+  {
+    image: '/static/images/our-team/Personals/a30.png',
+    position: 'فرانت اند',
+    name: 'رامتین فروزانی', 
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a31.png',
+    position: 'فرانت اند',
+    name: 'براد دهقانی',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a32.png',
+    position: 'فرانت اند',
+    name: 'متین جنگوربانی',
+    linkedIn: '',
+    category: 'برنامه نویسان'
+  },
+  {
+    image: '/static/images/our-team/Personals/a33.png', 
+    position: 'روابط عمومی',
+    name: 'گلاره بهرامی',
+    linkedIn: '',
+    category: 'روابط عمومی'
+  },
+  {
+    image: '/static/images/our-team/Personals/a34.png',
+    position: 'طراح گرافیک',
+    name: 'فائزه خانی',
+    linkedIn: '',
+    category: 'طراحان'
+  },
+];
 
-const roles: Array<string> = [
+
+const rolesEN: Array<string> = [
 	'All',
 	'Managers',
 	'Mentors',
@@ -526,6 +768,20 @@ const roles: Array<string> = [
 	'Public Relations',
 	'Digital Marketer',
 	'Secretary'
+];
+
+const rolesFA: Array<string> = [
+	'همه',
+	'مدیران',
+	'مربیان',
+	'برنامه نویسان',
+	// 'Product Designer',
+	"طراحان",
+	'تولید کنندگان محتوا',
+	'حسابدار',
+	'روابط عمومی',
+	'بازاریاب دیجیتال',
+	'منشی'
 ];
 
 
@@ -1287,8 +1543,10 @@ const acceleratorProcessItemsFA = [
 
 export {
 	countryList,
-	persons, 
-	roles, 
+	personsEN,
+  personsFA, 
+	rolesEN, 
+  rolesFA,
 	companies, 
 	cardData, 
 	items, 

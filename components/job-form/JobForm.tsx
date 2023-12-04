@@ -12,7 +12,9 @@ import { submitApplyJobForm } from '../../pages/api/jobs';
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 
-export default function JobForm() {
+export default function JobForm(
+  {lang} : {lang: string}
+) {
 
   const {
     register,
@@ -106,11 +108,11 @@ export default function JobForm() {
             <>
               <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
-                  Apply job Form
+                  {lang === "en" ? "Apply job Form" : "فرم درخواست همکاری"}
                 </p>
               </div>
               <div>
-                <p className="mb-4 text-4xl">Personal Information</p>
+                <p className="mb-4 text-4xl">{lang === "en" ? "Personal Information" : "اطلاعات شخصی"}</p>
               </div>
               <div>
                 <hr className="border-[#000000] dark:border-[#ffffff] mb-5" />
@@ -128,10 +130,11 @@ export default function JobForm() {
                     email: "email",
                     phoneNumber: "phoneNumber"
                   }}
+                  lang={lang}
                 />
 
                 <UploadInput 
-                  title='CV File:'  
+                  title={lang === "en" ? 'CV File:' : 'فایل رزومه:'}  
                   register={register} 
                   errors={errors} 
                   handleChange={handleCvFileChange}
@@ -143,6 +146,7 @@ export default function JobForm() {
                   type='submit'
                   bgColor="Primary"
                   disabled={errorsList[0] ? true : false}
+                  lang={lang}
                 />
               </div>
             </form>

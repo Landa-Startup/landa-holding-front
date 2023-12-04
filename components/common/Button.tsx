@@ -17,6 +17,7 @@ type ButtonProps = DetailedHTMLProps<
   goto?: string;
   disabled?: boolean;
   lang: string
+  addedClass?: string;
 };
 
 export default function Button({
@@ -27,6 +28,7 @@ export default function Button({
   goto,
   disabled = true,
   lang,
+  addedClass
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
@@ -34,8 +36,6 @@ export default function Button({
   const router = useRouter();
 
   const { send } = useSubmit();
-
-  console.log(lang);
 
   return (
     <button

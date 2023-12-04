@@ -12,7 +12,9 @@ import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 
-export default function EntrepreneursForm() {
+export default function EntrepreneursForm(
+  {lang} : {lang: string}
+) {
 
   const {
     register,
@@ -90,8 +92,8 @@ export default function EntrepreneursForm() {
 
   return (
     <>
-      <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <EntrepreneursTitle />
+      <div className="container m-16 p-20 mx-auto bg-[#faf8f5] dark:bg-transparent" dir={lang === "en" ? "ltr" : "rtl"}>
+        <EntrepreneursTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-span-1">
@@ -100,11 +102,11 @@ export default function EntrepreneursForm() {
                 errors={errors}
                 nameInput="companyName"
                 type="text"
-                label="Company Name"
-                required="Company Name is Required."
+                label={lang === "en" ? "companyName" : "نام شرکت"}
+                required={lang === "en" ? "Company Name is Required." : "نام شرکت الزامی است"}
                 patternValue=""
                 patternMessage=""
-                placeholder="Enter your Company Name"
+                placeholder={lang === "en" ? "Enter your Company Name" : "نام شرکت خود را وارد کنید"}
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -119,6 +121,7 @@ export default function EntrepreneursForm() {
                 email: "email",
                 phoneNumber: "phone"
               }}
+              lang={lang}
             />
 
             <div className="col-span-1">
@@ -127,9 +130,9 @@ export default function EntrepreneursForm() {
                 errors={errors}
                 nameInput="website"
                 type="text"
-                label="Website"
-                required="Website is Required."
-                placeholder="Enter your Website"
+                label={lang === "en" ? "Website" : "نام وب سایت"}
+                required={lang === "en" ? "Website is Required." : "نام وب سایت الزامی است"}
+                placeholder={lang === "en" ? "Enter your Website" : "نام وب سایت خود را وارد کنید"}
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -143,9 +146,9 @@ export default function EntrepreneursForm() {
                 errors={errors}
                 nameInput="fieldOfProfessional"
                 type="text"
-                label="Field Of Professional"
-                required=" Field Of Professional is Required."
-                placeholder="Enter your Field Of Professional"
+                label={lang === "en" ? "Field Of Professional" : "حوزه تخصص"}
+                required={lang === "en" ? "Field Of Professional is Required." : "حوزه تخصص الزامی است"}
+                placeholder={lang === "en" ? "Enter your Field Of Professional" : "حوزه تخصص خود را وارد کنید"}
                 className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -155,9 +158,10 @@ export default function EntrepreneursForm() {
           </div>
           <div className="text-center">
             <Button
-            type='submit'
-            bgColor="Primary"
-            disabled={errorsList[0] ? true : false}
+              type='submit'
+              bgColor="Primary"
+              disabled={errorsList[0] ? true : false}
+              lang={lang}
             />
           </div>
         </form>

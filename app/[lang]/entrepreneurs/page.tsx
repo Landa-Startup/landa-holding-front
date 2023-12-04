@@ -4,6 +4,7 @@ import EntrepreneursForm from '../../../components/entrepreneurs/EntrepreneursFo
 import { SubmitProvider } from '../../../providers/StateProvider';
 
 import React from 'react';
+import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Entrepreneurs',
@@ -11,15 +12,23 @@ export const metadata: Metadata = {
     'Explore the Landa Holding Entrepreneurs Form and connect with us to share your entrepreneurial ideas and projects. We are interested in hearing from creative minds and visionaries. Lets collaborate to turn your entrepreneurial dreams into reality.',
 };
 
-export default function EntrepreneursPage() {
+export default async function EntrepreneursPage({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
+
+  const { t } = await useTranslation(lang, "entrepreneur")
+
   return (
-    <div>
+    <div dir={lang === "en" ? "ltr" : "rtl"}>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title="ENTREPRENEUR CENTER"
+        title={t('banner')}
+        lang={lang}
       />
       <SubmitProvider>
-        <EntrepreneursForm />
+        <EntrepreneursForm lang={lang} />
       </SubmitProvider>
     </div>
   );

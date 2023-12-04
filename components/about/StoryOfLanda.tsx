@@ -10,8 +10,6 @@ export default async function StoryOfLanda(
 
   const { t } = await useTranslation(lang, "aboutUs");
 
-  console.log(t('KeyDifferentiatingFactors', {returnObjects: true})[0])
-
   return (
     <div className="flex flex-col md:px-32 py-10 md:py-14 gap-12 bg-[#F7F3EE]">
       <div className="flex flex-col lg:flex-row gap-12 text-[#000]">
@@ -53,40 +51,28 @@ export default async function StoryOfLanda(
           </span>
           <ul className="flex flex-col space-y-3 mt-5">
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Startup Academy</span>, a
-              startup with the aim of fostering and accelerating the growth of
-              teenagers, has been operating since 2017 under the supervision of
-              the FarshTech company.
+              <span className="text-primary font-bold">{t('LANDAStartups', {returnObjects: true})[1].StartupAcademy}</span>:
+              {t('LANDAStartups', {returnObjects: true})[0].StartupAcademy}
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Landa Trip</span>, a
-              startup in the field of tourism and education with an
-              international platform and professional artificial intelligence,
-              began its activities in Iran in 2022.
+              <span className="text-primary font-bold">{t('LANDAStartups', {returnObjects: true})[1].LandaTrip}</span>:
+              {t('LANDAStartups', {returnObjects: true})[0].LandaTrip}
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Diaco</span>, a startup
-              in the field of industry and automation, operates with CNC Wire
-              Cut machines in Canada and markets in the United States and
-              Europe.
+              <span className="text-primary font-bold">{t('LANDAStartups', {returnObjects: true})[1].Diaco}</span>: 
+              {t('LANDAStartups', {returnObjects: true})[0].Diaco}
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Vision Raft</span>, a
-              startup in the virtual world, children&apos;s education sector,
-              expanded its operations in 2022 with the support of MTA
-              Accelerator in Canada.
+              <span className="text-primary font-bold">{t('LANDAStartups', {returnObjects: true})[1].VisionRaft}</span>: 
+              {t('LANDAStartups', {returnObjects: true})[0].VisionRaft}
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Landa Handicraft</span>,
-              a startup in the handicraft industry, an online store, and a
-              reference point for handicrafts, attracted the necessary capital
-              for platform development for the international market in 2023.
+              <span className="text-primary font-bold">{t('LANDAStartups', {returnObjects: true})[1].LandaHandicraft}</span>: 
+              {t('LANDAStartups', {returnObjects: true})[0].LandaHandicraft}
             </li>
             <li className="list-disc marker:text-primary">
-              <span className="text-primary font-bold">Steady Skull</span>, a
-              startup in the medical field, developed a product to facilitate
-              brain surgery procedures, starting its activities in 2019 with a
-              specialized team.
+              <span className="text-primary font-bold">{t('LANDAStartups', {returnObjects: true})[1].SteadySkull}</span>: 
+              {t('LANDAStartups', {returnObjects: true})[0].SteadySkull}
             </li>
 
           </ul>

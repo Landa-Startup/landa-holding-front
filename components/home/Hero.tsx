@@ -17,7 +17,7 @@ export default function Hero({
   title
 }: {
   showLanda: boolean;
-  titles: string[];
+  titles: string[] | string;
   subTitle?: string;
   buttonBg?: string;
   backgroundImage: string;

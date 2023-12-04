@@ -19,7 +19,7 @@ export default function UploadInput({
   return (
     <div className="flex-col justify-center gap-2.5 inline-flex max-w-full">
       {/* Label for the upload input */}
-      <div className="text-neutral-800 text-[15px] text-left font-normal">{title}</div>
+      <div className="text-neutral-800 text-[15px] self-start px-2 font-normal">{title}</div>
 
       {/* Container for the upload input */}
       <div className="px-6 py-2 rounded-md bg-stone-100 shadow justify-center items-center gap-[5px] inline-flex">

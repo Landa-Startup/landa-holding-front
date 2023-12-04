@@ -9,6 +9,7 @@ import Landa from '@/components/icons/magazine/Landa';
 import FetchBlogData from '@/utils/FetchBlogData';
 import MagazineCardsContainer from '@/components/magazine/MagazineCardsContainer';
 import { Metadata } from 'next';
+import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Magazine',
@@ -16,10 +17,17 @@ export const metadata: Metadata = {
     'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
 };
 
-export default function MagazinePage() {
+export default async function MagazinePage({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
+
+  const { t } = await useTranslation(lang, "magazine")
+
   return (
     <div className="relative">
-      <Banner image="/static/images/Magazine/hero.png" title="Magazine" />
+      <Banner image="/static/images/Magazine/hero.png" title="Magazine" lang={lang} />
       <div className="grid grid-cols-3 my-32 mx-28 gap-20">
         <MagazineCardsContainer />
         <div className="flex flex-col gap-12 col-span-1">
