@@ -32,18 +32,6 @@ export default async function StoryOfLanda(
             {t('TheStoryOfLanda', {returnObjects: true})[0].text}
             </p>
             <div className="flex flex-col">
-              {/* <p>
-                Furthermore, on January 1, 2021, Landa Holding transformed into
-                Federal Company.
-              </p> */}
-              {/* <Link
-                className="text-primary"
-                href={
-                  'https://chat.google.com/dm/pz6RjUAAAAE/hCbpJ4Uw-54/hCbpJ4Uw-54?cls=10'
-                }
-              >
-                Chat
-              </Link> */}
             </div>
           </div>
         </div>
@@ -93,7 +81,7 @@ export default async function StoryOfLanda(
         </div>
       </div>
       <div className="flex flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
-        <div className="flex flex-col px-10 md:w-full lg:w-1/2 xl:w-1/2">
+        <div className="flex flex-col px-10 md:w-full">
           <span className="font-gilda text-3xl text-primary">
           {t('VisionOfTheLanaHolding', {returnObjects: true})[0].title}
           </span>
@@ -109,7 +97,7 @@ export default async function StoryOfLanda(
             </p>
           </div>
         </div>
-        <div className="flex flex-col px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
+        {/* <div className="flex flex-col px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
           <span className="mb-4 font-gilda text-3xl text-primary">
             {t('KeyDifferentiatingFactors', {returnObjects: true})[0].title}
           </span>
@@ -156,7 +144,7 @@ export default async function StoryOfLanda(
               groups benefit from this collaboration.
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

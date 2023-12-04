@@ -119,7 +119,7 @@ export default function ContactUsForm() {
             />
           </div>
 
-          <div className='col-span-1'>
+          <div className='col-span-2'>
             <TextArea
               register={register}
               errors={errors}
