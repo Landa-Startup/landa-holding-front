@@ -46,7 +46,7 @@
     ],
     "LANDAStartups": [
       {
-        "title": "LANDA Startups",
+        "title": "استارت اپ لاندا",
         "StartupAcademy": "استارت آپ آکادمی استارتاپی با هدف پرورش و تسریع رشد نوجوانان از سال 1396 زیر نظر شرکت فرش تک فعالیت می کند",
         "LandaTrip": "لاندا تریپ، استارت آپی در زمینه گردشگری و آموزش با پلتفرم بین المللی و هوش مصنوعی حرفه ای، فعالیت خود را از سال 1391 در ایران آغاز کرد",
         "Diaco": "دیاکو، یک استارت آپ در زمینه صنعت و اتوماسیون، با دستگاه های CNC Wire Cut در کانادا و بازارهای ایالات متحده و اروپا فعالیت می کند",
@@ -77,12 +77,13 @@
         "addedClass": ""
       }
     ],
-    "itemList": [
-      "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other.",
-      "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities.",
-      "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events.",
-      "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
-      "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
-      "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
-     ]
+    "itemList":
+[
+"پردازش و تجزیه و تحلیل تخصصی استارت‌آپ‌ها: ما در پردازش و تجزیه و تحلیل استارت‌آپ‌ها تخصص داریم و فرصت‌هایی برای اعضا فراهم می‌کنیم تا از یکدیگر یاد بگیرند.",
+"سرمایه‌گذاری مستقیم اعضا: اعضا به صورت مستقیم در استارت‌آپ‌های انتخابی خود سرمایه‌گذاری می‌کنند، این موجب می‌شود که هیچ عضوی احساس فشار برای سرمایه‌گذاری نکند و هیچ عضوی از فرصت‌های سرمایه‌گذاری ممکن حذف نشود.",
+"تمرکز بر ایجاد ارتباطات سرمایه‌گذاری: رویکرد اصلی ما ایجاد ارتباطات بین اعضاست، که شامل فعالیت‌های خیریه نه تنها بلکه فعالیت‌های سرگرم‌کننده و رویدادهای اجتماعی نیز می‌شود.",
+"ارزش‌گذاری بر تبرعات مالی حامیان: ما به شدت ارزش تبرعات مالی حامیان خود را ارزیابی می‌کنیم. نظرات و راهنمایی‌های آن‌ها به همه جوانب عملیات شرکت کمک می‌کند.",
+"ساختار جامع: ساختار ما فرصتی برای کارآفرینان فراهم می‌کند تا با سرمایه‌گذاران معتبری که قادر به سرمایه‌گذاری در سطح استارت‌آپ هستند، در ارتباط باشند.",
+"همکاری با مراکز سرمایه‌گذاری دیگر: ما همکاری با مراکز سرمایه‌گذاری و جوامع سرمایه‌گذاری دیگر را خوش‌آمد می‌گوییم. کارآفرینانی که به دنبال سرمایه از گروه‌های سرمایه‌گذاری مختلف هستند از این همکاری بهره‌مند می‌شوند."
+]
   }
