@@ -13,7 +13,7 @@ export default async function KeyDifferentiating(
   //   console.log(item, index);
   // })
 
-  console.log(t('itemList', {returnObjects: true})[1]);
+  console.log(t('itemList', {returnObjects: true}));
  
   return (
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] md:grid-cols-2">
@@ -27,11 +27,11 @@ export default async function KeyDifferentiating(
           </p>
           <span className="font-bold text-primary">{t('KeyDifferentiatingFactors', {returnObjects: true})[0].textTitle}</span>
           <ul className='ml-4 list-decimal'>
-            {/* {t('itemList', {returnObjects: true}).map(({item}: {item: string}) => (
+            {t('itemList', {returnObjects: true}).map((item:string) => (
               <li>
                 {item}
               </li>
-            ))} */}
+            ))}
           </ul>
         </div>
       </div>
