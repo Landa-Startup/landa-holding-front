@@ -3,9 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-import { useTranslation } from 'app/i18n';
 
-export default function Navbar({ children, lang }: { children: React.ReactNode, lang:string }) {
+export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
   // const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,16 +16,8 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
   const menuItems = [
     { label: 'HOME', href: '/' },
     { label: 'ABOUT US', href: '/about' },
-    // { label: 'ACCELERATION', href: '/acceleration' },
     { label: 'CONTACT US', href: '/contact' },
     { label: 'OUR TEAM', href: '/our-team' },
-  ];
-  const menuItems1 = [
-    { label: 'HOME1', href: '/' },
-    { label: 'ABOUT US1', href: '/about' },
-    // { label: 'ACCELERATION', href: '/acceleration' },
-    { label: 'CONTACT US1', href: '/contact' },
-    { label: 'OUR TEAM1', href: '/our-team' },
   ];
   const submenuItems = [
     { label: 'INVESTOR CENTER', href: '/investor-registration' },
@@ -109,9 +100,8 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
                     FORMS
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map((item) => (
                       <li
