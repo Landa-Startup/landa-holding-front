@@ -1,9 +1,7 @@
-import React from 'react';
-
 export default function Lines() {
   return (
     <svg
-      className="absolute top-[155px] hidden md:block"
+      className="absolute left-0 top-[155px] hidden md:block"
       xmlns="http://www.w3.org/2000/svg"
       width="1092"
       height="2573"
