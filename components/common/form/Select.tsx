@@ -32,7 +32,7 @@ export default function Select({
         {label}
       </label>
       {/* TO DO : select placeholder has a problem */}
-      <div className="flex flex-row w-full items-center gap-2">
+      <div className="flex w-full flex-row items-center gap-2">
       <select
         id={nameInput}
         {...register(nameInput, {
