@@ -13,8 +13,8 @@ export default async function HomeOurTeam(
 
   return (
     <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
-      <div className={`${t('lng') === "en" ? "ml-5 mr-10 xl:ml-28" : "mr-5 xl:mr-40 rtl:xl:ml-40"} flex flex-col lg:self-start `}>
-        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
+      <div className={`${t('lng') === "en" ? "ml-5 mr-10 xl:ml-28" : "md:mr-5 xl:mr-40 rtl:xl:ml-40"} flex flex-col items-center md:items-start lg:self-start`}>
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[0px]"} font-gilda text-xl`}>
           {t('LandaHolding')}
           <br />
         </span>
@@ -22,7 +22,7 @@ export default async function HomeOurTeam(
           {t('OurTeam')}
           <br />
         </span>
-        <p className={`mt-8 ${t('lng') === "en" ? "" : "text-xl"}`}>
+        <p className={`mx-5 mt-8 ${t('lng') === "en" ? "" : "text-xl"}`}>
           {t('ourTeamText')}
         </p>
       </div>

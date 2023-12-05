@@ -14,7 +14,7 @@ export default async function LatestStartups(
       <div className="bg-whiteGold flex flex-col items-center p-5 text-center">
         <div className="flex-col items-start justify-start md:ml-44 md:self-start rtl:md:ml-40">
           <div className="flex flex-col items-center md:items-start">
-            <div className={`text-sm font-normal text-neutral-800 md:text-base ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0 text-xl"} font-condensed ps-1`}>
+            <div className={`text-sm font-normal text-neutral-800 md:text-base ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0 text-xl"} font-gilda ps-1`}>
               {t('LandaHolding')}
             </div>
             <div className={`text-primary text-4xl font-normal md:text-[44px] ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0"} font-condensed md:mt-3`}>
