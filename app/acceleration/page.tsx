@@ -32,12 +32,14 @@ export default function page() {
         />
       </div>
       <div className="flex flex-col font-gilda md:px-10 py-6 md:py-16 items-center text-left">
-        <span className="text-[#55422A] ml-7 md:ml-0 text-3xl md:text-5xl leading-tight self-start">
-          LANDA ACCELERATOR :
-        </span>
-        <span className="text-[#AA8453] ml-7 md:ml-0 text-lg md:text-3xl leading-tight self-start">
-          Growth and Transformation into a Leading Startup
-        </span>
+        <div className="flex flex-col mr-[33rem]">
+          <span className="text-[#55422A] ml-7 md:ml-0 text-3xl md:text-5xl leading-tight self-start">
+            LANDA ACCELERATOR :
+          </span>
+          <span className="text-[#AA8453] ml-7 md:ml-0 text-lg md:text-3xl leading-tight self-start">
+            Growth and Transformation into a Leading Startup
+          </span>
+        </div>
         <div className="flex flex-col md:flex-row gap-12 mt-6">
           <div className="relative md:w-[490px] h-[284px] hidden md:block xl:ml-4 lg:ml-6">
             <Image
