@@ -158,7 +158,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </ul>
           </li>
         </ul>
-        <div className="absolute bottom-0 flex h-10 w-80 items-center justify-between bg-[#222] px-10">
+        <div className="md:hidden absolute bottom-0 flex h-10 w-80 items-center justify-between bg-[#222] px-10">
           <Link
             href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
             target="_blank"
