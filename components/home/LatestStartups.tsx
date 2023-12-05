@@ -11,13 +11,13 @@ export default async function LatestStartups(
 
   return (
     <div dir={t('lng') === "en" ? "ltr" : "rtl"}>
-      <div className="flex flex-col items-center bg-whiteGold p-5 text-center">
-        <div className="flex-col items-start justify-start md:ml-44 md:self-start rtl:md:mr-40">
+      <div className="bg-whiteGold flex flex-col items-center p-5 text-center">
+        <div className="flex-col items-start justify-start md:ml-44 md:self-start rtl:md:ml-40">
           <div className="flex flex-col items-center md:items-start">
-            <div className={`text-sm font-normal text-neutral-800 md:text-base ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0 text-xl"} ps-1 font-condensed`}>
+            <div className={`text-sm font-normal text-neutral-800 md:text-base ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0 text-xl"} font-condensed ps-1`}>
               {t('LandaHolding')}
             </div>
-            <div className={`text-4xl font-normal text-primary md:text-[44px] ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0"} font-condensed md:mt-3`}>
+            <div className={`text-primary text-4xl font-normal md:text-[44px] ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0"} font-condensed md:mt-3`}>
               {t('LatestStartups')}
             </div>
           </div>
