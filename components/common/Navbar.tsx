@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
 
-export default function Navbar({ children }: { children: React.ReactNode }) {
+export default function Navbar({ children, menuItems, submenuItems }: { children: React.ReactNode, menuItems: any, submenuItems: any }) {
   const drawerRef = useRef<HTMLInputElement>(null);
   // const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,20 +13,20 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   // const { t } = await useTranslation(lang, "mainPage");
 
-  const menuItems = [
-    { label: 'HOME', href: '/' },
-    { label: 'ABOUT US', href: '/about' },
-    { label: 'CONTACT US', href: '/contact' },
-    { label: 'OUR TEAM', href: '/our-team' },
-  ];
-  const submenuItems = [
-    { label: 'INVESTOR CENTER', href: '/investor-registration' },
-    { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
-    { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
-    { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-    { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'acceleration', href: '/acceleration' },
-  ];
+  // const menuItems = [
+  //   { label: 'HOME', href: '/' },
+  //   { label: 'ABOUT US', href: '/about' },
+  //   { label: 'CONTACT US', href: '/contact' },
+  //   { label: 'OUR TEAM', href: '/our-team' },
+  // ];
+  // const submenuItems = [
+  //   { label: 'INVESTOR CENTER', href: '/investor-registration' },
+  //   { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
+  //   { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
+  //   { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
+  //   { label: 'APPLY JOB', href: '/job-form' },
+  //   { label: 'acceleration', href: '/acceleration' },
+  // ];
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
