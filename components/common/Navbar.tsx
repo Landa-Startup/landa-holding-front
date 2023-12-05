@@ -16,7 +16,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   const menuItems = [
     { label: 'HOME', href: '/' },
     { label: 'ABOUT US', href: '/about' },
-    // { label: 'ACCELERATION', href: '/acceleration' },
     { label: 'CONTACT US', href: '/contact' },
     { label: 'OUR TEAM', href: '/our-team' },
   ];

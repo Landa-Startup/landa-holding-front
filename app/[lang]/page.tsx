@@ -28,7 +28,7 @@ export default async function Page({
   // console.log(t("cards"));
 
   return (
-    <div className="relative" dir={t('lng') === "en" ? "ltr" : "rtl"}>
+    <div className="relative">
       {/* Hero section */}
       <Hero
         lang={t('lng')}
