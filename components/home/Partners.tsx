@@ -5,82 +5,11 @@ import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
 import { useTranslation } from 'app/i18n';
+import { logos } from 'app/[lang]/statics';
 
 export default function Partners(
   {lang} : {lang: string}
 ) {
-  const logos = [
-    {
-      number: 2,
-      title: 'Islamic Azad University of Isfahan(Khorasgan)',
-      description:
-        'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
-      alt: 'Islamic Azad University of Isfahan(Khorasgan)',
-    },
-    {
-      number: 3,
-      title: 'Dr. Nekui Educational Holding',
-      description:
-        'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
-      alt: 'Dr. Nekui Educational Holding',
-    },
-    {
-      number: 4,
-      title: 'University of Kashan',
-      description:
-        'Since 1399, we started cooperating with Kashan University in the field of acceleration center',
-      alt: 'University of Kashan',
-    },
-    {
-      number: 7,
-      title: 'ASIAHITECH',
-      description:
-        'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
-      alt: 'ASIAHITECH',
-    },
-    {
-      number: 8,
-      title: 'Chamber of Commerce, Industries, Mines and Agriculture',
-      description:
-        'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
-      alt: 'Chamber of Commerce, Industries, Mines and Agriculture',
-    },
-    {
-      number: 2,
-      title: 'Islamic Azad University of Isfahan(Khorasgan)',
-      description:
-        'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
-      alt: 'Islamic Azad University of Isfahan(Khorasgan)',
-    },
-    {
-      number: 3,
-      title: 'Dr. Nekui Educational Holding',
-      description:
-        'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
-      alt: 'Dr. Nekui Educational Holding',
-    },
-    {
-      number: 4,
-      title: 'University of Kashan',
-      description:
-        'Since 1399, we started cooperating with Kashan University in the field of acceleration center',
-      alt: 'University of Kashan',
-    },
-    {
-      number: 7,
-      title: 'ASIAHITECH',
-      description:
-        'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
-      alt: 'ASIAHITECH',
-    },
-    {
-      number: 8,
-      title: 'Chamber of Commerce, Industries, Mines and Agriculture',
-      description:
-        'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
-      alt: 'Chamber of Commerce, Industries, Mines and Agriculture',
-    },
-  ];
 
   // const { t } = await useTranslation(lang, "mainPage")
 
@@ -90,7 +19,24 @@ export default function Partners(
     return t;
   } 
 
-  let translated = langChangeHandle(lang)
+  let translated = langChangeHandle(lang);
+
+  // let L: {number: number, title: string, description: string, alt: string}[] = []
+  let L: any[] = []
+
+  let title: string = ""
+
+  translated.then((res) => {
+    // console.log(res('partners', {returnObjects: true}).logos)
+    res('partners', {returnObjects: true}).logos.map((item: any) => {
+      L.push(item)
+    })
+    title = res('partners', {returnObjects: true}).title
+  })
+
+  console.log(L);
+
+  console.log(title)
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [isScrolling, setIsScrolling] = useState(true);
@@ -154,7 +100,7 @@ export default function Partners(
   return (
     <div className="flex flex-col items-center my-6 gap-12">
       <span className="text-3xl md:text-4xl text-primary">
-        Join Our Business Affiliates
+        {title}
       </span>
       <div
         ref={scrollContainerRef}
