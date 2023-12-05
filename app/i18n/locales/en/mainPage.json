@@ -49,6 +49,7 @@
       "reverse": true,
       "show": true,
       "index": 2,
+      "link": "/acceleration",
       "addedClass": "",
       "images": [
         {
@@ -67,6 +68,7 @@
       "reverse": false,
       "show": false,
       "index": 3,
+      "link": "https://academy.landaholding.com",
       "addedClass": "",
       "images": [
         {

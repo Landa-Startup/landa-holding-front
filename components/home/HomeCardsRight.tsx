@@ -17,12 +17,12 @@ export default function HomeCardsRight({
       <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">
         <div className="flex flex-col">
           <span className="font-condensed text-3xl tracking-[11px]">LANDA</span>
-          <span className="font-gilda text-4xl tracking-[6.5px] md:text-6xl">
+          <span className="font-gilda text-4xl lrt:tracking-[6.5px] md:text-6xl">
             {titles}
           </span>
         </div>
       </div>
-      <div className="flex space-x-7">
+      <div className="flex space-x-7 rtl:space-x-reverse">
         {images.map((image, index) => (
           <div
             className={`relative mt-5 hidden h-96 w-64 ${
