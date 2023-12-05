@@ -59,7 +59,7 @@ export default async function AccelerationCard({
         </div>
         <div className='flex justify-start'>
           {itemsList &&
-            <span className={`mt-8 font-gilda text-3xl text-[#AA8453] ${t('lng') === "en" ? "" : "text-right"}`}>
+            <span className={`mt-8 font-gilda text-3xl text-[#AA8453] rtl: ltr:text-right`}>
               {t('AcceleratorProcess', { returnObjects: true })[0].title}
             </span>
           }
@@ -68,7 +68,7 @@ export default async function AccelerationCard({
         {itemsList &&
           <div className='z-10 mt-6 grid grid-cols-2 gap-6 font-barlow text-xs text-[#000] md:text-sm lg:text-sm xl:text-sm'>
             {itemsList?.map((item, index) => (
-              <span key={index} className={`${t('lng') === "en" ? "text-normal" : "text-right"} lg:text-lg`}>{item}</span>
+              <span key={index} className={`rtl:text-normal ltr:text-right lg:text-lg`}>{item}</span>
             ))}
           </div>
         }

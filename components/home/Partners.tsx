@@ -109,7 +109,7 @@ export default function Partners(
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        className="overflow-x-scroll md:overflow-x-hidden gap-12 grid grid-flow-col w-[calc(100%-2%)] cursor-pointer"
+        className="grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden"
       >
         {logos.map((logo) => (
           <PartnersStartupCard
