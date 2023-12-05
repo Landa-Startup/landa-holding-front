@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import IconLinkedin from '../icons/IconLinkedin';
 import LinkedIn from '../icons/about/LinkedIn';
 import Image from 'next/image';
 
@@ -42,9 +41,9 @@ export default function PersonalTab({
 
       {/* Text Content */}
       <div className="z-10 flex flex-col items-center px-4 pb-4 text-white">
-        <span className="text-lg font-normal">{name}</span>
+        <span className=" font-barlow text-lg font-normal">{name}</span>
         <div className="flex w-full items-center justify-center border-t-2 font-light">
-          <span className="border-t-3 font-light">{position}</span>
+          <span className="font-barlow border-t-3 font-light">{position}</span>
         </div>
       </div>
     </div>

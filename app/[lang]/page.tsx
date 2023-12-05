@@ -36,9 +36,6 @@ export default async function Page({
           t('Acceleration'),
           t('Investment'),
           t('Academy')
-          // "Acceleration",
-          // "Investment",
-          // "Academy"
         ]}
         title={t('LandaHolding')}
         subTitle={t('HeroSubtitle')}

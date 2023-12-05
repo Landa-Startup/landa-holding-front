@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 
-interface Props {
-  onRoleSelect: (role: string) => void;
-}
+// interface Props {
+//   onRoleSelect: (role: string) => void;
+// }
 
 export default function TeamRolesContainer({
   roles,
@@ -18,14 +18,13 @@ export default function TeamRolesContainer({
     setSelectedRole(role);
   }
   return (
-    <div className="flex flex-wrap justify-center gap-1 bg-slate-50 pb-5 pt-10">
+    <div className="font-barlow flex flex-wrap justify-center gap-1  bg-slate-50  pb-5 pt-10">
       {roles.map((role, index) => (
         <button
           onClick={() => handleRoleClick(role)}
           key={index}
-          className={`btn btn-outline rounded-sm border-[#222] capitalize ${
-            selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'
-          }`}
+          className={`btn btn-outline rounded-sm border-[#222] capitalize ${selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'
+            }`}
         >
           {role}
         </button>
