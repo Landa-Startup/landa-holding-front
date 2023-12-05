@@ -15,7 +15,7 @@ export default async function HomeOurTeam(
   return (
     <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
       <div className={`rtl:ml-5 mr-10 xl:ml-28 ltr:mr-5 xl:mr-40 flex flex-col lg:self-start `}>
-        <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:tracking-[2px] font-condensed text-xl`}>
+        <span className={`font-normal text-black rtl:tracking-[5.60px] ltr:tracking-[2px] font-condensed text-xl`}>
           {t('LandaHolding')}
           <br />
         </span>
