@@ -14,16 +14,15 @@ import { useTranslation } from '../i18n';
 export const metadata: Metadata = {
   title: 'Landa Holding',
   description:
-    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.'
 };
 
 export default async function Page({
-  params: { lang },
+  params: { lang }
 }: {
   params: { lang: string };
 }) {
-
-  const { t } = await useTranslation(lang, "mainPage");
+  const { t } = await useTranslation(lang, 'mainPage');
 
   // console.log(t("cards"));
 
@@ -36,7 +35,10 @@ export default async function Page({
         titles={[
           t('Acceleration'),
           t('Investment'),
-          t('Academy'),
+          t('Academy')
+          // "Acceleration",
+          // "Investment",
+          // "Academy"
         ]}
         title={t('LandaHolding')}
         subTitle={t('HeroSubtitle')}
@@ -54,5 +56,5 @@ export default async function Page({
       <AerialViewBusinessTeam />
       <Partners lang={lang} />
     </div>
-  )
+  );
 }
