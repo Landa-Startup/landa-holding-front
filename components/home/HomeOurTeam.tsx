@@ -15,11 +15,11 @@ export default async function HomeOurTeam(
   return (
     <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
       <div className={`${t('lng') === "en" ? "ml-5 mr-10 xl:ml-28" : "mr-5 xl:mr-40"} flex flex-col lg:self-start `}>
-        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
+        <span className={`text-base mr-28 xl:mr-0 font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "p-4 tracking-normal"} font-condensed text-black`}>
+        <span className={`text-5xl mr-28 xl:mr-0 font-normal ${t('lng') === "en" ? "tracking-widest" : "p-4 tracking-normal"} font-condensed text-black`}>
           {t('OurTeam')}
           <br />
         </span>
