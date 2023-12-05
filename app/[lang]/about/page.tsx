@@ -23,7 +23,7 @@ export default async function Page({
   const { t } = await useTranslation(lang, "aboutUs")
 
   return (
-    <div dir={t('lng') === "en" ? "ltr" : "rtl"}>
+    <div>
       <Banner
         title={t('banner')}
         image="/static/images/a52.jpeg"
