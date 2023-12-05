@@ -4,8 +4,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button';
 import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
+import { useTranslation } from 'app/i18n';
 
-export default function Partners() {
+export default function Partners(
+  {lang} : {lang: string}
+) {
   const logos = [
     {
       number: 2,
@@ -78,6 +81,16 @@ export default function Partners() {
       alt: 'Chamber of Commerce, Industries, Mines and Agriculture',
     },
   ];
+
+  // const { t } = await useTranslation(lang, "mainPage")
+
+  const langChangeHandle = async (lang: string) => {
+    const { t } = await useTranslation(lang, "mainPage")
+
+    return t;
+  } 
+
+  let translated = langChangeHandle(lang)
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [isScrolling, setIsScrolling] = useState(true);
@@ -166,6 +179,7 @@ export default function Partners() {
         size="visit"
         text="JOIN US"
         bgColor="Primary"
+        lang={lang}
       />
     </div>
   );
