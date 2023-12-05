@@ -1,8 +1,9 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Button from '../common/Button';
+import { useTranslation } from 'app/i18n';
+import { translationCard } from '@/types/global';
 
 export default function Hero({
   showLanda,
@@ -12,18 +13,31 @@ export default function Hero({
   backgroundImage,
   leftImage,
   showButton,
+  lang,
+  title
 }: {
   showLanda: boolean;
-  titles: string[];
-  subTitle: string;
+  titles: string[] | string;
+  subTitle?: string;
   buttonBg?: string;
   backgroundImage: string;
   leftImage: string;
   showButton?: boolean;
+  lang: string;
+  title: string;
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState('');
   const [isTitleChanging, setIsTitleChanging] = useState(false); // Track if the title is changing
+  const [notArray, setNotArray] = useState(false);
+
+  // async function langMaker(lang: string) {
+  //   const { t } = await useTranslation(lang, "mainPage")
+
+  //   return t
+  // }
+
+  // const t = langMaker(lang);
 
   useEffect(() => {
     if (Array.isArray(titles)) {
@@ -35,17 +49,26 @@ export default function Hero({
       }, 3000);
 
       return () => clearInterval(interval);
+    } else {
+      setCurrentTitle(titles)
+      setIsTitleChanging(false)
+      setNotArray(true);
     }
   }, [titles]);
 
   useEffect(() => {
     if (Array.isArray(titles)) {
       setCurrentTitle(titles[titleIndex]);
+    } else {
+      setCurrentTitle(titles)
+      setNotArray(true);
     }
   }, [titleIndex, titles]);
 
   useEffect(() => {
-    setIsTitleChanging(false);
+    if (Array.isArray(titles)) {
+      setIsTitleChanging(false);
+    }
   }, [currentTitle]);
 
   return (
@@ -56,20 +79,22 @@ export default function Hero({
         backgroundPositionX: '65%',
       }}
       data-bgset={`/static/images/Home/Hero/${backgroundImage} [(max-width: 640px)] | /static/images/Home/Hero/${backgroundImage}`}
-      className="h-[calc(100vh)] md:h-screen relative overflow-hidden"
+      className="relative h-[calc(100vh)] overflow-hidden md:h-screen"
     >
-      <div className="flex flex-col items-center justify-center md:h-screen space-y-7 md:space-y-8 py-36">
+      <div className="flex flex-col items-center justify-center space-y-7 py-36 md:h-screen md:space-y-8">
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
-          } text-center text-white text-3xl md:text-4xl md:tracking-[12.6px] font-barlow font-bold tracking-[7px]`}
+          } text-center font-barlow text-3xl font-bold text-white md:text-4xl ${lang === "en" ? "tracking-[7px] md:tracking-[12.6px]" : "tracking-1 md:tracking-[2px]"}`}
         >
-          Landa Holding
+          {title}
         </div>
         <div
-          className={`md:text-right text-neutral-50 text-5xl md:text-7xl font-normal tracking-[6.4px] font-gilda text-center text-opacity-95 ${
+          className={`${
+            notArray ? "text-center font-gilda text-5xl text-black md:text-right md:text-7xl" : "text-center font-gilda text-5xl font-normal tracking-[6.4px] text-neutral-50 text-opacity-95 md:text-right md:text-7xl"
+          } ${
             isTitleChanging
-              ? 'zoom-in-animation transition-opacity duration-[2500] title-transition'
+              ? 'zoom-in-animation title-transition transition-opacity duration-[2500]'
               : ''
           }`}
           style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
@@ -77,22 +102,22 @@ export default function Hero({
           {currentTitle}
         </div>
 
-        <div className="text-center font-montserrat text-white text-opacity-95 text-3xl md:text-4xl font-semibold leading-10 tracking-[4px]">
-          {subTitle}
+        <div className={`text-center font-mono text-3xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ${lang === "en" ? "tracking-[4px]" : "tracking-[1px]"}`}>
+          {subTitle ? subTitle : ""}
         </div>
         {showButton ? (
           <Button
             text="Register Now"
             size="notVisit"
-            addedClass={buttonBg ? 'md:hidden' : 'block'}
             goto="/"
+            lang={lang}
           />
         ) : (
           <></>
         )}
         <Image
           loading="lazy"
-          className="w-[300px] h-[300px] sm:w-[305px] sm:h-[302px] mr-0 md:mr-0  md:w-[265px] md:h-[372px] xl:h-[560px] xl:w-[420px] absolute -right-16 md:right-0 bottom-0 "
+          className="absolute -right-16 bottom-0 mr-0 h-[300px] w-[300px]  sm:h-[302px] sm:w-[305px] md:right-0 md:mr-0 md:h-[372px] md:w-[265px] xl:h-[560px] xl:w-[420px] "
           src={`/static/images/${leftImage}`}
           alt="Landa"
           width={500}

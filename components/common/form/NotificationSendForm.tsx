@@ -1,32 +1,30 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import Check from '@/components/icons/common/Check';
+import Check from '../../../components/icons/common/Check';
+import { useSubmit } from '../../../providers/StateProvider';
 
-export default function NotificationSendForm({
-  submitting,
-  success,
-  sendStatus,
-  show,
-}: {
-  submitting: boolean;
-  success: boolean;
-  sendStatus: boolean;
-  show: boolean;
-}) {
+export default function NotificationSendForm() {
+
+  const {
+    isSubmitting,
+    isSuccess,
+    send,
+    showNotification
+  } = useSubmit();
+
   return (
-    <div className="w-64 mx-auto mt-5 lg:w-96">
-      {success && submitting && !sendStatus && show && (
+    <div className="mx-auto mt-5 w-64 lg:w-96">
+      {isSuccess && isSubmitting && !send && showNotification && (
         <div className="alert alert-success">
           <Check />
           <span>Form Submitted Successfully.</span>
         </div>
       )}
 
-      {!success && submitting && !sendStatus && show && (
+      {!isSuccess && isSubmitting && !send && showNotification && (
         <div className="alert alert-error">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="stroke-current shrink-0 h-6 w-6"
+            className="h-6 w-6 shrink-0 stroke-current"
             fill="none"
             viewBox="0 0 24 24"
           >

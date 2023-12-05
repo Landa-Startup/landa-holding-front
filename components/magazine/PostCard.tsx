@@ -14,19 +14,19 @@ export default function PostCard({
   image: string;
   date: string;
   title: string;
-  description: string;
+  description: string | TrustedHTML;
 }) {
   return (
     <div className="flex flex-col gap-4">
       <Image
-        className="object-cover rounded-sm"
+        className="rounded-sm object-cover"
         src={image}
         alt="Landa magazine post"
         width={850}
         height={384}
       />
 
-      <span className="text-primary font-condensed tracking-[2.4px]">
+      <span className="font-condensed tracking-[2.4px] text-primary">
         {date}
       </span>
       <Link
@@ -35,13 +35,12 @@ export default function PostCard({
       >
         {title}
       </Link>
-      <div className='font-barlow text-justify text-[#6B6B6B]' dangerouslySetInnerHTML={{ __html: description }} />
+      <div className='text-justify font-barlow text-[#6B6B6B]' dangerouslySetInnerHTML={{ __html: description }} />
       <Button
         goto={`/magazine/${slug}`}
         text="Read More"
         size="notVisit"
         bgColor="Primary"
-        addedClass="self-start"
       />
     </div>
   );

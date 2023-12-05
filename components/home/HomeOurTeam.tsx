@@ -1,93 +1,42 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// import Button from '../common/Button';
+import { useTranslation } from 'app/i18n';
 import ArrowRight from '../icons/common/ArrowRight';
-export default function HomeOurTeam() {
-  const items = [
-    {
-      image: '/static/images/our-team/Personals/a3.png',
-      position: 'Secretary',
-      name: 'Lida Parvizi',
-      linkedIn: '',
-      category: 'secretary',
-    },
-    {
-      image: '/static/images/our-team/Personals/a6.png',
-      position: 'CTO',
-      name: 'Iman Nasr',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a33.png',
-      position: 'Public Relations Officer',
-      name: 'Gelareh Bahrami',
-      linkedIn: '',
-      category: 'public relations officer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a7.png',
-      position: 'Full stack',
-      name: 'Sajjad Momeni',
-      linkedIn: '',
-      category: 'mentor',
-    },
-    {
-      image: '/static/images/our-team/Personals/a5.png',
-      position: 'Accountant',
-      name: 'Ali Solaimani',
-      linkedIn: '',
-      category: 'accountant',
-    },
-    {
-      image: '/static/images/our-team/Personals/a13.png',
-      position: 'UX/UI Designer',
-      name: 'Ariana Shafie',
-      linkedIn: '',
-      category: 'designer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a9.png',
-      position: 'Digital Marketer',
-      name: 'Ehsan Aliakbari',
-      linkedIn: '',
-      category: 'digital marketer',
-    },
-    {
-      image: '/static/images/our-team/Personals/a21.png',
-      position: 'Graphic Designer',
-      name: 'Hoda Mahdi',
-      linkedIn: '',
-      category: 'designer',
-    },
-  ];
+
+
+export default async function HomeOurTeam(
+  { lang }: { lang: string }
+) {
+
+  const { t } = await useTranslation(lang, "mainPage")
 
   return (
-    <div className="w-full  mb-16 bg-white flex-col justify-start items-center relative gap-9 inline-flex">
-      <div className="flex flex-col gap-2">
-        <div className="ml-5 xl:ml-40 flex flex-col items-center md:items-start gap-2">
-          <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
-            Landa Holding
-            <br />
-          </span>
-          <span className="text-5xl font-normal tracking-widest text-black font-gilda ">
-            Our Team
-          </span>
-        </div>
-        <div className="flex items-center justify-center">
-          <p className="md:mx-40 md:text-left text-center mx-6">
-            Our team of experts is comprised of professionals who are passionate
-            about their work, and have an extensive background in a wide variety
-            of applications, and are willing to help at any time.
-          </p>
-        </div>
+    <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
+      <div className={`${t('lng') === "en" ? "ml-5 mr-10 xl:ml-28" : "mr-5 xl:mr-40"} flex flex-col lg:self-start `}>
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
+          {t('LandaHolding')}
+          <br />
+        </span>
+        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "p-4 tracking-normal"} font-condensed text-black`}>
+          {t('OurTeam')}
+          <br />
+        </span>
+        <p className={`mt-8 ${t('lng') === "en" ? "" : "text-xl"}`}>
+          {t('ourTeamText')}
+        </p>
       </div>
+
+      {/* <div className="flex flex-col lg">
+      </div> */}
+
       <Image
         loading="lazy"
         width={789}
         height={243}
         alt="OurTeam"
-        className="hidden md:block w-[444px] md:w-[1192px] h-[284px] md:h-[693px] object-cover"
+        className="hidden h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
         src="/static/images/Home/OurTeam/desktop.jpg"
       />
       <Image
@@ -98,7 +47,7 @@ export default function HomeOurTeam() {
         className="object-cover md:hidden"
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
-      <Link href={'/our-team'}>
+      <Link href={t('lng') === "en" ? "/en/our-team" : "/fa/our-team"}>
         <button className="flex items-center bg-[#AA8453] rounded-[4px] text-white md:mt-8  px-7 py-3 font-barlow">
           <div>View More</div>
           <div className="pl-2">

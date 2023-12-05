@@ -32,7 +32,7 @@ export default function EventCard() {
         <Link
           key={index}
           href={'events/' + event.slug}
-          className="flex flex-col md:flex-row gap-10 p-6 rounded-sm relative shadow-lg border-t border-black/10"
+          className="relative flex flex-col gap-10 rounded-sm border-t border-black/10 p-6 shadow-lg md:flex-row"
         >
           <Image
             className="rounded-sm object-cover"
@@ -56,17 +56,17 @@ export default function EventCard() {
               Lorem Ipsum.
             </p>
             <div className="flex flex-col gap-4 font-gilda">
-              <div className="flex gap-2 items-center">
+              <div className="flex items-center gap-2">
                 <Calender />
                 <span className="text-primary">05/23/2024 Saturday</span>
               </div>
-              <div className="flex gap-2 items-center">
+              <div className="flex items-center gap-2">
                 <Pin />
                 <span className="text-primary">
                   Esfahan-Esfahan-nabsh Esfahan
                 </span>
               </div>
-              <div className="flex gap-2 items-center">
+              <div className="flex items-center gap-2">
                 <Tag />
                 <span className="text-primary">Investment</span>
               </div>

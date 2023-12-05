@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
 export default function Chevron({
@@ -14,7 +15,7 @@ export default function Chevron({
           onClick={onClick}
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
-          className="w-6 md:w-10 h-6 md:h-10 bi bi-chevron-left cursor-pointer text-white hover:text-primary"
+          className="bi bi-chevron-left h-6 w-6 cursor-pointer text-white hover:text-primary md:h-10 md:w-10"
           viewBox="0 0 16 16"
         >
           <path
@@ -27,7 +28,7 @@ export default function Chevron({
           onClick={onClick}
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
-          className="w-6 md:w-10 h-6 md:h-10 bi bi-chevron-right cursor-pointer text-white hover:text-primary"
+          className="bi bi-chevron-right h-6 w-6 cursor-pointer text-white hover:text-primary md:h-10 md:w-10"
           viewBox="0 0 16 16"
         >
           <path

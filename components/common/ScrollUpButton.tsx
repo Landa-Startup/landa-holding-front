@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import FeatherArrowUp from '../icons/common/FeatherArrowUp';
+import Button from './Button';
 
 const ScrollUpButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -41,7 +42,7 @@ const ScrollUpButton = () => {
       onClick={scrollToTop}
       className={`scroll-up-btn ${
         showButton ? 'show' : 'hidden'
-      } fixed w-12 h-12 rounded-full border border-primary text-primary flex justify-center items-center right-10 bottom-4`}
+      } fixed bottom-4 right-10 flex h-12 w-12 items-center justify-center rounded-full border border-primary text-primary`}
       style={{
         background: showButton
           ? `conic-gradient(from 90deg, #f5e9da 0% ${scrollProgress}%, transparent ${scrollProgress}% 100%)`

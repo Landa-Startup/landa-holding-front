@@ -1,28 +1,29 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'app/i18n';
 
-export default function AboutUsLandaHolding() {
+export default async function AboutUsLandaHolding(
+  {lang} : {lang: string}
+) {
+
+  const { t } = await useTranslation(lang, "aboutUs")
+
+  // const translation = t('aboutLandaHolding', {returnObjects: true})[0]
+
   return (
-    <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-evenly pt-5 md:py-32 bg-[#FAFAFA]">
-      <div className="text-black p-10 md:p-3 space-y-3">
-        <p className="text-3xl md:text-4xl text-center font-gilda">
-          About Landa Holding
+    <div className="flex flex-col items-center justify-evenly bg-[#FAFAFA] pt-5 lg:flex-col xl:flex-row">
+      <div className="space-y-2 p-3 text-black">
+        <p className="text-center font-gilda text-3xl font-semibold">
+          {t('aboutLandaHolding', {returnObjects: true})[0].title}
         </p>
-        <p className="lg:w-[450px] text-justify text-lg md:text-xl mt-4 md:mt-8 ml-0 md:mx-10 font-normal tracking-wide font-barlow mb-20">
-          Landa Holding is distinctive and distinguished from others in the same
-          market and what makes us unique is our extensive charitable activities
-          and world-class transaction flow, which facilitate the process of
-          private business development. Landa Holding aims to attract reliable
-          investors from all over the world and recommend the best investment
-          opportunities for startup businesses, and to establish the right
-          environment and connections between the idea holders and providers of
-          services for this matter.
+        <p className="mb-20  ml-0  mt-4 text-justify font-barlow text-xl font-normal tracking-wide md:mx-10 md:mt-8 lg:w-[687px]">
+          {t('aboutLandaHolding', {returnObjects: true})[0].text}
         </p>
       </div>
       <Image
-        className="brightness-95 contrast-[1.10] drop-shadow-md"
+        className="brightness-95 contrast-[1.15] drop-shadow-md"
         loading="lazy"
-        src="/static/images/About/Team.jpg"
+        src="/static/images/About/team.jpg"
         width={661}
         height={404}
         quality={100}
@@ -30,5 +31,6 @@ export default function AboutUsLandaHolding() {
         objectFit="cover"
       />
     </div>
+
   );
 }

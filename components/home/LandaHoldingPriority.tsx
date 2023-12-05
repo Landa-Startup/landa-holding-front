@@ -1,60 +1,32 @@
 import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
 import Image from 'next/image';
+import { cardData1 } from '../../app/[lang]/statics';
+import { useTranslation } from 'app/i18n';
 
-export default function LandaHoldingPriority() {
-  const cardData = [
-    {
-      title: 'Artificial Intelligence',
-      image: '/static/images/Home/Priority/vr-glasses 2.png',
-    },
-    {
-      title: 'Virtual Reality',
-      image: '/static/images/Home/Priority/system 2.png',
-    },
-    {
-      title: 'Renewable Energy',
-      image: '/static/images/Home/Priority/online-shop 1.png',
-    },
-    {
-      title: 'The Environment',
-      image: '/static/images/Home/Priority/planet-earth 1.png',
-    },
-    {
-      title: 'Entertainment',
-      image: '/static/images/Home/Priority/ai 2.png',
-    },
-    {
-      title: 'Biomedical Engineering',
-      image: '/static/images/Home/Priority/man 2.png',
-    },
-    {
-      title: 'Services for Teenagers',
-      image: '/static/images/Home/Priority/process 2.png',
-    },
-    {
-      title: 'Tourism Services',
-      image: '/static/images/Home/Priority/world 2.png',
-    },
-  ];
+export default async function LandaHoldingPriority(
+  {lang} : {lang: string}
+) {
+
+  const { t } = await useTranslation(lang, "mainPage");
 
   return (
-    <div className="w-full xl:h-[613px] py-10 bg-white flex-col justify-start items-center relative gap-9 inline-flex ">
-      <div className="ml-5 self-start xl:ml-40 items-start flex flex-col">
-        <span className="text-black text-base font-normal tracking-[5.60px] font-condensed">
-          Landa Holding
+    <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
+      <div className="ml-5 flex flex-col items-center lg:self-start xl:ml-40">
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
+          {t('LandaHolding')}
           <br />
         </span>
-        <span className="text-5xl font-normal tracking-widest text-black font-gilda ">
-          Priorities
+        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "tracking-normal lg:mr-8"} font-condensed text-black`}>
+          {t('Priorities')}
         </span>
       </div>
       <div>
-        <div className="grid grid-cols-2  gap-5 xl:grid-cols-4  place-items-center mx-5 md:grid-cols-2 lg:grid-cols-2 ">
-          {cardData.map((data, index) => (
+        <div className="mx-5 grid  grid-cols-2 place-items-center  gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ">
+          {cardData1.map((data, index) => (
             <LandaHoldingPriorityCard
               key={index}
-              title={data.title}
+              title={t('lng') === "en" ? data.titleEN : data.titleFA}
               image={data.image}
             />
           ))}

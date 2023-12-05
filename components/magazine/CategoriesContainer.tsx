@@ -14,11 +14,11 @@ export default function CategoriesContainer() {
     fetchTags();
   }, []);
   return (
-    <div className="bg-whiteGold px-4 py-8 rounded-sm">
-      <span className="border-b-2 border-[#AA84534D] pb-4 font-gilda text-xl tracking-[4px] block">
+    <div className="rounded-sm bg-whiteGold px-4 py-8">
+      <span className="block border-b-2 border-[#AA84534D] pb-4 font-gilda text-xl tracking-[4px]">
         Categories
       </span>
-      <ul className="font-condensed text-xl mt-7 space-y-4 text-[#6B6B6B]">
+      <ul className="mt-7 space-y-4 font-condensed text-xl text-[#6B6B6B]">
       {categories.map((category:any) => (
           <li key={category.id}>
             {category.title}

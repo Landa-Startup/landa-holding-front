@@ -1,74 +1,27 @@
-import { errors } from 'formidable';
 import * as React from 'react';
-import Input from '../common/form/Input';
-import { InvestorRegistrationFormData } from 'app/types/global';
-import { useForm } from 'react-hook-form';
+import UploadInput from '../common/UploadInput';
 import TextArea from '../common/TextArea';
-import RadioButtonGroup from '../common/RadioButtonGroup';
-import NoRadioButton from '../common/NoRadioButton';
-import YesRadioButton from '../common/YesRadioButton';
-import { ChangeEvent } from 'react';
 
 export default function StartupFormBusinessModel({
   register,
   errors,
-  handleFinancialFileChange,
+  handleFinancialFileChange
 }: {
   register: any;
   errors: any;
   handleFinancialFileChange: any;
-
 }) {
-
-  const preparationStatsOption = [
-    {
-      value: 'The basic principle has been observed.',
-      label: 'The basic principle has been observed.',
-    },
-    {
-      value: 'The technology concept has been formulated.',
-      label: 'The technology concept has been formulated.',
-    },
-    {
-      value: 'Experimental proof of concept.',
-      label: 'Experimental proof of concept.',
-    },
-    {
-      value: 'The confirmed technology in laboratory.',
-      label: 'The confirmed technology in laboratory.',
-    },
-    {
-      value: 'The confirmed technology in the environmental conditions',
-      label: 'The confirmed technology in the environmental conditions',
-    },
-    {
-      value: 'The presented technology in the environmental conditions',
-      label: 'The presented technology in the environmental conditions',
-    },
-    {
-      value: 'Show the system prototype in the mvp operating environment.',
-      label: 'Show the system prototype in the mvp operating environment.',
-    },
-    {
-      value: 'The proved realistic system in the operating environment.',
-      label: 'The proved realistic system in the operating environment.',
-    },
-    {
-      value: 'A complete and qualified system.',
-      label: 'A complete and qualified system.',
-    },
-  ];
 
 
   return (
     <>
-  <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+  <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2">
           <div className="bg-[#222222CC]">
-            <p className="text-3xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] lg:w-[450px] xl:w-[650px] border-b ">
+            <p className="mb-3 w-[310px] border-b py-5 pl-10 text-3xl text-white md:w-[550px] lg:w-[450px] xl:w-[650px]">
               Business Model
             </p>
-            <hr className=" dark:border-[#222222CC] mb-5 mt-0 " />
+            <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
           </div>
           <div>
             
@@ -96,20 +49,31 @@ export default function StartupFormBusinessModel({
             required="this is requried!"
           />
         </div>
-        <div className="col-start-1 col-span-1">
+        {/* <Input
+          register={register}
+          errors={errors}
+        /> */}
+        <UploadInput
+          title='If your plan has a financial model, please upload'
+          register={register}
+          errors={errors}
+          nameInput='financial plan'
+          handleChange={handleFinancialFileChange}
+        />
+        {/* <div className="col-start-1 col-span-1">
           <label className="text-[#6b6b6b] dark:text-current">If your plan has a financial model, please upload</label>
-          <div className='flex justify-center '>
+          <div className='flex justify-center'>
             <input
               type="file"
-              className="bg-[#f9f6f3] mt-3 p-5 w-full rounded-lg"
+              className="bg-[#f9f6f3] dark:bg-[#1D232A] mt-3 p-5 w-full rounded-lg"
               {...register('financialFile', {
                 required: '',
               })}
               onChange={handleFinancialFileChange} // must use onChange event handler after register
             />
           </div>
-        </div>
-        <div className="col-start-1 col-span-2">
+        </div> */}
+        <div className="col-span-2 col-start-1">
           <TextArea
             title="Have you previously cooperated with investors or accelerators?"
             register={register}

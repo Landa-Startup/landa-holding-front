@@ -3,7 +3,7 @@ import EventCard from './EventCard';
 
 export default function EventCardsContainer() {
   return (
-    <div className="flex flex-col mx-4 md:mx-28 my-6 md:my-16 gap-10">
+    <div className="mx-4 my-6 flex flex-col gap-10 md:mx-28 md:my-16">
       <EventCard />
       <EventCard />
       <EventCard />

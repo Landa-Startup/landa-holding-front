@@ -15,13 +15,13 @@ export default function TagsContainer() {
   }, []);
 
   return (
-    <div className="bg-whiteGold px-4 py-8 rounded-sm">
-      <span className="border-b-2 border-[#AA84534D] pb-4 font-gilda text-xl tracking-[4px] block">
+    <div className="rounded-sm bg-whiteGold px-4 py-8">
+      <span className="block border-b-2 border-[#AA84534D] pb-4 font-gilda text-xl tracking-[4px]">
         Tags
       </span>
       <div className="mt-7 grid grid-cols-3 gap-2">
         {tags.map((tag:any) => (
-          <button key={tag.id} className="btn bg-[#D9D9D9] rounded-sm px-2">
+          <button key={tag.id} className="btn rounded-sm bg-[#D9D9D9] px-2">
             {tag.title}
           </button>
         ))}

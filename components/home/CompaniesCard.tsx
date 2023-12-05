@@ -12,8 +12,8 @@ export default function CompaniesCard({
 }) {
   return (
     <Link href={link} target="_blank">
-      <div className="bg-[#F7F3EE] w-[145px] md:w-[192px] h-[160px] md:h-[170px] flex flex-col items-center justify-between rounded-sm">
-        <div className="w-[138px] h-[138px] relative">
+      <div className="flex h-[160px] w-[145px] flex-col items-center justify-between rounded-sm bg-[#F7F3EE] md:h-[170px] md:w-[192px]">
+        <div className="relative h-[138px] w-[138px]">
 
           <Image
             className="object-contain p-1"
@@ -23,7 +23,7 @@ export default function CompaniesCard({
           />
 
         </div>
-        <span className="font-gilda text-sm md:text-lg leading-6 bg-neutral-500 w-full text-center text-white py-2 ">
+        <span className="w-full bg-neutral-500 py-2 text-center font-gilda text-sm leading-6 text-white md:text-lg ">
           {name}
         </span>
       </div>

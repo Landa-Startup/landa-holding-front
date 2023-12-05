@@ -8,43 +8,45 @@ export default function LatestStartupsCard({
   title,
   description,
   link,
+  lang,
 }: {
   image: string;
   title: string;
   description: string;
   link: string;
+  lang: string;
 }) {
   return (
     <Link href={link} target="_blank">
-      <div className="w-[264px] md:w-[350px] h-[290px] md:h-[468px] relative border border-black group hover:shadow-lg">
+      <div className="group relative h-[290px] w-[264px] border border-black hover:shadow-lg md:h-[468px] md:w-[350px]">
         {/* Image Container */}
-        <div className="w-[264px] md:w-[350px] h-[254px] md:h-[468px] left-0 top-0 absolute" />
+        <div className="absolute left-0 top-0 h-[254px] w-[264px] md:h-[468px] md:w-[350px]" />
 
         {/* Image */}
         <Image
           loading="lazy"
           alt={image}
-          className="w-[124px] md:w-[249px] h-[116px] md:h-[216px] left-[71px] md:left-[55px] top-2 md:top-[18px] absolute object-contain group-hover:scale-110 transition-all"
+          className="absolute left-[71px] top-2 h-[116px] w-[124px] object-contain transition-all group-hover:scale-110 md:left-[55px] md:top-[18px] md:h-[216px] md:w-[249px]"
           src={image}
           width={500}
           height={500}
         />
 
         {/* Decorative Lines */}
-        <div className="w-[155px] md:w-[298px] h-[0px] left-4 md:left-0 top-[160px] md:top-[295px] absolute border border-neutral-800"></div>
+        <div className={`h-[0px] w-[155px] md:w-[298px] ${lang === "en" ?"left-4" : "right-4"} ${lang === "en" ? "md:left-0" : "md:right-0"} absolute top-[160px] border border-neutral-800 md:top-[295px]`}></div>
 
         {/* Title */}
-        <div className="left-4 top-[130px] md:top-[250px] absolute text-neutral-800 text-2xl font-normal font-gilda">
+        <div className={`absolute font-gilda text-2xl font-normal text-neutral-800 ${lang === "en" ? "left-4 top-[130px] md:top-[250px]" : "right-5 top-[125px] md:top-[255px]"}`}>
           {title}
         </div>
 
         {/* Description */}
-        <div className=" text-left w-[225px] md:w-[320px] left-[16px] top-[170px] md:top-[310px] md:bottom-20 absolute text-neutral-800 text-sm md:text-base font-normal leading-[15px] font-barlow ">
+        <div className={`absolute left-[16px] top-[170px] w-[225px] text-left font-barlow text-sm font-normal leading-[15px] text-neutral-800 md:bottom-20 md:top-[310px] md:w-[320px] md:text-base ${lang === "en" ? "text-left" : "text-right"}`}>
           {description}
         </div>
 
         {/* Link and Icon */}
-        <div className="w-6 md:w-10 h-6 md:h-10 border right-[15px] bottom-[15px] md:left-[298px] md:top-[411px] absolute bg-neutral-800 justify-start items-start gap-2.5 inline-flex">
+        <div className="absolute bottom-[15px] right-[15px] inline-flex h-6 w-6 items-start justify-start gap-2.5 border bg-neutral-800 md:left-[298px] md:top-[411px] md:h-10 md:w-10">
           <StartupsArrowLeft />
         </div>
       </div>

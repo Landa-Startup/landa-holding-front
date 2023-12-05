@@ -1,4 +1,5 @@
-import { useForm, UseFormRegister, FieldValues } from 'react-hook-form';
+import React from 'react';
+// import { useForm, UseFormRegister, FieldValues } from 'react-hook-form';
 
 export default function Input({
   register,
@@ -12,6 +13,8 @@ export default function Input({
   patternMessage,
   className,
   labelClass,
+  containerClass,
+  inputValue,
 }: {
   register: any;
   errors: any;
@@ -24,12 +27,14 @@ export default function Input({
   placeholder:string;
   className:string;
   labelClass:string;
+  containerClass?: string;
+  inputValue?: string;
 }) {
   
-  let value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
+  const value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
-    <div>
-      <label htmlFor={nameInput} className={labelClass }>
+    <div className={`flex flex-col items-start ${containerClass}`}>
+      <label htmlFor={nameInput} className={`px-2 text-lg ${labelClass}`}>
         {label}
       </label>
 
@@ -47,7 +52,7 @@ export default function Input({
         className={className + (errors[nameInput] ? ' border-red-500' : '')}
         />
       {errors[nameInput] && (
-        <span className="mt-4 text-sm text-yellow-500">
+        <span className="mt-4 px-2 text-sm text-yellow-500">
           {errors[nameInput].message}
         </span>
       )}

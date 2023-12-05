@@ -1,106 +1,92 @@
 import Link from 'next/link';
 import React from 'react';
 import Lines from '../icons/LandaHoldingBlack/Lines';
-import ArrowRight from '../icons/common/ArrowRight';
+import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
+import UlList from '../List/UlList';
+import { useTranslation } from 'app/i18n';
 
-export default function LandaHoldingBlack() {
+export default async function LandaHoldingBlack(
+  {lang} : {lang: string}
+) {
+  const { t } = await useTranslation(lang, "mainPage")
+
+  const L1EN = ['Global investment opportunities within your reach.', 'Access to a network of successful entrepreneurs and investors.', 'Exclusive insights and expert analysis for informed decisions.', 'Collaborative environment for joint ventures and partnerships.', 'Accelerated growth potential through diversified investments.']
+  const L2EN = ['Global networking opportunities for collaboration and partnerships', 'Access to all videos of pitches, industry trend presentations and panel discussions.', 'Attending events of the entrepreneurs center', 'Meetings with top business leaders and entrepreneurs', 'Participation in seasonal meetings with other international entrepreneurs .' , 'Online platform for connecting with other entrepreneurs']
+  
+  const L1FA = ["فرصت های سرمایه گذاری جهانی در دسترس شماست", "دسترسی به شبکه ای از کارآفرینان و سرمایه گذاران موفق", "بینش انحصاری و تجزیه و تحلیل تخصصی برای تصمیم گیری آگاهانه", "محیط همکاری برای سرمایه گذاری مشترک و مشارکت", "پتانسیل رشد سریع از طریق سرمایه گذاری های متنوع"]
+  const L2FA = ["فرصت های شبکه جهانی برای همکاری و مشارکت", "دسترسی به تمام ویدئوهای مربوط به زمین، ارائه روند صنعت و بحث های پنل", "حضور در رویدادهای مرکز کارآفرینان", "جلسات با رهبران برتر کسب و کار و کارآفرینان", "شرکت در جلسات فصلی با سایر کارآفرینان بین المللی", "پلتفرم آنلاین برای ارتباط با سایر کارآفرینان"]
+
   return (
-    <div className="flex flex-col md:flex-row justify-evenly md:justify-between md:pr-20 md:pl-36 items-center relative bg-[#ffffff] py-5 md:py-10 space-y-5 md:h-[590px]">
+    <div className={`flex flex-col justify-evenly md:flex-row md:justify-between ${t('lng') === "en" ? "md:pl-36 md:pr-20" : "md:pl-20 md:pr-40"} relative items-center space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:py-10`}>
       <Lines />
-      <div className="flex flex-col items-center justify-around md:items-start space-y-6 pt-3">
-        <div className="flex flex-col md:items-start items-center self-start">
+      <div className="flex flex-col justify-around space-y-6 pt-8">
+        <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className="text-black text-xl font-gilda font-normal border-black w-[340px] hidden md:block">
-              LANDA HOLDING
+            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
+              {t('LandaHolding')}
             </span>
-            <span className="text-black text-4xl font-gilda font-normal border-b md:border-none border-black w-[340px] pb-3 text-center md:text-start">
-              Investment Center
+            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+              {t('InvestorCenter')}
               <br />
             </span>
           </div>
         </div>
-        <div className="w-[320px] md:w-[434px]">
-          <ul className="text-black text-[14px] font-normal leading-6 list-disc pl-4 font-barlow space-y-2 ml-0">
-            <li className="leading-7 md:leading-10">
-              Global investment opportunities within your reach.
-            </li>
-            <li className="leading-7 md:leading-10">
-              Access to a network of successful entrepreneurs and investors.
-            </li>
-            <li className="leading-7 md:leading-10">
-              Exclusive insights and expert analysis for informed decisions.
-            </li>
-            <li className="leading-7 md:leading-10">
-              Collaborative environment for joint ventures and partnerships.
-            </li>
-            <li className="leading-7 md:leading-10">
-              Accelerated growth potential through diversified investments.
-            </li>
-          </ul>
-        </div>
-        <button className="relative justify-start items-center gap-4 mt-10 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-[4px]">
+
+        <UlList
+          list={t('lng') === "en" ? L1EN : L1FA} 
+          style1='w-[320px] md:w-[454px] pr-6'
+          style2='space-y-2 mr-8 mt-4'
+          style3='leading-4 md:leading-10 text-md'
+        />
+
+        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/investor-registration'}>
-            <div className="text-white text-xl font-normal leading-6 tracking-[1.5px] font-condensed">
-              Register
+            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
+              {t('lng') === "en" ? "Register" : "ثبت نام"}
             </div>
           </Link>
-          <div className="justify-start items-start gap-2.5 flex">
-            <div className="relative w-4 h-4">
-              <div className="absolute inset-0"></div>
-              <div className="w-full h-full">
-                <ArrowRight />
+          <div className="flex items-start justify-start gap-2.5">
+            <div className="relative h-5 w-5">
+              <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
+              <div className="h-full w-full border border-white pb-3">
+                <ButtonArrow />
               </div>
             </div>
           </div>
         </button>
       </div>
-      <div className="flex flex-col items-center justify-around md:items-start space-y-6 py-10 z-10">
-        <div className="flex flex-col md:items-start items-center">
+
+      <div className="z-10 flex flex-col justify-around space-y-6 pt-8">
+        <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className="text-black text-xl font-gilda font-normal border-black w-[340px] hidden md:block">
-              LANDA HOLDING
+            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
+              {t('LandaHolding')}
+              <br />
             </span>
-            <span className="text-black text-4xl font-gilda font-normal border-b  md:border-none border-black w-[340px] pb-3 text-center md:text-start">
-              Entrepreneur Center
+            <span className="w-[340px] border-b border-black pb-3 text-center  font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+              {t('EntrepreneurCenter')}
               <br />
             </span>
           </div>
         </div>
-        <div className="w-[380px] md:w-[500px] px-6">
-          <ul className="text-black text-[14px] font-normal leading-8 list-disc pl-5 font-barlow md:mt-4">
-            <li className="leading-7">
-              Global networking opportunities for collaboration and partnerships
-            </li>
-            <li className="leading-7">
-              Access to all videos of pitches, industry trend presentations and
-              panel discussions
-            </li>
-            <li className="leading-7">
-              Attending events of the entrepreneurs center
-            </li>
-            <li className="leading-7">
-              Meetings with top business leaders and entrepreneurs
-            </li>
-            <li className="leading-7">
-              Participation in seasonal meetings with other international
-              entrepreneurs
-            </li>
-            <li className="leading-7">
-              Online platform for connecting with other entrepreneurs
-            </li>
-          </ul>
-        </div>
-        <button className="relative justify-start items-center gap-4 inline-flex md:self-center h-6 group bg-[#222222] p-5 md:p-6 rounded-[4px]">
+
+        <UlList
+          list={t('lng') === "en" ? L2EN : L2FA}  
+          style1={`w-[320px] md:w-[500px] ${t('lng') === "en" ? "pr-6" : "pl-6"}`}
+          style2='space-y-2 mr-8 md:mr-0'
+          style3='leading-4 md:leading-10 text-md'
+        />
+        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/entrepreneurs'}>
-            <div className="text-white text-xl tracking-[1.5px] font-normal leading-6 font-condensed">
-              Register
+            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
+              {t('lng') === "en" ? "Register" : "ثبت نام"}
             </div>
           </Link>
-          <div className="justify-start items-start gap-2.5 flex">
-            <div className="relative w-4 h-4">
-              <div className="absolute inset-0"></div>
-              <div className="w-full h-full">
-                <ArrowRight />
+          <div className="flex items-start justify-start gap-2.5">
+            <div className="relative h-5 w-5">
+              <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
+              <div className="h-full w-full border border-white pb-3">
+                <ButtonArrow />
               </div>
             </div>
           </div>

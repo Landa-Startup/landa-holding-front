@@ -1,7 +1,4 @@
 import * as React from 'react';
-import Input from '../common/form/Input';
-import { InvestorRegistrationFormData } from 'app/types/global';
-import { useForm } from 'react-hook-form';
 import TextArea from '../common/TextArea';
 // import { StartupsFormData } from 'app/types/global';
 
@@ -15,7 +12,7 @@ export default function StartupFormIdea({
 
   return (
     <>
-      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+      <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <TextArea
           title="Explain your idea in 5 lines?*"
           register={register}

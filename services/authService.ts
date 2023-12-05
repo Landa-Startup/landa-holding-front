@@ -1,6 +1,6 @@
 import jwtDecode from 'jwt-decode';
 import { setCookie, destroyCookie, parseCookies } from 'nookies';
-import { DecodedToken } from 'app/types/global';
+import { DecodedToken } from '@/types/global';
 
 // import { refreshToken } from './authService';
 

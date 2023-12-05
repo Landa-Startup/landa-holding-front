@@ -22,33 +22,33 @@ export default function BusinessTeamCard({
   email: string;
 }) {
   return (
-    <div className="flex md:flex-col md:items-center md:w-full">
-      <div className="relative md:ml-10 md:self-start md:flex-row justify-start items-center gap-3 flex flex-col w-1/3">
+    <div className="flex md:w-full md:flex-col md:items-center">
+      <div className="relative flex w-1/3 flex-col items-center justify-start gap-3 md:ml-10 md:flex-row md:self-start">
         <Image
           loading="lazy"
-          className="w-14 h-14 md:w-[108px] md:h-[104px] border"
+          className="h-14 w-14 border md:h-[104px] md:w-[108px]"
           src={`/static/images/Home/Cooperation-members/${profileImage}`}
           width={500}
           height={500}
           alt="Avatar"
         />
-        <div className="md:hidden w-[200px] md:w-[170px] h-0 left-[115px] top-[210px] md:top-[170px] absolute origin-top-left -rotate-90 bg-white border border-white"></div>
-        <div className="hidden md:block w-[285px] h-[1px] left-0 top-[120px] absolute bg-white border border-white"></div>
-        <div className="flex flex-col justify-center md:items-start gap-[3px] text-center items-center ">
-          <div className=" text-white text-base md:text-xl font-medium font-barlow inline-flex md:w-48">
+        <div className="absolute left-[115px] top-[210px] h-0 w-[200px] origin-top-left -rotate-90 border border-white bg-white md:top-[170px] md:hidden md:w-[170px]"></div>
+        <div className="absolute left-0 top-[120px] hidden h-[1px] w-[285px] border border-white bg-white md:block"></div>
+        <div className="flex flex-col items-center justify-center gap-[3px] text-center md:items-start ">
+          <div className=" inline-flex font-barlow text-base font-medium text-white md:w-48 md:text-xl">
             {name}
           </div>
-          <div className="text-white text-xs md:text-base font-normal font-barlow ">
+          <div className="font-barlow text-xs font-normal text-white md:text-base ">
             {roleInCompany}
           </div>
-          <div className=" text-white text-xs md:text-[15px] font-normal font-gilda mt-1">
+          <div className=" mt-1 font-gilda text-xs font-normal text-white md:text-[15px]">
             {role}
           </div>
-          <div className="inline-flex gap-3 mt-2 md:hidden">
+          <div className="mt-2 inline-flex gap-3 md:hidden">
             <Link href={linkedinLink} target="_blank">
               <Image
                 loading="lazy"
-                className="w-4 h-4"
+                className="h-4 w-4"
                 src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
                 alt="Linkedin"
                 width={50}
@@ -58,7 +58,7 @@ export default function BusinessTeamCard({
             <Link href={personalWebsite} target="_blank">
               <Image
                 loading="lazy"
-                className="w-4 h-4"
+                className="h-4 w-4"
                 src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
                 alt="Website"
                 width={50}
@@ -68,7 +68,7 @@ export default function BusinessTeamCard({
             <Link href={`mailto:${email}`}>
               <Image
                 loading="lazy"
-                className="w-4 h-4"
+                className="h-4 w-4"
                 src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
                 alt="Email"
                 width={50}
@@ -78,15 +78,15 @@ export default function BusinessTeamCard({
           </div>
         </div>
       </div>
-      <div className="p-2.5 pt-4 md:ps-12 ml-3 justify-center items-center gap-3 inline-flex w-2/3 md:w-full">
-        <div className="text-stone-100 text-xs md:text-xl font-medium leading-[20px] md:leading-[28px] tracking-wider font-barlow md:w-[700px] md:mt-3">
+      <div className="ml-3 inline-flex w-2/3 items-center justify-center gap-3 p-2.5 pt-4 md:w-full md:ps-12">
+        <div className="font-barlow text-xs font-medium leading-[20px] tracking-wider text-stone-100 md:mt-3 md:w-[700px] md:text-xl md:leading-[28px]">
           {commentDescription}
         </div>
-        <div className="flex-col hidden gap-3 mt-2 md:flex ml-5">
+        <div className="ml-5 mt-2 hidden flex-col gap-3 md:flex">
           <Link href={linkedinLink} target="_blank">
             <Image
               loading="lazy"
-              className="w-7 h-w-7"
+              className="h-w-7 w-7"
               src={'/static/images/76bfd12d298c711fcd5a6fb9f633c967.png'}
               alt="Linkedin"
               width={50}
@@ -96,7 +96,7 @@ export default function BusinessTeamCard({
           <Link href={personalWebsite} target="_blank">
             <Image
               loading="lazy"
-              className="w-7 h-w-7"
+              className="h-w-7 w-7"
               src={'/static/images/59f5308a62b217b056f54ef59eeb58e2.png'}
               alt="Website"
               width={50}
@@ -106,7 +106,7 @@ export default function BusinessTeamCard({
           <Link href={`mailto:${email}`}>
             <Image
               loading="lazy"
-              className="w-7 h-w-7"
+              className="h-w-7 w-7"
               src={'/static/images/e0058a18e539cf27599b846c81814c35.png'}
               alt="Linkedin"
               width={50}

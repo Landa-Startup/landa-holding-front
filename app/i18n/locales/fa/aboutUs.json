@@ -1,0 +1,88 @@
+{
+    "lng": "fa",
+    "banner": "درباره ما",
+    "LandaHolding": "هلدینگ لاندا",
+    "aboutLandaHolding": [
+      {
+        "title": "درباره لاندا هلدینگ",
+        "text": "ما یک تیم از سرمایه گذاران فرشته هستیم که به شما کمک می کنیم تا تیم خود را تشکیل دهید، مدل کسب و کار خود را تعریف کنید و ارزش استارتاپ خود را در بازارهای بین المللی افزایش دهید. آنچه ما را تمایز می دهد و منحصر به فرد می کند، کمک در جذب منابع و سرمایه گذاری، دعوت سرمایه گذاران بین المللی و همکاران تجاری است، علاوه بر کارآفرینان ما که همه به موفقیت ختم خواهد شد. هدف لاندا هلدینگ جمع آوری همه منابع از سراسر جهان و معرفی بهترین فرصت های سرمایه گذاری برای استارتاپ هاست.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "subsids": [
+      {
+        "title": "شرکت‌های تابعه لاندا هلدینگ",
+        "text": "هلدینگ بین المللی لاندا از ۱۰ شرکت فعال در کانادا و ایران تشکیل شده است که دفاتری در شهرهای تورنتو، ونکوور، تهران و اصفهان دارد. ماموریت ما سرمایه گذاری در کارآفرینان خلاق و حمایت از آن ها از ابتدایی ترین مراحل شروع با ایده پردازی تا راه اندازی یک استارتاپ بین المللی است.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "TheStoryOfLanda": [
+      {
+        "title": "داستان لاندا",
+        "text": "هلدینگ بین المللی لاندا در سال ۲۰۱۷ در کانادا به عنوان یک شرکت تایید شده و تایید شده در زمینه سرمایه گذاری، جمع آوری منابع، توسعه کسب و کار و برنامه ریزی استارتاپی فعالیت خود را آغاز کرد. در سال ۲۰۲۱، پس از سال های باشکوه و موفق، هلدینگ لاندا به یک شرکت فدرال شناخته شده در کانادا و ایران تبدیل شد.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "VisionOfTheLanaHolding": [
+      {
+        "title": "چشم انداز هلدینگ لاندا",
+        "text1": "لاندا طیف متنوعی از خدمات، از جمله پشتیبانی از کارآفرینان و استارت آپ های نوآور و همچنین سرمایه گذاری در استارت آپ های مقیاس پذیر در بازارهای جهانی را ارائه می دهد. اعضای انجمن سرمایه گذاران لاندا متشکل از مدیران ارشد موفق، رهبران تجاری و کارآفرینان سریالی هستند که گرد هم می آیند تا از بهترین فرصت های سرمایه گذاری در شرکت های نوظهور از سراسر جهان سرمایه گذاری کنند.",
+        "text2": "بارزترین ویژگی این انجمن عضویت متنوع، جریان تراکنش با کیفیت و فعالیت های خیریه گسترده آن است. لاندا از همکاری و روابط نزدیک با شرکت های سرمایه گذاری ریسک پذیر، دانشگاه ها و موسسات بانکی سود می برد. این روابط دسترسی به سرمایه، استعداد، فناوری و منابع لازم برای ایجاد یک سرمایه گذاری موفق را تسهیل می کند.",
+        "text3": "علاوه بر این، ما بیش از 100 سرمایه گذار، مشتری، اعضای هیئت مدیره، مشاوران و کارشناسان بالقوه را از طریق جلسات ارائه به کارآفرینان ارائه می دهیم. در سال 2022، اعضای انجمن معمولاً روی استارت‌آپ‌هایی سرمایه‌گذاری می‌کنند که بر روی فناوری‌های نوظهور، کودکان و نوجوانان، هوش مصنوعی، گردشگری، پایداری محیطی، خرید آنلاین و پلت‌فرم‌های آموزشی تمرکز دارند.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "LANDAStartups": [
+      {
+        "title": "LANDA Startups",
+        "StartupAcademy": "استارت آپ آکادمی استارتاپی با هدف پرورش و تسریع رشد نوجوانان از سال 1396 زیر نظر شرکت فرش تک فعالیت می کند",
+        "LandaTrip": "لاندا تریپ، استارت آپی در زمینه گردشگری و آموزش با پلتفرم بین المللی و هوش مصنوعی حرفه ای، فعالیت خود را از سال 1391 در ایران آغاز کرد",
+        "Diaco": "دیاکو، یک استارت آپ در زمینه صنعت و اتوماسیون، با دستگاه های CNC Wire Cut در کانادا و بازارهای ایالات متحده و اروپا فعالیت می کند",
+        "VisionRaft": "ویژن رافت، یک استارتاپ در دنیای مجازی، بخش آموزش کودکان، در سال 2022 فعالیت خود را با پشتیبانی MTA Accelerator در کانادا گسترش داد",
+        "LandaHandicraft": "لاندا هندیکرافت، استارت آپی در صنعت صنایع دستی، فروشگاه اینترنتی و مرجع صنایع دستی، سرمایه لازم را برای توسعه پلتفرم برای بازار بین المللی در سال 2023 جذب کرد.",
+        "SteadySkull": "Steady Skull، استارت آپی در حوزه پزشکی، محصولی را برای تسهیل در عمل جراحی مغز توسعه داد و فعالیت خود را در سال 2019 با تیمی تخصصی آغاز کرد.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      },
+      {
+        "StartupAcademy": "آکادمی استارت آپ ها",
+        "LandaTrip": "لاندا تریپ",
+        "Diaco": "دیاکو",
+        "VisionRaft": "ویژن رفت",
+        "LandaHandicraft": "صنایع دستی لاندا",
+        "SteadySkull": "استدی اسکال"
+      }
+    ],
+  
+    "KeyDifferentiatingFactors": [
+      {
+        "title": "عوامل متمایز کننده کلیدی :",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "itemList": [
+      "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other.",
+      "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities.",
+      "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events.",
+      "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
+      "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
+      "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
+     ]
+  }

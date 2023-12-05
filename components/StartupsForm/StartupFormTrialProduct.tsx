@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import Input from '../common/form/Input';
-import { InvestorRegistrationFormData } from 'app/types/global';
-import { useForm } from 'react-hook-form';
-import TextArea from '../common/TextArea';
 import YesRadioButton from '../common/YesRadioButton';
-import NoRadioButton from '../common/NoRadioButton';
 import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
+import { handleRadioChange } from '../..//utils/functions';
 
 export default function StartupFormTrialProduct({
   register,
@@ -25,33 +22,21 @@ export default function StartupFormTrialProduct({
   
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
-  const handleRadioPitchChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioPitch(event.target.value);
-  };
-
   const [selectedRadioBusiness, setSelectedRadioBusiness] = useState('');
-
-  const handleRadioBusinessChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioBusiness(event.target.value);
-  };
 
 
   return (
     <>
-      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-      <YesRadioButton
+      <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+        <YesRadioButton
           title="Do you have Pitch deck?"
           register={register}
           errors={errors}
           required="Please choose an option"
           name="pitch-deck"
-          handleRadioChange={handleRadioPitchChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioPitch)}}
           selectedRadio={selectedRadioPitch}
-          handleChangeFile={handlePitchDeckFileChange}
+          handleFileChange={handlePitchDeckFileChange}
           fileName='pitchDeckFile'
         />
         <YesRadioButton
@@ -60,9 +45,9 @@ export default function StartupFormTrialProduct({
           errors={errors}
           required="Please choose an option"
           name="business-plan"
-          handleRadioChange={handleRadioBusinessChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioBusiness)}}
           selectedRadio={selectedRadioBusiness}
-          handleChangeFile={handleBusinessPlanFileChange}
+          handleFileChange={handleBusinessPlanFileChange}
           fileName='businessPlanFile'
         />
 
@@ -71,7 +56,7 @@ export default function StartupFormTrialProduct({
         if ((Boolean(selectedRadioBusiness) === false) && (Boolean(selectedRadioPitch)) === false) {
           return (
             <div>
-              <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+              <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
                 <div>
                   <Input
                     register={register}
@@ -83,7 +68,7 @@ export default function StartupFormTrialProduct({
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder="Enter your Product Name"
-                    className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                    className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
@@ -99,7 +84,7 @@ export default function StartupFormTrialProduct({
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder="Enter your Site Address"
-                    className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                    className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>

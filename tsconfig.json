@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["aria-query"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -30,14 +31,16 @@
         "utils/*"
       ],
       "@/types/*": [
-        "types/*",
-        "aria-query"
+        "types/*"
       ],
       "@/services/*": [
         "services/*"
       ],
       "@/router/*": [
         "router/*"
+      ],
+      "@/i18n/*":[
+        "app/18n/*"
       ]
     },
     "plugins": [

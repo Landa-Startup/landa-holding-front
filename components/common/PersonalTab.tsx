@@ -16,7 +16,7 @@ export default function PersonalTab({
   linkedIn: string;
 }) {
   return (
-    <div className="w-[300px] h-[320px] border border-primary rounded-sm flex flex-col justify-between relative">
+    <div className="relative flex h-[320px] w-[300px] flex-col justify-between rounded-sm border border-primary">
       {/* Background Image */}
       <Image
         className="object-cover"
@@ -31,20 +31,20 @@ export default function PersonalTab({
       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-[rgba(0,0,0,0.2)] to-transparent"></div>
 
       {/* LinkedIn Link */}
-      <div className="flex flex-col p-4 space-y-2 self-start z-10">
+      <div className="z-10 flex flex-col space-y-2 self-start p-4">
         <Link
           href={linkedIn}
-          className="text-white rounded-full bg-[#222] p-2 opacity-75"
+          className="rounded-full bg-[#222] p-2 text-white opacity-75"
         >
           <LinkedIn />
         </Link>
       </div>
 
       {/* Text Content */}
-      <div className="flex flex-col items-center px-4 pb-4 text-white z-10">
-        <span className="font-normal text-lg">{name}</span>
-        <div className="font-light w-full flex items-center justify-center border-t-2">
-          <span className="font-light border-t-3">{position}</span>
+      <div className="z-10 flex flex-col items-center px-4 pb-4 text-white">
+        <span className="text-lg font-normal">{name}</span>
+        <div className="flex w-full items-center justify-center border-t-2 font-light">
+          <span className="border-t-3 font-light">{position}</span>
         </div>
       </div>
     </div>

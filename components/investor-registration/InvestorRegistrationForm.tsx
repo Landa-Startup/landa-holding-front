@@ -1,29 +1,25 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import Select from '../common/form/Select';
 import InvestorRegistrationTitle from './InvestorRegistrationTitle';
-import { InvestorRegistrationFormData } from '../../app/types/global';
+import { InvestorRegistrationFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
-import GetCsrfToken from '@/utils/get-csrf-token';
-import apiClient from '@/utils/api';
+import GetCsrfToken from '../../utils/get-csrf-token';
 import Input from '../common/form/Input';
+import { initialInvestorRegistrationFormData } from '../../initials/initObjects'
+import Button from '../common/Button';
+import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
 
-export default function InvestorRegistrationForm() {
-  const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
-    firstName: '',
-    lastName: '',
-    birthDate: new Date(),
-    email: '',
-    countryOfResidence: '',
-    provinceOfResidence: '',
-    companyName: '',
-    interests: '',
-    positionInTeam: '',
-    preferredAreas: '',
-    howDidYouKnowUs: '',
-  };
+import { useSubmit } from '../../providers/StateProvider';
+import CountryInput from '../common/form/CountryInput';
+import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+
+export default function InvestorRegistrationForm(
+  { lang }: { lang: string }
+) {
+
+  // const lang = "en"
 
   const {
     register,
@@ -35,141 +31,83 @@ export default function InvestorRegistrationForm() {
     defaultValues: initialInvestorRegistrationFormData,
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
-  const [send, setSend] = useState(false);
-  const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState('');
-  const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState('');
-
-  const [formData, setFormData] = useState<InvestorRegistrationFormData>(
-    initialInvestorRegistrationFormData
-  );
+  const {
+    csrfToken,
+    handleTokenChange,
+    handleSubmitingChange,
+    handleSendChange,
+    handleNotifChange,
+    handleChangeSuccess,
+    handleChangeReject
+  } = useSubmit();
 
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`);
-      setCsrfToken(token);
+      handleTokenChange(token);
     }
     fetchCsrfToken();
   }, []);
 
-  useEffect(() => {
-    const apiUrl = 'https://restcountries.com/v3.1/all';
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        // Process the data and set the countries state after sorting
-        const countryData = data.map((country: any) => ({
-          value: country.name.common,
-          text: country.name.common,
-        }));
-        countryData.sort((a: any, b: any) => a.text.localeCompare(b.text)); // Sort alphabetically
-        setCountries(countryData);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-
-  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCountry(event.target.value);
-
-    setFormData({
-      ...formData,
-      countryOfResidence: event.target.value, // Update the formData state
-    });
-  };
-
-  console.log(selectedCountry);
-
   const onSubmit = async (formData: InvestorRegistrationFormData) => {
-    setIsSubmitting(true);
-    setSend(true);
+    // Set loading and sending states.
+    handleSubmitingChange(true);
+    handleSendChange(true);
+
+    // Create a FormData object for form data.
     const sendFormData = new FormData();
 
-    sendFormData.append('firstName', formData.firstName);
-    sendFormData.append('lastName', formData.lastName);
-    sendFormData.append('email', formData.email);
-    sendFormData.append('countryOfResidence', selectedCountry);
-    sendFormData.append('provinceOfResidence', formData.provinceOfResidence);
-    sendFormData.append('birthDate', String(formData.birthDate));
-    sendFormData.append('companyName', formData.companyName);
-    sendFormData.append('howDidYouKnowUs', formData.howDidYouKnowUs);
-    sendFormData.append('preferredAreas', formData.preferredAreas);
-    sendFormData.append('interests', formData.interests);
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
 
-    try {
-      const response = await apiClient.post(
-        'investor-registration',
-        sendFormData,
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      setIsSuccess(true);
-      setShowNotification(true);
-      setSend(false);
-      reset(initialInvestorRegistrationFormData);
-      setFormData(initialInvestorRegistrationFormData);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
-      }, 10000);
-    } catch (error) {
-      setShowNotification(true);
-      setSend(false);
-      setIsSuccess(false);
-      console.error('Error sending form data:', error);
-      reset(initialInvestorRegistrationFormData);
-      setFormData(initialInvestorRegistrationFormData);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
+    // Send the form data to the API.
+    submitInvestorRegistrationForm(sendFormData, csrfToken).then((response) => {
+
+      console.log(response);
+
+      handleChangeSuccess();
+      reset(initialInvestorRegistrationFormData); // Country does not reset
+      setTimeout(() => {
+        handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    }).catch((error) => {
+      console.log(error);
+      handleChangeReject();
+      reset(initialInvestorRegistrationFormData);
+
+      setTimeout(() => {
+        handleNotifChange(false);
+      }, 10000); // 10 seconds in milliseconds
+    })
   };
+
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }))
 
   return (
     <>
-      <div className="container m-16 px-5 lg:p-20 mx-auto bg-[#faf8f5] dark:bg-transparent">
-        <InvestorRegistrationTitle />
+      <div className="container m-16 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
+        <InvestorRegistrationTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="firstName"
-                type="text"
-                label="First Name"
-                required=""
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your First Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
+          <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
 
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="lastName"
-                type="text"
-                label="Last Name"
-                required="Last Name is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Last Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
+            <PersonalInfoInput
+              register={register}
+              errors={errors}
+              nameInputs={{
+                firstName: "firstName",
+                lastName: "lastName",
+                email: "email",
+                phoneNumber: ""
+              }}
+              lang={lang}
+            />
 
             <div className="col-span-1">
               <Input
@@ -177,84 +115,22 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="birthDate"
                 type="date"
-                label="Date of Birth"
-                required="Date of Birth is Required."
+                label={lang === "en" ? "Date of Birth" : "تاریخ تولد"}
+                required={lang === "en" ? "Date of Birth is Required." : "تاریخ تولد الزامی است"}
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
-                patternMessage="Please enter a valid Date of Birth(e.g., 2001/02/11)"
-                placeholder="Enter your Date of Birth"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                patternMessage={lang === "en" ? "Please enter a valid Date of Birth(e.g., 2001/02/11)" : "لطفا یک تاریخ تولد معتبر وارد کنید"}
+                placeholder={lang === "en" ? "Enter your Date of Birth" : "تاریخ تولد خود را وارد کنید"}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
             </div>
 
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="email"
-                type="email"
-                label="Email Address"
-                required="Email Address is Required."
-                patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                patternMessage="Enter a Valid Email Address"
-                placeholder="Enter your Email Address"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
-            <div className="col-span-1">
-              <label
-                htmlFor="countrySelect"
-                className="text-[#6b6b6b] dark:text-current"
-              >
-                Select a country:
-              </label>
-              <select
-                id="countrySelect"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                // name='countryOfResidence'
-                value={selectedCountry}
-                onChange={handleCountryChange}
-              >
-                <option value="" selected>Select a country</option>
-                {countries.map((country: any, index: number) => (
-                  <option key={index} value={country.text}>
-                    {country.text}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* <div className="col-span-1
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="countryOfResidence"
-                type="text"
-                label="Country of Residence"
-                required="Country of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your Country of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div> */}
-
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="provinceOfResidence"
-                type="text"
-                label="City Of Residence"
-                required="City Of Residence is Required."
-                patternValue=""
-                patternMessage=""
-                placeholder="Enter your City Of Residence"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
+            <CountryInput
+              register={register}
+              errors={errors}
+              nameInput='countryOfResidence'
+              lang={lang}
+            />
 
             <div className="col-span-1">
               <Input
@@ -262,10 +138,10 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="companyName"
                 type="text"
-                label="Company Name"
-                required="Company Name is Required."
-                placeholder="Enter your Company Name"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                label={lang === "en" ? "Company Name" : "نام شرکت"}
+                required={lang === "en" ? "Company Name is Required." : "نام شرکت الزامی است"}
+                placeholder={lang === "en" ? "Enter your Company Name" : "نام شرکت خود را وارد کنید"}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
                 patternMessage=""
@@ -278,10 +154,10 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="interests"
                 type="text"
-                label="Interests"
-                required="Interests is Required."
-                placeholder="Enter your Interests"
-                className="col-span-1 w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                label={lang === "en" ? "Intrests" : "علاقه مندی ها"}
+                required={lang === "en" ? "Intrests is Required." : "علاقه مندی ها الزامی است"}
+                placeholder={lang === "en" ? "Enter your Intrests" : "علاقه مندی های خود را وارد کنید"}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
                 patternMessage={''}
@@ -290,46 +166,40 @@ export default function InvestorRegistrationForm() {
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title="Preferred Areas for Investment"
+                title={lang === "en" ? "Preferred Areas for Investment" : "حوزه های ترجیحی برای سرمایه گذاری"}
                 register={register}
                 errors={errors}
-                placeholder="Description"
+                placeholder={lang === "en" ? "Description" : "توضیحات"}
                 nameTextArea="preferredAreas"
                 patternMessage=""
                 patternValue=""
-                required="This field is required"
+                required={lang === "en" ? "This field is required" : "پر کردن این قسمت الزامی است"}
               />
             </div>
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title="How did you hear about us?*"
+                title={lang === "en" ? "How did you hear about us?*" : "چگونه درباره ما شنیدید"}
                 register={register}
                 errors={errors}
-                placeholder="Description"
+                placeholder={lang === "en" ? "Description" : "توضیحات"}
                 nameTextArea="howDidYouKnowUs"
                 patternMessage=""
                 patternValue=""
-                required="This field is required"
+                required={lang === "en" ? "This field is required" : "پر کردن این قسمت الزامی است"}
               />
             </div>
           </div>
           <div className="text-center">
-            <button
-              disabled={send}
-              type="submit"
-              className="mt-3 btn btn-wide bg-[#AA8453] hover:bg-[#94744a] text-white"
-            >
-              {send ? 'Submitting ....' : 'Submit'}
-            </button>
+            <Button
+              type='submit'
+              bgColor="Primary"
+              disabled={errorsList[0] ? true : false}
+              lang={lang}
+            />
           </div>
         </form>
-        <NotificationSendForm
-          submitting={isSubmitting}
-          success={isSuccess}
-          sendStatus={send}
-          show={showNotification}
-        />
+        <NotificationSendForm />
       </div>
     </>
   );
