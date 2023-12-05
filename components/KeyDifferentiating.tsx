@@ -8,27 +8,30 @@ export default async function KeyDifferentiating(
 ) {
 
   const { t } = await useTranslation(lang, "aboutUs")
+
+  // t('itemList', {returnObjects: true}).map(({item}: {item: string}, {index}: {index: number}) => {
+  //   console.log(item, index);
+  // })
+
+  console.log(t('itemList', {returnObjects: true})[1]);
  
   return (
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] md:grid-cols-2">
       <div className="m-5 flex flex-col gap-5 md:my-20 md:ml-28">
         <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">
-          Key Differentiating Factors:
+          {t('KeyDifferentiatingFactors', {returnObjects: true})[0].title}
         </span>
         <div className="gap-2 font-barlow leading-6 text-black md:w-[350px] lg:w-[450px] xl:w-[550px]">
           <p>
-            First and foremost, it&apos;s essential to understand that the most
-            critical aspect is the mental model and perspective behind these key
-            differentiating factors. The way we perceive and approach a business
-            can create various points of distinction.
+            {t('KeyDifferentiatingFactors', {returnObjects: true})[0].titleText}
           </p>
-          <span className="font-bold text-primary">What sets us apart:</span>
+          <span className="font-bold text-primary">{t('KeyDifferentiatingFactors', {returnObjects: true})[0].textTitle}</span>
           <ul className='ml-4 list-decimal'>
-            {t('itemList', {returnObjects: true}).map(({item}: {item: string}) => (
+            {/* {t('itemList', {returnObjects: true}).map(({item}: {item: string}) => (
               <li>
                 {item}
               </li>
-              ))}
+            ))} */}
           </ul>
         </div>
       </div>

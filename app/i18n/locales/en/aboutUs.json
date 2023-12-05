@@ -67,7 +67,6 @@
         "SteadySkull": "SteadySkull"
       }
     ],
-  
     "KeyDifferentiatingFactors": [
       {
         "title": "Key Differentiating Factors:",
@@ -76,15 +75,15 @@
         "reverse": true,
         "show": true,
         "index": 2,
-        "addedClass": "",
-        "itemList": [
-          {"item1": "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other."},
-          {"item2": "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities."},
-          {"item3": "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events."},
-          {"item4": "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations."},
-          {"item5": "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. "},
-          {"item6": "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."}
-        ]
+        "addedClass": ""
       }
+    ],
+    "itemList": [
+      {"item1": "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other."},
+      {"item2": "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities."},
+      {"item3": "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events."},
+      {"item4": "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations."},
+      {"item5": "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. "},
+      {"item6": "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."}
     ]
   }
