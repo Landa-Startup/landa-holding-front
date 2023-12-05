@@ -32,7 +32,7 @@ export default async function Page({
       <AboutUsLandaHolding lang={lang} />
       <SubsidiaryCompanies lang={lang} />
       <StoryOfLanda lang={lang} />
-      <KeyDifferentiating />
+      <KeyDifferentiating lang={lang} />
       <AboutUsProfile lang={lang} />
     </div>
   );

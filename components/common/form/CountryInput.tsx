@@ -36,7 +36,7 @@ export default function CountryInput({
           nameInput={nameInput}
           label={lang === "en" ? 'Select a country:' : 'یک کشور را انتخاب کنید:'}
           required={lang === "en" ? 'Your Country is Required' : 'کشور شما الزامی است'}
-          className='input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
+          className='input input-bordered col-span-1 mb-1 mt-4 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
           labelClass='text-[#6b6b6b] dark:text-current'
           placeholder={lang === "en" ? 'Select a country:' : 'یک کشور را انتخاب کنید:'}
           options={countriesData}
