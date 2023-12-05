@@ -50,7 +50,7 @@ export default function Button({
         </span>
         {isVisitSize && (
           <span className="absolute inset-0 flex justify-center items-center text-center font-barlow text-white text-lg leading-none">
-            {lang === "en" ? "Visit Now" : "مشاهده کنید"}
+            {/* {lang === "en" ? "Visit Now" : "مشاهده کنید"} */}
           </span>
         )}
       </button>

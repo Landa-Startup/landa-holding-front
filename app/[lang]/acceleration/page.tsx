@@ -18,7 +18,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
   const { t } = await useTranslation(lang, "acceleration");
 
   return (
-    <div dir={t('lng') === "en" ? "ltr" : "rtl"}>
+    <div>
       <Hero
         showLanda
         backgroundImage="../public/static/images/acceleration/banner.png"
@@ -110,7 +110,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
         <Button
           goto="/StartupsForm"
           size="visit"
-          text={t('lng') === "en" ? "Register Now" : "ثبت نام کنید"}
+          text={t('Register')}
           bgColor="Primary"
           lang={lang}
         />
