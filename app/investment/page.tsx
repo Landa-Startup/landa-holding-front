@@ -66,10 +66,10 @@ export default function page() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-24 px-8 md:px-28 gap-6 md:gap-24 relative">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <span className="text-2xl md:text-4xl text-primary font-gilda">
+            <span className="text-2xl md:text-3xl text-primary font-gilda">
               Types of Holding Companies
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="text-2xl md:text-3xl text-primary font-gilda">
             Landa Investment Strategy
           </span>
           <p className="leading-7 tracking-[1px] font-barlow text-justify">
@@ -118,7 +118,7 @@ export default function page() {
       <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 bg-[#F7F3EE]">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <span className="text-2xl md:text-4xl text-primary font-gilda">
+            <span className="text-2xl md:text-3xl text-primary font-gilda">
               Investment in Startups
             </span>
           </div>
@@ -149,7 +149,7 @@ export default function page() {
               layout="fill"
             />
           </div>
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="text-2xl md:text-3xl text-primary font-gilda">
             Our Vision and Mission
           </span>
           <p className="leading-7 tracking-[1px] font-barlow text-justify">
@@ -164,7 +164,7 @@ export default function page() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 py-10 md:py-16 px-8 md:px-28 gap-6 md:gap-24 items-center">
         <div className="flex flex-col gap-6">
-          <span className="text-2xl md:text-4xl text-primary font-gilda">
+          <span className="text-2xl md:text-3xl text-primary font-gilda">
             Certificate of Incorporation
           </span>
           <div className="flex items-end">
@@ -197,7 +197,10 @@ export default function page() {
       </div>
       <div className="bg-[#F7F3EE] py-10 md:py-16 px-8 md:px-28">
         <div className="leading-8 tracking-[1px] font-barlow text-justify">
-          <p>
+          <span className="text-2xl md:text-3xl text-primary font-gilda">
+            What is happening in the Landa investment center
+          </span>
+          <p className="mt-6">
             At Landa Holding, our objective is to identify innovative start-up
             projects, minimize risks, and foster success for our trusted
             investors. We offer a comprehensive range of tools, resources, and
