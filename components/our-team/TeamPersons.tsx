@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from '../common/PersonalTab'
+// TODO: read from i18n instead of statics
 import { personsEN, personsFA } from '../../app/[lang]/statics';
 import { rolesEN, rolesFA } from '../../app/[lang]/statics';
 

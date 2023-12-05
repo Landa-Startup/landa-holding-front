@@ -5,7 +5,7 @@ import { cardData1 } from '../../app/[lang]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function LandaHoldingPriority(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "mainPage");
@@ -13,11 +13,11 @@ export default async function LandaHoldingPriority(
   return (
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
       <div className="ml-5 flex flex-col items-center lg:self-start xl:ml-40 rtl:xl:mr-40">
-        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
+        <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "tracking-normal lg:mr-8"} font-condensed text-black`}>
+        <span className={`text-5xl font-normal rtl:tracking-widest ltr:tracking-normal lg:mr-8 font-condensed text-black`}>
           {t('Priorities')}
         </span>
       </div>
