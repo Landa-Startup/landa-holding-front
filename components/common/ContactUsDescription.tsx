@@ -55,20 +55,20 @@ export default async function ContactUsDescription(
               {/* TODO: create component for below icons */}
               <li>
                 <Link href="tel:+14165577622">
-                  <span>Toronto:</span>
-                  <span className="text-[#AA8453]">+1 (289) 269-3933</span>
+                  <span>{lang === "en" ? "Toronto: " : "تورنتو: "}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).cNumber}</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
-                  <span>Tehran:</span>
-                  <span className="text-[#AA8453]">+98 (912) 0539563</span>
+                  <span>{lang === "en" ? "Tehran: " : "تهران: "}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).tNumber}</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
-                  <span>Isfahan:</span>
-                  <span className="text-[#AA8453]">+98 (313) 1311914</span>
+                  <span>{lang === "en" ? "Isfahan: " : "اصفهان: "}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).iNumber}</span>
                 </Link>
               </li>
             </ul>
@@ -92,9 +92,9 @@ export default async function ContactUsDescription(
           <div className="ml-2 flex flex-col">
             <span className="font-semibold">{t('address')}</span>
             <ul className="mx-4 list-disc space-y-3">
-              <li>No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada</li>
-              <li>Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran</li>
-              <li>Office C, 5th Floor, Tala Complex, Sa'adat Abad Street, Isfahan, Iran</li>
+              <li>{t('addresses', {returnObjects: true}).canada}</li>
+              <li>{t('addresses', {returnObjects: true}).tehran}</li>
+              <li>{t('addresses', {returnObjects: true}).isfahan}</li>
             </ul>
           </div>
         </div>

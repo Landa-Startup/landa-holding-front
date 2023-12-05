@@ -1,6 +1,4 @@
 import React from 'react';
-import CopyRight from '../common/CopyRight';
-import Image from 'next/image';
 import Link from 'next/link';
 import Instagram from '../icons/footer/Instagram';
 import Envelope from '../icons/footer/Envelope';
@@ -133,26 +131,26 @@ export default async function Footer(
             <br />
           </div>
           <div className="text-justify text-base font-normal text-neutral-400">
-          No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada
+            {t('contact', {returnObjects: true}).text.canada}
           </div>
           <div className="text-justify text-base font-normal text-neutral-400">
-          +1 (289) 269-3933
+            {t('contact', {returnObjects: true}).text.cNumber}
           </div>
           <div className="border-t border-t-white pt-1 text-justify text-base font-normal text-neutral-400">
-          Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran
+            {t('contact', {returnObjects: true}).text.tehran}
           </div>
           <div className="border-b border-b-white pb-1 text-justify text-base font-normal text-neutral-400">
-          +98 (912) 0539563
+            {t('contact', {returnObjects: true}).text.tNumber}
           </div>
           <div className="text-base font-normal text-neutral-400">
-          Office C, 5th Floor, Tala Complex, Sa'adat Abad Street, Isfahan, Iran
+            {t('contact', {returnObjects: true}).text.isfahan}
           </div>
           <div className="text-base font-normal text-neutral-400">
-          +98 (313) 1311914
+            {t('contact', {returnObjects: true}).text.tNumber}
           </div>
         </div>
       </div>
-      <div className="self-stretch border-t pt-4 text-center text-white">
+      <div className="self-stretch border-t pt-4 text-center text-white" dir='ltr'>
         © Copyright {GetYear()} by{' '}
         <Link href={'/'} className="text-primary">
           LandaHolding

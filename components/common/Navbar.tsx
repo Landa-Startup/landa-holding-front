@@ -10,6 +10,8 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
   // const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  console.log(isMenuOpen);
+
   // const { t } = await useTranslation(lang, "mainPage");
 
   const menuItems = [

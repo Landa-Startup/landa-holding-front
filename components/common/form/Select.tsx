@@ -27,11 +27,12 @@ export default function Select({
   selected?: string;
 }) {
   return (
-    <div className="flex flex-col">
-      <label htmlFor={nameInput} className={`text-left self-start px-2 ${labelClass}`}>
+    <div className="flex flex-col items-start">
+      <label htmlFor={nameInput} className={`self-start px-2 ${labelClass}`}>
         {label}
       </label>
       {/* TO DO : select placeholder has a problem */}
+      <div className="flex flex-row w-full items-center gap-2">
       <select
         id={nameInput}
         {...register(nameInput, {
@@ -51,10 +52,11 @@ export default function Select({
       </select>
 
       {errors[nameInput] && (
-        <span className="mt-2 text-sm text-yellow-500">
+        <span className="mt-2 inline text-sm text-yellow-500">
           {errors[nameInput].message}
         </span>
       )}
+      </div>
 
       <br />
     </div>

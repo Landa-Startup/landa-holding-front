@@ -71,12 +71,18 @@
     "KeyDifferentiatingFactors": [
       {
         "title": "عوامل متمایز کننده کلیدی :",
-        "text": "در ابتدا و قبل از هر چیز، مهم است که درک کنید که مهمترین جنبه، مدل ذهنی و دیدگاه پشت عوامل تفاوت‌آفرین کلیدی است. رویکرد و نگرش ما نسبت به یک کسب و کار می‌تواند نقاط مختلف تمایزی ایجاد کند. آنچه ما را متمایز می‌کند: اسکرینینگ و تحلیل تخصصی استارتاپ‌ها: ما در زمینه اسکرینینگ و تحلیل استارتاپ‌ها تخصص داریم و فرصت‌هایی برای یادگیری اعضا ایجاد می‌کنیم. اعضا به‌صورت مستقیم سرمایه گذاری می‌کنند: اعضا به‌صورت مستقیم در استارتاپ‌های انتخابی خود سرمایه گذاری می‌کنند و محیطی را ایجاد می‌کنند که هیچ عضوی احساس فشار برای سرمایه گذاری نمی‌کند و هیچ کس از فرصت‌های سرمایه گذاری بی‌استفاده نمی‌ماند. تمرکز بر برقراری ارتباطات سرمایه گذاری: رویکرد اصلی ما بر برقراری ارتباطات میان اعضاست که شامل فعالیت‌های خیریه نه‌تنها بلکه فعالیت‌های بسیار آموزشی و رویدادهای اجتماعی متنوع نیز می‌شود. ارزش‌گذاری مشارکت‌های مالی حامیان: ما ارزش زیادی را بر مشارکت‌های مالی حامیان قائل هستیم. نظرات و راهنمایی‌های آن‌ها به تمامی جنبه‌های عملیات هلدینگ ارتباط دارد. ساختار شامل: ساختار ما فرصتی برای برخورد کارآفرینان با سرمایه گذاران معتبر را فراهم می‌کند که قادرند در سطح استارتاپ‌ها سرمایه گذاری کنند. همکاری با مراکز سرمایه گذاری دیگر: ما از همکاری با دیگر مراکز سرمایه گذاری و جوامع سرمایه گذاری استقبال می‌کنیم. کارآفرینانی که به دنبال سرمایه از گروه‌های سرمایه گذاری مختلف هستند از این همکاری بهره‌مند می‌شوند.",
         "reverse": true,
         "show": true,
         "index": 2,
         "addedClass": ""
       }
-    ]  
-  
+    ],
+    "itemList": [
+      "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other.",
+      "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities.",
+      "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events.",
+      "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
+      "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
+      "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
+     ]
   }
