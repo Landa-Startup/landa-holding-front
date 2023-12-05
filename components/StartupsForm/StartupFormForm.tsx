@@ -158,9 +158,9 @@ export default function StartupFormForm(
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">   
     <div>
-    <div className="text-center pt-20 bg-[#222] container m-10 px-5 lg:p-2 mx-auto">   
-      <p className="font-serif text-3xl pb-3 pt-0 tracking-wide md:pt-0 md:text-5xl lg:text-6xl lg:pt-10  xl:text-7xl text-white sm:mt-0 ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
-      <p className="lg:font-serif text-2xl pt-0 pb-10 tracking-wide text-white md:pt-0 md:pb-10 lg:pb-10 ">{lang === "en" ? "Your Project" : "پروژه شما"}</p>
+    <div className="container m-10 mx-auto bg-[#222] px-5 pt-20 text-center lg:p-2">   
+      <p className="pb-3 pt-0 font-serif text-3xl tracking-wide text-white sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
+      <p className="pb-10 pt-0 text-2xl tracking-wide text-white md:pb-10 md:pt-0 lg:pb-10 lg:font-serif ">{lang === "en" ? "Your Project" : "پروژه شما"}</p>
     </div>
       <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         {/* <StartupFormTitle /> */}
@@ -181,7 +181,7 @@ export default function StartupFormForm(
           <div className="col-span-2">
           <div className="col-span-2">
           <div className="bg-[#222222CC]">
-            <p className="text-xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] md:text-3xl lg:w-[450px] xl:w-[650px] lg:text-3xl border-b ">
+            <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
               {lang === "en" ? "Growth and Scale-up" : "رشد و افزایش مقیاس"}
             </p>
             <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
@@ -194,7 +194,7 @@ export default function StartupFormForm(
             nameInput='statusSelect'
             label={lang === "en" ? 'Select Your Status: ' : 'وضعیت خود را انتخاب کنید: '}
             required={lang === "en" ? 'Your Status is Required' : 'وضعیت شما الزامی است'}
-            className='select select-bordered w-full max-w-xs mt-4'
+            className='select select-bordered mt-4 w-full max-w-xs'
             labelClass='text-[#6b6b6b] dark:text-current'
             placeholder={lang === "en" ? 'Select Your Status: ' : 'وضعیت خود را انتخاب کنید: '}
             options={typesData}

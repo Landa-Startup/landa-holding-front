@@ -1,13 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { items } from '../../app/[lang]/statics'
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
 
 
 export default async function HomeOurTeam(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "mainPage")
@@ -23,14 +22,14 @@ export default async function HomeOurTeam(
           {t('OurTeam')}
           <br />
         </span>
-        <p className={`mt-8 ${t('lng') === "en" ? "" : "text-xl"}`}>
+        <p className={`mt-8 rtl: ltr:text-xl`}>
           {t('ourTeamText')}
         </p>
       </div>
 
       {/* <div className="flex flex-col lg">
       </div> */}
-     
+
       <Image
         loading="lazy"
         width={789}

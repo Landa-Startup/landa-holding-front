@@ -25,7 +25,9 @@ export default function HomeCardsRight({
       <div className="flex space-x-7">
         {images.map((image, index) => (
           <div
-            className={`relative mt-5 hidden h-96 w-64 ${lang === "en" ? "last:mt-14" : "last:mt-[5.25rem]"} md:block md:first:mt-44 lg:mb-0`}
+            className={`relative mt-5 hidden h-96 w-64 ${
+              lang === 'en' ? 'last:mt-14' : 'last:mt-[5.25rem]'
+            } md:block md:first:mt-44 lg:mb-0`}
             key={index}
           >
             <Image

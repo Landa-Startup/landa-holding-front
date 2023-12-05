@@ -62,18 +62,18 @@ export default function Button({
     <Link href={goto || '/'} className={addedClass}>
       <button
         className={`btn2 rounded-[4px] ${isVisitSize
-            ? 'w-[135px] md:w-[219px] h-[32px] md:h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 mt-10'
-            : 'hidden md:flex h-11 pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px]'
+            ? 'mt-10 h-[32px] w-[135px] pb-4 pl-[72px] pr-[71px] pt-[15px] md:h-[60px] md:w-[219px]'
+            : 'mt-[19px] hidden h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:flex'
           } ${bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
-          } px-10 py-5 relative tracking-wider leading-none overflow-hidden inset-0 flex justify-center items-center text-center font-condensed text-white text-base font-normal hover:text-white ${addedClass}`}
+          } relative inset-0 flex items-center justify-center overflow-hidden px-10 py-5 text-center font-condensed text-base font-normal leading-none tracking-wider text-white hover:text-white ${addedClass}`}
         type={type}
       >
         <span className="absolute inset-0 bg-black"></span>
-        <span className="absolute inset-0 flex justify-center items-center text-center font-barlow text-white text-lg leading-none">
+        <span className="absolute inset-0 flex items-center justify-center text-center font-barlow text-lg leading-none text-white">
           {text ? text : `${isVisitSize ? "" : `${send ? `${lang === "en" ? 'Submitting ....' : 'در حال ثبت'}` : `${lang === "en" ? 'Submit' : 'ثبت'}`}`}`}
         </span>
         {isVisitSize && !text && (
-          <span className="absolute inset-0 flex justify-center items-center text-center font-barlow text-white text-lg leading-none">
+          <span className="absolute inset-0 flex items-center justify-center text-center font-barlow text-lg leading-none text-white">
             {lang === "en" ? "Visit Now" : "مشاهده کنید"}
           </span>
         )}

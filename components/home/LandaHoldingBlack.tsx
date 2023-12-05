@@ -6,13 +6,13 @@ import UlList from '../List/UlList';
 import { useTranslation } from 'app/i18n';
 
 export default async function LandaHoldingBlack(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
   const { t } = await useTranslation(lang, "mainPage")
 
   const L1EN = ['Global investment opportunities within your reach.', 'Access to a network of successful entrepreneurs and investors.', 'Exclusive insights and expert analysis for informed decisions.', 'Collaborative environment for joint ventures and partnerships.', 'Accelerated growth potential through diversified investments.']
-  const L2EN = ['Global networking opportunities for collaboration and partnerships', 'Access to all videos of pitches, industry trend presentations and panel discussions.', 'Attending events of the entrepreneurs center', 'Meetings with top business leaders and entrepreneurs', 'Participation in seasonal meetings with other international entrepreneurs .' , 'Online platform for connecting with other entrepreneurs']
-  
+  const L2EN = ['Global networking opportunities for collaboration and partnerships', 'Access to all videos of pitches, industry trend presentations and panel discussions.', 'Attending events of the entrepreneurs center', 'Meetings with top business leaders and entrepreneurs', 'Participation in seasonal meetings with other international entrepreneurs .', 'Online platform for connecting with other entrepreneurs']
+
   const L1FA = ["فرصت های سرمایه گذاری جهانی در دسترس شماست", "دسترسی به شبکه ای از کارآفرینان و سرمایه گذاران موفق", "بینش انحصاری و تجزیه و تحلیل تخصصی برای تصمیم گیری آگاهانه", "محیط همکاری برای سرمایه گذاری مشترک و مشارکت", "پتانسیل رشد سریع از طریق سرمایه گذاری های متنوع"]
   const L2FA = ["فرصت های شبکه جهانی برای همکاری و مشارکت", "دسترسی به تمام ویدئوهای مربوط به زمین، ارائه روند صنعت و بحث های پنل", "حضور در رویدادهای مرکز کارآفرینان", "جلسات با رهبران برتر کسب و کار و کارآفرینان", "شرکت در جلسات فصلی با سایر کارآفرینان بین المللی", "پلتفرم آنلاین برای ارتباط با سایر کارآفرینان"]
 
@@ -22,10 +22,10 @@ export default async function LandaHoldingBlack(
       <div className="flex flex-col justify-around space-y-6 pt-8">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
+            <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
               {t('LandaHolding')}
             </span>
-            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+            <span className="font-gilda w-[340px] border-b border-black pb-3 text-center text-4xl font-normal text-black md:border-none md:text-start">
               {t('InvestorCenter')}
               <br />
             </span>
@@ -33,13 +33,13 @@ export default async function LandaHoldingBlack(
         </div>
 
         <UlList
-          list={t('lng') === "en" ? L1EN : L1FA} 
+          list={t('lng') === "en" ? L1EN : L1FA}
           style1='w-[320px] md:w-[454px] pr-6'
           style2='space-y-2 mr-8 mt-4'
           style3='leading-4 md:leading-10 text-md'
         />
 
-        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
+        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 rtl: ltr:flex-row-reverse group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/investor-registration'}>
             <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}
@@ -59,7 +59,7 @@ export default async function LandaHoldingBlack(
       <div className="z-10 flex flex-col justify-around space-y-6 pt-8">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
+            <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
               {t('LandaHolding')}
               <br />
             </span>
@@ -71,12 +71,12 @@ export default async function LandaHoldingBlack(
         </div>
 
         <UlList
-          list={t('lng') === "en" ? L2EN : L2FA}  
-          style1={`w-[320px] md:w-[500px] ${t('lng') === "en" ? "pr-6" : "pl-6"}`}
+          list={t('lng') === "en" ? L2EN : L2FA}
+          style1={`w-[320px] md:w-[500px] rtl:pr-6 ltr:pl-6`}
           style2='space-y-2 mr-8 md:mr-0'
           style3='leading-4 md:leading-10 text-md'
         />
-        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 ${t('lng') === "en" ? "" : "flex-row-reverse"} group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
+        <button className={`relative mt-10 inline-flex items-center justify-center gap-4 rtl: ltr:flex-row-reverse group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/entrepreneurs'}>
             <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}

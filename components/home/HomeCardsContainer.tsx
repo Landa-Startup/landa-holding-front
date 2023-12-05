@@ -19,7 +19,6 @@ export default async function HomeCardsContainer(
         title,
         text,
         reverse,
-        show,
         index,
         link,
         addedClass,

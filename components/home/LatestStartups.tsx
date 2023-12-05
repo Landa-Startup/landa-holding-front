@@ -4,7 +4,7 @@ import { cardData3 } from '../../app/[lang]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function LatestStartups(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "mainPage");
@@ -17,7 +17,7 @@ export default async function LatestStartups(
             <div className={`text-sm font-normal text-neutral-800 md:text-base ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0 text-xl"} ps-1 font-condensed`}>
               {t('LandaHolding')}
             </div>
-            <div className={`text-4xl font-normal text-primary md:text-[44px] ${t('lng') === "en" ? "tracking-[3.5px] md:tracking-[5.60px]" : "tracking-0 md:tracking-0"} font-condensed md:mt-3`}>
+            <div className={`text-primary ltr:tracking-0 md:tracking-0 font-condensed text-4xl font-normal rtl:tracking-[3.5px] md:mt-3 md:text-[44px] md:tracking-[5.60px]`}>
               {t('LatestStartups')}
             </div>
           </div>
