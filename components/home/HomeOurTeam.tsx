@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { items } from '../../app/[lang]/statics'
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
 

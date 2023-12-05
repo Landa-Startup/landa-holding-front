@@ -152,8 +152,8 @@ export default function Partners(
   };
 
   return (
-    <div className="flex flex-col items-center my-6 gap-12">
-      <span className="text-3xl md:text-4xl text-primary">
+    <div className="my-6 flex flex-col items-center gap-12">
+      <span className="text-3xl text-primary md:text-4xl">
         Join Our Business Affiliates
       </span>
       <div
@@ -163,7 +163,7 @@ export default function Partners(
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        className="overflow-x-scroll md:overflow-x-hidden gap-12 grid grid-flow-col w-[calc(100%-2%)] cursor-pointer"
+        className="grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden"
       >
         {logos.map((logo) => (
           <PartnersStartupCard
