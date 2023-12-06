@@ -17,7 +17,7 @@ export default async function LandaHoldingBlack(
   const L2FA = ["فرصت های شبکه جهانی برای همکاری و مشارکت", "دسترسی به تمام ویدئوهای مربوط به زمین، ارائه روند صنعت و بحث های پنل", "حضور در رویدادهای مرکز کارآفرینان", "جلسات با رهبران برتر کسب و کار و کارآفرینان", "شرکت در جلسات فصلی با سایر کارآفرینان بین المللی", "پلتفرم آنلاین برای ارتباط با سایر کارآفرینان"]
 
   return (
-    <div className={`flex flex-col justify-evenly md:flex-row md:justify-between ltr:md:pl-36 ltr:md:pr-20 rtl:md:pl-36 rtl:md:pr-20 relative items-center space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:py-10`}>
+    <div className={`flex flex-col justify-evenly md:flex-row md:justify-between ${t('lng') === "en" ? "md:pl-36 md:pr-20" : "md:pl-20 md:pr-40"} relative items-center space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:py-10`}>
       <Lines />
       <div className="flex flex-col justify-around space-y-6 pt-8 rtl:mr-4 z-10">
         <div className="flex flex-col items-center self-start md:items-start">
