@@ -21,7 +21,7 @@ export default async function KeyDifferentiating(
         <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">
           {t('KeyDifferentiatingFactors', {returnObjects: true})[0].title}
         </span>
-        <div className="gap-2 font-barlow leading-6 text-black md:w-[350px] lg:w-[450px] xl:w-[550px]">
+        <div className="gap-2 font-barlow leading-9 text-black md:w-[350px] lg:w-[450px] xl:w-[550px]">
           <p>
             {t('KeyDifferentiatingFactors', {returnObjects: true})[0].titleText}
           </p>

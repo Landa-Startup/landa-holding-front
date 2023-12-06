@@ -1,11 +1,10 @@
 import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
-import Image from 'next/image';
 import { cardData1 } from '../../app/[lang]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function LandaHoldingPriority(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "mainPage");

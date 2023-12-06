@@ -1,11 +1,11 @@
 import React from 'react';
-// import AboutUsProfileCard from './AboutUsProfileCard';
 import AboutusPersonalTabs from './AboutusPersonalTabs';
+// TODO: import from i18n instead of statics
 import { cardsDataFA, cardsDataEN } from '../../app/[lang]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function AboutUsProfile(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "aboutUs");

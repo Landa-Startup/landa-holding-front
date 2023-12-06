@@ -1,9 +1,7 @@
 'use client';
-// import { useRouter } from 'next/navigation';
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSubmit } from '../../providers/StateProvider';
-import Link from 'next/link';
 
 // Define the ButtonProps type
 // go to prop causes a redirext
@@ -29,7 +27,6 @@ export default function Button({
   bgColor,
   goto,
   lang,
-  addedClass
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';

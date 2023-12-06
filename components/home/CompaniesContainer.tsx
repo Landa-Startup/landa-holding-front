@@ -1,5 +1,6 @@
 import React from 'react';
 import CompaniesCard from './CompaniesCard';
+// TODO: read companies from i18n instead of statics
 import { companies } from '../../app/[lang]/statics';
 
 export default function CompaniesContainer() {

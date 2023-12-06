@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Button from '../common/Button';
+// import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
+import Button from '../common/Button';
 
 
 export default async function HomeOurTeam(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "mainPage")
@@ -19,7 +20,7 @@ export default async function HomeOurTeam(
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "p-4 tracking-normal"} font-condensed text-black`}>
+        <span className={`text-5xl mr-20 font-normal rtl:tracking-widest ltr:p-4 tracking-normal font-condensed text-black xl:mr-0`}>
           {t('OurTeam')}
           <br />
         </span>

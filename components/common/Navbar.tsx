@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
+import CaretDown from '../icons/CaretDown';
 
 export default function Navbar({ children, menuItems, submenuItems, lang }: { children: React.ReactNode, menuItems: any, submenuItems: any, lang: string }) {
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -27,6 +28,20 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
   //   { label: 'APPLY JOB', href: '/job-form' },
   //   { label: 'acceleration', href: '/acceleration' },
   // ];
+  // const menuItems = [
+  //   { label: 'HOME', href: '/' },
+  //   { label: 'ABOUT US', href: '/about' },
+  //   { label: 'CONTACT US', href: '/contact' },
+  //   { label: 'OUR TEAM', href: '/our-team' },
+  // ];
+  // const submenuItems = [
+  //   { label: 'INVESTOR CENTER', href: '/investor-registration' },
+  //   { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
+  //   { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
+  //   { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
+  //   { label: 'APPLY JOB', href: '/job-form' },
+  //   { label: 'acceleration', href: '/acceleration' },
+  // ];
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
@@ -36,7 +51,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
     drawerRef.current.click();
   };
   return (
-    <div className="drawer top-0">
+    <div className="drawer top-0 ">
       <input
         id="my-drawer-3"
         type="checkbox"
@@ -45,12 +60,13 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full items-center ltr:flex-row-reverse md:ltr:flex-row justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
+        <div className="navbar fixed flex w-full flex-row items-center ltr:flex-row-reverse md:ltr:flex-row justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
           <div className="mt-3 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
             >
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -64,9 +80,10 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>
+              
             </label>
           </div>
-          <div className="m-2 flex h-full items-center justify-start px-2 text-left">
+          <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
               <div className="flex flex-col items-end md:flex-row">
                 <Image
@@ -80,8 +97,10 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
                   {lang == "en" ? "LANDA" : "لاندا"}
                 </span>
               </div>
+              
             </Link>
           </div>
+        
           <div className="ml-32 hidden justify-start xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold ">
               {menuItems.map(({label, href} : {label: string, href: string}) => (
@@ -122,6 +141,15 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
               </li>
             </ul>
           </div>
+          <div className="  ">
+            <Image
+              alt="us"
+              src={'/static/images/usFlag.png'}
+              width={45}
+              height={34}
+            />
+            <CaretDown />
+        </div>     
         </div>
         <div className="children">{children}</div>
       </div>

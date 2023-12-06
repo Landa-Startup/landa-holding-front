@@ -298,10 +298,10 @@ const personsEN:personArrayInterface[] = [
     },
     {
       image: '/static/images/our-team/Personals/a3.png',
-      position: 'Secretary',
+      position: 'manager assistant',
       name: 'Lida Parvizi',
       linkedIn: '',
-      category: 'secretary'
+      category: 'manager assistant'
     },
     {
       image: '/static/images/our-team/Personals/a4.png',
@@ -532,7 +532,7 @@ const personsFA:personArrayInterface[] = [
     {
       image: '/static/images/our-team/Personals/a10.png',
       position: 'مدیر',
-      name: 'مهرنوش حیبتی',
+      name: 'مهرنوش هیبتی',
       linkedIn: '',
       category: 'مدیران'
     },
@@ -545,10 +545,10 @@ const personsFA:personArrayInterface[] = [
     },
     {
       image: '/static/images/our-team/Personals/a3.png',
-      position: 'منشی',
+      position: 'دستیار مدیر',
       name: 'لیدا پرویزی',
       linkedIn: '',
-      category: 'منشی'
+      category: 'دستیار مدیر'
     },
     {
       image: '/static/images/our-team/Personals/a4.png',
@@ -587,7 +587,7 @@ const personsFA:personArrayInterface[] = [
     },
     {
       image: '/static/images/our-team/Personals/a8.png',
-      position: 'تمام وقت',
+      position: 'فول استک',
       name: 'امین اصغریان',
       linkedIn: '',
       category: 'برنامه نویسان'
@@ -609,20 +609,13 @@ const personsFA:personArrayInterface[] = [
     {
       image: '/static/images/our-team/Personals/a14.png',
       position: 'طراح تجربه کاربری',
-      name: 'آرشیا نصیری',
+      name: 'ارشیا نصیری',
       linkedIn: '',
       category: 'طراحان'
     },
     {
-      image: '/static/images/our-team/Personals/a15.png',
-      position: 'جونیور بک اند',
-      name: 'فاطمه صافی',
-      linkedIn: '',
-      category: 'برنامه نویسان'
-    },
-    {
       image: '/static/images/our-team/Personals/a16.png',
-      position: 'تمام وقت',
+      position: 'فول استک',
       name: 'سبحان امامی',
       linkedIn: '',
       category: 'برنامه نویسان'
@@ -663,25 +656,11 @@ const personsFA:personArrayInterface[] = [
       category: 'طراحان'
     },
     {
-      image: '/static/images/our-team/Personals/a22.png',
-      position: 'طراح گرافیک',
-      name: 'ایناز رئیسی',
-      linkedIn: '',
-      category: 'طراحان'
-    },
-    {
       image: '/static/images/our-team/Personals/a23.png',
       position: 'تولید کننده محتوا',
       name: 'مهتاب حافظی',
       linkedIn: '',
       category: 'تولید کننده محتوا'
-    },
-    {
-      image: '/static/images/our-team/Personals/a24.png',
-      position: 'طراح رابط کاربری',
-      name: 'صبا مختاری',
-      linkedIn: '',
-      category: 'برنامه نویسان'
     },
     {
       image: '/static/images/our-team/Personals/a25.png',
@@ -691,16 +670,9 @@ const personsFA:personArrayInterface[] = [
       category: 'تولید کننده محتوا'
     },
     {
-      image: '/static/images/our-team/Personals/a26.png',
-      position: 'توسعه دهنده وردپرس',
-      name: 'روحام عربلو',
-      linkedIn: '',
-      category: 'برنامه نویسان'
-    },
-    {
       image: '/static/images/our-team/Personals/a27.png',
-      position: 'تمام وقت',
-      name: 'مراج بیغمیان',
+      position: 'فول استک',
+      name: 'معراج بیغمیان',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
@@ -708,13 +680,6 @@ const personsFA:personArrayInterface[] = [
       image: '/static/images/our-team/Personals/a28.png',
       position: 'فرانت اند',
       name: 'مهدی سلمان زاده',
-      linkedIn: '',
-      category: 'برنامه نویسان'
-    },
-    {
-      image: '/static/images/our-team/Personals/a29.png',
-      position: 'فرانت اند',
-      name: 'ماهرخ لطفی',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
@@ -728,14 +693,14 @@ const personsFA:personArrayInterface[] = [
     {
       image: '/static/images/our-team/Personals/a31.png',
       position: 'فرانت اند',
-      name: 'براد دهقانی',
+      name: 'باراد دهقانی',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
     {
       image: '/static/images/our-team/Personals/a32.png',
       position: 'فرانت اند',
-      name: 'متین جنگوربانی',
+      name: 'متین جان قربانی',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
@@ -781,7 +746,7 @@ const rolesFA: Array<string> = [
   'حسابدار',
   'روابط عمومی',
   'بازاریاب دیجیتال',
-  'منشی'
+  'دستیار مدیر'
 ];
 
 

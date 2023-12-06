@@ -46,10 +46,10 @@ export default async function ContactUsDescription(
         </Link>
       </div>
 
-      <div className={`mt-10 flex flex-col gap-1`}>
+      <div className={`mt-10 flex flex-col gap-4`}>
         <div className="flex gap-5">
           <Phone />
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-5">
             <span className="font-semibold">{t('phone')}</span>
             <ul className="gap-1">
               {/* TODO: create component for below icons */}

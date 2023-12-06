@@ -75,11 +75,11 @@
       "addedClass": "",
             "images": [
         {
-          "src": "/static/images/Home main/1.jpg",
+          "src": "/static/images/Home main/5.jpg",
           "alt": ""
         },
         {
-          "src": "/static/images/Home main/2.jpg",
+          "src": "/static/images/Home main/6.jpg",
           "alt": ""
         }
       ]
@@ -108,7 +108,7 @@
       },
       {
       "number": 7,
-      "title": "ASIAHITECH",
+      "title": "آسیاتک",
       "description": "از سال 1397 برای سرمایه گذاری در استارت آپ ها با آن همکاری کرده است.",
       "alt": "ASIAHITECH"
       },

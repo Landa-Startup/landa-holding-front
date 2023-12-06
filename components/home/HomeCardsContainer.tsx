@@ -10,6 +10,7 @@ export default async function HomeCardsContainer(
 ) {
 
   const { t } = await useTranslation(lang, "mainPage")
+  console.log("lang: ", dir(lang))
   // Define data for the text card containers
 
   return (

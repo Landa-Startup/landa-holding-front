@@ -24,7 +24,7 @@ export default function AboutusPersonalTabs({
   instagram: string;
 }) {
   return (
-    <div className="relative flex h-[300px] w-[300px] flex-col rounded-sm border border-primary md:ml-12 md:w-[270px] lg:mt-20">
+    <div className="w-[300px] md:w-[400px] h-[500px] rounded-sm flex flex-col justify-between mb-5 md:mb-20 relative">
       <Image
         className="object-cover"
         src={image}
@@ -32,7 +32,7 @@ export default function AboutusPersonalTabs({
         layout="fill"
         quality={90}
       />
-      <div className="z-10 ml-2 mt-2 flex flex-col gap-2">
+      <div className="z-10 ml-2 mt-2 flex flex-col gap-2 mr-4">
         <div>
           <Link href={linkedIn} target="_blank">
             <IconLinkedin />
@@ -56,8 +56,8 @@ export default function AboutusPersonalTabs({
         </div>
       </div>
       <div className="lg:mt44 mt-40 flex flex-col items-center px-4 pb-4  ">
-        <span className="text-lg font-normal text-black">{name}</span>
-        <div className="flex w-full items-center justify-center font-light  ">
+        <span className="font-gilda text-lg font-normal text-black">{name}</span>
+        <div className="flex w-full items-center justify-center font-barlow font-light">
           <span className="border-t-3 font-light ">{position}</span>
         </div>
       </div>

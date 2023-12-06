@@ -83,26 +83,23 @@ export default function Hero({
     >
       <div className="flex flex-col items-center justify-center space-y-7 py-36 md:h-screen md:space-y-8">
         <div
-          className={` ${
-            showLanda ? 'block' : 'hidden'
-          } text-center font-barlow text-3xl font-bold text-white md:text-4xl ${lang === "en" ? "tracking-[7px] md:tracking-[12.6px]" : "tracking-1 md:tracking-[2px]"}`}
+          className={` ${showLanda ? 'block' : 'hidden'
+            } text-center font-barlow text-3xl font-bold text-white md:text-4xl ltr:tracking-[12.6px]`}
         >
           {title}
         </div>
         <div
-          className={`${
-            notArray ? "text-center font-gilda text-5xl text-black md:text-right md:text-7xl" : "text-center font-gilda text-5xl font-normal ltr:tracking-[6.4px] text-neutral-50 text-opacity-95 md:text-right md:text-7xl"
-          } ${
-            isTitleChanging
+          className={`${notArray ? "text-center font-gilda text-5xl text-black md:text-right md:text-7xl" : "text-center font-gilda text-5xl font-normal ltr:tracking-[6.4px] text-neutral-50 text-opacity-95 md:text-right md:text-7xl"
+            } ${isTitleChanging
               ? 'zoom-in-animation title-transition transition-opacity duration-[2500]'
               : ''
-          }`}
+            }`}
           style={{ opacity: isTitleChanging ? 0 : 1 }} // Set opacity based on isTitleChanging
         >
           {currentTitle}
         </div>
 
-        <div className={`text-center font-mono text-3xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ${lang === "en" ? "tracking-[4px]" : "tracking-0"}`}>
+        <div className={`text-center font-barlow text-3xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ltr:tracking-[4px]`}>
           {subTitle ? subTitle : ""}
         </div>
         {showButton ? (

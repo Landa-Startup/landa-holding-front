@@ -7,7 +7,7 @@ import LinkedIn from '../icons/footer/LinkedIn';
 import { useTranslation } from 'app/i18n';
 
 export default async function Footer(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "footer")
@@ -17,11 +17,11 @@ export default async function Footer(
     return currentYear;
   }
   return (
-    <div className="flex flex-col bg-neutral-800 p-8 font-barlow" dir={t('dir')}>
+    <div className="flex flex-col bg-neutral-800 p-8 font-barlow">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:gap-4 md:p-20">
         <div className="mt-5 flex flex-col md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-white">
-            {t('about', {returnObjects: true}).title}
+            {t('about', { returnObjects: true }).title}
             <br />
           </div>
           <div className={`mt-1 text-base font-normal  text-neutral-400`}>
@@ -66,7 +66,7 @@ export default async function Footer(
         </div>
         <div className="col-span-1 flex flex-col space-y-1 md:mr-10">
           <div className="text-justify text-xl font-medium text-white">
-            {t('explore', {returnObjects: true}).title}
+            {t('explore', { returnObjects: true }).title}
             <br />
           </div>
           <div className="flex flex-col space-y-1">
@@ -74,76 +74,76 @@ export default async function Footer(
               href={'/'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('explore', {returnObjects: true}).text.home}
+              {t('explore', { returnObjects: true }).text.home}
             </Link>
             <Link
               href={'/about'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('explore', {returnObjects: true}).text.about}
+              {t('explore', { returnObjects: true }).text.about}
             </Link>
             <Link
               href={'/contact'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('explore', {returnObjects: true}).text.contact}
+              {t('explore', { returnObjects: true }).text.contact}
             </Link>
             <Link
               href={'/our-team'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('explore', {returnObjects: true}).text.ourTeam}
+              {t('explore', { returnObjects: true }).text.ourTeam}
             </Link>
           </div>
         </div>
         <div className="col-span-1 flex flex-col space-y-1">
-          <div className="text-xl font-medium text-white">{t('forms', {returnObjects: true}).title}</div>
+          <div className="text-xl font-medium text-white">{t('forms', { returnObjects: true }).title}</div>
           <div className="inline-flex flex-col items-start justify-start self-stretch">
             <Link
               href={'/StartupsForm'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('forms', {returnObjects: true}).text.startUp}
+              {t('forms', { returnObjects: true }).text.startUp}
             </Link>
             <Link
               href={'/investor-registration'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('forms', {returnObjects: true}).text.investor}
+              {t('forms', { returnObjects: true }).text.investor}
             </Link>
             <Link
               href={'/entrepreneurs'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('forms', {returnObjects: true}).text.entrepreneur}
+              {t('forms', { returnObjects: true }).text.entrepreneur}
             </Link>
             <Link
               href={'/partner-membership'}
               className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
             >
-              {t('forms', {returnObjects: true}).text.partners}
+              {t('forms', { returnObjects: true }).text.partners}
             </Link>
           </div>
         </div>
         <div className="col-span-1 flex flex-col space-y-1 md:ml-1 md:w-1/4">
           <div className="h-[30px] w-[93px]  text-xl font-medium text-white">
-            {t('contact', {returnObjects: true}).title}
+            {t('contact', { returnObjects: true }).title}
             <br />
           </div>
           <div className="text-justify text-base font-normal text-neutral-400">
-            {t('contact', {returnObjects: true}).text.canada}
+            {t('contact', { returnObjects: true }).text.canada}
           </div>
           <div dir='ltr' className="text-justify text-base font-normal text-neutral-400">
             {t('contact', {returnObjects: true}).text.cNumber}
           </div>
           <div className="border-t border-t-white pt-1 text-justify text-base font-normal text-neutral-400">
-            {t('contact', {returnObjects: true}).text.tehran}
+            {t('contact', { returnObjects: true }).text.tehran}
           </div>
           <div dir='ltr' className="border-b border-b-white pb-1 text-justify text-base font-normal text-neutral-400">
             {t('contact', {returnObjects: true}).text.tNumber}
           </div>
           <div className="text-base font-normal text-neutral-400">
-            {t('contact', {returnObjects: true}).text.isfahan}
+            {t('contact', { returnObjects: true }).text.isfahan}
           </div>
           <div dir='ltr' className="text-base font-normal text-neutral-400">
             {t('contact', {returnObjects: true}).text.iNumber}
