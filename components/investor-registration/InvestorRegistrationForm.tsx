@@ -95,7 +95,7 @@ export default function InvestorRegistrationForm(
       <div className="container m-16 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         <InvestorRegistrationTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="my-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
 
             <PersonalInfoInput
               register={register}

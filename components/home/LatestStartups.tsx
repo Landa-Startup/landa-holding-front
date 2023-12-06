@@ -11,8 +11,9 @@ export default async function LatestStartups(
 
   return (
     <div dir={t('lng') === "en" ? "ltr" : "rtl"}>
-      <div className="bg-whiteGold flex flex-col items-center p-5 text-center">
-        <div className="flex-col items-start justify-start md:ml-44 md:self-start rtl:md:ml-40">
+      <div className="flex flex-col items-center bg-whiteGold p-5 text-center">
+        <div className='flex flex-col items-start'>
+        <div className="flex-col items-start justify-start md:self-start">
           <div className="flex flex-col items-center md:items-start">
             <div className={`ltr:tracking-0 md:tracking-0 font-condensed ps-1 text-xl font-normal text-neutral-800 ltr:tracking-[3.5px] md:text-base`}>
               {t('LandaHolding')}
@@ -35,6 +36,7 @@ export default async function LatestStartups(
               />
             ))}
           </div>
+        </div>
         </div>
       </div>
     </div>

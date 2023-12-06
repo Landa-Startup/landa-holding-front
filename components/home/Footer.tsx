@@ -24,8 +24,8 @@ export default async function Footer(
             {t('about', { returnObjects: true }).title}
             <br />
           </div>
-          <div className={`mt-1 text-base font-normal  text-neutral-400 ${lang === "en" ? "md:mr-10" : "md:ml-10"}`}>
-            {t('about', { returnObjects: true }).text}
+          <div className={`mt-1 text-base font-normal  text-neutral-400`}>
+            {t('about', {returnObjects: true}).text}
             <br />
           </div>
           <div className="mt-2 flex h-[22px] w-[126px] flex-row items-center justify-between text-white">
@@ -133,20 +133,20 @@ export default async function Footer(
           <div className="text-justify text-base font-normal text-neutral-400">
             {t('contact', { returnObjects: true }).text.canada}
           </div>
-          <div className="text-justify text-base font-normal text-neutral-400">
-            {t('contact', { returnObjects: true }).text.cNumber}
+          <div dir='ltr' className="text-justify text-base font-normal text-neutral-400">
+            {t('contact', {returnObjects: true}).text.cNumber}
           </div>
           <div className="border-t border-t-white pt-1 text-justify text-base font-normal text-neutral-400">
             {t('contact', { returnObjects: true }).text.tehran}
           </div>
-          <div className="border-b border-b-white pb-1 text-justify text-base font-normal text-neutral-400">
-            {t('contact', { returnObjects: true }).text.tNumber}
+          <div dir='ltr' className="border-b border-b-white pb-1 text-justify text-base font-normal text-neutral-400">
+            {t('contact', {returnObjects: true}).text.tNumber}
           </div>
           <div className="text-base font-normal text-neutral-400">
             {t('contact', { returnObjects: true }).text.isfahan}
           </div>
-          <div className="text-base font-normal text-neutral-400">
-            {t('contact', { returnObjects: true }).text.tNumber}
+          <div dir='ltr' className="text-base font-normal text-neutral-400">
+            {t('contact', {returnObjects: true}).text.iNumber}
           </div>
         </div>
       </div>

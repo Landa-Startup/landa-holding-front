@@ -11,12 +11,13 @@ export default async function LandaHoldingPriority(
 
   return (
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
-      <div className="ml-5 flex flex-col items-center lg:self-start xl:ml-40 rtl:xl:mr-40">
-        <span className={`text-base font-normal text-black ltr:tracking-[5.60px] ltr:text-xl font-condensed`}>
+      <div className='felx flex-col items-start'>
+      <div className="mb-4 flex flex-col items-start ml-4">
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl font-normal ltr:tracking-normal lg:mr-8 font-condensed text-black`}>
+        <span className={`text-5xl font-normal ${t('lng') === "en" ? "tracking-widest" : "tracking-normal"} font-condensed text-black`}>
           {t('Priorities')}
         </span>
       </div>
@@ -30,6 +31,7 @@ export default async function LandaHoldingPriority(
             />
           ))}
         </div>
+      </div>
       </div>
     </div>
   );

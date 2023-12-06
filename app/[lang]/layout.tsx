@@ -23,7 +23,7 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <Navbar menuItems={t('menuItems', { returnObjects: true })} submenuItems={t('submenuItems', { returnObjects: true })}>
+        <Navbar lang={lang} menuItems={t('menuItems', { returnObjects: true })} submenuItems={t('submenuItems', { returnObjects: true })}>
           <main>
             {children}
           </main>

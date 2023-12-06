@@ -62,7 +62,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
           addedClass='md:h-[756px] mt-6 md:mt-16 pb-3'
           title={t('FORUGHACCELERATOR', { returnObjects: true })[0].title}
           slogan={t('FORUGHACCELERATOR', { returnObjects: true })[0].subTitle}
-          imageClass={`absolute rtl:right-7 ltr:left-7 top-11 w-[52px] h-[44px]`}
+          imageClass={`absolute rtl:right-7 ltr:left-7 top-11 w-[52px] h-[44px] flex flex-row`}
           imageSrc='/static/images/acceleration/Rectangle 2978.png'
           textUp={t('FORUGHACCELERATOR', { returnObjects: true })[0].textUp}
           textDown={t('FORUGHACCELERATOR', { returnObjects: true })[0].textDown}

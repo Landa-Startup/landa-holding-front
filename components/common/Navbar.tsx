@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
+import CaretDown from '../icons/CaretDown';
 
-export default function Navbar({ children, menuItems, submenuItems }: { children: React.ReactNode, menuItems: any, submenuItems: any }) {
+export default function Navbar({ children, menuItems, submenuItems, lang }: { children: React.ReactNode, menuItems: any, submenuItems: any, lang: string }) {
   const drawerRef = useRef<HTMLInputElement>(null);
   // const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +14,20 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
 
   // const { t } = await useTranslation(lang, "mainPage");
 
+  // const menuItems = [
+  //   { label: 'HOME', href: '/' },
+  //   { label: 'ABOUT US', href: '/about' },
+  //   { label: 'CONTACT US', href: '/contact' },
+  //   { label: 'OUR TEAM', href: '/our-team' },
+  // ];
+  // const submenuItems = [
+  //   { label: 'INVESTOR CENTER', href: '/investor-registration' },
+  //   { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
+  //   { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
+  //   { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
+  //   { label: 'APPLY JOB', href: '/job-form' },
+  //   { label: 'acceleration', href: '/acceleration' },
+  // ];
   // const menuItems = [
   //   { label: 'HOME', href: '/' },
   //   { label: 'ABOUT US', href: '/about' },
@@ -36,7 +51,7 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
     drawerRef.current.click();
   };
   return (
-    <div className="drawer top-0">
+    <div className="drawer top-0 ">
       <input
         id="my-drawer-3"
         type="checkbox"
@@ -45,12 +60,13 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full items-center justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
+        <div className="navbar fixed flex w-full flex-row items-center ltr:flex-row-reverse md:ltr:flex-row justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
           <div className="mt-3 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
             >
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -64,9 +80,10 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>
+              
             </label>
           </div>
-          <div className="m-2 flex h-full items-center justify-start px-2 text-left">
+          <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
               <div className="flex flex-col items-end md:flex-row">
                 <Image
@@ -77,17 +94,19 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
                   height={50}
                 />
                 <span className="text-[12px] font-bold tracking-[0.375px] text-primary md:text-xl">
-                  LANDA
+                  {lang == "en" ? "LANDA" : "لاندا"}
                 </span>
               </div>
+              
             </Link>
           </div>
+        
           <div className="ml-32 hidden justify-start xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold ">
-              {menuItems.map((item) => (
-                <li className="h-9 text-2xl" key={item.label}>
-                  <Link href={item.href} className="text-white hover:bg-white">
-                    {item.label}
+              {menuItems.map(({label, href} : {label: string, href: string}) => (
+                <li className="h-9 text-2xl" key={label}>
+                  <Link href={href} className="text-white hover:bg-white">
+                    {label}
                   </Link>
                 </li>
               ))}
@@ -97,23 +116,23 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
                     className="hover:white text-2xl hover:bg-white"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    FORMS
+                    {lang === "en" ? "FORMS" : "فرم ها"}
                   </summary>
                   <ul
                     className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
                       }`}
                   >
-                    {submenuItems.map((item) => (
+                    {submenuItems.map(({label, href}: {label: string, href: string}) => (
                       <li
                         className="max-h-fit text-xl"
-                        key={item.label}
+                        key={label}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <Link
-                          href={item.href}
+                          href={href}
                           className="border p-5 font-bold text-black hover:bg-base-200 hover:text-primary"
                         >
-                          {item.label}{' '}
+                          {label}{' '}
                         </Link>
                       </li>
                     ))}
@@ -122,20 +141,29 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
               </li>
             </ul>
           </div>
+          <div className="  ">
+            <Image
+              alt="us"
+              src={'/static/images/usFlag.png'}
+              width={45}
+              height={34}
+            />
+            <CaretDown />
+        </div>     
         </div>
         <div className="children">{children}</div>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu md:hidden absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
-          {menuItems.map((item) => (
+        <ul className="menu md:hidden absolute top-[72px] ltr:left-[110px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
+          {menuItems.map(({label, href} : {label: string, href: string}) => (
             <li
               className="font-condensed font-bold first:text-primary"
-              key={item.label}
+              key={label}
               onClick={() => handleLinkClick()}
             >
-              <Link href={item.href} className="">
-                {item.label}
+              <Link href={href} className="">
+                {label}
               </Link>
             </li>
           ))}
@@ -148,17 +176,17 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
             </div>
 
             <ul>
-              {submenuItems.map((item) => (
-                <li key={item.label} onClick={() => handleLinkClick()}>
-                  <Link href={item.href} className="font-condensed">
-                    {item.label}{' '}
+              {submenuItems.map(({label, href} : {label: string, href: string}) => (
+                <li key={label} onClick={() => handleLinkClick()}>
+                  <Link href={href} className="font-condensed">
+                    {label}{' '}
                   </Link>
                 </li>
               ))}
             </ul>
           </li>
         </ul>
-        <div className="md:hidden absolute bottom-0 flex h-10 w-80 items-center justify-between bg-[#222] px-10">
+        <div className="hidden absolute bottom-0 h-10 w-80 items-center justify-between bg-[#222] px-10">
           <Link
             href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
             target="_blank"

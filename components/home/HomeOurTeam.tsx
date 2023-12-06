@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 // import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
-import ArrowRight from '../icons/common/ArrowRight';
+import Button from '../common/Button';
 
 
 export default async function HomeOurTeam(
@@ -14,8 +14,9 @@ export default async function HomeOurTeam(
 
   return (
     <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
-      <div className={`rtl:ml-5 mr-10 xl:ml-28 ltr:mr-5 xl:mr-40 flex flex-col lg:self-start `}>
-        <span className={`font-normal mr-20 text-black ltr:tracking-[5.60px] font-condensed text-xl xl:mr-0 `}>
+      <div className='felx flex-col items-start gap-2'>
+      <div className={`${t('lng') === "en" ? "ml-5 mr-10 xl:ml-28" : "mr-5 xl:mr-40"} flex flex-col lg:self-start `}>
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
           {t('LandaHolding')}
           <br />
         </span>
@@ -23,7 +24,7 @@ export default async function HomeOurTeam(
           {t('OurTeam')}
           <br />
         </span>
-        <p className={`mt-8 rtl: ltr:text-xl font-barlow`}>
+        <p className={`mt-8 mb-4 ${t('lng') === "en" ? "" : "text-xl"}`}>
           {t('ourTeamText')}
         </p>
       </div>
@@ -31,6 +32,7 @@ export default async function HomeOurTeam(
       {/* <div className="flex flex-col lg">
       </div> */}
 
+      <div className='flex flex-col items-center'>
       <Image
         loading="lazy"
         width={789}
@@ -47,14 +49,18 @@ export default async function HomeOurTeam(
         className="object-cover md:hidden"
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
-      <Link href={t('lng') === "en" ? "/en/our-team" : "/fa/our-team"}>
-        <button className="flex items-center bg-[#AA8453] rounded-[4px] text-white md:mt-8  px-7 py-3 font-barlow">
-          <div>View More</div>
-          <div className="pl-2">
-            <ArrowRight />
-          </div>
-        </button>
+      </div>
+
+      </div>
+      <Link href={t('lng') === "en" ? "/en/our-team" : "/fa/our-team"} className='justify-center'>
+        <Button
+          type='button'
+          size='visit'
+          bgColor="Primary"
+          goto=''
+          lang={lang}
+        />
       </Link>
     </div>
   );
-    }
+}

@@ -15,8 +15,8 @@ export default function HomeCardsRight({
   return (
     <div className="flex flex-col self-start md:self-center">
       <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">
-        <div className="flex flex-col">
-          <span className="font-condensed text-3xl tracking-[11px]">LANDA</span>
+        <div className="flex flex-col rtl:flex-row-reverse gap-2">
+          <span className="font-condensed text-3xl ltr:tracking-[11px]">{lang === "en" ? "LANDA" : "لاندا"}</span>
           <span className="font-gilda text-4xl lrt:tracking-[6.5px] md:text-6xl">
             {titles}
           </span>
