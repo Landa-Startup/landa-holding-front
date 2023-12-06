@@ -299,10 +299,10 @@ const personsEN:
     },
     {
       image: '/static/images/our-team/Personals/a3.png',
-      position: 'Secretary',
+      position: 'manager assistant',
       name: 'Lida Parvizi',
       linkedIn: '',
-      category: 'secretary'
+      category: 'manager assistant'
     },
     {
       image: '/static/images/our-team/Personals/a4.png',
@@ -547,10 +547,10 @@ const personsFA:
     },
     {
       image: '/static/images/our-team/Personals/a3.png',
-      position: 'منشی',
+      position: 'دستیار مدیر',
       name: 'لیدا پرویزی',
       linkedIn: '',
-      category: 'منشی'
+      category: 'دستیار مدیر'
     },
     {
       image: '/static/images/our-team/Personals/a4.png',
@@ -582,14 +582,14 @@ const personsFA:
     },
     {
       image: '/static/images/our-team/Personals/a7.png',
-      position: 'تمام وقت',
+      position: 'فول استک',
       name: 'سجاد مومنی',
       linkedIn: '',
       category: 'مربیان'
     },
     {
       image: '/static/images/our-team/Personals/a8.png',
-      position: 'تمام وقت',
+      position: 'فول استک',
       name: 'امین اصغریان',
       linkedIn: '',
       category: 'برنامه نویسان'
@@ -616,15 +616,8 @@ const personsFA:
       category: 'طراحان'
     },
     {
-      image: '/static/images/our-team/Personals/a15.png',
-      position: 'جونیور بک اند',
-      name: 'فاطمه صافی',
-      linkedIn: '',
-      category: 'برنامه نویسان'
-    },
-    {
       image: '/static/images/our-team/Personals/a16.png',
-      position: 'تمام وقت',
+      position: 'فول استک',
       name: 'سبحان امامی',
       linkedIn: '',
       category: 'برنامه نویسان'
@@ -665,25 +658,11 @@ const personsFA:
       category: 'طراحان'
     },
     {
-      image: '/static/images/our-team/Personals/a22.png',
-      position: 'طراح گرافیک',
-      name: 'ایناز رئیسی',
-      linkedIn: '',
-      category: 'طراحان'
-    },
-    {
       image: '/static/images/our-team/Personals/a23.png',
       position: 'تولید کننده محتوا',
       name: 'مهتاب حافظی',
       linkedIn: '',
       category: 'تولید کننده محتوا'
-    },
-    {
-      image: '/static/images/our-team/Personals/a24.png',
-      position: 'طراح رابط کاربری',
-      name: 'صبا مختاری',
-      linkedIn: '',
-      category: 'برنامه نویسان'
     },
     {
       image: '/static/images/our-team/Personals/a25.png',
@@ -693,15 +672,8 @@ const personsFA:
       category: 'تولید کننده محتوا'
     },
     {
-      image: '/static/images/our-team/Personals/a26.png',
-      position: 'توسعه دهنده وردپرس',
-      name: 'روهام عربلو',
-      linkedIn: '',
-      category: 'برنامه نویسان'
-    },
-    {
       image: '/static/images/our-team/Personals/a27.png',
-      position: 'تمام وقت',
+      position: 'فول استک',
       name: 'معراج بیغمیان',
       linkedIn: '',
       category: 'برنامه نویسان'
@@ -710,13 +682,6 @@ const personsFA:
       image: '/static/images/our-team/Personals/a28.png',
       position: 'فرانت اند',
       name: 'مهدی سلمان زاده',
-      linkedIn: '',
-      category: 'برنامه نویسان'
-    },
-    {
-      image: '/static/images/our-team/Personals/a29.png',
-      position: 'فرانت اند',
-      name: 'ماهرخ لطفی',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
@@ -783,7 +748,7 @@ const rolesFA: Array<string> = [
   'حسابدار',
   'روابط عمومی',
   'بازاریاب دیجیتال',
-  'منشی'
+  'دستیار مدیر'
 ];
 
 
