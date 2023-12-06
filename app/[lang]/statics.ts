@@ -267,8 +267,7 @@ const countryList: Array<string> = [
   "Åland Islands"
 ];
 
-const personsEN:
-  personArrayInterface[] = [
+const personsEN:personArrayInterface[] = [
     {
       image: '/static/images/our-team/Personals/a1.png',
       position: 'CEO',
@@ -513,10 +512,9 @@ const personsEN:
       linkedIn: '',
       category: 'designers'
     },
-  ];
+];
 
-const personsFA:
-  personArrayInterface[] = [
+const personsFA:personArrayInterface[] = [
     {
       image: '/static/images/our-team/Personals/a1.png',
       position: 'مدیرعامل',
@@ -582,7 +580,7 @@ const personsFA:
     },
     {
       image: '/static/images/our-team/Personals/a7.png',
-      position: 'تمام وقت',
+      position: 'فول استک',
       name: 'سجاد مومنی',
       linkedIn: '',
       category: 'مربیان'
@@ -1433,39 +1431,39 @@ const cardsDataEN: AboutUsDataInterface[] = [
 
 const cardsDataFA: AboutUsDataInterface[] = [
   {
-    image: '/static/images/our-team/Personals/a1.png',
-    name: 'رسول مرادیمهر',
-    position: ' مدیر عامل',
-    links: {
-      linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
-      whatsapp: 'wa.me/+989134233863',
-      email: 'mailto:rasoulmoradimehr@gmail.com',
-      website: 'https://moradimehr.com/',
-      instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
+    "image": "/static/images/our-team/Personals/a1.png",
+    "name": "رسول مرادیمهر",
+    "position": " مدیر عامل",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
+      "whatsapp": "wa.me/+989134233863",
+      "email": "mailto:rasoulmoradimehr@gmail.com",
+      "website": "https://moradimehr.com/",
+      "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==",
     },
   },
   {
-    image: '/static/images/about/mjafari.jpg',
-    name: 'مرتضی جعفری',
-    position: 'ارتباطات بین الملل',
-    links: {
-      linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
-      whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
-      email: 'mailto:morteza_jafari49@yahoo.com',
-      website: 'https://mortezajafari.ca/',
-      instagram: 'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==',
+    "image": "/static/images/about/mjafari.jpg",
+    "name": "مرتضی جعفری",
+    "position": "ارتباطات بین الملل",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
+      "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
+      "email": "mailto:morteza_jafari49@yahoo.com",
+      "website": "https://mortezajafari.ca/",
+      "instagram": "https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==",
     },
   },
   {
-    image: '/static/images/our-team/Personals/a2.png',
-    name: 'هادی حسن پور',
-    position: 'COTB',
-    links: {
-      linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
-      whatsapp: 'https://wa.me/+12892693933',
-      email: 'mailto:hadihasanpor@gmail.com',
-      website: 'https://www.hadihasanpour.ca/',
-      instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
+    "image": "/static/images/our-team/Personals/a2.png",
+    "name": "هادی حسن پور",
+    "position": "COTB",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
+      "whatsapp": "https://wa.me/+12892693933",
+      "email": "mailto:hadihasanpor@gmail.com",
+      "website": "https://www.hadihasanpour.ca/",
+      "instagram": "https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==",
     },
   },
 ];

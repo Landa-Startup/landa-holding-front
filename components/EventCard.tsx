@@ -77,6 +77,7 @@ export default function EventCard() {
               goto="/"
               addedClass="absolute bottom-6 right-6 self-center"
               bgColor="Primary"
+              lang={"lang"}
             />
           </div>
         </Link>
