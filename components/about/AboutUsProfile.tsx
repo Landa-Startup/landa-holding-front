@@ -12,7 +12,7 @@ export default async function AboutUsProfile(
 
   return (
     <div className="bg-[#FAFAFA]">
-      <div className={`mx-8 flex flex-col justify-items-center py-5 text-black lg:ml-64${t('lng') === "fa" && "mr-10"}`}>
+      <div className={`mx-8 flex flex-col justify-items-center py-5 text-black xl:mr-48 lg:ml-64${t('lng') === "fa" && "mr-10"}`}>
         <h2 className="font-condensed text-xl font-normal leading-normal tracking-widest md:text-2xl">
           {/* TODO: read from i18n */}
           {t('lng') === "en" ? "PROFESSIONALS" : "حرفه ای ها"}

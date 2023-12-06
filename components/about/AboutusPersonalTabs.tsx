@@ -32,7 +32,7 @@ export default function AboutusPersonalTabs({
         layout="fill"
         quality={90}
       />
-      <div className="z-10 ml-2 mt-2 flex flex-col gap-2">
+      <div className="z-10 ml-2 mt-2 flex flex-col gap-2 mr-4">
         <div>
           <Link href={linkedIn} target="_blank">
             <IconLinkedin />
