@@ -12,8 +12,8 @@ export default async function LandaHoldingPriority(
   return (
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
       <div className='felx flex-col items-start'>
-      <div className="mb-4 flex flex-col items-start ml-4">
-        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-[2px]"} font-condensed`}>
+      <div className="mb-4 flex flex-col items-start ltr:ml-4 rtl:mr-4">
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-0"} font-condensed`}>
           {t('LandaHolding')}
           <br />
         </span>
@@ -23,11 +23,11 @@ export default async function LandaHoldingPriority(
       </div>
       <div>
         <div className="mx-5 grid  grid-cols-2 place-items-center  gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ">
-          {cardData1.map((data, index) => (
+          {t('cardData1', {returnObjects: true}).map(({title, image}: {title: string, image: string}, index: number) => (
             <LandaHoldingPriorityCard
               key={index}
-              title={t('lng') === "en" ? data.titleEN : data.titleFA}
-              image={data.image}
+              title={title}
+              image={image}
             />
           ))}
         </div>

@@ -12,16 +12,16 @@ export default async function AboutUsProfile(
 
   return (
     <div className="bg-[#FAFAFA]">
-      <div className={`mx-8 flex flex-col justify-items-center py-5 text-black lg:ml-64${lang === "fa" && "mr-10"}`}>
-        <h2 className="font-condensed text-xl font-normal leading-normal tracking-widest md:text-2xl">
-          {lang === "en" ? "PROFESSIONALS" : "حرفه ای ها"}
+      <div className={`mx-8 flex flex-col justify-items-center py-5 text-black lg:ml-64${t('lng') === "fa" && "mr-10"}`}>
+        <h2 className="font-condensed text-xl font-normal leading-normal tracking-0 ltr:tracking-widest md:text-2xl">
+          {t('lng') === "en" ? "PROFESSIONALS" : "حرفه ای ها"}
         </h2>
-        <h1 className="font-gilda text-3xl font-normal leading-normal md:text-4xl">
+        <h1 className="font-gilda text-3xl font-normal rtl:tracking-0 leading-normal md:text-4xl">
           {lang === "en" ? "Board of Directors" : "هيئت مدیره"}
         </h1>
       </div>
 
-      <div className="mx-auto mb-8 ml-8  grid grid-cols-1 space-y-20  pb-16 md:space-x-12 lg:ml-0 lg:flex lg:flex-row lg:justify-center lg:pb-28">
+      <div className="mb-8 ml-8 grid grid-cols-1 space-y-20  pb-16 md:space-x-12 lg:ml-0 lg:flex lg:flex-row lg:justify-center lg:pb-28">
         {/* {cardsDataEN.map((card, index) => (
           <AboutusPersonalTabs
             key={index}
@@ -34,7 +34,7 @@ export default async function AboutUsProfile(
             instagram={card.links.instagram}
           />
         ))} */}
-        {lang === "en" ?
+        {t('lng') === "en" ?
           cardsDataEN.map((card, index) => (
             <AboutusPersonalTabs
               key={index}

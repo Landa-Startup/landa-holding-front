@@ -22,7 +22,6 @@
         { "label": "ENTREPRENEUR CENTER", "href": "/entrepreneurs" },
         { "label": "BUSINESS PARTNERS", "href": "/partner-membership" },
         { "label": "STARTUPS VALIDATION", "href": "/StartupsForm" },
-        { "label": "APPLY JOB", "href": "/job-form" },
-        { "label": "acceleration", "href": "/acceleration" }
+        { "label": "APPLY JOB", "href": "/job-form" }
       ]
 }

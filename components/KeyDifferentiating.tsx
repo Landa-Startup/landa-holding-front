@@ -17,7 +17,7 @@ export default async function KeyDifferentiating(
  
   return (
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] md:grid-cols-2">
-      <div className="m-5 flex flex-col gap-5 md:my-20 md:ml-28">
+      <div className="m-5 flex flex-col gap-5 md:my-20 md:ml-28 rtl:mr-6">
         <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">
           {t('KeyDifferentiatingFactors', {returnObjects: true})[0].title}
         </span>
@@ -26,7 +26,7 @@ export default async function KeyDifferentiating(
             {t('KeyDifferentiatingFactors', {returnObjects: true})[0].titleText}
           </p>
           <span className="font-bold text-primary">{t('KeyDifferentiatingFactors', {returnObjects: true})[0].textTitle}</span>
-          <ul className='ml-4 list-decimal'>
+          <ul className='ltr:ml-4 rtl:mr-4 list-decimal'>
             {t('itemList', {returnObjects: true}).map((item:string) => (
               <li>
                 {item}
