@@ -45,7 +45,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full items-center ltr:flex-row-reverse justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
+        <div className="navbar fixed flex w-full items-center ltr:flex-row-reverse md:ltr:flex-row justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
           <div className="mt-3 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"

@@ -21,7 +21,7 @@ export default function PartnersStartupCard({
       />
       <div className="flex flex-col gap-2">
         <span className="text-xl">{title}</span>
-        <p className="text-xs leading-4 tracking-[1.3px]">{description}</p>
+        <p className="leading-4 tracking-[1.3px] font-barlow">{description}</p>
       </div>
     </div>
   );

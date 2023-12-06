@@ -51,7 +51,7 @@ export default async function Page({
       <LandaHoldingPriority lang={lang} />
       <HomeOurTeam lang={lang} />
       <LatestStartups lang={lang} />
-      <AerialViewBusinessTeam />
+      <AerialViewBusinessTeam lang={lang} />
       <Partners lang={lang} />
     </div>
   )

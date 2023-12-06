@@ -23,15 +23,15 @@ export default async function HomeOurTeam(
           {t('OurTeam')}
           <br />
         </span>
-        <p className={`mt-8 ${t('lng') === "en" ? "" : "text-xl"}`}>
+        <p className={`mt-8 mb-4 ${t('lng') === "en" ? "" : "text-xl"}`}>
           {t('ourTeamText')}
-          <br />
         </p>
       </div>
 
       {/* <div className="flex flex-col lg">
       </div> */}
-     
+
+      <div className='flex flex-col items-center'>
       <Image
         loading="lazy"
         width={789}
@@ -48,6 +48,8 @@ export default async function HomeOurTeam(
         className="object-cover md:hidden"
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
+      </div>
+
       </div>
       <Link href={t('lng') === "en" ? "/en/our-team" : "/fa/our-team"} className='justify-center'>
         <Button

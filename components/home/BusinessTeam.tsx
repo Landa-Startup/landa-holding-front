@@ -4,43 +4,74 @@ import React, { useState } from 'react';
 import Chevron from '../common/Chevron';
 import Link from 'next/link';
 import BusinessTeamCard from './BusinessTeamCard';
+import { useTranslation } from 'app/i18n';
 
-export default function AerialViewBusinessTeam() {
+export default function AerialViewBusinessTeam(
+  {lang} : {lang: string}
+) {
   const commentsData = [
     {
-      name: 'Morteza Jafari',
-      roleInCompany: 'Founder of IRimmigration',
-      role: 'Investor',
-      profileImage: 'b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
-      commentDescription:
-        'The specialized and skilled staff at Landa Holding made short work on the issues that had been preventing me from advancing in my career.',
-      linkedinLink: 'https://www.linkedin.com/in/johndoe',
-      personalWebsite: 'https://www.johndoe.com',
-      email: 'john.doe@example.com',
+      "name": "Morteza Jafari",
+      "roleInCompany": "Founder of IRimmigration",
+      "role": "Investor",
+      "profileImage": "b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg",
+      "commentDescription":
+        "The specialized and skilled staff at Landa Holding made short work on the issues that had been preventing me from advancing in my career.",
+      "linkedinLink": "https://www.linkedin.com/in/johndoe",
+      "personalWebsite": "https://www.johndoe.com",
+      "email": "john.doe@example.com",
     },
     {
-      name: 'Jane Doe',
-      roleInCompany: 'Product Manager',
-      role: 'Product Lead',
-      profileImage: 'b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
-      commentDescription:
-        'For me, my time spent working with Landa Holdings with this extremely competent staff was an experience that I will never forget.',
-      linkedinLink: 'https://www.linkedin.com/in/janedoe',
-      personalWebsite: 'https://www.janedoe.com',
-      email: 'jane.doe@example.com',
+      "name": "Jane Doe",
+      "roleInCompany": "Product Manager",
+      "role": "Product Lead",
+      "profileImage": "b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg",
+      "commentDescription":
+        "For me, my time spent working with Landa Holdings with this extremely competent staff was an experience that I will never forget.",
+      "linkedinLink": "https://www.linkedin.com/in/janedoe",
+      "personalWebsite": "https://www.janedoe.com",
+      "email": "jane.doe@example.com",
     },
     {
-      name: 'Bob Smith',
-      roleInCompany: 'UX Designer',
-      role: 'Design Lead',
-      profileImage: 'b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg',
-      commentDescription:
-        'Landa Holding is home to a youthful and inventive workforce that is brimming with enthusiasm for all they do.',
-      linkedinLink: 'https://www.linkedin.com/in/bobsmith',
-      personalWebsite: 'https://www.bobsmith.com',
-      email: 'bob.smith@example.com',
+      "name": "Bob Smith",
+      "roleInCompany": "UX Designer",
+      "role": "Design Lead",
+      "profileImage": "b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg",
+      "commentDescription":
+        "Landa Holding is home to a youthful and inventive workforce that is brimming with enthusiasm for all they do.",
+      "linkedinLink": "https://www.linkedin.com/in/bobsmith",
+      "personalWebsite": "https://www.bobsmith.com",
+      "email": "bob.smith@example.com",
     },
   ];
+
+  // const { t } = await useTranslation(lang, "mainPage")
+
+  // console.log(t('LandaHolding'))
+
+  const langChangeHandle = async (lang: string) => {
+    const { t } = await useTranslation(lang, "mainPage")
+
+    return t;
+  } 
+
+  let translated = langChangeHandle(lang);
+
+  const title = translated.then((res) => {
+    const LandaHolding = res('LandaHolding')
+
+    return LandaHolding
+  }).then((res) => {
+    return res
+  })
+
+  const text = translated.then((res) => {
+    const text = res('businessTeamText')
+
+    return text
+  }).then((res) => {
+    return res
+  })
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -90,19 +121,25 @@ export default function AerialViewBusinessTeam() {
       }}
       className="business-team flex flex-col items-center justify-center py-5 md:h-[598px]"
     >
-      <div className="pb-5 text-center font-condensed tracking-[3.75px] md:tracking-[7px]">
+      <div className="pb-5 text-center font-condensed ltr:tracking-[3.75px] ltr:md:tracking-[7px]">
         <div className="flex flex-col space-y-2 md:mb-5 md:space-y-7">
           <span className="text-base font-normal text-white md:text-xl">
-            Landa Holding
+            {/* {LandaHoldingText.then((res) => (
+              <>{res}</>
+            ))} */}
+            {title}
             <br />
           </span>
           <span className="text-base font-normal text-white md:text-[30px]">
-            What Our Cooperation Members Say
+            {/* {cooprationText.then((res) => (
+              <>{res}</>
+            ))} */}
+            {text}
           </span>
         </div>
       </div>
       <div className="flex items-center justify-center md:gap-1">
-        <Chevron direction="left" onClick={handleLeftChevronClick} />
+        <Chevron direction={lang === "en" ? "left" : "right"} onClick={handleLeftChevronClick} />
         <div className="flex w-[340px] flex-col items-center justify-between p-5 backdrop-blur-2xl md:h-[360px] md:w-[750px]">
           <BusinessTeamCard
             name={commentsData[currentIndex].name}
@@ -131,7 +168,7 @@ export default function AerialViewBusinessTeam() {
           </div>
           <div className="h-[0px]border w-[283.01px] border-white"></div>
         </div>
-        <Chevron direction="right" onClick={handleRightChevronClick} />
+        <Chevron direction={lang === "en" ? "right" : "left"} onClick={handleRightChevronClick} />
       </div>
     </div>
   );
