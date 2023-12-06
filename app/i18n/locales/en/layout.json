@@ -1,0 +1,28 @@
+{
+    "menuItems": [
+        {
+            "label": "HOME",
+            "href": "/"
+        },
+        {
+            "label": "ABOUT US",
+            "href": "/about"
+        },
+        {
+            "label": "CONTACT US",
+            "href": "/contact"
+        },
+        {
+            "label": "OUR TEAM",
+            "href": "/our-team"
+        }
+    ],
+    "submenuItems": [
+        { "label": "INVESTOR CENTER", "href": "/investor-registration" },
+        { "label": "ENTREPRENEUR CENTER", "href": "/entrepreneurs" },
+        { "label": "BUSINESS PARTNERS", "href": "/partner-membership" },
+        { "label": "STARTUPS VALIDATION", "href": "/StartupsForm" },
+        { "label": "APPLY JOB", "href": "/job-form" },
+        { "label": "acceleration", "href": "/acceleration" }
+      ]
+}

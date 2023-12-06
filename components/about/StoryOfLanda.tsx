@@ -11,7 +11,7 @@ export default async function StoryOfLanda(
   return (
     <div className="flex flex-col gap-12 bg-[#F7F3EE] py-10 md:px-32 md:py-14">
       <div className="flex flex-col gap-12 text-[#000] lg:flex-row">
-        <div className="flex flex-col px-10 text-justify md:w-full lg:w-1/2 xl:w-1/2">
+        <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2">
           <div className="relative -ml-10 h-[310px] w-screen md:h-[310px] md:w-[500px] lg:w-[449px] xl:w-[589px] ">
             <Image
               className="object-cover"
@@ -20,7 +20,8 @@ export default async function StoryOfLanda(
               layout="fill"
             />
           </div>
-          <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
+        <div className="px-10 mt-4">
+        <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
             {t('TheStoryOfLanda', { returnObjects: true })[0].title}
           </span>
           <div className="flex flex-col space-y-4 font-barlow text-[#000]">
@@ -31,14 +32,15 @@ export default async function StoryOfLanda(
             </div>
           </div>
         </div>
-        <div className="flex flex-col px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
+        </div>
+        <div className="flex flex-col  px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
           <span className="font-gilda text-3xl text-primary">
             {t('LANDAStartups', { returnObjects: true })[0].title}
           </span>
-          <ul className="mt-5 flex flex-col space-y-3">
+          <ul className="mt-5  flex flex-col space-y-3 font-barlow">
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">{t('LANDAStartups', { returnObjects: true })[1].StartupAcademy}</span>:
-              {t('LANDAStartups', { returnObjects: true })[0].StartupAcademy}
+              <span className=''>{t('LANDAStartups', { returnObjects: true })[0].StartupAcademy}</span>
             </li>
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">{t('LANDAStartups', { returnObjects: true })[1].LandaTrip}</span>:
@@ -65,7 +67,7 @@ export default async function StoryOfLanda(
         </div>
       </div>
       <div className="flex flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
-        <div className="flex flex-col px-10 md:w-full">
+        <div className="flex flex-col px-10 font-barlow md:w-full">
           <span className="font-gilda text-3xl text-primary">
             {t('VisionOfTheLanaHolding', { returnObjects: true })[0].title}
           </span>

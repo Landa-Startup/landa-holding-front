@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
 
-export default function Navbar({ children }: { children: React.ReactNode }) {
+export default function Navbar({ children, menuItems, submenuItems }: { children: React.ReactNode, menuItems: any, submenuItems: any }) {
   const drawerRef = useRef<HTMLInputElement>(null);
   // const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,20 +13,20 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   // const { t } = await useTranslation(lang, "mainPage");
 
-  const menuItems = [
-    { label: 'HOME', href: '/' },
-    { label: 'ABOUT US', href: '/about' },
-    { label: 'CONTACT US', href: '/contact' },
-    { label: 'OUR TEAM', href: '/our-team' },
-  ];
-  const submenuItems = [
-    { label: 'INVESTOR CENTER', href: '/investor-registration' },
-    { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
-    { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
-    { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-    { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'acceleration', href: '/acceleration' },
-  ];
+  // const menuItems = [
+  //   { label: 'HOME', href: '/' },
+  //   { label: 'ABOUT US', href: '/about' },
+  //   { label: 'CONTACT US', href: '/contact' },
+  //   { label: 'OUR TEAM', href: '/our-team' },
+  // ];
+  // const submenuItems = [
+  //   { label: 'INVESTOR CENTER', href: '/investor-registration' },
+  //   { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
+  //   { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
+  //   { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
+  //   { label: 'APPLY JOB', href: '/job-form' },
+  //   { label: 'acceleration', href: '/acceleration' },
+  // ];
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
@@ -83,7 +83,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
           <div className="ml-32 hidden justify-start xl:flex xl:flex-1">
-            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold">
+            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold ">
               {menuItems.map((item) => (
                 <li className="h-9 text-2xl" key={item.label}>
                   <Link href={item.href} className="text-white hover:bg-white">
@@ -127,7 +127,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
+        <ul className="menu md:hidden absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
           {menuItems.map((item) => (
             <li
               className="font-condensed font-bold first:text-primary"
@@ -158,7 +158,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </ul>
           </li>
         </ul>
-        <div className="absolute bottom-0 flex h-10 w-80 items-center justify-between bg-[#222] px-10">
+        <div className="md:hidden absolute bottom-0 flex h-10 w-80 items-center justify-between bg-[#222] px-10">
           <Link
             href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
             target="_blank"

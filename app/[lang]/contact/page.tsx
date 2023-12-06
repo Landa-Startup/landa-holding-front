@@ -30,7 +30,7 @@ export default async function ContactUsPage({
       />
 
       {/* Main Content Grid */}
-      <div className={`container mx-auto grid grid-cols-1 gap-12 px-5 py-28 md:flex lg:px-28 rtl:md:flex-row ltr:md:flex-row-reverse bg-[#FAFAFA] text-black md:justify-between`}>
+      <div className={`container mx-auto grid grid-cols-1 gap-12 px-5 py-28 md:flex lg:px-28 rtl:md:flex-row ltr:md:flex-row-reverse bg-[#FAFAFA] text-black md:justify-between font-barlow`}>
         {/* ContactUsDescription Component */}
         <ContactUsDescription lang={lang} />
 

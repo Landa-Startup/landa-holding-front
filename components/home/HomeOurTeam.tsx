@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Button from '../common/Button';
+// import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
+import ArrowRight from '../icons/common/ArrowRight';
 
 
 export default async function HomeOurTeam(
@@ -47,13 +48,12 @@ export default async function HomeOurTeam(
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
       <Link href={t('lng') === "en" ? "/en/our-team" : "/fa/our-team"}>
-        <Button
-          type='button'
-          size='visit'
-          bgColor="Primary"
-          goto=''
-          lang={lang}
-        />
+        <button className="flex items-center bg-[#AA8453] rounded-[4px] text-white md:mt-8  px-7 py-3 font-barlow">
+          <div>View More</div>
+          <div className="pl-2">
+            <ArrowRight />
+          </div>
+        </button>
       </Link>
     </div>
   );
