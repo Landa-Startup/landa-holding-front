@@ -74,8 +74,8 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
 
             </Link>
           </div>
-
-          <div className="ml-32 hidden justify-start xl:flex xl:flex-1">
+        
+          <div className="ml-32 hidden justify-center mr-20 ltr:mr-60 xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold ">
               {menuItems.map(({ label, href }: { label: string, href: string }) => (
                 <li className="h-9 text-2xl" key={label}>

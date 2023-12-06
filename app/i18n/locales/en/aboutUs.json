@@ -85,5 +85,17 @@
        "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
        "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
        "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
+    ],
+    "companies": [
+      {"name": "ACADEMY", "logo": "3.png", "link": "https://landaholding.com/academy"},
+      {"name": "DIACO", "logo": "5.png", "link": "https://Diacocenter.com"},
+      {"name": "FARAZAMAN", "logo": "7.png", "link": "https://landaholding.com/acceleration"},
+      {"name": "FOROUGH", "logo": "9.png", "link": "/acceleration"},
+      {"name": "IRIMMIGRATION", "logo": "2.png", "link": "https://Irimmigration.ca"},
+      {"name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/"},
+      {"name": "TOLU ROSHAN", "logo": "4.png", "link": "/investment"},
+      {"name": "VISION RAFT", "logo": "6.png", "link": "https://Visionraft.com"},
+      {"name": "HANDI CRAFTS", "logo": "8.png", "link": "/"},
+      {"name": "LANDA GENE", "logo": "10.png", "link": "/landa-gene"}
     ]
   }

@@ -16,7 +16,7 @@ export default async function SubsidiaryCompanies(
       <p className="my-4 text-justify font-barlow text-xl leading-8">
         {t('subsids', {returnObjects: true})[0].text}
       </p>
-      <CompaniesContainer />
+      <CompaniesContainer lang={lang}/>
     </div>
   );
 }

@@ -104,25 +104,29 @@ export default function Partners(
         onMouseDown={lang === "en" ? handleMouseDown : () => {}}
         onMouseMove={lang === "en" ? handleMouseMove : () => {}}
         onMouseUp={lang === "en" ? handleMouseUp : () => {}}
-        className="overflow-x-scroll md:overflow-x-hidden rtl:md:overflow-x-scroll gap-12 grid grid-flow-col w-[calc(100%-2%)] cursor-pointer"
+        className="overflow-x-scroll md:overflow-x-hidden snap-mandatory snap-x rtl:md:overflow-x-scroll gap-12 grid grid-flow-col w-[calc(100%-2%)] cursor-pointer"
       >
         {lang === "en" && logos.map((logo) => (
+          <section className='snap-center'>
           <PartnersStartupCard
             key={logo.number}
             logo={logo.number}
             title={logo.title}
             description={logo.description}
           />
+          </section>
         ))}
         {lang === "fa" && L.then((res) => (
           <>
             {res.map(({number, title, description} : {number: number, title: string, description: string}) => (
+              <section className='snap-center'>
               <PartnersStartupCard
                 key={number}
                 logo={number}
                 title={title}
                 description={description}
               />
+              </section>
             ))}
           </>
         ))}

@@ -30,7 +30,7 @@
       "text": "در مرکز سرمایه‌گذاری لاندا، ما روی استارت‌آپ‌های نوآورانه و مقیاس‌پذیر در بازار بین‌المللی و همچنین ارزش‌گذاری تا ۵ میلیون دلار، سرمایه‌گذاری می‌کنیم. این بخش از هلدینگ شامل گروهی از سرمایه‌گذاران فرشته (Angel Investors) است که به شما در تشکیل تیم مناسب، ایجاد یک مدل کسب‌وکار و افزایش ارزش استارت‌آپ در بازار بین‌المللی کمک می‌کند. ما با دسترسی به شبکه‌ای از سرمایه‌گذاران بین‌المللی، شما را در رسیدن به موفقیت و توسعه کسب‌و‌کارتان یاری خواهیم کرد.",
       "reverse": false,
       "show": true,
-      "link": "/investor-registration",
+      "link": "/investment",
       "index": 1,
       "addedClass": "",
       "images": [
@@ -180,5 +180,59 @@
       "personalWebsite": "https://www.bobsmith.com",
       "email": "bob.smith@example.com"
     }
-  ]
+  ],
+  "cardData1": [
+    {
+        "title": "هوش مصنوعی",
+        "image": "/static/images/Home/Priority/vr-glasses 2.png"
+    },
+    {
+        "title": "واقعیت مجازی",
+        "image": "/static/images/Home/Priority/system 2.png"
+    },
+    {
+        "title": "انرژی تجدیدپذیر",
+        "image": "/static/images/Home/Priority/online-shop 1.png"
+    },
+    {
+        "title": "محیط زیست",
+        "image": "/static/images/Home/Priority/planet-earth 1.png"
+    },
+    {
+        "title": "سرگرمی",
+        "image": "/static/images/Home/Priority/ai 2.png"
+    },
+    {
+        "title": "مهندسی بیوپزشکی",
+        "image": "/static/images/Home/Priority/man 2.png"
+    },
+    {
+        "title": "خدمات برای نوجوانان",
+        "image": "/static/images/Home/Priority/process 2.png"
+    },
+    {
+        "title": "خدمات گردشگری",
+        "image": "/static/images/Home/Priority/world 2.png"
+    }
+],
+"LatestStartupsList": [
+  {
+      "image": "/static/images/Home/Startups/trip.png",
+      "title": "سفر لاندا",
+      "description": "لاندا تریپ یک استارت‌آپ نوآورانه‌ای است که دوره‌های آموزشی مفیدی را برای تمام افراد علاقه‌مند و همچنین بیزینس‌ها اجرا می کند.",
+      "link": "https://landatrip.com/"
+  },
+  {
+      "image": "/static/images/Home/Startups/diaco.png",
+      "title": "دیاکو",
+      "description": "دیاکو پلتفرمی است که به عنوان یک واسطه میان جویندگان و ارائه دهندگان فناوری جهت برآورده کردن خواسته های تکنولوژیکی آنها عمل می کند.",
+      "link": "https://irdiaco.ca/"
+  },
+  {
+      "image": "/static/images/Home/Startups/vision-raft.png",
+      "title": "ویژن رفت",
+      "description": "Vision Raft پلتفرمی است بر پایه واقعیت مجازی (VR) با تمرکز روی آموزش و سرگرمی جوانان جهت افزایش کیفیت یادگیری آنها.",
+      "link": "https://invigorated-drop-231359.framer.app"
+  }
+]
 }

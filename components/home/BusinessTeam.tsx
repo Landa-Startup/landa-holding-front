@@ -139,7 +139,7 @@ export default function AerialViewBusinessTeam(
         </div>
       </div>
       <div className="flex items-center justify-center md:gap-1">
-        <Chevron direction={lang === "en" ? "left" : "right"} onClick={handleLeftChevronClick} />
+        <Chevron direction="left" onClick={handleLeftChevronClick} />
         <div className="flex w-[340px] flex-col items-center justify-between p-5 backdrop-blur-2xl md:h-[360px] md:w-[750px]">
           <BusinessTeamCard
             name={commentsData[currentIndex].name}
@@ -168,7 +168,7 @@ export default function AerialViewBusinessTeam(
           </div>
           <div className="h-[0px]border w-[283.01px] border-white"></div>
         </div>
-        <Chevron direction={lang === "en" ? "right" : "left"} onClick={handleRightChevronClick} />
+        <Chevron direction="right" onClick={handleRightChevronClick} />
       </div>
     </div>
   );

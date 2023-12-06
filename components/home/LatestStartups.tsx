@@ -25,13 +25,13 @@ export default async function LatestStartups(
         </div>
         <div className="mt-2 flex justify-center ">
           <div className="mt-3 grid grid-cols-1 gap-3 md:mt-10 md:grid-cols-1 md:gap-10 lg:grid-cols-1 xl:grid-cols-3 ">
-            {cardData3.map((data, index) => (
+            {t('LatestStartupsList', {returnObjects: true}).map(({image, title, description, link} : {image: string, title: string, description: string, link: string}, index: number) => (
               <LatestStartupsCard
                 key={index}
-                title={t('lng') === "en" ? data.titleEN : data.titleFA}
-                image={data.image}
-                description={t('lng') === "en" ? data.descriptionEN : data.descriptionFA}
-                link={data.link}
+                title={title}
+                image={image}
+                description={description}
+                link={link}
                 lang={t('lng')}
               />
             ))}

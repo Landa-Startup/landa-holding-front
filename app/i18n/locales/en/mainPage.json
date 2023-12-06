@@ -31,7 +31,7 @@
       "reverse": false,
       "show": true,
       "index": 1,
-      "link": "/investor-registration",
+      "link": "/investment",
       "addedClass": "",
       "images": [
         {
@@ -184,5 +184,59 @@
       "personalWebsite": "https://www.bobsmith.com",
       "email": "bob.smith@example.com"
     }
-  ]
+  ],
+  "cardData1":[
+    {
+      "title": "Artificial Intelligence",
+      "image": "/static/images/Home/Priority/vr-glasses 2.png"
+    },
+    {
+      "title": "Virtual Reality",
+      "image": "/static/images/Home/Priority/system 2.png"
+    },
+    {
+      "title": "Renewable Energy",
+      "image": "/static/images/Home/Priority/online-shop 1.png"
+    },
+    {
+      "title": "The Environment",
+      "image": "/static/images/Home/Priority/planet-earth 1.png"
+    },
+    {
+      "title": "Entertainment",
+      "image": "/static/images/Home/Priority/ai 2.png"
+    },
+    {
+      "title": "Biomedical Engineering",
+      "image": "/static/images/Home/Priority/man 2.png"
+    },
+    {
+      "title": "Services for Teenagers",
+      "image": "/static/images/Home/Priority/process 2.png"
+    },
+    {
+      "title": "Tourism Services",
+      "image": "/static/images/Home/Priority/world 2.png"
+    }
+    ],
+    "LatestStartupsList": [
+      {
+        "image": "/static/images/Home/Startups/trip.png",
+        "title": "LANDA TRIP",
+        "description": "Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.",
+        "link": "https://landatrip.com/"
+      },
+      {
+      "image": "/static/images/Home/Startups/diaco.png",
+      "title": "DIACO",
+      "description": "Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.",
+      "link": "https://irdiaco.ca/"
+      },
+      {
+        "image": "/static/images/Home/Startups/vision-raft.png",
+      "title": "VISION RAFT",
+      "description": "This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.",
+      "link": "https://invigorated-drop-231359.framer.app"
+      }
+    ]
 }

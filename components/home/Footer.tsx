@@ -19,7 +19,7 @@ export default async function Footer(
   return (
     <div className="flex flex-col bg-neutral-800 p-8 font-barlow">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:gap-4 md:p-20">
-        <div className="mt-5 flex flex-col md:w-[344px]">
+        <div className="mt-5 flex flex-col gap-2 md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-white">
             {t('about', { returnObjects: true }).title}
             <br />
