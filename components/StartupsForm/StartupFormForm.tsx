@@ -158,9 +158,9 @@ export default function StartupFormForm(
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">   
     <div>
-    <div className="container m-10 mx-auto bg-[#222] px-5 pt-20 text-center lg:p-2">   
-      <p className="pb-3 pt-0 font-serif text-3xl tracking-wide text-white sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
-      <p className="pb-10 pt-0 text-2xl tracking-wide text-white md:pb-10 md:pt-0 lg:pb-10 lg:font-serif ">{lang === "en" ? "Your Project" : "پروژه شما"}</p>
+    <div className="container m-10 mx-auto  px-5 pt-20 text-center lg:p-2">   
+      <p className="pb-3 pt-0 font-serif text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
+      {/* <p className="pb-10 pt-0 text-2xl tracking-wide text-white md:pb-10 md:pt-0 lg:pb-10 lg:font-serif ">{lang === "en" ? "Your Project" : "پروژه شما"}</p> */}
     </div>
       <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         {/* <StartupFormTitle /> */}
