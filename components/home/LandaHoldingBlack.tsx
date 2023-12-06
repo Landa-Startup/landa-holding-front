@@ -22,7 +22,7 @@ export default async function LandaHoldingBlack(
       <div className="flex flex-col justify-around space-y-6 pt-8">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
+            <span className={`text-base mb-6 font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
               {t('LandaHolding')}
             </span>
             <span className="font-gilda w-[340px] border-b border-black pb-3 text-center text-4xl font-normal text-black md:border-none md:text-start">
@@ -59,7 +59,7 @@ export default async function LandaHoldingBlack(
       <div className="z-10 flex flex-col justify-around space-y-6 pt-8">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
+            <span className={`text-base font-normal text-black mb-6 rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
               {t('LandaHolding')}
               <br />
             </span>

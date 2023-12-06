@@ -13,7 +13,7 @@ export default async function LatestStartups(
     <div dir={t('lng') === "en" ? "ltr" : "rtl"}>
       <div className="bg-whiteGold flex flex-col items-center p-5 text-center">
         <div className="flex-col items-start justify-start md:ml-44 md:self-start rtl:md:ml-40">
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start xl:mr-36">
             <div className={`ltr:tracking-0 md:tracking-0 font-condensed ps-1 text-xl font-normal text-neutral-800 rtl:tracking-[3.5px] md:text-base md:tracking-[5.60px]`}>
               {t('LandaHolding')}
             </div>

@@ -11,7 +11,7 @@ export default async function LandaHoldingPriority(
 
   return (
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
-      <div className="ml-5 flex flex-col items-center lg:self-start xl:ml-40 rtl:xl:mr-40">
+      <div className="ml-5 flex flex-col items-center lg:self-start xl:ml-40 rtl:xl:mr-32">
         <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
           {t('LandaHolding')}
           <br />
