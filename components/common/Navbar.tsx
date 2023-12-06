@@ -3,45 +3,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-import CaretDown from '../icons/CaretDown';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Navbar({ children, menuItems, submenuItems, lang }: { children: React.ReactNode, menuItems: any, submenuItems: any, lang: string }) {
+  const pathName = usePathname();
+  const router = useRouter();
   const drawerRef = useRef<HTMLInputElement>(null);
-  // const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  console.log(isMenuOpen);
-
-  // const { t } = await useTranslation(lang, "mainPage");
-
-  // const menuItems = [
-  //   { label: 'HOME', href: '/' },
-  //   { label: 'ABOUT US', href: '/about' },
-  //   { label: 'CONTACT US', href: '/contact' },
-  //   { label: 'OUR TEAM', href: '/our-team' },
-  // ];
-  // const submenuItems = [
-  //   { label: 'INVESTOR CENTER', href: '/investor-registration' },
-  //   { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
-  //   { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
-  //   { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-  //   { label: 'APPLY JOB', href: '/job-form' },
-  //   { label: 'acceleration', href: '/acceleration' },
-  // ];
-  // const menuItems = [
-  //   { label: 'HOME', href: '/' },
-  //   { label: 'ABOUT US', href: '/about' },
-  //   { label: 'CONTACT US', href: '/contact' },
-  //   { label: 'OUR TEAM', href: '/our-team' },
-  // ];
-  // const submenuItems = [
-  //   { label: 'INVESTOR CENTER', href: '/investor-registration' },
-  //   { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
-  //   { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
-  //   { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-  //   { label: 'APPLY JOB', href: '/job-form' },
-  //   { label: 'acceleration', href: '/acceleration' },
-  // ];
+  const changeLanguage = (language: string) => {
+    // const currentPath = pathName
+    const newPath = pathName.replace(/^\/(en|fa)/, `/${language}`);
+    router.push(newPath);
+  };
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
@@ -66,7 +40,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
             >
-              
+
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -80,7 +54,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>
-              
+
             </label>
           </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
@@ -97,13 +71,13 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
                   {lang == "en" ? "LANDA" : "لاندا"}
                 </span>
               </div>
-              
+
             </Link>
           </div>
-        
+
           <div className="ml-32 hidden justify-start xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold ">
-              {menuItems.map(({label, href} : {label: string, href: string}) => (
+              {menuItems.map(({ label, href }: { label: string, href: string }) => (
                 <li className="h-9 text-2xl" key={label}>
                   <Link href={href} className="text-white hover:bg-white">
                     {label}
@@ -122,7 +96,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
                     className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
                       }`}
                   >
-                    {submenuItems.map(({label, href}: {label: string, href: string}) => (
+                    {submenuItems.map(({ label, href }: { label: string, href: string }) => (
                       <li
                         className="max-h-fit text-xl"
                         key={label}
@@ -150,16 +124,27 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
             />
             <CaretDown />
         </div>      */}
-        <div>
-          <p>En/<span>فا</span></p>
-        </div>
+          {/* <div className='flex text-2xl'>
+            <Link href={'/en'}>
+              <span >En</span>
+            </Link>
+            <span>/</span>
+            <Link href={'/fa'}>
+              <span>فا</span>
+            </Link>
+          </div> */}
+          <div className='flex text-2xl'>
+            <span onClick={() => changeLanguage('en')}>En</span>
+            <span>/</span>
+            <span onClick={() => changeLanguage('fa')}>فا</span>
+          </div>
         </div>
         <div className="children">{children}</div>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul className="menu md:hidden absolute top-[72px] ltr:left-[110px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
-          {menuItems.map(({label, href} : {label: string, href: string}) => (
+          {menuItems.map(({ label, href }: { label: string, href: string }) => (
             <li
               className="font-condensed font-bold first:text-primary"
               key={label}
@@ -179,7 +164,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
             </div>
 
             <ul>
-              {submenuItems.map(({label, href} : {label: string, href: string}) => (
+              {submenuItems.map(({ label, href }: { label: string, href: string }) => (
                 <li key={label} onClick={() => handleLinkClick()}>
                   <Link href={href} className="font-condensed">
                     {label}{' '}
