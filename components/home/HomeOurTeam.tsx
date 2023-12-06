@@ -15,11 +15,11 @@ export default async function HomeOurTeam(
   return (
     <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
       <div className={`rtl:ml-5 mr-10 xl:ml-28 ltr:mr-5 xl:mr-40 flex flex-col lg:self-start `}>
-        <span className={`font-normal text-black rtl:tracking-[5.60px] ltr:tracking-[2px] font-condensed text-xl`}>
+        <span className={`font-normal mr-20 text-black rtl:tracking-[5.60px] ltr:tracking-[2px] font-condensed text-xl xl:mr-0 `}>
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl font-normal rtl:tracking-widest ltr:p-4 tracking-normal font-condensed text-black`}>
+        <span className={`text-5xl mr-20 font-normal rtl:tracking-widest ltr:p-4 tracking-normal font-condensed text-black xl:mr-0`}>
           {t('OurTeam')}
           <br />
         </span>
@@ -57,4 +57,4 @@ export default async function HomeOurTeam(
       </Link>
     </div>
   );
-}
+    }

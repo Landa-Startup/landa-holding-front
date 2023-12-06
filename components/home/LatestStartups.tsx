@@ -14,10 +14,10 @@ export default async function LatestStartups(
       <div className="bg-whiteGold flex flex-col items-center p-5 text-center">
         <div className="flex-col items-start justify-start md:ml-44 md:self-start rtl:md:ml-40">
           <div className="flex flex-col items-center md:items-start">
-            <div className={`ltr:tracking-0 md:tracking-0 font-condensed ps-1 text-xl font-normal text-neutral-800 rtl:tracking-[3.5px] md:text-base md:tracking-[5.60px]`}>
+            <div className={`ltr:tracking-0 md:tracking-0 font-condensed ps-1 text-xl font-normal text-neutral-800 ltr:tracking-[3.5px] md:text-base`}>
               {t('LandaHolding')}
             </div>
-            <div className={`text-primary ltr:tracking-0 md:tracking-0 font-condensed text-4xl font-normal rtl:tracking-[3.5px] md:mt-3 md:text-[44px] md:tracking-[5.60px]`}>
+            <div className={`text-primary ltr:tracking-0 md:tracking-0 font-condensed text-4xl font-normal ltr:tracking-[3.5px] md:mt-3 md:text-[44px]`}>
               {t('LatestStartups')}
             </div>
           </div>
