@@ -15,17 +15,19 @@ export default function HomeCardsRight({
   return (
     <div className="flex flex-col self-start md:self-center">
       <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">
-        <div className="flex flex-col">
-          <span className="font-condensed text-3xl tracking-[11px]">LANDA</span>
-          <span className="font-gilda text-4xl tracking-[6.5px] md:text-6xl">
+        <div className="flex flex-col rtl:flex-row-reverse gap-2">
+          <span className="font-condensed text-3xl ltr:tracking-[11px]">{lang === "en" ? "LANDA" : "لاندا"}</span>
+          <span className="font-gilda text-4xl lrt:tracking-[6.5px] md:text-6xl">
             {titles}
           </span>
         </div>
       </div>
-      <div className="flex space-x-7">
+      <div className="flex space-x-7 rtl:space-x-reverse">
         {images.map((image, index) => (
           <div
-            className={`relative mt-5 hidden h-96 w-64 ${lang === "en" ? "last:mt-14" : "last:mt-[5.25rem]"} md:block md:first:mt-44 lg:mb-0`}
+            className={`relative mt-5 hidden h-96 w-64 ${
+              lang === 'en' ? 'last:mt-14' : 'last:mt-[5.25rem]'
+            } md:block md:first:mt-44 lg:mb-0`}
             key={index}
           >
             <Image

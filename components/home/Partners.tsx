@@ -130,7 +130,6 @@ export default function Partners(
       <Button
         goto="/partner-membership"
         size="visit"
-        text="JOIN US"
         bgColor="Primary"
         lang={lang}
       />

@@ -3,9 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-import { useTranslation } from 'app/i18n';
 
-export default function Navbar({ children, lang }: { children: React.ReactNode, lang:string }) {
+export default function Navbar({ children, menuItems, submenuItems, lang }: { children: React.ReactNode, menuItems: any, submenuItems: any, lang: string }) {
   const drawerRef = useRef<HTMLInputElement>(null);
   // const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,28 +13,20 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
 
   // const { t } = await useTranslation(lang, "mainPage");
 
-  const menuItems = [
-    { label: 'HOME', href: '/' },
-    { label: 'ABOUT US', href: '/about' },
-    // { label: 'ACCELERATION', href: '/acceleration' },
-    { label: 'CONTACT US', href: '/contact' },
-    { label: 'OUR TEAM', href: '/our-team' },
-  ];
-  const menuItems1 = [
-    { label: 'HOME1', href: '/' },
-    { label: 'ABOUT US1', href: '/about' },
-    // { label: 'ACCELERATION', href: '/acceleration' },
-    { label: 'CONTACT US1', href: '/contact' },
-    { label: 'OUR TEAM1', href: '/our-team' },
-  ];
-  const submenuItems = [
-    { label: 'INVESTOR CENTER', href: '/investor-registration' },
-    { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
-    { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
-    { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-    { label: 'APPLY JOB', href: '/job-form' },
-    { label: 'acceleration', href: '/acceleration' },
-  ];
+  // const menuItems = [
+  //   { label: 'HOME', href: '/' },
+  //   { label: 'ABOUT US', href: '/about' },
+  //   { label: 'CONTACT US', href: '/contact' },
+  //   { label: 'OUR TEAM', href: '/our-team' },
+  // ];
+  // const submenuItems = [
+  //   { label: 'INVESTOR CENTER', href: '/investor-registration' },
+  //   { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
+  //   { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
+  //   { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
+  //   { label: 'APPLY JOB', href: '/job-form' },
+  //   { label: 'acceleration', href: '/acceleration' },
+  // ];
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
@@ -54,7 +45,7 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full items-center justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
+        <div className="navbar fixed flex w-full items-center ltr:flex-row-reverse justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
           <div className="mt-3 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -86,17 +77,17 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
                   height={50}
                 />
                 <span className="text-[12px] font-bold tracking-[0.375px] text-primary md:text-xl">
-                  LANDA
+                  {lang == "en" ? "LANDA" : "لاندا"}
                 </span>
               </div>
             </Link>
           </div>
           <div className="ml-32 hidden justify-start xl:flex xl:flex-1">
-            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold">
-              {menuItems.map((item) => (
-                <li className="h-9 text-2xl" key={item.label}>
-                  <Link href={item.href} className="text-white hover:bg-white">
-                    {item.label}
+            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold ">
+              {menuItems.map(({label, href} : {label: string, href: string}) => (
+                <li className="h-9 text-2xl" key={label}>
+                  <Link href={href} className="text-white hover:bg-white">
+                    {label}
                   </Link>
                 </li>
               ))}
@@ -106,24 +97,23 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
                     className="hover:white text-2xl hover:bg-white"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    FORMS
+                    {lang === "en" ? "FORMS" : "فرم ها"}
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
-                    {submenuItems.map((item) => (
+                    {submenuItems.map(({label, href}: {label: string, href: string}) => (
                       <li
                         className="max-h-fit text-xl"
-                        key={item.label}
+                        key={label}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <Link
-                          href={item.href}
+                          href={href}
                           className="border p-5 font-bold text-black hover:bg-base-200 hover:text-primary"
                         >
-                          {item.label}{' '}
+                          {label}{' '}
                         </Link>
                       </li>
                     ))}
@@ -137,15 +127,15 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black md:hidden">
-          {menuItems.map((item) => (
+        <ul className="menu md:hidden absolute top-[72px] ltr:left-[110px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
+          {menuItems.map(({label, href} : {label: string, href: string}) => (
             <li
               className="font-condensed font-bold first:text-primary"
-              key={item.label}
+              key={label}
               onClick={() => handleLinkClick()}
             >
-              <Link href={item.href} className="">
-                {item.label}
+              <Link href={href} className="">
+                {label}
               </Link>
             </li>
           ))}
@@ -158,17 +148,17 @@ export default function Navbar({ children, lang }: { children: React.ReactNode, 
             </div>
 
             <ul>
-              {submenuItems.map((item) => (
-                <li key={item.label} onClick={() => handleLinkClick()}>
-                  <Link href={item.href} className="font-condensed">
-                    {item.label}{' '}
+              {submenuItems.map(({label, href} : {label: string, href: string}) => (
+                <li key={label} onClick={() => handleLinkClick()}>
+                  <Link href={href} className="font-condensed">
+                    {label}{' '}
                   </Link>
                 </li>
               ))}
             </ul>
           </li>
         </ul>
-        <div className="absolute bottom-0 flex h-10 w-80 items-center justify-between bg-[#222] px-10">
+        <div className="hidden absolute bottom-0 h-10 w-80 items-center justify-between bg-[#222] px-10">
           <Link
             href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
             target="_blank"

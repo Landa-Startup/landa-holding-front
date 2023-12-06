@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { items } from '../../app/[lang]/statics'
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
 
@@ -14,6 +13,7 @@ export default async function HomeOurTeam(
 
   return (
     <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
+      <div className='felx flex-col items-start gap-2'>
       <div className={`${t('lng') === "en" ? "ml-5 mr-10 xl:ml-28" : "mr-5 xl:mr-40"} flex flex-col lg:self-start `}>
         <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-[2px]"} font-condensed text-xl`}>
           {t('LandaHolding')}
@@ -25,6 +25,7 @@ export default async function HomeOurTeam(
         </span>
         <p className={`mt-8 ${t('lng') === "en" ? "" : "text-xl"}`}>
           {t('ourTeamText')}
+          <br />
         </p>
       </div>
 
@@ -47,7 +48,8 @@ export default async function HomeOurTeam(
         className="object-cover md:hidden"
         src="/static/images/Home/OurTeam/mobile.jpeg"
       />
-      <Link href={t('lng') === "en" ? "/en/our-team" : "/fa/our-team"}>
+      </div>
+      <Link href={t('lng') === "en" ? "/en/our-team" : "/fa/our-team"} className='justify-center'>
         <Button
           type='button'
           size='visit'

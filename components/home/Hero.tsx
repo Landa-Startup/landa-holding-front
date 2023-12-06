@@ -91,7 +91,7 @@ export default function Hero({
         </div>
         <div
           className={`${
-            notArray ? "text-center font-gilda text-5xl text-black md:text-right md:text-7xl" : "text-center font-gilda text-5xl font-normal tracking-[6.4px] text-neutral-50 text-opacity-95 md:text-right md:text-7xl"
+            notArray ? "text-center font-gilda text-5xl text-black md:text-right md:text-7xl" : "text-center font-gilda text-5xl font-normal ltr:tracking-[6.4px] text-neutral-50 text-opacity-95 md:text-right md:text-7xl"
           } ${
             isTitleChanging
               ? 'zoom-in-animation title-transition transition-opacity duration-[2500]'
@@ -102,7 +102,7 @@ export default function Hero({
           {currentTitle}
         </div>
 
-        <div className={`text-center font-mono text-3xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ${lang === "en" ? "tracking-[4px]" : "tracking-[1px]"}`}>
+        <div className={`text-center font-mono text-3xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ${lang === "en" ? "tracking-[4px]" : "tracking-0"}`}>
           {subTitle ? subTitle : ""}
         </div>
         {showButton ? (
