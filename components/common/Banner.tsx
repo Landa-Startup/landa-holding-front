@@ -13,7 +13,7 @@ export default async function Banner({
   const { t } = await useTranslation(lang, "aboutUs")
 
   return (
-    <div className="relative h-screen md:h-[650px]">
+    <div className="relative h-screen md:h-[520px]">
       {/* Background Image with Blur and Overlay */}
       <div
         style={{

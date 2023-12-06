@@ -141,7 +141,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
               </li>
             </ul>
           </div>
-          <div className="  ">
+          {/* <div className="  ">
             <Image
               alt="us"
               src={'/static/images/usFlag.png'}
@@ -149,7 +149,10 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
               height={34}
             />
             <CaretDown />
-        </div>     
+        </div>      */}
+        <div>
+          <p>En/<span>فا</span></p>
+        </div>
         </div>
         <div className="children">{children}</div>
       </div>
