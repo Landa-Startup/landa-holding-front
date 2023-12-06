@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
+import CaretDown from '../icons/CaretDown';
 
 export default function Navbar({ children, menuItems, submenuItems }: { children: React.ReactNode, menuItems: any, submenuItems: any }) {
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -36,7 +37,7 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
     drawerRef.current.click();
   };
   return (
-    <div className="drawer top-0">
+    <div className="drawer top-0 ">
       <input
         id="my-drawer-3"
         type="checkbox"
@@ -44,13 +45,17 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
         aria-label="Menu Toggle"
         ref={drawerRef}
       />
-      <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full items-center justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
-          <div className="mt-3 flex-none lg:hidden">
+      
+        
+      <div className="drawer-content relative  ">
+        
+        <div className="navbar  flex w-full items-center justify-between  bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12   ">
+          <div className="mt-3 flex-none lg:hidden ">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
             >
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -64,9 +69,10 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>
+              
             </label>
           </div>
-          <div className="m-2 flex h-full items-center justify-start px-2 text-left">
+          <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
               <div className="flex flex-col items-end md:flex-row">
                 <Image
@@ -80,8 +86,10 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
                   LANDA
                 </span>
               </div>
+              
             </Link>
           </div>
+        
           <div className="ml-32 hidden justify-start xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold ">
               {menuItems.map((item) => (
@@ -122,6 +130,15 @@ export default function Navbar({ children, menuItems, submenuItems }: { children
               </li>
             </ul>
           </div>
+          <div className="  ">
+            <Image
+              alt="us"
+              src={'/static/images/usFlag.png'}
+              width={45}
+              height={34}
+            />
+            <CaretDown />
+        </div>     
         </div>
         <div className="children">{children}</div>
       </div>
