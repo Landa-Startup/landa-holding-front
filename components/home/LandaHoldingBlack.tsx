@@ -22,7 +22,7 @@ export default async function LandaHoldingBlack(
       <div className="flex flex-col justify-around space-y-6 pt-8">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
+            <span className={`text-base font-normal text-black ltr:tracking-[5.60px] ltr:text-xl font-condensed`}>
               {t('LandaHolding')}
             </span>
             <span className="font-gilda w-[340px] border-b border-black pb-3 text-center text-4xl font-normal text-black md:border-none md:text-start">
@@ -41,7 +41,7 @@ export default async function LandaHoldingBlack(
 
         <button className={`relative mt-10 inline-flex items-center justify-center gap-4 rtl: ltr:flex-row-reverse group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}>
           <Link href={'/investor-registration'}>
-            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
+            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 ltr:tracking-[1.5px] text-white md:text-[32px]">
               {t('lng') === "en" ? "Register" : "ثبت نام"}
             </div>
           </Link>
@@ -59,7 +59,7 @@ export default async function LandaHoldingBlack(
       <div className="z-10 flex flex-col justify-around space-y-6 pt-8">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-base font-normal text-black rtl:tracking-[5.60px] ltr:text-xl tracking-[2px] font-condensed`}>
+            <span className={`text-base font-normal text-black ltr:tracking-[5.60px] ltr:text-xl  font-condensed`}>
               {t('LandaHolding')}
               <br />
             </span>
