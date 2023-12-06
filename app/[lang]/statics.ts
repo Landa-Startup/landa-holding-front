@@ -534,7 +534,7 @@ const personsFA:
     {
       image: '/static/images/our-team/Personals/a10.png',
       position: 'مدیر',
-      name: 'مهرنوش حیبتی',
+      name: 'مهرنوش هیبتی',
       linkedIn: '',
       category: 'مدیران'
     },
@@ -611,7 +611,7 @@ const personsFA:
     {
       image: '/static/images/our-team/Personals/a14.png',
       position: 'طراح تجربه کاربری',
-      name: 'آرشیا نصیری',
+      name: 'ارشیا نصیری',
       linkedIn: '',
       category: 'طراحان'
     },
@@ -695,14 +695,14 @@ const personsFA:
     {
       image: '/static/images/our-team/Personals/a26.png',
       position: 'توسعه دهنده وردپرس',
-      name: 'روحام عربلو',
+      name: 'روهام عربلو',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
     {
       image: '/static/images/our-team/Personals/a27.png',
       position: 'تمام وقت',
-      name: 'مراج بیغمیان',
+      name: 'معراج بیغمیان',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
@@ -730,14 +730,14 @@ const personsFA:
     {
       image: '/static/images/our-team/Personals/a31.png',
       position: 'فرانت اند',
-      name: 'براد دهقانی',
+      name: 'باراد دهقانی',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
     {
       image: '/static/images/our-team/Personals/a32.png',
       position: 'فرانت اند',
-      name: 'متین جنگوربانی',
+      name: 'متین جان قربانی',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
