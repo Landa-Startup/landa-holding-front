@@ -32,10 +32,10 @@ export default async function Banner({
         <div className="relative flex h-[650px] items-stretch justify-center lg:h-[512px] lg:justify-start">
           <div className="flex flex-col items-center justify-center text-center md:m-auto lg:m-auto">
             {/* Text Content */}
-            <p className={`font-condensed text-base font-normal ${lang === "en" ? "tracking-[5.60px]" : "tracking-normal"} text-neutral-50`}>
+            <p className={`font-condensed text-xl font-normal ltr:tracking-[5.60px] text-neutral-50`}>
               {(t('LandaHolding'))}
             </p>
-            <p className="font-gilda text-[32px] font-normal text-neutral-50 md:text-[50px] lg:text-[74px] xl:text-[84px]">
+            <p className="font-gilda text-[32px] font-normal text-neutral-50 md:text-[50px] lg:text-[50px] xl:text-[50px]">
               {title}
             </p>
           </div>

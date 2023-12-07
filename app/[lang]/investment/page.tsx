@@ -60,7 +60,7 @@ export default async function Page(
           />
         </div>
       </div>
-      <div className="relative grid grid-cols-1 gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
+      {/* <div className="relative grid grid-cols-1 gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
             <span className="font-gilda text-2xl text-primary md:text-4xl">
@@ -93,7 +93,7 @@ export default async function Page(
           layout="fill"
           className="-z-10 object-contain pb-[500px] md:py-10"
         />
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">

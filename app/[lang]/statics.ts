@@ -1254,7 +1254,7 @@ const servicesFA: ServicesInterface[] = [
     "image": "9.png",
   },
   {
-    "title": "فضای کار تعاونی",
+    "title": "فضای کار اشتراکی",
     "image": "10.png",
   },
   {

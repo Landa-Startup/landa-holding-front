@@ -20,7 +20,7 @@ import { language } from 'googleapis/build/src/apis/language';
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
 export default function StartupFormForm(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   enum Type {
@@ -40,8 +40,8 @@ export default function StartupFormForm(
   ]
 
   const typesData = Types.map((type: string) => ({
-    value : type,
-    label : type,
+    value: type,
+    label: type,
   }))
 
   const {
@@ -56,9 +56,9 @@ export default function StartupFormForm(
 
   const [selectedRadio, setSelectedRadio] = useState('');
 
-  const { 
-    csrfToken, 
-    handleTokenChange, 
+  const {
+    csrfToken,
+    handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
@@ -93,43 +93,43 @@ export default function StartupFormForm(
     handleSendChange(true);
 
     console.log(formData);
-  
+
     // Create a FormData object for form data.
     const sendFormData = new FormData();
-  
+
     // Handle conditional file attachments.
     const filePostMap = {
       businessPlanFile: filePost.businessPlanFile,
       pitchDeckFile: filePost2.pitchDeckFile,
       financialFile: filePost3.financialFile,
     };
-  
+
     for (const [fieldName, file] of Object.entries(filePostMap)) {
       if (file) {
         sendFormData.append(fieldName, file, file.name);
       }
     }
-  
+
     // Append all non-file form fields.
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
       if (typeof fieldValue !== 'object' || fieldValue === null) {
         sendFormData.append(fieldName, String(fieldValue));
       }
     });
-  
+
     // Convert file objects to Blob and append them.
     if (formData.pitchDeckFile) {
       sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
     }
-  
+
     if (formData.businessPlanFile) {
       sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
     }
-  
+
     if (formData.financialModelFile) {
       sendFormData.append('financialModelFile', formData.financialModelFile as Blob);
     }
-  
+
     // Send the form data to the API.
     submitStartupsForm(sendFormData, csrfToken).then((response) => {
       handleChangeSuccess();
@@ -156,12 +156,10 @@ export default function StartupFormForm(
   }))
 
   return (
-    <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">   
-    <div>
-    <div className="container m-10 mx-auto  px-5 pt-20 text-center lg:p-2">   
-      <p className="pb-3 pt-0 font-serif text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
-      {/* <p className="pb-10 pt-0 text-2xl tracking-wide text-white md:pb-10 md:pt-0 lg:pb-10 lg:font-serif ">{lang === "en" ? "Your Project" : "پروژه شما"}</p> */}
-    </div>
+    <div className="container font-barlow m-10 mx-auto px-5 pt-20 text-center lg:p-2">
+      <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
+        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
+      </div>
       <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         {/* <StartupFormTitle /> */}
         <div>
@@ -169,7 +167,7 @@ export default function StartupFormForm(
         </div>
 
         <div>
-          <hr className="mb-5 border-[#000000] dark:border-[#ffffff]"/>
+          <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <StartupFormPersonalInformation
@@ -179,14 +177,14 @@ export default function StartupFormForm(
           />
 
           <div className="col-span-2">
-          <div className="col-span-2">
-          <div className="bg-[#222222CC]">
-            <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
-              {lang === "en" ? "Growth and Scale-up" : "رشد و افزایش مقیاس"}
-            </p>
-            <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
-          </div>
-          </div>
+            <div className="col-span-2">
+              <div className="bg-[#222222CC]">
+                <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
+                  {lang === "en" ? "Growth and Scale-up" : "رشد و افزایش مقیاس"}
+                </p>
+                <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
+              </div>
+            </div>
           </div>
           <Select
             register={register}
@@ -203,7 +201,7 @@ export default function StartupFormForm(
           />
           <br />
 
-          {(():any => {
+          {((): any => {
             switch (selectedRadio) {
               case 'IDEA':
                 return <StartupFormIdea register={register} errors={errors} />;
@@ -221,9 +219,9 @@ export default function StartupFormForm(
                 break;
               case 'FisrtSale':
                 return (
-                  <StartupFormFirstSale 
-                    register={register} 
-                    errors={errors} 
+                  <StartupFormFirstSale
+                    register={register}
+                    errors={errors}
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
@@ -232,9 +230,9 @@ export default function StartupFormForm(
                 break;
               case 'SaleDevelopment':
                 return (
-                  <StartupFormSaleDevelopment 
-                    register={register} 
-                    errors={errors} 
+                  <StartupFormSaleDevelopment
+                    register={register}
+                    errors={errors}
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
@@ -254,10 +252,9 @@ export default function StartupFormForm(
               lang={lang}
             />
           </div>
-          <NotificationSendForm/>
+          <NotificationSendForm />
         </form>
       </div>
-    </div>
     </div>
   );
 }
