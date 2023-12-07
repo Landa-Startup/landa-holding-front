@@ -88,7 +88,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
           </span>
           <AccelerationServices services={t('LandaAcceleratorServices', { returnObjects: true })[0].items} />
         </div>
-        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 tracking-[2px] text-[#55422A] md:mx-10 md:text-left">
+        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 ltr:tracking-[2px] text-[#55422A] md:mx-10 md:text-left rtl:md:text-right">
           <svg
             className="mt-3 hidden md:block"
             xmlns="http://www.w3.org/2000/svg"

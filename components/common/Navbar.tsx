@@ -5,7 +5,17 @@ import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
 import { usePathname, useRouter } from 'next/navigation';
 
-export default function Navbar({ children, menuItems, submenuItems, lang }: { children: React.ReactNode, menuItems: any, submenuItems: any, lang: string }) {
+export default function Navbar({
+  children,
+  menuItems,
+  submenuItems,
+  lang
+}: {
+  children: React.ReactNode;
+  menuItems: any;
+  submenuItems: any;
+  lang: string;
+}) {
   const pathName = usePathname();
   const router = useRouter();
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -40,7 +50,6 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
             >
-
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -54,7 +63,6 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>
-
             </label>
           </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
@@ -68,75 +76,71 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
                   height={50}
                 />
                 <span className="text-[12px] font-bold tracking-[0.375px] text-primary md:text-xl">
-                  {lang == "en" ? "LANDA" : "لاندا"}
+                  {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>
-
             </Link>
           </div>
 
           <div className="ml-32 hidden justify-center mr-20 ltr:mr-60 xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 rtl:space-x-reverse font-condensed text-xl font-bold ">
-              {menuItems.map(({ label, href }: { label: string, href: string }) => (
-                <li className="h-9 text-2xl" key={label}>
-                  <Link href={href} className="text-white hover:bg-white">
-                    {label}
-                  </Link>
-                </li>
-              ))}
+              {menuItems.map(
+                ({ label, href }: { label: string; href: string }) => (
+                  <li className="h-9 text-2xl" key={label}>
+                    <Link href={href} className="text-white hover:bg-white">
+                      {label}
+                    </Link>
+                  </li>
+                )
+              )}
               <li className="h-9">
                 <details className="dropdown mb-32">
                   <summary
                     className="hover:white text-2xl hover:bg-white"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    {lang === "en" ? "FORMS" : "فرم ها"}
+                    {lang === 'en' ? 'FORMS' : 'فرم ها'}
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
-                      }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
+                      isMenuOpen ? '' : 'hidden'
+                    }`}
                   >
-                    {submenuItems.map(({ label, href }: { label: string, href: string }) => (
-                      <li
-                        className="max-h-fit text-xl"
-                        key={label}
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        <Link
-                          href={href}
-                          className="border p-5 font-bold text-black hover:bg-base-200 hover:text-primary"
+                    {submenuItems.map(
+                      ({ label, href }: { label: string; href: string }) => (
+                        <li
+                          className="max-h-fit text-xl"
+                          key={label}
+                          onClick={() => setIsMenuOpen(false)}
                         >
-                          {label}{' '}
-                        </Link>
-                      </li>
-                    ))}
+                          <Link
+                            href={href}
+                            className="border p-5 font-bold text-black hover:bg-base-200 hover:text-primary"
+                          >
+                            {label}{' '}
+                          </Link>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </details>
               </li>
             </ul>
           </div>
-          {/* <div className="  ">
-            <Image
-              alt="us"
-              src={'/static/images/usFlag.png'}
-              width={45}
-              height={34}
-            />
-            <CaretDown />
-        </div>      */}
-          {/* <div className='flex text-2xl'>
-            <Link href={'/en'}>
-              <span >En</span>
-            </Link>
+          <div className="flex text-2xl">
+            <span
+              className="cursor-pointer"
+              onClick={() => changeLanguage('en')}
+            >
+              En
+            </span>
             <span>/</span>
-            <Link href={'/fa'}>
-              <span>فا</span>
-            </Link>
-          </div> */}
-          <div className='flex text-2xl'>
-            <span onClick={() => changeLanguage('en')}>En</span>
-            <span>/</span>
-            <span onClick={() => changeLanguage('fa')}>فا</span>
+            <span
+              className="cursor-pointer"
+              onClick={() => changeLanguage('fa')}
+            >
+              فا
+            </span>
           </div>
         </div>
         <div className="children">{children}</div>
@@ -144,7 +148,7 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul className="menu md:hidden absolute top-[72px] ltr:left-[110px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
-          {menuItems.map(({ label, href }: { label: string, href: string }) => (
+          {menuItems.map(({ label, href }: { label: string; href: string }) => (
             <li
               className="font-condensed font-bold first:text-primary"
               key={label}
@@ -164,13 +168,15 @@ export default function Navbar({ children, menuItems, submenuItems, lang }: { ch
             </div>
 
             <ul>
-              {submenuItems.map(({ label, href }: { label: string, href: string }) => (
-                <li key={label} onClick={() => handleLinkClick()}>
-                  <Link href={href} className="font-condensed">
-                    {label}{' '}
-                  </Link>
-                </li>
-              ))}
+              {submenuItems.map(
+                ({ label, href }: { label: string; href: string }) => (
+                  <li key={label} onClick={() => handleLinkClick()}>
+                    <Link href={href} className="font-condensed">
+                      {label}{' '}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </li>
         </ul>
