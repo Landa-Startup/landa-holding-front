@@ -36,14 +36,14 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
         />
       </div>
       <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
-        <span className={`text-[#55422A] rtl:ml-7 md:ml-0 ltr:mr-7 md:mr-0 self-start text-3xl leading-tight md:text-5xl`}>
+        <span className={`text-[#55422A] mb-2 mr-8 ml-12 rtl:ml-7 md:ml-0 ltr:mr-7 md:mr-0 self-start text-3xl leading-tight md:text-5xl xl:ml-36 xl:mr-36`}>
           {t('LandaAccelerator', { returnObjects: true })[0].title}
         </span>
-        <span className={`text-[#AA8453] rtl:ml-7 md:ml-0 ltr:mr-7 md:mr-0 self-start text-xl leading-tight md:text-4xl`}>
+        <span className={`text-[#AA8453] mr-8 ml-12 rtl:ml-7 md:ml-0 ltr:mr-7 md:mr-0 self-start text-xl leading-tight md:text-4xl xl:ml-36 xl:mr-36`}>
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
         <div className={`mt-6 flex flex-col md:flex-row rtl:gap-12 ltr:gap-2`}>
-          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4">
+          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -62,7 +62,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
           addedClass='md:h-[756px] mt-6 md:mt-16 pb-3'
           title={t('FORUGHACCELERATOR', { returnObjects: true })[0].title}
           slogan={t('FORUGHACCELERATOR', { returnObjects: true })[0].subTitle}
-          imageClass={`absolute rtl:right-7 ltr:left-7 top-11 w-[52px] h-[44px] flex flex-row`}
+          imageClass={`absolute rtl:text-right ltr:text-left top-11 pl-12 w-[92px] h-[44px] flex flex-row`}
           imageSrc='/static/images/acceleration/Rectangle 2978.png'
           textUp={t('FORUGHACCELERATOR', { returnObjects: true })[0].textUp}
           textDown={t('FORUGHACCELERATOR', { returnObjects: true })[0].textDown}
