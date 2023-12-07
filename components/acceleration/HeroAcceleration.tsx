@@ -23,7 +23,7 @@ export default async function Hero({
   return (
     <div
       style={{
-        backgroundImage: `url('/static/images/acceleration/${backgroundImage}')`,
+        backgroundImage: `url('/static/images/acceleration/banner.png')`,
         backgroundSize: 'cover',
         backgroundPositionX: '65%',
       }}
