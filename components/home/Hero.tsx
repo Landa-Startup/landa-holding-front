@@ -2,14 +2,11 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Button from '../common/Button';
-import { useTranslation } from 'app/i18n';
-import { translationCard } from '@/types/global';
 
 export default function Hero({
   showLanda,
   titles,
   subTitle,
-  buttonBg,
   backgroundImage,
   leftImage,
   showButton,
@@ -84,12 +81,12 @@ export default function Hero({
       <div className="flex flex-col items-center justify-center space-y-7 py-36 md:h-screen md:space-y-8">
         <div
           className={` ${showLanda ? 'block' : 'hidden'
-            } text-center font-barlow text-3xl font-bold text-white md:text-4xl ltr:tracking-[12.6px]`}
+            } text-center font-barlow text-3xl font-bold text-white ltr:tracking-[12.6px] md:text-4xl`}
         >
           {title}
         </div>
         <div
-          className={`${notArray ? "text-center font-gilda text-5xl text-black md:text-right md:text-7xl" : "text-center font-gilda text-5xl font-normal ltr:tracking-[6.4px] text-neutral-50 text-opacity-95 md:text-right md:text-7xl"
+          className={`${notArray ? "text-center font-gilda text-5xl text-black md:text-right md:text-7xl" : "text-center font-gilda text-5xl font-normal text-neutral-50 text-opacity-95 ltr:tracking-[6.4px] md:text-right md:text-7xl"
             } ${isTitleChanging
               ? 'zoom-in-animation title-transition transition-opacity duration-[2500]'
               : ''
@@ -99,7 +96,7 @@ export default function Hero({
           {currentTitle}
         </div>
 
-        <div className={`text-center font-barlow text-3xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ltr:tracking-[4px]`}>
+        <div className={`text-center font-barlow text-3xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:text-4xl`}>
           {subTitle ? subTitle : ""}
         </div>
         {showButton ? (

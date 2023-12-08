@@ -5,7 +5,6 @@ import { useTranslation } from 'app/i18n';
 //TODO: hero components
 export default async function Hero({
   showLanda,
-  backgroundImage,
   leftImage,
   showButton,
   lang,
@@ -33,11 +32,11 @@ export default async function Hero({
         <div
           className={` ${
             showLanda ? 'block' : 'hidden'
-          } text-center font-barlow text-2xl font-normal ltr:tracking-[7px] text-white md:text-4xl ltr:md:tracking-[12.6px]`}
+          } text-center font-barlow text-2xl font-normal text-white ltr:tracking-[7px] md:text-4xl ltr:md:tracking-[12.6px]`}
         >
           {t('LandaHolding')}
         </div>
-        <div className="text-center font-gilda text-4xl ltr:tracking-[6.4px] text-[#F8F5F0] md:text-6xl">
+        <div className="text-center font-gilda text-4xl text-[#F8F5F0] ltr:tracking-[6.4px] md:text-6xl">
           {t('AccelerationCenter')}
         </div>
 

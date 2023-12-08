@@ -103,11 +103,11 @@ export default function LandaGene(
               <path fillRule="evenodd" clipRule="evenodd" d="M199.299 224.677C67.7205 134.097 76.1345 33.8586 60.4503 13.0781C49.4806 -1.45799 31.9209 -4.68781 14.8814 7.51177C-27.2299 37.6597 35.6014 77.2806 45.1603 88.2232C126.218 181.019 114.21 268.639 118.829 282.041C131.061 317.543 170.888 327.961 199.769 307.886C224.809 290.48 232.606 247.607 199.299 224.677Z" fill="#274192" />
             </svg>
           </div>
-          <p className='text-blue font-sans text-[15px] font-[600] leading-normal md:text-[25px]'>LANDA GENE</p>
+          <p className='text-blue font-sans text-[15px]  leading-normal md:text-[25px]'>LANDA GENE</p>
         </div>
 
         <div className='flex w-full shrink-0 items-center p-4 md:w-3/5'>
-          <p className='w-full text-justify font-sans text-[15px] font-[400] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-[25px] lg:leading-[40px]'>
+          <p className='w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-[25px] lg:leading-[40px]'>
             {textUp}
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function LandaGene(
         </div>
 
         <div className='flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-3/5'>
-          <p className='w-full text-justify font-sans text-[15px] font-[400] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[40px]'>
+          <p className='w-full text-justify font-sans text-[15px]  leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[40px]'>
             {textMid}
           </p>
         </div>

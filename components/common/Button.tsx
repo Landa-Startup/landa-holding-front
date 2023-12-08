@@ -16,7 +16,7 @@ type ButtonProps = DetailedHTMLProps<
   bgColor?: 'Primary' | 'Yellow';
   goto?: string;
   disabled?: boolean;
-  lang: string
+  lang?: string
   addedClass?: string;
 };
 

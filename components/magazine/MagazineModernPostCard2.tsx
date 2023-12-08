@@ -1,6 +1,3 @@
-import React from 'react';
-import Image from 'next/image';
-
 export default function MagazineModernPostCard2() {
   return (
     <div className='px-16'>

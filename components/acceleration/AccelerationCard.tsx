@@ -20,7 +20,6 @@ export default async function AccelerationCard({
   addedClass,
   title,
   slogan,
-  imageClass,
   imageSrc,
   textUp,
   textDown,
@@ -39,13 +38,13 @@ export default async function AccelerationCard({
         {/* <div className="flex items-center justify-start "> */}
           {/* <div className=" md:flex-row "> */}
 
-          <div className="w-full flex justify-between mt-10">
+          <div className="mt-10 flex w-full justify-between">
             <div className='flex items-center'>
               <PrimaryDot />
-              <span className="font-gilda ml-2 text-xs mr-2 text-[#80633E] md:mx-2 md:text-3xl ">
+              <span className="mx-2 font-gilda text-xs text-[#80633E] md:mx-2 md:text-3xl">
                 {title}
               </span>
-              <span className="font-gilda text-xs flex flex-col text-base text-[#AA8453] md:text-3xl">
+              <span className="flex flex-col font-gilda text-xs text-[#AA8453] md:text-3xl">
                 {slogan}
               </span>
             </div>
@@ -63,14 +62,14 @@ export default async function AccelerationCard({
           {/* </div> */}
         {/* </div> */}
 
-        <div className="mt-6 flex flex-col pb-3 font-barlow leading-[24px] ltr:text-normal rtl:text-right text-[#000] md:ml-48 lg:ml-20 xl:ml-0">
+        <div className="ltr:text-normal mt-6 flex flex-col pb-3 font-barlow leading-[24px] text-[#000] rtl:text-right md:ml-48 lg:ml-20 xl:ml-0">
           <p className={`${t('lng') && ''}`}>{textUp}</p>
           <p className={`mt-5 ${t('lng') && ''}`}>{textDown}</p>
         </div>
         <div className="flex justify-start">
           {itemsList && (
             <span
-              className={`mt-8 font-gilda text-lg xl:text-2xl text-[#AA8453] rtl: ltr:text-right`}
+              className={`rtl: mt-8 font-gilda text-lg text-[#AA8453] ltr:text-right xl:text-2xl`}
             >
               {t('AcceleratorProcess', { returnObjects: true })[0].title}
             </span>
@@ -82,7 +81,7 @@ export default async function AccelerationCard({
             {itemsList?.map((item, index) => (
               <span
                 key={index}
-                className={`rtl:text-right ltr:text-normal lg:text-lg`}
+                className={`ltr:text-normal rtl:text-right lg:text-lg`}
               >
                 {item}
               </span>

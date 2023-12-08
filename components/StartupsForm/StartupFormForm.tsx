@@ -13,9 +13,7 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import Select from '../../components/common/form/Select';
 import Button from '../common/Button';
 import { submitStartupsForm } from '../../pages/api/startups-form';
-
 import { useSubmit } from '../../providers/StateProvider';
-import { language } from 'googleapis/build/src/apis/language';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -156,7 +154,7 @@ export default function StartupFormForm(
   }))
 
   return (
-    <div className="container font-barlow m-10 mx-auto px-5 pt-20 text-center lg:p-2">
+    <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
       <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
         <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
       </div>

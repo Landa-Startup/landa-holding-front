@@ -7,7 +7,7 @@ import LandaHoldingBlack from '../../components/home/LandaHoldingBlack';
 import HomeCardsContainer from '../../components/home/HomeCardsContainer';
 import Partners from '../../components/home/Partners';
 import HomeOurTeam from '../../components/home/HomeOurTeam';
-import AerialViewBusinessTeam from '../../components/home/BusinessTeam';
+// import AerialViewBusinessTeam from '../../components/home/BusinessTeam';
 
 import { useTranslation } from '../i18n';
 

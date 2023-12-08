@@ -49,7 +49,7 @@ export default async function ContactUsDescription(
       <div className={`mt-10 flex flex-col gap-4`}>
         <div className="flex gap-5">
           <Phone />
-          <div className="flex flex-col mb-5">
+          <div className="mb-5 flex flex-col">
             <span className="font-semibold">{t('phone')}</span>
             <ul className="gap-1">
               {/* TODO: create component for below icons */}

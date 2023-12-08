@@ -19,10 +19,10 @@ export default async function LandaHoldingBlack(
   return (
     <div className={`flex flex-col justify-evenly md:flex-row md:justify-between ${t('lng') === "en" ? "md:pl-36 md:pr-20" : "md:pl-20 md:pr-40"} relative items-center space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:py-10`}>
       <Lines />
-      <div className="flex flex-col justify-around space-y-6 pt-8 rtl:mr-1 z-10">
+      <div className="z-10 flex flex-col justify-around space-y-6 pt-8 rtl:mr-1">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-0"} font-condensed`}>
+            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-0 text-xl"} font-condensed`}>
               {t('LandaHolding')}
             </span>
             <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
@@ -56,10 +56,10 @@ export default async function LandaHoldingBlack(
         </button>
       </div>
 
-      <div className="flex flex-col justify-around space-y-6 pt-8 md:mr-4 z-10">
+      <div className="z-10 flex flex-col justify-around space-y-6 pt-8 md:mr-4">
         <div className="flex flex-col items-center self-start md:items-start">
-          <div className="flex flex-col mt-6">
-            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-0"} font-condensed`}>
+          <div className="mt-6 flex flex-col">
+            <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-0 text-xl"} font-condensed`}>
               {t('LandaHolding')}
               <br />
             </span>

@@ -1,33 +1,32 @@
 'use client';
-import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button';
-import PartnersDiamondsContainer from './PartnersDiamondsContainer';
+// import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
 import { useTranslation } from 'app/i18n';
 import { logos } from 'app/[lang]/statics';
 
 export default function Partners(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   // const { t } = await useTranslation(lang, "mainPage")
 
-  const langChangeHandle = async (lang: string) => {
+  const LangChangeHandle = async (lang: string) => {
     const { t } = await useTranslation(lang, "mainPage")
 
     return t;
-  } 
+  }
 
-  let translated = langChangeHandle(lang);
+  const translated = LangChangeHandle(lang);
 
-  let L = translated.then((res) => {
-    let L = res('partners', {returnObjects: true}).logos
+  const L = translated.then((res) => {
+    const L = res('partners', { returnObjects: true }).logos
     return L
   })
 
-  let t = translated.then((res) => {
-    let title = res('partners', {returnObjects: true}).title
+  const t = translated.then((res) => {
+    const title = res('partners', { returnObjects: true }).title
     return title
   })
 
@@ -41,7 +40,7 @@ export default function Partners(
     const scrollContainer = scrollContainerRef.current;
 
     function scrollAutomatically() {
-      const scrollSpeed = 50; // Adjust this value to control the scroll speed.
+      // const scrollSpeed = 50; // Adjust this value to control the scroll speed.
       const scrollAmount = 1;
       if (scrollContainer != null && isScrolling) {
         // Check if scrolling is allowed
@@ -91,41 +90,39 @@ export default function Partners(
   };
 
   return (
-    <div className="flex flex-col items-center my-6 gap-12">
-      <span className="text-3xl font-condensed md:text-4xl text-primary">
+    <div className="my-6 flex flex-col items-center gap-12">
+      <span className="font-condensed text-3xl text-primary md:text-4xl">
         {lang === "en" ? "Join Our Business Affiliates" : t.then((res) => (
           <>{res}</>
         ))}
       </span>
       <div
         ref={scrollContainerRef}
-        onMouseEnter={lang === "en" ? handleMouseEnter : () => {}}
-        onMouseLeave={lang === "en" ? handleMouseLeave : () => {}}
-        onMouseDown={lang === "en" ? handleMouseDown : () => {}}
-        onMouseMove={lang === "en" ? handleMouseMove : () => {}}
-        onMouseUp={lang === "en" ? handleMouseUp : () => {}}
-        className="overflow-x-scroll md:overflow-x-hidden snap-mandatory snap-x rtl:md:overflow-x-scroll gap-12 grid grid-flow-col w-[calc(100%-2%)] cursor-pointer"
+        onMouseEnter={lang === "en" ? handleMouseEnter : () => { }}
+        onMouseLeave={lang === "en" ? handleMouseLeave : () => { }}
+        onMouseDown={lang === "en" ? handleMouseDown : () => { }}
+        onMouseMove={lang === "en" ? handleMouseMove : () => { }}
+        onMouseUp={lang === "en" ? handleMouseUp : () => { }}
+        className="grid w-[calc(100%-2%)] cursor-pointer snap-x snap-mandatory grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden rtl:md:overflow-x-scroll"
       >
         {lang === "en" && logos.map((logo) => (
-          <section className='snap-center'>
-          <PartnersStartupCard
-            key={logo.number}
-            logo={logo.number}
-            title={logo.title}
-            description={logo.description}
-          />
+          <section className='snap-center' key={logo.number}>
+            <PartnersStartupCard
+              logo={logo.number}
+              title={logo.title}
+              description={logo.description}
+            />
           </section>
         ))}
         {lang === "fa" && L.then((res) => (
           <>
-            {res.map(({number, title, description} : {number: number, title: string, description: string}) => (
-              <section className='snap-center'>
-              <PartnersStartupCard
-                key={number}
-                logo={number}
-                title={title}
-                description={description}
-              />
+            {res.map(({ number, title, description }: { number: number, title: string, description: string }) => (
+              <section className='snap-center' key={number}>
+                <PartnersStartupCard
+                  logo={number}
+                  title={title}
+                  description={description}
+                />
               </section>
             ))}
           </>

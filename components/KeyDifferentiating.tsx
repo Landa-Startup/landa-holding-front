@@ -1,10 +1,9 @@
-import { items } from 'app/[lang]/statics';
 import { useTranslation } from 'app/i18n';
 import Image from 'next/image';
 import React from 'react';
 
 export default async function KeyDifferentiating(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const { t } = await useTranslation(lang, "aboutUs")
@@ -13,22 +12,22 @@ export default async function KeyDifferentiating(
   //   console.log(item, index);
   // })
 
-  console.log(t('itemList', {returnObjects: true}));
- 
+  console.log(t('itemList', { returnObjects: true }));
+
   return (
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] md:grid-cols-2">
-      <div className="m-5 flex flex-col gap-5 md:my-20 md:ml-28 rtl:mr-6">
+      <div className="m-5 flex flex-col gap-5 rtl:mr-6 md:my-20 md:ml-28">
         <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">
-          {t('KeyDifferentiatingFactors', {returnObjects: true})[0].title}
+          {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
         <div className="gap-2 font-barlow leading-9 text-black md:w-[350px] lg:w-[450px] xl:w-[550px]">
           <p>
-            {t('KeyDifferentiatingFactors', {returnObjects: true})[0].titleText}
+            {t('KeyDifferentiatingFactors', { returnObjects: true })[0].titleText}
           </p>
-          <span className="font-bold text-primary">{t('KeyDifferentiatingFactors', {returnObjects: true})[0].textTitle}</span>
-          <ul className='ltr:ml-4 rtl:mr-4 list-decimal'>
-            {t('itemList', {returnObjects: true}).map((item:string) => (
-              <li>
+          <span className="font-bold text-primary">{t('KeyDifferentiatingFactors', { returnObjects: true })[0].textTitle}</span>
+          <ul className='list-decimal ltr:ml-4 rtl:mr-4'>
+            {t('itemList', { returnObjects: true }).map((item: string, index: number) => (
+              <li key={index}>
                 {item}
               </li>
             ))}

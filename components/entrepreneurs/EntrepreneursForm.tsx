@@ -75,7 +75,7 @@ export default function EntrepreneursForm(
       setTimeout(() => {
         handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
-    }).catch((error) => {
+    }).catch(() => {
       handleChangeReject();
       reset(initialFormData);
   

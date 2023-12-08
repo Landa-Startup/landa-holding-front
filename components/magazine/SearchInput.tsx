@@ -1,6 +1,4 @@
-import React from 'react';
 import Magnifier from '../icons/common/Magnifier';
-import Input from '../common/form/Input';
 
 export default function SearchInput() {
   return (

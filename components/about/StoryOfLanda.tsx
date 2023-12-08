@@ -20,7 +20,7 @@ export default async function StoryOfLanda(
               layout="fill"
             />
           </div>
-        <div className="px-10 mt-4">
+        <div className="mt-4 px-10">
         <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
             {t('TheStoryOfLanda', { returnObjects: true })[0].title}
           </span>

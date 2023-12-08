@@ -1,8 +1,8 @@
 'use client';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useState } from 'react';
 import Chevron from '../common/Chevron';
-import Link from 'next/link';
+// import Link from 'next/link';
 import BusinessTeamCard from './BusinessTeamCard';
 import { useTranslation } from 'app/i18n';
 
@@ -49,13 +49,13 @@ export default function AerialViewBusinessTeam(
 
   // console.log(t('LandaHolding'))
 
-  const langChangeHandle = async (lang: string) => {
+  const LangChangeHandle = async (lang: string) => {
     const { t } = await useTranslation(lang, "mainPage")
 
     return t;
   } 
 
-  let translated = langChangeHandle(lang);
+  const translated = LangChangeHandle(lang);
 
   const title = translated.then((res) => {
     const LandaHolding = res('LandaHolding')

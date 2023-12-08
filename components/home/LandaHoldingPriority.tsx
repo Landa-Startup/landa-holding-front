@@ -1,6 +1,5 @@
 import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
-import { cardData1 } from '../../app/[lang]/statics';
 import { useTranslation } from 'app/i18n';
 
 export default async function LandaHoldingPriority(
@@ -13,7 +12,7 @@ export default async function LandaHoldingPriority(
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
       <div className='felx flex-col items-start'>
       <div className="mb-4 flex flex-col items-start ltr:ml-4 rtl:mr-4">
-        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-0"} font-condensed`}>
+        <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "tracking-0 text-xl"} font-condensed`}>
           {t('LandaHolding')}
           <br />
         </span>

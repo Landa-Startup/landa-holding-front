@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { countryList } from '../../../app/[lang]/statics';
 import Select from '../../common/form/Select';
 import Input from '../../common/form/Input';
-import { useTranslation } from 'app/i18n';
+// import { useTranslation } from 'app/i18n';
 
 const countriesData = countryList.map((country: string) => ({
   value: country,
@@ -23,7 +23,7 @@ export default function CountryInput({
   nameInput,
   lang
 }: Props) {
-  const {t} = useTranslation(lang, 'common')
+  // const {t} = useTranslation(lang, 'common')
   const [selectedCountry, setSelectedCountry] = useState('');
 
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

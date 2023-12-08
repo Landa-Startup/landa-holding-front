@@ -18,7 +18,7 @@ export default function TeamRolesContainer({
     setSelectedRole(role);
   }
   return (
-    <div className="font-barlow flex flex-wrap justify-center gap-1  bg-slate-50  pb-5 pt-10">
+    <div className="flex flex-wrap justify-center gap-1 bg-slate-50  pb-5  pt-10 font-barlow">
       {roles.map((role, index) => (
         <button
           onClick={() => handleRoleClick(role)}

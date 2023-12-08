@@ -1,8 +1,6 @@
 'use client'
-import React, { ReactElement } from 'react';
 import Button from '../common/Button';
 import { useRouter } from 'next/navigation';
-import { language } from 'googleapis/build/src/apis/language';
 
 export default function FeaturesCards({
   title,
@@ -17,7 +15,7 @@ export default function FeaturesCards({
 }) {
   const router = useRouter();
 
-  const handleOnClick = (e:React.MouseEvent<HTMLButtonElement>)=>{
+  const handleOnClick = () => {
     router.push(link);
   }
 

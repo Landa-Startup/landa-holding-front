@@ -7,7 +7,7 @@ export default function PartnersDiamondsContainer() {
   return (
     <div className="flex flex-col">
       <div className="mx-auto flex flex-wrap gap-14 pt-48">
-        {partners1.map((partner, index) => (
+        {partners1.map((partner) => (
           <PartnersDiamond
             key={partner.number}
             backgroundImage={partner.number}
@@ -16,7 +16,7 @@ export default function PartnersDiamondsContainer() {
         ))}
       </div>
       <div className="mx-auto flex flex-wrap gap-14">
-        {partners2.map((partner, index) => (
+        {partners2.map((partner) => (
           <PartnersDiamond
             key={partner.number}
             backgroundImage={partner.number}
@@ -25,7 +25,7 @@ export default function PartnersDiamondsContainer() {
         ))}
       </div>
       <div className="mx-auto flex flex-wrap  gap-14 pb-20">
-        {partners3.map((partner, index) => (
+        {partners3.map((partner) => (
           <PartnersDiamond
             key={partner.number}
             backgroundImage={partner.number}

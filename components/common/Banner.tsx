@@ -21,7 +21,7 @@ export default async function Banner({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className="absolute inset-0 h-screen md:h-[650px] blur-[2px] lg:h-[512px]"
+        className="absolute inset-0 h-screen blur-[2px] md:h-[650px] lg:h-[512px]"
       ></div>
 
       <div
@@ -32,7 +32,7 @@ export default async function Banner({
         <div className="relative flex h-[650px] items-stretch justify-center lg:h-[512px] lg:justify-start">
           <div className="flex flex-col items-center justify-center text-center md:m-auto lg:m-auto">
             {/* Text Content */}
-            <p className={`font-condensed text-xl font-normal ltr:tracking-[5.60px] text-neutral-50`}>
+            <p className={`font-condensed text-xl font-normal text-neutral-50 ltr:tracking-[5.60px]`}>
               {(t('LandaHolding'))}
             </p>
             <p className="font-gilda text-[32px] font-normal text-neutral-50 md:text-[50px] lg:text-[50px] xl:text-[50px]">

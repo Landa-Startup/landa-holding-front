@@ -20,8 +20,8 @@ export default function PartnersStartupCard({
         height={100}
       />
       <div className="flex flex-col gap-2">
-        <span className="text-lg font-gilda">{title}</span>
-        <p className="leading-4 ltr:tracking-[1.3px] font-barlow">{description}</p>
+        <span className="font-gilda text-lg">{title}</span>
+        <p className="font-barlow leading-4 ltr:tracking-[1.3px]">{description}</p>
       </div>
     </div>
   );

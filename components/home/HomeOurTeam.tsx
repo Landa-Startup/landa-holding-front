@@ -19,11 +19,11 @@ export default async function HomeOurTeam(
           {t('LandaHolding')}
           <br />
         </span>
-        <span className={`text-5xl mr-20 font-normal ltr:tracking-widest ltr:p-4 tracking-normal font-condensed text-black xl:mr-0`}>
+        <span className={`mr-20 font-condensed text-5xl font-normal tracking-normal text-black ltr:p-4 ltr:tracking-widest xl:mr-0`}>
           {t('OurTeam')}
           <br />
         </span>
-        <p className="mt-8 mb-4 font-barlow">
+        <p className="mb-4 mt-8 font-barlow">
           {t('ourTeamText')}
         </p>
       </div>

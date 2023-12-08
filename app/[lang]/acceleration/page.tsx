@@ -36,13 +36,13 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
         />
       </div>
       <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
-        <span className={`text-[#55422A] mb-2 mr-8 ml-12 rtl:ml-7 md:ml-0 ltr:mr-7 md:mr-0 self-start text-3xl leading-tight md:text-5xl xl:ml-36 xl:mr-36`}>
+        <span className={`mb-2 ml-12 mr-8 self-start text-3xl leading-tight text-[#55422A] ltr:mr-7 rtl:ml-7 md:mx-0 md:text-5xl xl:mx-36`}>
           {t('LandaAccelerator', { returnObjects: true })[0].title}
         </span>
-        <span className={`text-[#AA8453] mr-8 ml-12 rtl:ml-7 md:ml-0 ltr:mr-7 md:mr-0 self-start text-xl leading-tight md:text-4xl xl:ml-36 xl:mr-36`}>
+        <span className={`ml-12 mr-8 self-start text-xl leading-tight text-[#AA8453] ltr:mr-7 rtl:ml-7 md:mx-0 md:text-4xl xl:mx-36`}>
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
-        <div className={`mt-6 flex flex-col md:flex-row rtl:gap-12 ltr:gap-2`}>
+        <div className={`mt-6 flex flex-col ltr:gap-2 rtl:gap-12 md:flex-row`}>
           <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10">
             <Image
               className=" object-cover"
@@ -52,7 +52,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
               loading="lazy"
             />
           </div>
-          <p className={`w-[340px] text-justify font-barlow md:h-[248px] md:w-[550px] lg:w-[680px] lg:pr-2 rtl:text-base  ltr:text-lg leading-8 tracking-[1.6px]`}>
+          <p className={`w-[340px] text-justify font-barlow leading-8 tracking-[1.6px] ltr:text-lg rtl:text-base md:h-[248px]  md:w-[550px] lg:w-[680px] lg:pr-2`}>
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
         </div>
@@ -88,7 +88,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
           </span>
           <AccelerationServices services={t('LandaAcceleratorServices', { returnObjects: true })[0].items} />
         </div>
-        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 ltr:tracking-[2px] text-[#55422A] md:mx-10 md:text-left rtl:md:text-right">
+        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] ltr:tracking-[2px] md:mx-10 md:text-left rtl:md:text-right">
           <svg
             className="mt-3 hidden md:block"
             xmlns="http://www.w3.org/2000/svg"

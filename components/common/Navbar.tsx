@@ -23,7 +23,10 @@ export default function Navbar({
 
   const changeLanguage = (language: string) => {
     // const currentPath = pathName
-    const newPath = pathName.replace(/^\/(en|fa)/, `/${language}`);
+    const newPath = pathName?.replace(/^\/(en|fa)/, `/${language}`);
+    if (!newPath) {
+      return;
+    }
     router.push(newPath);
   };
   const handleLinkClick = () => {
@@ -44,7 +47,7 @@ export default function Navbar({
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full flex-row items-center ltr:flex-row-reverse md:ltr:flex-row justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
+        <div className="navbar fixed flex w-full flex-row items-center justify-between bg-neutral-800 bg-opacity-80 p-0 text-white ltr:flex-row-reverse md:px-12 md:ltr:flex-row ">
           <div className="mt-3 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -82,8 +85,8 @@ export default function Navbar({
             </Link>
           </div>
 
-          <div className="ml-32 hidden justify-center mr-20 ltr:mr-60 xl:flex xl:flex-1">
-            <ul className="menu menu-horizontal flex justify-center space-x-10 rtl:space-x-reverse font-condensed text-xl font-bold ">
+          <div className="ml-32 mr-20 hidden justify-center ltr:mr-60 xl:flex xl:flex-1">
+            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li className="h-9 text-2xl" key={label}>
@@ -102,9 +105,8 @@ export default function Navbar({
                     {lang === 'en' ? 'FORMS' : 'فرم ها'}
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map(
                       ({ label, href }: { label: string; href: string }) => (
@@ -147,7 +149,7 @@ export default function Navbar({
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu md:hidden absolute top-[72px] ltr:left-[110px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black">
+        <ul className="menu absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
             <li
               className="font-condensed font-bold first:text-primary"
@@ -180,7 +182,7 @@ export default function Navbar({
             </ul>
           </li>
         </ul>
-        <div className="hidden absolute bottom-0 h-10 w-80 items-center justify-between bg-[#222] px-10">
+        <div className="absolute bottom-0 hidden h-10 w-80 items-center justify-between bg-[#222] px-10">
           <Link
             href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
             target="_blank"

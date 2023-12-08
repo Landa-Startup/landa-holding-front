@@ -12,7 +12,7 @@ import Input from './Input';
 import TextArea from '../TextArea';
 import Button from '../Button';
 export default function ContactUsForm(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
 
   const {
@@ -26,8 +26,8 @@ export default function ContactUsForm(
   });
 
   const {
-    csrfToken, 
-    handleTokenChange, 
+    csrfToken,
+    handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
@@ -50,17 +50,17 @@ export default function ContactUsForm(
     // Set loading and sending states.
     handleSubmitingChange(true);
     handleSendChange(true);
-  
+
     // Create a FormData object for form data.
     const sendFormData = new FormData();
-  
+
     // Append all non-file form fields.
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
       if (typeof fieldValue !== 'object' || fieldValue === null) {
         sendFormData.append(fieldName, String(fieldValue));
       }
     });
-  
+
     // Send the form data to the API.
     submitContactForm(sendFormData, csrfToken).then((response) => {
       console.log(response);
@@ -70,10 +70,10 @@ export default function ContactUsForm(
       setTimeout(() => {
         handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
-    }).catch((error) => {
+    }).catch(() => {
       handleChangeReject();
       reset(ContactFormData);
-  
+
       setTimeout(() => {
         handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
@@ -138,13 +138,13 @@ export default function ContactUsForm(
           </div>
         </div>
         <Button
-            type='submit'
-            bgColor="Primary"
-            disabled={errorsList[0] ? true : false}
-            lang={lang}
-          />
+          type='submit'
+          bgColor="Primary"
+          disabled={errorsList[0] ? true : false}
+          lang={lang}
+        />
       </form>
-      <NotificationSendForm/>
+      <NotificationSendForm />
     </div>
   );
 }
