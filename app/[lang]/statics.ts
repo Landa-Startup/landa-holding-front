@@ -369,13 +369,6 @@ const personsEN:personArrayInterface[] = [
     },
 
     {
-      image: '/static/images/our-team/Personals/a15.png',
-      position: 'Junior Back-end',
-      name: 'Fatemeh Safi',
-      linkedIn: '',
-      category: 'programmers'
-    },
-    {
       image: '/static/images/our-team/Personals/a16.png',
       position: 'Full Stack',
       name: 'Sobhan Emami',
@@ -390,14 +383,6 @@ const personsEN:personArrayInterface[] = [
       linkedIn: '',
       category: 'programmers'
     },
-    {
-      image: '/static/images/our-team/Personals/a18.png',
-      position: 'Front-end',
-      name: 'Saman Karchegani',
-      linkedIn: '',
-      category: 'programmers'
-    },
-
     {
       image: '/static/images/our-team/Personals/a19.png',
       position: 'Front-end',
@@ -420,26 +405,11 @@ const personsEN:personArrayInterface[] = [
       category: 'designers'
     },
     {
-      image: '/static/images/our-team/Personals/a22.png',
-      position: 'Graphic Designer',
-      name: 'Aynaz Reisi',
-      linkedIn: '',
-      category: 'designers'
-    },
-
-    {
       image: '/static/images/our-team/Personals/a23.png',
       position: 'Content Creator',
       name: 'Mahtab Hafizi',
       linkedIn: '',
       category: 'content creators'
-    },
-    {
-      image: '/static/images/our-team/Personals/a24.png',
-      position: 'UI designer',
-      name: 'Saba Mokhtari',
-      linkedIn: '',
-      category: 'programmers'
     },
     {
       image: '/static/images/our-team/Personals/a25.png',
@@ -448,14 +418,6 @@ const personsEN:personArrayInterface[] = [
       linkedIn: '',
       category: 'content creators'
     },
-    {
-      image: '/static/images/our-team/Personals/a26.png',
-      position: 'Word Press Developer',
-      name: 'Roham Arabloo',
-      linkedIn: '',
-      category: 'programmers'
-    },
-
     {
       image: '/static/images/our-team/Personals/a27.png',
       position: 'Full Stack',
@@ -467,13 +429,6 @@ const personsEN:personArrayInterface[] = [
       image: '/static/images/our-team/Personals/a28.png',
       position: 'Front-end',
       name: 'Mahdi Salmanzadeh',
-      linkedIn: '',
-      category: 'programmers'
-    },
-    {
-      image: '/static/images/our-team/Personals/a29.png',
-      position: 'Front-end',
-      name: 'Mahrokh Lotfi',
       linkedIn: '',
       category: 'programmers'
     },
@@ -624,13 +579,6 @@ const personsFA:personArrayInterface[] = [
       image: '/static/images/our-team/Personals/a17.png',
       position: 'فرانت اند',
       name: 'فهیمه سجادی',
-      linkedIn: '',
-      category: 'برنامه نویسان'
-    },
-    {
-      image: '/static/images/our-team/Personals/a18.png',
-      position: 'فرانت اند',
-      name: 'سامان کرچگانی',
       linkedIn: '',
       category: 'برنامه نویسان'
     },
