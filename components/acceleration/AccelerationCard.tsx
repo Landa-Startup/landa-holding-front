@@ -42,7 +42,7 @@ export default async function AccelerationCard({
           <div className="w-full flex justify-between mt-10">
             <div className='flex items-center'>
               <PrimaryDot />
-              <span className="font-gilda text-xs mr-2 text-[#80633E] md:mx-2 md:text-3xl ">
+              <span className="font-gilda ml-2 text-xs mr-2 text-[#80633E] md:mx-2 md:text-3xl ">
                 {title}
               </span>
               <span className="font-gilda text-xs flex flex-col text-base text-[#AA8453] md:text-3xl">
@@ -51,7 +51,7 @@ export default async function AccelerationCard({
             </div>
             <div>
                 <Image
-                  // className={imageClass}
+                  //className={imageClass}
                   src={imageSrc}
                   alt="ACCELERATOR"
                   width={51}
@@ -63,14 +63,14 @@ export default async function AccelerationCard({
           {/* </div> */}
         {/* </div> */}
 
-        <div className="mt-6 flex flex-col pb-3 font-barlow leading-[24px] ltr:tracking-[1.6px] text-[#000] md:ml-48 lg:ml-20 xl:ml-0">
-          <p className={`${t('lng') && 'text-right'}`}>{textUp}</p>
-          <p className={`mt-5 ${t('lng') && 'text-right'}`}>{textDown}</p>
+        <div className="mt-6 flex flex-col pb-3 font-barlow leading-[24px] ltr:text-normal rtl:text-right text-[#000] md:ml-48 lg:ml-20 xl:ml-0">
+          <p className={`${t('lng') && ''}`}>{textUp}</p>
+          <p className={`mt-5 ${t('lng') && ''}`}>{textDown}</p>
         </div>
         <div className="flex justify-start">
           {itemsList && (
             <span
-              className={`mt-8 font-gilda text-3xl text-[#AA8453] rtl: ltr:text-right`}
+              className={`mt-8 font-gilda text-lg xl:text-2xl text-[#AA8453] rtl: ltr:text-right`}
             >
               {t('AcceleratorProcess', { returnObjects: true })[0].title}
             </span>
@@ -78,11 +78,11 @@ export default async function AccelerationCard({
         </div>
 
         {itemsList && (
-          <div className="z-10 mt-6 grid grid-cols-2 gap-6 font-barlow text-xs text-[#000] md:text-sm lg:text-sm xl:text-sm rtl:text-right ltr:text-right">
+          <div className="z-10 mt-6 grid grid-cols-2 gap-6 font-barlow text-xs text-[#000] md:text-sm lg:text-sm xl:text-sm">
             {itemsList?.map((item, index) => (
               <span
                 key={index}
-                className={`rtl:text-normal ltr:text-right lg:text-lg`}
+                className={`rtl:text-right ltr:text-normal lg:text-lg`}
               >
                 {item}
               </span>

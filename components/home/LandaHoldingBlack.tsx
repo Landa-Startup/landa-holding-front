@@ -19,7 +19,7 @@ export default async function LandaHoldingBlack(
   return (
     <div className={`flex flex-col justify-evenly md:flex-row md:justify-between ${t('lng') === "en" ? "md:pl-36 md:pr-20" : "md:pl-20 md:pr-40"} relative items-center space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:py-10`}>
       <Lines />
-      <div className="flex flex-col justify-around space-y-6 pt-8 rtl:mr-4 z-10">
+      <div className="flex flex-col justify-around space-y-6 pt-8 rtl:mr-1 z-10">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span className={`text-base font-normal text-black ${t('lng') === "en" ? "tracking-[5.60px]" : "text-xl tracking-0"} font-condensed`}>
@@ -34,7 +34,7 @@ export default async function LandaHoldingBlack(
 
         <UlList
           list={t('lng') === "en" ? L1EN : L1FA} 
-          style1='w-[320px] md:w-[454px] pr-6'
+          style1='w-[320px] md:w-[454px] pr-5'
           style2='space-y-2 mr-8 mt-4'
           style3='leading-4 md:leading-10 text-md'
         />
