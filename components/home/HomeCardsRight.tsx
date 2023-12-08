@@ -4,23 +4,29 @@ import React from 'react';
 export default function HomeCardsRight({
   images,
   titles,
-  link,
+lang
 }: {
   titles: string;
   images: Array<{ src: string; alt: string }>;
   link: string;
+  lang: string;
 }) {
   return (
     <div className="flex flex-col self-start md:self-center">
-      <div className="flex flex-col items-start md:items-center space-y-2 mt-9 md:mt-0">
-        <span className="font-gilda text-4xl md:text-6xl tracking-[6.5px]">
-          {titles}
-        </span>
+      <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">
+        <div className="flex flex-col gap-2 rtl:flex-row-reverse">
+          <span className="font-condensed text-3xl ltr:tracking-[11px]">{lang === "en" ? "LANDA" : "لاندا"}</span>
+          <span className="lrt:tracking-[6.5px] font-gilda text-4xl md:text-6xl">
+            {titles}
+          </span>
+        </div>
       </div>
-      <div className="flex space-x-7">
+      <div className="flex space-x-7 rtl:space-x-reverse">
         {images.map((image, index) => (
           <div
-            className="relative w-64 h-96 mt-5 md:first:mt-44 last:mt-14 hidden md:block lg:mb-0"
+            className={`relative mt-5 hidden h-96 w-64 ${
+              lang === 'en' ? 'last:mt-14' : 'last:mt-[5.25rem]'
+            } md:block md:first:mt-44 lg:mb-0`}
             key={index}
           >
             <Image

@@ -1,51 +1,46 @@
 'use client';
-import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button';
-import PartnersDiamondsContainer from './PartnersDiamondsContainer';
+// import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
+import { useTranslation } from 'app/i18n';
+import { logos } from 'app/[lang]/statics';
 
-export default function Partners() {
-  const logos = [
-    {
-      number: 2,
-      title: 'Islamic Azad University of Isfahan(Khorasgan)',
-      description:
-        'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
-      alt: 'azad university',
-    },
-    {
-      number: 3,
-      title: 'Dr. Nekui Educational Holding',
-      description:
-        'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
-      alt: 'nekeoi',
-    },
+export default function Partners(
+  { lang }: { lang: string }
+) {
 
-    {
-      number: 7,
-      title: 'ASIAHITECH',
-      description:
-        'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
-      alt: 'evimo',
-    },
-    {
-      number: 8,
-      title: 'Chamber of Commerce, Industries, Mines and Agriculture',
-      description:
-        'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
-      alt: 'evimo',
-    },
-  ];
+  // const { t } = await useTranslation(lang, "mainPage")
+
+  const LangChangeHandle = async (lang: string) => {
+    const { t } = await useTranslation(lang, "mainPage")
+
+    return t;
+  }
+
+  const translated = LangChangeHandle(lang);
+
+  const L = translated.then((res) => {
+    const L = res('partners', { returnObjects: true }).logos
+    return L
+  })
+
+  const t = translated.then((res) => {
+    const title = res('partners', { returnObjects: true }).title
+    return title
+  })
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-  const [isScrolling, setIsScrolling] = useState(true); // Control scrolling with a Boolean state
+  const [isScrolling, setIsScrolling] = useState(lang === "en" ? true : false);
+  const [dragging, setDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
 
     function scrollAutomatically() {
-      const scrollSpeed = 50; // Adjust this value to control the scroll speed.
+      // const scrollSpeed = 50; // Adjust this value to control the scroll speed.
       const scrollAmount = 1;
       if (scrollContainer != null && isScrolling) {
         // Check if scrolling is allowed
@@ -62,7 +57,7 @@ export default function Partners() {
     const intervalId = setInterval(scrollAutomatically, 50); // Adjust the interval as needed.
 
     return () => clearInterval(intervalId);
-  }, [isScrolling]); // Add isScrolling as a dependency
+  }, [isScrolling]);
 
   // Add event listeners to stop automatic scroll on mouse enter
   const handleMouseEnter = () => {
@@ -71,30 +66,74 @@ export default function Partners() {
 
   // Add event listener to resume automatic scroll on mouse leave
   const handleMouseLeave = () => {
-    setIsScrolling(true); // Resume scrolling
+    setIsScrolling(lang === "en" ? true : false); // Resume scrolling
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setDragging(true);
+    setStartX(e.clientX);
+    setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!dragging) return;
+
+    if (scrollContainerRef.current) {
+      const x = e.clientX;
+      const walk = (x - startX) * 1; // You can adjust the factor for smoother or faster scrolling
+      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    }
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
   };
 
   return (
-    <div className="flex flex-col items-center my-6 gap-12">
-      <span className="text-3xl md:text-4xl text-primary">
-        Join Our Business Affiliates
+    <div className="my-6 flex flex-col items-center gap-12">
+      <span className="font-condensed text-3xl text-primary md:text-4xl">
+        {lang === "en" ? "Join Our Business Affiliates" : t.then((res) => (
+          <>{res}</>
+        ))}
       </span>
       <div
         ref={scrollContainerRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className="overflow-x-scroll md:overflow-x-hidden gap-14 grid grid-flow-col w-[calc(100%-2%)]"
+        onMouseEnter={lang === "en" ? handleMouseEnter : () => { }}
+        onMouseLeave={lang === "en" ? handleMouseLeave : () => { }}
+        onMouseDown={lang === "en" ? handleMouseDown : () => { }}
+        onMouseMove={lang === "en" ? handleMouseMove : () => { }}
+        onMouseUp={lang === "en" ? handleMouseUp : () => { }}
+        className="grid w-[calc(100%-2%)] cursor-pointer snap-x snap-mandatory grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden rtl:md:overflow-x-scroll"
       >
-        {logos.map((logo) => (
-          <PartnersStartupCard
-            key={logo.number}
-            logo={logo.number}
-            title={logo.title}
-            description={logo.description}
-          />
+        {lang === "en" && logos.map((logo) => (
+          <section className='snap-center' key={logo.number}>
+            <PartnersStartupCard
+              logo={logo.number}
+              title={logo.title}
+              description={logo.description}
+            />
+          </section>
+        ))}
+        {lang === "fa" && L.then((res) => (
+          <>
+            {res.map(({ number, title, description }: { number: number, title: string, description: string }) => (
+              <section className='snap-center' key={number}>
+                <PartnersStartupCard
+                  logo={number}
+                  title={title}
+                  description={description}
+                />
+              </section>
+            ))}
+          </>
         ))}
       </div>
-      <Button goto="/partner-membership" size="visit" text="JOIN US" bgColor="Primary" />
+      <Button
+        goto="/partner-membership"
+        size="visit"
+        bgColor="Primary"
+        lang={lang}
+      />
     </div>
   );
 }

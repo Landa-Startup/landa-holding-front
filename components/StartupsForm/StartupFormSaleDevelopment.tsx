@@ -1,66 +1,47 @@
 
 import React,{useState} from 'react';
 import Input from '../common/form/Input';
-import { InvestorRegistrationFormData } from 'app/types/global';
-import { useForm } from 'react-hook-form';
-import TextArea from '../common/TextArea';
 import YesRadioButton from '../common/YesRadioButton';
 import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
+import { handleRadioChange } from '../../utils/functions';
 
 export default function StartupFormSaleDevelopment({
   register,
   errors,
-  handlePitchDeckFileChange,
-  handleBusinessPlanFileChange,
+  handlePitchFileChange,
+  handleBusinessFileChange,
   handleFinancialFileChange
 }: {
   register: any;
   errors: any;
-  handlePitchDeckFileChange:any;
-  handleBusinessPlanFileChange:any;
-  handleFinancialFileChange:any;
+  handlePitchFileChange: any;
+  handleBusinessFileChange: any;
+  handleFinancialFileChange: any;
 }) {
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
-  const handleRadioPitchChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioPitch(event.target.value);
-  };
-
   const [selectedRadioBusiness, setSelectedRadioBusiness] = useState('');
 
-  const handleRadioBusinessChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioBusiness(event.target.value);
-  };
   const [selectedRadioFinancial, setSelectedRadioFinancial] = useState('');
-
-  const handleRadioFinancialChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setSelectedRadioFinancial(event.target.value);
-  };
 
   return (
     <>
-      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+      <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <YesRadioButton
           title="Do you have Pitch deck?"
           register={register}
           errors={errors}
           required="Please choose an option"
           name="pitch-deck"
-          handleRadioChange={handleRadioPitchChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioPitch)}}
           selectedRadio={selectedRadioPitch}
-          handleChangeFile={handlePitchDeckFileChange}
           fileName='pitchDeckFile'
+          handleFileChange={handlePitchFileChange}
         />
         <YesRadioButton
           title="Do you have Business Plan?"
@@ -68,17 +49,17 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="business-plan"
-          handleRadioChange={handleRadioBusinessChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioBusiness)}}
           selectedRadio={selectedRadioBusiness}
-          handleChangeFile={handleBusinessPlanFileChange}
           fileName='businessPlanFile'
+          handleFileChange={handleBusinessFileChange}
         />
       </div>
       {(() => {
         if ((Boolean(selectedRadioBusiness) === false) && (Boolean(selectedRadioPitch)) === false) {
           return (
             <div>
-              <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+              <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
                 <div>
                   <Input
                     register={register}
@@ -90,7 +71,7 @@ export default function StartupFormSaleDevelopment({
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder="Enter your Product Name"
-                    className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                    className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
@@ -106,7 +87,7 @@ export default function StartupFormSaleDevelopment({
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder="Enter your Site Address"
-                    className="w-full mt-3 mb-1 input input-bordered drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"
+                    className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
@@ -122,7 +103,7 @@ export default function StartupFormSaleDevelopment({
           return <div></div>;
         }
       })()}
-      <div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <div>
         <YesRadioButton
           title="Do you have Financial?"
@@ -130,10 +111,10 @@ export default function StartupFormSaleDevelopment({
           errors={errors}
           required="Please choose an option"
           name="financial-plan"
-          handleRadioChange={handleRadioFinancialChange}
+          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioFinancial)}}
           selectedRadio={selectedRadioFinancial}
-          handleChangeFile={handleFinancialFileChange}
           fileName='financialFile'
+          handleFileChange={handleFinancialFileChange}
         />
         </div>
       </div>
@@ -141,8 +122,8 @@ export default function StartupFormSaleDevelopment({
             if (Boolean(selectedRadioFinancial) === false) {
               return (
                 <div>
-                        <StartupFormTargetMarket register={register} errors={errors}/>
-                    <StartupFormProperty register={register} errors={errors}/>
+                  <StartupFormTargetMarket register={register} errors={errors}/>
+                  <StartupFormProperty register={register} errors={errors}/>
                 </div>
               );
             }else{
@@ -152,17 +133,4 @@ export default function StartupFormSaleDevelopment({
 
     </>
   );
-}
-
-{
-  /* <TextArea
-            title="Explain your idea in 5 lines?*"
-            register={register}
-            errors={errors}
-            placeholder="Description"
-            nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />*/
 }

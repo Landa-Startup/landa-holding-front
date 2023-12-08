@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import PostCard from './PostCard';
 import FetchBlogData from '@/utils/FetchBlogData';
-import { MagazineData } from 'app/types/global';
+import { MagazineData } from '@/types/global';
 export default function MagazineCardsContainer() {
   const [cardData, setCardData] = useState<MagazineData[]>();
 
@@ -21,7 +21,7 @@ export default function MagazineCardsContainer() {
   }, []); // The empty dependency array ensures this runs only on component mount
 
   return (
-    <div className="flex flex-col gap-16 col-span-2">
+    <div className="col-span-2 flex flex-col gap-16">
       {cardData?.map((card, index) => (
         <PostCard
           slug={card.slug}

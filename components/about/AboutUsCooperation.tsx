@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function AboutUsCooperation() {
   return (
-    <div className="h-full py-10 text-center text-white bg-neutral-800">
+    <div className="h-full bg-neutral-800 py-10 text-center text-white">
       <div className="text-center">
         <p className="tracking-widest">LANDA HOLDING</p>
         {/* <p className="text-5xl not-italic leading-normal font-gilda">
@@ -13,10 +13,10 @@ export default function AboutUsCooperation() {
       </div>
       <div className="grid grid-cols-1 gap-10 px-10 md:grid-cols-2 lg:px-28">
         <div className="col-span-1">
-          <p className="text-xl font-semibold tracking-wide font-barlow">
+          <p className="font-barlow text-xl font-semibold tracking-wide">
             Investment Center
           </p>
-          <p className="pt-2 font-light 2xl:mb-2 lg:max-xl:mb-1 xl:px-32">
+          <p className="pt-2 font-light lg:max-xl:mb-1 xl:px-32 2xl:mb-2">
             The Landa Investors Association is composed of a group of
             individuals active in the field of investment who collaborate with
             each other based on their investment priorities and invest in
@@ -41,10 +41,10 @@ export default function AboutUsCooperation() {
           </div>
         </div>
         <div className="col-span-1">
-          <p className="text-xl font-semibold tracking-wide font-barlow">
+          <p className="font-barlow text-xl font-semibold tracking-wide">
             Entrepreneur Center
           </p>
-          <p className="pt-2 pb-1 font-light xl:px-32 md:max-lg:pb-6 xl:max-2xl:mb-5">
+          <p className="pb-1 pt-2 font-light md:max-lg:pb-6 xl:px-32 xl:max-2xl:mb-5">
             The Entrepreneur Center is a community of active individuals in the
             field of business and entrepreneurship who form a dynamic and
             powerful technological ecosystem together.

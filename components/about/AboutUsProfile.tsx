@@ -1,60 +1,28 @@
 import React from 'react';
-// import AboutUsProfileCard from './AboutUsProfileCard';
 import AboutusPersonalTabs from './AboutusPersonalTabs';
+// TODO: import from i18n instead of statics
+import { cardsDataFA, cardsDataEN } from '../../app/[lang]/statics';
+import { useTranslation } from 'app/i18n';
 
-export default function AboutUsProfile() {
-  const cardsData = [
-    {
-      image: '/static/images/our-team/Personals/a1.png',
-      name: 'Rasoul Moradimehr',
-      position: ' CEO',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
-        whatsapp: 'wa.me/+989134233863',
-        email: 'mailto:rasoulmoradimehr@gmail.com',
-        website: 'https://moradimehr.com/',
-        instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
-      },
-    },
-    {
-      image: '/static/images/About/mjafari.jpg',
-      name: 'MORTEZA JAFARI',
-      position: 'International Relations',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
-        whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
-        email: 'mailto:morteza_jafari49@yahoo.com',
-        website: 'https://mortezajafari.ca/',
-        instagram: 'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==',
-      },
-    },
-    {
-      image: '/static/images/our-team/Personals/a2.png',
-      name: 'Hadi Hasanpour',
-      position: 'COTB',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
-        whatsapp: 'https://wa.me/+12892693933',
-        email: 'mailto:hadihasanpor@gmail.com',
-        website: 'https://www.hadihasanpour.ca/',
-        instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
-      },
-    },
-  ];
+export default async function AboutUsProfile(
+  { lang }: { lang: string }
+) {
+
+  const { t } = await useTranslation(lang, "aboutUs");
 
   return (
     <div className="bg-[#FAFAFA]">
-      <div className="flex flex-col ml-8 lg:ml-64 mx-8 py-5 text-black justify-items-center">
-        <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl">
-          PROFESSIONALS
+      <div className={`mx-8 flex flex-col justify-items-center py-5 text-black lg:ml-64${t('lng') === "fa" && "mr-10"}`}>
+        <h2 className="tracking-0 font-condensed text-xl font-normal leading-normal ltr:tracking-widest md:text-2xl">
+          {t('lng') === "en" ? "PROFESSIONALS" : "حرفه ای ها"}
         </h2>
-        <h1 className="text-3xl font-normal leading-normal font-gilda md:text-4xl">
-          Board of Directors
+        <h1 className="rtl:tracking-0 font-gilda text-3xl font-normal leading-normal md:text-4xl">
+          {lang === "en" ? "Board of Directors" : "هيئت مدیره"}
         </h1>
       </div>
 
-      <div className="lg:flex lg:flex-row lg:justify-center  lg:pb-28 grid grid-cols-1  mx-auto pb-16 ml-8 md:space-x-12 space-y-20 mb-8 lg:ml-0">
-        {cardsData.map((card, index) => (
+      <div className="mb-8 ml-8 grid grid-cols-1 space-y-20  pb-16 md:space-x-12 lg:ml-0 lg:flex lg:flex-row lg:justify-center lg:pb-28">
+        {/* {cardsDataEN.map((card, index) => (
           <AboutusPersonalTabs
             key={index}
             image={card.image}
@@ -65,7 +33,33 @@ export default function AboutUsProfile() {
             website={card.links.website}
             instagram={card.links.instagram}
           />
-        ))}
+        ))} */}
+        {t('lng') === "en" ?
+          cardsDataEN.map((card, index) => (
+            <AboutusPersonalTabs
+              key={index}
+              image={card.image}
+              name={card.name}
+              position={card.position}
+              linkedIn={card.links.linkedin}
+              email={card.links.email}
+              website={card.links.website}
+              instagram={card.links.instagram}
+            />
+          )) :
+          cardsDataFA.map((card, index) => (
+            <AboutusPersonalTabs
+              key={index}
+              image={card.image}
+              name={card.name}
+              position={card.position}
+              linkedIn={card.links.linkedin}
+              email={card.links.email}
+              website={card.links.website}
+              instagram={card.links.instagram}
+            />
+          ))
+        }
       </div>
     </div>
   );

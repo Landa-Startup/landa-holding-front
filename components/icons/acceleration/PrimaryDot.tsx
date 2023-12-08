@@ -3,7 +3,7 @@ import React from 'react';
 export default function PrimaryDot({ addedClass }: { addedClass?: string }) {
   return (
     <svg
-      className={`w-4 h-4 ${addedClass}`}
+      className={`h-4 w-4 ${addedClass}`}
       xmlns="http://www.w3.org/2000/svg"
       width="33"
       height="32"

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Email() {
   return (
-    <div className='self-center'>
+    <div className='self-start py-1'>
       <svg
         width="50"
         height="50"

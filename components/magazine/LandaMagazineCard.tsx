@@ -15,7 +15,7 @@ export default function LandaMagazineCard({
 }) {
   return (
     <Link href={'/'}>
-      <div className="w-[391px] h-[476px] group relative">
+      <div className="group relative h-[476px] w-[391px]">
         {/* Image */}
         <Image
           loading="lazy"
@@ -26,24 +26,24 @@ export default function LandaMagazineCard({
         />
 
         {/* Date Container */}
-        <div className="w-[46px] h-[84px] px-1 py-2.5 border border-white flex-col justify-start items-center gap-[15px] inline-flex absolute top-8 left-8">
-          <div className="w-[31px] h-[17px] text-white text-[15px] font-normal font-gilda">
+        <div className="absolute left-8 top-8 inline-flex h-[84px] w-[46px] flex-col items-center justify-start gap-[15px] border border-white px-1 py-2.5">
+          <div className="h-[17px] w-[31px] font-gilda text-[15px] font-normal text-white">
             {date.substr(0, 3).toLowerCase()}
           </div>
-          <div className="w-[38px] h-8 text-white text-[32px] font-normal font-gilda">
+          <div className="h-8 w-[38px] font-gilda text-[32px] font-normal text-white">
             {date.substr(4)}
           </div>
         </div>
 
         {/* Details Container */}
-        <div className="w-[306px] h-36 px-11 py-[13px] bg-stone-100 flex-col justify-start items-start gap-[7px] inline-flex top-[397px] left-10 absolute group-hover:top-[280px] group-hover:transition-all">
+        <div className="absolute left-10 top-[397px] inline-flex h-36 w-[306px] flex-col items-start justify-start gap-[7px] bg-stone-100 px-11 py-[13px] group-hover:top-[280px] group-hover:transition-all">
           {/* Type */}
-          <div className="text-stone-500 text-base font-normal tracking-[5.60px] font-condensed">
+          <div className="font-condensed text-base font-normal tracking-[5.60px] text-stone-500">
             {type}
           </div>
 
           {/* Title */}
-          <div className="w-[218px] text-black text-[32px] font-normal font-gilda">
+          <div className="w-[218px] font-gilda text-[32px] font-normal text-black">
             {title}
           </div>
         </div>

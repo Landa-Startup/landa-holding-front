@@ -9,7 +9,7 @@ export default function MagazineModernPostBottomCard({
   description: string;
 }) {
   return (
-    <div className="px-4 mb-1">
+    <div className="mb-1 px-4">
       <div className="flex justify-center">
         <Image
           loading="lazy"
@@ -19,8 +19,8 @@ export default function MagazineModernPostBottomCard({
           height={430}
         />
       </div>
-      <div className="flex justify-start mt-3 mb-3">
-        <p className="px-6 text-justify text-slate-950 text-bold">
+      <div className="my-3 flex justify-start">
+        <p className="text-bold px-6 text-justify text-slate-950">
           {description}
         </p>
       </div>

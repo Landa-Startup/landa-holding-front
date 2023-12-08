@@ -1,4 +1,5 @@
-import { useForm, UseFormRegister, FieldValues } from 'react-hook-form';
+'use client';
+import React from "react";
 
 export default function Select({
   register,
@@ -10,6 +11,8 @@ export default function Select({
   className,
   labelClass,
   placeholder,
+  handleChange,
+  selected
 }: {
   register: any;
   errors: any;
@@ -20,24 +23,26 @@ export default function Select({
   className: string;
   labelClass: string;
   placeholder: string;
+  handleChange?: any;
+  selected?: string;
 }) {
   return (
-    <>
-    <div>
-
-      <label htmlFor={nameInput} className={labelClass}>
+    <div className="flex flex-col items-start">
+      <label htmlFor={nameInput} className={`self-start px-2 ${labelClass}`}>
         {label}
       </label>
-
+      {/* TO DO : select placeholder has a problem */}
+      <div className="flex w-full flex-row items-center gap-2">
       <select
         id={nameInput}
         {...register(nameInput, {
           required: required,
         })}
         className={className + (errors[nameInput] ? ' border-red-500' : '')}
+        onChange={handleChange}
       >
         <option disabled selected value={""}>
-          {placeholder}
+          {selected ? selected : placeholder}
         </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -47,13 +52,13 @@ export default function Select({
       </select>
 
       {errors[nameInput] && (
-        <span className="mt-2 text-sm text-yellow-500">
+        <span className="mt-2 inline text-sm text-yellow-500">
           {errors[nameInput].message}
         </span>
       )}
+      </div>
 
       <br />
     </div>
-    </>
   );
 }

@@ -6,13 +6,13 @@ export default function MagazineStartUps() {
     <div className="px-16">
       <div className="mx-auto">
         {/* Section Title */}
-        <h1 className="mt-5 mb-1 text-4xl text-center divide-y-7 text-slate-950">
+        <h1 className="divide-y-7 mb-1 mt-5 text-center text-4xl text-slate-950">
           STARTUPS
         </h1>
       </div>
 
       {/* Horizontal Line */}
-      <hr className="h-1 mx-auto mt-4 bg-gray-200 border-0 w-80 mb-9 dark:bg-gray-700" />
+      <hr className="mx-auto mb-9 mt-4 h-1 w-80 border-0 bg-gray-200 dark:bg-gray-700" />
 
       {/* StartUp Cards */}
       <MagazineStartUpsCard

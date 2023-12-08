@@ -1,10 +1,7 @@
-import { errors } from 'formidable';
 import * as React from 'react';
-import Input from '../common/form/Input';
-import { InvestorRegistrationFormData } from 'app/types/global';
-import { useForm } from 'react-hook-form';
 import TextArea from '../common/TextArea';
 import RadioButtonGroup from '../common/RadioButtonGroup';
+import { preparationStatsOption } from '../../app/[lang]/statics'
 
 export default function StartupFormSolutions({
   register,
@@ -14,29 +11,15 @@ export default function StartupFormSolutions({
   errors:any;
 }){
 
-
-
-  const preparationStatsOption = [
-    { value: 'basicPrinciple', label: 'The basic principle has been observed.' },
-    { value: 'technologyConcept', label: 'The technology concept has been formulated.' },
-    { value: 'exprimentalProof', label: 'Experimental proof of concept.' },
-    { value: 'confirmedTechnologyLab', label: 'The confirmed technology in laboratory.' },
-    { value: 'confirmedTechnologyEnv', label: 'The confirmed technology in the environmental conditions' },
-    { value: 'presentedTechnologyEnv', label: 'The presented technology in the environmental conditions' },
-    { value: 'systemPrototypeInMvp', label: 'Show the system prototype in the mvp operating environment.' },
-    { value: 'realisticSystem', label: 'The proved realistic system in the operating environment.' },
-    { value: 'qualifiedSystem', label: 'A complete and qualified system.' },
-  ];
-
   return (
     <>
-<div className="grid grid-cols-1 my-6 gap-y-4 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2">
           <div className="bg-[#222222CC]">
-            <p className="text-3xl mb-3 text-white pt-5 pb-5 pl-10 w-[310px] md:w-[550px] lg:w-[450px] xl:w-[650px] border-b ">
+            <p className="mb-3 w-[310px] border-b py-5 pl-10 text-3xl text-white md:w-[550px] lg:w-[450px] xl:w-[650px]">
               Solutions
             </p>
-            <hr className=" dark:border-[#222222CC] mb-5 mt-0 " />
+            <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
           </div>
           <TextArea
             title="What is your unique value proposition (innovation)? What is new about what you do?"

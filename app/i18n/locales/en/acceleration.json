@@ -1,0 +1,125 @@
+{
+    "lng": "en",
+    "text": "If you have an innovative startup idea or are a student looking for acceleration opportunities, we are waiting for your applications.",
+    "LandaAccelerator": [
+      {
+        "title": "LANDA ACCELERATOR :",
+        "subTitle": "Growth and Transformation into a Leading Startup",
+        "text": "Our accelerator division, as a leader in the field of startup acceleration and development on a global scale, assists individuals with innovative ideas and startup potentials at all stages, from launch and growth to success. Landa Accelerator aims to support the rapid development and expansion of startups and talented students looking to turn their ideas into high-performing businesses. We are in search of enthusiastic individuals and teams with the necessary skills and creativity to tackle challenges along the way as we accompany them on their journey and these young and well trained experts will be the one we invest in. There is a long way between the start of a business and success, and this is what our company is able to accelerate, which is the main aim in Landa Acceleration Center.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "FORUGHACCELERATOR": [
+      {
+        "title": "FORUGH ACCELERATOR :",
+        "subTitle": "Igniting Ideas and Startups",
+        "textUp": "In the Landa Accelerator division, innovative ideas and startups are carefully examined and evaluated. After confirming the value of an idea, we provide investment and connect startups with international networks to guide them through the development and expansion process. Our goal is to help startups progress more quickly and establish a strong presence in global markets.",
+        "textDown" : "Startups collaborating with us receive support from their early stages to their transformation into large companies. We provide you with opportunities to grow, achieve remarkable accomplishments, and enter global markets.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": "",
+        "items": [
+            "1. Idea generation for innovative business creation",
+            "2. Idea nurturing",
+            "3. Creating a pitch deck",
+            "4. Financial modelling",
+            "5. Mentorship programs",
+            "6. Networking",
+            "7. Cooperative workspace",
+            "8. Digital marketing",
+            "9. Consultation for necessary permits",
+            "10. Seed investment",
+            "11. Market share expansion",
+            "12. Marketing and sales strategy",
+            "13. Business development",
+            "14. Preparation and valuation of business plans"
+        ]
+      }
+    ],
+    "AcceleratorProcess": [
+      {
+        "title": "Accelerator Process",
+        "text": "1. Idea generation for innovative business creation  2. Idea nurturing  3. Creating a pitch deck  4. Financial modelling  5. Mentorship programs  6. Networking  7. Cooperative workspace  8. Digital marketing  9. Consultation for necessary permits  10. Seed investment  11. Market share expansion 12. Marketing and sales strategy  13. Business development  14. Preparation and valuation of business plans",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "FARAZAMANACCELERATOR": [
+      {
+        "title": "FARAZAMAN ACCELERATOR :",
+        "subTitle": "Supporting the Youth",
+        "textUp": "As part of the higher education community, we, under the name of Farazman, are committed to supporting and nurturing students and youth in university-affiliated incubators and accelerators. We believe that the future of careers lies in the hands of young individuals, and we enable them to benefit from our resources and experiences. By offering financial resources, technical infrastructure, and access to global networks, we help students and youth turn their ideas into reality and acquire the skills needed for today's business world. Additionally, we emphasize the importance of effective networking and skill enhancement for students and startups through education and mentorship. Our team consists of experienced mentors, both domestic and international, to provide necessary guidance and support to help you achieve the best results.",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": ""
+      }
+    ],
+    "LandaAcceleratorServices":[
+      {
+        "title":"Landa Accelerator Services",
+        "text":"",
+        "reverse": true,
+        "show": true,
+        "index": 2,
+        "addedClass": "",
+        "items":[
+            {
+              "title": "Pitch deck preparation",
+              "image": "1.png"
+            },
+            {
+              "title": "Mentoring",
+              "image": "2.png"
+            },
+            {
+              "title": "Networking with suitable individuals",
+              "image": "3.png"
+            },
+            {
+              "title": "Initial financing",
+              "image": "4.png"
+            },
+            {
+              "title": "MVP development",
+              "image": "5.png"
+            },
+            {
+              "title": "Research and development",
+              "image": "6.png"
+            },
+            {
+              "title": "Website design",
+              "image": "7.png"
+            },
+            {
+              "title": "Business plan creation",
+              "image": "8.png"
+            },
+            {
+              "title": "Idea brainstorming and development",
+              "image": "9.png"
+            },
+            {
+              "title": "Cooperative workspace",
+              "image": "10.png"
+            },
+            {
+              "title": "Patent registration",
+              "image": "11.png"
+            },
+            {
+              "title": "Organizing startup presentation events",
+              "image": "12.png"
+            }
+        ]
+      }
+    ],
+    "Register": "Register"
+  }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function MagazineModernPostCard() {
   return (
     <div className="px-16">
-      <div className="py-10 mx-20 mb-8">
+      <div className="mx-20 mb-8 py-10">
         {/* Image */}
         <div className="flex flex-col justify-center">
           <Image
@@ -19,19 +19,19 @@ export default function MagazineModernPostCard() {
 
         {/* Date */}
         <div className="flex flex-col justify-start">
-          <h2 className="mt-5 text-2xl text-slate-950 font-bold">
+          <h2 className="mt-5 text-2xl font-bold text-slate-950">
             12 DECEMBER 2022
           </h2>
 
           {/* Title */}
-          <h2 className="mt-1 text-2xl text-yellow-600 font-bold">
+          <h2 className="mt-1 text-2xl font-bold text-yellow-600">
             Creating a Newspaper as a Hobby
           </h2>
         </div>
 
         {/* Description */}
         <div className="flex justify-start">
-          <p className="text-justify text-slate-950 font-bold">
+          <p className="text-justify font-bold text-slate-950">
             Quisque pretium fermentum quam, sit amet cursus ante sollicitudin
             vel. Morbi consequat risus consequat, porttitor orci sit amet,
             iaculis nisl. Integer quis sapien neceli ultrices euismod sit amet

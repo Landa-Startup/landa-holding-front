@@ -11,10 +11,10 @@ export default function PartnersDiamond({
 }) {
   return (
     <Link
-      className="bg-whiteGold w-[120px] h-[120px] rounded-lg flex items-center justify-center rotate-45 overflow-hidden relative group flex-shrink-0"
+      className="group relative flex h-[120px] w-[120px] shrink-0 rotate-45 items-center justify-center overflow-hidden rounded-lg bg-whiteGold"
       href={'/'}
     >
-      <div className="w-[100px] h-[100px]">
+      <div className="h-[100px] w-[100px]">
         <div className="-rotate-45">
           <Image
             className="object-contain"
@@ -25,8 +25,8 @@ export default function PartnersDiamond({
           />
         </div>
       </div>
-      <div className="absolute inset-0 bg-primary opacity-0 transition-opacity duration-500 flex items-center justify-center group-hover:opacity-100">
-        <span className="text-white text-center -rotate-45 uppercase">
+      <div className="absolute inset-0 flex items-center justify-center bg-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        <span className="-rotate-45 text-center uppercase text-white">
           {name}
         </span>
       </div>

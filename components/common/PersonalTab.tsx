@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import IconLinkedin from '../icons/IconLinkedin';
 import LinkedIn from '../icons/about/LinkedIn';
 import Image from 'next/image';
 
@@ -16,7 +15,8 @@ export default function PersonalTab({
   linkedIn: string;
 }) {
   return (
-    <div className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col justify-between items-center relative">
+    <div className="relative flex h-[320px] w-[300px] flex-col justify-between rounded-sm border border-primary">
+      {/* Background Image */}
       <Image
         className="object-cover"
         src={image}
@@ -25,18 +25,25 @@ export default function PersonalTab({
         quality={90}
         loading="lazy"
       />
-      <div className="flex flex-col p-4 space-y-2 self-start z-10">
+
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-[rgba(0,0,0,0.2)] to-transparent"></div>
+
+      {/* LinkedIn Link */}
+      <div className="z-10 flex flex-col space-y-2 self-start p-4">
         <Link
           href={linkedIn}
-          className="text-white rounded-full bg-[#222] p-2 opacity-75"
+          className="rounded-full bg-[#222] p-2 text-white opacity-75"
         >
           <LinkedIn />
         </Link>
       </div>
-      <div className="flex flex-col items-center px-4 pb-4 text-white z-10">
-        <span className="font-normal text-lg">{name}</span>
-        <div className="font-light w-full flex items-center justify-center border-t-2 ">
-          <span className="font-light border-t-3 ">{position}</span>
+
+      {/* Text Content */}
+      <div className="z-10 flex flex-col items-center px-4 pb-4 text-white">
+        <span className=" font-barlow text-lg font-normal">{name}</span>
+        <div className="flex w-full items-center justify-center border-t-2 font-light">
+          <span className="border-t-3 font-barlow font-light">{position}</span>
         </div>
       </div>
     </div>

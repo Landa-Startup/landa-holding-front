@@ -1,20 +1,19 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { ContactUSFormData } from '../../../app/types/global';
-
-import GetCsrfToken from '@/utils/get-csrf-token';
-import apiClient from '@/utils/api';
+import { ContactUSFormData } from '../../../types/global';
+import GetCsrfToken from '../../../utils/get-csrf-token';
 import NotificationSendForm from './NotificationSendForm';
-
-export default function ContactUsForm() {
-  const initialFormData: ContactUSFormData = {
-    name: '',
-    email: '',
-    number: '',
-    subject: '',
-    message: '',
-  };
+import { ContactFormData } from '../../../initials/initObjects';
+import { submitContactForm } from '../../../pages/api/contact-us';
+import { useSubmit } from '../../../providers/StateProvider';
+import { PersonalInfoInput } from './PersonalInfoInput';
+import Input from './Input';
+import TextArea from '../TextArea';
+import Button from '../Button';
+export default function ContactUsForm(
+  { lang }: { lang: string }
+) {
 
   const {
     register,
@@ -23,181 +22,129 @@ export default function ContactUsForm() {
     reset,
   } = useForm<ContactUSFormData>({
     mode: 'onBlur',
-    defaultValues: initialFormData,
+    defaultValues: ContactFormData,
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
-  const [send, setSend] = useState(false);
-  const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState('');
+  const {
+    csrfToken,
+    handleTokenChange,
+    handleSubmitingChange,
+    handleSendChange,
+    handleNotifChange,
+    handleChangeSuccess,
+    handleChangeReject
+  } = useSubmit();
 
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
         `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
       );
-      setCsrfToken(token);
+      handleTokenChange(token);
     }
 
     fetchCsrfToken();
   }, []);
 
   const onSubmit = async (formData: ContactUSFormData) => {
-    setIsSubmitting(true);
-    setSend(true);
-    try {
-      const response = await apiClient.post(
-        'contactUs-form',
-        JSON.stringify(formData),
-        {
-          headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      setIsSuccess(true);
-      setShowNotification(true);
-      setSend(false);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
-      }, 10000);
-      reset(initialFormData); // Reset the form after successful submission
-      console.log('Form data sent successfully!');
-    } catch (error) {
-      setShowNotification(true);
-      setSend(false);
-      setIsSuccess(false);
-      console.error('Error sending form data:', error);
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
+    // Set loading and sending states.
+    handleSubmitingChange(true);
+    handleSendChange(true);
+
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
+
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+
+    // Send the form data to the API.
+    submitContactForm(sendFormData, csrfToken).then((response) => {
+      console.log(response);
+
+      handleChangeSuccess();
+      reset(ContactFormData); // Reset the form after successful submission
+      setTimeout(() => {
+        handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
-    }
+    }).catch(() => {
+      handleChangeReject();
+      reset(ContactFormData);
+
+      setTimeout(() => {
+        handleNotifChange(false);
+      }, 10000); // 10 seconds in milliseconds
+    })
   };
 
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }))
+
   return (
-    <div>
-      <h2 className="text-5xl font-light text-center font-gilda">
-        Reach us
+    <div dir={lang === "en" ? "ltr" : "rtl"}>
+      <h2 className="text-center font-gilda text-5xl font-light">
+        {lang === "en" ? "Reach us" : "با ما تماس بگیرید"}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 my-6 gap-y-5 gap-x-6 md:grid-cols-2">
-          <div className="flex flex-col">
-            <input
-              id="name"
-              type="text"
-              {...register('name', {
-                required: 'Your Name is required.',
-                pattern: {
-                  value: /^[a-z ,.'-]+$/i,
-                  message: 'Enter a valid Name.',
-                },
-              })}
-              placeholder="Your Name*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.name ? 'border-red-500' : ''
-                }`}
+        <div className="my-4 grid h-full grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
+
+          <PersonalInfoInput
+            register={register}
+            errors={errors}
+            nameInputs={{
+              firstName: "name",
+              lastName: "",
+              email: "email",
+              phoneNumber: "number"
+            }}
+            lang={lang}
+          />
+
+          <div className='col-span-1'>
+            <Input
+              register={register}
+              errors={errors}
+              nameInput='subject'
+              type='text'
+              label={lang === "en" ? "Subject" : "موضوع"}
+              required={lang === "en" ? 'Your Subject is required.' : 'موضوع الزامی است'}
+              patternValue=""
+              patternMessage={lang === "en" ? "Enter a valid Subject." : "یک موضوع معتبر وارد کنید"}
+              placeholder={lang === "en" ? "Your Subject*" : "موضوع"}
+              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+              labelClass='text-[#6b6b6b] dark:text-current'
+              containerClass=''
             />
-            {errors.name && (
-              <span className="mt-2 text-sm text-yellow-500">
-                {errors.name.message}
-              </span>
-            )}
           </div>
-          <div className="flex flex-col">
-            <input
-              id="email"
-              type="email"
-              {...register('email', {
-                required: 'Your Email is required.',
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: 'Enter a valid email address.',
-                },
-              })}
-              placeholder="Your Email*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.email ? 'border-red-500' : ''
-                }`}
+
+          <div className='col-span-2'>
+            <TextArea
+              register={register}
+              errors={errors}
+              title={lang === "en" ? "Message" : "پیام"}
+              required={lang === "en" ? "Message is required" : "پیام الزامی است"}
+              nameTextArea='message'
+              patternValue=''
+              patternMessage=''
+              placeholder={lang === "en" ? "Message" : "پیام"}
+              rows={4}
+              cols={20}
             />
-            {errors.email && (
-              <span className="mt-2 text-sm text-yellow-500">
-                {errors.email.message}
-              </span>
-            )}
           </div>
-          <div className="flex flex-col">
-            <input
-              id="number"
-              type="text"
-              {...register('number', {
-                required: 'Your Number is required.',
-                pattern: {
-                  value: /^\d{11}$/,
-                  message: 'Enter a valid number.',
-                },
-              })}
-              placeholder="Your Number*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.number ? 'border-red-500' : ''
-                }`}
-            />
-            {errors.number && (
-              <span className="mt-2 text-sm text-yellow-500">
-                {errors.number.message}
-              </span>
-            )}
-          </div>
-          <div className="flex flex-col">
-            <input
-              id="subject"
-              type="text"
-              {...register('subject', {
-                required: 'Your Subject is required.',
-                pattern: {
-                  value: /^[a-z ,.'-]+$/i,
-                  message: 'Enter a valid Subject.',
-                },
-              })}
-              placeholder="Your Subject*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.subject ? 'border-red-500' : ''
-                }`}
-            />
-            {errors.subject && (
-              <span className="mt-2 text-sm text-yellow-500">
-                {errors.subject.message}
-              </span>
-            )}
-          </div>
-          <textarea
-            id="message"
-            {...register('message', { required: 'Message is required.' })}
-            rows={4}
-            cols={20}
-            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${errors.message ? 'border-red-500' : ''
-              }`}
-            placeholder="Message*"
-          ></textarea>
-          {errors.message && (
-            <span className="text-sm text-yellow-500 ">
-              {errors.message.message}
-            </span>
-          )}
         </div>
-        <div className="text-center">
-          <button
-            type="submit"
-            className="mt-3 btn btn-wide btn-neutral bg-primary border-none text-white"
-            disabled={send}
-          >
-            {send ? 'Submitting ....' : 'Submit'}
-          </button>
-        </div>
+        <Button
+          type='submit'
+          bgColor="Primary"
+          disabled={errorsList[0] ? true : false}
+          lang={lang}
+        />
       </form>
-      <NotificationSendForm
-        submitting={isSubmitting}
-        success={isSuccess}
-        sendStatus={send}
-        show={showNotification}
-      />
+      <NotificationSendForm />
     </div>
   );
 }

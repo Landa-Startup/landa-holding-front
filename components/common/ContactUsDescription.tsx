@@ -7,18 +7,25 @@ import IconInstagram from '../icons/IconInstagram';
 import IconWhatApp from '../icons/IconWhatsApp';
 import IconLinkedinB from '../icons/IconLinkedinB';
 import IconEmailB from '../icons/IconEmailB';
-export default function ContactUsDescription() {
+import { useTranslation } from 'app/i18n';
+export default async function ContactUsDescription(
+  {lang} : {lang: string}
+) {
+
+  const { t } = await useTranslation(lang, "contact")
+
   return (
-    <div>
-      <h1 className="text-5xl font-light font-gilda">Landa Holding</h1>
-      <p className="my-5 text-base text-justify">
-        In Landa academy, individuals will be trained based on their interests
-        and capabilities. Necessary actions are taken at the Landa Acceleration
-        Center to accelerate their unique abilities. Then, investment is made
-        based on the investment priorities of developing the nurtured
-        capabilities of individuals.
-      </p>
-      <div className="flex flex-row space-x-3 ">
+    <div className='h-full' dir={t('lng') === "en" ? "ltr" : "rtl"}>
+      <div className="mb-5 mt-10 flex flex-col items-center md:my-0 md:w-[464px] md:items-start">
+        <h1 className="font-gilda text-4xl font-light md:text-5xl">
+          {t('LandaHolding')}
+        </h1>
+        <p className="my-5 text-justify text-base">
+          {t('text')}
+        </p>
+      </div>
+
+      <div className="flex flex-row gap-3">
         <Link
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
           target="_blank"
@@ -38,52 +45,58 @@ export default function ContactUsDescription() {
           <IconLinkedinB />
         </Link>
       </div>
-      <div className="flex my-3">
-        <Phone />
-        <ul className="mx-4">
-          <li className="font-semibold">Phone Call</li>
-          {/* TODO: create component for below icons */}
-          <li className="min-h-12">
-            <Link className="space-x-1" href="tel:+14165577622">
-              <span>Toronto:</span>
-              <span className="text-[#AA8453]">+1 (416) 557-7622</span>
-            </Link>
-          </li>
-          <li className="min-h-12">
-            <Link className="space-x-1" href="tel:+14165577622">
-              <span>Tehran:</span>
-              <span className="text-[#AA8453]">02188030167</span>
-            </Link>
-          </li>
-          <li className="min-h-12">
-            <Link className="space-x-1" href="tel:+14165577622">
-              <span>Isfahan:</span>
-              <span className="text-[#AA8453]">03131311914</span>
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="flex my-3">
-        <Email />
-        <ul className="mx-4">
-          <li className="font-semibold">Email info</li>
-          <li>
-            <a className="text-[#AA8453]" href="mailto:info@landaholding.com">
-              info@landaholding.com
-            </a>
-          </li>
-        </ul>
-      </div>
 
-      <div className="flex my-3">
-        <Location />
-        <div className="flex flex-col ml-2">
-          <span className="font-semibold">Address</span>
-          <ul className="mx-4 list-disc space-y-3">
-            <li>No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
-            <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
-            <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
+      <div className={`mt-10 flex flex-col gap-4`}>
+        <div className="flex gap-5">
+          <Phone />
+          <div className="mb-5 flex flex-col">
+            <span className="font-semibold">{t('phone')}</span>
+            <ul className="gap-1">
+              {/* TODO: create component for below icons */}
+              <li>
+                <Link href="tel:+14165577622">
+                  <span>{lang === "en" ? "Toronto: " : "تورنتو: "}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).cNumber}</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="tel:+14165577622">
+                  <span>{lang === "en" ? "Tehran: " : "تهران: "}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).tNumber}</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="tel:+14165577622">
+                  <span>{lang === "en" ? "Isfahan: " : "اصفهان: "}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).iNumber}</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex gap-5">
+          <Email />
+          <ul>
+            <li className="font-semibold">{t('email')}</li>
+            <li>
+              <a className="text-[#AA8453]" href="mailto:info@landaholding.com">
+                info@landaholding.com
+              </a>
+            </li>
           </ul>
+        </div>
+
+        <div className="flex gap-5">
+          <Location />
+          <div className="ml-2 flex flex-col">
+            <span className="font-semibold">{t('address')}</span>
+            <ul className="mx-4 list-disc space-y-3">
+              <li>{t('addresses', {returnObjects: true}).canada}</li>
+              <li>{t('addresses', {returnObjects: true}).tehran}</li>
+              <li>{t('addresses', {returnObjects: true}).isfahan}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

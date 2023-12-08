@@ -1,63 +1,17 @@
 import React from 'react';
 import CompaniesCard from './CompaniesCard';
+// TODO: read companies from i18n instead of statics
+// import { companies } from '../../app/[lang]/statics';
+import { useTranslation } from 'app/i18n';
 
-export default function CompaniesContainer() {
-  const companies = [
-    {
-      name: 'LANDA TRIP',
-      logo: '1.png',
-      link: "https://landatrip.com/"
-    },
-    {
-      name: 'IRIMMIGRATION',
-      logo: '2.png',
-      link: "https://Irimmigration.ca"
-    },
-    {
-      name: 'ACADEMY',
-      logo: '3.png',
-      link: 'https://landaholding.com/academy'
-    },
-    {
-      name: 'TOLU ROSHAN',
-      logo: '4.png',
-      link: '/investment'
-    },
-    {
-      name: 'DIACO',
-      logo: '5.png',
-      link: 'https://diacocenter.com',
-    },
-    {
-      name: 'VISION RAFT',
-      logo: '6.png',
-      link: 'https://visionraft.com',
-    },
-    {
-      name: 'FARAZAMAN',
-      logo: '7.png',
-      link: 'https://landaholding.com/acceleration'
-    },
-    {
-      name: 'HANDI CRAFTS',
-      logo: '8.png',
-      link: '#'
-    },
-    {
-      name: 'FOROUGH',
-      logo: '9.png',
-      link: '/acceleration'
-    },
-    {
-      name: 'LANDA GENE',
-      logo: '10.png',
-      link: '#'
-    },
-  ];
+export default async  function CompaniesContainer({lang}:{lang:string}) {
+
+  const { t } = await useTranslation(lang, 'aboutUs')
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-6 md:gap-14 ">
-      {companies.map((company, index) => (
-        <CompaniesCard key={index} name={company.name} logo={company.logo} link={company.link} />
+    <div className="grid grid-cols-2 gap-6 md:grid-cols-2 md:gap-14 lg:grid-cols-5 xl:grid-cols-5 ">
+      {t('companies', {returnObjects: true}).map(({name, logo, link} : {name: string, logo: string, link: string}, index: number) => (
+        <CompaniesCard key={index} name={name} logo={logo} link={link} />
       ))}
     </div>
   );

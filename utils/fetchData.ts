@@ -1,6 +1,6 @@
 // utils/fetchData.ts
 
-import { DecodedToken } from 'app/types/global';
+import { DecodedToken } from '@/types/global';
 import { parseCookies } from 'nookies';
 
 export async function fetchData(url: string) {

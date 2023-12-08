@@ -1,20 +1,22 @@
 import React from 'react';
 import CompaniesContainer from '../home/CompaniesContainer';
+import { useTranslation } from 'app/i18n';
 
-export default function SubsidiaryCompanies() {
+export default async function SubsidiaryCompanies(
+  {lang} : {lang: string}
+) {
+
+  const { t } = await useTranslation(lang, "aboutUs")
+
   return (
-    <div className="px-10 md:px-28 py-10 md:py-10">
-      <span className="text-3xl md:text-4xl leading-10 font-gilda text-primary">
-        Subsidiary companies of Landa Holding
+    <div className="p-10 md:px-28 md:py-10">
+      <span className="font-gilda text-3xl leading-10 text-primary md:text-4xl">
+        {t('subsids', {returnObjects: true})[0].title}
       </span>
-      <p className="my-4 font-barlow text-xl leading-8 text-justify">
-        Landa International Holding consists of 10 active companies operating in
-        Canada and Iran, with offices in the cities of Toronto, Vancouver,
-        Tehran, and Isfahan. Our mission is to invest in creative entrepreneurs,
-        supporting them from the very beginning, starting with ideation, all the
-        way to launching an international startup.
+      <p className="my-4 text-justify font-barlow text-xl leading-8">
+        {t('subsids', {returnObjects: true})[0].text}
       </p>
-      <CompaniesContainer />
+      <CompaniesContainer lang={lang}/>
     </div>
   );
 }

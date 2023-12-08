@@ -6,8 +6,8 @@ import Link from 'next/link';
 export default function ContactUs() {
   // TODO: use daisyUI for styling
   return (
-    <div className="md:h-[644px] bg-neutral-50 flex flex-col md:flex-row justify-between items-center md:px-36 text-justify px-12">
-      <div className="md:w-[515px] md:h-[476px] flex flex-col items-center justify-center px-1 py-10">
+    <div className="flex flex-col items-center justify-between bg-neutral-50 px-12 text-justify md:h-[644px] md:flex-row md:px-36">
+      <div className="flex flex-col items-center justify-center px-1 py-10 md:h-[476px] md:w-[515px]">
         <p className=":text-justify text-black md:text-xl">
           At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape.
           To become an affiliate, please complete our free questionnaire for our confidential review.
@@ -16,9 +16,9 @@ export default function ContactUs() {
           <Button text="Join Us" size="visit" goto='/partner-membership' />
         </Link>
       </div>
-      <div className="flex gap-20  md:h-full relative mt-5 ma:my-0 md:mb-0 ml-5 mr-2">
-        <div className="absolute top-0 w-full h-16 md:h-58  z-10" />
-        <div className="absolute bottom-0 w-full h-16 md:h-60  via-transparent-white z-10" />
+      <div className="ma:my-0 relative  ml-5 mr-2 mt-5 flex gap-20 md:mb-0 md:h-full">
+        <div className="md:h-58 absolute top-0 z-10 h-16  w-full" />
+        <div className="via-transparent-white absolute bottom-0 z-10 h-16  w-full md:h-60" />
         <div className="flex flex-col justify-around ">
           <div className="spin-image">
             <Image
