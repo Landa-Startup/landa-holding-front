@@ -94,7 +94,7 @@ export default function PartnerMembershipForm(
   return (
     <div>
     <div>
-      <div className="container m-[-1rem] mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
+      <div className="container font-barlow m-[-1rem] mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         <PartnerMembershipTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">

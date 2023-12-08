@@ -7,8 +7,8 @@ export default function PartnerMembershipTitle(
   return (
     <>
       <div className="text-center">
-        <p className="mb-20 pt-8 font-serif text-2xl tracking-wide md:pt-8 md:text-5xl lg:text-6xl xl:text-7xl ">
-          {lang === "en" ? "Business Partner Form" : "فرم شریک کاری"}
+        <p className="mb-20 pt-8 font-condensed text-2xl tracking-wide md:pt-8 md:text-5xl lg:text-6xl xl:text-7xl ">
+          {lang === "en" ? "Business Partner Form" : "فرم شریک تجاری"}
         </p>
       </div>
       <div>

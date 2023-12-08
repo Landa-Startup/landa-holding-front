@@ -92,7 +92,7 @@ export default function Partners(
 
   return (
     <div className="flex flex-col items-center my-6 gap-12">
-      <span className="text-3xl md:text-4xl text-primary">
+      <span className="text-3xl font-condensed md:text-4xl text-primary">
         {lang === "en" ? "Join Our Business Affiliates" : t.then((res) => (
           <>{res}</>
         ))}

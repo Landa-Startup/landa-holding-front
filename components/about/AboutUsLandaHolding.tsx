@@ -16,7 +16,7 @@ export default async function AboutUsLandaHolding(
         <p className="text-center font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', {returnObjects: true})[0].title}
         </p>
-        <p className="mb-20  ml-0  mt-4 text-justify font-barlow text-xl font-normal tracking-wide  md:mt-8 lg:w-[687px]">
+        <p className="mb-20  ml-0 p-2  mt-4 text-justify font-barlow rtl:text-base font-normal tracking-wide  md:mt-8 lg:w-[687px]">
           {t('aboutLandaHolding', {returnObjects: true})[0].text}
         </p>
       </div>
