@@ -23,11 +23,11 @@ export default function ButtonRefactor({
           <Link href={href} className="group relative overflow-hidden">
             <button
               disabled={disabled}
-              className="flex h-[56px] w-[224px] flex-wrap content-center justify-center rounded bg-[#AA8453] p-2 text-white"
+              className="flex  h-[56px] w-[224px] flex-wrap content-center justify-center rounded bg-[#AA8453] p-2 text-white"
             >
-              <div className="z-10 flex items-center">
+              <div className="z-10 flex items-center rtl:flex-row-reverse">
                 <span>{text}</span>
-                <ChevronRightIcon className="ml-2 h-5 w-5" />
+                <ChevronRightIcon className="h-5 w-5" />
               </div>
             </button>
             <span className="absolute inset-0 -translate-x-full rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span>

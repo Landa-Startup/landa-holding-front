@@ -1,32 +1,31 @@
 'use client';
-// import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 // import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
-// import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n';
 import { logos } from 'app/[lang]/statics';
 import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function Partners({ lang }: { lang: string }) {
   // const { t } = await useTranslation(lang, "mainPage")
 
-  // const LangChangeHandle = async (lang: string) => {
-  //   const { t } = await useTranslation(lang, "mainPage")
+  const LangChangeHandle = async (lang: string) => {
+    const { t } = await useTranslation(lang, 'mainPage');
 
-  //   return t;
-  // }
+    return t;
+  };
 
-  // const translated = LangChangeHandle(lang);
+  const translated = LangChangeHandle(lang);
 
-  // const L = translated.then((res) => {
-  //   const L = res('partners', { returnObjects: true }).logos
-  //   return L
-  // })
+  const L = translated.then((res) => {
+    const L = res('partners', { returnObjects: true }).logos;
+    return L;
+  });
 
-  // const t = translated.then((res) => {
-  //   const title = res('partners', { returnObjects: true }).title
-  //   return title
-  // })
+  const t = translated.then((res) => {
+    const title = res('partners', { returnObjects: true }).title;
+    return title;
+  });
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [isScrolling, setIsScrolling] = useState(lang === 'en' ? true : false);
@@ -90,27 +89,60 @@ export default function Partners({ lang }: { lang: string }) {
   return (
     <div className="my-6 flex flex-col items-center gap-12">
       <span className="font-condensed text-3xl text-primary md:text-4xl">
-        Join Our Business Affiliates
+        {lang === 'en'
+          ? 'Join Our Business Affiliates'
+          : t.then((res) => <>{res}</>)}
       </span>
       <div
         ref={scrollContainerRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden"
+        onMouseEnter={lang === 'en' ? handleMouseEnter : () => {}}
+        onMouseLeave={lang === 'en' ? handleMouseLeave : () => {}}
+        onMouseDown={lang === 'en' ? handleMouseDown : () => {}}
+        onMouseMove={lang === 'en' ? handleMouseMove : () => {}}
+        onMouseUp={lang === 'en' ? handleMouseUp : () => {}}
+        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll"
       >
-        {logos.map((logo, index) => (
-          <PartnersStartupCard
-            key={index}
-            logo={logo.number}
-            title={logo.title}
-            description={logo.description}
-          />
-        ))}
+        {lang === 'en' &&
+          logos.map((logo) => (
+            <section key={logo.number}>
+              <PartnersStartupCard
+                logo={logo.number}
+                title={logo.title}
+                description={logo.description}
+              />
+            </section>
+          ))}
+        {lang === 'fa' &&
+          L.then((res) => (
+            <>
+              {res.map(
+                ({
+                  number,
+                  title,
+                  description
+                }: {
+                  number: number;
+                  title: string;
+                  description: string;
+                }) => (
+                  <section className="snap-center" key={number}>
+                    <PartnersStartupCard
+                      logo={number}
+                      title={title}
+                      description={description}
+                    />
+                  </section>
+                )
+              )}
+            </>
+          ))}
       </div>
-      <ButtonRefactor text="JOIN US" type="link" href="/partner-membership" />
+
+      <ButtonRefactor
+        type="link"
+        href="/partner-membership"
+        text={lang === 'en' ? 'Become a Partner' : 'شریک شوید'}
+      />
     </div>
   );
 }
