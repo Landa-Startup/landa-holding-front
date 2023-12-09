@@ -44,7 +44,6 @@ export default async function Page({
         showButton={false}
       />
 
-      {/* Include other components */}
       <HomeCardsContainer lang={lang} />
       <LandaHoldingBlack lang={lang} />
       <LandaHoldingPriority lang={lang} />
