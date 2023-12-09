@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button';
 // import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
-import { useTranslation } from 'app/i18n';
+// import { useTranslation } from 'app/i18n';
 import { logos } from 'app/[lang]/statics';
 
 export default function Partners(
@@ -13,23 +13,23 @@ export default function Partners(
 
   // const { t } = await useTranslation(lang, "mainPage")
 
-  const LangChangeHandle = async (lang: string) => {
-    const { t } = await useTranslation(lang, "mainPage")
+  // const LangChangeHandle = async (lang: string) => {
+  //   const { t } = await useTranslation(lang, "mainPage")
 
-    return t;
-  }
+  //   return t;
+  // }
 
-  const translated = LangChangeHandle(lang);
+  // const translated = LangChangeHandle(lang);
 
-  const L = translated.then((res) => {
-    const L = res('partners', { returnObjects: true }).logos
-    return L
-  })
+  // const L = translated.then((res) => {
+  //   const L = res('partners', { returnObjects: true }).logos
+  //   return L
+  // })
 
-  const t = translated.then((res) => {
-    const title = res('partners', { returnObjects: true }).title
-    return title
-  })
+  // const t = translated.then((res) => {
+  //   const title = res('partners', { returnObjects: true }).title
+  //   return title
+  // })
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [isScrolling, setIsScrolling] = useState(lang === 'en' ? true : false);
@@ -102,7 +102,7 @@ export default function Partners(
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        className="grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden"
+        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden"
       >
         {logos.map((logo) => (
           <PartnersStartupCard
