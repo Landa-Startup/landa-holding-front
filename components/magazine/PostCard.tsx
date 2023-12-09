@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import Button from '../common/Button';
 import Link from 'next/link';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function PostCard({
   slug,
@@ -36,12 +36,13 @@ export default function PostCard({
         {title}
       </Link>
       <div className='text-justify font-barlow text-[#6B6B6B]' dangerouslySetInnerHTML={{ __html: description }} />
-      <Button
+      {/* <Button
         goto={`/magazine/${slug}`}
         text="Read More"
         size="notVisit"
         bgColor="Primary"
-      />
+      /> */}
+      <ButtonRefactor text="Read More" />
     </div>
   );
 }

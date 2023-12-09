@@ -20,6 +20,7 @@ export default function CompaniesCard({
             src={`/static/images/About/companies/${logo}`}
             alt="Landa Companies"
             layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
 
         </div>

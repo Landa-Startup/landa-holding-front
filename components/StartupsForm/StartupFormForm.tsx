@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { StartupsFormData } from '../../types/global';
-import { initialStartupsFormData } from '../../initials/initObjects'
+import { initialStartupsFormData } from '../../initials/initObjects';
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
 import StartupFormMVP from './StartupFormMVP';
@@ -11,22 +11,19 @@ import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import Select from '../../components/common/form/Select';
-import Button from '../common/Button';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useSubmit } from '../../providers/StateProvider';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
-export default function StartupFormForm(
-  { lang }: { lang: string }
-) {
-
+export default function StartupFormForm({ lang }: { lang: string }) {
   enum Type {
     IDEA = 'IDEA',
     MVP = 'MVP',
     TRIAL = 'TRIAL',
     FisrtSale = 'FisrtSale', // Typo: Should be "FirstSale"
-    SaleDevelopment = 'SaleDevelopment',
+    SaleDevelopment = 'SaleDevelopment'
   }
 
   const Types = [
@@ -35,21 +32,21 @@ export default function StartupFormForm(
     Type.TRIAL,
     Type.FisrtSale,
     Type.SaleDevelopment
-  ]
+  ];
 
   const typesData = Types.map((type: string) => ({
     value: type,
-    label: type,
-  }))
+    label: type
+  }));
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm<StartupsFormData>({
     mode: 'onBlur',
-    defaultValues: initialStartupsFormData,
+    defaultValues: initialStartupsFormData
   });
 
   const [selectedRadio, setSelectedRadio] = useState('');
@@ -99,7 +96,7 @@ export default function StartupFormForm(
     const filePostMap = {
       businessPlanFile: filePost.businessPlanFile,
       pitchDeckFile: filePost2.pitchDeckFile,
-      financialFile: filePost3.financialFile,
+      financialFile: filePost3.financialFile
     };
 
     for (const [fieldName, file] of Object.entries(filePostMap)) {
@@ -121,47 +118,61 @@ export default function StartupFormForm(
     }
 
     if (formData.businessPlanFile) {
-      sendFormData.append('businessPlanFile', formData.businessPlanFile as Blob);
+      sendFormData.append(
+        'businessPlanFile',
+        formData.businessPlanFile as Blob
+      );
     }
 
     if (formData.financialModelFile) {
-      sendFormData.append('financialModelFile', formData.financialModelFile as Blob);
+      sendFormData.append(
+        'financialModelFile',
+        formData.financialModelFile as Blob
+      );
     }
 
     // Send the form data to the API.
-    submitStartupsForm(sendFormData, csrfToken).then((response) => {
-      handleChangeSuccess();
-      reset(initialStartupsFormData); // Country does not reset
-      setSelectedRadio("");
+    submitStartupsForm(sendFormData, csrfToken)
+      .then((response) => {
+        handleChangeSuccess();
+        reset(initialStartupsFormData); // Country does not reset
+        setSelectedRadio('');
 
-      console.log(response);
+        console.log(response);
 
-      setTimeout(() => {
-        handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    }).catch(() => {
-      handleChangeReject();
-      reset(initialStartupsFormData);
-      setTimeout(() => {
-        handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    })
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      })
+      .catch(() => {
+        handleChangeReject();
+        reset(initialStartupsFormData);
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      });
   };
 
   const errorsList = Object.entries(errors).map(([name, value]) => ({
     name: name,
     value: value
-  }))
+  }));
 
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
       <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
-        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{lang === "en" ? "Startup Validation Form" : "فرم اعتبارسنجی استارت آپ"}</p>
+        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
+          {lang === 'en'
+            ? 'Startup Validation Form'
+            : 'فرم اعتبارسنجی استارت آپ'}
+        </p>
       </div>
       <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         {/* <StartupFormTitle /> */}
         <div>
-          <p className="mb-4 text-4xl">{lang === "en" ? "Personal Information" : "اطلاعات شخصی"}</p>
+          <p className="mb-4 text-4xl">
+            {lang === 'en' ? 'Personal Information' : 'اطلاعات شخصی'}
+          </p>
         </div>
 
         <div>
@@ -178,7 +189,7 @@ export default function StartupFormForm(
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
                 <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
-                  {lang === "en" ? "Growth and Scale-up" : "رشد و افزایش مقیاس"}
+                  {lang === 'en' ? 'Growth and Scale-up' : 'رشد و افزایش مقیاس'}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
               </div>
@@ -187,12 +198,22 @@ export default function StartupFormForm(
           <Select
             register={register}
             errors={errors}
-            nameInput='statusSelect'
-            label={lang === "en" ? 'Select Your Status: ' : 'وضعیت خود را انتخاب کنید: '}
-            required={lang === "en" ? 'Your Status is Required' : 'وضعیت شما الزامی است'}
-            className='select select-bordered mt-4 w-full max-w-xs'
-            labelClass='text-[#6b6b6b] dark:text-current'
-            placeholder={lang === "en" ? 'Select Your Status: ' : 'وضعیت خود را انتخاب کنید: '}
+            nameInput="statusSelect"
+            label={
+              lang === 'en'
+                ? 'Select Your Status: '
+                : 'وضعیت خود را انتخاب کنید: '
+            }
+            required={
+              lang === 'en' ? 'Your Status is Required' : 'وضعیت شما الزامی است'
+            }
+            className="select select-bordered mt-4 w-full max-w-xs"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            placeholder={
+              lang === 'en'
+                ? 'Select Your Status: '
+                : 'وضعیت خود را انتخاب کنید: '
+            }
             options={typesData}
             handleChange={handleItemChange}
             selected={selectedRadio}
@@ -238,17 +259,18 @@ export default function StartupFormForm(
                 );
                 break;
               default:
-                console.error("error");
+                console.error('error');
             }
           })()}
 
           <div className="ml-1 mt-10 text-start">
-            <Button
+            {/* <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
               lang={lang}
-            />
+            /> */}
+            <ButtonRefactor type="submit" text="Submit" />
           </div>
           <NotificationSendForm />
         </form>

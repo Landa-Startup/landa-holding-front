@@ -20,8 +20,8 @@ export default function TagsContainer() {
         Tags
       </span>
       <div className="mt-7 grid grid-cols-3 gap-2">
-        {tags.map((tag:any) => (
-          <button key={tag.id} className="btn rounded-sm bg-[#D9D9D9] px-2">
+        {tags.map((tag:any, index) => (
+          <button key={index} className="btn rounded-sm bg-[#D9D9D9] px-2">
             {tag.title}
           </button>
         ))}
