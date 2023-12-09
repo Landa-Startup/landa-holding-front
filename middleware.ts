@@ -12,8 +12,11 @@ export const config = {
 
 export function middleware(req: any) {
   let lng;
-  if (req.cookies.has(cookieName))
+  if (req.cookies.has(cookieName)){
+    console.log(req.cookies.get(cookieName).value);
     lng = acceptLanguage.get(req.cookies.get(cookieName).value);
+    
+  }
   if (!lng) lng = acceptLanguage.get(req.headers.get('Accept-Language'));
   if (!lng) lng = fallbackLng;
 

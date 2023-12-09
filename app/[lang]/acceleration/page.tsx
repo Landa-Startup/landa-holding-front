@@ -133,7 +133,7 @@ export default async function Page({
           bgColor="Primary"
           lang={lang}
         /> */}
-        <ButtonRefactor text={t('Register')} />
+        <ButtonRefactor text={t('Register')} href="/StartupsForm" />
       </div>
     </div>
   );

@@ -22,7 +22,6 @@ export default function Navbar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const changeLanguage = (language: string) => {
-    // const currentPath = pathName
     const newPath = pathName?.replace(/^\/(en|fa)/, `/${language}`);
     if (!newPath) {
       return;

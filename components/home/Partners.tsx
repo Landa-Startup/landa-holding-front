@@ -1,16 +1,13 @@
 'use client';
 // import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
-import Button from '../common/Button';
 // import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
 // import { useTranslation } from 'app/i18n';
 import { logos } from 'app/[lang]/statics';
+import ButtonRefactor from '../common/ButtonRefactor';
 
-export default function Partners(
-  { lang }: { lang: string }
-) {
-
+export default function Partners({ lang }: { lang: string }) {
   // const { t } = await useTranslation(lang, "mainPage")
 
   // const LangChangeHandle = async (lang: string) => {
@@ -67,7 +64,7 @@ export default function Partners(
 
   // Add event listener to resume automatic scroll on mouse leave
   const handleMouseLeave = () => {
-    setIsScrolling(lang === "en" ? true : false); // Resume scrolling
+    setIsScrolling(lang === 'en' ? true : false); // Resume scrolling
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -113,12 +110,7 @@ export default function Partners(
           />
         ))}
       </div>
-      <Button
-        goto="/partner-membership"
-        size="visit"
-        text="JOIN US"
-        bgColor="Primary"
-      />
+      <ButtonRefactor text="JOIN US" type="link" href="/partner-membership" />
     </div>
   );
 }

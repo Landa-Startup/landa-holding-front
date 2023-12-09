@@ -1,42 +1,42 @@
 {
-    "menuItems": [
-        {
-            "label": "صفحه اصلی",
-            "href": "/"
-        },
-        {
-            "label": "درباره ما",
-            "href": "/about"
-        },
-        {
-            "label": "تماس با ما",
-            "href": "/contact"
-        },
-        {
-            "label": "تیم ما",
-            "href": "/our-team"
-        }
-    ],
-    "submenuItems": [
-        {
-            "label": "مرکز سرمایه گذاران",
-            "href": "/investor-registration"
-        },
-        {
-            "label": "مرکز کارآفرینان",
-            "href": "/entrepreneurs"
-        },
-        {
-            "label": "شرکای تجاری",
-            "href": "/partner-membership"
-        },
-        {
-            "label": "فرم ارزیابی استارتاپ",
-            "href": "/StartupsForm"
-        },
-        {
-            "label": "همکاری با ما",
-            "href": "/job-form"
-        }
-    ]
+  "menuItems": [
+    {
+      "label": "خانه",
+      "href": "/"
+    },
+    {
+      "label": "درباره ما",
+      "href": "/about"
+    },
+    {
+      "label": "تماس با ما",
+      "href": "/contact"
+    },
+    {
+      "label": "تیم ما",
+      "href": "/our-team"
+    }
+  ],
+  "submenuItems": [
+    {
+      "label": "مرکز سرمایه گذاران",
+      "href": "/investor-registration"
+    },
+    {
+      "label": "مرکز کارآفرینان",
+      "href": "/something"
+    },
+    {
+      "label": "شرکای تجاری",
+      "href": "/partner-membership"
+    },
+    {
+      "label": "فرم ارزیابی استارتاپ",
+      "href": "/StartupsForm"
+    },
+    {
+      "label": "همکاری با ما",
+      "href": "/job-form"
+    }
+  ]
 }
