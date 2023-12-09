@@ -32,11 +32,7 @@ export default async function Page({
       <Hero
         lang={t('lng')}
         showLanda
-        titles={[
-          t('Acceleration'),
-          t('Investment'),
-          t('Academy')
-        ]}
+        titles={[t('Acceleration'), t('Investment'), t('Academy')]}
         title={t('LandaHolding')}
         subTitle={t('HeroSubtitle')}
         backgroundImage="Hero.png"
