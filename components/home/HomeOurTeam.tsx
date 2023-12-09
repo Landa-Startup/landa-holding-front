@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 // import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
-import Button from '../common/Button';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default async function HomeOurTeam({ lang }: { lang: string }) {
   const { t } = await useTranslation(lang, 'mainPage');
@@ -57,13 +57,14 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
         href={t('lng') === 'en' ? '/en/our-team' : '/fa/our-team'}
         className="justify-center"
       >
-        <Button
+        {/* <Button
           type="button"
           size="visit"
           bgColor="Primary"
           goto=""
           lang={lang}
-        />
+        /> */}
+        <ButtonRefactor text={t('visit')} />
       </Link>
     </div>
   );

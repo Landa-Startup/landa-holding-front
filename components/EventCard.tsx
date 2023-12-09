@@ -2,10 +2,10 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Calender from './icons/Panel/Calender';
-import Button from './common/Button';
 import Pin from './icons/Panel/Pin';
 import Tag from './icons/Panel/Tag';
 import Link from 'next/link';
+import ButtonRefactor from './common/ButtonRefactor';
 
 interface Event {
   title: string;
@@ -71,14 +71,15 @@ export default function EventCard() {
                 <span className="text-primary">Investment</span>
               </div>
             </div>
-            <Button
+            {/* <Button
               size="visit"
               text="Register"
               goto="/"
               addedClass="absolute bottom-6 right-6 self-center"
               bgColor="Primary"
-              lang={"lang"}
-            />
+              lang={'lang'}
+            /> */}
+            <ButtonRefactor text="Register" />
           </div>
         </Link>
       ))}

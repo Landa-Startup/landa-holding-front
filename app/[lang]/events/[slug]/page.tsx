@@ -6,15 +6,19 @@ import Calender from '@/components/icons/Panel/Calender';
 import Instagram from '@/components/icons/footer/Instagram';
 import Whatsapp from '@/components/icons/footer/Whatsapp';
 import LinkedIn from '@/components/icons/footer/LinkedIn';
-import Button from '@/components/common/Button';
+import ButtonRefactor from '@/components/common/ButtonRefactor';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Event',
   description:
-    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.'
 };
 
-export default function Page({ params: { lang }} : { params: { lang: string }} ) {
+export default function Page({
+  params: { lang }
+}: {
+  params: { lang: string };
+}) {
   // const pathname = usePathname();
   // const slug = pathname?.replace('/magazine/', '');
   // const [cardData, setCardData] = useState<MagazineData>();
@@ -37,7 +41,7 @@ export default function Page({ params: { lang }} : { params: { lang: string }} )
         start: '2021-09-01',
         end: '2021-09-01',
         startTime: '10:00',
-        endTime: '12:00',
+        endTime: '12:00'
       },
       tags: ['tag1', 'tag2', 'tag3'],
       location: 'Tehran',
@@ -50,29 +54,33 @@ export default function Page({ params: { lang }} : { params: { lang: string }} )
       people: [
         {
           title: 'Dr.Hasanpour',
-          image: '/static/images/EventsBanner.png',
+          image: '/static/images/EventsBanner.png'
         },
         {
           title: 'Dr.Hasanpour',
-          image: '/static/images/EventsBanner.png',
+          image: '/static/images/EventsBanner.png'
         },
         {
           title: 'Dr.Hasanpour',
-          image: '/static/images/EventsBanner.png',
+          image: '/static/images/EventsBanner.png'
         },
         {
           title: 'Dr.Hasanpour',
-          image: '/static/images/EventsBanner.png',
-        },
+          image: '/static/images/EventsBanner.png'
+        }
       ],
       description3:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
-    },
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took"
+    }
   ];
 
   return (
     <div>
-      <Banner image="/static/images/EventsBanner.png" title="UPCOMING EVENTS" lang={lang} />
+      <Banner
+        image="/static/images/EventsBanner.png"
+        title="UPCOMING EVENTS"
+        lang={lang}
+      />
       <div className="mx-28 my-16 rounded-sm border p-6 shadow-md">
         <div className="flex justify-between gap-20">
           <div className="flex w-2/3 flex-col gap-4">
@@ -131,12 +139,13 @@ export default function Page({ params: { lang }} : { params: { lang: string }} )
                       <option value="10">10</option>
                     </select>
                   </div>
-                  <Button
+                  {/* <Button
                     size="visit"
                     text="Register"
                     bgColor="Primary"
                     lang={lang}
-                  />
+                  /> */}
+                  <ButtonRefactor text="Register" />
                 </div>
               );
             })}

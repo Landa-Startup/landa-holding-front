@@ -7,10 +7,10 @@ import EntrepreneursTitle from './EntrepreneursTitle';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
-import Button from '../common/Button';
 import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function EntrepreneursForm(
   {lang} : {lang: string}
@@ -85,10 +85,10 @@ export default function EntrepreneursForm(
     })
   };
 
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }))
+  // const errorsList = Object.entries(errors).map(([name, value]) => ({
+  //   name: name,
+  //   value: value
+  // }))
 
   return (
     <>
@@ -157,12 +157,13 @@ export default function EntrepreneursForm(
             </div>
           </div>
           <div className="text-center">
-            <Button
+            {/* <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
               lang={lang}
-            />
+            /> */}
+            <ButtonRefactor text="Submit" type="submit" />
           </div>
         </form>
         <NotificationSendForm/>

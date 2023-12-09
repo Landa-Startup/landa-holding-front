@@ -1,5 +1,4 @@
 import Hero from '@/components/investment/HeroInvestment';
-import Button from '@/components/common/Button';
 import Link from '@/components/icons/Link';
 import Image from 'next/image';
 import React from 'react';
@@ -7,6 +6,7 @@ import Certificate from '@/components/investment/Certificate';
 import { Metadata } from 'next';
 import FeaturesCardsContainer from '@/components/investment/FeaturesCardsContainer';
 import { useTranslation } from 'app/i18n';
+import ButtonRefactor from '@/components/common/ButtonRefactor';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Investment',
@@ -144,13 +144,14 @@ export default async function Page(
           <p className={`text-justify font-barlow tracking-[1px] ${lang === "en" ? "leading-8" : "text-lg leading-10"}`}>
             {t('focusText')}
           </p>
-          <Button
+          {/* <Button
             goto="/"
             size="not"
             text={lang === "en" ? "Federal Canada Corporation Information" : "اطلاعات شرکت فدرال کانادا"}
             bgColor="Primary"
             lang={lang}
-          />
+          /> */}
+          <ButtonRefactor text={lang === "en" ? "Federal Canada Corporation Information" : "اطلاعات شرکت فدرال کانادا"}/>
         </div>
       </div>
       <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
