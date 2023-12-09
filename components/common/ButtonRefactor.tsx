@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRightIcon } from '@heroicons/react/24/solid';
+// import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
 type ButtonProps = {
@@ -27,7 +27,7 @@ export default function ButtonRefactor({
             >
               <div className="z-10 flex items-center">
                 <span>{text}</span>
-                <ChevronRightIcon className="ml-2 h-5 w-5" />
+                {/* <ChevronRightIcon className="ml-2 h-5 w-5" /> */}
               </div>
             </button>
             <span className="absolute inset-0 -translate-x-full rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span>
@@ -47,7 +47,7 @@ export default function ButtonRefactor({
           >
             <div className="z-10 flex items-center gap-2 rtl:flex-row-reverse">
               <span>{text}</span>
-              <ChevronRightIcon className="h-5 w-5" />
+              {/* <ChevronRightIcon className="h-5 w-5" /> */}
             </div>
           </button>
           <span className="absolute inset-0 -translate-x-full rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span>
