@@ -1,4 +1,5 @@
 'use client';
+// import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button';
 // import PartnersDiamondsContainer from './PartnersDiamondsContainer';
@@ -31,7 +32,7 @@ export default function Partners(
   })
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-  const [isScrolling, setIsScrolling] = useState(lang === "en" ? true : false);
+  const [isScrolling, setIsScrolling] = useState(lang === 'en' ? true : false);
   const [dragging, setDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -92,47 +93,31 @@ export default function Partners(
   return (
     <div className="my-6 flex flex-col items-center gap-12">
       <span className="font-condensed text-3xl text-primary md:text-4xl">
-        {lang === "en" ? "Join Our Business Affiliates" : t.then((res) => (
-          <>{res}</>
-        ))}
+        Join Our Business Affiliates
       </span>
       <div
         ref={scrollContainerRef}
-        onMouseEnter={lang === "en" ? handleMouseEnter : () => { }}
-        onMouseLeave={lang === "en" ? handleMouseLeave : () => { }}
-        onMouseDown={lang === "en" ? handleMouseDown : () => { }}
-        onMouseMove={lang === "en" ? handleMouseMove : () => { }}
-        onMouseUp={lang === "en" ? handleMouseUp : () => { }}
-        className="grid w-[calc(100%-2%)] cursor-pointer snap-x snap-mandatory grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden rtl:md:overflow-x-scroll"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        className="grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden"
       >
-        {lang === "en" && logos.map((logo) => (
-          <section className='snap-center' key={logo.number}>
-            <PartnersStartupCard
-              logo={logo.number}
-              title={logo.title}
-              description={logo.description}
-            />
-          </section>
-        ))}
-        {lang === "fa" && L.then((res) => (
-          <>
-            {res.map(({ number, title, description }: { number: number, title: string, description: string }) => (
-              <section className='snap-center' key={number}>
-                <PartnersStartupCard
-                  logo={number}
-                  title={title}
-                  description={description}
-                />
-              </section>
-            ))}
-          </>
+        {logos.map((logo) => (
+          <PartnersStartupCard
+            key={logo.number}
+            logo={logo.number}
+            title={logo.title}
+            description={logo.description}
+          />
         ))}
       </div>
       <Button
         goto="/partner-membership"
         size="visit"
+        text="JOIN US"
         bgColor="Primary"
-        lang={lang}
       />
     </div>
   );
