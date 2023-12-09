@@ -11,21 +11,18 @@ import ButtonRefactor from '@/components/common/ButtonRefactor';
 export const metadata: Metadata = {
   title: 'Landa Holding | Investment',
   description:
-    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.'
 };
 
-export default async function Page(
-  {
-    params: { lang },
-  }: {
-    params: { lang: string };
-  }
-) {
-
-  const { t } = await useTranslation(lang, "investment")
+export default async function Page({
+  params: { lang }
+}: {
+  params: { lang: string };
+}) {
+  const { t } = await useTranslation(lang, 'investment');
 
   return (
-    <div dir={lang === "en" ? "ltr" : "rtl"}>
+    <div dir={lang === 'en' ? 'ltr' : 'rtl'}>
       {/* TODO: we have multiple hero with same styles. make one component for all */}
       <Hero
         backgroundImage="/static/images/investment/hero.png"
@@ -55,6 +52,7 @@ export default async function Page(
             src="/static/images/investment/1.jpg"
             alt="LANDA INVESTMENT"
             layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             placeholder="blur"
             blurDataURL="data:image/svg+xml;base64,CiAgICA8c3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDggNSc+CiAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0nMScgLz4KICAgICAgPC9maWx0ZXI+CgogICAgICA8aW1hZ2UgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgZmlsdGVyPSd1cmwoI2IpJyB4PScwJyB5PScwJyBoZWlnaHQ9JzEwMCUnIHdpZHRoPScxMDAlJyAKICAgICAgaHJlZj0nZGF0YTppbWFnZS9hdmlmO2Jhc2U2NCwvOWovMndCREFBZ0dCZ2NHQlFnSEJ3Y0pDUWdLREJRTkRBc0xEQmtTRXc4VUhSb2ZIaDBhSEJ3Z0pDNG5JQ0lzSXh3Y0tEY3BMREF4TkRRMEh5YzVQVGd5UEM0ek5ETC8yd0JEQVFrSkNRd0xEQmdORFJneUlSd2hNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpML3dBQVJDQUFMQUJBREFTSUFBaEVCQXhFQi84UUFGZ0FCQVFFQUFBQUFBQUFBQUFBQUFBQUFCZ01ILzhRQUloQUFBZ0lDQWdFRkFRQUFBQUFBQUFBQUFRSURCQVVSQUNFU0JoTVVNVUhCLzhRQUZRRUJBUUFBQUFBQUFBQUFBQUFBQUFBQUFBTC94QUFaRVFBREFBTUFBQUFBQUFBQUFBQUFBQUFBQVJFQ0lUSC8yZ0FNQXdFQUFoRURFUUEvQU5KdFhNbEZqekxjaGZIMVl4dDVQa3B2ZjUzL0FEWGZJeGVzemtFclJZK3V0eVYxVVNsU3dDc1U4aHM2ME5nRTY0aEVVZCtrOWEzR2swRWkrTG82Z2dnOWNNNTJOYU9GdFdxbzltWlN6cXlIV2pvOWdmWDd3M3VsNHpoLy85az0nIC8+CiAgICA8L3N2Zz4KICA="
           />
@@ -110,6 +108,7 @@ export default async function Page(
               src="/static/images/investment/Incorporation-page-001 1 (2).png"
               alt="Coin"
               layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>
@@ -120,6 +119,7 @@ export default async function Page(
               src="/static/images/investment/Incorporation-page-001 1 (5).png"
               alt="LANDA INVESTMENT"
               layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <span className="font-gilda text-2xl text-primary md:text-4xl">
@@ -141,7 +141,11 @@ export default async function Page(
           </div>
         </div>
         <div className="flex flex-col">
-          <p className={`text-justify font-barlow tracking-[1px] ${lang === "en" ? "leading-8" : "text-lg leading-10"}`}>
+          <p
+            className={`text-justify font-barlow tracking-[1px] ${
+              lang === 'en' ? 'leading-8' : 'text-lg leading-10'
+            }`}
+          >
             {t('focusText')}
           </p>
           {/* <Button
@@ -151,17 +155,19 @@ export default async function Page(
             bgColor="Primary"
             lang={lang}
           /> */}
-          <ButtonRefactor text={lang === "en" ? "Federal Canada Corporation Information" : "اطلاعات شرکت فدرال کانادا"}/>
+          <ButtonRefactor
+            text={
+              lang === 'en'
+                ? 'Federal Canada Corporation Information'
+                : 'اطلاعات شرکت فدرال کانادا'
+            }
+          />
         </div>
       </div>
       <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
         <div className="text-justify font-barlow leading-8 tracking-[1px]">
-          <p>
-            {t('objectiveText1')}
-          </p>
-          <p>
-            {t('objectiveText2')}
-          </p>
+          <p>{t('objectiveText1')}</p>
+          <p>{t('objectiveText2')}</p>
         </div>
         <FeaturesCardsContainer lang={lang} />
       </div>

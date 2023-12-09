@@ -47,6 +47,7 @@ const AboutUsCard = ({
                 alt={`Image for ${title}`}
                 src={image}
                 layout="fill"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 objectFit="cover"
               />
             </div>
@@ -65,6 +66,7 @@ const AboutUsCard = ({
                 alt={`Image for ${title}`}
                 src={image}
                 layout="fill"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 objectFit="cover"
               />
             </div>

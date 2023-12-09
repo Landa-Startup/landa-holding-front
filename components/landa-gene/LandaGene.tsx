@@ -11,6 +11,7 @@ import { submitLandaApplicationForm } from 'pages/api/landa-gene';
 import { useSubmit } from 'providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
+import Image from 'next/image';
 
 export default function LandaGene({
   lang,
@@ -158,7 +159,7 @@ export default function LandaGene({
               alt="gene-1"
               fill={true}
             /> */}
-          <img
+          <Image
             src="/static/images/gene-1.png"
             alt="gene-1"
             className="h-full w-full"
@@ -179,7 +180,7 @@ export default function LandaGene({
               alt="gene-1"
               fill={true}
             /> */}
-          <img
+          <Image
             src="/static/images/gene-2.png"
             alt="gene-1"
             className="h-full w-full"

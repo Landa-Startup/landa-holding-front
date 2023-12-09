@@ -35,6 +35,7 @@ export default async function Page({
           src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
           alt="acceleration"
           layout="fill"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           loading="lazy"
         />
       </div>
@@ -56,6 +57,7 @@ export default async function Page({
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
               alt="acceleration"
               layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               loading="lazy"
             />
           </div>

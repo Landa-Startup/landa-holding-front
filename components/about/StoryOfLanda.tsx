@@ -15,6 +15,7 @@ export default async function StoryOfLanda({ lang }: { lang: string }) {
               src="/static/images/About/story/1.png"
               alt="story of landa"
               layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="mt-4 px-10 md:pl-0">
