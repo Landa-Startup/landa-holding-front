@@ -205,7 +205,7 @@ export default function LandaGene(
               />
             </div>
           </form>
-          <NotificationSendForm />
+          <NotificationSendForm lang={lang}/>
         </div>
       </div>
     </div>

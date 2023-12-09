@@ -1,37 +1,40 @@
 import * as React from 'react';
 import TextArea from '../common/TextArea';
-// import { StartupsFormData } from 'app/types/global';
+import { useTranslation } from 'app/i18n/client';
+
 
 export default function StartupFormIdea({
   register,
   errors,
+  lang
 }: {
   register: any;
   errors: any;
+  lang:string;
 }) {
-
+  const { t } = useTranslation(lang, 'formComponent');
   return (
     <>
       <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <TextArea
-          title="Explain your idea in 5 lines?*"
+          title={t('startUp',{ returnObjects: true }).idea.ideaExplanation}
           register={register}
           errors={errors}
-          placeholder="Description"
+          placeholder={t('startUp',{ returnObjects: true }).idea.ideaExplanationPlaceholder}
           nameTextArea="ideaExplanation"
           patternMessage=""
           patternValue=""
-          required="this is required"
+          required={t('startUp',{ returnObjects: true }).idea.ideaExplanationRequired}
         />
         <TextArea
-          title="How did you hear about us?*"
+          title={t('howDidYouKnowUs')}
           register={register}
           errors={errors}
-          placeholder="Description"
+          placeholder={t('howDidYouKnowUsPlaceholder')}
           nameTextArea="getToKnowUs"
           patternMessage=""
           patternValue=""
-          required="this is required"
+          required={t('howDidYouKnowUsRequired')}
         />
       </div>
     </>

@@ -165,7 +165,7 @@ export default function EntrepreneursForm(
             />
           </div>
         </form>
-        <NotificationSendForm/>
+        <NotificationSendForm lang={lang}/>
       </div>
     </>
   );

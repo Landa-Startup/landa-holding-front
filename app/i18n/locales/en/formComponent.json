@@ -62,5 +62,44 @@
         "preferredAreasRequired":"This field is required",
         "preferredAreasPlaceholder":"Description"
 
+    },
+
+    "startUp":{
+        "lng": "en",
+        "dir": "ltr",
+        "banner": "STARTUPS VALIDATION FORM",
+        "formTitle": "Startup Validation Form",
+        "subTitle": "Growth and Scale-up",
+        "formSubtitle": "Personal Information",
+        "statusSelect":"Select Your Status:",
+        "statusSelectRequired":"Your Status is Required",
+        "statusSelectPlaceholder":"Select Your Status:",        
+        "idea":{
+            "ideaExplanation":"Explain your idea in 5 lines?*",
+            "ideaExplanationPlaceholder":"Description",
+            "ideaExplanationRequired":"This field is required"
+        },
+
+        "pitchDeck":"Do you have Pitch deck?",
+        "pitchDeckRequired":"Please choose an option",
+
+        "businessPlan":"Do you have Business Plan??",
+        "businessPlanRequired":"Please choose an option",
+
+        "productName":"Product Name",
+        "productNameRequired":"Product Name is Required.",
+        "productNamePlaceholder":"Enter your Product Name",
+
+        "siteAddress":"Site Address",
+        "siteAddressRequired":"Site Address is Required.",
+        "siteAddressPlaceholder":"Enter your Site Address",
+
+        "problems":{
+            "title":"Problems",
+            "customerProblem":"Describe the customer problem you want to solve with your product or service.",
+            "customerProblemRequired":"This field is required!",
+            "customerProblemPlaceholder":"Description"
+        }
+
     }
 }

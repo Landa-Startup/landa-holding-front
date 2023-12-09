@@ -144,7 +144,7 @@ export default function ContactUsForm(
           lang={lang}
         />
       </form>
-      <NotificationSendForm />
+      <NotificationSendForm lang={lang}/>
     </div>
   );
 }

@@ -14,13 +14,15 @@ export default function StartupFormSaleDevelopment({
   errors,
   handlePitchFileChange,
   handleBusinessFileChange,
-  handleFinancialFileChange
+  handleFinancialFileChange,
+  lang
 }: {
   register: any;
   errors: any;
   handlePitchFileChange: any;
   handleBusinessFileChange: any;
   handleFinancialFileChange: any;
+  lang:string;
 }) {
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
@@ -93,7 +95,7 @@ export default function StartupFormSaleDevelopment({
                 </div>
               </div>
 
-              <StartupFormProblem register={register} errors={errors}/>
+              <StartupFormProblem register={register} errors={errors} lang={lang}/>
               <StartupFormSolutions register={register} errors={errors}/>
               <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange} />
             </div>

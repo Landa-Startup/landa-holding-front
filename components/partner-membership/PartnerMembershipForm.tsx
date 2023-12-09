@@ -187,7 +187,7 @@ export default function PartnerMembershipForm(
             />
           </div>
         </form>
-        <NotificationSendForm/>
+        <NotificationSendForm lang={lang}/>
       </div>
     </div>
     </div>
