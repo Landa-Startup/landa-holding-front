@@ -1,0 +1,64 @@
+{
+    "firstName": "نام",
+    "firstNameRequired": "نام اجباری است.",
+    "firstNamePlaceholder": "لطفا نام خود را وارد کنید.",
+
+    "lastName": "نام خانوادگی",
+    "lastNameRequired": "نام خانوادگی اجباری است.",
+    "lastNamePlaceholder": "لطفا نام خانوادگی خود را وارد کنید.",
+
+    "email": "ایمیل",
+    "emailRequired": "ایمیل اجباری است.",
+    "emailErrorMessage": "لطفا آدرس ایمیل را به درستی وارد کنید.",
+    "EmailPlaceholder": "لطفا ایمیل خود را وارد کنید.",
+
+    "phoneNumber": "شماره تماس",
+    "phoneNumberRequired": "شماره تماس الزامی است.",
+    "phoneNumberErrorMessage": "شماره تماس را به درستی وارد کنید.",
+    "phoneNumberPlaceholder": "لطفا شماره تماس خود را وارد کنید.",
+
+    "birthDate":"تاریخ تولد",
+    "birthDateRequired":"تاریخ تولد الزامی است.",
+    "birthDateErrorMessage":"(لطفا تاریخ تولد خود را به درستی وارد کنید(به شکل ۲۰۰۱/۰۲/۱۱",
+    "birthDatePlaceholder":"لطفا تاریخ تولد خود را وارد کنید.",
+
+    "sendButton": "ارسال",
+    "sendingButton": "درحال ارسال ....",
+    "visitButton": "مشاهده کنید",
+
+    "successMessage": "اطلاعات با موفقیت ارسال شد.",
+    "failedMessage": "در ارسال اطلاعات مشکلی به وجود آمده! لطفا با پشتیبانی تماس بگیرید.",
+
+    "companyName": "نام شرکت",
+    "companyNameRequired": "نام شرکت الزامی است.",
+    "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
+
+    "howDidYouKnowUs": "چگونه درباره ما شنیدید",
+    "howDidYouKnowUsPlaceholder":"توضیحات",
+    "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
+
+    "jobForm":{
+        "lng": "fa",
+        "dir": "rtl",
+        "LandaHolding": "هلدینگ لاندا",
+        "banner": "درخواست همکاری",
+        "formTitle": "فرم درخواست همکاری",
+        "formSubtitle": "اطلاعات شخصی",
+        "resumeFile": "فایل رزومه:"
+    },
+
+    "investorForm":{
+        "lng": "en",
+        "dir": "ltr",
+        "banner": "مرکز سرمایه گذار",
+        "LandaHolding": "هلدینگ لاندا",
+        "formTitle": "فرم مرکز سرمایه گذاران",
+        "formSubtitle": "اطلاعات شخصی",
+        "interests":"علاقه مندی ها",
+        "interestsRequired":"علاقه مندی ها الزامی است",
+        "interestsPlaceholder":"علاقه مندی های خود را وارد کنید",
+        "preferredAreas":"حوزه های ترجیحی برای سرمایه گذاری",
+        "preferredAreasRequired":"پر کردن این قسمت الزامی است",
+        "preferredAreasPlaceholder":"توضیحات"
+    }
+}

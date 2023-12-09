@@ -10,17 +10,15 @@ import Input from '../common/form/Input';
 import { initialInvestorRegistrationFormData } from '../../initials/initObjects'
 import Button from '../common/Button';
 import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
-
 import { useSubmit } from '../../providers/StateProvider';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+import { useTranslation } from 'app/i18n/client';
 
 export default function InvestorRegistrationForm(
   { lang }: { lang: string }
 ) {
-
-  // const lang = "en"
-
+  const { t } = useTranslation(lang, 'formComponent');
   const {
     register,
     handleSubmit,
@@ -115,11 +113,11 @@ export default function InvestorRegistrationForm(
                 errors={errors}
                 nameInput="birthDate"
                 type="date"
-                label={lang === "en" ? "Date of Birth" : "تاریخ تولد"}
-                required={lang === "en" ? "Date of Birth is Required." : "تاریخ تولد الزامی است"}
+                label={t('birthDate')}
+                required={t('birthDateRequired')}
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
-                patternMessage={lang === "en" ? "Please enter a valid Date of Birth(e.g., 2001/02/11)" : "لطفا یک تاریخ تولد معتبر وارد کنید"}
-                placeholder={lang === "en" ? "Enter your Date of Birth" : "تاریخ تولد خود را وارد کنید"}
+                patternMessage={t('birthDateErrorMessage')}
+                placeholder={t('birthDatePlaceholder')}
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -138,9 +136,9 @@ export default function InvestorRegistrationForm(
                 errors={errors}
                 nameInput="companyName"
                 type="text"
-                label={lang === "en" ? "Company Name" : "نام شرکت"}
-                required={lang === "en" ? "Company Name is Required." : "نام شرکت الزامی است"}
-                placeholder={lang === "en" ? "Enter your Company Name" : "نام شرکت خود را وارد کنید"}
+                label={t('companyName')}
+                required={t('companyNameRequired')}
+                placeholder={t('companyNamePlaceholder')}
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -154,9 +152,9 @@ export default function InvestorRegistrationForm(
                 errors={errors}
                 nameInput="interests"
                 type="text"
-                label={lang === "en" ? "Intrests" : "علاقه مندی ها"}
-                required={lang === "en" ? "Intrests is Required." : "علاقه مندی ها الزامی است"}
-                placeholder={lang === "en" ? "Enter your Intrests" : "علاقه مندی های خود را وارد کنید"}
+                label={t('investorForm',{ returnObjects: true }).interests}
+                required={t('investorForm',{ returnObjects: true }).interestsRequired}
+                placeholder={t('investorForm',{ returnObjects: true }).interestsPlaceholder}
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -166,27 +164,27 @@ export default function InvestorRegistrationForm(
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title={lang === "en" ? "Preferred Areas for Investment" : "حوزه های ترجیحی برای سرمایه گذاری"}
+                title={t('investorForm',{ returnObjects: true }).preferredAreas}
                 register={register}
                 errors={errors}
-                placeholder={lang === "en" ? "Description" : "توضیحات"}
+                placeholder={t('investorForm',{ returnObjects: true }).preferredAreasPlaceholder}
                 nameTextArea="preferredAreas"
                 patternMessage=""
                 patternValue=""
-                required={lang === "en" ? "This field is required" : "پر کردن این قسمت الزامی است"}
+                required={t('investorForm',{ returnObjects: true }).preferredAreasRequired}
               />
             </div>
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title={lang === "en" ? "How did you hear about us?*" : "چگونه درباره ما شنیدید"}
+                title={t('howDidYouKnowUs')}
                 register={register}
                 errors={errors}
-                placeholder={lang === "en" ? "Description" : "توضیحات"}
+                placeholder={t('howDidYouKnowUsPlaceholder')}
                 nameTextArea="howDidYouKnowUs"
                 patternMessage=""
                 patternValue=""
-                required={lang === "en" ? "This field is required" : "پر کردن این قسمت الزامی است"}
+                required={t('howDidYouKnowUsRequired')}
               />
             </div>
           </div>
@@ -199,7 +197,7 @@ export default function InvestorRegistrationForm(
             />
           </div>
         </form>
-        <NotificationSendForm />
+        <NotificationSendForm lang={lang}/>
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 // TO DO : mobile design of file input should change
-
+// TODO: add i18n
 export default function UploadInput({ 
   title,
   register,
