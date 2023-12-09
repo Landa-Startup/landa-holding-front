@@ -86,6 +86,13 @@ img {
   border-radius: 4px;
 }
 
+/* Hide horizontal scrollbar */
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* Define styles for elements with class "b4" */
 .b4 {
   overflow: hidden !important;
