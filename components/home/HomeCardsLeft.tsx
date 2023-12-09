@@ -15,7 +15,7 @@ export default function HomeCardsLeft({
         <p className="my-16 pb-14 text-justify font-barlow text-base leading-[30px] first:mb-0 md:w-[491px] md:text-xl">
           {text}
         </p>
-        <ButtonRefactor text="مشاهده کنید" />
+        <ButtonRefactor text="Visit Now" />
       </div>
     </div>
   );
