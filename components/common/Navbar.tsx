@@ -165,7 +165,7 @@ export default function Navbar({
           <li>
             <div className="">
               <Link className="font-condensed font-bold" href={'#'}>
-                FORMS
+                {lang === 'en' ? 'FORMS' : 'فرم ها'}
               </Link>
               <IconDown />
             </div>
