@@ -70,7 +70,7 @@ export default function Navbar({
           </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
-              <div className="flex flex-col items-end md:flex-row">
+              <div className="flex flex-col items-center md:flex-row">
                 <Image
                   className="h-10 w-10 md:h-14 md:w-12"
                   src={'static/images/Logo.svg'}
