@@ -52,7 +52,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
               loading="lazy"
             />
           </div>
-          <p className={`w-[340px] text-justify font-barlow leading-8 ltr:tracking-[1.6px] ltr:text-lg rtl:text-base md:h-[248px]  md:w-[550px] lg:w-[680px] lg:pr-2`}>
+          <p className={`w-[340px] text-justify font-barlow leading-8 ltr:text-lg ltr:tracking-[1.6px] rtl:text-base md:h-[248px]  md:w-[550px] lg:w-[680px] lg:pr-2`}>
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
         </div>
