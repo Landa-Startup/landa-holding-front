@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: hero components
 export default async function Hero({
   showLanda,
   leftImage,
   showButton,
-  lang,
+  lang
 }: {
   showLanda: boolean;
   buttonBg?: string;
@@ -16,15 +16,14 @@ export default async function Hero({
   showButton?: boolean;
   lang: string;
 }) {
-
-  const { t } = await useTranslation(lang, "mainPage")
+  const { t } = await useTranslation(lang, 'mainPage');
 
   return (
     <div
       style={{
         backgroundImage: `url('/static/images/acceleration/banner.png')`,
         backgroundSize: 'cover',
-        backgroundPositionX: '65%',
+        backgroundPositionX: '65%'
       }}
       className="relative h-[calc(100vh)] overflow-hidden md:h-screen"
     >
@@ -41,12 +40,15 @@ export default async function Hero({
         </div>
 
         {showButton ? (
-          <Button
-            text={t('lng') === "en" ? "Register Now" : "همین الان ثبت نام کنید"}
-            size="notVisit"
-            goto="/StartupsForm"
-            bgColor="Primary"
-            lang={lang}
+          // <Button
+          //   text={t('lng') === "en" ? "Register Now" : "همین الان ثبت نام کنید"}
+          //   size="notVisit"
+          //   goto="/StartupsForm"
+          //   bgColor="Primary"
+          //   lang={lang}
+          // />
+          <ButtonRefactor
+            text={t('lng') === 'en' ? 'Register Now' : 'همین الان ثبت نام کنید'}
           />
         ) : (
           <></>

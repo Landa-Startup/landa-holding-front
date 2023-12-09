@@ -8,12 +8,12 @@ import TextArea from '../common/TextArea';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import Input from '../common/form/Input';
 import { initialInvestorRegistrationFormData } from '../../initials/initObjects'
-import Button from '../common/Button';
 import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
 
 import { useSubmit } from '../../providers/StateProvider';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function InvestorRegistrationForm(
   { lang }: { lang: string }
@@ -85,10 +85,10 @@ export default function InvestorRegistrationForm(
     })
   };
 
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }))
+  // const errorsList = Object.entries(errors).map(([name, value]) => ({
+  //   name: name,
+  //   value: value
+  // }))
 
   return (
     <>
@@ -166,7 +166,7 @@ export default function InvestorRegistrationForm(
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title={lang === "en" ? "Preferred Areas for Investment" : "حوزه های ترجیحی برای سرمایه گذاری"}
+                title={lang === "en" ? "Preferred Areas for Investment" : "حوزه مورد نظر برای سرمایه گذاری"}
                 register={register}
                 errors={errors}
                 placeholder={lang === "en" ? "Description" : "توضیحات"}
@@ -179,7 +179,7 @@ export default function InvestorRegistrationForm(
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title={lang === "en" ? "How did you hear about us?*" : "چگونه درباره ما شنیدید"}
+                title={lang === "en" ? "How did you hear about us?*" : "نحوه آشنایی با ما"}
                 register={register}
                 errors={errors}
                 placeholder={lang === "en" ? "Description" : "توضیحات"}
@@ -191,12 +191,13 @@ export default function InvestorRegistrationForm(
             </div>
           </div>
           <div className="text-center">
-            <Button
+            {/* <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
               lang={lang}
-            />
+            /> */}
+            <ButtonRefactor type='submit' text='Submit'/>
           </div>
         </form>
         <NotificationSendForm />

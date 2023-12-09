@@ -7,10 +7,10 @@ import EntrepreneursTitle from './EntrepreneursTitle';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
-import Button from '../common/Button';
 import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function EntrepreneursForm(
   {lang} : {lang: string}
@@ -85,14 +85,14 @@ export default function EntrepreneursForm(
     })
   };
 
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }))
+  // const errorsList = Object.entries(errors).map(([name, value]) => ({
+  //   name: name,
+  //   value: value
+  // }))
 
   return (
     <>
-      <div className="container m-16 mx-auto bg-[#faf8f5] p-20 dark:bg-transparent" dir={lang === "en" ? "ltr" : "rtl"}>
+      <div className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent" dir={lang === "en" ? "ltr" : "rtl"}>
         <EntrepreneursTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
@@ -102,7 +102,7 @@ export default function EntrepreneursForm(
                 errors={errors}
                 nameInput="companyName"
                 type="text"
-                label={lang === "en" ? "companyName" : "نام شرکت"}
+                label={lang === "en" ? "Company Name" : "نام شرکت"}
                 required={lang === "en" ? "Company Name is Required." : "نام شرکت الزامی است"}
                 patternValue=""
                 patternMessage=""
@@ -157,12 +157,13 @@ export default function EntrepreneursForm(
             </div>
           </div>
           <div className="text-center">
-            <Button
+            {/* <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
               lang={lang}
-            />
+            /> */}
+            <ButtonRefactor text="Submit" type="submit" />
           </div>
         </form>
         <NotificationSendForm/>
