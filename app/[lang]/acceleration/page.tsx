@@ -40,12 +40,12 @@ export default async function Page({
       </div>
       <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
         <span
-          className={`mb-2 ml-12 mr-8 self-start text-3xl leading-tight text-[#55422A] ltr:mr-7 rtl:ml-7 md:mx-0 md:text-5xl xl:mx-36`}
+          className={`mb-2 ml-12 mr-8 self-start text-3xl leading-tight text-[#55422A] md:text-5xl`}
         >
           {t('LandaAccelerator', { returnObjects: true })[0].title}
         </span>
         <span
-          className={`ml-12 mr-8 self-start text-xl leading-tight text-[#AA8453] ltr:mr-7 rtl:ml-7 md:mx-0 md:text-4xl xl:mx-36`}
+          className={`ml-12 mr-8 self-start text-xl leading-tight text-[#AA8453] md:text-4xl`}
         >
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
