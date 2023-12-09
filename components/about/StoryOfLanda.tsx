@@ -82,13 +82,7 @@ export default async function StoryOfLanda({ lang }: { lang: string }) {
           </span>
           <div className="mt-5 flex flex-col space-y-4">
             <p>
-              {t('VisionOfTheLanaHolding', { returnObjects: true })[0].text1}
-            </p>
-            <p>
-              {t('VisionOfTheLanaHolding', { returnObjects: true })[0].text2}
-            </p>
-            <p>
-              {t('VisionOfTheLanaHolding', { returnObjects: true })[0].text3}
+              {t('VisionOfTheLanaHolding', { returnObjects: true })[0].text}
             </p>
           </div>
         </div>

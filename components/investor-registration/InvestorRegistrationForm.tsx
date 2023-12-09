@@ -166,7 +166,7 @@ export default function InvestorRegistrationForm(
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title={lang === "en" ? "Preferred Areas for Investment" : "حوزه های ترجیحی برای سرمایه گذاری"}
+                title={lang === "en" ? "Preferred Areas for Investment" : "حوزه مورد نظر برای سرمایه گذاری"}
                 register={register}
                 errors={errors}
                 placeholder={lang === "en" ? "Description" : "توضیحات"}
@@ -179,7 +179,7 @@ export default function InvestorRegistrationForm(
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title={lang === "en" ? "How did you hear about us?*" : "چگونه درباره ما شنیدید"}
+                title={lang === "en" ? "How did you hear about us?*" : "نحوه آشنایی با ما"}
                 register={register}
                 errors={errors}
                 placeholder={lang === "en" ? "Description" : "توضیحات"}

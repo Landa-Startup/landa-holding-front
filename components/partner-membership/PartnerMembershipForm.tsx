@@ -17,7 +17,10 @@ import ButtonRefactor from '../common/ButtonRefactor';
 
 // import { PartnerMembership } from '@prisma/client';
 
-export default function PartnerMembershipForm({ lang }: { lang: string }) {
+export default function PartnerMembershipForm(
+  { lang }: { lang: string }
+) {
+
   const {
     register,
     handleSubmit,
