@@ -92,7 +92,7 @@ export default function EntrepreneursForm(
 
   return (
     <>
-      <div className="container m-16 mx-auto bg-[#faf8f5] p-20 dark:bg-transparent" dir={lang === "en" ? "ltr" : "rtl"}>
+      <div className="container font-barlow m-16 mx-auto bg-[#faf8f5] p-20 dark:bg-transparent" dir={lang === "en" ? "ltr" : "rtl"}>
         <EntrepreneursTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
@@ -102,7 +102,7 @@ export default function EntrepreneursForm(
                 errors={errors}
                 nameInput="companyName"
                 type="text"
-                label={lang === "en" ? "companyName" : "نام شرکت"}
+                label={lang === "en" ? "Company Name" : "نام شرکت"}
                 required={lang === "en" ? "Company Name is Required." : "نام شرکت الزامی است"}
                 patternValue=""
                 patternMessage=""

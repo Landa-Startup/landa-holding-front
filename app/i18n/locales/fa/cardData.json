@@ -1,84 +1,81 @@
 {
-    "cardData1": [
-        {
-            "titleEN": "هوش مصنوعی",
-            "image": "/static/images/Home/Priority/vr-glasses 2.png"
-        },
-        {
-            "title": "واقعیت مجازی",
-            "image": "/static/images/Home/Priority/system 2.png"
-        },
-        {
-            "title": "انرژی تجدیدپذیر",
-            "image": "/static/images/Home/Priority/online-shop 1.png"
-        },
-        {
-            "title": "محیط زیست",
-            "image": "/static/images/Home/Priority/planet-earth 1.png"
-        },
-        {
-            "title": "سرگرمی",
-            "image": "/static/images/Home/Priority/ai 2.png"
-        },
-        {
-            "title": "مهندسی بیوپزشکی",
-            "image": "/static/images/Home/Priority/man 2.png"
-        },
-        {
-            "title": "خدمات برای نوجوانان",
-            "image": "/static/images/Home/Priority/process 2.png"
-        },
-        {
-            "title": "خدمات گردشگری",
-            "image": "/static/images/Home/Priority/world 2.png"
-        }
-    ],
-  
-    "cardData2": [
-        {
-            "image": "/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png",
-            "title": "فواید درمان‌های اسپا",
-            "type": "شتابدهنده",
-            "date": "آوریل ۲۷"
-        },
-        {
-            "title": "مرکز تناسب اندام",
-            "image": "/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png",
-            "type": "سرمایه‌گذاری",
-            "date": "آوریل ۲۷"
-        },
-        {
-            "title": "فواید درمان‌های اسپا",
-            "image": "/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png",
-            "type": "سرمایه‌گذاری",
-            "date": "آوریل ۲۷"
-        }
-    ],
-  
-    "LatestStartups": [
-        {
-            "image": "/static/images/Home/Startups/trip.png",
-            "title": "سفر لاندا",
-            "description": "لاندا تریپ یک استارت‌آپ نوآورانه‌ای است که دوره‌های آموزشی مفیدی را برای تمام افراد علاقه‌مند و همچنین بیزینس‌ها اجرا می کند.",
-            "link": "https://landatrip.com/"
-        },
-        {
-            "image": "/static/images/Home/Startups/diaco.png",
-            "title": "دیاکو",
-            "description": "دیاکو پلتفرمی است که به عنوان یک واسطه میان جویندگان و ارائه دهندگان فناوری جهت برآورده کردن خواسته های تکنولوژیکی آنها عمل می کند.",
-            "link": "https://irdiaco.ca/"
-        },
-        {
-            "image": "/static/images/Home/Startups/vision-raft.png",
-            "title": "ویژن رفت",
-            "description": "Vision Raft پلتفرمی است بر پایه واقعیت مجازی (VR) با تمرکز روی آموزش و سرگرمی جوانان جهت افزایش کیفیت یادگیری آنها.",
-            "link": "https://invigorated-drop-231359.framer.app"
-        }
-      ],
-  
-  "ServicesInterface":[
+  "cardData1": [
     {
-      "title": "آماده سازی فایل ارايه",
+      "titleEN": "هوش مصنوعی",
+      "image": "/static/images/Home/Priority/vr-glasses 2.png"
+    },
+    {
+      "title": "واقعیت مجازی",
+      "image": "/static/images/Home/Priority/system 2.png"
+    },
+    {
+      "title": "انرژی تجدیدپذیر",
+      "image": "/static/images/Home/Priority/online-shop 1.png"
+    },
+    {
+      "title": "محیط زیست",
+      "image": "/static/images/Home/Priority/planet-earth 1.png"
+    },
+    {
+      "title": "سرگرمی",
+      "image": "/static/images/Home/Priority/ai 2.png"
+    },
+    {
+      "title": "مهندسی بیوپزشکی",
+      "image": "/static/images/Home/Priority/man 2.png"
+    },
+    {
+      "title": "خدمات برای نوجوانان",
+      "image": "/static/images/Home/Priority/process 2.png"
+    },
+    {
+      "title": "خدمات گردشگری",
+      "image": "/static/images/Home/Priority/world 2.png"
+    }
+  ],
+  "cardData2": [
+    {
+      "image": "/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png",
+      "title": "فواید درمان‌های اسپا",
+      "type": "شتابدهنده",
+      "date": "آوریل ۲۷"
+    },
+    {
+      "title": "مرکز تناسب اندام",
+      "image": "/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png",
+      "type": "سرمایه‌گذاری",
+      "date": "آوریل ۲۷"
+    },
+    {
+      "title": "فواید درمان‌های اسپا",
+      "image": "/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png",
+      "type": "سرمایه‌گذاری",
+      "date": "آوریل ۲۷"
+    }
+  ],
+  "LatestStartups": [
+    {
+      "image": "/static/images/Home/Startups/trip.png",
+      "title": "سفر لاندا",
+      "description": "لاندا تریپ یک استارت‌آپ نوآورانه‌ای است که دوره‌های آموزشی مفیدی را برای تمام افراد علاقه‌مند و همچنین بیزینس‌ها اجرا می کند.",
+      "link": "https://landatrip.com/"
+    },
+    {
+      "image": "/static/images/Home/Startups/diaco.png",
+      "title": "دیاکو سنتر",
+      "description": "دیاکو پلتفرمی است که به عنوان یک واسطه میان جویندگان و ارائه دهندگان فناوری جهت برآورده کردن خواسته های تکنولوژیکی آنها عمل می کند.",
+      "link": "https://irdiaco.ca/"
+    },
+    {
+      "image": "/static/images/Home/Startups/vision-raft.png",
+      "title": "ویژن رفت",
+      "description": "Vision Raft پلتفرمی است بر پایه واقعیت مجازی (VR) با تمرکز روی آموزش و سرگرمی جوانان جهت افزایش کیفیت یادگیری آنها.",
+      "link": "https://invigorated-drop-231359.framer.app"
+    }
+  ],
+  "ServicesInterface": [
+    {
+      "title": "تنظیم پیچ دک",
       "image": "1.png"
     },
     {
@@ -86,7 +83,7 @@
       "image": "2.png"
     },
     {
-      "title": "شبکه سازی با افراد مناسب",
+      "title": "شبکه سازی با افراد مورد نیاز",
       "image": "3.png"
     },
     {
@@ -106,11 +103,11 @@
       "image": "7.png"
     },
     {
-      "title": "ایجاد طرح کسب و کار",
+      "title": "تنظیم بیزینس پلن",
       "image": "8.png"
     },
     {
-      "title": "طوفان فکری و توسعه ایده",
+      "title": "همفکری و پرورش ایده",
       "image": "9.png"
     },
     {
@@ -126,8 +123,7 @@
       "image": "12.png"
     }
   ],
-  
-    "cardData": [
+  "cardData": [
     {
       "image": "/static/images/our-team/Personals/a1.png",
       "name": "رسول مرادیمهر",
@@ -165,4 +161,4 @@
       }
     }
   ]
-  }
+}
