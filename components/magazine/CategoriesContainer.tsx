@@ -19,8 +19,8 @@ export default function CategoriesContainer() {
         Categories
       </span>
       <ul className="mt-7 space-y-4 font-condensed text-xl text-[#6B6B6B]">
-      {categories.map((category:any) => (
-          <li key={category.id}>
+      {categories.map((category:any, index) => (
+          <li key={index}>
             {category.title}
           </li>
         ))}

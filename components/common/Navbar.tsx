@@ -105,8 +105,9 @@ export default function Navbar({
                     {lang === 'en' ? 'FORMS' : 'فرم ها'}
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
-                      }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
+                      isMenuOpen ? '' : 'hidden'
+                    }`}
                   >
                     {submenuItems.map(
                       ({ label, href }: { label: string; href: string }) => (
