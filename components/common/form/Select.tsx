@@ -44,8 +44,8 @@ export default function Select({
         <option disabled selected value={""}>
           {selected ? selected : placeholder}
         </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
             {option.label}
           </option>
         ))}

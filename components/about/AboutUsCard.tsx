@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { AboutUsCardProps } from '../../types/global';
-import Button from '../common/Button';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 const AboutUsCard = ({
   title,
@@ -10,7 +10,7 @@ const AboutUsCard = ({
   image,
   reverse,
   description,
-  link,
+  link
 }: AboutUsCardProps) => {
   return (
     <>
@@ -24,13 +24,14 @@ const AboutUsCard = ({
               {text}
             </p>
             <Link href={link}>
-              <Button 
+              {/* <Button 
                 text='Visit Now' 
                 size={''} 
                 type='button'
                 bgColor="Primary"
                 goto={''}
-              />
+              /> */}
+              <ButtonRefactor text="Visit Now" />
               {/* <button className=" justify-items-center mx-auto bg-[#AA8453] text-white md:mt-24 mt-8  flex px-10 py-2 font-barlow">
                 Visit Now
               </button> */}
@@ -46,6 +47,7 @@ const AboutUsCard = ({
                 alt={`Image for ${title}`}
                 src={image}
                 layout="fill"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 objectFit="cover"
               />
             </div>
@@ -64,6 +66,7 @@ const AboutUsCard = ({
                 alt={`Image for ${title}`}
                 src={image}
                 layout="fill"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 objectFit="cover"
               />
             </div>

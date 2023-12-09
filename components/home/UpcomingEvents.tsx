@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../common/Button';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function UpcomingEvents() {
   return (
@@ -27,12 +27,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button
-            goto="/"
-            text="Register"
-            size="register"
-            bgColor="Primary"
-          />
+          <ButtonRefactor text="Register" />
         </div>
         <div className="flex items-center justify-between self-stretch md:w-[1100px]">
           <div className="flex items-start justify-start gap-1 md:w-[307px] md:gap-16">
@@ -53,12 +48,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button
-            goto="/"
-            text="Register"
-            size="register"
-            bgColor="Primary"
-          />
+          <ButtonRefactor text="Register" />
         </div>
         <div className="flex items-center justify-between self-stretch md:w-[1100px]">
           <div className="flex items-center justify-start gap-1 md:gap-16">
@@ -79,12 +69,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-          <Button
-            goto="/"
-            text="Register"
-            size="register"
-            bgColor="Primary"
-          />
+         <ButtonRefactor text="Register" />
         </div>
       </div>
       <div className="absolute left-10 top-[52px] hidden h-[313.88px] w-16 md:left-[121px] md:block">

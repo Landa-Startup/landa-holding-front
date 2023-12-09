@@ -6,7 +6,7 @@ export default function AboutUsProfileCard({
   image,
   title,
   description,
-  links,
+  links
 }: {
   image: string;
   title: string;
@@ -21,6 +21,7 @@ export default function AboutUsProfileCard({
             loading="lazy"
             alt={`${title} Image`}
             layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             src={image}
           />
         </div>
