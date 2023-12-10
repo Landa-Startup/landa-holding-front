@@ -1,13 +1,18 @@
 import * as React from 'react';
 import TextArea from '../common/TextArea';
+import { useTranslation } from 'app/i18n/client';
 
 export default function StartupFormProblem({
   register,
   errors,
+  lang
+
 }:{
   register:any;
   errors:any;
+  lang:string;
 }) {
+  const { t } = useTranslation(lang, 'formComponent');
 
   return (
     <>
@@ -15,20 +20,20 @@ export default function StartupFormProblem({
         <div className="col-span-2">
           <div className="bg-[#222222CC]">
             <p className="mb-3 w-[310px] border-b py-5 pl-10 text-3xl text-white md:w-[550px] lg:w-[450px] xl:w-[650px]">
-              Problems
+            {t('startUp',{ returnObjects: true }).problems.title}
             </p>
             <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
           </div>
         
           <TextArea
-            title="Describe the customer problem you want to solve with your product or service."
+            title={t('startUp',{ returnObjects: true }).problems.customerProblem}
             register={register}
             errors={errors}
-            placeholder="Description"
+            placeholder={t('startUp',{ returnObjects: true }).problems.customerProblemPlaceholder}
             nameTextArea="customerProblem"
             patternMessage=""
             patternValue=""
-            required="is Required."
+            required={t('startUp',{ returnObjects: true }).problems.customerProblemRequired}
           />
         </div>
 

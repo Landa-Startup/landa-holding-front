@@ -221,13 +221,12 @@ export default function PartnerMembershipForm(
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
               lang={lang}
-            /> */}
-              <ButtonRefactor type="submit" text="Submit" />
-            </div>
-          </form>
-          <NotificationSendForm />
-        </div>
+            />
+          </div>
+        </form>
+        <NotificationSendForm lang={lang}/>
       </div>
+    </div>
     </div>
   );
 }

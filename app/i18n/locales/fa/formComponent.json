@@ -60,5 +60,68 @@
         "preferredAreas":"حوزه های ترجیحی برای سرمایه گذاری",
         "preferredAreasRequired":"پر کردن این قسمت الزامی است",
         "preferredAreasPlaceholder":"توضیحات"
+    },
+    "startUp":{
+        "lng": "fa",
+        "dir": "rtl",
+        "banner": "اعتبارسنجی استارت آپ ها",
+        "formTitle": "فرم اعتبارسنجی استارتاپ",
+        "subTitle": "رشد و افزایش مقیاس",
+        "formSubtitle": "اطلاعات شخصی",
+        "statusSelect":"وضعیت خود را انتخاب کنید: ",
+        "statusSelectRequired":"وضعیت شما الزامی است",
+        "statusSelectPlaceholder":"وضعیت خود را انتخاب کنید: ",
+        "idea":{
+            "ideaExplanation":"ایده خود را در ۵ خط توضیح دهید؟*",
+            "ideaExplanationPlaceholder":"توضیحات",
+            "ideaExplanationRequired":"پر کردن این قسمت الزامی است."
+        },
+        "pitchDeck":"آیا فایل Pitch Deck دارید؟",
+        "pitchDeckRequired":"لطفا یکی از گزینه های زیر را انتخاب کنید.",
+        "businessPlan":"آیا فایل طرح کسب و کار دارید؟",
+        "businessPlanRequired":"لطفا یکی از گزینه های زیر را انتخاب کنید.",
+
+        "productName":"نام محصول",
+        "productNameRequired":"نام محصول الزامی است.",
+        "productNamePlaceholder":"لطفا نام محصول خود را وارد کنید.",
+
+        "siteAddress":"آدرس وب سایت",
+        "siteAddressRequired":"آدرس وب سایت الزامی است.",
+        "siteAddressPlaceholder":"لطفا آدرس وب سایت خود را وارد کنید.",
+        
+        "problems":{
+            "title":"مشکلات",
+            "customerProblem":"توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",
+            "customerProblemRequired":"این قسمت الزامی است.",
+            "customerProblemPlaceholder":"توضیحات"
+        },
+        "cooperatedWithInvestors":"آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
+        "cooperatedWithInvestorsPlaceholder":"توضیحات",
+
+        "solutions":{
+            "title":"راه حل ها",
+            "solution":"پیشنهاد ارزش منحصر به فرد شما (نوآوری) چیست؟ چه چیز جدیدی در مورد کاری که انجام می دهید وجود دارد؟",
+            "solutionPlaceholder":"توضیحات",
+            "solutionRequired":"این قسمت الزامی است!",
+            "productLevel":"سطح آمادگی محصول و فناوری شما چقدر است؟",
+            "productLevelRequired":"آمار آماده سازی مورد نیاز است",
+            "scalable":"به طور خلاصه توضیح دهید که چگونه فناوری شما مقیاس پذیر است؟",
+            "scalablePlaceholder":"توضیحات",
+            "scalableRequired":"این قسمت الزامی است!"
+        },
+        "businessModel":{
+            "title":"طرح کسب و کار",
+            "monetizationOfYourPlan":"روش کسب درآمد از طرح خود را توضیح دهید؟*",
+            "monetizationOfYourPlanPlaceholder":"توضیحات",
+            "monetizationOfYourPlanRequired":"این قسمت الزامی است!",
+            "structureOfYourSales":"لطفاً ساختار چرخه فروش خود را از تماس تا تحویل به وضوح ذکر کنید.",
+            "structureOfYourSalesPlaceholder":"توضیحات",
+            "structureOfYourSalesRequired":"این قسمت الزامی است!",
+            "financialPlan":"اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
+        },
+        "financialFile":"آیا شما تمکن مالی دارید؟",
+        "financialFileRequired":"لطفا یکی از گزینه ها را انتخاب کنید:"
+
     }
+    
 }

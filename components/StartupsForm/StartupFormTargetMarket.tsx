@@ -1,58 +1,59 @@
 import TextArea from '../common/TextArea';
+import { useTranslation } from 'app/i18n/client';
 
 export default function StartupFormTargetMarket({
   register,
   errors,
+  lang
 }:{
   register:any;
   errors:any;
+  lang:string;
 }) {
-
-
-
+  const { t } = useTranslation(lang, 'formComponent');
   return (
     <>
      <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2">
           <div className="bg-[#222222CC]">
             <p className="mb-3 w-[310px] border-b py-5 pl-10 text-3xl text-white md:w-[550px] lg:w-[450px] xl:w-[650px]">
-              Target Market
+            {t('startUp', { returnObjects: true }).targetMarket.title}
             </p>
             <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
           </div>
         <TextArea
-          title="Based on what characteristics do you decide who are your customers and who are not?"
+          title={t('startUp', { returnObjects: true }).targetMarket.customerCharacteristic}
           register={register}
           errors={errors}
-          placeholder="Description"
+          placeholder={t('startUp', { returnObjects: true }).targetMarket.customerCharacteristicPlaceholder}
           nameTextArea="customerCharacteristic"
           patternMessage=""
           patternValue=""
-          required="this is required!"
+          required={t('startUp', { returnObjects: true }).targetMarket.customerCharacteristicRequired}
         />
         </div>
         <div className="col-span-2">
           <TextArea
-            title="Who are your current customers? How many customers have you had so far?"
+            title={t('startUp', { returnObjects: true }).targetMarket.currentCustomers}
             register={register}
             errors={errors}
-            placeholder="Description"
+            placeholder={t('startUp', { returnObjects: true }).targetMarket.currentCustomersPlaceholder}
             nameTextArea="currentCustomers"
             patternMessage=""
             patternValue=""
-            required="this is required!"
+            required={t('startUp', { returnObjects: true }).targetMarket.currentCustomersRequired}
           />
         </div>
         <div className="col-span-2">
           <TextArea
-            title="How have you estimated the size of the market?*"
+            title={t('startUp', { returnObjects: true }).targetMarket.estimatedMarketSize}
             register={register}
             errors={errors}
-            placeholder="Description"
+            placeholder={t('startUp', { returnObjects: true }).targetMarket.estimatedMarketSizePlaceholder}
             nameTextArea="estimatedMarketSize"
             patternMessage=""
             patternValue=""
-            required="this is required!"
+            required={t('startUp', { returnObjects: true }).targetMarket.estimatedMarketSizeRequired}
           />
         </div>
         {/* <div className="col-span-2">
