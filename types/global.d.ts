@@ -3,7 +3,7 @@ export enum Type {
   MVP = 'MVP',
   TRIAL = 'TRIAL',
   FisrtSale = 'FisrtSale', // Typo: Should be "FirstSale"
-  SaleDevelopment = 'SaleDevelopment',
+  SaleDevelopment = 'SaleDevelopment'
 }
 
 // Define an interface for business partnership form data
@@ -31,6 +31,14 @@ interface ContactUSFormData {
   number: string;
   subject: string;
   message: string;
+}
+
+// Define an interface for contact form data
+interface HandicraftForm {
+  firstName: string;
+  lastName: string;
+  email: string;
+  organization: string;
 }
 
 // Define an interface for investor registration form data
@@ -68,7 +76,7 @@ interface JobFormData {
   lastName: string;
   email: string;
   phoneNumber: string;
-  cvFile?: File | "" | undefined;
+  cvFile?: File | '' | undefined;
 }
 
 interface LandaGeneFormData {
@@ -174,68 +182,65 @@ interface FormData {
 }
 
 interface imageList {
-  src: string,
-  alt: string
+  src: string;
+  alt: string;
 }
 
 interface personArrayInterface {
-  image: string,
-  position: string,
-  name: string,
-  linkedIn: string,
-  category: string
+  image: string;
+  position: string;
+  name: string;
+  linkedIn: string;
+  category: string;
 }
 
 interface CompaniesArrayInterface {
-  name: string,
-  logo: string,
-  link: string
+  name: string;
+  logo: string;
+  link: string;
 }
 
-
 interface CompanySectionsInterface {
-  title: string,
-  text: string,
-  reverse: boolean,
-  show: boolean,
-  index: number,
-  link: string,
-  addedClass: string,
-  images: imageList[]
+  title: string;
+  text: string;
+  reverse: boolean;
+  show: boolean;
+  index: number;
+  link: string;
+  addedClass: string;
+  images: imageList[];
 }
 
 interface WorkFieldsInterface {
-  titleEN: string,
-  titleFA: string,
-  image: string
+  titleEN: string;
+  titleFA: string;
+  image: string;
 }
-
 
 interface ServicesInterface {
-  title: string,
-  image: string
+  title: string;
+  image: string;
 }
 
-
 interface SportsInterface {
-  title: string,
-  image: string,
-  type: string,
-  date: string,
+  title: string;
+  image: string;
+  type: string;
+  date: string;
 }
 
 interface StartUpsInterface {
-  image: string,
-  titleEN: string,
-  titleFA: string,
-  descriptionEN: string,
-  descriptionFA: string,
-  link: string,
+  image: string;
+  titleEN: string;
+  titleFA: string;
+  descriptionEN: string;
+  descriptionFA: string;
+  link: string;
 }
 
 interface LogosInterface {
-  number: number,
-  alt: string
+  number: number;
+  alt: string;
 }
 
 interface HomeCardsProps {
@@ -252,37 +257,36 @@ interface HomeCardsLeftProps {
   text: string;
   addedClass?: string;
   link: string;
-  lang: string
+  lang: string;
 }
 
 interface ImagesInterface {
-  src: string
+  src: string;
 }
 
-
 interface CoursesInterface {
-  title: string,
-  image: string,
-  date: string,
-  active: boolean
+  title: string;
+  image: string;
+  date: string;
+  active: boolean;
 }
 
 interface LinksInterface {
-  linkedin: string,
-  whatsapp: string,
-  email: string,
-  website: string,
-  instagram: string,
+  linkedin: string;
+  whatsapp: string;
+  email: string;
+  website: string;
+  instagram: string;
 }
 
 interface AboutUsDataInterface {
-  image: string,
-  name: string,
-  position: string,
-  links: LinksInterface
+  image: string;
+  name: string;
+  position: string;
+  links: LinksInterface;
 }
 
-interface AboutUsCardProps  {
+interface AboutUsCardProps {
   title: string;
   text: string;
   image: string;
@@ -292,31 +296,31 @@ interface AboutUsCardProps  {
 }
 
 interface PreparationListInterface {
-  value: string,
-  label: string
+  value: string;
+  label: string;
 }
 
 interface CountriesDataInterface {
-  value: string,
-  text: string
+  value: string;
+  text: string;
 }
 
 interface CardsList {
-  title: string,
-  text: string,
-  image: string,
-  reverse: boolean,
-  link: string
+  title: string;
+  text: string;
+  image: string;
+  reverse: boolean;
+  link: string;
 }
 
 interface translationCard {
-  title: "Investment",
-  text: string,
-  reverse: boolean,
-  show: boolean,
-  index: number,
-  link: string,
-  addedClass: string
+  title: 'Investment';
+  text: string;
+  reverse: boolean;
+  show: boolean;
+  index: number;
+  link: string;
+  addedClass: string;
 }
 
 // interface translation {
@@ -338,7 +342,6 @@ interface translationCard {
 //   "APPLY JOB": "APPLY JOB",
 //   "acceleration": "acceleration",
 // }
-
 
 export {
   ContactUSFormData,
@@ -371,5 +374,6 @@ export {
   DecodedToken,
   TableData,
   MagazineData,
-  translationCard
+  translationCard,
+  HandicraftForm
 };
