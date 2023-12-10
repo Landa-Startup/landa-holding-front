@@ -57,7 +57,7 @@ function scrollAutomatically() {
     const intervalId = setInterval(scrollAutomatically, 50); // Adjust the interval as needed.
 
     return () => clearInterval(intervalId);
-  }, [isScrolling]);
+  }, [isScrolling, lang]);
 
   // Add event listeners to stop automatic scroll on mouse enter
   const handleMouseEnter = () => {
@@ -95,7 +95,6 @@ function scrollAutomatically() {
   const handleMouseUp = () => {
     setDragging(false);
   };
-
   return (
     <div className="my-6 flex flex-col items-center gap-12">
       <span className="font-condensed text-3xl text-primary md:text-4xl">
