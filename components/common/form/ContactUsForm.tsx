@@ -90,7 +90,7 @@ export default function ContactUsForm({ lang }: { lang: string }) {
         {lang === 'en' ? 'Reach us' : 'با ما تماس بگیرید'}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="my-4 grid h-full grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
+        <div className="my-4 h-full gap-x-6 gap-y-5 md:grid grid-cols-2">
           <PersonalInfoInput
             register={register}
             errors={errors}
