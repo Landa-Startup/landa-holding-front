@@ -94,11 +94,12 @@ export default function StartupFormMVP({
                 </div>
               </div>
               <StartupFormProblem register={register} errors={errors} lang={lang}/>
-              <StartupFormSolutions register={register} errors={errors} />
+              <StartupFormSolutions register={register} errors={errors} lang={lang}/>
               <StartupFormBusinessModel
                 register={register}
                 errors={errors}
                 handleFinancialFileChange={handleFinancialFileChange}
+                lang={lang}
               />
             </div>
           );
@@ -107,10 +108,10 @@ export default function StartupFormMVP({
             <div>
               <div className="col-span-2 col-start-1">
                 <TextArea
-                  title="Have you previously cooperated with investors or accelerators?"
+                  title={t('startUp',{ returnObjects: true }).cooperatedWithInvestors}
                   register={register}
                   errors={errors}
-                  placeholder="Description"
+                  placeholder={t('startUp',{ returnObjects: true }).cooperatedWithInvestorsPlaceholder}
                   nameTextArea="cooperatedWithInvestors"
                   patternMessage=""
                   patternValue=""
@@ -119,14 +120,14 @@ export default function StartupFormMVP({
               </div>
               <div className="col-span-2">
                 <TextArea
-                  title="How did you hear about us?"
+                  title={t('howDidYouKnowUs')}
                   register={register}
                   errors={errors}
-                  placeholder="Description"
+                  placeholder={t('howDidYouKnowUsPlaceholder')}
                   nameTextArea="getToKnowUs"
                   patternMessage=""
                   patternValue=""
-                  required=""
+                  required={t('howDidYouKnowUsRequired')}
                 />
               </div>
             </div>

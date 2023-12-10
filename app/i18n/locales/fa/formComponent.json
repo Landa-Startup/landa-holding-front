@@ -94,7 +94,34 @@
             "customerProblem":"توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",
             "customerProblemRequired":"این قسمت الزامی است.",
             "customerProblemPlaceholder":"توضیحات"
-        }
+        },
+        "cooperatedWithInvestors":"آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
+        "cooperatedWithInvestorsPlaceholder":"توضیحات",
+
+        "solutions":{
+            "title":"راه حل ها",
+            "solution":"پیشنهاد ارزش منحصر به فرد شما (نوآوری) چیست؟ چه چیز جدیدی در مورد کاری که انجام می دهید وجود دارد؟",
+            "solutionPlaceholder":"توضیحات",
+            "solutionRequired":"این قسمت الزامی است!",
+            "productLevel":"سطح آمادگی محصول و فناوری شما چقدر است؟",
+            "productLevelRequired":"آمار آماده سازی مورد نیاز است",
+            "scalable":"به طور خلاصه توضیح دهید که چگونه فناوری شما مقیاس پذیر است؟",
+            "scalablePlaceholder":"توضیحات",
+            "scalableRequired":"این قسمت الزامی است!"
+        },
+        "businessModel":{
+            "title":"طرح کسب و کار",
+            "monetizationOfYourPlan":"روش کسب درآمد از طرح خود را توضیح دهید؟*",
+            "monetizationOfYourPlanPlaceholder":"توضیحات",
+            "monetizationOfYourPlanRequired":"این قسمت الزامی است!",
+            "structureOfYourSales":"لطفاً ساختار چرخه فروش خود را از تماس تا تحویل به وضوح ذکر کنید.",
+            "structureOfYourSalesPlaceholder":"توضیحات",
+            "structureOfYourSalesRequired":"این قسمت الزامی است!",
+            "financialPlan":"اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
+        },
+        "financialFile":"آیا شما تمکن مالی دارید؟",
+        "financialFileRequired":"لطفا یکی از گزینه ها را انتخاب کنید:"
+
     }
     
 }
