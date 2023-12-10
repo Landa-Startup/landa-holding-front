@@ -80,7 +80,7 @@ export default async function ContactUsDescription(
           <ul>
             <li className="font-semibold ltr:text-left rtl:text-right">{t('email')}</li>
             <li>
-              <a className="text-[#AA8453] ltr:text-left rtl-text-right" href="mailto:info@landaholding.com">
+              <a className="rtl-text-right text-[#AA8453] ltr:text-left" href="mailto:info@landaholding.com">
                 info@landaholding.com
               </a>
             </li>

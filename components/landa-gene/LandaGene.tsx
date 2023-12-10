@@ -252,7 +252,7 @@ export default function LandaGene({
               <ButtonRefactor type="submit" text="Submit" />
             </div>
           </form>
-          <NotificationSendForm />
+          <NotificationSendForm lang={lang}/>
         </div>
       </div>
     </div>

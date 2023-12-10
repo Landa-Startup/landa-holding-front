@@ -1,8 +1,10 @@
 import React from 'react';
 import Check from '../../../components/icons/common/Check';
 import { useSubmit } from '../../../providers/StateProvider';
+import { useTranslation } from 'app/i18n/client';
 
-export default function NotificationSendForm() {
+export default function NotificationSendForm({lang}:{lang:string}) {
+  const { t } = useTranslation(lang, 'formComponent');
 
   const {
     isSubmitting,
@@ -16,7 +18,7 @@ export default function NotificationSendForm() {
       {isSuccess && isSubmitting && !send && showNotification && (
         <div className="alert alert-success">
           <Check />
-          <span>Form Submitted Successfully.</span>
+          <span>{t('successMessage')}</span>
         </div>
       )}
 
@@ -35,7 +37,7 @@ export default function NotificationSendForm() {
               d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <span>An error occurred. Please Contact Support.</span>
+          <span>{t('failedMessage')}</span>
         </div>
       )}
     </div>
