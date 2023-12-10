@@ -151,7 +151,7 @@ export default function ContactUsForm({ lang }: { lang: string }) {
         /> */}
         <ButtonRefactor text="Submit" type="submit" />
       </form>
-      <NotificationSendForm />
+      <NotificationSendForm lang={lang} />
     </div>
   );
 }
