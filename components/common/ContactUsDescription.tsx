@@ -49,7 +49,7 @@ export default async function ContactUsDescription(
       <div className={`mt-10 flex flex-col gap-4`}>
         <div className="flex gap-5">
           <Phone />
-          <div className="mb-5 flex flex-col">
+          <div className="mb-5 flex flex-col ltr:text-left rtl:text-right">
             <span className="font-semibold">{t('phone')}</span>
             <ul className="gap-1">
               {/* TODO: create component for below icons */}
@@ -78,9 +78,9 @@ export default async function ContactUsDescription(
         <div className="flex gap-5">
           <Email />
           <ul>
-            <li className="font-semibold">{t('email')}</li>
+            <li className="font-semibold ltr:text-left rtl:text-right">{t('email')}</li>
             <li>
-              <a className="text-[#AA8453]" href="mailto:info@landaholding.com">
+              <a className="text-[#AA8453] ltr:text-left rtl-text-right" href="mailto:info@landaholding.com">
                 info@landaholding.com
               </a>
             </li>
@@ -89,7 +89,7 @@ export default async function ContactUsDescription(
 
         <div className="flex gap-5">
           <Location />
-          <div className="ml-2 flex flex-col">
+          <div className="ml-2 flex flex-col ltr:text-left rtl:text-right">
             <span className="font-semibold">{t('address')}</span>
             <ul className="mx-4 list-disc space-y-3">
               <li>{t('addresses', {returnObjects: true}).canada}</li>
