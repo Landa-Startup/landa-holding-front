@@ -5,14 +5,16 @@ import UploadInput from '../common/UploadInput';
 import { JobFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../..//utils/get-csrf-token';
-import { initialJobFormData } from '../../initials/initObjects';
+import { initialJobFormData } from '../../initials/initObjects';;
 import { submitApplyJobForm } from '../../pages/api/jobs';
-
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+import { useTranslation } from 'app/i18n/client';
 import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function JobForm({ lang }: { lang: string }) {
+  const { t } = useTranslation(lang, 'formComponent');
+
   const {
     register,
     handleSubmit,
@@ -93,10 +95,10 @@ export default function JobForm({ lang }: { lang: string }) {
       });
   };
 
-  // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   name: name,
-  //   value: value
-  // }))
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }));
 
   return (
     <>
@@ -106,13 +108,11 @@ export default function JobForm({ lang }: { lang: string }) {
             <>
               <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
-                  {lang === 'en' ? 'Apply job Form' : 'فرم درخواست همکاری'}
+                  {t('jobForm',{ returnObjects: true }).formTitle}
                 </p>
               </div>
               <div>
-                <p className="mb-4 text-4xl">
-                  {lang === 'en' ? 'Personal Information' : 'اطلاعات شخصی'}
-                </p>
+                <p className="mb-4 text-4xl">{t('jobForm',{ returnObjects: true }).formSubtitle}</p>
               </div>
               <div>
                 <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
@@ -133,7 +133,7 @@ export default function JobForm({ lang }: { lang: string }) {
                 />
 
                 <UploadInput
-                  title={lang === 'en' ? 'CV File:' : 'فایل رزومه:'}
+                  title={t('jobForm',{ returnObjects: true }).resumeFile}
                   register={register}
                   errors={errors}
                   handleChange={handleCvFileChange}
@@ -141,8 +141,8 @@ export default function JobForm({ lang }: { lang: string }) {
                 />
               </div>
               <div className="text-center">
-                {/* <Button
-                  type='submit'
+                <Button
+                  type="submit"
                   bgColor="Primary"
                   disabled={errorsList[0] ? true : false}
                   lang={lang}
@@ -150,7 +150,7 @@ export default function JobForm({ lang }: { lang: string }) {
                 <ButtonRefactor type="submit" text="Submit" />
               </div>
             </form>
-            <NotificationSendForm />
+            <NotificationSendForm lang={lang}/>
           </div>
         </>
       </div>
