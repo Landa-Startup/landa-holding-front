@@ -1,31 +1,11 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-// import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
-import { useTranslation } from 'app/i18n';
-import { logos } from 'app/[lang]/statics';
 import ButtonRefactor from '../common/ButtonRefactor';
+import { useTranslation } from 'app/i18n/client';
 
 export default function Partners({ lang }: { lang: string }) {
-  // const { t } = await useTranslation(lang, "mainPage")
-
-  const LangChangeHandle = async (lang: string) => {
-    const { t } = await useTranslation(lang, 'mainPage');
-
-    return t;
-  };
-
-  const translated = LangChangeHandle(lang);
-
-  const L = translated.then((res) => {
-    const L = res('partners', { returnObjects: true }).logos;
-    return L;
-  });
-
-  const t = translated.then((res) => {
-    const title = res('partners', { returnObjects: true }).title;
-    return title;
-  });
+  const { t } = useTranslation(lang, 'mainPage');
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [isScrolling, setIsScrolling] = useState(true);
@@ -36,28 +16,26 @@ export default function Partners({ lang }: { lang: string }) {
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
 
-function scrollAutomatically() {
-  // const scrollSpeed = 50; // Adjust this value to control the scroll speed.
-  const scrollAmount = 1;
-  if (scrollContainer != null && isScrolling) {
-    // Check if scrolling is allowed
-    const isScrollingLeft = scrollContainer.scrollLeft > 0;
+    function scrollAutomatically() {
+      if (lang === 'fa') {
+        return;
+      }
 
-    if (!isScrollingLeft) {
-      // For Persian language, scroll to the rightmost end
-      scrollContainer.scrollLeft = lang === 'fa' ? 0 : scrollContainer.scrollWidth;
-    } else {
-      // Adjust scrolling direction for Persian language
-      scrollContainer.scrollLeft += lang === 'fa' ? scrollAmount : -scrollAmount;
+      const scrollAmount = 1;
+      if (scrollContainer != null && isScrolling) {
+        const isScrollingLeft = scrollContainer.scrollLeft > 0;
+        if (!isScrollingLeft) {
+          scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+        } else {
+          scrollContainer.scrollLeft -= scrollAmount;
+        }
+      }
     }
-  }
-}
-
 
     const intervalId = setInterval(scrollAutomatically, 50); // Adjust the interval as needed.
 
     return () => clearInterval(intervalId);
-  }, [isScrolling, lang]);
+  }, [isScrolling]);
 
   // Add event listeners to stop automatic scroll on mouse enter
   const handleMouseEnter = () => {
@@ -66,14 +44,13 @@ function scrollAutomatically() {
 
   // Add event listener to resume automatic scroll on mouse leave
   const handleMouseLeave = () => {
-    setIsScrolling(lang === 'en' ? true : false); // Resume scrolling
+    setIsScrolling(true); // Resume scrolling
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setDragging(true);
     setStartX(e.clientX);
     setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
-
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -81,26 +58,19 @@ function scrollAutomatically() {
 
     if (scrollContainerRef.current) {
       const x = e.clientX;
-      const walk = (x - startX) * 1;
-
-      // Adjust the scroll direction for Persian language
-      if (lang === 'fa') {
-        scrollContainerRef.current.scrollLeft = scrollLeft + walk;
-      } else {
-        scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-      }
+      const walk = (x - startX) * 1; // You can adjust the factor for smoother or faster scrolling
+      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
     }
   };
 
   const handleMouseUp = () => {
     setDragging(false);
   };
+
   return (
     <div className="my-6 flex flex-col items-center gap-12">
-      <span className="font-condensed text-3xl text-primary md:text-4xl">
-        {lang === 'en'
-          ? 'Join Our Business Affiliates'
-          : t.then((res) => <>{res}</>)}
+      <span className="text-3xl text-primary md:text-4xl">
+        {t('partners', { returnObjects: true }).title}
       </span>
       <div
         ref={scrollContainerRef}
@@ -109,49 +79,18 @@ function scrollAutomatically() {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll"
+        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-5 overflow-x-scroll px-3 md:overflow-x-hidden"
       >
-        {lang === 'en' &&
-          logos.map((logo, index) => (
-            <section key={index}>
-              <PartnersStartupCard
-                logo={logo.number}
-                title={logo.title}
-                description={logo.description}
-              />
-            </section>
-          ))}
-        {lang === 'fa' &&
-          L.then((res) => (
-            <>
-              {res.map(
-                ({
-                  number,
-                  title,
-                  description
-                }: {
-                  number: number;
-                  title: string;
-                  description: string;
-                }) => (
-                  <section className="snap-center" key={number}>
-                    <PartnersStartupCard
-                      logo={number}
-                      title={title}
-                      description={description}
-                    />
-                  </section>
-                )
-              )}
-            </>
-          ))}
+        {t('partners', { returnObjects: true }).logos.map((logo: any) => (
+          <PartnersStartupCard
+            key={logo.number}
+            logo={logo.number}
+            title={logo.title}
+            description={logo.description}
+          />
+        ))}
       </div>
-
-      <ButtonRefactor
-        type="link"
-        href="/partner-membership"
-        text={lang === 'en' ? 'Become a Partner' : 'شریک شوید'}
-      />
+      <ButtonRefactor text="Join Us" type="link" href="/partner-membership" />
     </div>
   );
 }
