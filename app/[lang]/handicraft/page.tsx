@@ -1,7 +1,14 @@
 import BannerStartUp from '@/components/common/BannerStartup';
 import HandicraftForm from '@/components/common/form/HandicraftForm';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Landa Holding | Handicrafts',
+  description:
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.'
+};
 
 export default function page({
   params: { lang }
