@@ -1,16 +1,16 @@
 'use client';
+import { useSubmit } from 'providers/StateProvider';
 import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function FeaturesCards({
   title,
-  description,
-  lang
+  description
 }: {
   title: string;
   description: string;
   link: string;
-  lang: string;
 }) {
+  const { lang } = useSubmit();
   // const router = useRouter();
 
   // const handleOnClick = () => {

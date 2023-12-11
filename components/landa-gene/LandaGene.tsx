@@ -10,22 +10,12 @@ import { submitLandaApplicationForm } from 'pages/api/landa-gene';
 
 import { useSubmit } from 'providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
+import Button from '../common/Button';
 import Image from 'next/image';
+import { useTranslation } from 'app/i18n/client';
 
-export default function LandaGene({
-  lang,
-  textUp,
-  textMid,
-  textDown,
-  formText
-}: {
-  lang: string;
-  textUp: string;
-  textMid: string;
-  textDown: string;
-  formText: string;
-}) {
+export default function LandaGene() {
   const {
     register,
     handleSubmit,
@@ -43,8 +33,11 @@ export default function LandaGene({
     handleSendChange,
     handleNotifChange,
     handleChangeSuccess,
-    handleChangeReject
+    handleChangeReject,
+    lang
   } = useSubmit();
+
+  const { t } = useTranslation(lang, "landaGene")
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -103,8 +96,6 @@ export default function LandaGene({
     value: value
   }));
 
-  console.log(errorsList);
-
   return (
     <div className="flex w-full flex-col items-start gap-[3px]">
       <div className="flex w-full flex-col items-center p-4 md:flex-row md:justify-around md:gap-4">
@@ -141,13 +132,13 @@ export default function LandaGene({
             </svg>
           </div>
           <p className="text-blue font-sans text-[15px]  leading-normal md:text-[25px]">
-            LANDA GENE
+            {t('banner')}
           </p>
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-3/5">
           <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-[25px] lg:leading-[40px]">
-            {textUp}
+            {t('textUp')}
           </p>
         </div>
       </div>
@@ -162,13 +153,12 @@ export default function LandaGene({
           <Image
             src="/static/images/gene-1.png"
             alt="gene-1"
-            className="h-full w-full"
           />
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-3/5">
           <p className="w-full text-justify font-sans text-[15px]  leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[40px]">
-            {textMid}
+            {t('textMid')}
           </p>
         </div>
       </div>
@@ -189,7 +179,7 @@ export default function LandaGene({
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-2/3">
           <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[50px]">
-            {textDown}
+            {t('textDown')}
           </p>
         </div>
       </div>
@@ -202,7 +192,7 @@ export default function LandaGene({
                 lang === 'en' ? 'md:tracking-[2px]' : ''
               }`}
             >
-              {formText}
+              {t('formText')}
             </p>
           </div>
 
@@ -217,7 +207,6 @@ export default function LandaGene({
                   email: 'email',
                   phoneNumber: 'phone'
                 }}
-                lang={lang}
               />
 
               <div className="col-span-1">
@@ -243,16 +232,16 @@ export default function LandaGene({
             </div>
 
             <div className="text-center">
-              {/* <Button
+              <Button
                 type='submit'
                 bgColor="Primary"
                 disabled={errorsList[0] ? true : false}
                 lang={lang}
-              /> */}
-              <ButtonRefactor type="submit" text="Submit" />
+              />
+              {/* <ButtonRefactor type="submit" text="Submit" /> */}
             </div>
           </form>
-          <NotificationSendForm lang={lang}/>
+          <NotificationSendForm />
         </div>
       </div>
     </div>

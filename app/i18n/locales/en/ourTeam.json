@@ -239,5 +239,17 @@
           "linkedIn": "",
           "category": "designers"
         }
+    ],
+    "roles": [
+      "All",
+      "Managers",
+      "Mentors",
+      "Programmers",
+      "Designers",
+      "Content Creators",
+      "Accountant",
+      "Public Relations",
+      "Digital Marketer",
+      "Secretary"
     ]
 }

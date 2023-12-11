@@ -4,8 +4,10 @@ import Lines from '../icons/LandaHoldingBlack/Lines';
 import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
 import UlList from '../List/UlList';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'store';
 
-export default async function LandaHoldingBlack({ lang }: { lang: string }) {
+export default async function LandaHoldingBlack() {
+  const lang = useLang.getState().lang;
   const { t } = await useTranslation(lang, 'mainPage');
 
   const L1EN = [
@@ -92,7 +94,52 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
         </button>
       </div>
 
-      <div className="z-10 flex h-[28rem] flex-col justify-between md:mr-4">
+      <div className="z-10 flex h-[28rem] flex-col justify-between rtl:mr-1">
+        <div className="flex flex-col items-center self-start md:items-start">
+          <div className="flex flex-col">
+            <span
+              className={`text-base font-normal text-black ${
+                t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
+              } font-condensed`}
+            >
+              {t('LandaHolding')}
+            </span>
+            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+              {t('EntrepreneurCenter')}
+              <br />
+            </span>
+          </div>
+        </div>
+
+        <UlList
+          list={t('lng') === 'en' ? L2EN : L2FA}
+          style1={`w-[320px] md:w-[550px] pr-6`}
+          style2="space-y-2 mr-8"
+          style3="leading-4 md:leading-10 text-md"
+        />
+
+        <button
+          className={`relative mt-10 inline-flex items-center justify-center gap-4 ${
+            t('lng') === 'en' ? '' : 'flex-row-reverse'
+          } group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}
+        >
+          <Link href={'/entrepreneurs'}>
+            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
+              {t('lng') === 'en' ? 'Register' : 'ثبت نام'}
+            </div>
+          </Link>
+          <div className="flex items-start justify-start gap-2.5">
+            <div className="relative h-5 w-5">
+              <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
+              <div className="h-full w-full border border-white pb-3">
+                <ButtonArrow />
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      {/* <div className="z-10 flex h-[28rem] flex-col justify-between md:mr-4">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
@@ -135,7 +182,7 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
             </div>
           </div>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

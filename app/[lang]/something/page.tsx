@@ -27,7 +27,7 @@ export default async function EntrepreneursPage({
         lang={lang}
       />
       <SubmitProvider>
-        <EntrepreneursForm lang={lang} />
+        <EntrepreneursForm />
       </SubmitProvider>
     </div>
   );

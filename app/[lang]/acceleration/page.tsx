@@ -5,7 +5,9 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import AccelerationCard from '../../../components/acceleration/AccelerationCard';
 import { useTranslation } from 'app/i18n';
-import ButtonRefactor from '@/components/common/ButtonRefactor';
+// import ButtonRefactor from '@/components/common/ButtonRefactor';
+import Button from '@/components/common/Button';
+import { SubmitProvider } from 'providers/StateProvider';
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -69,7 +71,6 @@ export default async function Page({
         </div>
 
         <AccelerationCard
-          lang={t('lng')}
           addedClass="md:h-[756px] mt-6 md:mt-16 pb-3"
           title={t('FORUGHACCELERATOR', { returnObjects: true })[0].title}
           slogan={t('FORUGHACCELERATOR', { returnObjects: true })[0].subTitle}
@@ -82,7 +83,6 @@ export default async function Page({
         />
 
         <AccelerationCard
-          lang={t('lng')}
           addedClass="md:h-[756px] mt-6 md:mt-16 pb-3"
           title={t('FARAZAMANACCELERATOR', { returnObjects: true })[0].title}
           slogan={
@@ -97,7 +97,7 @@ export default async function Page({
           secondImageSrc="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
         />
 
-        <div className={`flex flex-col ${t('lng') === 'fa' && 'items-start'}`}>
+        <div className={`flex flex-col ${t('lng') === 'fa' && 'items-center'}`}>
           <span className="mt-12 font-gilda text-3xl text-primary">
             {t('LandaAcceleratorServices', { returnObjects: true })[0].title}
           </span>
@@ -126,14 +126,16 @@ export default async function Page({
           </svg>
           {t('text')}
         </div>
-        {/* <Button
+        <SubmitProvider>
+        <Button
           goto="/StartupsForm"
           size="visit"
           text={t('Register')}
           bgColor="Primary"
           lang={lang}
-        /> */}
-        <ButtonRefactor text={t('Register')} href="/StartupsForm" />
+        />
+        </SubmitProvider>
+        {/* <ButtonRefactor text={t('Register')} href="/StartupsForm" /> */}
       </div>
     </div>
   );

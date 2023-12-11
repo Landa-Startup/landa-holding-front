@@ -1,16 +1,20 @@
 import Image from 'next/image';
+import { useLang } from 'store';
 import React from 'react';
 
 export default function HomeCardsRight({
   images,
   titles,
-  lang
 }: {
   titles: string;
   images: Array<{ src: string; alt: string }>;
   link: string;
-  lang: string;
 }) {
+
+  const lang = useLang.getState().lang
+
+  console.log(lang);
+  
   return (
     <div className="flex flex-col self-start md:self-center">
       <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">

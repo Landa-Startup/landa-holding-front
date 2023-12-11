@@ -38,6 +38,16 @@
     "howDidYouKnowUsRequired":"This field is required",
     "howDidYouKnowUsPlaceholder":"Description",
 
+    "contactForm": {
+        "title": "Reach us",
+        "subject": "Subject",
+        "subjectRequired": "Your Subject is Required",
+        "subjectPlaceholder": "Your Subject",
+        "message": "Message",
+        "messageRequired": "Your Message is Required",
+        "messagePlaceholder": "Your Message"
+    },
+
     "jobForm":{
         "lng": "en",
         "dir": "ltr",

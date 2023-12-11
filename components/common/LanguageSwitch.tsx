@@ -1,11 +1,16 @@
 'use client';
 import { usePathname, useRouter } from 'next/navigation';
 import { setCookie } from 'nookies';
+import { useSubmit } from 'providers/StateProvider';
 import React, { useState, useEffect } from 'react';
 
-export default function LanguageSwitch({ lang }: { lang: string }) {
+// import { useLang } from 'store';
+
+export default function LanguageSwitch() {
   const pathName = usePathname();
   const router = useRouter();
+
+  const { lang } = useSubmit();
 
   const [language, setLanguage] = useState(lang);
   useEffect(() => {
@@ -23,6 +28,7 @@ export default function LanguageSwitch({ lang }: { lang: string }) {
       maxAge: 30 * 24 * 60 * 60,
       path: '/'
     });
+    console.log(lang);
   };
 
   return (

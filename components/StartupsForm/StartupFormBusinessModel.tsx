@@ -2,18 +2,18 @@ import * as React from 'react';
 import UploadInput from '../common/UploadInput';
 import TextArea from '../common/TextArea';
 import { useTranslation } from 'app/i18n/client';
+import { useSubmit } from 'providers/StateProvider';
 
 export default function StartupFormBusinessModel({
   register,
   errors,
-  handleFinancialFileChange,
-  lang
+  handleFinancialFileChange
 }: {
   register: any;
   errors: any;
   handleFinancialFileChange: any;
-  lang: string;
 }) {
+  const { lang } = useSubmit();
   const { t } = useTranslation(lang, 'formComponent');
 
   return (

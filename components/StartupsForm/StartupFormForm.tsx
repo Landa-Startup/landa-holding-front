@@ -14,14 +14,12 @@ import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useSubmit } from '../../providers/StateProvider';
 import { useTranslation } from 'app/i18n/client';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
+import Button from '../common/Button';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
-export default function StartupFormForm(
-  { lang }: { lang: string }
-) {
-  const { t } = useTranslation(lang, 'formComponent');
+export default function StartupFormForm() {
 
   enum Type {
     IDEA = 'IDEA',
@@ -69,8 +67,11 @@ export default function StartupFormForm(
     filePost3,
     handleBusinessFileChange,
     handleFinancialFileChange,
-    handlePitchFileChange
+    handlePitchFileChange,
+    lang
   } = useSubmit();
+
+  const { t } = useTranslation(lang, 'formComponent');
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRadio(event.target.value);
@@ -158,10 +159,10 @@ export default function StartupFormForm(
       });
   };
 
-  // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   name: name,
-  //   value: value
-  // }));
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }));
 
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
@@ -181,7 +182,6 @@ export default function StartupFormForm(
           <StartupFormPersonalInformation
             register={register}
             errors={errors}
-            lang={lang}
           />
 
           <div className="col-span-2">
@@ -212,7 +212,7 @@ export default function StartupFormForm(
           {((): any => {
             switch (selectedRadio) {
               case 'IDEA':
-                return <StartupFormIdea register={register} errors={errors} lang={lang} />;
+                return <StartupFormIdea register={register} errors={errors} />;
                 break;
               case 'MVP':
                 return (
@@ -222,7 +222,6 @@ export default function StartupFormForm(
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
-                    lang={lang}
                   />
                 );
                 break;
@@ -234,7 +233,6 @@ export default function StartupFormForm(
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
-                    lang={lang}
                   />
                 );
                 break;
@@ -246,7 +244,6 @@ export default function StartupFormForm(
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
-                    lang={lang}
                   />
                 );
                 break;
@@ -256,15 +253,14 @@ export default function StartupFormForm(
           })()}
 
           <div className="ml-1 mt-10 text-start">
-            {/* <Button
+            <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
-              lang={lang}
-            /> */}
-            <ButtonRefactor type="submit" text="Submit" />
+            />
+            {/* <ButtonRefactor type="submit" text="Submit" /> */}
           </div>
-          <NotificationSendForm lang={lang}/>
+          <NotificationSendForm />
         </form>
       </div>
     </div>

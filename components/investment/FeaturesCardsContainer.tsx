@@ -1,12 +1,13 @@
 import React from 'react';
 import FeaturesCards from './FeaturesCards';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'store';
+import { SubmitProvider } from 'providers/StateProvider';
 
-export default async function FeaturesCardsContainer({
-  lang
-}: {
-  lang: string;
-}) {
+export default async function FeaturesCardsContainer() {
+
+  const lang = useLang.getState().lang
+
   const { t } = await useTranslation(lang, 'investment');
 
   return (
@@ -23,13 +24,13 @@ export default async function FeaturesCardsContainer({
           description: string;
           index: number;
         }) => (
+          <SubmitProvider key={index} >
           <FeaturesCards
-            key={index}
             link={link}
             title={title}
             description={description}
-            lang={lang}
           />
+          </SubmitProvider>
         )
       )}
     </div>

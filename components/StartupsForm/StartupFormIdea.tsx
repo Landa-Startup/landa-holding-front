@@ -1,17 +1,17 @@
 import * as React from 'react';
 import TextArea from '../common/TextArea';
 import { useTranslation } from 'app/i18n/client';
+import { useSubmit } from 'providers/StateProvider';
 
 
 export default function StartupFormIdea({
   register,
-  errors,
-  lang
+  errors
 }: {
   register: any;
   errors: any;
-  lang:string;
 }) {
+  const { lang } = useSubmit();
   const { t } = useTranslation(lang, 'formComponent');
   return (
     <>

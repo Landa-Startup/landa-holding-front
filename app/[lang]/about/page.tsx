@@ -28,11 +28,11 @@ export default async function Page({
         image="/static/images/a52.jpeg"
         lang={lang}
       />
-      <AboutUsLandaHolding lang={lang} />
-      <SubsidiaryCompanies lang={lang} />
-      <StoryOfLanda lang={lang} />
-      <KeyDifferentiating lang={lang} />
-      <AboutUsProfile lang={lang} />
+      <AboutUsLandaHolding />
+      <SubsidiaryCompanies />
+      <StoryOfLanda />
+      <KeyDifferentiating />
+      <AboutUsProfile />
     </div>
   );
 }

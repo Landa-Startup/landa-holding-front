@@ -4,11 +4,21 @@ import Lines from '../icons/Home/Lines';
 import { CompanySectionsInterface } from '@/types/global';
 import { useTranslation } from 'app/i18n';
 import { dir } from 'i18next';
+// import { useSubmit } from 'providers/StateProvider';
+import { useLang } from '../../store';
 
-export default async function HomeCardsContainer({ lang }: { lang: string }) {
-  const { t } = await useTranslation(lang, 'mainPage');
-  console.log('lang: ', dir(lang));
+export default async function HomeCardsContainer() {
+
+  const lang = useLang.getState().lang
+
+  console.log("mmm", lang);
+
+  // console.log("mm:" , lang)
   // Define data for the text card containers
+
+  const { t } = await useTranslation(lang, 'mainPage');
+
+  // console.log("t is:", t('cards', {returnObjects: true}))
 
   return (
     <div className="relative  bg-whiteGold text-black" id="LandaHolding">
@@ -34,7 +44,6 @@ export default async function HomeCardsContainer({ lang }: { lang: string }) {
             reverse={reverse}
             addedClass={addedClass}
             link={link}
-            lang={lang}
           />
         )
       )}

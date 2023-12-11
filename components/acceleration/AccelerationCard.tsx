@@ -2,6 +2,7 @@ import React from 'react';
 import PrimaryDot from '../icons/acceleration/PrimaryDot';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'store';
 
 type Props = {
   addedClass: string;
@@ -13,7 +14,6 @@ type Props = {
   textDown: string;
   secondImageSrc: string;
   itemsList?: Array<string>;
-  lang: string;
 };
 
 export default async function AccelerationCard({
@@ -25,8 +25,10 @@ export default async function AccelerationCard({
   textDown,
   secondImageSrc,
   itemsList,
-  lang
 }: Props) {
+
+  const lang = useLang.getState().lang
+
   const { t } = await useTranslation(lang, 'acceleration');
 
   return (

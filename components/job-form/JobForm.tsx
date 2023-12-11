@@ -10,10 +10,10 @@ import { submitApplyJobForm } from '../../pages/api/jobs';
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
+import Button from '../common/Button';
 
-export default function JobForm({ lang }: { lang: string }) {
-  const { t } = useTranslation(lang, 'formComponent');
+export default function JobForm() {
 
   const {
     register,
@@ -34,8 +34,11 @@ export default function JobForm({ lang }: { lang: string }) {
     handleChangeSuccess,
     handleChangeReject,
     cvFileState,
-    handleCvFileChange
+    handleCvFileChange,
+    lang
   } = useSubmit();
+
+  const { t } = useTranslation(lang, 'formComponent');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -95,16 +98,13 @@ export default function JobForm({ lang }: { lang: string }) {
       });
   };
 
-  // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   name: name,
-  //   value: value
-  // }));
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }));
 
   return (
-    <>
-      <div className="container m-16 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
-        <>
-          <div className="container m-[-9rem] mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
+          <div className='m-8'>
             <>
               <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
@@ -129,7 +129,6 @@ export default function JobForm({ lang }: { lang: string }) {
                     email: 'email',
                     phoneNumber: 'phoneNumber'
                   }}
-                  lang={lang}
                 />
 
                 <UploadInput
@@ -141,13 +140,15 @@ export default function JobForm({ lang }: { lang: string }) {
                 />
               </div>
               <div className="text-center">
-                <ButtonRefactor type="submit" text="Submit" />
+                {/* <ButtonRefactor type="submit" text="Submit" /> */}
+                <Button
+                  type='submit'
+                  bgColor="Primary"
+                  disabled={errorsList[0] ? true : false}
+                />
               </div>
             </form>
-            <NotificationSendForm lang={lang}/>
+            <NotificationSendForm />
           </div>
-        </>
-      </div>
-    </>
   );
 }

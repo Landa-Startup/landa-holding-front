@@ -1,10 +1,11 @@
 import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'store';
 
-export default async function LandaHoldingPriority(
-  { lang }: { lang: string }
-) {
+export default async function LandaHoldingPriority() {
+
+  const lang = useLang.getState().lang;
 
   const { t } = await useTranslation(lang, "mainPage");
 

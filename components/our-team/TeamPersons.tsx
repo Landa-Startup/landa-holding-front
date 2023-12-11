@@ -2,42 +2,54 @@
 import React, { useState } from 'react';
 import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from '../common/PersonalTab'
+import { useSubmit } from 'providers/StateProvider';
+import { useTranslation } from 'app/i18n/client';
 // TODO: read from i18n instead of statics
-import { personsEN, personsFA } from '../../app/[lang]/statics';
-import { rolesEN, rolesFA } from '../../app/[lang]/statics';
+// import { personsEN, personsFA } from '../../app/[lang]/statics';
+// import { rolesEN, rolesFA } from '../../app/[lang]/statics';
+
+interface item {
+    image: string;
+    position: string
+    name: string;
+    linkedIn: string;
+    category: string;
+}
 
 export default function TeamPersons(
-    { lang }: { lang: string }
+    // { lang }: { lang: string }
 ) {
 
+    const { lang } = useSubmit();
+    const { t } = useTranslation(lang, "ourTeam")
 
     // const [selectedRole, setSelectedRole] = useState<string | null>(null);
-    const [filteredPersons, setFilteredPersons] = useState(lang === "en" ? personsEN : personsFA);
+    const [filteredPersons, setFilteredPersons] = useState(Array<item>);
 
     function handleRoleSelect(role: string) {
         // setSelectedRole(role);
         // console.log(role);
         if (role === 'All' || role === 'همه') {
-            setFilteredPersons(lang === "en" ? personsEN : personsFA);
+            setFilteredPersons(t('persons', {returnObjects: true}));
         } else {
-            const persons = lang === "en" ? personsEN : personsFA
-            const filteredPersons = persons.filter((person) =>
-                person.category?.toLowerCase().includes(role.toLowerCase())
+            const persons = t('persons', {returnObjects: true})
+            const filteredPersons = persons.filter(({category}: {category: string}) =>
+                category?.toLowerCase().includes(role.toLowerCase())
             );
             setFilteredPersons(filteredPersons);
         }
     }
     return (
         <div>
-            <TeamRolesContainer onRoleSelect={handleRoleSelect} roles={lang === "en" ? rolesEN : rolesFA} />
+            <TeamRolesContainer onRoleSelect={handleRoleSelect} roles={t('roles', {returnObjects: true})} />
             <div className="grid grid-cols-1 justify-items-center gap-4 bg-[#FAFAFA] py-5 md:container md:mx-auto md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4">
-                {filteredPersons.map((person, index) => (
+                {filteredPersons.map(({image, position, name, linkedIn} : {image: string, position: string, name: string, linkedIn: string}, index: number) => (
                     <PersonalTab
                         key={index}
-                        image={person.image}
-                        position={person.position}
-                        name={person.name}
-                        linkedIn={person.linkedIn}
+                        image={image}
+                        position={position}
+                        name={name}
+                        linkedIn={linkedIn}
                     />
                 ))}
             </div>

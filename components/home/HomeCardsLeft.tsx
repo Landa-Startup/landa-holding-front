@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { HomeCardsLeftProps } from '../../types/global';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
+import Button from '../common/Button';
+import { SubmitProvider } from '../../providers/StateProvider';
 
 export default function HomeCardsLeft({
   text,
@@ -16,7 +18,14 @@ export default function HomeCardsLeft({
         <p className="my-16 pb-14 text-justify font-barlow text-base leading-[30px] first:mb-0 md:w-[491px] md:text-xl">
           {text}
         </p>
-        <ButtonRefactor text="Visit Now" type="link" href={link} />
+        {/* <ButtonRefactor text="Visit Now" type="link" href={link} /> */}
+        <SubmitProvider>
+        <Button
+          goto={link}
+          size='visit'
+          bgColor='Primary'
+        />
+        </SubmitProvider>
       </div>
     </div>
   );

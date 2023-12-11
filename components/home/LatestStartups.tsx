@@ -1,15 +1,16 @@
 import React from 'react';
 import LatestStartupsCard from './LatestStartupsCard';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'store';
 
-export default async function LatestStartups(
-  { lang }: { lang: string }
-) {
+export default async function LatestStartups() {
+
+  const lang = useLang.getState().lang;
 
   const { t } = await useTranslation(lang, "mainPage");
 
   return (
-    <div dir={t('lng') === "en" ? "ltr" : "rtl"}>
+    <div>
       <div className="flex flex-col items-center bg-whiteGold p-5 text-center">
         <div className='flex flex-col items-start'>
         <div className="flex-col items-start justify-start md:self-start">

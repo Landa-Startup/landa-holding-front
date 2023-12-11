@@ -1,8 +1,12 @@
 import { useTranslation } from 'app/i18n';
 import Image from 'next/image';
 import React from 'react';
+import { useLang } from 'store';
 
-export default async function KeyDifferentiating({ lang }: { lang: string }) {
+export default async function KeyDifferentiating() {
+
+  const lang = useLang.getState().lang
+
   const { t } = await useTranslation(lang, 'aboutUs');
 
   // t('itemList', {returnObjects: true}).map(({item}: {item: string}, {index}: {index: number}) => {

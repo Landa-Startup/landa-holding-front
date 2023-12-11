@@ -250,14 +250,12 @@ interface HomeCardsProps {
   reverse?: boolean;
   addedClass?: string;
   link: string;
-  lang: string;
 }
 
 interface HomeCardsLeftProps {
   text: string;
   addedClass?: string;
   link: string;
-  lang: string;
 }
 
 interface ImagesInterface {

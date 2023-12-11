@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from '../../common/form/Input';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
+import { useSubmit } from 'providers/StateProvider';
 
 type Props = {
   register: any;
@@ -11,16 +12,15 @@ type Props = {
     email: string;
     phoneNumber: string;
   };
-  lang: string;
 };
 
-const PersonalInfoInput = async ({
+const PersonalInfoInput = ({
   register,
   errors,
   nameInputs,
-  lang
 }: Props) => {
-  const { t } = await useTranslation(lang, 'formComponent');
+  const { lang } = useSubmit();
+  const { t } = useTranslation(lang, 'formComponent');
   return (
     <>
       {nameInputs?.firstName && (

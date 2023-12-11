@@ -27,7 +27,7 @@ export default async function Page({
       />
 
       <SubmitProvider>
-        <LandaGene lang={lang} textUp={t('textUp')} textMid={t('textMid')} textDown={t('textDown')} formText={t('formText')} />
+        <LandaGene />
       </SubmitProvider>
     </div>
   );

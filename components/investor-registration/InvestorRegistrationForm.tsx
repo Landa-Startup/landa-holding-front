@@ -15,10 +15,7 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 
-export default function InvestorRegistrationForm(
-  { lang }: { lang: string }
-) {
-  const { t } = useTranslation(lang, 'formComponent');
+export default function InvestorRegistrationForm() {
   const {
     register,
     handleSubmit,
@@ -36,8 +33,11 @@ export default function InvestorRegistrationForm(
     handleSendChange,
     handleNotifChange,
     handleChangeSuccess,
-    handleChangeReject
+    handleChangeReject,
+    lang
   } = useSubmit();
+
+  const { t } = useTranslation(lang, 'formComponent');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -91,7 +91,7 @@ export default function InvestorRegistrationForm(
   return (
     <>
       <div className="container m-[-1rem] mx-auto bg-[#faf8f5] px-5 font-barlow dark:bg-transparent lg:p-20">
-        <InvestorRegistrationTitle lang={lang} />
+        <InvestorRegistrationTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
 
@@ -104,7 +104,6 @@ export default function InvestorRegistrationForm(
                 email: "email",
                 phoneNumber: ""
               }}
-              lang={lang}
             />
 
             <div className="col-span-1">
@@ -198,7 +197,7 @@ export default function InvestorRegistrationForm(
             <ButtonRefactor type='submit' text='Submit'/>
           </div>
         </form>
-        <NotificationSendForm lang={lang}/>
+        <NotificationSendForm/>
       </div>
     </>
   );

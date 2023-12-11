@@ -17,18 +17,18 @@ export default async function ApplyFormPage({
   params: { lang: string };
 }) {
 
-  const { t } = await useTranslation(lang, "jobForm")
+  const { t } = await useTranslation(lang, "formComponent")
 
   return (
     <div dir={t('dir')}>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title={t('banner')}
+        title={t('jobForm', {returnObjects: true}).banner}
         lang={lang}
 
       />
       <SubmitProvider>
-        <JobForm lang={lang} />
+        <JobForm />
       </SubmitProvider>
     </div>
   );

@@ -3,15 +3,17 @@ import Check from '../../../components/icons/common/Check';
 import { useSubmit } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n/client';
 
-export default function NotificationSendForm({lang}:{lang:string}) {
-  const { t } = useTranslation(lang, 'formComponent');
+export default function NotificationSendForm() {
 
   const {
     isSubmitting,
     isSuccess,
     send,
-    showNotification
+    showNotification,
+    lang
   } = useSubmit();
+
+  const { t } = useTranslation(lang, 'formComponent');
 
   return (
     <div className="mx-auto mt-5 w-64 lg:w-96">

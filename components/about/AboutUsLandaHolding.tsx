@@ -1,10 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'store';
 
 export default async function AboutUsLandaHolding(
-  {lang} : {lang: string}
 ) {
+
+  const lang = useLang.getState().lang
 
   const { t } = await useTranslation(lang, "aboutUs")
 

@@ -1,6 +1,8 @@
 'use client';
+import { useParams } from "next/navigation";
 import React,{ useState, useContext, createContext } from "react";
 import { ReactNode } from "react";
+// import { useCookies } from 'react-cookie';
 
 const value: { 
     isSubmitting: boolean; 
@@ -23,6 +25,7 @@ const value: {
     handleTokenChange: (str: string) => void;
     handleChangeSuccess: () => void;
     handleChangeReject: () => void;
+    lang: string;
 } = {
     isSubmitting: false,
     isSuccess: false,
@@ -66,11 +69,32 @@ const value: {
     handleChangeReject() {
         //
     },
+    lang: ""
 }
 
 const SubmitContext = createContext(value);
 
 const SubmitProvider = ({ children} : { children : ReactNode}) => {
+
+    // const [cookies, setCookies] = useCookies(['i18next'])
+
+    // const lang = cookies.i18next;
+
+    // console.log(lang);
+
+    const path = useParams();
+
+    console.log(path?.lang);
+
+    let lang = "";
+
+    if (path?.lang) {
+        if (path.lang == "en" || path.lang == "fa") {
+            lang = path.lang;
+        }
+    }
+
+    // console.log(lang);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(true);
@@ -156,6 +180,7 @@ const SubmitProvider = ({ children} : { children : ReactNode}) => {
             handleFinancialFileChange,
             handlePitchFileChange,
             handleCvFileChange,
+            lang
           }}
         >
             {children}

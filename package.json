@@ -50,7 +50,8 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.2",
     "react-i18next": "^13.3.1",
-    "stream": "^0.0.2"
+    "stream": "^0.0.2",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.3",
