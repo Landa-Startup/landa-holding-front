@@ -17,10 +17,7 @@ import ButtonRefactor from '../common/ButtonRefactor';
 
 // import { PartnerMembership } from '@prisma/client';
 
-export default function PartnerMembershipForm(
-  { lang }: { lang: string }
-) {
-
+export default function PartnerMembershipForm({ lang }: { lang: string }) {
   const {
     register,
     handleSubmit,
@@ -216,16 +213,10 @@ export default function PartnerMembershipForm(
               </div>
             </div>
             <div className="text-center">
-              {/* <Button
-              type='submit'
-              bgColor="Primary"
-              disabled={errorsList[0] ? true : false}
-              lang={lang}
-            /> */}
               <ButtonRefactor type="submit" text="Submit" />
             </div>
           </form>
-          <NotificationSendForm />
+          <NotificationSendForm lang={lang} />
         </div>
       </div>
     </div>

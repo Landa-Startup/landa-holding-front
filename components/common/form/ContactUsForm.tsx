@@ -90,7 +90,7 @@ export default function ContactUsForm({ lang }: { lang: string }) {
         {lang === 'en' ? 'Reach us' : 'با ما تماس بگیرید'}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="my-4 h-full gap-x-6 gap-y-5 md:grid grid-cols-2">
+        <div className="my-4 h-full grid-cols-2 gap-x-6 gap-y-5 md:grid">
           <PersonalInfoInput
             register={register}
             errors={errors}
@@ -151,7 +151,7 @@ export default function ContactUsForm({ lang }: { lang: string }) {
         /> */}
         <ButtonRefactor text="Submit" type="submit" />
       </form>
-      <NotificationSendForm />
+      <NotificationSendForm lang={lang}/>
     </div>
   );
 }

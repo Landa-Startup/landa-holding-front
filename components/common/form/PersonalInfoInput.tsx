@@ -1,94 +1,101 @@
-import React from 'react'
+import React from 'react';
 import Input from '../../common/form/Input';
+import { useTranslation } from 'app/i18n';
 
 type Props = {
-    register: any;
-    errors: any;
-    nameInputs?: {
-        firstName: string;
-        lastName: string;
-        email: string;
-        phoneNumber: string;
-    };
-    lang: string
-}
+  register: any;
+  errors: any;
+  nameInputs?: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phoneNumber: string;
+  };
+  lang: string;
+};
 
-const PersonalInfoInput = ({
-    register,
-    errors,
-    nameInputs,
-    lang
+const PersonalInfoInput = async ({
+  register,
+  errors,
+  nameInputs,
+  lang
 }: Props) => {
-
+  const { t } = await useTranslation(lang, 'formComponent');
   return (
     <>
-        {nameInputs?.firstName && <div className="col-span-1">
+      {nameInputs?.firstName && (
+        <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
             nameInput={nameInputs.firstName}
             type="text"
-            label={lang === "en" ? "First Name" : "نام"}
-            required={lang === "en" ? "First Name is Required." : "نام الزامی است"}
+            label={t('firstName')}
+            required={t('firstNameRequired')}
             patternValue=""
             patternMessage=""
-            placeholder={lang === "en" ? "Enter your First Name" : " نام خود را وارد کنید"}
+            placeholder={t('firstNamePlaceholder')}
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>}
+        </div>
+      )}
 
-        {nameInputs?.lastName && <div className="col-span-1">
+      {nameInputs?.lastName && (
+        <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
             nameInput={nameInputs.lastName}
             type="text"
-            label={lang === "en" ? "Last Name" : "نام خانوادگی"}
-            required={lang === "en" ? "Last Name is Required." : "نام خانوادگی الزامی است"}
+            label={t('lastName')}
+            required={t('lastNameRequired')}
             patternValue=""
             patternMessage=""
-            placeholder={lang === "en" ? "Enter your Last Name" : "نام خانوادگی خود را وارد کنید"}
+            placeholder={t('lastNamePlaceholder')}
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>}
+        </div>
+      )}
 
-        {nameInputs?.email && <div className="col-span-1">
+      {nameInputs?.email && (
+        <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
             nameInput={nameInputs.email}
             type="email"
-            label={lang === "en" ? "Email Address" : "ایمیل"}
-            required={lang === "en" ? "Email Address is Required." : "ایمیل الزامی است"}
+            label={t('email')}
+            required={t('emailRequired')}
             patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-            patternMessage={lang === "en" ? "Enter a Valid Email Address" : "یک ایمیل معتبر وارد کنید"}
-            placeholder={lang === "en" ? "Enter your Email Address" : "ایمیل خود را وارد کنید"}
+            patternMessage={t('emailErrorMessage')}
+            placeholder={t('EmailPlaceholder')}
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>}
+        </div>
+      )}
 
-        {nameInputs?.phoneNumber && <div className="col-span-1">
+      {nameInputs?.phoneNumber && (
+        <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
             nameInput={nameInputs.phoneNumber}
             type="text"
-            label={lang === "en" ? "Phone Number" : "شماره تلفن"}
-            required={lang === "en" ? "Phone Number is Required." : "شماره تلفن الزامی است"}
+            label={t('phoneNumber')}
+            required={t('phoneNumberRequired')}
             patternValue="^[0-9]{11}$"
-            patternMessage={lang === "en" ? "Enter a Valid Phone Number" : "یک شماره تلفن معتبر وارد کنید"}
-            placeholder={lang === "en" ? "Enter your Phone Number" : "شماره تلفن خود را وارد کنید"}
+            patternMessage={t('phoneNumberErrorMessage')}
+            placeholder={t('phoneNumberPlaceholder')}
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>}
+        </div>
+      )}
     </>
-  )
-}
+  );
+};
 
-export {
-    PersonalInfoInput
-}
+export { PersonalInfoInput };

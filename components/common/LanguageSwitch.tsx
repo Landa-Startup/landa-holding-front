@@ -1,5 +1,6 @@
 'use client';
 import { usePathname, useRouter } from 'next/navigation';
+import { setCookie } from 'nookies';
 import React, { useState, useEffect } from 'react';
 
 export default function LanguageSwitch({ lang }: { lang: string }) {
@@ -18,6 +19,10 @@ export default function LanguageSwitch({ lang }: { lang: string }) {
 
   const handleClick = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'fa' : 'en'));
+    setCookie(null, 'i18next', language === 'en' ? 'fa' : 'en', {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/'
+    });
   };
 
   return (

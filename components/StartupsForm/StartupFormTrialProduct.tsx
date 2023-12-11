@@ -5,6 +5,7 @@ import StartupFormProblem from './StartupFormProblems';
 import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 import { handleRadioChange } from '../..//utils/functions';
+import { useTranslation } from 'app/i18n/client';
 
 export default function StartupFormTrialProduct({
   register,
@@ -12,14 +13,17 @@ export default function StartupFormTrialProduct({
   handlePitchDeckFileChange,
   handleBusinessPlanFileChange,
   handleFinancialFileChange,
+  lang
 }: {
   register: any;
   errors: any;
   handlePitchDeckFileChange:any;
   handleBusinessPlanFileChange:any;
   handleFinancialFileChange:any;
+  lang:string;
 }) {
-  
+  const { t } = useTranslation(lang, 'formComponent');
+
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
 
   const [selectedRadioBusiness, setSelectedRadioBusiness] = useState('');
@@ -29,26 +33,26 @@ export default function StartupFormTrialProduct({
     <>
       <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <YesRadioButton
-          title="Do you have Pitch deck?"
+          title={t('startUp',{ returnObjects: true }).pitchDeck}
           register={register}
           errors={errors}
-          required="Please choose an option"
+          required={t('startUp',{ returnObjects: true }).pitchDeckRequired}
           name="pitch-deck"
-          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioPitch)}}
+          handleRadioChange={(e: React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioPitch)}}
           selectedRadio={selectedRadioPitch}
+          fileName="pitchDeckFile"
           handleFileChange={handlePitchDeckFileChange}
-          fileName='pitchDeckFile'
         />
         <YesRadioButton
-          title="Do you have Business Plan?"
+          title={t('startUp',{ returnObjects: true }).businessPlan}
           register={register}
           errors={errors}
-          required="Please choose an option"
+          required={t('startUp',{ returnObjects: true }).businessPlanRequired}
           name="business-plan"
-          handleRadioChange={(e:React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioBusiness)}}
+          handleRadioChange={(e: React.ChangeEvent<HTMLInputElement>) => {handleRadioChange(e, setSelectedRadioBusiness)}}
           selectedRadio={selectedRadioBusiness}
+          fileName="businessPlanFile"
           handleFileChange={handleBusinessPlanFileChange}
-          fileName='businessPlanFile'
         />
 
       </div>
@@ -57,17 +61,17 @@ export default function StartupFormTrialProduct({
           return (
             <div>
               <div className="my-6 mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
-                <div>
+              <div>
                   <Input
                     register={register}
                     errors={errors}
                     nameInput="productName"
                     type="text"
-                    label="Product Name"
-                    required="Product Name is Required."
+                    label={t('startUp',{ returnObjects: true }).productName}
+                    required={t('startUp',{ returnObjects: true }).productNameRequired}
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
-                    placeholder="Enter your Product Name"
+                    placeholder={t('startUp',{ returnObjects: true }).productNamePlaceholder}
                     className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
@@ -79,19 +83,19 @@ export default function StartupFormTrialProduct({
                     errors={errors}
                     nameInput="siteAddress"
                     type="text"
-                    label="Site Address"
-                    required="Site Address is Required."
+                    label={t('startUp',{ returnObjects: true }).siteAddress}
+                    required={t('startUp',{ returnObjects: true }).siteAddressRequired}
                     patternValue=""
                     patternMessage="Only Alphabetic Characters are Allowed."
-                    placeholder="Enter your Site Address"
+                    placeholder={t('startUp',{ returnObjects: true }).siteAddressPlaceholder}
                     className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                     labelClass="text-[#6b6b6b] dark:text-current"
                   />
                 </div>
               </div>
-              <StartupFormProblem register={register} errors={errors}/>
-              <StartupFormSolutions register={register} errors={errors}/>
-              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange}/>
+              <StartupFormProblem register={register} errors={errors} lang={lang}/>
+              <StartupFormSolutions register={register} errors={errors} lang={lang}/>
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange} lang={lang}/>
             </div>
           );
         }else{
