@@ -1,4 +1,4 @@
-import { HandicraftFormData, StartupsFormData } from '../types/global';
+import { HandicraftForm, StartupsFormData } from '../types/global';
 import { PartnerMembershipFormData } from '../types/global';
 import { JobFormData } from '../types/global';
 import { InvestorRegistrationFormData } from '../types/global';
@@ -116,7 +116,7 @@ const ContactFormData: ContactUSFormData = {
   message: ''
 };
 
-const HandicraftFormData: HandicraftFormData = {
+const HandicraftFormData: HandicraftForm = {
   firstName: '',
   lastName: '',
   email: '',
