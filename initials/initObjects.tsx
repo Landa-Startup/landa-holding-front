@@ -1,4 +1,4 @@
-import { HandicraftFormData, StartupsFormData } from '../types/global';
+import { HandicraftForm as HandicraftFormData, StartupsFormData } from '../types/global';
 import { PartnerMembershipFormData } from '../types/global';
 import { JobFormData } from '../types/global';
 import { InvestorRegistrationFormData } from '../types/global';
