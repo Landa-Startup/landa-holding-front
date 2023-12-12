@@ -1317,7 +1317,7 @@ const cardsDataEN: AboutUsDataInterface[] = [
     },
   },
   {
-    image: '/static/images/about/mjafari.jpg',
+    image: '/static/images/About/mjafari.jpg',
     name: 'MORTEZA JAFARI',
     position: 'International Relations',
     links: {
@@ -1356,7 +1356,7 @@ const cardsDataFA: AboutUsDataInterface[] = [
     },
   },
   {
-    "image": "/static/images/about/mjafari.jpg",
+    "image": "/static/images/About/mjafari.jpg",
     "name": "مرتضی جعفری",
     "position": "ارتباطات بین الملل",
     "links": {
