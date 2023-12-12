@@ -12,6 +12,7 @@ import { useSubmit } from 'providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
 import Image from 'next/image';
+import HandicraftForm from '../common/form/HandicraftForm';
 
 export default function LandaGene({
   lang,
@@ -106,8 +107,8 @@ export default function LandaGene({
   console.log(errorsList);
 
   return (
-    <div className="flex w-full flex-col items-start gap-[3px]">
-      <div className="flex w-full flex-col items-center p-4 md:flex-row md:justify-around md:gap-4">
+    <div className="flex  flex-col items-start gap-[3px]">
+      <div className="flex w-full flex-col items-center md:py-16 md:px-28 md:flex-row md:justify-around md:gap-4">
         <div className="flex flex-col items-center gap-[4px] p-0">
           <div className="relative flex items-start p-0">
             <svg
@@ -146,59 +147,51 @@ export default function LandaGene({
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-3/5">
-          <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-[25px] lg:leading-[40px]">
+          <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-xl lg:leading-[40px]">
             {textUp}
           </p>
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-center p-4 md:flex-row-reverse md:justify-around">
-        <div className="flex h-auto w-full shrink-0 p-4 md:h-[500px] md:w-1/2 lg:h-[450px] lg:w-2/5">
-          {/* <Image
-              src="/static/images/gene-1.png"
-              alt="gene-1"
-              fill={true}
-            /> */}
+      <div className="flex flex-col items-center md:flex-row-reverse md:justify-around md:px-28 md:py-10">
+        <div className="flex relative w-[350px] h-[414px] md:w-[527px] md:h-[524] shrink-0 ">
           <Image
             src="/static/images/gene-1.png"
             alt="gene-1"
-            className="h-full w-full"
+            layout='fill'
+            className=""
           />
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-3/5">
-          <p className="w-full text-justify font-sans text-[15px]  leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[40px]">
+          <p className="w-full text-justify font-sans text-[15px]  leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-xl lg:leading-[40px]">
             {textMid}
           </p>
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-center p-4 md:flex-row md:justify-between">
-        <div className="flex h-auto w-full shrink-0 p-4 md:h-[350px] md:w-1/2 lg:h-[370px] lg:w-1/3">
-          {/* <Image
-              src="/static/images/gene-1.png"
-              alt="gene-1"
-              fill={true}
-            /> */}
+      <div className="flex  flex-col items-center md:px-28 md:py-6 md:flex-row md:justify-between">
+        <div className="flex relative w-[350px] h-[414px] md:w-[500px] md:h-[452px] shrink-0  ">
           <Image
             src="/static/images/gene-2.png"
             alt="gene-1"
-            className="h-full w-full"
+            layout='fill'
+            className=""
           />
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-2/3">
-          <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[50px]">
+          <p className="md:w-[623px] md:h-[445px] text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-xl lg:leading-[50px]">
             {textDown}
           </p>
         </div>
       </div>
 
       <div className="flex h-auto w-full items-start bg-[#F8F5F0] px-[32px] py-[31px]">
-        <div className="flex h-auto w-full flex-col items-center justify-between p-0">
+        <div className="flex h-auto w-full flex-col items-center justify-between md:py-4 md:px-24">
           <div className="flex w-full flex-col items-start p-0">
             <p
-              className={`w-full text-justify font-sans text-[18px] leading-normal  text-primary ${
+              className={`w-full text-justify font-sans md:pb-7 text-[18px] leading-normal  text-primary ${
                 lang === 'en' ? 'md:tracking-[2px]' : ''
               }`}
             >
@@ -206,52 +199,10 @@ export default function LandaGene({
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-            <div className="my-4 grid w-full grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
-              <PersonalInfoInput
-                register={register}
-                errors={errors}
-                nameInputs={{
-                  firstName: 'name',
-                  lastName: '',
-                  email: 'email',
-                  phoneNumber: 'phone'
-                }}
-                lang={lang}
-              />
+          <HandicraftForm 
+          lang={lang}
+          />
 
-              <div className="col-span-1">
-                <Input
-                  register={register}
-                  errors={errors}
-                  nameInput="company"
-                  type="text"
-                  label={lang === 'en' ? 'Company Name' : 'نام شرکت'}
-                  required=""
-                  patternValue=""
-                  patternMessage=""
-                  placeholder={
-                    lang === 'en'
-                      ? 'Name of Your Organization, if applicable'
-                      : 'نام شرکت خود را در صورت امکان وارد کنید'
-                  }
-                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                  containerClass="w-full"
-                  labelClass=""
-                />
-              </div>
-            </div>
-
-            <div className="text-center">
-              {/* <Button
-                type='submit'
-                bgColor="Primary"
-                disabled={errorsList[0] ? true : false}
-                lang={lang}
-              /> */}
-              <ButtonRefactor type="submit" text="Submit" />
-            </div>
-          </form>
           <NotificationSendForm lang={lang}/>
         </div>
       </div>
