@@ -7,23 +7,27 @@ type ButtonProps = {
   type?: 'button' | 'reset' | 'submit' | 'link';
   href?: string;
   disabled?: boolean;
+  bgColor?: 'primary' | 'secondary' | 'white' | 'black' | 'transparent';
 };
 
 export default function ButtonRefactor({
   text,
   type = 'button',
   href,
-  disabled
+  disabled,
+  bgColor
 }: ButtonProps) {
   switch (type) {
     // If the type is 'Link'
     case 'link':
       return (
         href && (
-          <Link href={href} className="group relative overflow-hidden">
+          <Link href={href} className="group relative w-fit overflow-hidden">
             <button
               disabled={disabled}
-              className="flex  h-[56px] w-[224px] flex-wrap content-center justify-center rounded bg-[#AA8453] p-2 text-white"
+              className={`bg-${
+                bgColor ? bgColor : 'primary'
+              } flex h-[56px] w-[224px] flex-wrap content-center justify-center rounded p-2 text-white`}
             >
               <div className="z-10 flex items-center rtl:flex-row-reverse">
                 <span>{text}</span>
@@ -40,7 +44,7 @@ export default function ButtonRefactor({
     case 'submit':
     case 'reset':
       return (
-        <div className="group relative overflow-hidden">
+        <div className="group relative w-fit overflow-hidden">
           <button
             type={type}
             className="flex h-[56px] w-[224px] flex-wrap content-center items-center justify-center rounded bg-[#AA8453] p-2 text-white"

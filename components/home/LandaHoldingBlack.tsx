@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import React from 'react';
 import Lines from '../icons/LandaHoldingBlack/Lines';
-import ButtonArrow from '../icons/LandaHoldingBlack/ButtonArrow';
 import UlList from '../List/UlList';
 import { useTranslation } from 'app/i18n';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default async function LandaHoldingBlack({ lang }: { lang: string }) {
   const { t } = await useTranslation(lang, 'mainPage');
@@ -48,7 +47,7 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
     >
       <Lines />
       {/* left card */}
-      <div className="z-10 flex h-[440px] flex-col justify-between px-4 rtl:mr-1 sm:px-0">
+      <div className="z-10 flex h-[440px] flex-col items-center justify-between px-4 rtl:mr-1 sm:px-0">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
@@ -71,33 +70,17 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
           style2="space-y-2 mt-4"
           style3="leading-3 md:leading-10 text-md"
         />
-
-        <div className="h-13 mx-auto">
-          <button
-            className={`relative mt-10 inline-flex items-center  justify-center gap-4 ${
-              t('lng') === 'en' ? '' : 'flex-row-reverse'
-            } group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}
-          >
-            <Link href={'/investor-registration'}>
-              <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
-                {t('lng') === 'en' ? 'Register' : 'ثبت نام'}
-              </div>
-            </Link>
-            <div className="flex items-start justify-start gap-2.5">
-              <div className="relative h-5 w-5">
-                <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
-                <div className="h-full w-full border border-white pb-3">
-                  <ButtonArrow />
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
+        <ButtonRefactor
+          text={t('signUp')}
+          type="link"
+          href="/"
+          bgColor="black"
+        />
       </div>
       {/* left card */}
 
       {/* right Card */}
-      <div className="z-10 mt-3 flex h-[440px] flex-col justify-between px-4 rtl:mr-1 sm:mt-0 sm:px-0">
+      <div className="z-10 mt-3 flex h-[440px] flex-col items-center justify-between px-4 rtl:mr-1 sm:mt-0 sm:px-0">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
@@ -121,31 +104,14 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
           style2="space-y-2"
           style3="leading-4 md:leading-8 text-md"
         />
-        <div className="h-13 mx-auto">
-          <button
-            className={`relative mt-10 inline-flex items-center justify-center gap-4 ${
-              t('lng') === 'en' ? '' : 'flex-row-reverse'
-            } group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}
-          >
-            <Link href={'/entrepreneurs'}>
-              <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
-                {t('lng') === 'en' ? 'Register' : 'ثبت نام'}
-              </div>
-            </Link>
-            <div className="flex items-start justify-start gap-2.5">
-              <div className="relative h-5 w-5">
-                <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
-                <div className="h-full w-full border border-white pb-3">
-                  <ButtonArrow />
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
+        <ButtonRefactor
+          text={t('signUp')}
+          type="link"
+          href="/"
+          bgColor="black"
+        />
       </div>
       {/* right Card */}
     </div>
   );
 }
-
-//
