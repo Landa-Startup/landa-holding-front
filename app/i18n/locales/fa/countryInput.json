@@ -230,5 +230,12 @@
         "جزایر تورکس و کایکوس ",
         "تووالو",
         "اوگاندا"
-    ]
+    ],
+    "countryName":"یک کشور را انتخاب کنید:",
+    "countryNameRequired":"کشور شما الزامی است",
+    "countryNamePlaceholder":"یک کشور را انتخاب کنید:",
+
+    "provinceOfResidence":"شهر محل سکونت",
+    "provinceOfResidenceRequired":"شهر محل سکونت الزامی است",
+    "provinceOfResidencePlaceholder":"شهر محل سکونت خود را وارد کنید"
 }

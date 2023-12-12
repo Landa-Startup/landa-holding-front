@@ -19,7 +19,7 @@
   ],
   "submenuItems": [
     { "label": "INVESTOR CENTER", "href": "/investor-registration" },
-    { "label": "ENTREPRENEUR CENTER", "href": "/entrepreneurs" },
+    { "label": "ENTREPRENEUR CENTER", "href": "/something" },
     { "label": "BUSINESS PARTNERS", "href": "/partner-membership" },
     { "label": "STARTUPS VALIDATION", "href": "/StartupsForm" },
     { "label": "APPLY JOB", "href": "/job-form" }
