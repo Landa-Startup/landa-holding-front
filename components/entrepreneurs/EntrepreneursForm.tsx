@@ -11,24 +11,24 @@ import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
+import { useTranslation } from 'app/i18n/client';
 
-export default function EntrepreneursForm(
-  {lang} : {lang: string}
-) {
+export default function EntrepreneursForm({ lang }: { lang: string }) {
+  const { t } = useTranslation(lang, 'formComponent');
 
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors }
   } = useForm<Entrepreuneur>({
     mode: 'onBlur',
-    defaultValues: initialFormData,
+    defaultValues: initialFormData
   });
 
   const {
-    csrfToken, 
-    handleTokenChange, 
+    csrfToken,
+    handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
@@ -38,7 +38,9 @@ export default function EntrepreneursForm(
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
+      const token = await GetCsrfToken(
+        'https://panel.landaholding.com/get-csrf-token'
+      );
       handleTokenChange(token);
       handleTokenChange(token);
     }
@@ -52,10 +54,10 @@ export default function EntrepreneursForm(
     handleSendChange(true);
 
     console.log(formData);
-  
+
     // Create a FormData object for form data.
     const sendFormData = new FormData();
-  
+
     // Append all non-file form fields.
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
       if (typeof fieldValue !== 'object' || fieldValue === null) {
@@ -64,25 +66,26 @@ export default function EntrepreneursForm(
     });
 
     console.log(sendFormData);
-  
+
     // Send the form data to the API.
-    submitEntrepreneurForm(sendFormData, csrfToken).then((response) => {
+    submitEntrepreneurForm(sendFormData, csrfToken)
+      .then((response) => {
+        console.log(response);
 
-      console.log(response);
+        handleChangeSuccess();
+        reset(initialFormData); // country does not reset
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      })
+      .catch(() => {
+        handleChangeReject();
+        reset(initialFormData);
 
-      handleChangeSuccess();
-      reset(initialFormData); // country does not reset
-      setTimeout(() => {
-        handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    }).catch(() => {
-      handleChangeReject();
-      reset(initialFormData);
-  
-      setTimeout(() => {
-        handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    })
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      });
   };
 
   // const errorsList = Object.entries(errors).map(([name, value]) => ({
@@ -92,7 +95,10 @@ export default function EntrepreneursForm(
 
   return (
     <>
-      <div className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent" dir={lang === "en" ? "ltr" : "rtl"}>
+      <div
+        className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent"
+        dir={lang === 'en' ? 'ltr' : 'rtl'}
+      >
         <EntrepreneursTitle lang={lang} />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
@@ -102,11 +108,19 @@ export default function EntrepreneursForm(
                 errors={errors}
                 nameInput="companyName"
                 type="text"
-                label={lang === "en" ? "Company Name" : "نام شرکت"}
-                required={lang === "en" ? "Company Name is Required." : "نام شرکت الزامی است"}
+                label={lang === 'en' ? 'Company Name' : 'نام شرکت'}
+                required={
+                  lang === 'en'
+                    ? 'Company Name is Required.'
+                    : 'نام شرکت الزامی است'
+                }
                 patternValue=""
                 patternMessage=""
-                placeholder={lang === "en" ? "Enter your Company Name" : "نام شرکت خود را وارد کنید"}
+                placeholder={
+                  lang === 'en'
+                    ? 'Enter your Company Name'
+                    : 'نام شرکت خود را وارد کنید'
+                }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
               />
@@ -116,10 +130,10 @@ export default function EntrepreneursForm(
               register={register}
               errors={errors}
               nameInputs={{
-                firstName: "",
-                lastName: "",
-                email: "email",
-                phoneNumber: "phone"
+                firstName: '',
+                lastName: '',
+                email: 'email',
+                phoneNumber: 'phone'
               }}
               lang={lang}
             />
@@ -130,9 +144,17 @@ export default function EntrepreneursForm(
                 errors={errors}
                 nameInput="website"
                 type="text"
-                label={lang === "en" ? "Website" : "نام وب سایت"}
-                required={lang === "en" ? "Website is Required." : "نام وب سایت الزامی است"}
-                placeholder={lang === "en" ? "Enter your Website" : "نام وب سایت خود را وارد کنید"}
+                label={lang === 'en' ? 'Website' : 'نام وب سایت'}
+                required={
+                  lang === 'en'
+                    ? 'Website is Required.'
+                    : 'نام وب سایت الزامی است'
+                }
+                placeholder={
+                  lang === 'en'
+                    ? 'Enter your Website'
+                    : 'نام وب سایت خود را وارد کنید'
+                }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -146,9 +168,17 @@ export default function EntrepreneursForm(
                 errors={errors}
                 nameInput="fieldOfProfessional"
                 type="text"
-                label={lang === "en" ? "Field Of Professional" : "حوزه تخصص"}
-                required={lang === "en" ? "Field Of Professional is Required." : "حوزه تخصص الزامی است"}
-                placeholder={lang === "en" ? "Enter your Field Of Professional" : "حوزه تخصص خود را وارد کنید"}
+                label={lang === 'en' ? 'Field Of Professional' : 'حوزه تخصص'}
+                required={
+                  lang === 'en'
+                    ? 'Field Of Professional is Required.'
+                    : 'حوزه تخصص الزامی است'
+                }
+                placeholder={
+                  lang === 'en'
+                    ? 'Enter your Field Of Professional'
+                    : 'حوزه تخصص خود را وارد کنید'
+                }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -156,17 +186,11 @@ export default function EntrepreneursForm(
               />
             </div>
           </div>
-          <div className="text-center">
-            {/* <Button
-              type='submit'
-              bgColor="Primary"
-              disabled={errorsList[0] ? true : false}
-              lang={lang}
-            /> */}
-            <ButtonRefactor text="Submit" type="submit" />
+          <div className="mx-auto w-fit">
+            <ButtonRefactor text={t('sendButton')} type="submit" />
           </div>
         </form>
-        <NotificationSendForm lang={lang}/>
+        <NotificationSendForm lang={lang} />
       </div>
     </>
   );

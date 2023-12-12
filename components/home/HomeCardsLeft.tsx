@@ -4,9 +4,11 @@ import { HomeCardsLeftProps } from '../../types/global';
 import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function HomeCardsLeft({
+
   text,
   addedClass,
-  link
+  link,
+  buttonText
 }: HomeCardsLeftProps) {
   return (
     <div
@@ -16,7 +18,7 @@ export default function HomeCardsLeft({
         <p className="my-16 pb-14 text-justify font-barlow text-base leading-[30px] first:mb-0 md:w-[491px] md:text-xl">
           {text}
         </p>
-        <ButtonRefactor text="Visit Now" type="link" href={link} />
+        <ButtonRefactor text={buttonText} type="link" href={link} />
       </div>
     </div>
   );
