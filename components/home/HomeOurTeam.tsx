@@ -7,26 +7,24 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
-    <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
+    <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white">
       <div
         className={`${
-          t('lng') === 'en' ? 'ml-5 mr-10 xl:ml-28' : 'mr-5 xl:mr-40'
+          t('lng') === 'en' ? 'ml-5 mr-10 xl:ml-64' : 'mr-5 xl:mr-40'
         } flex flex-col lg:self-start `}
       >
-        <span
+        <p
           className={`text-base font-normal text-black ${
             t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0'
           } font-condensed text-xl`}
         >
           {t('LandaHolding')}
-          <br />
-        </span>
-        <span
+        </p>
+        <p
           className={`font-condensed text-5xl font-normal tracking-normal text-black ltr:p-4 ltr:tracking-widest md:mr-20 xl:mr-0`}
         >
           {t('OurTeam')}
-          <br />
-        </span>
+        </p>
         <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
       </div>
 
