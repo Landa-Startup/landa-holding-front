@@ -1352,17 +1352,16 @@ const cardsDataFA: AboutUsDataInterface[] = [
     }
   },
   {
-    image: '/static/images/About/mjafari.jpg',
-    name: 'مرتضی جعفری',
-    position: 'ارتباطات بین الملل',
-    links: {
-      linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
-      whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
-      email: 'mailto:morteza_jafari49@yahoo.com',
-      website: 'https://mortezajafari.ca/',
-      instagram:
-        'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA=='
-    }
+    "image": "/static/images/About/mjafari.jpg",
+    "name": "مرتضی جعفری",
+    "position": "ارتباطات بین الملل",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
+      "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
+      "email": "mailto:morteza_jafari49@yahoo.com",
+      "website": "https://mortezajafari.ca/",
+      "instagram": "https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==",
+    },
   },
   {
     image: '/static/images/our-team/Personals/a2.png',
