@@ -1,30 +1,27 @@
 'use client';
-import React, { useState } from 'react';
-
-// interface Props {
-//   onRoleSelect: (role: string) => void;
-// }
+import { useTranslation } from 'app/i18n/client';
+import React from 'react';
 
 export default function TeamRolesContainer({
-  roles,
-  onRoleSelect,
+  lang,
+  selectedRole,
+  handleRoleSelect
 }: {
-  roles: string[];
-  onRoleSelect: (role: string) => void;
+  lang: string;
+  selectedRole: string;
+  handleRoleSelect: (role: string) => void;
 }) {
-  const [selectedRole, setSelectedRole] = useState<string | null>("All");
-  function handleRoleClick(role: string) {
-    onRoleSelect(role);
-    setSelectedRole(role);
-  }
+  const { t } = useTranslation(lang, 'ourTeam');
+
   return (
     <div className="flex flex-wrap justify-center gap-1 bg-slate-50  pb-5  pt-10 font-barlow">
-      {roles.map((role, index) => (
+      {t('roles', { returnObjects: true }).map((role: any, index: number) => (
         <button
-          onClick={() => handleRoleClick(role)}
+          onClick={() => handleRoleSelect(role)}
           key={index}
-          className={`btn btn-outline rounded-sm border-[#222] capitalize ${selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'
-            }`}
+          className={`btn btn-outline rounded-sm border-[#222] capitalize ${
+            selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'
+          }`}
         >
           {role}
         </button>
