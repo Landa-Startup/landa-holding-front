@@ -1,5 +1,6 @@
 'use client';
-import i18next from 'i18next';
+// import i18next from 'i18next';
+// import { t } from 'i18next';
 import { usePathname, useRouter } from 'next/navigation';
 // import { setCookie } from 'nookies';
 import React, { useState, useEffect } from 'react';
@@ -10,7 +11,7 @@ export default function LanguageSwitch({ lang }: { lang: string }) {
 
   const [language, setLanguage] = useState(lang);
   useEffect(() => {
-    console.log('new lang: ', language);
+    // i18next.changeLanguage(language);
     const newPath = pathName?.replace(/^\/(en|fa)/, `/${language}`);
     if (!newPath) {
       return;
@@ -20,11 +21,12 @@ export default function LanguageSwitch({ lang }: { lang: string }) {
 
   const handleClick = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'fa' : 'en'));
+
     // setCookie(null, 'i18next', language === 'en' ? 'fa' : 'en', {
     //   maxAge: 30 * 24 * 60 * 60,
     //   path: '/'
     // });
-    i18next.changeLanguage(language);
+    // i18next.changeLanguage(language);
   };
 
   return (
