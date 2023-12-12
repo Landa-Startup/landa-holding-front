@@ -166,7 +166,7 @@ export default function EntrepreneursForm(
             <ButtonRefactor text="Submit" type="submit" />
           </div>
         </form>
-        <NotificationSendForm/>
+        <NotificationSendForm lang={lang}/>
       </div>
     </>
   );

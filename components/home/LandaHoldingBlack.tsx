@@ -48,7 +48,7 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
     >
       <Lines />
       {/* left card */}
-      <div className="z-10 flex h-[440px] flex-col justify-between rtl:mr-1 px-4 sm:px-0">
+      <div className="z-10 flex h-[440px] flex-col justify-between px-4 rtl:mr-1 sm:px-0">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
@@ -97,7 +97,7 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
       {/* left card */}
 
       {/* right Card */}
-      <div className="z-10 flex h-[440px] flex-col justify-between rtl:mr-1 px-4 sm:px-0 mt-3 sm:mt-0">
+      <div className="z-10 mt-3 flex h-[440px] flex-col justify-between px-4 rtl:mr-1 sm:mt-0 sm:px-0">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
@@ -108,7 +108,7 @@ export default async function LandaHoldingBlack({ lang }: { lang: string }) {
               {t('LandaHolding')}
               <br />
             </span>
-            <span className=" border-b md:w-[30rem] border-black pb-3 text-center  font-gilda text-[1.6rem] md:text-4xl font-normal text-black md:border-none md:text-start">
+            <span className=" border-b border-black pb-3 text-center font-gilda  text-[1.6rem] font-normal text-black md:w-[30rem] md:border-none md:text-start md:text-4xl">
               {t('EntrepreneurCenter')}
               <br />
             </span>

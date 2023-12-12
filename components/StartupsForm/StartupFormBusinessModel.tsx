@@ -1,52 +1,71 @@
 import * as React from 'react';
 import UploadInput from '../common/UploadInput';
 import TextArea from '../common/TextArea';
+import { useTranslation } from 'app/i18n/client';
 
 export default function StartupFormBusinessModel({
   register,
   errors,
-  handleFinancialFileChange
+  handleFinancialFileChange,
+  lang
 }: {
   register: any;
   errors: any;
   handleFinancialFileChange: any;
+  lang: string;
 }) {
-
+  const { t } = useTranslation(lang, 'formComponent');
 
   return (
     <>
-  <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2">
           <div className="bg-[#222222CC]">
             <p className="mb-3 w-[310px] border-b py-5 pl-10 text-3xl text-white md:w-[550px] lg:w-[450px] xl:w-[650px]">
-              Business Model
+              {t('startUp', { returnObjects: true }).businessModel.title}
             </p>
             <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
           </div>
-          <div>
-            
-          </div>
+          <div></div>
           <TextArea
-            title="Describe the method of monetization of your plan?*"
+            title={
+              t('startUp', { returnObjects: true }).businessModel
+                .monetizationOfYourPlan
+            }
             register={register}
             errors={errors}
-            placeholder="Description"
+            placeholder={
+              t('startUp', { returnObjects: true }).businessModel
+                .monetizationOfYourPlanPlaceholder
+            }
             nameTextArea="monetizationOfYourPlan"
             patternMessage=""
             patternValue=""
-            required="this is required!"
+            required={
+              t('startUp', { returnObjects: true }).businessModel
+                .monetizationOfYourPlanRequired
+            }
           />
         </div>
         <div className="col-span-2">
           <TextArea
-            title="Please clearly mention the structure of your sales cycle from contact to delivery."
+            title={
+              t('startUp', { returnObjects: true }).businessModel
+                .structureOfYourSales
+            }
             register={register}
             errors={errors}
-            placeholder="Description"
+            placeholder={
+              t('startUp', { returnObjects: true }).businessModel
+                .structureOfYourSalesPlaceholder
+            }
             nameTextArea="structureOfYourSales"
             patternMessage=""
             patternValue=""
-            required="this is requried!"
+            required={
+              t('startUp', { returnObjects: true }).businessModel
+                .structureOfYourSalesRequired
+            }
           />
         </div>
         {/* <Input
@@ -54,10 +73,12 @@ export default function StartupFormBusinessModel({
           errors={errors}
         /> */}
         <UploadInput
-          title='If your plan has a financial model, please upload'
+          title={
+            t('startUp', { returnObjects: true }).businessModel.financialPlan
+          }
           register={register}
           errors={errors}
-          nameInput='financial plan'
+          nameInput="financial plan"
           handleChange={handleFinancialFileChange}
         />
         {/* <div className="col-start-1 col-span-1">
@@ -75,26 +96,31 @@ export default function StartupFormBusinessModel({
         </div> */}
         <div className="col-span-2 col-start-1">
           <TextArea
-            title="Have you previously cooperated with investors or accelerators?"
+            title={
+              t('startUp', { returnObjects: true }).cooperatedWithInvestors
+            }
             register={register}
             errors={errors}
-            placeholder="Description"
+            placeholder={
+              t('startUp', { returnObjects: true })
+                .cooperatedWithInvestorsPlaceholder
+            }
             nameTextArea="cooperatedWithInvestors"
             patternMessage=""
             patternValue=""
-            required="this is required!"
+            required=""
           />
         </div>
         <div className="col-span-2">
           <TextArea
-            title="How did you hear about us?"
+            title={t('howDidYouKnowUs')}
             register={register}
             errors={errors}
-            placeholder="Description"
+            placeholder={t('howDidYouKnowUsPlaceholder')}
             nameTextArea="getToKnowUs"
             patternMessage=""
             patternValue=""
-            required="this is required!"
+            required={t('howDidYouKnowUsRequired')}
           />
         </div>
       </div>

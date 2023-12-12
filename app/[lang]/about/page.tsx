@@ -1,11 +1,10 @@
-import React from 'react';
-import AboutUsLandaHolding from '../../../components/about/AboutUsLandaHolding';
-import AboutUsProfile from '../../../components/about/AboutUsProfile';
-import Banner from '../../../components/common/Banner';
 import { Metadata } from 'next';
-import SubsidiaryCompanies from '../../../components/about/SubsidiaryCompanies';
-import StoryOfLanda from '../../../components/about/StoryOfLanda';
-import KeyDifferentiating from '../../../components/KeyDifferentiating';
+import AboutUsLandaHolding from '@/components/about/AboutUsLandaHolding';
+import AboutUsProfile from '@/components/about/AboutUsProfile';
+import Banner from '@/components/common/Banner';
+import SubsidiaryCompanies from '@/components/about/SubsidiaryCompanies';
+import StoryOfLanda from '@/components/about/StoryOfLanda';
+import KeyDifferentiating from '@/components/KeyDifferentiating';
 import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {

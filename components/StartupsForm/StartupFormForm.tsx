@@ -13,11 +13,16 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useSubmit } from '../../providers/StateProvider';
+import { useTranslation } from 'app/i18n/client';
 import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
-export default function StartupFormForm({ lang }: { lang: string }) {
+export default function StartupFormForm(
+  { lang }: { lang: string }
+) {
+  const { t } = useTranslation(lang, 'formComponent');
+
   enum Type {
     IDEA = 'IDEA',
     MVP = 'MVP',
@@ -153,26 +158,20 @@ export default function StartupFormForm({ lang }: { lang: string }) {
       });
   };
 
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }));
+  // const errorsList = Object.entries(errors).map(([name, value]) => ({
+  //   name: name,
+  //   value: value
+  // }));
 
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
       <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
-        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
-          {lang === 'en'
-            ? 'Startup Validation Form'
-            : 'فرم اعتبارسنجی استارت آپ'}
-        </p>
+        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{t('startUp',{ returnObjects: true }).formTitle}</p>
       </div>
       <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
-        {/* <StartupFormTitle /> */}
+        {/* {t('startUp',{ returnObjects: true }).formTitle} */}
         <div>
-          <p className="mb-4 text-4xl">
-            {lang === 'en' ? 'Personal Information' : 'اطلاعات شخصی'}
-          </p>
+          <p className="mb-4 text-4xl">{t('startUp',{ returnObjects: true }).formSubtitle}</p>
         </div>
 
         <div>
@@ -189,7 +188,7 @@ export default function StartupFormForm({ lang }: { lang: string }) {
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
                 <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
-                  {lang === 'en' ? 'Growth and Scale-up' : 'رشد و افزایش مقیاس'}
+                {t('startUp',{ returnObjects: true }).subTitle}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
               </div>
@@ -198,22 +197,12 @@ export default function StartupFormForm({ lang }: { lang: string }) {
           <Select
             register={register}
             errors={errors}
-            nameInput="statusSelect"
-            label={
-              lang === 'en'
-                ? 'Select Your Status: '
-                : 'وضعیت خود را انتخاب کنید: '
-            }
-            required={
-              lang === 'en' ? 'Your Status is Required' : 'وضعیت شما الزامی است'
-            }
-            className="select select-bordered mt-4 w-full max-w-xs"
-            labelClass="text-[#6b6b6b] dark:text-current"
-            placeholder={
-              lang === 'en'
-                ? 'Select Your Status: '
-                : 'وضعیت خود را انتخاب کنید: '
-            }
+            nameInput='statusSelect'
+            label={t('startUp',{ returnObjects: true }).statusSelect}
+            required={t('startUp',{ returnObjects: true }).statusSelectRequired}
+            className='select select-bordered mt-4 w-full max-w-xs'
+            labelClass='text-[#6b6b6b] dark:text-current'
+            placeholder={t('startUp',{ returnObjects: true }).statusSelectPlaceholder}
             options={typesData}
             handleChange={handleItemChange}
             selected={selectedRadio}
@@ -223,7 +212,7 @@ export default function StartupFormForm({ lang }: { lang: string }) {
           {((): any => {
             switch (selectedRadio) {
               case 'IDEA':
-                return <StartupFormIdea register={register} errors={errors} />;
+                return <StartupFormIdea register={register} errors={errors} lang={lang} />;
                 break;
               case 'MVP':
                 return (
@@ -233,6 +222,7 @@ export default function StartupFormForm({ lang }: { lang: string }) {
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
+                    lang={lang}
                   />
                 );
                 break;
@@ -244,6 +234,7 @@ export default function StartupFormForm({ lang }: { lang: string }) {
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
+                    lang={lang}
                   />
                 );
                 break;
@@ -255,6 +246,7 @@ export default function StartupFormForm({ lang }: { lang: string }) {
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
+                    lang={lang}
                   />
                 );
                 break;
@@ -272,7 +264,7 @@ export default function StartupFormForm({ lang }: { lang: string }) {
             /> */}
             <ButtonRefactor type="submit" text="Submit" />
           </div>
-          <NotificationSendForm />
+          <NotificationSendForm lang={lang}/>
         </form>
       </div>
     </div>

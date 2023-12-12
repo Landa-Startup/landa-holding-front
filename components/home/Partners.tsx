@@ -1,35 +1,14 @@
 'use client';
-// import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
-// import PartnersDiamondsContainer from './PartnersDiamondsContainer';
 import PartnersStartupCard from './PartnersStartupCard';
-// import { useTranslation } from 'app/i18n';
-import { logos } from 'app/[lang]/statics';
 import ButtonRefactor from '../common/ButtonRefactor';
+import { useTranslation } from 'app/i18n/client';
 
 export default function Partners({ lang }: { lang: string }) {
-  // const { t } = await useTranslation(lang, "mainPage")
-
-  // const LangChangeHandle = async (lang: string) => {
-  //   const { t } = await useTranslation(lang, "mainPage")
-
-  //   return t;
-  // }
-
-  // const translated = LangChangeHandle(lang);
-
-  // const L = translated.then((res) => {
-  //   const L = res('partners', { returnObjects: true }).logos
-  //   return L
-  // })
-
-  // const t = translated.then((res) => {
-  //   const title = res('partners', { returnObjects: true }).title
-  //   return title
-  // })
+  const { t } = useTranslation(lang, 'mainPage');
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-  const [isScrolling, setIsScrolling] = useState(lang === 'en' ? true : false);
+  const [isScrolling, setIsScrolling] = useState(true);
   const [dragging, setDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -38,12 +17,13 @@ export default function Partners({ lang }: { lang: string }) {
     const scrollContainer = scrollContainerRef.current;
 
     function scrollAutomatically() {
-      // const scrollSpeed = 50; // Adjust this value to control the scroll speed.
+      if (lang === 'fa') {
+        return;
+      }
+
       const scrollAmount = 1;
       if (scrollContainer != null && isScrolling) {
-        // Check if scrolling is allowed
         const isScrollingLeft = scrollContainer.scrollLeft > 0;
-
         if (!isScrollingLeft) {
           scrollContainer.scrollLeft = scrollContainer.scrollWidth;
         } else {
@@ -64,7 +44,7 @@ export default function Partners({ lang }: { lang: string }) {
 
   // Add event listener to resume automatic scroll on mouse leave
   const handleMouseLeave = () => {
-    setIsScrolling(lang === 'en' ? true : false); // Resume scrolling
+    setIsScrolling(true); // Resume scrolling
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -89,8 +69,8 @@ export default function Partners({ lang }: { lang: string }) {
 
   return (
     <div className="my-6 flex flex-col items-center gap-12">
-      <span className="font-condensed text-3xl text-primary md:text-4xl">
-        Join Our Business Affiliates
+      <span className="text-3xl text-primary md:text-4xl">
+        {t('partners', { returnObjects: true }).title}
       </span>
       <div
         ref={scrollContainerRef}
@@ -99,18 +79,18 @@ export default function Partners({ lang }: { lang: string }) {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-12 overflow-x-scroll md:overflow-x-hidden"
+        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-5 overflow-x-scroll px-3 md:overflow-x-hidden"
       >
-        {logos.map((logo, index) => (
+        {t('partners', { returnObjects: true }).logos.map((logo: any) => (
           <PartnersStartupCard
-            key={index}
+            key={logo.number}
             logo={logo.number}
             title={logo.title}
             description={logo.description}
           />
         ))}
       </div>
-      <ButtonRefactor text="JOIN US" type="link" href="/partner-membership" />
+      <ButtonRefactor text="Join Us" type="link" href="/partner-membership" />
     </div>
   );
 }
