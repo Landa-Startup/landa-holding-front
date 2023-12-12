@@ -18,9 +18,7 @@ import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
-export default function StartupFormForm(
-  { lang }: { lang: string }
-) {
+export default function StartupFormForm({ lang }: { lang: string }) {
   const { t } = useTranslation(lang, 'formComponent');
 
   enum Type {
@@ -166,12 +164,16 @@ export default function StartupFormForm(
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
       <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
-        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{t('startUp',{ returnObjects: true }).formTitle}</p>
+        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
+          {t('startUp', { returnObjects: true }).formTitle}
+        </p>
       </div>
       <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         {/* {t('startUp',{ returnObjects: true }).formTitle} */}
         <div>
-          <p className="mb-4 text-4xl">{t('startUp',{ returnObjects: true }).formSubtitle}</p>
+          <p className="mb-4 text-4xl">
+            {t('startUp', { returnObjects: true }).formSubtitle}
+          </p>
         </div>
 
         <div>
@@ -188,7 +190,7 @@ export default function StartupFormForm(
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
                 <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
-                {t('startUp',{ returnObjects: true }).subTitle}
+                  {t('startUp', { returnObjects: true }).subTitle}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
               </div>
@@ -197,12 +199,16 @@ export default function StartupFormForm(
           <Select
             register={register}
             errors={errors}
-            nameInput='statusSelect'
-            label={t('startUp',{ returnObjects: true }).statusSelect}
-            required={t('startUp',{ returnObjects: true }).statusSelectRequired}
-            className='select select-bordered mt-4 w-full max-w-xs'
-            labelClass='text-[#6b6b6b] dark:text-current'
-            placeholder={t('startUp',{ returnObjects: true }).statusSelectPlaceholder}
+            nameInput="statusSelect"
+            label={t('startUp', { returnObjects: true }).statusSelect}
+            required={
+              t('startUp', { returnObjects: true }).statusSelectRequired
+            }
+            className="select select-bordered mt-4 w-full max-w-xs"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            placeholder={
+              t('startUp', { returnObjects: true }).statusSelectPlaceholder
+            }
             options={typesData}
             handleChange={handleItemChange}
             selected={selectedRadio}
@@ -212,7 +218,13 @@ export default function StartupFormForm(
           {((): any => {
             switch (selectedRadio) {
               case 'IDEA':
-                return <StartupFormIdea register={register} errors={errors} lang={lang} />;
+                return (
+                  <StartupFormIdea
+                    register={register}
+                    errors={errors}
+                    lang={lang}
+                  />
+                );
                 break;
               case 'MVP':
                 return (
@@ -255,16 +267,16 @@ export default function StartupFormForm(
             }
           })()}
 
-          <div className="ml-1 mt-10 text-start">
+          <div className="mx-auto w-fit">
             {/* <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
               lang={lang}
             /> */}
-            <ButtonRefactor type="submit" text="Submit" />
+            <ButtonRefactor type="submit" text={t('sendButton')} />
           </div>
-          <NotificationSendForm lang={lang}/>
+          <NotificationSendForm lang={lang} />
         </form>
       </div>
     </div>
