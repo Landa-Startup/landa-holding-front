@@ -113,9 +113,9 @@ export default function Hero({
         >
           {currentTitle}
         </div> */}
-      <div className="absolute left-0 top-1/2 flex items-center justify-center rounded bg-[#AA845380] p-4 md:top-2/3 md:w-[800px] md:rtl:right-0">
+      <div className="absolute top-1/2 flex items-center justify-center rounded bg-[#AA845380] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[800px] md:rtl:right-0">
         <div
-          className={`text-center font-barlow text-3xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:text-4xl`}
+          className={`text-center font-barlow text-2xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:text-4xl`}
         >
           {subTitle ? subTitle : ''}
         </div>
@@ -123,7 +123,7 @@ export default function Hero({
       {showButton ? <ButtonRefactor text="Register Now" /> : <></>}
       <Image
         loading="lazy"
-        className="absolute -right-32 bottom-0 mr-0 h-[365px] w-[500px] sm:h-[365px] sm:w-[500px] md:right-0 md:mr-0 md:h-[365px] md:w-[500px] md:rtl:left-0 md:rtl:right-auto xl:h-[560px] xl:w-[420px] "
+        className="absolute bottom-0 mr-0 h-[365px] w-[500px] ltr:-right-32 rtl:-left-32 sm:h-[365px] sm:w-[500px] md:mr-0 md:h-[365px] md:w-[500px] ltr:md:right-0 md:rtl:left-0 md:rtl:right-auto xl:h-[560px] xl:w-[420px] "
         src={`/static/images/${leftImage}`}
         alt="Landa"
         width={500}
