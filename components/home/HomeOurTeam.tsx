@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-// import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
 import ButtonRefactor from '../common/ButtonRefactor';
 
@@ -52,20 +50,8 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
           className="object-cover md:hidden"
           src="/static/images/Home/OurTeam/mobile.jpeg"
         />
+        <ButtonRefactor text={t('visit')} type="link" href="/our-team" />
       </div>
-      <Link
-        href={t('lng') === 'en' ? '/en/our-team' : '/fa/our-team'}
-        className="justify-center"
-      >
-        {/* <Button
-          type="button"
-          size="visit"
-          bgColor="Primary"
-          goto=""
-          lang={lang}
-        /> */}
-        <ButtonRefactor text={t('visit')} />
-      </Link>
     </div>
   );
 }
