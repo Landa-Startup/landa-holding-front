@@ -8,7 +8,6 @@ import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
 import { handleRadioChange } from '../../utils/functions';
 import { useTranslation } from 'app/i18n/client';
-import { useSubmit } from 'providers/StateProvider';
 import { useLang } from 'store';
 
 export default function StartupFormFirstSale({

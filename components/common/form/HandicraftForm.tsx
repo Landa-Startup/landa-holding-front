@@ -25,9 +25,9 @@ export default function HandicraftForm() {
    } = useLang((s) => s)
 
     const {
-      register,
+      // register,
       handleSubmit,
-      formState: { errors },
+      // formState: { errors },
       reset
     } = useForm<HandicraftForm>({
       mode: 'onBlur',
