@@ -27,7 +27,6 @@ export default async function Page({
 
   return (
     <div className="relative">
-      {/* Hero section */}
       <Hero
         lang={lang}
         showLanda
