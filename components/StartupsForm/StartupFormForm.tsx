@@ -12,10 +12,10 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
-import { useSubmit } from '../../providers/StateProvider';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
+import { useLang } from 'store';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -60,16 +60,15 @@ export default function StartupFormForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
-    filePost,
-    filePost2,
-    filePost3,
+    handleSuccessChange,
+    filePostBussines,
+    filePostPitch,
+    filePostFinancial,
     handleBusinessFileChange,
     handleFinancialFileChange,
     handlePitchFileChange,
     lang
-  } = useSubmit();
+  } = useLang((s) => s)
 
   const { t } = useTranslation(lang, 'formComponent');
 
@@ -100,9 +99,9 @@ export default function StartupFormForm() {
 
     // Handle conditional file attachments.
     const filePostMap = {
-      businessPlanFile: filePost.businessPlanFile,
-      pitchDeckFile: filePost2.pitchDeckFile,
-      financialFile: filePost3.financialFile
+      businessPlanFile: filePostBussines.businessPlanFile,
+      pitchDeckFile: filePostPitch.pitchDeckFile,
+      financialFile: filePostFinancial.financialFile
     };
 
     for (const [fieldName, file] of Object.entries(filePostMap)) {
@@ -140,7 +139,9 @@ export default function StartupFormForm() {
     // Send the form data to the API.
     submitStartupsForm(sendFormData, csrfToken)
       .then((response) => {
-        handleChangeSuccess();
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
         reset(initialStartupsFormData); // Country does not reset
         setSelectedRadio('');
 
@@ -151,7 +152,9 @@ export default function StartupFormForm() {
         }, 10000); // 10 seconds in milliseconds
       })
       .catch(() => {
-        handleChangeReject();
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
         reset(initialStartupsFormData);
         setTimeout(() => {
           handleNotifChange(false);
@@ -167,12 +170,16 @@ export default function StartupFormForm() {
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
       <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
-        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">{t('startUp',{ returnObjects: true }).formTitle}</p>
+        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
+          {t('startUp', { returnObjects: true }).formTitle}
+        </p>
       </div>
       <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
         {/* {t('startUp',{ returnObjects: true }).formTitle} */}
         <div>
-          <p className="mb-4 text-4xl">{t('startUp',{ returnObjects: true }).formSubtitle}</p>
+          <p className="mb-4 text-4xl">
+            {t('startUp', { returnObjects: true }).formSubtitle}
+          </p>
         </div>
 
         <div>
@@ -188,7 +195,7 @@ export default function StartupFormForm() {
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
                 <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
-                {t('startUp',{ returnObjects: true }).subTitle}
+                  {t('startUp', { returnObjects: true }).subTitle}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
               </div>
@@ -197,12 +204,16 @@ export default function StartupFormForm() {
           <Select
             register={register}
             errors={errors}
-            nameInput='statusSelect'
-            label={t('startUp',{ returnObjects: true }).statusSelect}
-            required={t('startUp',{ returnObjects: true }).statusSelectRequired}
-            className='select select-bordered mt-4 w-full max-w-xs'
-            labelClass='text-[#6b6b6b] dark:text-current'
-            placeholder={t('startUp',{ returnObjects: true }).statusSelectPlaceholder}
+            nameInput="statusSelect"
+            label={t('startUp', { returnObjects: true }).statusSelect}
+            required={
+              t('startUp', { returnObjects: true }).statusSelectRequired
+            }
+            className="select select-bordered mt-4 w-full max-w-xs"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            placeholder={
+              t('startUp', { returnObjects: true }).statusSelectPlaceholder
+            }
             options={typesData}
             handleChange={handleItemChange}
             selected={selectedRadio}

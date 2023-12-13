@@ -9,7 +9,7 @@ import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
 import { handleRadioChange } from '../../utils/functions';
 import { useTranslation } from 'app/i18n/client';
-import { useSubmit } from 'providers/StateProvider';
+import { useLang } from 'store';
 
 export default function StartupFormSaleDevelopment({
   register,
@@ -24,7 +24,7 @@ export default function StartupFormSaleDevelopment({
   handleBusinessFileChange: any;
   handleFinancialFileChange: any;
 }) {
-  const { lang } = useSubmit();
+  const { lang } = useLang((s) => s)
   const { t } = useTranslation(lang, 'formComponent');
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');

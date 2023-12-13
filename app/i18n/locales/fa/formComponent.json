@@ -130,8 +130,47 @@
             "financialPlan":"اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
         },
         "financialFile":"آیا شما تمکن مالی دارید؟",
-        "financialFileRequired":"لطفا یکی از گزینه ها را انتخاب کنید:"
+        "financialFileRequired":"لطفا یکی از گزینه ها را انتخاب کنید:",
 
+        "property":{
+            "title":"ویژگی ها",
+            "startupRevenue":"استارتاپ شما از زمان شروعش چقدر درآمد داشته است؟",
+            "startupRevenuePlaceholder":"توضیحات",
+            "startupRevenueRequired":"این قسمت الزامی است!",
+            "monthlyIncome":"درآمد ماهانه شما چقدر است؟",
+            "monthlyIncomePlaceholder":"توضیحات",
+            "monthlyIncomeRequired":"این قسمت الزامی است!",
+            "currentRaisedFunding":"قبل از شروع کسب و کارتان چقدر بودجه جاری جمع آوری کردید؟",
+            "currentRaisedFundingPlaceholder":"توضیحات",
+            "currentRaisedFundingRequired":"این قسمت الزامی است!",
+            "neededCapital":"برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟",
+            "neededCapitalPlaceholder":"توضیحات",
+            "neededCapitalRequired":"این قسمت الزامی است!"
+        },
+        "targetMarket":{
+            "title":"بازار هدف",
+            "customerCharacteristic":"بر اساس چه ویژگی هایی تصمیم می گیرید مشتریان شما چه کسانی باشند و چه کسانی نباشند؟",
+            "customerCharacteristicPlaceholder":"توضیحات",
+            "customerCharacteristicRequired":"این قسمت الزامی است!",
+            "currentCustomers":"مشتریان فعلی شما چه کسانی هستند؟ تا به حال چند مشتری داشته اید؟",
+            "currentCustomersPlaceholder":"توضیحات",
+            "currentCustomersRequired":"این قسمت الزامی است!",
+            "estimatedMarketSize":"اندازه بازار را چگونه تخمین زده اید؟*",
+            "estimatedMarketSizePlaceholder":"توضیحات",
+            "estimatedMarketSizeRequired":"این قسمت الزامی است!"
+        },
+
+        "radioButtonGroup":[
+            { "value": "basicPrinciple", "label": "The basic principle has been observed." },
+            { "value": "technologyConcept", "label": "The technology concept has been formulated." },
+            { "value": "exprimentalProof", "label": "Experimental proof of concept." },
+            { "value": "confirmedTechnologyLab", "label": "The confirmed technology in laboratory." },
+            { "value": "confirmedTechnologyEnv", "label": "The confirmed technology in the environmental conditions" },
+            { "value": "presentedTechnologyEnv", "label": "The presented technology in the environmental conditions" },
+            { "value": "systemPrototypeInMvp", "label": "Show the system prototype in the mvp operating environment." },
+            { "value": "realisticSystem", "label": "The proved realistic system in the operating environment." },
+            { "value": "qualifiedSystem", "label": "A complete and qualified system." }
+        ]
     }
     
 }

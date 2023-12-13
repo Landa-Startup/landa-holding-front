@@ -1,8 +1,7 @@
 'use client';
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { useRouter } from 'next/navigation';
-import { useSubmit } from '../../providers/StateProvider';
-// import { useLang } from 'store';
+import { useLang } from 'store';
 
 // Define the ButtonProps type
 // go to prop causes a redirext
@@ -32,9 +31,8 @@ export default function Button({
 
   const router = useRouter();
 
-  const { send, lang } = useSubmit();
-
-  console.log(lang);
+  const send = useLang((s) => s.send);
+  const lang= useLang((s) => s.lang);
 
   return (
     <button

@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from '../common/PersonalTab'
-import { useSubmit } from 'providers/StateProvider';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 // TODO: read from i18n instead of statics
 // import { personsEN, personsFA } from '../../app/[lang]/statics';
 // import { rolesEN, rolesFA } from '../../app/[lang]/statics';
@@ -16,11 +16,9 @@ interface item {
     category: string;
 }
 
-export default function TeamPersons(
-    // { lang }: { lang: string }
-) {
+export default function TeamPersons() {
 
-    const { lang } = useSubmit();
+    const { lang } = useLang((s) => s);
     const { t } = useTranslation(lang, "ourTeam")
 
     // const [selectedRole, setSelectedRole] = useState<string | null>(null);

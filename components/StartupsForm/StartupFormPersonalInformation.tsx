@@ -3,7 +3,7 @@ import Input from '../common/form/Input';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
-import { useSubmit } from 'providers/StateProvider';
+import { useLang } from 'store';
 
 export default function StartupFormPersonalInformation({
   register,
@@ -12,7 +12,7 @@ export default function StartupFormPersonalInformation({
   register: any;
   errors: any;
 }) {
-  const { lang } = useSubmit();
+  const { lang } = useLang((s) => s)
   const { t } = useTranslation(lang, 'formComponent');
   return (
     <>

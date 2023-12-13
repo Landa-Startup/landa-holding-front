@@ -13,18 +13,23 @@ export default async function AboutUsProfile(
   const { t } = await useTranslation(lang, "aboutUs");
 
   return (
-    <div className="bg-[#FAFAFA]">
-      <div className={`mx-8 flex flex-col justify-items-center py-5 text-black lg:ml-64${t('lng') === "fa" && "mr-10"}`}>
-        <h2 className="tracking-0 font-condensed text-xl font-normal leading-normal ltr:tracking-widest md:text-2xl">
-          {t('lng') === "en" ? "PROFESSIONALS" : "حرفه ای ها"}
-        </h2>
-        <h1 className="rtl:tracking-0 font-gilda text-3xl font-normal leading-normal md:text-4xl">
-          {lang === "en" ? "Board of Directors" : "هيئت مدیره"}
-        </h1>
-      </div>
+    <div className="flex w-full flex-col justify-center bg-[#FAFAFA]">
+      <div className="m-auto flex w-4/5 flex-col justify-center px-4 py-10">
+        <div
+          className={`flex flex-col justify-items-center py-5 text-black lg:ml-64${
+            lang === 'fa' && 'mr-10'
+          }`}
+        >
+          <h2 className="tracking-0 font-condensed text-xl font-normal leading-normal ltr:tracking-widest md:text-2xl">
+            {lang === 'en' ? 'PROFESSIONALS' : 'حرفه ای ها'}
+          </h2>
+          <h1 className="rtl:tracking-0 font-gilda text-3xl font-normal leading-normal md:text-4xl">
+            {lang === 'en' ? 'Board of Directors' : 'هيئت مدیره'}
+          </h1>
+        </div>
 
-      <div className="mb-8 ml-8 grid grid-cols-1 space-y-20  pb-16 md:space-x-12 lg:ml-0 lg:flex lg:flex-row lg:justify-center lg:pb-28">
-        {/* {cardsDataEN.map((card, index) => (
+        <div className="mb-8 flex flex-col items-center justify-between gap-20 md:flex-row md:gap-10">
+          {/* {cardsDataEN.map((card, index) => (
           <AboutusPersonalTabs
             key={index}
             image={card.image}
@@ -36,32 +41,32 @@ export default async function AboutUsProfile(
             instagram={card.links.instagram}
           />
         ))} */}
-        {t('lng') === "en" ?
-          cardsDataEN.map((card, index) => (
-            <AboutusPersonalTabs
-              key={index}
-              image={card.image}
-              name={card.name}
-              position={card.position}
-              linkedIn={card.links.linkedin}
-              email={card.links.email}
-              website={card.links.website}
-              instagram={card.links.instagram}
-            />
-          )) :
-          cardsDataFA.map((card, index) => (
-            <AboutusPersonalTabs
-              key={index}
-              image={card.image}
-              name={card.name}
-              position={card.position}
-              linkedIn={card.links.linkedin}
-              email={card.links.email}
-              website={card.links.website}
-              instagram={card.links.instagram}
-            />
-          ))
-        }
+          {t('lng') === 'en'
+            ? cardsDataEN.map((card, index) => (
+                <AboutusPersonalTabs
+                  key={index}
+                  image={card.image}
+                  name={card.name}
+                  position={card.position}
+                  linkedIn={card.links.linkedin}
+                  email={card.links.email}
+                  website={card.links.website}
+                  instagram={card.links.instagram}
+                />
+              ))
+            : cardsDataFA.map((card, index) => (
+                <AboutusPersonalTabs
+                  key={index}
+                  image={card.image}
+                  name={card.name}
+                  position={card.position}
+                  linkedIn={card.links.linkedin}
+                  email={card.links.email}
+                  website={card.links.website}
+                  instagram={card.links.instagram}
+                />
+              ))}
+        </div>
       </div>
     </div>
   );

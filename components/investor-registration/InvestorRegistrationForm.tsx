@@ -7,23 +7,23 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import Input from '../common/form/Input';
-import { initialInvestorRegistrationFormData } from '../../initials/initObjects'
+import { initialInvestorRegistrationFormData } from '../../initials/initObjects';
 import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
-import { useSubmit } from '../../providers/StateProvider';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 
 export default function InvestorRegistrationForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm<InvestorRegistrationFormData>({
     mode: 'onBlur',
-    defaultValues: initialInvestorRegistrationFormData,
+    defaultValues: initialInvestorRegistrationFormData
   });
 
   const {
@@ -32,16 +32,17 @@ export default function InvestorRegistrationForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
+    handleSuccessChange,
     lang
-  } = useSubmit();
+  } = useLang((s) => s);
 
   const { t } = useTranslation(lang, 'formComponent');
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`);
+      const token = await GetCsrfToken(
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+      );
       handleTokenChange(token);
     }
     fetchCsrfToken();
@@ -63,24 +64,29 @@ export default function InvestorRegistrationForm() {
     });
 
     // Send the form data to the API.
-    submitInvestorRegistrationForm(sendFormData, csrfToken).then((response) => {
+    submitInvestorRegistrationForm(sendFormData, csrfToken)
+      .then((response) => {
+        console.log(response);
 
-      console.log(response);
-
-      handleChangeSuccess();
-      reset(initialInvestorRegistrationFormData); // Country does not reset
-      setTimeout(() => {
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
+        reset(initialInvestorRegistrationFormData); // Country does not reset
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      })
+      .catch((error) => {
+        console.log(error);
+        handleSuccessChange(true);
         handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    }).catch((error) => {
-      console.log(error);
-      handleChangeReject();
-      reset(initialInvestorRegistrationFormData);
+        handleSendChange(false);
+        reset(initialInvestorRegistrationFormData);
 
-      setTimeout(() => {
-        handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    })
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      });
   };
 
   // const errorsList = Object.entries(errors).map(([name, value]) => ({
@@ -94,15 +100,14 @@ export default function InvestorRegistrationForm() {
         <InvestorRegistrationTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-
             <PersonalInfoInput
               register={register}
               errors={errors}
               nameInputs={{
-                firstName: "firstName",
-                lastName: "lastName",
-                email: "email",
-                phoneNumber: ""
+                firstName: 'firstName',
+                lastName: 'lastName',
+                email: 'email',
+                phoneNumber: ''
               }}
             />
 
@@ -125,7 +130,7 @@ export default function InvestorRegistrationForm() {
             <CountryInput
               register={register}
               errors={errors}
-              nameInput='countryOfResidence'
+              nameInput="countryOfResidence"
               lang={lang}
             />
 
@@ -151,9 +156,14 @@ export default function InvestorRegistrationForm() {
                 errors={errors}
                 nameInput="interests"
                 type="text"
-                label={t('investorForm',{ returnObjects: true }).interests}
-                required={t('investorForm',{ returnObjects: true }).interestsRequired}
-                placeholder={t('investorForm',{ returnObjects: true }).interestsPlaceholder}
+                label={t('investorForm', { returnObjects: true }).interests}
+                required={
+                  t('investorForm', { returnObjects: true }).interestsRequired
+                }
+                placeholder={
+                  t('investorForm', { returnObjects: true })
+                    .interestsPlaceholder
+                }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -163,14 +173,22 @@ export default function InvestorRegistrationForm() {
 
             <div className="col-span-1 md:col-span-2">
               <TextArea
-                title={t('investorForm',{ returnObjects: true }).preferredAreas}
+                title={
+                  t('investorForm', { returnObjects: true }).preferredAreas
+                }
                 register={register}
                 errors={errors}
-                placeholder={t('investorForm',{ returnObjects: true }).preferredAreasPlaceholder}
+                placeholder={
+                  t('investorForm', { returnObjects: true })
+                    .preferredAreasPlaceholder
+                }
                 nameTextArea="preferredAreas"
                 patternMessage=""
                 patternValue=""
-                required={t('investorForm',{ returnObjects: true }).preferredAreasRequired}
+                required={
+                  t('investorForm', { returnObjects: true })
+                    .preferredAreasRequired
+                }
               />
             </div>
 
@@ -187,14 +205,8 @@ export default function InvestorRegistrationForm() {
               />
             </div>
           </div>
-          <div className="text-center">
-            {/* <Button
-              type='submit'
-              bgColor="Primary"
-              disabled={errorsList[0] ? true : false}
-              lang={lang}
-            /> */}
-            <ButtonRefactor type='submit' text='Submit'/>
+          <div className="mx-auto w-fit">
+            <ButtonRefactor type="submit" text={t('sendButton')} />
           </div>
         </form>
         <NotificationSendForm/>

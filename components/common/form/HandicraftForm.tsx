@@ -1,85 +1,99 @@
-// import React, { useEffect } from 'react';
-// import { PersonalInfoInput } from './PersonalInfoInput';
-// import { useSubmit } from 'providers/StateProvider';
-// import GetCsrfToken from '@/utils/get-csrf-token';
-// import { useForm } from 'react-hook-form';
-// import { HandicraftFormData } from 'initials/initObjects';
+'use client'
+import React, { useEffect } from 'react';
+import { PersonalInfoInput } from './PersonalInfoInput';
+import GetCsrfToken from '@/utils/get-csrf-token';
+import { useForm } from 'react-hook-form';
+import { HandicraftFormData } from 'initials/initObjects';
+import { HandicraftForm } from '../../../types/global';
+import Input from './Input';
 
-import ButtonRefactor from '../ButtonRefactor';
+// import { useTranslation } from 'app/i18n/client';
+// import ButtonRefactor from '../ButtonRefactor';
+import Button from '../Button';
+import { useLang } from 'store';
+import { submitHandiCraftApplicationForm } from 'pages/api/handiCrafts';
 
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
 export default function HandicraftForm() {
-  //   const {
-  //     register,
-  //     handleSubmit,
-  //     formState: { errors },
-  //     reset
-  //   } = useForm<HandicraftFormData>({
-  //     mode: 'onBlur',
-  //     defaultValues: HandicraftFormData
-  //   });
 
-  //   const {
-  //     csrfToken,
-  //     handleTokenChange,
-  //     handleSubmitingChange,
-  //     handleSendChange,
-  //     handleNotifChange,
-  //     handleChangeSuccess,
-  //     handleChangeReject
-  //   } = useSubmit();
+  const { 
+    csrfToken,
+    handleTokenChange,
+    handleSubmitingChange,
+    handleSendChange,
+    handleNotifChange,
+    handleSuccessChange,
+    lang
+   } = useLang((s) => s)
 
-  //   useEffect(() => {
-  //     async function fetchCsrfToken() {
-  //       const token = await GetCsrfToken(
-  //         `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
-  //       );
-  //       handleTokenChange(token);
-  //     }
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      reset
+    } = useForm<HandicraftForm>({
+      mode: 'onBlur',
+      defaultValues: HandicraftFormData
+    });
 
-  //     fetchCsrfToken();
-  //   }, []);
+    useEffect(() => {
+      async function fetchCsrfToken() {
+        const token = await GetCsrfToken(
+          `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+        );
+        handleTokenChange(token);
+      }
 
-  //   const onSubmit = async (formData: HandicraftForm) => {
-  //     // Set loading and sending states.
-  //     handleSubmitingChange(true);
-  //     handleSendChange(true);
+      fetchCsrfToken();
+    }, []);
 
-  //     // Create a FormData object for form data.
-  //     const sendFormData = new FormData();
+    const onSubmit = async (formData: HandicraftForm) => {
+      // Set loading and sending states.
+      handleSubmitingChange(true);
+      handleSendChange(true);
 
-  //     // Append all non-file form fields.
-  //     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
-  //       if (typeof fieldValue !== 'object' || fieldValue === null) {
-  //         sendFormData.append(fieldName, String(fieldValue));
-  //       }
-  //     });
+      // Create a FormData object for form data.
+      const sendFormData = new FormData();
 
-  //     // Send the form data to the API.
-  //     submitContactForm(sendFormData, csrfToken)
-  //       .then((response) => {
-  //         console.log(response);
+      // Append all non-file form fields.
+      Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+        if (typeof fieldValue !== 'object' || fieldValue === null) {
+          sendFormData.append(fieldName, String(fieldValue));
+        }
+      });
 
-  //         handleChangeSuccess();
-  //         reset(ContactFormData); // Reset the form after successful submission
-  //         setTimeout(() => {
-  //           handleNotifChange(false);
-  //         }, 10000); // 10 seconds in milliseconds
-  //       })
-  //       .catch(() => {
-  //         handleChangeReject();
-  //         reset(ContactFormData);
+      // Send the form data to the API.
+      submitHandiCraftApplicationForm(sendFormData, csrfToken)
+        .then((response) => {
+          console.log(response);
 
-  //         setTimeout(() => {
-  //           handleNotifChange(false);
-  //         }, 10000); // 10 seconds in milliseconds
-  //       });
-  //   };
+          handleSuccessChange(true);
+          handleNotifChange(true);
+          handleSendChange(false);
+          reset(HandicraftFormData); // Reset the form after successful submission
+          setTimeout(() => {
+            handleNotifChange(false);
+          }, 10000); // 10 seconds in milliseconds
+        })
+        .catch(() => {
+          handleNotifChange(true);
+          handleSendChange(false);
+          handleSuccessChange(false);
+          reset(HandicraftFormData);
 
-  //   // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   //   name: name,
-  //   //   value: value
-  //   // }));
+          setTimeout(() => {
+            handleNotifChange(false);
+          }, 10000); // 10 seconds in milliseconds
+        });
+    };
+
+    const errorsList = Object.entries(errors).map(([name, value]) => ({
+      name: name,
+      value: value
+    }));
+
+  // const { t } = useTranslation(lang, 'handicraft');
+
   return (
     // <form className="flex flex-col gap-4">
     //   <PersonalInfoInput
@@ -94,26 +108,94 @@ export default function HandicraftForm() {
     //     }}
     //   />
     // </form>
-    <form className="grid grid-cols-2 justify-items-center gap-4 md:w-1/2">
-      <input
-        className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="First Name"
-      ></input>
-      <input
-        className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="Last Name"
-      ></input>
-      <input
-        className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="Email"
-      ></input>
-      <input
-        className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="Organization"
-      ></input>
-      <div className='col-span-2'>
-      <ButtonRefactor text="Submit" type="submit"/>
+    // <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 justify-items-center gap-4 md:w-1/2">
+    //   <input
+    //     className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.firstName')}
+    //   ></input>
+    //   <input
+    //     className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.lastName')}
+    //   ></input>
+    //   <input
+    //     className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.email')}
+    //   ></input>
+    //   <input
+    //     className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.organization')}
+    //   ></input>
+    //   <div className="col-span-2">
+    //     <ButtonRefactor text={t('form.submit')} type="submit" />
+    //   </div>
+    // </form>
+
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col items-center">
+    <div className="my-4 grid w-full md:w-3/5 lg:w-4/6 grid-cols-1 md:flex md:flex-col md:items-center">
+      <div className='w-full flex flex-col md:flex-row items-center gap-2'>
+      <PersonalInfoInput
+        register={register}
+        errors={errors}
+        nameInputs={{
+          firstName: 'name',
+          lastName: '',
+          email: '',
+          phoneNumber: 'phone'
+        }}
+        noLabel={true}
+      />
       </div>
-    </form>
+
+      <div className="col-span-1 w-full">
+        <Input
+          register={register}
+          errors={errors}
+          nameInput="email"
+          type="text"
+          required=""
+          patternValue=""
+          patternMessage=""
+          placeholder={
+            lang === 'en'
+              ? 'Your Email'
+              : 'ایمیل شما'
+          }
+          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          containerClass="w-full"
+          labelClass=""
+        />
+      </div>
+
+      <div className="col-span-1 w-full">
+        <Input
+          register={register}
+          errors={errors}
+          nameInput="company"
+          type="text"
+          required=""
+          patternValue=""
+          patternMessage=""
+          placeholder={
+            lang === 'en'
+              ? 'Name of Your Organization, if applicable'
+              : 'نام شرکت خود را در صورت امکان وارد کنید'
+          }
+          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          containerClass="w-full"
+          labelClass=""
+        />
+      </div>
+    </div>
+
+    <div className="text-center w-full md:w-auto">
+      <Button
+        type='submit'
+        bgColor="Primary"
+        disabled={errorsList[0] ? true : false}
+        lang={lang}
+      />
+      {/* <ButtonRefactor type="submit" text="Submit" /> */}
+    </div>
+  </form>
   );
 }

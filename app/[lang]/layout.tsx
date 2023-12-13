@@ -7,11 +7,11 @@ import './globals.css';
 import { useLang } from 'store';
 
 export async function generateStaticParams() {
-  return languages.map((lang) => ({ lang }))
+  return languages.map((lang) => ({ lang }));
 }
 export default function RootLayout({
   params: { lang },
-  children,
+  children
 }: {
   params: { lang: string };
   children: React.ReactNode;

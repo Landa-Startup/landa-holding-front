@@ -1,6 +1,6 @@
-import { useSubmit } from 'providers/StateProvider';
 import TextArea from '../common/TextArea';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 
 export default function StartupFormTargetMarket({
   register,
@@ -9,7 +9,7 @@ export default function StartupFormTargetMarket({
   register:any;
   errors:any;
 }) {
-  const { lang } = useSubmit();
+  const { lang } = useLang((s) => s)
   const { t } = useTranslation(lang, 'formComponent');
   return (
     <>

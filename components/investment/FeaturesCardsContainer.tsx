@@ -2,7 +2,6 @@ import React from 'react';
 import FeaturesCards from './FeaturesCards';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'store';
-import { SubmitProvider } from 'providers/StateProvider';
 
 export default async function FeaturesCardsContainer() {
 
@@ -24,13 +23,12 @@ export default async function FeaturesCardsContainer() {
           description: string;
           index: number;
         }) => (
-          <SubmitProvider key={index} >
           <FeaturesCards
             link={link}
             title={title}
             description={description}
+            key={index}
           />
-          </SubmitProvider>
         )
       )}
     </div>

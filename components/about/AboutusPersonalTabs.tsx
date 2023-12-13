@@ -13,7 +13,7 @@ export default function AboutusPersonalTabs({
   linkedIn,
   email,
   website,
-  instagram,
+  instagram
 }: {
   image: string;
   name: string;
@@ -24,16 +24,16 @@ export default function AboutusPersonalTabs({
   instagram: string;
 }) {
   return (
-    <div className="relative flex h-[300px] w-[300px] flex-col rounded-sm border border-primary md:ml-12 md:w-[270px] lg:mt-20">
+    <div className="relative flex h-[400px] w-full flex-col rounded-sm border border-primary md:w-[400px]">
       <Image
         className="object-cover"
         src={image}
         alt="Landa Directors"
         layout="fill"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         quality={90}
       />
-      <div className="z-10 ml-2 mt-2 flex flex-col gap-2">
+      <div className="z-10 ml-2 mt-2 mb-2 flex flex-col gap-2 rtl:mr-2">
         <div>
           <Link href={linkedIn} target="_blank">
             <IconLinkedin />
@@ -56,7 +56,7 @@ export default function AboutusPersonalTabs({
           </Link>
         </div>
       </div>
-      <div className="lg:mt44 mt-40 flex flex-col items-center px-4 pb-4  ">
+      <div className="mt-64 flex flex-col items-center px-4 pb-4 ">
         <span className="text-lg font-normal text-black">{name}</span>
         <div className="flex w-full items-center justify-center font-light  ">
           <span className="border-t-3 font-light ">{position}</span>

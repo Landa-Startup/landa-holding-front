@@ -5,13 +5,13 @@ import UploadInput from '../common/UploadInput';
 import { JobFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../..//utils/get-csrf-token';
-import { initialJobFormData } from '../../initials/initObjects';;
+import { initialJobFormData } from '../../initials/initObjects';
 import { submitApplyJobForm } from '../../pages/api/jobs';
-import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
+import { useLang } from 'store';
 
 export default function JobForm() {
 
@@ -31,12 +31,11 @@ export default function JobForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
+    handleSuccessChange,
     cvFileState,
     handleCvFileChange,
     lang
-  } = useSubmit();
+  } = useLang((s) => s)
 
   const { t } = useTranslation(lang, 'formComponent');
 
@@ -78,7 +77,9 @@ export default function JobForm() {
     // Send the form data to the API.
     submitApplyJobForm(sendFormData, csrfToken)
       .then((response) => {
-        handleChangeSuccess();
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
         reset(initialJobFormData); // Country does not reset
 
         console.log(response);
@@ -88,7 +89,9 @@ export default function JobForm() {
         }, 10000); // 10 seconds in milliseconds
       })
       .catch((error) => {
-        handleChangeReject();
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
 
         console.log(error);
 
@@ -108,11 +111,13 @@ export default function JobForm() {
             <>
               <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
-                  {t('jobForm',{ returnObjects: true }).formTitle}
+                  {t('jobForm', { returnObjects: true }).formTitle}
                 </p>
               </div>
               <div>
-                <p className="mb-4 text-4xl">{t('jobForm',{ returnObjects: true }).formSubtitle}</p>
+                <p className="mb-4 text-4xl">
+                  {t('jobForm', { returnObjects: true }).formSubtitle}
+                </p>
               </div>
               <div>
                 <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
@@ -132,7 +137,7 @@ export default function JobForm() {
                 />
 
                 <UploadInput
-                  title={t('jobForm',{ returnObjects: true }).resumeFile}
+                  title={t('jobForm', { returnObjects: true }).resumeFile}
                   register={register}
                   errors={errors}
                   handleChange={handleCvFileChange}

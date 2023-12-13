@@ -1,9 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'store';
+import Link from 'next/link';
 import { SubmitProvider } from 'providers/StateProvider';
 
 export default async function HomeOurTeam() {
@@ -12,20 +12,18 @@ export default async function HomeOurTeam() {
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
-    <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
+    <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white">
       <div
         className="flex flex-col ltr:ml-5 ltr:mr-10 rtl:mr-5 lg:self-start ltr:xl:ml-28 rtl:xl:mr-40"
       >
         <span className="font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
           {t('LandaHolding')}
-          <br />
         </span>
-        <span
+        <p
           className={`font-condensed text-5xl font-normal tracking-normal text-black ltr:p-4 ltr:tracking-widest md:mr-20 xl:mr-0`}
         >
           {t('OurTeam')}
-          <br />
-        </span>
+        </p>
         <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
       </div>
 
@@ -48,9 +46,10 @@ export default async function HomeOurTeam() {
         />
       </div>
       <Link
-        href={t('lng') === 'en' ? '/en/our-team' : '/fa/our-team'}
+        href="/our-team"
         className="justify-center"
       >
+        {/* TODO: delete submit provider */}
         <SubmitProvider>
           <Button
             type="button"
@@ -59,7 +58,6 @@ export default async function HomeOurTeam() {
             goto=""
           />
         </SubmitProvider>
-        {/* <ButtonRefactor text={t('visit')} /> */}
       </Link>
     </div>
   );

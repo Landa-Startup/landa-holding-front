@@ -1,9 +1,9 @@
 import * as React from 'react';
 import TextArea from '../common/TextArea';
 import RadioButtonGroup from '../common/RadioButtonGroup';
-import { preparationStatsOption } from '../../app/[lang]/statics'
+// import { preparationStatsOption } from '../../app/[lang]/statics'
 import { useTranslation } from 'app/i18n/client';
-import { useSubmit } from 'providers/StateProvider';
+import { useLang } from 'store';
 
 export default function StartupFormSolutions({
   register,
@@ -12,7 +12,7 @@ export default function StartupFormSolutions({
   register:any;
   errors:any;
 }){
-  const { lang } = useSubmit();
+  const { lang } = useLang((s) => s)
   const { t } = useTranslation(lang, 'formComponent');
   return (
     <>
@@ -38,7 +38,7 @@ export default function StartupFormSolutions({
         <div className="col-span-2">
           <RadioButtonGroup
             title={t('startUp',{ returnObjects: true }).solutions.productLevel}
-            options={preparationStatsOption}
+            options={t('startUp.radioButtonGroup',{ returnObjects: true })}
             register={register}
             errors={errors}
             required={t('startUp',{ returnObjects: true }).solutions.productLevelRequired}

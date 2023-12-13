@@ -84,7 +84,7 @@ const SubmitProvider = ({ children} : { children : ReactNode}) => {
 
     const path = useParams();
 
-    console.log(path?.lang);
+    // console.log(path?.lang);
 
     let lang = "";
 

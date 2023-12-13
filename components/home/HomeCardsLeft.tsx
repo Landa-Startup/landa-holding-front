@@ -3,12 +3,11 @@ import React from 'react';
 import { HomeCardsLeftProps } from '../../types/global';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
-import { SubmitProvider } from '../../providers/StateProvider';
 
 export default function HomeCardsLeft({
   text,
   addedClass,
-  link
+  link,
 }: HomeCardsLeftProps) {
   return (
     <div
@@ -19,13 +18,11 @@ export default function HomeCardsLeft({
           {text}
         </p>
         {/* <ButtonRefactor text="Visit Now" type="link" href={link} /> */}
-        <SubmitProvider>
         <Button
           goto={link}
           size='visit'
           bgColor='Primary'
         />
-        </SubmitProvider>
       </div>
     </div>
   );

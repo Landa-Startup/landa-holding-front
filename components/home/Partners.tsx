@@ -4,11 +4,13 @@ import PartnersStartupCard from './PartnersStartupCard';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
-import { useSubmit } from 'providers/StateProvider';
+import { useLang } from 'store';
 
 export default function Partners() {
 
-  const {lang} = useSubmit()
+  const lang = useLang((s) => s.lang)
+
+  console.log(lang);
 
   const { t } = useTranslation(lang, 'mainPage');
 

@@ -1,11 +1,12 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import IconDown from '../icons/IconDown';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
-import { SubmitProvider } from 'providers/StateProvider';
+import { useLang } from 'store';
+import { useCookies } from 'react-cookie';
 
 export default function Navbar({
   children,
@@ -16,6 +17,17 @@ export default function Navbar({
 }) {
 
   const { t } = useTranslation(lang, "layout")
+
+  const langHandler = useLang((s) => s.updateLang)
+
+  const [cookies, setCookies] = useCookies(['i18next'])
+
+  // console.log(cookies.i18next);
+  setCookies;
+
+  useEffect(() => {
+    langHandler(cookies.i18next);
+  },[])
 
   const menuItems=t('menuItems', { returnObjects: true })
   const submenuItems=t('submenuItems', { returnObjects: true })
@@ -125,9 +137,10 @@ export default function Navbar({
             </ul>
           </div>
           <div className="hidden md:block">
-            <SubmitProvider>
+            {/* <SubmitProvider>
               <LanguageSwitch />
-            </SubmitProvider>
+            </SubmitProvider> */}
+            <LanguageSwitch lang={lang} />
           </div>
         </div>
         <div className="children">{children}</div>
@@ -168,9 +181,10 @@ export default function Navbar({
           </li>
           <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
             <div className=" mx-auto py-3">
-              <SubmitProvider>
+              {/* <SubmitProvider>
                 <LanguageSwitch />
-              </SubmitProvider>
+              </SubmitProvider> */}
+              <LanguageSwitch lang={lang} />
             </div>
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">
               <Link

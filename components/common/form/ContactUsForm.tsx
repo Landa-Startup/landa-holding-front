@@ -6,16 +6,14 @@ import GetCsrfToken from '../../../utils/get-csrf-token';
 import NotificationSendForm from './NotificationSendForm';
 import { ContactFormData } from '../../../initials/initObjects';
 import { submitContactForm } from '../../../pages/api/contact-us';
-import { useSubmit } from '../../../providers/StateProvider';
 import { PersonalInfoInput } from './PersonalInfoInput';
 import Input from './Input';
 import TextArea from '../TextArea';
 import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 // import { on } from 'events';
-export default function ContactUsForm(
-  // { lang }: { lang: string }
-) {
+export default function ContactUsForm() {
 
   const {
     register,
@@ -33,10 +31,9 @@ export default function ContactUsForm(
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
+    handleSuccessChange,
     lang
-  } = useSubmit();
+  } = useLang((s) => s)
 
   const { t } = useTranslation(lang, "formComponent")
 
@@ -70,13 +67,17 @@ export default function ContactUsForm(
     submitContactForm(sendFormData, csrfToken).then((response) => {
       console.log(response);
 
-      handleChangeSuccess();
+      handleSuccessChange(true);
+      handleNotifChange(true);
+      handleSendChange(false);
       reset(ContactFormData); // Reset the form after successful submission
       setTimeout(() => {
         handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
     }).catch(() => {
-      handleChangeReject();
+      handleNotifChange(true);
+      handleSendChange(false);
+      handleSuccessChange(false);
       reset(ContactFormData);
 
       setTimeout(() => {
@@ -91,7 +92,7 @@ export default function ContactUsForm(
   }))
 
   return (
-    <div>
+    <div className='h-full flex flex-col justify-between items-center md:items-start'>
       <h2 className="text-center font-gilda text-5xl font-light">
         {t('contactForm', {returnObjects: true}).title}
       </h2>
@@ -107,6 +108,7 @@ export default function ContactUsForm(
               email: "email",
               phoneNumber: "number"
             }}
+            noLabel={true}
           />
 
           <div className='col-span-1'>
@@ -115,7 +117,6 @@ export default function ContactUsForm(
               errors={errors}
               nameInput='subject'
               type='text'
-              label={t('contactForm', {returnObjects: true}).subject}
               required={t('contactForm', {returnObjects: true}).subjectRequired}
               patternValue=""
               patternMessage={t('contactForm', {returnObjects: true}).subjectRequired}
@@ -130,7 +131,6 @@ export default function ContactUsForm(
             <TextArea
               register={register}
               errors={errors}
-              title={t('contactForm', {returnObjects: true}).message}
               required={t('contactForm', {returnObjects: true}).messageRequired}
               nameTextArea='message'
               patternValue=''
