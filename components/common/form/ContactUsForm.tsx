@@ -12,10 +12,9 @@ import Input from './Input';
 import TextArea from '../TextArea';
 import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 // import { on } from 'events';
-export default function ContactUsForm(
-  // { lang }: { lang: string }
-) {
+export default function ContactUsForm() {
 
   const {
     register,
@@ -35,8 +34,9 @@ export default function ContactUsForm(
     handleNotifChange,
     handleChangeSuccess,
     handleChangeReject,
-    lang
   } = useSubmit();
+
+  const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, "formComponent")
 

@@ -24,7 +24,7 @@ const PersonalInfoInput = ({
   return (
     <>
       {nameInputs?.firstName && (
-        <div className="col-span-1">
+        <div className="col-span-1 w-full">
           <Input
             register={register}
             errors={errors}
@@ -42,7 +42,7 @@ const PersonalInfoInput = ({
       )}
 
       {nameInputs?.lastName && (
-        <div className="col-span-1">
+        <div className="col-span-1 w-full">
           <Input
             register={register}
             errors={errors}
@@ -60,7 +60,7 @@ const PersonalInfoInput = ({
       )}
 
       {nameInputs?.email && (
-        <div className="col-span-1">
+        <div className="col-span-1 w-full">
           <Input
             register={register}
             errors={errors}
@@ -78,7 +78,7 @@ const PersonalInfoInput = ({
       )}
 
       {nameInputs?.phoneNumber && (
-        <div className="col-span-1">
+        <div className="col-span-1 w-full">
           <Input
             register={register}
             errors={errors}

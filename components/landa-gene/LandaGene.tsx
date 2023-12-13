@@ -147,13 +147,15 @@ export default function LandaGene() {
         <div className="flex h-auto w-full shrink-0 p-4 md:h-[500px] md:w-1/2 lg:h-[450px] lg:w-2/5">
           {/* <Image
               src="/static/images/gene-1.png"
+              layout='fill'
               alt="gene-1"
               fill={true}
             /> */}
-          <Image
+          {/* <Image
             src="/static/images/gene-1.png"
             alt="gene-1"
-          />
+            layout='fill'
+          /> */}
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-3/5">
@@ -174,6 +176,7 @@ export default function LandaGene() {
             src="/static/images/gene-2.png"
             alt="gene-1"
             className="h-full w-full"
+            layout='fill'
           />
         </div>
 
@@ -196,20 +199,43 @@ export default function LandaGene() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-            <div className="my-4 grid w-full grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col items-center">
+            <div className="my-4 grid w-full md:w-3/5 lg:w-2/5 grid-cols-1 md:flex md:flex-col md:items-center">
+              <div className='w-full flex flex-col md:flex-row items-center gap-2'>
               <PersonalInfoInput
                 register={register}
                 errors={errors}
                 nameInputs={{
                   firstName: 'name',
                   lastName: '',
-                  email: 'email',
+                  email: '',
                   phoneNumber: 'phone'
                 }}
               />
+              </div>
 
-              <div className="col-span-1">
+              <div className="col-span-1 w-full">
+                <Input
+                  register={register}
+                  errors={errors}
+                  nameInput="email"
+                  type="text"
+                  label={lang === 'en' ? 'Email' : 'ایمیل'}
+                  required=""
+                  patternValue=""
+                  patternMessage=""
+                  placeholder={
+                    lang === 'en'
+                      ? 'Your Email'
+                      : 'ایمیل شما'
+                  }
+                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                  containerClass="w-full"
+                  labelClass=""
+                />
+              </div>
+
+              <div className="col-span-1 w-full">
                 <Input
                   register={register}
                   errors={errors}
@@ -231,7 +257,7 @@ export default function LandaGene() {
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center w-full md:w-auto">
               <Button
                 type='submit'
                 bgColor="Primary"

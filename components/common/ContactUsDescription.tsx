@@ -8,9 +8,11 @@ import IconWhatApp from '../icons/IconWhatsApp';
 import IconLinkedinB from '../icons/IconLinkedinB';
 import IconEmailB from '../icons/IconEmailB';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'store';
 export default async function ContactUsDescription(
-  {lang} : {lang: string}
 ) {
+
+  const lang = useLang.getState().lang
 
   const { t } = await useTranslation(lang, "contact")
 

@@ -10,7 +10,6 @@ import HomeOurTeam from '../../components/home/HomeOurTeam';
 // import AerialViewBusinessTeam from '../../components/home/BusinessTeam';
 
 import { useTranslation } from '../i18n';
-import { SubmitProvider } from 'providers/StateProvider';
 
 export const metadata: Metadata = {
   title: 'Landa Holding',
@@ -45,9 +44,7 @@ export default async function Page({
         <HomeOurTeam />
         <LatestStartups />
         {/* <AerialViewBusinessTeam /> */}
-        <SubmitProvider>
         <Partners />
-        </SubmitProvider>
     </div>
   );
 }
