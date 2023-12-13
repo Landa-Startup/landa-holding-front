@@ -57,9 +57,9 @@ export default function AboutusPersonalTabs({
         </div>
       </div>
       <div className="mt-64 flex flex-col items-center px-4 pb-4  ">
-        <span className="text-lg font-normal text-black">{name}</span>
+        <span className="text-lg font-normal text-black font-gilda">{name}</span>
         <div className="flex w-full items-center justify-center font-light  ">
-          <span className="border-t-3 font-light ">{position}</span>
+          <span className="border-t-3 font-light font-barlow ">{position}</span>
         </div>
       </div>
     </div>
