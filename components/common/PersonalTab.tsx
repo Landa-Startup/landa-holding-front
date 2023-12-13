@@ -7,7 +7,7 @@ export default function PersonalTab({
   image,
   name,
   position,
-  linkedIn,
+  linkedIn
 }: {
   image: string;
   name: string;
@@ -33,7 +33,7 @@ export default function PersonalTab({
       {/* LinkedIn Link */}
       <div className="z-10 flex flex-col space-y-2 self-start p-4">
         <Link
-          href={linkedIn}
+          href={linkedIn || '/'}
           className="rounded-full bg-[#222] p-2 text-white opacity-75"
         >
           <LinkedIn />

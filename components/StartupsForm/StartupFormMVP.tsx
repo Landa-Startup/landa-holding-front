@@ -89,7 +89,7 @@ export default function StartupFormMVP({
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder={t('startUp',{ returnObjects: true }).siteAddressPlaceholder}
                     className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                    labelClass="text-[#6b6b6b] dark:text-current"
+                    labelClass="text-[#6b6b6b]"
                   />
                 </div>
               </div>

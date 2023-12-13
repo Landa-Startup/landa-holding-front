@@ -5,7 +5,7 @@ import UploadInput from '../common/UploadInput';
 import { JobFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../..//utils/get-csrf-token';
-import { initialJobFormData } from '../../initials/initObjects';;
+import { initialJobFormData } from '../../initials/initObjects';
 import { submitApplyJobForm } from '../../pages/api/jobs';
 import { useSubmit } from '../../providers/StateProvider';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
@@ -108,11 +108,13 @@ export default function JobForm({ lang }: { lang: string }) {
             <>
               <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
-                  {t('jobForm',{ returnObjects: true }).formTitle}
+                  {t('jobForm', { returnObjects: true }).formTitle}
                 </p>
               </div>
               <div>
-                <p className="mb-4 text-4xl">{t('jobForm',{ returnObjects: true }).formSubtitle}</p>
+                <p className="mb-4 text-4xl">
+                  {t('jobForm', { returnObjects: true }).formSubtitle}
+                </p>
               </div>
               <div>
                 <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
@@ -133,18 +135,18 @@ export default function JobForm({ lang }: { lang: string }) {
                 />
 
                 <UploadInput
-                  title={t('jobForm',{ returnObjects: true }).resumeFile}
+                  title={t('jobForm', { returnObjects: true }).resumeFile}
                   register={register}
                   errors={errors}
                   handleChange={handleCvFileChange}
                   nameInput="cvFile"
                 />
               </div>
-              <div className="text-center">
-                <ButtonRefactor type="submit" text="Submit" />
+              <div className="mx-auto w-fit">
+                <ButtonRefactor type="submit" text={t('sendButton')} />
               </div>
             </form>
-            <NotificationSendForm lang={lang}/>
+            <NotificationSendForm lang={lang} />
           </div>
         </>
       </div>

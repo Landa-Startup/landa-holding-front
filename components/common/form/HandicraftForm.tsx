@@ -5,10 +5,11 @@
 // import { useForm } from 'react-hook-form';
 // import { HandicraftFormData } from 'initials/initObjects';
 
+import { useTranslation } from 'app/i18n';
 import ButtonRefactor from '../ButtonRefactor';
 
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
-export default function HandicraftForm() {
+export default async function HandicraftForm({ lang }: { lang: string }) {
   //   const {
   //     register,
   //     handleSubmit,
@@ -80,6 +81,8 @@ export default function HandicraftForm() {
   //   //   name: name,
   //   //   value: value
   //   // }));
+  const { t } = await useTranslation(lang, 'handicraft');
+
   return (
     // <form className="flex flex-col gap-4">
     //   <PersonalInfoInput
@@ -97,22 +100,22 @@ export default function HandicraftForm() {
     <form className="grid grid-cols-2 justify-items-center gap-4 md:w-1/2">
       <input
         className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="First Name"
+        placeholder={t('form.firstName')}
       ></input>
       <input
         className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="Last Name"
+        placeholder={t('form.lastName')}
       ></input>
       <input
         className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="Email"
+        placeholder={t('form.email')}
       ></input>
       <input
         className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder="Organization"
+        placeholder={t('form.organization')}
       ></input>
-      <div className='col-span-2'>
-      <ButtonRefactor text="Submit" type="submit"/>
+      <div className="col-span-2">
+        <ButtonRefactor text={t('form.submit')} type="submit" />
       </div>
     </form>
   );
