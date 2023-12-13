@@ -1,10 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-// import Button from '../common/Button';
-import { useTranslation } from 'app/i18n';
-// import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
+import { useTranslation } from 'app/i18n';
 import { useLang } from 'store';
 import { SubmitProvider } from 'providers/StateProvider';
 
@@ -16,15 +14,9 @@ export default async function HomeOurTeam() {
   return (
     <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white ">
       <div
-        className={`${
-          t('lng') === 'en' ? 'ml-5 mr-10 xl:ml-28' : 'mr-5 xl:mr-40'
-        } flex flex-col lg:self-start `}
+        className="flex flex-col ltr:ml-5 ltr:mr-10 rtl:mr-5 lg:self-start ltr:xl:ml-28 rtl:xl:mr-40"
       >
-        <span
-          className={`text-base font-normal text-black ${
-            t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0'
-          } font-condensed text-xl`}
-        >
+        <span className="font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
           {t('LandaHolding')}
           <br />
         </span>
@@ -36,9 +28,6 @@ export default async function HomeOurTeam() {
         </span>
         <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
       </div>
-
-      {/* <div className="flex flex-col lg">
-      </div> */}
 
       <div className="flex flex-col items-center">
         <Image
@@ -63,12 +52,12 @@ export default async function HomeOurTeam() {
         className="justify-center"
       >
         <SubmitProvider>
-        <Button
-          type="button"
-          size="visit"
-          bgColor="Primary"
-          goto=""
-        />
+          <Button
+            type="button"
+            size="visit"
+            bgColor="Primary"
+            goto=""
+          />
         </SubmitProvider>
         {/* <ButtonRefactor text={t('visit')} /> */}
       </Link>

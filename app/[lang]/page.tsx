@@ -27,6 +27,7 @@ export default async function Page({
 
   return (
     <div className="relative">
+      {/* TODO: read t inside hero components using zustend */}
       <Hero
         lang={lang}
         showLanda
@@ -38,15 +39,15 @@ export default async function Page({
         showButton={false}
       />
 
-        <HomeCardsContainer />
-        <LandaHoldingBlack />
-        <LandaHoldingPriority />
-        <HomeOurTeam />
-        <LatestStartups />
-        {/* <AerialViewBusinessTeam /> */}
-        <SubmitProvider>
+      <HomeCardsContainer />
+      <LandaHoldingBlack />
+      <LandaHoldingPriority />
+      <HomeOurTeam />
+      <LatestStartups />
+      {/* <AerialViewBusinessTeam /> */}
+      <SubmitProvider>
         <Partners />
-        </SubmitProvider>
+      </SubmitProvider>
     </div>
   );
 }
