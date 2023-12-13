@@ -2,7 +2,6 @@ import React from 'react';
 import CompaniesContainer from '../home/CompaniesContainer';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'store';
-import { SubmitProvider } from 'providers/StateProvider';
 
 export default async function SubsidiaryCompanies(
 ) {
@@ -19,9 +18,7 @@ export default async function SubsidiaryCompanies(
       <p className="my-4 text-justify font-barlow text-xl leading-8">
         {t('subsids', {returnObjects: true})[0].text}
       </p>
-      <SubmitProvider>
       <CompaniesContainer />
-      </SubmitProvider>
     </div>
   );
 }

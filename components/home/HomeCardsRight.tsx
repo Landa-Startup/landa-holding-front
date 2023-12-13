@@ -12,8 +12,6 @@ export default function HomeCardsRight({
 }) {
 
   const lang = useLang.getState().lang
-
-  console.log(lang);
   
   return (
     <div className="flex flex-col self-start md:self-center">

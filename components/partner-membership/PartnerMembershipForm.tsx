@@ -16,6 +16,7 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
+import { useLang } from 'store';
 
 // import { PartnerMembership } from '@prisma/client';
 
@@ -36,10 +37,9 @@ export default function PartnerMembershipForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
+    handleSuccessChange,
     lang
-  } = useSubmit();
+  } = useLang((s) => s)
 
   const { t } = useTranslation(lang, "formComponent");
 
@@ -73,7 +73,9 @@ export default function PartnerMembershipForm() {
     // Send the form data to the API.
     submitPartnerMembershipForm(sendFormData, csrfToken)
       .then((response) => {
-        handleChangeSuccess();
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
         reset(initialPartnerMembershipFormData); // Country does not reset
 
         console.log(response);
@@ -83,7 +85,9 @@ export default function PartnerMembershipForm() {
         }, 10000); // 10 seconds in milliseconds
       })
       .catch(() => {
-        handleChangeReject();
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
         reset(initialPartnerMembershipFormData);
         setTimeout(() => {
           handleNotifChange(false);

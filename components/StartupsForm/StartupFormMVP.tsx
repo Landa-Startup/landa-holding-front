@@ -8,6 +8,7 @@ import StartupFormBusinessModel from './StartupFormBusinessModel';
 import { handleRadioChange } from '../../utils/functions';
 import { useTranslation } from 'app/i18n/client';
 import { useSubmit } from 'providers/StateProvider';
+import { useLang } from 'store';
 
 export default function StartupFormMVP({
   register,
@@ -22,7 +23,7 @@ export default function StartupFormMVP({
   handleBusinessFileChange: any;
   handleFinancialFileChange: any;
 }) {
-  const { lang } = useSubmit();
+  const { lang } = useLang((s) => s)
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
   const [selectedRadioBusiness, setSelectedRadioBusiness] = useState('');
   const { t } = useTranslation(lang, 'formComponent');
@@ -89,7 +90,7 @@ export default function StartupFormMVP({
                     patternMessage="Only Alphabetic Characters are Allowed."
                     placeholder={t('startUp',{ returnObjects: true }).siteAddressPlaceholder}
                     className="input input-bordered mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                    labelClass="text-[#6b6b6b] dark:text-current"
+                    labelClass="text-[#6b6b6b]"
                   />
                 </div>
               </div>

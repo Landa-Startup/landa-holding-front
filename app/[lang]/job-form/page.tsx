@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from '../../../components/common/Banner';
 import JobForm from '../../../components/job-form/JobForm';
 import { Metadata } from 'next';
-import { SubmitProvider } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
@@ -27,9 +26,8 @@ export default async function ApplyFormPage({
         lang={lang}
 
       />
-      <SubmitProvider>
-        <JobForm />
-      </SubmitProvider>
+      <JobForm />
+
     </div>
   );
 }

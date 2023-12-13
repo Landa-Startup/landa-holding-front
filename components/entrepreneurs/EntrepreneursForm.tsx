@@ -13,6 +13,7 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 
 export default function EntrepreneursForm() {
 
@@ -20,28 +21,29 @@ export default function EntrepreneursForm() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors }
   } = useForm<Entrepreuneur>({
     mode: 'onBlur',
-    defaultValues: initialFormData,
+    defaultValues: initialFormData
   });
 
   const {
-    csrfToken, 
-    handleTokenChange, 
+    csrfToken,
+    handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
+    handleSuccessChange,
     lang
-  } = useSubmit();
+  } = useLang((s) => s)
 
   const { t } = useTranslation(lang, "formComponent")
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken("https://panel.landaholding.com/get-csrf-token");
+      const token = await GetCsrfToken(
+        'https://panel.landaholding.com/get-csrf-token'
+      );
       handleTokenChange(token);
       handleTokenChange(token);
     }
@@ -55,10 +57,10 @@ export default function EntrepreneursForm() {
     handleSendChange(true);
 
     console.log(formData);
-  
+
     // Create a FormData object for form data.
     const sendFormData = new FormData();
-  
+
     // Append all non-file form fields.
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
       if (typeof fieldValue !== 'object' || fieldValue === null) {
@@ -67,25 +69,30 @@ export default function EntrepreneursForm() {
     });
 
     console.log(sendFormData);
-  
+
     // Send the form data to the API.
-    submitEntrepreneurForm(sendFormData, csrfToken).then((response) => {
+    submitEntrepreneurForm(sendFormData, csrfToken)
+      .then((response) => {
+        console.log(response);
 
-      console.log(response);
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
+        reset(initialFormData); // country does not reset
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      })
+      .catch(() => {
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
+        reset(initialFormData);
 
-      handleChangeSuccess();
-      reset(initialFormData); // country does not reset
-      setTimeout(() => {
-        handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    }).catch(() => {
-      handleChangeReject();
-      reset(initialFormData);
-  
-      setTimeout(() => {
-        handleNotifChange(false);
-      }, 10000); // 10 seconds in milliseconds
-    })
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      });
   };
 
   const errorsList = Object.entries(errors).map(([name, value]) => ({
@@ -95,8 +102,11 @@ export default function EntrepreneursForm() {
 
   return (
     <>
-      <div className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent" dir={lang === "en" ? "ltr" : "rtl"}>
-        <EntrepreneursTitle lang={lang} />
+      <div
+        className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent"
+        dir={lang === 'en' ? 'ltr' : 'rtl'}
+      >
+        <EntrepreneursTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-span-1">
@@ -121,10 +131,10 @@ export default function EntrepreneursForm() {
               register={register}
               errors={errors}
               nameInputs={{
-                firstName: "",
-                lastName: "",
-                email: "email",
-                phoneNumber: "phone"
+                firstName: '',
+                lastName: '',
+                email: 'email',
+                phoneNumber: 'phone'
               }}
             />
 

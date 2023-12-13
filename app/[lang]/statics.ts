@@ -13,7 +13,7 @@ import {
   AboutUsDataInterface,
   PreparationListInterface,
   CardsList
-} from "../../types/global";
+} from '../../types/global';
 
 // const countryList: Array<string> = [
 //   "Afghanistan",
@@ -344,14 +344,13 @@ const personsEN: personArrayInterface[] = [
     name: 'Amin Asgarian',
     linkedIn: '',
     category: 'programmers'
-
   },
   {
     image: '/static/images/our-team/Personals/a9.png',
     position: 'Digital Marketer',
     name: 'Ehsan Aliakbari',
     linkedIn: '',
-    category: "digital marketer"
+    category: 'digital marketer'
   },
   {
     image: '/static/images/our-team/Personals/a13.png',
@@ -374,7 +373,6 @@ const personsEN: personArrayInterface[] = [
     name: 'Sobhan Emami',
     linkedIn: '',
     category: 'programmers'
-
   },
   {
     image: '/static/images/our-team/Personals/a17.png',
@@ -466,7 +464,7 @@ const personsEN: personArrayInterface[] = [
     name: 'Faezeh Khani',
     linkedIn: '',
     category: 'designers'
-  },
+  }
 ];
 
 const personsFA: personArrayInterface[] = [
@@ -665,9 +663,8 @@ const personsFA: personArrayInterface[] = [
     name: 'فائزه خانی',
     linkedIn: '',
     category: 'طراحان'
-  },
+  }
 ];
-
 
 const rolesEN: Array<string> = [
   'All',
@@ -675,7 +672,7 @@ const rolesEN: Array<string> = [
   'Mentors',
   'Programmers',
   // 'Product Designer',
-  "Designers",
+  'Designers',
   'Content Creators',
   'Accountant',
   'Public Relations',
@@ -689,7 +686,7 @@ const rolesFA: Array<string> = [
   'مربیان',
   'برنامه نویسان',
   // 'Product Designer',
-  "طراحان",
+  'طراحان',
   'تولید کنندگان محتوا',
   'حسابدار',
   'روابط عمومی',
@@ -697,17 +694,16 @@ const rolesFA: Array<string> = [
   'دستیار مدیر'
 ];
 
-
 const companies: CompaniesArrayInterface[] = [
   {
     name: 'LANDA TRIP',
     logo: '1.png',
-    link: "https://landatrip.com/"
+    link: 'https://landatrip.com/'
   },
   {
     name: 'IRIMMIGRATION',
     logo: '2.png',
-    link: "https://Irimmigration.ca"
+    link: 'https://Irimmigration.ca'
   },
   {
     name: 'ACADEMY',
@@ -722,12 +718,12 @@ const companies: CompaniesArrayInterface[] = [
   {
     name: 'DIACO',
     logo: '5.png',
-    link: 'https://Diacocenter.com',
+    link: 'https://Diacocenter.com'
   },
   {
     name: 'VISION RAFT',
     logo: '6.png',
-    link: 'https://Visionraft.com',
+    link: 'https://Visionraft.com'
   },
   {
     name: 'FARAZAMAN',
@@ -748,9 +744,8 @@ const companies: CompaniesArrayInterface[] = [
     name: 'LANDA GENE',
     logo: '10.png',
     link: '#'
-  },
+  }
 ];
-
 
 const items: personArrayInterface[] = [
   {
@@ -758,59 +753,58 @@ const items: personArrayInterface[] = [
     position: 'Secretary',
     name: 'Lida Parvizi',
     linkedIn: '',
-    category: 'secretary',
+    category: 'secretary'
   },
   {
     image: '/static/images/our-team/Personals/a6.png',
     position: 'CTO',
     name: 'Iman Nasr',
     linkedIn: '',
-    category: 'mentor',
+    category: 'mentor'
   },
   {
     image: '/static/images/our-team/Personals/a33.png',
     position: 'Public Relations Officer',
     name: 'Gelareh Bahrami',
     linkedIn: '',
-    category: 'public relations officer',
+    category: 'public relations officer'
   },
   {
     image: '/static/images/our-team/Personals/a7.png',
     position: 'Full stack',
     name: 'Sajjad Momeni',
     linkedIn: '',
-    category: 'mentor',
+    category: 'mentor'
   },
   {
     image: '/static/images/our-team/Personals/a5.png',
     position: 'Accountant',
     name: 'Ali Solaimani',
     linkedIn: '',
-    category: 'accountant',
+    category: 'accountant'
   },
   {
     image: '/static/images/our-team/Personals/a13.png',
     position: 'UX/UI Designer',
     name: 'Ariana Shafie',
     linkedIn: '',
-    category: 'designer',
+    category: 'designer'
   },
   {
     image: '/static/images/our-team/Personals/a9.png',
     position: 'Digital Marketer',
     name: 'Ehsan Aliakbari',
     linkedIn: '',
-    category: 'digital marketer',
+    category: 'digital marketer'
   },
   {
     image: '/static/images/our-team/Personals/a21.png',
     position: 'Graphic Designer',
     name: 'Hoda Mahdi',
     linkedIn: '',
-    category: 'designer',
-  },
+    category: 'designer'
+  }
 ];
-
 
 const cardData: CompanySectionsInterface[] = [
   {
@@ -824,13 +818,13 @@ const cardData: CompanySectionsInterface[] = [
     images: [
       {
         src: '/static/images/Home main/2.jpg',
-        alt: 'Investment',
+        alt: 'Investment'
       },
       {
         src: '/static/images/Home main/1.jpg',
-        alt: 'Investment',
-      },
-    ],
+        alt: 'Investment'
+      }
+    ]
   },
   {
     title: 'Acceleration',
@@ -843,13 +837,13 @@ const cardData: CompanySectionsInterface[] = [
     images: [
       {
         src: '/static/images/Home main/3.jpg',
-        alt: 'Acceleration Center',
+        alt: 'Acceleration Center'
       },
       {
         src: '/static/images/Home main/4.jpg',
-        alt: 'Acceleration Center',
-      },
-    ],
+        alt: 'Acceleration Center'
+      }
+    ]
   },
   {
     title: 'Academy',
@@ -862,164 +856,168 @@ const cardData: CompanySectionsInterface[] = [
     images: [
       {
         src: '/static/images/Home main/5.jpg',
-        alt: 'Academy',
+        alt: 'Academy'
       },
       {
         src: '/static/images/Home main/6.jpg',
-        alt: 'Academy',
-      },
-    ],
-  },
+        alt: 'Academy'
+      }
+    ]
+  }
 ];
-
 
 const cardData1: WorkFieldsInterface[] = [
   {
     titleEN: 'Artificial Intelligence',
     titleFA: 'هوش مصنوعی',
-    image: '/static/images/Home/Priority/vr-glasses 2.png',
+    image: '/static/images/Home/Priority/vr-glasses 2.png'
   },
   {
     titleEN: 'Virtual Reality',
     titleFA: 'واقعیت مجازی',
-    image: '/static/images/Home/Priority/system 2.png',
+    image: '/static/images/Home/Priority/system 2.png'
   },
   {
     titleEN: 'Renewable Energy',
     titleFA: 'انرژی های تجدید پذیر',
-    image: '/static/images/Home/Priority/online-shop 1.png',
+    image: '/static/images/Home/Priority/online-shop 1.png'
   },
   {
     titleEN: 'The Environment',
     titleFA: 'محیط زیست',
-    image: '/static/images/Home/Priority/planet-earth 1.png',
+    image: '/static/images/Home/Priority/planet-earth 1.png'
   },
   {
     titleEN: 'Entertainment',
     titleFA: 'سرگرمی',
-    image: '/static/images/Home/Priority/ai 2.png',
+    image: '/static/images/Home/Priority/ai 2.png'
   },
   {
     titleEN: 'Biomedical Engineering',
     titleFA: 'مهندسی پزشکی',
-    image: '/static/images/Home/Priority/man 2.png',
+    image: '/static/images/Home/Priority/man 2.png'
   },
   {
     titleEN: 'Services for Teenagers',
     titleFA: 'خدمات برای نوجوانان',
-    image: '/static/images/Home/Priority/process 2.png',
+    image: '/static/images/Home/Priority/process 2.png'
   },
   {
     titleEN: 'Tourism Services',
     titleFA: 'خدمات گردشگری',
-    image: '/static/images/Home/Priority/world 2.png',
-  },
+    image: '/static/images/Home/Priority/world 2.png'
+  }
 ];
-
 
 const cardData2: SportsInterface[] = [
   {
     title: 'Benefits of Spa Treatments',
-    image: '/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png',
+    image:
+      '/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png',
     type: 'Acceleration',
-    date: 'apr 27',
+    date: 'apr 27'
   },
   {
     title: 'Fitness Center',
-    image: '/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png',
+    image:
+      '/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png',
     type: 'Investment',
-    date: 'apr 27',
+    date: 'apr 27'
   },
   {
     title: 'Benefits of Spa Treatments',
-    image: '/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png',
+    image:
+      '/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png',
     type: 'Investment',
-    date: 'apr 27',
-  },
+    date: 'apr 27'
+  }
 ];
-
 
 const cardData3: StartUpsInterface[] = [
   {
     image: '/static/images/Home/Startups/trip.png',
     titleEN: 'LANDA TRIP',
     titleFA: 'لاندا تریپ',
-    descriptionEN: 'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
-    descriptionFA: 'لاندا تریپ یک شرکت نوآور نوآور است که دوره های آموزشی مفیدی را برای همه افراد علاقه مند و کسب و کار ایجاد، ترویج و اجرا می کند',
-    link: 'https://landatrip.com/',
+    descriptionEN:
+      'Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.',
+    descriptionFA:
+      'لاندا تریپ یک شرکت نوآور نوآور است که دوره های آموزشی مفیدی را برای همه افراد علاقه مند و کسب و کار ایجاد، ترویج و اجرا می کند',
+    link: 'https://landatrip.com/'
   },
 
   {
     image: '/static/images/Home/Startups/diaco.png',
     titleEN: 'DIACO',
     titleFA: 'دیاکو سنتر',
-    descriptionEN: 'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
-    descriptionFA: 'دیاکو یک پلتفرم نوآوری باز است که به عنوان یک واسطه بین جویندگان فناوری و ارائه دهندگان برای برآورده کردن خواسته های فناوری آنها عمل می کند',
-    link: 'https://irdiaco.ca/',
+    descriptionEN:
+      'Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.',
+    descriptionFA:
+      'دیاکو یک پلتفرم نوآوری باز است که به عنوان یک واسطه بین جویندگان فناوری و ارائه دهندگان برای برآورده کردن خواسته های فناوری آنها عمل می کند',
+    link: 'https://irdiaco.ca/'
   },
   {
     image: '/static/images/Home/Startups/vision-raft.png',
     titleEN: 'VISION RAFT',
     titleFA: 'ویژن رفت',
-    descriptionEN: 'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
-    descriptionFA: 'این ویژن رفت است، یک پلتفرم واقعیت مجازی با تمرکز بر آموزش و سرگرمی جوانان که کیفیت یادگیری آنها را افزایش می دهد',
-    link: 'https://invigorated-drop-231359.framer.app',
-  },
+    descriptionEN:
+      'This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.',
+    descriptionFA:
+      'این ویژن رفت است، یک پلتفرم واقعیت مجازی با تمرکز بر آموزش و سرگرمی جوانان که کیفیت یادگیری آنها را افزایش می دهد',
+    link: 'https://invigorated-drop-231359.framer.app'
+  }
 ];
-
 
 const logosLeft: LogosInterface[] = [
   {
     number: 2,
-    alt: 'azad university',
+    alt: 'azad university'
   },
   {
     number: 3,
-    alt: 'nekeoi',
+    alt: 'nekeoi'
   },
   {
     number: 4,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 5,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 6,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 7,
-    alt: 'evimo',
-  },
+    alt: 'evimo'
+  }
   // {
   //   number: 8,
   //   alt: 'evimo',
   // },
 ];
 
-
 const logosRight: LogosInterface[] = [
   {
     number: 1,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 9,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 10,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 11,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 12,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   // {
   //   number: 13,
@@ -1027,8 +1025,8 @@ const logosRight: LogosInterface[] = [
   // },
   {
     number: 14,
-    alt: 'evimo',
-  },
+    alt: 'evimo'
+  }
   // {
   //   number: 15,
   //   alt: 'evimo',
@@ -1039,269 +1037,263 @@ const logosRight: LogosInterface[] = [
   // },
 ];
 
-
 const partners1: LogosInterface[] = [
   {
     number: 1,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 2,
-    alt: 'azad',
+    alt: 'azad'
   },
   {
     number: 3,
-    alt: 'nekoei',
+    alt: 'nekoei'
   },
   {
     number: 4,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 5,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 6,
-    alt: 'evimo',
-  },
+    alt: 'evimo'
+  }
 ];
-
-
 
 const partners2: LogosInterface[] = [
   {
     number: 7,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 8,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 9,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 10,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 11,
-    alt: 'evimo',
-  },
+    alt: 'evimo'
+  }
 ];
-
 
 const partners3: LogosInterface[] = [
   {
     number: 12,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 13,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 14,
-    alt: 'evimo',
+    alt: 'evimo'
   },
   {
     number: 15,
-    alt: 'evimo',
-  },
+    alt: 'evimo'
+  }
 ];
-
 
 const servicesEN: ServicesInterface[] = [
   {
-    "title": 'Pitch deck preparation',
-    "image": '1.png',
+    title: 'Pitch deck preparation',
+    image: '1.png'
   },
   {
-    "title": 'Mentoring',
-    "image": '2.png',
+    title: 'Mentoring',
+    image: '2.png'
   },
   {
-    "title": 'Networking with suitable individuals',
-    "image": '3.png',
+    title: 'Networking with suitable individuals',
+    image: '3.png'
   },
   {
-    "title": 'Initial financing',
-    "image": '4.png',
+    title: 'Initial financing',
+    image: '4.png'
   },
   {
-    "title": 'MVP development',
-    "image": '5.png',
+    title: 'MVP development',
+    image: '5.png'
   },
   {
-    "title": 'Research and development',
-    "image": '6.png',
+    title: 'Research and development',
+    image: '6.png'
   },
   {
-    "title": 'Website design',
-    "image": '7.png',
+    title: 'Website design',
+    image: '7.png'
   },
   {
-    "title": 'Business plan creation',
-    "image": '8.png',
+    title: 'Business plan creation',
+    image: '8.png'
   },
   {
-    "title": 'Idea brainstorming and development',
-    "image": '9.png',
+    title: 'Idea brainstorming and development',
+    image: '9.png'
   },
   {
-    "title": 'Cooperative workspace',
-    "image": '10.png',
+    title: 'Cooperative workspace',
+    image: '10.png'
   },
   {
-    "title": 'Patent registration',
-    "image": '11.png',
+    title: 'Patent registration',
+    image: '11.png'
   },
   {
-    "title": 'Organizing startup presentation events',
-    "image": '12.png',
-  },
+    title: 'Organizing startup presentation events',
+    image: '12.png'
+  }
 ];
 
 const servicesFA: ServicesInterface[] = [
   {
-    "title": "تنظیم پیچ دک",
-    "image": '1.png',
+    title: 'تنظیم پیچ دک',
+    image: '1.png'
   },
   {
-    "title": "منتورینگ",
-    "image": "2.png",
+    title: 'منتورینگ',
+    image: '2.png'
   },
   {
-    "title": "شبکه سازی با افراد مورد نیاز",
-    "image": "3.png",
+    title: 'شبکه سازی با افراد مورد نیاز',
+    image: '3.png'
   },
   {
-    "title": "تامین مالی اولیه",
-    "image": "4.png",
+    title: 'تامین مالی اولیه',
+    image: '4.png'
   },
   {
-    "title": "توسعه MVP",
-    "image": "5.png",
+    title: 'توسعه MVP',
+    image: '5.png'
   },
   {
-    "title": "تحقیق و توسعه",
-    "image": "6.png",
+    title: 'تحقیق و توسعه',
+    image: '6.png'
   },
   {
-    "title": "طراحی وب سایت",
-    "image": "7.png",
+    title: 'طراحی وب سایت',
+    image: '7.png'
   },
   {
-    "title": "تنظیم بیزینس پلن",
-    "image": "8.png",
+    title: 'تنظیم بیزینس پلن',
+    image: '8.png'
   },
   {
-    "title": "همفکری و پرورش ایده",
-    "image": "9.png",
+    title: 'همفکری و پرورش ایده',
+    image: '9.png'
   },
   {
-    "title": "فضای کار اشتراکی",
-    "image": "10.png",
+    title: 'فضای کار اشتراکی',
+    image: '10.png'
   },
   {
-    "title": "ثبت اختراع",
-    "image": "11.png",
+    title: 'ثبت اختراع',
+    image: '11.png'
   },
   {
-    "title": "برگزاری رویدادهای ارائه استارتاپ",
-    "image": "12.png",
-  },
+    title: 'برگزاری رویدادهای ارائه استارتاپ',
+    image: '12.png'
+  }
 ];
 
 const images: ImagesInterface[] = [
   {
-    src: '/static/images/Academy/gallery/all/1.jpg',
+    src: '/static/images/Academy/gallery/all/1.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/2.jpg',
+    src: '/static/images/Academy/gallery/all/2.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/3.jpg',
+    src: '/static/images/Academy/gallery/all/3.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/4.jpg',
+    src: '/static/images/Academy/gallery/all/4.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/5.jpg',
+    src: '/static/images/Academy/gallery/all/5.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/6.jpg',
+    src: '/static/images/Academy/gallery/all/6.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/7.jpg',
+    src: '/static/images/Academy/gallery/all/7.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/8.jpg',
+    src: '/static/images/Academy/gallery/all/8.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/9.jpg',
+    src: '/static/images/Academy/gallery/all/9.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/10.jpg',
+    src: '/static/images/Academy/gallery/all/10.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/11.jpg',
+    src: '/static/images/Academy/gallery/all/11.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/12.jpg',
+    src: '/static/images/Academy/gallery/all/12.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/13.png',
+    src: '/static/images/Academy/gallery/all/13.png'
   },
   {
-    src: '/static/images/Academy/gallery/all/14.jpg',
+    src: '/static/images/Academy/gallery/all/14.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/15.jpg',
+    src: '/static/images/Academy/gallery/all/15.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/16.jpg',
+    src: '/static/images/Academy/gallery/all/16.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/17.jpg',
+    src: '/static/images/Academy/gallery/all/17.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/18.jpg',
+    src: '/static/images/Academy/gallery/all/18.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/19.jpg',
+    src: '/static/images/Academy/gallery/all/19.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/20.jpg',
+    src: '/static/images/Academy/gallery/all/20.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/21.jpg',
+    src: '/static/images/Academy/gallery/all/21.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/22.jpg',
+    src: '/static/images/Academy/gallery/all/22.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/23.jpg',
+    src: '/static/images/Academy/gallery/all/23.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/24.jpg',
+    src: '/static/images/Academy/gallery/all/24.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/25.jpg',
+    src: '/static/images/Academy/gallery/all/25.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/26.png',
+    src: '/static/images/Academy/gallery/all/26.png'
   },
   {
-    src: '/static/images/Academy/gallery/all/27.jpg',
+    src: '/static/images/Academy/gallery/all/27.jpg'
   },
   {
-    src: '/static/images/Academy/gallery/all/28.jpg',
-  },
+    src: '/static/images/Academy/gallery/all/28.jpg'
+  }
 ];
-
 
 const cardsDataEN: AboutUsDataInterface[] = [
   {
@@ -1313,11 +1305,12 @@ const cardsDataEN: AboutUsDataInterface[] = [
       whatsapp: 'wa.me/+989134233863',
       email: 'mailto:rasoulmoradimehr@gmail.com',
       website: 'https://moradimehr.com/',
-      instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
-    },
+      instagram:
+        'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=='
+    }
   },
   {
-    image: '/static/images/about/mjafari.jpg',
+    image: '/static/images/About/mjafari.jpg',
     name: 'MORTEZA JAFARI',
     position: 'International Relations',
     links: {
@@ -1325,8 +1318,9 @@ const cardsDataEN: AboutUsDataInterface[] = [
       whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
       email: 'mailto:morteza_jafari49@yahoo.com',
       website: 'https://mortezajafari.ca/',
-      instagram: 'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==',
-    },
+      instagram:
+        'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA=='
+    }
   },
   {
     image: '/static/images/our-team/Personals/a2.png',
@@ -1337,26 +1331,28 @@ const cardsDataEN: AboutUsDataInterface[] = [
       whatsapp: 'https://wa.me/+12892693933',
       email: 'mailto:hadihasanpor@gmail.com',
       website: 'https://www.hadihasanpour.ca/',
-      instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
-    },
-  },
+      instagram:
+        'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA=='
+    }
+  }
 ];
 
 const cardsDataFA: AboutUsDataInterface[] = [
   {
-    "image": "/static/images/our-team/Personals/a1.png",
-    "name": "رسول مرادیمهر",
-    "position": " مدیر عامل",
-    "links": {
-      "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
-      "whatsapp": "wa.me/+989134233863",
-      "email": "mailto:rasoulmoradimehr@gmail.com",
-      "website": "https://moradimehr.com/",
-      "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==",
-    },
+    image: '/static/images/our-team/Personals/a1.png',
+    name: 'رسول مرادیمهر',
+    position: ' مدیر عامل',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
+      whatsapp: 'wa.me/+989134233863',
+      email: 'mailto:rasoulmoradimehr@gmail.com',
+      website: 'https://moradimehr.com/',
+      instagram:
+        'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=='
+    }
   },
   {
-    "image": "/static/images/about/mjafari.jpg",
+    "image": "/static/images/About/mjafari.jpg",
     "name": "مرتضی جعفری",
     "position": "ارتباطات بین الملل",
     "links": {
@@ -1368,32 +1364,49 @@ const cardsDataFA: AboutUsDataInterface[] = [
     },
   },
   {
-    "image": "/static/images/our-team/Personals/a2.png",
-    "name": "هادی حسن پور",
-    "position": "COTB",
-    "links": {
-      "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
-      "whatsapp": "https://wa.me/+12892693933",
-      "email": "mailto:hadihasanpor@gmail.com",
-      "website": "https://www.hadihasanpour.ca/",
-      "instagram": "https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==",
-    },
-  },
+    image: '/static/images/our-team/Personals/a2.png',
+    name: 'هادی حسن پور',
+    position: 'COTB',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
+      whatsapp: 'https://wa.me/+12892693933',
+      email: 'mailto:hadihasanpor@gmail.com',
+      website: 'https://www.hadihasanpour.ca/',
+      instagram:
+        'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA=='
+    }
+  }
 ];
-
 
 const preparationStatsOption: PreparationListInterface[] = [
   { value: 'basicPrinciple', label: 'The basic principle has been observed.' },
-  { value: 'technologyConcept', label: 'The technology concept has been formulated.' },
+  {
+    value: 'technologyConcept',
+    label: 'The technology concept has been formulated.'
+  },
   { value: 'exprimentalProof', label: 'Experimental proof of concept.' },
-  { value: 'confirmedTechnologyLab', label: 'The confirmed technology in laboratory.' },
-  { value: 'confirmedTechnologyEnv', label: 'The confirmed technology in the environmental conditions' },
-  { value: 'presentedTechnologyEnv', label: 'The presented technology in the environmental conditions' },
-  { value: 'systemPrototypeInMvp', label: 'Show the system prototype in the mvp operating environment.' },
-  { value: 'realisticSystem', label: 'The proved realistic system in the operating environment.' },
-  { value: 'qualifiedSystem', label: 'A complete and qualified system.' },
+  {
+    value: 'confirmedTechnologyLab',
+    label: 'The confirmed technology in laboratory.'
+  },
+  {
+    value: 'confirmedTechnologyEnv',
+    label: 'The confirmed technology in the environmental conditions'
+  },
+  {
+    value: 'presentedTechnologyEnv',
+    label: 'The presented technology in the environmental conditions'
+  },
+  {
+    value: 'systemPrototypeInMvp',
+    label: 'Show the system prototype in the mvp operating environment.'
+  },
+  {
+    value: 'realisticSystem',
+    label: 'The proved realistic system in the operating environment.'
+  },
+  { value: 'qualifiedSystem', label: 'A complete and qualified system.' }
 ];
-
 
 const cards: CardsList[] = [
   {
@@ -1401,40 +1414,40 @@ const cards: CardsList[] = [
     text: 'We assist startups by providing their investments to help them grow and transition their businesses into the business markets to expand them internationally. We collaborate with a group of international investors who invest in various projects and businesses based on their investment priorities. At Landa Investment Center, all the required investments for starting and developing your business will be provided, allowing you to prosper and achieve profitability as soon as possible.',
     image: '/static/images/About/card1.png',
     reverse: true,
-    link: '/investor-registration',
+    link: '/investor-registration'
   },
   {
     title: 'Acceleration Center',
     text: 'After completing the mentioned stages, the Landa Acceleration Center comes into action. This center has been established with the aim of accelerating your startup. The purpose of founding this center is to undertake all necessary actions for the growth and acceleration of your business until reaching ultimate success. One of the initial steps of the Landa Acceleration Center is analyzing and checking competitors. One of our initiatives at Landa Academy is creating a co-working space for both internal and external startups. Our co-working space is designed to foster teamwork, allowing startups to collaborate directly with existing startups and also hold brainstorming sessions together for projects.',
     image: '/static/images/About/card2.png',
     reverse: false,
-    link: '/StartupsForm',
+    link: '/StartupsForm'
   },
   {
     title: 'Academy',
     text: "The first step after joining the Landa Academy is to discover each individual's interests. We believe that in order to progress, every person should take steps in their interested field because pursuing one's passions always brings better results. With the help of our experienced and specialized staff, we can identify each person's interests and train them according to their passion. The most up-to-date method of education in the world is mentoring. This method of education is both theoretical and practical, providing specialized training to individuals based on their skills and interests. By selecting the best mentors, we offer the best education to teenagers. Additionally, after assessing their interests, teenagers can actively participate and gain experience in the relevant profession within our organization.",
     image: '/static/images/About/card3.png',
     reverse: true,
-    link: '/academy',
-  },
+    link: '/academy'
+  }
 ];
 
 const acceleratorProcessItemsEN = [
-  "1. Idea generation for innovative business creation",
-  "2. Idea nurturing",
-  "3. Creating a pitch deck",
-  "4. Financial modelling",
-  "5. Mentorship programs",
-  "6. Networking",
-  "7. Cooperative workspace",
-  "8. Digital marketing",
-  "9. Consultation for necessary permits",
-  "10. Seed investment",
-  "11. Market share expansion",
-  "12. Marketing and sales strategy",
-  "13. Business development",
-  "14. Preparation and valuation of business plans",
-]
+  '1. Idea generation for innovative business creation',
+  '2. Idea nurturing',
+  '3. Creating a pitch deck',
+  '4. Financial modelling',
+  '5. Mentorship programs',
+  '6. Networking',
+  '7. Cooperative workspace',
+  '8. Digital marketing',
+  '9. Consultation for necessary permits',
+  '10. Seed investment',
+  '11. Market share expansion',
+  '12. Marketing and sales strategy',
+  '13. Business development',
+  '14. Preparation and valuation of business plans'
+];
 
 const logos = [
   {
@@ -1442,71 +1455,71 @@ const logos = [
     title: 'Islamic Azad University of Isfahan(Khorasgan)',
     description:
       'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
-    alt: 'Islamic Azad University of Isfahan(Khorasgan)',
+    alt: 'Islamic Azad University of Isfahan(Khorasgan)'
   },
   {
     number: 3,
     title: 'Dr. Nekui Educational Holding',
     description:
       'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
-    alt: 'Dr. Nekui Educational Holding',
+    alt: 'Dr. Nekui Educational Holding'
   },
   {
     number: 4,
     title: 'University of Kashan',
     description:
       'Since 1399, we started cooperating with Kashan University in the field of acceleration center',
-    alt: 'University of Kashan',
+    alt: 'University of Kashan'
   },
   {
     number: 7,
     title: 'ASIAHITECH',
     description:
       'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
-    alt: 'ASIAHITECH',
+    alt: 'ASIAHITECH'
   },
   {
     number: 8,
     title: 'Chamber of Commerce, Industries, Mines and Agriculture',
     description:
       'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
-    alt: 'Chamber of Commerce, Industries, Mines and Agriculture',
+    alt: 'Chamber of Commerce, Industries, Mines and Agriculture'
   },
   {
     number: 2,
     title: 'Islamic Azad University of Isfahan(Khorasgan)',
     description:
       'Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.',
-    alt: 'Islamic Azad University of Isfahan(Khorasgan)',
+    alt: 'Islamic Azad University of Isfahan(Khorasgan)'
   },
   {
     number: 3,
     title: 'Dr. Nekui Educational Holding',
     description:
       'We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.',
-    alt: 'Dr. Nekui Educational Holding',
+    alt: 'Dr. Nekui Educational Holding'
   },
   {
     number: 4,
     title: 'University of Kashan',
     description:
       'Since 1399, we started cooperating with Kashan University in the field of acceleration center',
-    alt: 'University of Kashan',
+    alt: 'University of Kashan'
   },
   {
     number: 7,
     title: 'ASIAHITECH',
     description:
       'Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.',
-    alt: 'ASIAHITECH',
+    alt: 'ASIAHITECH'
   },
   {
     number: 8,
     title: 'Chamber of Commerce, Industries, Mines and Agriculture',
     description:
       'We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.',
-    alt: 'Chamber of Commerce, Industries, Mines and Agriculture',
-  },
+    alt: 'Chamber of Commerce, Industries, Mines and Agriculture'
+  }
 ];
 
 export {
@@ -1534,4 +1547,4 @@ export {
   cards,
   acceleratorProcessItemsEN,
   logos
-}
+};

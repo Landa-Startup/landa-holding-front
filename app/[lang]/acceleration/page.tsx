@@ -7,7 +7,6 @@ import AccelerationCard from '../../../components/acceleration/AccelerationCard'
 import { useTranslation } from 'app/i18n';
 // import ButtonRefactor from '@/components/common/ButtonRefactor';
 import Button from '@/components/common/Button';
-import { SubmitProvider } from 'providers/StateProvider';
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -64,7 +63,7 @@ export default async function Page({
             />
           </div>
           <p
-            className={`w-[340px] text-justify font-barlow ltr:text-lg ltr:leading-6 ltr:tracking-[1.6px] rtl:text-base rtl:leading-[50px] md:h-[248px]  md:w-[550px] lg:w-[680px] lg:pr-2`}
+            className={`w-[340px] text-justify font-barlow leading-8 ltr:text-lg ltr:tracking-[1.6px] rtl:text-base md:h-[248px]  md:w-[520px] lg:w-[680px] lg:pr-2`}
           >
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
@@ -126,7 +125,6 @@ export default async function Page({
           </svg>
           {t('text')}
         </div>
-        <SubmitProvider>
         <Button
           goto="/StartupsForm"
           size="visit"
@@ -134,7 +132,6 @@ export default async function Page({
           bgColor="Primary"
           lang={lang}
         />
-        </SubmitProvider>
         {/* <ButtonRefactor text={t('Register')} href="/StartupsForm" /> */}
       </div>
     </div>

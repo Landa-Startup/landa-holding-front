@@ -6,7 +6,6 @@ import GetCsrfToken from '../../../utils/get-csrf-token';
 import NotificationSendForm from './NotificationSendForm';
 import { ContactFormData } from '../../../initials/initObjects';
 import { submitContactForm } from '../../../pages/api/contact-us';
-import { useSubmit } from '../../../providers/StateProvider';
 import { PersonalInfoInput } from './PersonalInfoInput';
 import Input from './Input';
 import TextArea from '../TextArea';
@@ -32,11 +31,9 @@ export default function ContactUsForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
-  } = useSubmit();
-
-  const lang = useLang((s) => s.lang)
+    handleSuccessChange,
+    lang
+  } = useLang((s) => s)
 
   const { t } = useTranslation(lang, "formComponent")
 
@@ -70,13 +67,17 @@ export default function ContactUsForm() {
     submitContactForm(sendFormData, csrfToken).then((response) => {
       console.log(response);
 
-      handleChangeSuccess();
+      handleSuccessChange(true);
+      handleNotifChange(true);
+      handleSendChange(false);
       reset(ContactFormData); // Reset the form after successful submission
       setTimeout(() => {
         handleNotifChange(false);
       }, 10000); // 10 seconds in milliseconds
     }).catch(() => {
-      handleChangeReject();
+      handleNotifChange(true);
+      handleSendChange(false);
+      handleSuccessChange(false);
       reset(ContactFormData);
 
       setTimeout(() => {

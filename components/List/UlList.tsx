@@ -12,7 +12,7 @@ export default function UlList({
   return (
     <div className={`${style1}`}>
       <ul
-        className={`w-full list-disc pl-5 font-barlow text-[14px] font-normal text-black ${style2}`}
+        className={`list-disc pl-5 font-barlow text-[14px] font-normal text-black ${style2}`}
       >
         {list.map((item, index) => (
           <li className={`${style3}`} key={index}>

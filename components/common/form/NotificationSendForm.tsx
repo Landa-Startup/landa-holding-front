@@ -1,7 +1,7 @@
 import React from 'react';
 import Check from '../../../components/icons/common/Check';
-import { useSubmit } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 
 export default function NotificationSendForm() {
 
@@ -11,7 +11,13 @@ export default function NotificationSendForm() {
     send,
     showNotification,
     lang
-  } = useSubmit();
+  } = useLang((s) => s)
+
+  // const isSubmitting = useLang((s) => s.isSubmitting)
+  // const isSuccess = useLang((s) => s.isSuccess)
+  // const send = useLang((s) => s.send)
+  // const showNotification = useLang((s) => s.showNotification)
+  // const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, 'formComponent');
 

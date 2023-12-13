@@ -14,6 +14,7 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import Button from '../common/Button';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'store';
 
 export default function LandaGene() {
   const {
@@ -32,10 +33,9 @@ export default function LandaGene() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
+    handleSuccessChange,
     lang
-  } = useSubmit();
+  } = useLang((s) => s)
 
   const { t } = useTranslation(lang, "landaGene")
 
@@ -70,7 +70,9 @@ export default function LandaGene() {
     // Send the form data to the API.
     submitLandaApplicationForm(sendFormData, csrfToken)
       .then((response) => {
-        handleChangeSuccess();
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
         reset(initialApplicationFormData); // Country does not reset
         console.log('Form data sent successfully!');
 
@@ -82,7 +84,9 @@ export default function LandaGene() {
       .catch((error) => {
         console.error('Error sending form data:', error);
 
-        handleChangeReject();
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
         reset(initialApplicationFormData);
 
         setTimeout(() => {
@@ -211,6 +215,7 @@ export default function LandaGene() {
                   email: '',
                   phoneNumber: 'phone'
                 }}
+                noLabel={true}
               />
               </div>
 
@@ -220,7 +225,6 @@ export default function LandaGene() {
                   errors={errors}
                   nameInput="email"
                   type="text"
-                  label={lang === 'en' ? 'Email' : 'ایمیل'}
                   required=""
                   patternValue=""
                   patternMessage=""
@@ -241,7 +245,6 @@ export default function LandaGene() {
                   errors={errors}
                   nameInput="company"
                   type="text"
-                  label={lang === 'en' ? 'Company Name' : 'نام شرکت'}
                   required=""
                   patternValue=""
                   patternMessage=""

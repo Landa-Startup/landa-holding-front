@@ -3,7 +3,6 @@ import ContactUsForm from '../../../components/common/form/ContactUsForm';
 import ContactUsDescription from '../../../components/common/ContactUsDescription';
 import Banner from '../../../components/common/Banner';
 import { Metadata } from 'next';
-import { SubmitProvider } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
@@ -35,9 +34,7 @@ export default async function ContactUsPage({
         <ContactUsDescription />
 
         {/* ContactUsForm Component */}
-        <SubmitProvider>
           <ContactUsForm />
-        </SubmitProvider>
       </div>
     </div>
   );

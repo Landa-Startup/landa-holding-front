@@ -1,9 +1,11 @@
 // import { useTranslation } from 'app/i18n';
 import React from 'react';
+import { useLang } from 'store';
 
 export default async function EntrepreneursTitle(
-  {lang} : {lang: string}
 ){
+
+  const lang = useLang.getState().lang
 
   // const { t } = await useTranslation(lang, "entrepreneur")
 
