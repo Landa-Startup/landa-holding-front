@@ -6,7 +6,7 @@ import { initialApplicationFormData } from '../../initials/initObjects';
 import { LandaGeneFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
-import { submitLandaApplicationForm } from 'pages/api/landa-gene';
+// import { submitLandaApplicationForm } from 'pages/api/landa-gene';
 
 import { useSubmit } from 'providers/StateProvider';
 // import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
@@ -30,7 +30,7 @@ export default function LandaGene({
   const {
     // register,
     // handleSubmit,
-    reset,
+    // reset,
     formState: { errors }
   } = useForm<LandaGeneFormData>({
     mode: 'onBlur',
@@ -38,13 +38,13 @@ export default function LandaGene({
   });
 
   const {
-    csrfToken,
+    // csrfToken,
     handleTokenChange,
-    handleSubmitingChange,
-    handleSendChange,
-    handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject
+    // handleSubmitingChange,
+    // handleSendChange,
+    // handleNotifChange,
+    // handleChangeSuccess,
+    // handleChangeReject
   } = useSubmit();
 
   useEffect(() => {
@@ -58,46 +58,46 @@ export default function LandaGene({
     fetchCsrfToken();
   }, []);
 
-  const onSubmit = async (formData: LandaGeneFormData) => {
-    // Set loading and sending states.
-    handleSubmitingChange(true);
-    handleSendChange(true);
+  // const onSubmit = async (formData: LandaGeneFormData) => {
+  //   // Set loading and sending states.
+  //   handleSubmitingChange(true);
+  //   handleSendChange(true);
 
-    console.log(formData);
+  //   console.log(formData);
 
-    // Create a FormData object for form data.
-    const sendFormData = new FormData();
+  //   // Create a FormData object for form data.
+  //   const sendFormData = new FormData();
 
-    // Append all non-file form fields.
-    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
-      if (typeof fieldValue !== 'object' || fieldValue === null) {
-        sendFormData.append(fieldName, String(fieldValue));
-      }
-    });
+  //   // Append all non-file form fields.
+  //   Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+  //     if (typeof fieldValue !== 'object' || fieldValue === null) {
+  //       sendFormData.append(fieldName, String(fieldValue));
+  //     }
+  //   });
 
-    // Send the form data to the API.
-    submitLandaApplicationForm(sendFormData, csrfToken)
-      .then((response) => {
-        handleChangeSuccess();
-        reset(initialApplicationFormData); // Country does not reset
-        console.log('Form data sent successfully!');
+  //   // Send the form data to the API.
+  //   submitLandaApplicationForm(sendFormData, csrfToken)
+  //     .then((response) => {
+  //       handleChangeSuccess();
+  //       reset(initialApplicationFormData); // Country does not reset
+  //       console.log('Form data sent successfully!');
 
-        setTimeout(() => {
-          handleNotifChange(false);
-        }, 10000); // 10 seconds in milliseconds
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error('Error sending form data:', error);
+  //       setTimeout(() => {
+  //         handleNotifChange(false);
+  //       }, 10000); // 10 seconds in milliseconds
+  //       console.log(response);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error sending form data:', error);
 
-        handleChangeReject();
-        reset(initialApplicationFormData);
+  //       handleChangeReject();
+  //       reset(initialApplicationFormData);
 
-        setTimeout(() => {
-          handleNotifChange(false);
-        }, 10000); // 10 seconds in milliseconds
-      });
-  };
+  //       setTimeout(() => {
+  //         handleNotifChange(false);
+  //       }, 10000); // 10 seconds in milliseconds
+  //     });
+  // };
 
   const errorsList = Object.entries(errors).map(([name, value]) => ({
     name: name,
@@ -108,7 +108,7 @@ export default function LandaGene({
 
   return (
     <div className="flex  flex-col items-start gap-[3px]">
-      <div className="flex w-full flex-col items-center md:py-16 md:px-28 md:flex-row md:justify-around md:gap-4">
+      <div className="flex w-full flex-col items-center md:py-16 md:pr-28 md:flex-row md:justify-evenly md:gap-4">
         <div className="flex flex-col items-center gap-[4px] p-0">
           <div className="relative flex items-start p-0">
             <svg
@@ -146,8 +146,8 @@ export default function LandaGene({
           </p>
         </div>
 
-        <div className="flex w-full shrink-0 items-center p-4 md:w-3/5">
-          <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-xl lg:leading-[40px]">
+        <div className="flex md:w-[870px] md:h-[336px] shrink-0 items-center p-4 ">
+          <p className="md:w-[870px] text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-xl lg:leading-[40px]">
             {textUp}
           </p>
         </div>
