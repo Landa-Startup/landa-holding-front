@@ -33,9 +33,10 @@ export default function Input({
   const value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
     <div className={`flex flex-col items-start ${containerClass}`}>
-      {label && <label htmlFor={nameInput} className={`px-2 text-lg ${labelClass}`}>
+      {label && (
+      <label htmlFor={nameInput} className={`px-2 text-lg ${labelClass}`}>
         {label}
-      </label>}
+      </label>)}
 
       <input
         id={nameInput}

@@ -1,13 +1,15 @@
 'use client'
 import React, { useEffect } from 'react';
-// import { PersonalInfoInput } from './PersonalInfoInput';
+import { PersonalInfoInput } from './PersonalInfoInput';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import { useForm } from 'react-hook-form';
 import { HandicraftFormData } from 'initials/initObjects';
 import { HandicraftForm } from '../../../types/global';
+import Input from './Input';
 
-import { useTranslation } from 'app/i18n/client';
-import ButtonRefactor from '../ButtonRefactor';
+// import { useTranslation } from 'app/i18n/client';
+// import ButtonRefactor from '../ButtonRefactor';
+import Button from '../Button';
 import { useLang } from 'store';
 import { submitHandiCraftApplicationForm } from 'pages/api/handiCrafts';
 
@@ -25,24 +27,14 @@ export default function HandicraftForm() {
    } = useLang((s) => s)
 
     const {
-      // register,
+      register,
       handleSubmit,
-      // formState: { errors },
+      formState: { errors },
       reset
     } = useForm<HandicraftForm>({
       mode: 'onBlur',
       defaultValues: HandicraftFormData
     });
-
-  //   const {
-      // csrfToken,
-      // handleTokenChange,
-      // handleSubmitingChange,
-      // handleSendChange,
-      // handleNotifChange,
-  //     handleChangeSuccess,
-  //     handleChangeReject
-  //   } = useSubmit();
 
     useEffect(() => {
       async function fetchCsrfToken() {
@@ -95,12 +87,12 @@ export default function HandicraftForm() {
         });
     };
 
-    // const errorsList = Object.entries(errors).map(([name, value]) => ({
-    //   name: name,
-    //   value: value
-    // }));
+    const errorsList = Object.entries(errors).map(([name, value]) => ({
+      name: name,
+      value: value
+    }));
 
-  const { t } = useTranslation(lang, 'handicraft');
+  // const { t } = useTranslation(lang, 'handicraft');
 
   return (
     // <form className="flex flex-col gap-4">
@@ -116,26 +108,94 @@ export default function HandicraftForm() {
     //     }}
     //   />
     // </form>
-    <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 justify-items-center gap-4 md:w-1/2">
-      <input
-        className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder={t('form.firstName')}
-      ></input>
-      <input
-        className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder={t('form.lastName')}
-      ></input>
-      <input
-        className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder={t('form.email')}
-      ></input>
-      <input
-        className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-        placeholder={t('form.organization')}
-      ></input>
-      <div className="col-span-2">
-        <ButtonRefactor text={t('form.submit')} type="submit" />
+    // <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 justify-items-center gap-4 md:w-1/2">
+    //   <input
+    //     className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.firstName')}
+    //   ></input>
+    //   <input
+    //     className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.lastName')}
+    //   ></input>
+    //   <input
+    //     className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.email')}
+    //   ></input>
+    //   <input
+    //     className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
+    //     placeholder={t('form.organization')}
+    //   ></input>
+    //   <div className="col-span-2">
+    //     <ButtonRefactor text={t('form.submit')} type="submit" />
+    //   </div>
+    // </form>
+
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col items-center">
+    <div className="my-4 grid w-full md:w-3/5 lg:w-4/6 grid-cols-1 md:flex md:flex-col md:items-center">
+      <div className='w-full flex flex-col md:flex-row items-center gap-2'>
+      <PersonalInfoInput
+        register={register}
+        errors={errors}
+        nameInputs={{
+          firstName: 'name',
+          lastName: '',
+          email: '',
+          phoneNumber: 'phone'
+        }}
+        noLabel={true}
+      />
       </div>
-    </form>
+
+      <div className="col-span-1 w-full">
+        <Input
+          register={register}
+          errors={errors}
+          nameInput="email"
+          type="text"
+          required=""
+          patternValue=""
+          patternMessage=""
+          placeholder={
+            lang === 'en'
+              ? 'Your Email'
+              : 'ایمیل شما'
+          }
+          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          containerClass="w-full"
+          labelClass=""
+        />
+      </div>
+
+      <div className="col-span-1 w-full">
+        <Input
+          register={register}
+          errors={errors}
+          nameInput="company"
+          type="text"
+          required=""
+          patternValue=""
+          patternMessage=""
+          placeholder={
+            lang === 'en'
+              ? 'Name of Your Organization, if applicable'
+              : 'نام شرکت خود را در صورت امکان وارد کنید'
+          }
+          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          containerClass="w-full"
+          labelClass=""
+        />
+      </div>
+    </div>
+
+    <div className="text-center w-full md:w-auto">
+      <Button
+        type='submit'
+        bgColor="Primary"
+        disabled={errorsList[0] ? true : false}
+        lang={lang}
+      />
+      {/* <ButtonRefactor type="submit" text="Submit" /> */}
+    </div>
+  </form>
   );
 }
