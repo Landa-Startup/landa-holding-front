@@ -1,30 +1,29 @@
-import React from 'react';
+import React from 'react'
 import Input from '../../common/form/Input';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 
 type Props = {
-  register: any;
-  errors: any;
-  nameInputs?: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phoneNumber: string;
-  };
-  lang: string;
-};
+    register: any;
+    errors: any;
+    nameInputs?: {
+        firstName: string;
+        lastName: string;
+        email: string;
+        phoneNumber: string;
+    };
+    lang: string
+}
 
-const PersonalInfoInput = async ({
-  register,
-  errors,
-  nameInputs,
-  lang
+const PersonalInfoInput = ({
+    register,
+    errors,
+    nameInputs,
+    lang
 }: Props) => {
-  const { t } = await useTranslation(lang, 'formComponent');
+  const { t } = useTranslation(lang, 'formComponent');
   return (
     <>
-      {nameInputs?.firstName && (
-        <div className="col-span-1">
+        {nameInputs?.firstName && <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
@@ -38,11 +37,9 @@ const PersonalInfoInput = async ({
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>
-      )}
+        </div>}
 
-      {nameInputs?.lastName && (
-        <div className="col-span-1">
+        {nameInputs?.lastName && <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
@@ -56,11 +53,9 @@ const PersonalInfoInput = async ({
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>
-      )}
+        </div>}
 
-      {nameInputs?.email && (
-        <div className="col-span-1">
+        {nameInputs?.email && <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
@@ -74,11 +69,9 @@ const PersonalInfoInput = async ({
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>
-      )}
+        </div>}
 
-      {nameInputs?.phoneNumber && (
-        <div className="col-span-1">
+        {nameInputs?.phoneNumber && <div className="col-span-1">
           <Input
             register={register}
             errors={errors}
@@ -92,10 +85,11 @@ const PersonalInfoInput = async ({
             className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
-        </div>
-      )}
+        </div>}
     </>
-  );
-};
+  )
+}
 
-export { PersonalInfoInput };
+export {
+    PersonalInfoInput
+}
