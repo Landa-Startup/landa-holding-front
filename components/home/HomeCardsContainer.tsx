@@ -10,12 +10,6 @@ import { useLang } from '../../store';
 export default async function HomeCardsContainer() {
 
   const lang = useLang.getState().lang
-
-  console.log("mmm", lang);
-
-  // console.log("mm:" , lang)
-  // Define data for the text card containers
-
   const { t } = await useTranslation(lang, 'mainPage');
 
   // console.log("t is:", t('cards', {returnObjects: true}))

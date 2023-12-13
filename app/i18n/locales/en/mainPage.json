@@ -10,7 +10,7 @@
   "AboutUs": "ABOUT US",
   "ContactUs": "CONTACT US",
   "OurTeam": "OUR TEAM",
-  "ourTeamText" : "Our team of experts is comprised of professionals who are passionate about their work, and have an extensive background in a wide variety of applications, and are willing to help at any time",
+  "ourTeamText": "Our team of experts is comprised of professionals who are passionate about their work, and have an extensive background in a wide variety of applications, and are willing to help at any time",
   "Forms": "FORMS",
   "InvestorCenter": "INVESTOR CENTER",
   "EntrepreneurCenter": "ENTREPRENEUR CENTER",
@@ -19,11 +19,10 @@
   "ApplyJob": "APPLY JOB",
   "Landa": "LANDA",
   "PartnersTitle": "Join Our Business Partners",
-  "PartnersDescription" : "At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape. To become an affiliate, please complete our free questionnaire for our confidential review.",
+  "PartnersDescription": "At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape. To become an affiliate, please complete our free questionnaire for our confidential review.",
   "LatestStartups": "LATEST STARTUPS",
   "Priorities": "Priorities",
   "businessTeamText": "What Our Cooperation Members Say",
-
   "cards": [
     {
       "title": "Investment",
@@ -83,7 +82,21 @@
       ]
     }
   ],
-
+  "landaHoldingBlackFirst": [
+    "Global investment opportunities within your reach.",
+    "Access to a network of successful entrepreneurs and investors.",
+    "Exclusive insights and expert analysis for informed decisions.",
+    "Collaborative environment for joint ventures and partnerships.",
+    "Accelerated growth potential through diversified investments."
+  ],
+  "landaHoldingBlackSecond": [
+    "Global networking opportunities for collaboration and partnerships",
+    "Access to all videos of pitches, industry trend presentations and panel discussions.",
+    "Attending events of the entrepreneurs center",
+    "Meetings with top business leaders and entrepreneurs",
+    "Participation in seasonal meetings with other international entrepreneurs .",
+    "Online platform for connecting with other entrepreneurs"
+  ],
   "partners": {
     "title": "Join Our Business Affiliates",
     "logos": [
@@ -156,8 +169,7 @@
       "roleInCompany": "Founder of IRimmigration",
       "role": "Investor",
       "profileImage": "b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg",
-      "commentDescription":
-        "The specialized and skilled staff at Landa Holding made short work on the issues that had been preventing me from advancing in my career.",
+      "commentDescription": "The specialized and skilled staff at Landa Holding made short work on the issues that had been preventing me from advancing in my career.",
       "linkedinLink": "https://www.linkedin.com/in/johndoe",
       "personalWebsite": "https://www.johndoe.com",
       "email": "john.doe@example.com"
@@ -167,8 +179,7 @@
       "roleInCompany": "Product Manager",
       "role": "Product Lead",
       "profileImage": "b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg",
-      "commentDescription":
-        "For me, my time spent working with Landa Holdings with this extremely competent staff was an experience that I will never forget.",
+      "commentDescription": "For me, my time spent working with Landa Holdings with this extremely competent staff was an experience that I will never forget.",
       "linkedinLink": "https://www.linkedin.com/in/janedoe",
       "personalWebsite": "https://www.janedoe.com",
       "email": "jane.doe@example.com"
@@ -178,14 +189,13 @@
       "roleInCompany": "UX Designer",
       "role": "Design Lead",
       "profileImage": "b669e3cb2e3c18d8ff0ec2b8216c00c1.jpg",
-      "commentDescription":
-        "Landa Holding is home to a youthful and inventive workforce that is brimming with enthusiasm for all they do.",
+      "commentDescription": "Landa Holding is home to a youthful and inventive workforce that is brimming with enthusiasm for all they do.",
       "linkedinLink": "https://www.linkedin.com/in/bobsmith",
       "personalWebsite": "https://www.bobsmith.com",
       "email": "bob.smith@example.com"
     }
   ],
-  "cardData1":[
+  "cardData1": [
     {
       "title": "Artificial Intelligence",
       "image": "/static/images/Home/Priority/vr-glasses 2.png"
@@ -218,25 +228,26 @@
       "title": "Tourism Services",
       "image": "/static/images/Home/Priority/world 2.png"
     }
-    ],
-    "LatestStartupsList": [
-      {
-        "image": "/static/images/Home/Startups/trip.png",
-        "title": "LANDA TRIP",
-        "description": "Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.",
-        "link": "https://landatrip.com/"
-      },
-      {
+  ],
+  "LatestStartupsList": [
+    {
+      "image": "/static/images/Home/Startups/trip.png",
+      "title": "LANDA TRIP",
+      "description": "Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.",
+      "link": "https://landatrip.com/"
+    },
+    {
       "image": "/static/images/Home/Startups/diaco.png",
       "title": "DIACO",
       "description": "Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.",
       "link": "https://irdiaco.ca/"
-      },
-      {
-        "image": "/static/images/Home/Startups/vision-raft.png",
+    },
+    {
+      "image": "/static/images/Home/Startups/vision-raft.png",
       "title": "VISION RAFT",
       "description": "This is Vision Raft, a VR platform focused on education and entertainment of the young ones which acts to enhance their learning quality.",
       "link": "https://invigorated-drop-231359.framer.app"
-      }
-    ]
+    }
+  ],
+  "register": "Register"
 }
