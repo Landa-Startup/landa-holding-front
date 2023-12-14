@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'app/i18n/client';
-import { useSubmit } from 'providers/StateProvider';
+import { useLang } from 'stores/langStore';
 
 export default function InvestorRegistrationTitle(
 ) {
 
-  const {lang} = useSubmit();
+  const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, 'formComponent');
 

@@ -1,10 +1,9 @@
-import { useSubmit } from 'providers/StateProvider';
 import React from 'react';
+import { useLang } from 'stores/langStore';
 
-export default function PartnerMembershipTitle(
-) {
+export default function PartnerMembershipTitle() {
 
-  const {lang} = useSubmit();
+  const lang = useLang((s) => s.lang)
 
   return (
     <>
