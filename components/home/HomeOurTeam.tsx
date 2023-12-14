@@ -1,25 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
+import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
-import ButtonRefactor from '../common/ButtonRefactor';
+import { useLang } from 'stores/langStore';
+import Link from 'next/link';
+export default async function HomeOurTeam() {
+  const lang = useLang.getState().lang;
 
-export default async function HomeOurTeam({ lang }: { lang: string }) {
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
     <div className="relative my-10 md:mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white">
       <div
-        className={`${
-          t('lng') === 'en' ? 'ml-5 mr-10 xl:ml-64' : 'mr-5 xl:mr-40'
-        } flex flex-col lg:self-start `}
+        className="flex flex-col ltr:ml-5 ltr:mr-10 rtl:mr-5 lg:self-start ltr:xl:ml-28 rtl:xl:mr-40"
       >
-        <p
-          className={`text-base font-normal text-black ${
-            t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0'
-          } font-condensed text-xl`}
-        >
+        <span className="font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
           {t('LandaHolding')}
-        </p>
+        </span>
         <p
           className={`font-condensed text-5xl font-normal tracking-normal text-black ltr:p-4 ltr:tracking-widest md:mr-20 xl:mr-0`}
         >
@@ -27,9 +24,6 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
         </p>
         <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
       </div>
-
-      {/* <div className="flex flex-col lg">
-      </div> */}
 
       <div className="flex flex-col items-center">
         <Image
@@ -48,8 +42,19 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
           className="object-cover mb-6 md:hidden"
           src="/static/images/Home/OurTeam/mobile.jpeg"
         />
-        <ButtonRefactor text={t('visit')} type="link" href="/our-team" />
       </div>
+      <Link
+        href="/our-team"
+        className="justify-center"
+      >
+        {/* TODO: delete submit provider */}
+        <Button
+          type="button"
+          size="visit"
+          bgColor="Primary"
+          goto=""
+        />
+      </Link>
     </div>
   );
 }

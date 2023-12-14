@@ -10,7 +10,7 @@ export default function AccelerationServices({
     <div className="mt-8 grid grid-cols-1 gap-4 border-b-2 pb-14 md:grid-cols-3 md:gap-11">
       {services.map((service, index) => (
         <div
-          className="relative flex h-[115px] items-center justify-center overflow-hidden rounded-sm bg-[#F7F3EE] font-barlow text-xl text-[#2B2115] md:w-[343px]"
+          className="relative flex h-[115px] w-full items-center justify-center overflow-hidden rounded-sm bg-[#F7F3EE] font-barlow text-xl text-[#2B2115] md:w-[343px]"
           key={index}
         >
           <span>{service.title}</span>

@@ -69,11 +69,11 @@ export default async function Page({
             />
           </div>
         </div>
-        <div className="flex flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5 md:px-24">
+        <div className="flex flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5 w-full">
           <p className="font-openSans text-base font-bold leading-[210%] tracking-wider text-[#AA8453]">
             {t('formTitle')}
           </p>
-          <HandicraftForm lang={lang} />
+          <HandicraftForm />
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import StartupFormTargetMarket from './StartupFormTargetMarket';
 import StartupFormProperty from './StartupFormProperty';
 import { handleRadioChange } from '../../utils/functions';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormSaleDevelopment({
   register,
@@ -16,15 +17,14 @@ export default function StartupFormSaleDevelopment({
   handlePitchFileChange,
   handleBusinessFileChange,
   handleFinancialFileChange,
-  lang
 }: {
   register: any;
   errors: any;
   handlePitchFileChange: any;
   handleBusinessFileChange: any;
   handleFinancialFileChange: any;
-  lang:string;
 }) {
+  const { lang } = useLang((s) => s)
   const { t } = useTranslation(lang, 'formComponent');
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
@@ -97,9 +97,9 @@ export default function StartupFormSaleDevelopment({
                 </div>
               </div>
 
-              <StartupFormProblem register={register} errors={errors} lang={lang}/>
-              <StartupFormSolutions register={register} errors={errors} lang={lang}/>
-              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange} lang={lang}/>
+              <StartupFormProblem register={register} errors={errors} />
+              <StartupFormSolutions register={register} errors={errors} />
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange} />
             </div>
           );
         }
@@ -126,8 +126,8 @@ export default function StartupFormSaleDevelopment({
             if (Boolean(selectedRadioFinancial) === false) {
               return (
                 <div>
-                  <StartupFormTargetMarket register={register} errors={errors} lang={lang}/>
-                  <StartupFormProperty register={register} errors={errors} lang={lang}/>
+                  <StartupFormTargetMarket register={register} errors={errors} />
+                  <StartupFormProperty register={register} errors={errors} />
                 </div>
               );
             }else{

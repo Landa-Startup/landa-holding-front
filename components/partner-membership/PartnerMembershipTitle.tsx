@@ -1,14 +1,15 @@
 import React from 'react';
+import { useLang } from 'stores/langStore';
 
-export default function PartnerMembershipTitle(
-  {lang} : {lang: string}
-) {
+export default function PartnerMembershipTitle() {
+
+  const lang = useLang((s) => s.lang)
 
   return (
     <>
       <div className="text-center">
         <p className="mb-20 pt-8 font-condensed text-2xl tracking-wide md:pt-8 md:text-5xl lg:text-6xl xl:text-7xl ">
-          {lang === "en" ? "Business Partner Form" : "فرم شریک تجاری"}
+          {lang === "en" ? "BUSINESS AFFILIATES FORM" : "فرم شرکای تجاری"}
         </p>
       </div>
       <div>

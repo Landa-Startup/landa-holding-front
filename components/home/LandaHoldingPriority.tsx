@@ -1,27 +1,20 @@
-import React from 'react';
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'stores/langStore';
 
-export default async function LandaHoldingPriority({ lang }: { lang: string }) {
+export default async function LandaHoldingPriority() {
+  const lang = useLang.getState().lang;
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
-      <div className="felx flex-col items-start">
+      <div className="flex flex-col items-start">
         <div className="mb-4 flex flex-col items-start ltr:ml-4 rtl:mr-4">
-          <span
-            className={`text-base font-normal text-black ${
-              t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
-            } font-condensed`}
-          >
+          <span className="font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
             {t('LandaHolding')}
             <br />
           </span>
-          <span
-            className={`text-5xl font-normal ${
-              t('lng') === 'en' ? 'tracking-widest' : 'tracking-normal'
-            } font-condensed text-black`}
-          >
+          <span className="font-condensed text-5xl font-normal text-black ltr:tracking-widest rtl:tracking-normal">
             {t('Priorities')}
           </span>
         </div>

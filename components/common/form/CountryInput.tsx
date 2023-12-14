@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Select from '../../common/form/Select';
 import Input from '../../common/form/Input';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 
 
 
@@ -10,15 +11,16 @@ type Props = {
   register: any;
   errors: any;
   nameInput: string;
-  lang: string;
 }
 
 export default function CountryInput({
   register,
   errors,
   nameInput,
-  lang
 }: Props) {
+
+  const lang = useLang((s) => s.lang)
+
   const { t } = useTranslation(lang, 'countryInput');
   const countriesData = t('countries',{ returnObjects: true }).map((country: string) => ({
     value: country,
@@ -38,7 +40,7 @@ export default function CountryInput({
         nameInput={nameInput}
         label={t('countryName')}
         required={t('countryNameRequired')}
-        className='input input-bordered col-span-1 mb-1 mt-4 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
+        className='input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
         labelClass='text-[#6b6b6b] dark:text-current'
         placeholder={t('countryNamePlaceholder')}
         options={countriesData}
@@ -57,7 +59,7 @@ export default function CountryInput({
           patternValue=""
           patternMessage=""
           placeholder={t('provinceOfResidencePlaceholder')}
-          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          className="input input-bordered col-span-1 mb-1 mt-2 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
           labelClass="text-[#6b6b6b] dark:text-current"
         />
       </div>

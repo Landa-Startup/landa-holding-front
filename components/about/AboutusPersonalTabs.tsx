@@ -30,7 +30,7 @@ export default function AboutusPersonalTabs({
         src={image}
         alt="Landa Directors"
         layout="fill"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         quality={90}
       />
       <div className="z-10 ml-2 mb-2 mt-2 flex flex-col gap-2 rtl:mr-2">

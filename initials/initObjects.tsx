@@ -101,6 +101,8 @@ const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
 };
 
 const initialFormData: Entrepreuneur = {
+  firstName: '',
+  lastName: '',
   email: '',
   companyName: '',
   phoneNumber: '',
@@ -116,12 +118,12 @@ const ContactFormData: ContactUSFormData = {
   message: ''
 };
 
-// const HandicraftFormData: HandicraftFormData = {
-//   firstName: '',
-//   lastName: '',
-//   email: '',
-//   organization: ''
-// };
+const HandicraftFormData: HandicraftFormData = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  organization: ''
+};
 
 const RegisterationFormData: FormData = {
   email: '',
@@ -137,5 +139,5 @@ export {
   ContactFormData,
   RegisterationFormData,
   initialApplicationFormData,
-  // HandicraftFormData
+  HandicraftFormData
 };
