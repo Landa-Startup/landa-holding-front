@@ -2,7 +2,7 @@ import React from 'react';
 import PrimaryDot from '../icons/acceleration/PrimaryDot';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 type Props = {
   addedClass: string;

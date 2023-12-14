@@ -4,7 +4,7 @@ import PartnersStartupCard from './PartnersStartupCard';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 export default function Partners() {
 

@@ -12,7 +12,8 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 
 export default function EntrepreneursForm() {
 
@@ -33,8 +34,9 @@ export default function EntrepreneursForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
-    lang
-  } = useLang((s) => s)
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, "formComponent")
 

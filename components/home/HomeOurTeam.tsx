@@ -2,10 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 import Link from 'next/link';
-import { SubmitProvider } from 'providers/StateProvider';
-
 export default async function HomeOurTeam() {
   const lang = useLang.getState().lang;
 
@@ -50,14 +48,12 @@ export default async function HomeOurTeam() {
         className="justify-center"
       >
         {/* TODO: delete submit provider */}
-        <SubmitProvider>
-          <Button
-            type="button"
-            size="visit"
-            bgColor="Primary"
-            goto=""
-          />
-        </SubmitProvider>
+        <Button
+          type="button"
+          size="visit"
+          bgColor="Primary"
+          goto=""
+        />
       </Link>
     </div>
   );

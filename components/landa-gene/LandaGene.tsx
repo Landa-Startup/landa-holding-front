@@ -13,7 +13,8 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import Button from '../common/Button';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 
 export default function LandaGene() {
   const {
@@ -33,8 +34,9 @@ export default function LandaGene() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
-    lang
-  } = useLang((s) => s)
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, "landaGene")
 

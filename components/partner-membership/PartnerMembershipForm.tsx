@@ -15,7 +15,8 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 
 // import { PartnerMembership } from '@prisma/client';
 
@@ -37,8 +38,9 @@ export default function PartnerMembershipForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
-    lang
-  } = useLang((s) => s)
+  } = useSubmit((s) => s )
+
+  const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, "formComponent");
 

@@ -3,7 +3,7 @@ import Input from '../common/form/Input';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormPersonalInformation({
   register,

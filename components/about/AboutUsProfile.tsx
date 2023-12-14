@@ -3,7 +3,7 @@ import AboutusPersonalTabs from './AboutusPersonalTabs';
 // TODO: import from i18n instead of statics
 import { cardsDataFA, cardsDataEN } from '../../app/[lang]/statics';
 import { useTranslation } from 'app/i18n';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 export default async function AboutUsProfile(
 ) {

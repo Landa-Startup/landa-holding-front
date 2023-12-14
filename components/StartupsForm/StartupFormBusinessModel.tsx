@@ -2,7 +2,7 @@ import * as React from 'react';
 import UploadInput from '../common/UploadInput';
 import TextArea from '../common/TextArea';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormBusinessModel({
   register,
@@ -13,7 +13,7 @@ export default function StartupFormBusinessModel({
   errors: any;
   handleFinancialFileChange: any;
 }) {
-  const { lang } = useLang((s) => s)
+  const { lang } = useLang((s) => s )
   const { t } = useTranslation(lang, 'formComponent');
 
   return (

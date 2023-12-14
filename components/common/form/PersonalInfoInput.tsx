@@ -1,7 +1,7 @@
 import React from 'react'
 import Input from '../../common/form/Input';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 type Props = {
   register: any;
@@ -21,6 +21,7 @@ const PersonalInfoInput = ({
   nameInputs,
   noLabel
 }: Props) => {
+  
   const { lang } = useLang((s) => s)
 
   const { t } = useTranslation(lang, 'formComponent');

@@ -11,7 +11,9 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
+import { useFile } from 'stores/fileStore';
 
 export default function JobForm() {
 
@@ -32,10 +34,11 @@ export default function JobForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
-    cvFileState,
-    handleCvFileChange,
-    lang
-  } = useLang((s) => s)
+  } = useSubmit((s) => s)
+
+  const { cvFileState , handleCvFileChange } = useFile((s) => s)
+
+  const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, 'formComponent');
 

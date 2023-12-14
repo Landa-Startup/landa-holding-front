@@ -11,7 +11,8 @@ import Input from './Input';
 import TextArea from '../TextArea';
 import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 // import { on } from 'events';
 export default function ContactUsForm() {
 
@@ -32,8 +33,9 @@ export default function ContactUsForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
-    lang
-  } = useLang((s) => s)
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang)
 
   const { t } = useTranslation(lang, "formComponent")
 

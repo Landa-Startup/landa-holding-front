@@ -15,7 +15,9 @@ import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
+import { useFile } from 'stores/fileStore';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -61,15 +63,19 @@ export default function StartupFormForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
+  } = useSubmit((s) => s)
+
+  const { 
     filePostBussines,
     filePostPitch,
     filePostFinancial,
     handleBusinessFileChange,
     handleFinancialFileChange,
     handlePitchFileChange,
-    lang
-  } = useLang((s) => s)
+   } = useFile((s) => s)
 
+  const lang = useLang((s) => s.lang)
+ 
   const { t } = useTranslation(lang, 'formComponent');
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

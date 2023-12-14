@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 import React from 'react';
 
 export default function HomeCardsRight({

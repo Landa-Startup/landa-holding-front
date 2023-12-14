@@ -5,7 +5,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import IconDown from '../icons/IconDown';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 import { useCookies } from 'react-cookie';
 
 export default function Navbar({

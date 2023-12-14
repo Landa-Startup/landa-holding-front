@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from '../common/PersonalTab'
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 // TODO: read from i18n instead of statics
 // import { personsEN, personsFA } from '../../app/[lang]/statics';
 // import { rolesEN, rolesFA } from '../../app/[lang]/statics';

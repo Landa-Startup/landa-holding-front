@@ -8,9 +8,8 @@ import IconWhatApp from '../icons/IconWhatsApp';
 import IconLinkedinB from '../icons/IconLinkedinB';
 import IconEmailB from '../icons/IconEmailB';
 import { useTranslation } from 'app/i18n';
-import { useLang } from 'store';
-export default async function ContactUsDescription(
-) {
+import { useLang } from 'stores/langStore';
+export default async function ContactUsDescription() {
 
   const lang = useLang.getState().lang
 

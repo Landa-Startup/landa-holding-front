@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { useTranslation } from 'app/i18n';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 export default async function StoryOfLanda() {
 

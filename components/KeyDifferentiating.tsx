@@ -1,7 +1,7 @@
 import { useTranslation } from 'app/i18n';
 import Image from 'next/image';
 import React from 'react';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 export default async function KeyDifferentiating() {
 

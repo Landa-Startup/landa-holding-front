@@ -1,7 +1,7 @@
 'use client';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 import { useRouter } from 'next/navigation';
 
 export default function FeaturesCards({
@@ -13,7 +13,7 @@ export default function FeaturesCards({
   description: string;
   link: string;
 }) {
-  const { lang } = useLang((s) => s);
+  const lang = useLang((s) => s.lang);
   const router = useRouter();
 
   const handleOnClick = () => {

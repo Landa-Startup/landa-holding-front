@@ -10,8 +10,9 @@ import Input from './Input';
 // import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../ButtonRefactor';
 import Button from '../Button';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 import { submitHandiCraftApplicationForm } from 'pages/api/handiCrafts';
+import { useSubmit } from 'stores/submitStore';
 
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
 export default function HandicraftForm() {
@@ -23,8 +24,9 @@ export default function HandicraftForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
-    lang
-   } = useLang((s) => s)
+   } = useSubmit((s) => s)
+
+   const lang = useLang((s) => s.lang)
 
     const {
       register,

@@ -1,6 +1,6 @@
 import TextArea from '../common/TextArea';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormTargetMarket({
   register,

@@ -1,7 +1,8 @@
 import React from 'react';
 import Check from '../../../components/icons/common/Check';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'store';
+import { useSubmit } from 'stores/submitStore';
+import { useLang } from 'stores/langStore';
 
 export default function NotificationSendForm() {
 
@@ -10,8 +11,9 @@ export default function NotificationSendForm() {
     isSuccess,
     send,
     showNotification,
-    lang
-  } = useLang((s) => s)
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang);
 
   // const isSubmitting = useLang((s) => s.isSubmitting)
   // const isSuccess = useLang((s) => s.isSuccess)
