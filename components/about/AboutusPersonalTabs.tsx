@@ -24,7 +24,7 @@ export default function AboutusPersonalTabs({
   instagram: string;
 }) {
   return (
-    <div className="relative flex h-[400px] w-full flex-col rounded-sm border border-primary md:w-[400px]  ">
+    <div className="relative flex h-[400px] w-full flex-col rounded-sm md:w-[400px]  ">
       <Image
         className="object-cover"
         src={image}
@@ -56,10 +56,14 @@ export default function AboutusPersonalTabs({
           </Link>
         </div>
       </div>
-      <div className="mt-64 flex flex-col items-center px-4 pb-4  ">
-        <span className="text-lg font-normal text-black font-gilda">{name}</span>
+      <div className="absolute -bottom-[4.4rem] w-full bg-[#F8F5F0] mt-64 flex flex-col items-center px-4 pb-4  ">
+        <span className="text-2xl font-normal text-black font-gilda">
+          {name}
+        </span>
         <div className="flex w-full items-center justify-center font-light  ">
-          <span className="border-t-3 font-light font-barlow ">{position}</span>
+          <span className="border-t-3 font-light font-barlow text-[#AA8453] text-lg">
+            {position}
+          </span>
         </div>
       </div>
     </div>
