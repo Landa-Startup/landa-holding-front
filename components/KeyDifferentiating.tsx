@@ -13,7 +13,7 @@ export default async function KeyDifferentiating({ lang }: { lang: string }) {
 
   return (
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] md:grid-cols-2">
-      <div className="m-5 flex flex-col gap-5 rtl:mr-6 md:my-20 md:ml-28">
+      <div className="m-5 flex flex-col gap-5 rtl:mr-6 md:my-20 md:mr-40 md:rtl:ml-40">
         <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>

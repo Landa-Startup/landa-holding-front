@@ -142,16 +142,12 @@ export default function ContactUsForm({ lang }: { lang: string }) {
               cols={20}
             />
           </div>
+          <div className="col-span-2 mx-auto">
+            <ButtonRefactor text="Submit" type="submit" />
+          </div>
         </div>
-        {/* <Button
-          type='submit'
-          bgColor="Primary"
-          disabled={errorsList[0] ? true : false}
-          lang={lang}
-        /> */}
-        <ButtonRefactor text="Submit" type="submit" />
       </form>
-      <NotificationSendForm lang={lang}/>
+      <NotificationSendForm lang={lang} />
     </div>
   );
 }

@@ -14,10 +14,13 @@ import { useSubmit } from '../../providers/StateProvider';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
+import { useTranslation } from 'app/i18n/client';
 
 // import { PartnerMembership } from '@prisma/client';
 
 export default function PartnerMembershipForm({ lang }: { lang: string }) {
+  const { t } = useTranslation(lang, 'formComponent');
+
   const {
     register,
     handleSubmit,
@@ -212,8 +215,8 @@ export default function PartnerMembershipForm({ lang }: { lang: string }) {
                 />
               </div>
             </div>
-            <div className="text-center">
-              <ButtonRefactor type="submit" text="Submit" />
+            <div className="mx-auto w-fit">
+              <ButtonRefactor type="submit" text={t('sendButton')} />
             </div>
           </form>
           <NotificationSendForm lang={lang} />
