@@ -133,7 +133,6 @@ export default function InvestorRegistrationForm() {
               register={register}
               errors={errors}
               nameInput="countryOfResidence"
-              lang={lang}
             />
 
             <div className="col-span-1">
