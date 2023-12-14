@@ -33,11 +33,13 @@ export default function TeamPersons({ lang }: { lang: string }) {
 
   return (
     <div>
-      <TeamRolesContainer
-        lang={lang}
-        selectedRole={selectedRole}
-        handleRoleSelect={handleRoleSelect}
-      />
+      <div className="w-full border flex justify-center">
+        <TeamRolesContainer
+          lang={lang}
+          selectedRole={selectedRole}
+          handleRoleSelect={handleRoleSelect}
+        />
+      </div>
       <div className="grid grid-cols-1 justify-items-center gap-4 bg-[#FAFAFA] py-5 md:container md:mx-auto md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4">
         {filteredPersons.map((person: any, index: number) => (
           <PersonalTab

@@ -7,7 +7,7 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
-    <div className="relative  mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white">
+    <div className="relative my-10 md:mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white">
       <div
         className={`${
           t('lng') === 'en' ? 'ml-5 mr-10 xl:ml-64' : 'mr-5 xl:mr-40'
@@ -37,7 +37,7 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
           width={789}
           height={243}
           alt="OurTeam"
-          className="hidden h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
+          className="hidden mb-9 h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
           src="/static/images/Home/OurTeam/desktop.jpg"
         />
         <Image
@@ -45,7 +45,7 @@ export default async function HomeOurTeam({ lang }: { lang: string }) {
           width={375}
           height={200}
           alt="OurTeam"
-          className="object-cover md:hidden"
+          className="object-cover mb-6 md:hidden"
           src="/static/images/Home/OurTeam/mobile.jpeg"
         />
         <ButtonRefactor text={t('visit')} type="link" href="/our-team" />

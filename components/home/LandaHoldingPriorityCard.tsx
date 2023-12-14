@@ -3,13 +3,13 @@ import React from 'react';
 
 export default function LandaHoldingPriorityCard({
   title,
-  image,
+  image
 }: {
   title: string;
   image: string;
 }) {
   return (
-    <div className="relative flex h-24  w-44 justify-center overflow-hidden border border-primary md:h-40 md:w-72">
+    <div className="relative flex h-24  w-44 justify-center overflow-hidden border border-primary md:h-40 md:w-80">
       {/* Background Image */}
       <Image
         loading="lazy"

@@ -14,7 +14,7 @@ export default function TeamRolesContainer({
   const { t } = useTranslation(lang, 'ourTeam');
 
   return (
-    <div className="flex flex-wrap justify-center gap-1 bg-slate-50  pb-5  pt-10 font-barlow">
+    <div className="flex w-[95%] overflow-auto max-w-[90%] pl-10 border justify-center gap-1 bg-slate-50  pb-5  pt-10 font-barlow">
       {t('roles', { returnObjects: true }).map((role: any, index: number) => (
         <button
           onClick={() => handleRoleSelect(role)}
