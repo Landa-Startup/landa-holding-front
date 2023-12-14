@@ -6,6 +6,7 @@ import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 import { handleRadioChange } from '../..//utils/functions';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormTrialProduct({
   register,
@@ -13,15 +14,16 @@ export default function StartupFormTrialProduct({
   handlePitchDeckFileChange,
   handleBusinessPlanFileChange,
   handleFinancialFileChange,
-  lang
 }: {
   register: any;
   errors: any;
   handlePitchDeckFileChange:any;
   handleBusinessPlanFileChange:any;
   handleFinancialFileChange:any;
-  lang:string;
 }) {
+
+  const lang = useLang((s) => s.lang)
+
   const { t } = useTranslation(lang, 'formComponent');
 
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');

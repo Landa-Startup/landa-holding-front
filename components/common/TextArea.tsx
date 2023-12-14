@@ -27,7 +27,7 @@ export default function TextArea({
   const pattern = new RegExp(patternValue);
 
   return (
-    <div>
+    <div className='flex flex-col items-start'>
       {/* Label for the textarea */}
       {title && (<label className="px-2 text-lg text-[#6b6b6b] dark:text-current">{title}</label>)}
       <textarea

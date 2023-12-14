@@ -101,6 +101,8 @@ const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
 };
 
 const initialFormData: Entrepreuneur = {
+  firstName: '',
+  lastName: '',
   email: '',
   companyName: '',
   phoneNumber: '',

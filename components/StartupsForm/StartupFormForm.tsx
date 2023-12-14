@@ -18,6 +18,7 @@ import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
 import { useFile } from 'stores/fileStore';
+import StartupFormTrialProduct from './StartupFormTrialProduct';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -238,6 +239,17 @@ export default function StartupFormForm() {
                     errors={errors}
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
+                    handleFinancialFileChange={handleFinancialFileChange}
+                  />
+                );
+                break;
+              case 'TRIAL':
+                return (
+                  <StartupFormTrialProduct
+                    register={register}
+                    errors={errors}
+                    handlePitchDeckFileChange={handlePitchFileChange}
+                    handleBusinessPlanFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
                   />
                 );

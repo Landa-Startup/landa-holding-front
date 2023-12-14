@@ -21,7 +21,6 @@ const PersonalInfoInput = ({
   nameInputs,
   noLabel
 }: Props) => {
-  
   const { lang } = useLang((s) => s)
 
   const { t } = useTranslation(lang, 'formComponent');

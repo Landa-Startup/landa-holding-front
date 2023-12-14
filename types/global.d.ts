@@ -131,6 +131,8 @@ interface StartupsFormData {
 }
 
 interface Entrepreuneur {
+  firstName: string;
+  lastName: string;
   email: string;
   companyName: string;
   phoneNumber: string;

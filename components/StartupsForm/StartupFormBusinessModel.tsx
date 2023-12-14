@@ -47,7 +47,7 @@ export default function StartupFormBusinessModel({
             }
           />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 flex flex-col items-start gap-4 mb-4">
           <TextArea
             title={
               t('startUp', { returnObjects: true }).businessModel
@@ -67,12 +67,9 @@ export default function StartupFormBusinessModel({
                 .structureOfYourSalesRequired
             }
           />
-        </div>
-        {/* <Input
-          register={register}
-          errors={errors}
-        /> */}
-        <UploadInput
+
+          <div>
+          <UploadInput
           title={
             t('startUp', { returnObjects: true }).businessModel.financialPlan
           }
@@ -80,7 +77,13 @@ export default function StartupFormBusinessModel({
           errors={errors}
           nameInput="financial plan"
           handleChange={handleFinancialFileChange}
-        />
+          />
+          </div>
+        </div>
+        {/* <Input
+          register={register}
+          errors={errors}
+        /> */}
         {/* <div className="col-start-1 col-span-1">
           <label className="text-[#6b6b6b] dark:text-current">If your plan has a financial model, please upload</label>
           <div className='flex justify-center'>

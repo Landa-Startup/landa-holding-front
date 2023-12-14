@@ -104,14 +104,27 @@ export default function EntrepreneursForm() {
   return (
     <>
       <div
-        className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent"
+        className="container m-16 mx-auto bg-[#F8F5F0] p-20 font-barlow"
         dir={lang === 'en' ? 'ltr' : 'rtl'}
       >
         <EntrepreneursTitle />
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-between items-center'>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+
+            <PersonalInfoInput
+              register={register}
+              errors={errors}
+              nameInputs={{
+                firstName: 'firstName',
+                lastName: 'lastName',
+                email: 'email',
+                phoneNumber: 'phone'
+              }}
+            />
+
+
+
             <div className="col-span-1">
-              <div className="col-span-1">
                 <Input
                   register={register}
                   errors={errors}
@@ -125,19 +138,7 @@ export default function EntrepreneursForm() {
                   className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                   labelClass="text-[#6b6b6b] dark:text-current"
                 />
-              </div>
             </div>
-
-            <PersonalInfoInput
-              register={register}
-              errors={errors}
-              nameInputs={{
-                firstName: '',
-                lastName: '',
-                email: 'email',
-                phoneNumber: 'phone'
-              }}
-            />
 
             <div className="col-span-1">
               <Input
@@ -171,7 +172,7 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center pb-4">
             <Button
               type='submit'
               bgColor="Primary"
