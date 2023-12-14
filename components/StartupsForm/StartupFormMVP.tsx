@@ -7,22 +7,22 @@ import StartupFormSolutions from './StartupFormSolutions';
 import StartupFormBusinessModel from './StartupFormBusinessModel';
 import { handleRadioChange } from '../../utils/functions';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormMVP({
   register,
   errors,
   handlePitchFileChange,
   handleBusinessFileChange,
-  handleFinancialFileChange,
-  lang
+  handleFinancialFileChange
 }: {
   register: any;
   errors: any;
   handlePitchFileChange: any;
   handleBusinessFileChange: any;
   handleFinancialFileChange: any;
-  lang:string;
 }) {
+  const { lang } = useLang((s) => s)
   const [selectedRadioPitch, setSelectedRadioPitch] = useState('');
   const [selectedRadioBusiness, setSelectedRadioBusiness] = useState('');
   const { t } = useTranslation(lang, 'formComponent');
@@ -93,13 +93,12 @@ export default function StartupFormMVP({
                   />
                 </div>
               </div>
-              <StartupFormProblem register={register} errors={errors} lang={lang}/>
-              <StartupFormSolutions register={register} errors={errors} lang={lang}/>
+              <StartupFormProblem register={register} errors={errors}/>
+              <StartupFormSolutions register={register} errors={errors}/>
               <StartupFormBusinessModel
                 register={register}
                 errors={errors}
                 handleFinancialFileChange={handleFinancialFileChange}
-                lang={lang}
               />
             </div>
           );

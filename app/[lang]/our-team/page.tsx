@@ -22,7 +22,7 @@ export default async function TeamPage({
         title={t('title')}
         lang={lang}
       />
-      <TeamPersons lang={lang} />
+      <TeamPersons />
     </div>
   );
 }

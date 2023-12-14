@@ -1,8 +1,9 @@
 import React from 'react';
+import { useLang } from 'stores/langStore';
 
-export default function PartnerMembershipTitle(
-  {lang} : {lang: string}
-) {
+export default function PartnerMembershipTitle() {
+
+  const lang = useLang((s) => s.lang)
 
   return (
     <>

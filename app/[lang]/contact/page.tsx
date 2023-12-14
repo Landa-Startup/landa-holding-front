@@ -3,7 +3,6 @@ import ContactUsForm from '../../../components/common/form/ContactUsForm';
 import ContactUsDescription from '../../../components/common/ContactUsDescription';
 import Banner from '../../../components/common/Banner';
 import { Metadata } from 'next';
-import { SubmitProvider } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
@@ -30,14 +29,12 @@ export default async function ContactUsPage({
       />
 
       {/* Main Content Grid */}
-      <div className={`container mx-auto grid grid-cols-1 gap-12 bg-[#FAFAFA] px-5 py-28 font-barlow text-black rtl:text-left md:flex md:justify-between ltr:md:text-right lg:px-28`}>
+      <div className={`container mx-auto grid grid-cols-1 gap-12 bg-[#FAFAFA] px-5 py-28 font-barlow text-black md:flex md:justify-between rtl:md:flex-row-reverse md:flex-row lg:px-28`}>
         {/* ContactUsDescription Component */}
-        <ContactUsDescription lang={lang} />
+        <ContactUsDescription />
 
         {/* ContactUsForm Component */}
-        <SubmitProvider>
-          <ContactUsForm lang={lang} />
-        </SubmitProvider>
+        <ContactUsForm />
       </div>
     </div>
   );

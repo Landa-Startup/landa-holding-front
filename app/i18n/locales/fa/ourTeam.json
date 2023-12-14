@@ -1,337 +1,374 @@
 {
-  "title": "تیم ما",
-  "persons": [
-    {
-      "image": "/static/images/our-team/Personals/a1.png",
-      "position": "مدیرعامل",
-      "name": "دکتر رسول مرادی مهر",
-      "linkedIn": "",
-      "category": "مدیران"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a2.png",
-      "position": "معاون فنی",
-      "name": "دکتر هادی حسن‌پور",
-      "linkedIn": "",
-      "category": "مدیران"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a10.png",
-      "position": "مدیر",
-      "name": "مهرنوش حیبتی",
-      "linkedIn": "",
-      "category": "مدیران"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a11.png",
-      "position": "مدیر پرونده",
-      "name": "مهسا اسماعیلی",
-      "linkedIn": "",
-      "category": "مدیران"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a3.png",
-      "position": "منشی",
-      "name": "لیدا پرویزی",
-      "linkedIn": "",
-      "category": "منشی"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a4.png",
-      "position": "روابط عمومی",
-      "name": "خلود حریری",
-      "linkedIn": "",
-      "category": "روابط عمومی"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a35.jpg",
-      "position": "مدیر روابط عمومی",
-      "name": "آرش آریانیک",
-      "linkedIn": "",
-      "category": "روابط عمومی"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a5.png",
-      "position": "حسابدار",
-      "name": "علی سلیمانی",
-      "linkedIn": "",
-      "category": "حسابدار"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a6.png",
-      "position": "مدیر ارشد فناوری",
-      "name": "ایمان نصر",
-      "linkedIn": "",
-      "category": "مربیان"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a7.png",
-      "position": "فول استک",
-      "name": "سجاد مومنی",
-      "linkedIn": "",
-      "category": "مربیان"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a8.png",
-      "position": "فول استک",
-      "name": "امین اصغریان",
-      "linkedIn": "",
-      "category": "برنامه نویسان"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a9.png",
-      "position": "بازاریاب دیجیتال",
-      "name": "احسان علی‌اکبری",
-      "linkedIn": "",
-      "category": "بازاریاب دیجیتال"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a13.png",
-      "position": "طراح تجربه و رابط کاربری",
-      "name": "آریانا شفیعی",
-      "linkedIn": "",
-      "category": "طراحان"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a14.png",
-      "position": "طراح تجربه و رابط کاربری",
-      "name": "آرشیا نصیری",
-      "linkedIn": "",
-      "category": "طراحان"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a15.png",
-      "position": "بک اند",
-      "name": "فاطمه صافی",
-      "linkedIn": "",
-      "category": "برنامه نویسان"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a17.png",
-
-      "position": "فرانت اند",
-
-      "name": "فهیمه سجادی",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a18.png",
-
-      "position": "فرانت اند",
-
-      "name": "سامان کارچگانی",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a19.png",
-
-      "position": "فرانت اند",
-
-      "name": "محسن کیانی",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a20.png",
-
-      "position": "توسعه دهنده برنامه های کاربردی",
-
-      "name": "علی خاوری",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a21.png",
-
-      "position": "طراح گرافیک",
-
-      "name": "هدی مهدی",
-
-      "linkedIn": "",
-
-      "category": "طراحان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a22.png",
-
-      "position": "طراح گرافیک",
-
-      "name": "ایناز رئیسی",
-
-      "linkedIn": "",
-
-      "category": "طراحان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a23.png",
-
-      "position": "تولید محتوا",
-
-      "name": "مهتاب حافظی",
-
-      "linkedIn": "",
-
-      "category": "تولید کنندگان محتوا"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a24.png",
-
-      "position": "طراح رابط کاربری",
-
-      "name": "صبا مختاری",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a25.png",
-
-      "position": "تولید محتوا",
-
-      "name": "تیام ثافریان",
-
-      "linkedIn": "",
-
-      "category": "تولید کنندگان محتوا"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a26.png",
-
-      "position": "توسعه دهنده وردپرس",
-
-      "name": "روحام عربلو",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a27.png",
-
-      "position": "فول استک",
-
-      "name": "معراج بیغمیان",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a28.png",
-
-      "position": "فرانت اند",
-
-      "name": "مهدی سلمان زاده",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a29.png",
-
-      "position": "فرانت اند",
-
-      "name": "مهرخ لطفی",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a30.png",
-
-      "position": "فرانت اند",
-
-      "name": "رامتین فروزانی",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a31.png",
-
-      "position": "فرانت اند",
-
-      "name": "باراد دهقانی",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a32.png",
-
-      "position": "فرانت اند",
-
-      "name": "متین جنگربانی",
-
-      "linkedIn": "",
-
-      "category": "برنامه نویسان"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a33.png",
-
-      "position": "مسئول روابط عمومی",
-
-      "name": "گل آره بهرامی",
-
-      "linkedIn": "",
-
-      "category": "مسئول روابط عمومی"
-    },
-
-    {
-      "image": "/static/images/our-team/Personals/a34.png",
-
-      "position": "طراح گرافیک",
-
-      "name": "فائزه خانی",
-
-      "linkedIn": "",
-
-      "category": "طراحان"
-    }
-  ],
-  "roles": [
-    "همه",
-    "مدیران",
-    "منشی",
-    "روابط عمومی",
-    "حسابدار",
-    "مربیان",
-    "برنامه نویسان",
-    "بازاریاب دیجیتال",
-    "طراحان",
-    "تولید کنندگان محتوا"
-  ]
+    "title":"تیم ما",
+    "persons": [
+        {
+            "image": "/static/images/our-team/Personals/a1.png",
+            "position": "مدیرعامل",
+            "name": "دکتر رسول مرادی مهر",
+            "linkedIn": "",
+            "category": "مدیران"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a2.png",
+            "position": "معاون فنی",
+            "name": "دکتر هادی حسن‌پور",
+            "linkedIn": "",
+            "category": "مدیران"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a10.png",
+            "position": "مدیر",
+            "name": "مهرنوش حیبتی",
+            "linkedIn": "",
+            "category": "مدیران"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a11.png",
+            "position": "مدیر پرونده",
+            "name": "مهسا اسماعیلی",
+            "linkedIn": "",
+            "category": "مدیران"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a3.png",
+            "position": "دستیار مدیر",
+            "name": "لیدا پرویزی",
+            "linkedIn": "",
+            "category": "دستیار مدیر"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a4.png",
+            "position": "روابط عمومی",
+            "name": "خلود حریری",
+            "linkedIn": "",
+            "category": "روابط عمومی"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a35.jpg",
+            "position": "مدیر روابط عمومی",
+            "name": "آرش آریانیک",
+            "linkedIn": "",
+            "category": "روابط عمومی"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a5.png",
+            "position": "حسابدار",
+            "name": "علی سلیمانی",
+            "linkedIn": "",
+            "category": "حسابدار"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a6.png",
+            "position": "مدیر ارشد فناوری",
+            "name": "ایمان نصر",
+            "linkedIn": "",
+            "category": "مربیان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a7.png",
+            "position": "فول استک",
+            "name": "سجاد مومنی",
+            "linkedIn": "",
+            "category": "مربیان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a8.png",
+            "position": "فول استک",
+            "name": "امین اصغریان",
+            "linkedIn": "",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a9.png",
+            "position": "بازاریاب دیجیتال",
+            "name": "احسان علی‌اکبری",
+            "linkedIn": "",
+            "category": "بازاریاب دیجیتال"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a13.png",
+            "position": "طراح تجربه و رابط کاربری",
+            "name": "آریانا شفیعی",
+            "linkedIn": "",
+            "category": "طراحان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a14.png",
+            "position": "طراح تجربه و رابط کاربری",
+            "name": "آرشیا نصیری",
+            "linkedIn": "",
+            "category": "طراحان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a15.png",
+            "position": "بک اند",
+            "name": "فاطمه صافی",
+            "linkedIn": "",
+            "category": "برنامه نویسان"
+        },
+        {
+            
+            "image": "/static/images/our-team/Personals/a17.png",
+            
+            "position": "فرانت اند",  
+            
+            "name": "فهیمه سجادی",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+            
+            {   
+            
+            "image": "/static/images/our-team/Personals/a18.png",  
+            
+            "position": "فرانت اند",  
+            
+            "name": "سامان کارچگانی",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a19.png",  
+            
+            "position": "فرانت اند",  
+            
+            "name": "محسن کیانی",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+            
+            {   
+            
+            "image": "/static/images/our-team/Personals/a20.png",   
+            
+            "position": "توسعه دهنده برنامه های کاربردی",   
+            
+            "name": "علی خاوری",   
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a21.png",   
+            
+            "position": "طراح گرافیک",   
+            
+            "name": "هدی مهدی",   
+            
+            "linkedIn": "",  
+            
+            "category": "طراحان"  
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a22.png",  
+            
+            "position": "طراح گرافیک",  
+            
+            "name": "ایناز رئیسی",  
+            
+            "linkedIn": "",  
+            
+            "category": "طراحان"  
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a23.png",  
+            
+            "position": "تولید محتوا",  
+            
+            "name": "مهتاب حافظی",  
+            
+            "linkedIn": "",  
+            
+            "category": "تولید کنندگان محتوا"   
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a24.png",  
+            
+            "position": "طراح رابط کاربری",  
+            
+            "name": "صبا مختاری",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a25.png",  
+            
+            "position": "تولید محتوا", 
+            
+            "name": "تیام ثافریان", 
+            
+            "linkedIn": "",  
+            
+            "category": "تولید کنندگان محتوا"
+            
+            },
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a26.png",   
+            
+            "position": "توسعه دهنده وردپرس",  
+            
+            "name": "روحام عربلو",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"
+            
+            },
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a27.png",  
+            
+            "position": "فول استک", 
+            
+            "name": "معراج بیغمیان",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a28.png",   
+            
+            "position": "فرانت اند",   
+            
+            "name": "مهدی سلمان زاده",   
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a29.png",  
+            
+            "position": "فرانت اند",  
+            
+            "name": "مهرخ لطفی",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a30.png",   
+            
+            "position": "فرانت اند",   
+            
+            "name": "رامتین فروزانی",   
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+            
+            {
+            
+            "image": "/static/images/our-team/Personals/a31.png",   
+            
+            "position": "فرانت اند",   
+            
+            "name": "باراد دهقانی",   
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a32.png",  
+            
+            "position": "فرانت اند",  
+            
+            "name": "متین جنگربانی",   
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a33.png",  
+            
+            "position": "مسئول روابط عمومی",   
+            
+            "name": "گل آره بهرامی",  
+            
+            "linkedIn": "",  
+            
+            "category": "مسئول روابط عمومی"   
+            
+            },   
+            
+            {  
+            
+            "image": "/static/images/our-team/Personals/a34.png",  
+            
+            "position": "طراح گرافیک",  
+            
+            "name": "فائزه خانی",  
+            
+            "linkedIn": "",  
+            
+            "category": "طراحان"  
+            
+            }
+            
+    ],
+    "roles": [
+        "همه",
+        "مدیران",
+        "مربیان",
+        "برنامه نویسان",
+        "طراحان",
+        "تولید کنندگان محتوا",
+        "حسابدار",
+        "روابط عمومی",
+        "بازاریاب دیجیتال",
+        "دستیار مدیر"
+      ]
 }

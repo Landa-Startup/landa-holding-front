@@ -93,9 +93,9 @@ export default function StartupFormTrialProduct({
                   />
                 </div>
               </div>
-              <StartupFormProblem register={register} errors={errors} lang={lang}/>
-              <StartupFormSolutions register={register} errors={errors} lang={lang}/>
-              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange} lang={lang}/>
+              <StartupFormProblem register={register} errors={errors}/>
+              <StartupFormSolutions register={register} errors={errors}/>
+              <StartupFormBusinessModel register={register} errors={errors} handleFinancialFileChange={handleFinancialFileChange}/>
             </div>
           );
         }else{

@@ -6,20 +6,24 @@ import GetCsrfToken from '../../../utils/get-csrf-token';
 import NotificationSendForm from './NotificationSendForm';
 import { ContactFormData } from '../../../initials/initObjects';
 import { submitContactForm } from '../../../pages/api/contact-us';
-import { useSubmit } from '../../../providers/StateProvider';
 import { PersonalInfoInput } from './PersonalInfoInput';
 import Input from './Input';
 import TextArea from '../TextArea';
-import ButtonRefactor from '../ButtonRefactor';
-export default function ContactUsForm({ lang }: { lang: string }) {
+import Button from '../Button';
+import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
+// import { on } from 'events';
+export default function ContactUsForm() {
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<ContactUSFormData>({
     mode: 'onBlur',
-    defaultValues: ContactFormData
+    defaultValues: ContactFormData,
   });
 
   const {
@@ -28,9 +32,12 @@ export default function ContactUsForm({ lang }: { lang: string }) {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject
-  } = useSubmit();
+    handleSuccessChange,
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang)
+
+  const { t } = useTranslation(lang, "formComponent")
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -59,95 +66,90 @@ export default function ContactUsForm({ lang }: { lang: string }) {
     });
 
     // Send the form data to the API.
-    submitContactForm(sendFormData, csrfToken)
-      .then((response) => {
-        console.log(response);
+    submitContactForm(sendFormData, csrfToken).then((response) => {
+      console.log(response);
 
-        handleChangeSuccess();
-        reset(ContactFormData); // Reset the form after successful submission
-        setTimeout(() => {
-          handleNotifChange(false);
-        }, 10000); // 10 seconds in milliseconds
-      })
-      .catch(() => {
-        handleChangeReject();
-        reset(ContactFormData);
+      handleSuccessChange(true);
+      handleNotifChange(true);
+      handleSendChange(false);
+      reset(ContactFormData); // Reset the form after successful submission
+      setTimeout(() => {
+        handleNotifChange(false);
+      }, 10000); // 10 seconds in milliseconds
+    }).catch(() => {
+      handleNotifChange(true);
+      handleSendChange(false);
+      handleSuccessChange(false);
+      reset(ContactFormData);
 
-        setTimeout(() => {
-          handleNotifChange(false);
-        }, 10000); // 10 seconds in milliseconds
-      });
+      setTimeout(() => {
+        handleNotifChange(false);
+      }, 10000); // 10 seconds in milliseconds
+    })
   };
 
-  // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   name: name,
-  //   value: value
-  // }));
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }))
 
   return (
-    <div dir={lang === 'en' ? 'ltr' : 'rtl'}>
+    <div className='h-full flex flex-col justify-between items-center md:items-start'>
       <h2 className="text-center font-gilda text-5xl font-light">
-        {lang === 'en' ? 'Reach us' : 'با ما تماس بگیرید'}
+        {t('contactForm', {returnObjects: true}).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="my-4 h-full grid-cols-2 gap-x-6 gap-y-5 md:grid">
+        <div className="my-4 grid h-full grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
+
           <PersonalInfoInput
             register={register}
             errors={errors}
             nameInputs={{
-              firstName: 'name',
-              lastName: '',
-              email: 'email',
-              phoneNumber: 'number'
+              firstName: "name",
+              lastName: "",
+              email: "email",
+              phoneNumber: "number"
             }}
-            lang={lang}
+            noLabel={true}
           />
 
-          <div className="col-span-1">
+          <div className='col-span-1'>
             <Input
               register={register}
               errors={errors}
-              nameInput="subject"
-              type="text"
-              label={lang === 'en' ? 'Subject' : 'موضوع'}
-              required={
-                lang === 'en' ? 'Your Subject is required.' : 'موضوع الزامی است'
-              }
+              nameInput='subject'
+              type='text'
+              required={t('contactForm', {returnObjects: true}).subjectRequired}
               patternValue=""
-              patternMessage={
-                lang === 'en'
-                  ? 'Enter a valid Subject.'
-                  : 'یک موضوع معتبر وارد کنید'
-              }
-              placeholder={lang === 'en' ? 'Your Subject*' : 'موضوع'}
+              patternMessage={t('contactForm', {returnObjects: true}).subjectRequired}
+              placeholder={t('contactForm', {returnObjects: true}).subjectPlaceholder}
               className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              containerClass=""
+              labelClass='text-[#6b6b6b] dark:text-current'
+              containerClass=''
             />
           </div>
 
-          <div className="col-span-2">
+          <div className='col-span-2'>
             <TextArea
               register={register}
               errors={errors}
-              title={lang === 'en' ? 'Message' : 'پیام'}
-              required={
-                lang === 'en' ? 'Message is required' : 'پیام الزامی است'
-              }
-              nameTextArea="message"
-              patternValue=""
-              patternMessage=""
-              placeholder={lang === 'en' ? 'Message' : 'پیام'}
+              required={t('contactForm', {returnObjects: true}).messageRequired}
+              nameTextArea='message'
+              patternValue=''
+              patternMessage=''
+              placeholder={t('contactForm', {returnObjects: true}).messagePlaceholder}
               rows={4}
               cols={20}
             />
           </div>
-          <div className="col-span-2 mx-auto">
-            <ButtonRefactor text="Submit" type="submit" />
-          </div>
-        </div>
+        </div>  
+        <Button
+          type='submit'
+          bgColor="Primary"
+          disabled={errorsList[0] ? true : false}
+        />
       </form>
-      <NotificationSendForm lang={lang} />
+      <NotificationSendForm />
     </div>
   );
 }

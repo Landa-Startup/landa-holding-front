@@ -73,7 +73,7 @@ export default async function Page({
           <p className="font-openSans text-base font-bold leading-[210%] tracking-wider text-[#AA8453]">
             {t('formTitle')}
           </p>
-          <HandicraftForm lang={lang} />
+          <HandicraftForm />
         </div>
       </div>
     </div>

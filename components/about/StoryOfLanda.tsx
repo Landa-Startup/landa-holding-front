@@ -1,8 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'stores/langStore';
 
-export default async function StoryOfLanda({ lang }: { lang: string }) {
+export default async function StoryOfLanda() {
+
+  const lang = useLang.getState().lang
+
   const { t } = await useTranslation(lang, 'aboutUs');
 
   return (

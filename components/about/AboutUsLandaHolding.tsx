@@ -1,9 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
+import { useLang } from 'stores/langStore';
 
-export default async function AboutUsLandaHolding({ lang }: { lang: string }) {
-  const { t } = await useTranslation(lang, 'aboutUs');
+export default async function AboutUsLandaHolding(
+) {
+
+  const lang = useLang.getState().lang
+
+  const { t } = await useTranslation(lang, "aboutUs")
 
   // const translation = t('aboutLandaHolding', {returnObjects: true})[0]
 
