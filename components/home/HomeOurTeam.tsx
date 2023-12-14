@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Image from 'next/image';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n';
@@ -14,6 +14,7 @@ export default async function HomeOurTeam() {
       <div
         className="flex flex-col ltr:ml-5 ltr:mr-10 rtl:mr-5 lg:self-start ltr:xl:ml-28 rtl:xl:mr-40"
       >
+        {/* TODO: make component for headers */}
         <span className="font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
           {t('LandaHolding')}
         </span>

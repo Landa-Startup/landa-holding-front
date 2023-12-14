@@ -1,10 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 
-// interface Props {
-//   onRoleSelect: (role: string) => void;
-// }
-
 export default function TeamRolesContainer({
   roles,
   onRoleSelect,
@@ -19,13 +15,12 @@ export default function TeamRolesContainer({
   }
   return (
     <div className="flex flex-wrap justify-center gap-1 bg-slate-50  pb-5  pt-10 font-barlow">
+      {/* TODO: use <Button> component instead of button input */}
       {roles.map((role, index) => (
         <button
           onClick={() => handleRoleClick(role)}
           key={index}
-          className={`btn btn-outline rounded-sm border-[#222] capitalize ${selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'
-            }`}
-        >
+          className={`btn btn-outline rounded-sm border-[#222] capitalize ${selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'}`}>
           {role}
         </button>
       ))}

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import LinkedIn from '../icons/about/LinkedIn';
 import Image from 'next/image';
@@ -33,6 +32,7 @@ export default function PersonalTab({
       {/* LinkedIn Link */}
       <div className="z-10 flex flex-col space-y-2 self-start p-4">
         <Link
+          // TODO: why use / instead of #?
           href={linkedIn || '/'}
           className="rounded-full bg-[#222] p-2 text-white opacity-75"
         >

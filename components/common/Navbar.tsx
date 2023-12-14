@@ -22,15 +22,15 @@ export default function Navbar({
 
   const [cookies, setCookies] = useCookies(['i18next'])
 
-  // console.log(cookies.i18next);
+  // 
   setCookies;
 
   useEffect(() => {
     langHandler(cookies.i18next);
-  },[])
+  }, [])
 
-  const menuItems=t('menuItems', { returnObjects: true })
-  const submenuItems=t('submenuItems', { returnObjects: true })
+  const menuItems = t('menuItems', { returnObjects: true })
+  const submenuItems = t('submenuItems', { returnObjects: true })
 
   const drawerRef = useRef<HTMLInputElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function Navbar({
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
-      console.log(drawerRef);
+
       return;
     }
     drawerRef.current.click();
@@ -111,9 +111,8 @@ export default function Navbar({
                     {lang === 'en' ? 'FORMS' : 'فرم ها'}
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map(
                       ({ label, href }: { label: string; href: string }) => (

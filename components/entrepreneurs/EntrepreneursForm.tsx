@@ -57,7 +57,7 @@ export default function EntrepreneursForm() {
     handleSubmitingChange(true);
     handleSendChange(true);
 
-    console.log(formData);
+
 
     // Create a FormData object for form data.
     const sendFormData = new FormData();
@@ -69,13 +69,11 @@ export default function EntrepreneursForm() {
       }
     });
 
-    console.log(sendFormData);
+
 
     // Send the form data to the API.
     submitEntrepreneurForm(sendFormData, csrfToken)
-      .then((response) => {
-        console.log(response);
-
+      .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);

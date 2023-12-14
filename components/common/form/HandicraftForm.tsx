@@ -17,82 +17,80 @@ import { useSubmit } from 'stores/submitStore';
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
 export default function HandicraftForm() {
 
-  const { 
+  const {
     csrfToken,
     handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
-   } = useSubmit((s) => s)
+  } = useSubmit((s) => s)
 
-   const lang = useLang((s) => s.lang)
+  const lang = useLang((s) => s.lang)
 
-    const {
-      register,
-      handleSubmit,
-      formState: { errors },
-      reset
-    } = useForm<HandicraftForm>({
-      mode: 'onBlur',
-      defaultValues: HandicraftFormData
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<HandicraftForm>({
+    mode: 'onBlur',
+    defaultValues: HandicraftFormData
+  });
+
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken(
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+      );
+      handleTokenChange(token);
+    }
+
+    fetchCsrfToken();
+  }, []);
+
+  const onSubmit = async (formData: HandicraftForm) => {
+    // Set loading and sending states.
+    handleSubmitingChange(true);
+    handleSendChange(true);
+
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
+
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
     });
 
-    useEffect(() => {
-      async function fetchCsrfToken() {
-        const token = await GetCsrfToken(
-          `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
-        );
-        handleTokenChange(token);
-      }
+    // Send the form data to the API.
+    submitHandiCraftApplicationForm(sendFormData, csrfToken)
+      .then(() => {
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
+        reset(HandicraftFormData); // Reset the form after successful submission
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      })
+      .catch(() => {
+        handleNotifChange(true);
+        handleSendChange(false);
+        handleSuccessChange(false);
+        reset(HandicraftFormData);
 
-      fetchCsrfToken();
-    }, []);
-
-    const onSubmit = async (formData: HandicraftForm) => {
-      // Set loading and sending states.
-      handleSubmitingChange(true);
-      handleSendChange(true);
-
-      // Create a FormData object for form data.
-      const sendFormData = new FormData();
-
-      // Append all non-file form fields.
-      Object.entries(formData).forEach(([fieldName, fieldValue]) => {
-        if (typeof fieldValue !== 'object' || fieldValue === null) {
-          sendFormData.append(fieldName, String(fieldValue));
-        }
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
       });
+  };
 
-      // Send the form data to the API.
-      submitHandiCraftApplicationForm(sendFormData, csrfToken)
-        .then((response) => {
-          console.log(response);
-
-          handleSuccessChange(true);
-          handleNotifChange(true);
-          handleSendChange(false);
-          reset(HandicraftFormData); // Reset the form after successful submission
-          setTimeout(() => {
-            handleNotifChange(false);
-          }, 10000); // 10 seconds in milliseconds
-        })
-        .catch(() => {
-          handleNotifChange(true);
-          handleSendChange(false);
-          handleSuccessChange(false);
-          reset(HandicraftFormData);
-
-          setTimeout(() => {
-            handleNotifChange(false);
-          }, 10000); // 10 seconds in milliseconds
-        });
-    };
-
-    const errorsList = Object.entries(errors).map(([name, value]) => ({
-      name: name,
-      value: value
-    }));
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }));
 
   // const { t } = useTranslation(lang, 'handicraft');
 
@@ -132,72 +130,72 @@ export default function HandicraftForm() {
     //   </div>
     // </form>
 
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col items-center">
-    <div className="my-4 grid w-full md:w-3/5 lg:w-4/6 grid-cols-1 md:flex md:flex-col md:items-center">
-      <div className='w-full flex flex-col md:flex-row items-center gap-2'>
-      <PersonalInfoInput
-        register={register}
-        errors={errors}
-        nameInputs={{
-          firstName: 'name',
-          lastName: '',
-          email: '',
-          phoneNumber: 'phone'
-        }}
-        noLabel={true}
-      />
+    <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
+      <div className="my-4 grid w-full grid-cols-1 md:flex md:w-3/5 md:flex-col md:items-center lg:w-4/6">
+        <div className='flex w-full flex-col items-center gap-2 md:flex-row'>
+          <PersonalInfoInput
+            register={register}
+            errors={errors}
+            nameInputs={{
+              firstName: 'name',
+              lastName: '',
+              email: '',
+              phoneNumber: 'phone'
+            }}
+            noLabel={true}
+          />
+        </div>
+
+        <div className="col-span-1 w-full">
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="email"
+            type="text"
+            required=""
+            patternValue=""
+            patternMessage=""
+            placeholder={
+              lang === 'en'
+                ? 'Your Email'
+                : 'ایمیل شما'
+            }
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            containerClass="w-full"
+            labelClass=""
+          />
+        </div>
+
+        <div className="col-span-1 w-full">
+          <Input
+            register={register}
+            errors={errors}
+            nameInput="company"
+            type="text"
+            required=""
+            patternValue=""
+            patternMessage=""
+            placeholder={
+              lang === 'en'
+                ? 'Name of Your Organization, if applicable'
+                : 'نام شرکت خود را در صورت امکان وارد کنید'
+            }
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            containerClass="w-full"
+            labelClass=""
+          />
+        </div>
       </div>
 
-      <div className="col-span-1 w-full">
-        <Input
-          register={register}
-          errors={errors}
-          nameInput="email"
-          type="text"
-          required=""
-          patternValue=""
-          patternMessage=""
-          placeholder={
-            lang === 'en'
-              ? 'Your Email'
-              : 'ایمیل شما'
-          }
-          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-          containerClass="w-full"
-          labelClass=""
+      <div className="w-full text-center md:w-auto">
+        <Button
+          type='submit'
+          bgColor="Primary"
+          disabled={errorsList[0] ? true : false}
+          lang={lang}
         />
+        {/* <ButtonRefactor type="submit" text="Submit" /> */}
       </div>
-
-      <div className="col-span-1 w-full">
-        <Input
-          register={register}
-          errors={errors}
-          nameInput="company"
-          type="text"
-          required=""
-          patternValue=""
-          patternMessage=""
-          placeholder={
-            lang === 'en'
-              ? 'Name of Your Organization, if applicable'
-              : 'نام شرکت خود را در صورت امکان وارد کنید'
-          }
-          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-          containerClass="w-full"
-          labelClass=""
-        />
-      </div>
-    </div>
-
-    <div className="text-center w-full md:w-auto">
-      <Button
-        type='submit'
-        bgColor="Primary"
-        disabled={errorsList[0] ? true : false}
-        lang={lang}
-      />
-      {/* <ButtonRefactor type="submit" text="Submit" /> */}
-    </div>
-  </form>
+    </form>
   );
 }

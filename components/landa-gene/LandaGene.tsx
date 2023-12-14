@@ -56,7 +56,7 @@ export default function LandaGene() {
     handleSubmitingChange(true);
     handleSendChange(true);
 
-    console.log(formData);
+
 
     // Create a FormData object for form data.
     const sendFormData = new FormData();
@@ -70,21 +70,17 @@ export default function LandaGene() {
 
     // Send the form data to the API.
     submitLandaApplicationForm(sendFormData, csrfToken)
-      .then((response) => {
+      .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
         reset(initialApplicationFormData); // Country does not reset
-        console.log('Form data sent successfully!');
-
         setTimeout(() => {
           handleNotifChange(false);
         }, 10000); // 10 seconds in milliseconds
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error('Error sending form data:', error);
 
+      })
+      .catch(() => {
         handleSuccessChange(true);
         handleNotifChange(false);
         handleSendChange(false);
@@ -196,28 +192,27 @@ export default function LandaGene() {
         <div className="flex h-auto w-full flex-col items-center justify-between p-0">
           <div className="flex w-full flex-col items-start p-0">
             <p
-              className={`w-full text-justify font-sans text-[18px] leading-normal  text-primary ${
-                lang === 'en' ? 'md:tracking-[2px]' : ''
-              }`}
+              className={`w-full text-justify font-sans text-[18px] leading-normal  text-primary ${lang === 'en' ? 'md:tracking-[2px]' : ''
+                }`}
             >
               {t('formText')}
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col items-center">
-            <div className="my-4 grid w-full md:w-3/5 lg:w-2/5 grid-cols-1 md:flex md:flex-col md:items-center">
-              <div className='w-full flex flex-col md:flex-row items-center gap-2'>
-              <PersonalInfoInput
-                register={register}
-                errors={errors}
-                nameInputs={{
-                  firstName: 'name',
-                  lastName: '',
-                  email: '',
-                  phoneNumber: 'phone'
-                }}
-                noLabel={true}
-              />
+          <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
+            <div className="my-4 grid w-full grid-cols-1 md:flex md:w-3/5 md:flex-col md:items-center lg:w-2/5">
+              <div className='flex w-full flex-col items-center gap-2 md:flex-row'>
+                <PersonalInfoInput
+                  register={register}
+                  errors={errors}
+                  nameInputs={{
+                    firstName: 'name',
+                    lastName: '',
+                    email: '',
+                    phoneNumber: 'phone'
+                  }}
+                  noLabel={true}
+                />
               </div>
 
               <div className="col-span-1 w-full">
@@ -261,7 +256,7 @@ export default function LandaGene() {
               </div>
             </div>
 
-            <div className="text-center w-full md:w-auto">
+            <div className="w-full text-center md:w-auto">
               <Button
                 type='submit'
                 bgColor="Primary"

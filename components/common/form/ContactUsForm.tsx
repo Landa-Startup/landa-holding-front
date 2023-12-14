@@ -66,8 +66,8 @@ export default function ContactUsForm() {
     });
 
     // Send the form data to the API.
-    submitContactForm(sendFormData, csrfToken).then((response) => {
-      console.log(response);
+    submitContactForm(sendFormData, csrfToken).then(() => {
+
 
       handleSuccessChange(true);
       handleNotifChange(true);
@@ -94,9 +94,9 @@ export default function ContactUsForm() {
   }))
 
   return (
-    <div className='h-full flex flex-col justify-between items-center md:items-start'>
+    <div className='flex h-full flex-col items-center justify-between md:items-start'>
       <h2 className="text-center font-gilda text-5xl font-light">
-        {t('contactForm', {returnObjects: true}).title}
+        {t('contactForm', { returnObjects: true }).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="my-4 grid h-full grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
@@ -119,10 +119,10 @@ export default function ContactUsForm() {
               errors={errors}
               nameInput='subject'
               type='text'
-              required={t('contactForm', {returnObjects: true}).subjectRequired}
+              required={t('contactForm', { returnObjects: true }).subjectRequired}
               patternValue=""
-              patternMessage={t('contactForm', {returnObjects: true}).subjectRequired}
-              placeholder={t('contactForm', {returnObjects: true}).subjectPlaceholder}
+              patternMessage={t('contactForm', { returnObjects: true }).subjectRequired}
+              placeholder={t('contactForm', { returnObjects: true }).subjectPlaceholder}
               className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
               labelClass='text-[#6b6b6b] dark:text-current'
               containerClass=''
@@ -133,16 +133,16 @@ export default function ContactUsForm() {
             <TextArea
               register={register}
               errors={errors}
-              required={t('contactForm', {returnObjects: true}).messageRequired}
+              required={t('contactForm', { returnObjects: true }).messageRequired}
               nameTextArea='message'
               patternValue=''
               patternMessage=''
-              placeholder={t('contactForm', {returnObjects: true}).messagePlaceholder}
+              placeholder={t('contactForm', { returnObjects: true }).messagePlaceholder}
               rows={4}
               cols={20}
             />
           </div>
-        </div>  
+        </div>
         <Button
           type='submit'
           bgColor="Primary"

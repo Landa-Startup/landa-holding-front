@@ -24,7 +24,7 @@ export default function EventCard() {
       .then((response) => response.json())
       .then((data) => setEvents(data))
       .catch((error) => console.error('Error fetching data:', error));
-    console.log(event);
+
   }, []); // The empty dependency array ensures this effect runs once when the component mounts
   return (
     <div>

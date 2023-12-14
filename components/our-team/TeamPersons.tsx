@@ -1,13 +1,11 @@
 "use client"
-import React, { useState } from 'react';
-import TeamRolesContainer from './TeamRolesContainer';
-import PersonalTab from '../common/PersonalTab'
+import { useState } from 'react';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-// TODO: read from i18n instead of statics
-// import { personsEN, personsFA } from '../../app/[lang]/statics';
-// import { rolesEN, rolesFA } from '../../app/[lang]/statics';
+import TeamRolesContainer from './TeamRolesContainer';
+import PersonalTab from '../common/PersonalTab'
 
+// TODO: move interface to a separate file
 interface item {
     image: string;
     position: string
@@ -20,18 +18,15 @@ export default function TeamPersons() {
 
     const { lang } = useLang((s) => s);
     const { t } = useTranslation(lang, "ourTeam")
-
-    // const [selectedRole, setSelectedRole] = useState<string | null>(null);
     const [filteredPersons, setFilteredPersons] = useState(Array<item>);
 
     function handleRoleSelect(role: string) {
-        // setSelectedRole(role);
-        // console.log(role);
+        // TODO: use i18n instead of hardcode
         if (role === 'All' || role === 'همه') {
-            setFilteredPersons(t('persons', {returnObjects: true}));
+            setFilteredPersons(t('persons', { returnObjects: true }));
         } else {
-            const persons = t('persons', {returnObjects: true})
-            const filteredPersons = persons.filter(({category}: {category: string}) =>
+            const persons = t('persons', { returnObjects: true })
+            const filteredPersons = persons.filter(({ category }: { category: string }) =>
                 category?.toLowerCase().includes(role.toLowerCase())
             );
             setFilteredPersons(filteredPersons);
@@ -39,9 +34,9 @@ export default function TeamPersons() {
     }
     return (
         <div>
-            <TeamRolesContainer onRoleSelect={handleRoleSelect} roles={t('roles', {returnObjects: true})} />
+            <TeamRolesContainer onRoleSelect={handleRoleSelect} roles={t('roles', { returnObjects: true })} />
             <div className="grid grid-cols-1 justify-items-center gap-4 bg-[#FAFAFA] py-5 md:container md:mx-auto md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4">
-                {filteredPersons.map(({image, position, name, linkedIn} : {image: string, position: string, name: string, linkedIn: string}, index: number) => (
+                {filteredPersons.map(({ image, position, name, linkedIn }: { image: string, position: string, name: string, linkedIn: string }, index: number) => (
                     <PersonalTab
                         key={index}
                         image={image}

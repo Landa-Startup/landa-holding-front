@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
@@ -25,9 +25,8 @@ export default function ButtonRefactor({
           <Link href={href} className="group relative w-fit overflow-hidden">
             <button
               disabled={disabled}
-              className={`bg-${
-                bgColor ? bgColor : 'primary'
-              } flex h-[56px] w-[224px] flex-wrap content-center justify-center rounded p-2 text-white`}
+              className={`bg-${bgColor ? bgColor : 'primary'
+                } flex h-[56px] w-[224px] flex-wrap content-center justify-center rounded p-2 text-white`}
             >
               <div className="z-10 flex items-center rtl:flex-row-reverse">
                 <span>{text}</span>

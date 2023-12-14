@@ -1,4 +1,4 @@
-import React from 'react';
+
 import AccelerationServices from '../../../components/acceleration/AccelerationServices';
 import Hero from '../../../components/acceleration/HeroAcceleration';
 import { Metadata } from 'next';

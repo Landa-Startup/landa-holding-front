@@ -10,7 +10,7 @@ export default function Partners() {
 
   const lang = useLang((s) => s.lang)
 
-  console.log(lang);
+
 
   const { t } = useTranslation(lang, 'mainPage');
 
@@ -24,6 +24,7 @@ export default function Partners() {
     const scrollContainer = scrollContainerRef.current;
 
     function scrollAutomatically() {
+      // TODO: add scroll for fa
       if (lang === 'fa') {
         return;
       }
@@ -44,7 +45,7 @@ export default function Partners() {
     return () => clearInterval(intervalId);
   }, [isScrolling]);
 
-  // Add event listeners to stop automatic scroll on mouse enter
+  // TODO: move js functions to a separate file
   const handleMouseEnter = () => {
     setIsScrolling(false); // Stop scrolling
   };

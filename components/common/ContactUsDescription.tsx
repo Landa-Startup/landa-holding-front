@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Phone from '../icons/IconPhone';
 import Email from '../icons/IconEmail';
 import Location from '../icons/IconLocation';
@@ -57,19 +57,19 @@ export default async function ContactUsDescription() {
               <li>
                 <Link href="tel:+14165577622">
                   <span>{lang === "en" ? "Toronto: " : "تورنتو: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).cNumber}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).cNumber}</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>{lang === "en" ? "Tehran: " : "تهران: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).tNumber}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).tNumber}</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>{lang === "en" ? "Isfahan: " : "اصفهان: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).iNumber}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).iNumber}</span>
                 </Link>
               </li>
             </ul>
@@ -93,9 +93,9 @@ export default async function ContactUsDescription() {
           <div className="ml-2 flex flex-col ltr:text-left rtl:text-right">
             <span className="font-semibold">{t('address')}</span>
             <ul className="mx-4 list-disc space-y-3">
-              <li>{t('addresses', {returnObjects: true}).canada}</li>
-              <li>{t('addresses', {returnObjects: true}).tehran}</li>
-              <li>{t('addresses', {returnObjects: true}).isfahan}</li>
+              <li>{t('addresses', { returnObjects: true }).canada}</li>
+              <li>{t('addresses', { returnObjects: true }).tehran}</li>
+              <li>{t('addresses', { returnObjects: true }).isfahan}</li>
             </ul>
           </div>
         </div>

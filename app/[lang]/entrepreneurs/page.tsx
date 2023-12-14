@@ -1,7 +1,7 @@
 import Banner from '../../../components/common/Banner';
 import { Metadata } from 'next';
 import EntrepreneursForm from '../../../components/entrepreneurs/EntrepreneursForm';
-import React from 'react';
+
 import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {

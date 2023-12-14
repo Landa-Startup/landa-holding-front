@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Banner from '../../../components/common/Banner';
 import StartupFormForm from '../../../components/StartupsForm/StartupFormForm';
 import { Metadata } from 'next';
@@ -23,7 +23,7 @@ export default async function StartupValidationPage({
       {/* Banner component with an image and title */}
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title={t('startUp', {returnObjects: true}).banner}
+        title={t('startUp', { returnObjects: true }).banner}
         lang={lang}
       />
 

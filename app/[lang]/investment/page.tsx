@@ -1,7 +1,7 @@
 import Hero from '@/components/investment/HeroInvestment';
 import Link from '@/components/icons/Link';
 import Image from 'next/image';
-import React from 'react';
+
 import Certificate from '@/components/investment/Certificate';
 import { Metadata } from 'next';
 import FeaturesCardsContainer from '@/components/investment/FeaturesCardsContainer';
@@ -142,9 +142,8 @@ export default async function Page({
         </div>
         <div className="flex flex-col">
           <p
-            className={`text-justify font-barlow tracking-[1px] ${
-              lang === 'en' ? 'leading-8' : 'text-lg leading-10'
-            }`}
+            className={`text-justify font-barlow tracking-[1px] ${lang === 'en' ? 'leading-8' : 'text-lg leading-10'
+              }`}
           >
             {t('focusText')}
           </p>

@@ -1,21 +1,15 @@
 import { useTranslation } from 'app/i18n';
 import Image from 'next/image';
-import React from 'react';
+
 import { useLang } from 'stores/langStore';
 
 export default async function KeyDifferentiating() {
 
   const lang = useLang.getState().lang
-
   const { t } = await useTranslation(lang, 'aboutUs');
 
-  // t('itemList', {returnObjects: true}).map(({item}: {item: string}, {index}: {index: number}) => {
-  //   console.log(item, index);
-  // })
-
-  console.log(t('itemList', { returnObjects: true }));
-
   return (
+    // TODO: don't use [0], [1] for translations
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] md:grid-cols-2">
       <div className="m-5 flex flex-col gap-5 rtl:mr-6 md:my-20 md:mr-40 md:rtl:ml-40">
         <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">

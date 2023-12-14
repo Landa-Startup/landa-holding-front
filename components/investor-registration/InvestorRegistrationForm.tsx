@@ -67,9 +67,7 @@ export default function InvestorRegistrationForm() {
 
     // Send the form data to the API.
     submitInvestorRegistrationForm(sendFormData, csrfToken)
-      .then((response) => {
-        console.log(response);
-
+      .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
@@ -78,8 +76,7 @@ export default function InvestorRegistrationForm() {
           handleNotifChange(false);
         }, 10000); // 10 seconds in milliseconds
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
         handleSuccessChange(true);
         handleNotifChange(false);
         handleSendChange(false);
@@ -211,7 +208,7 @@ export default function InvestorRegistrationForm() {
             <ButtonRefactor type="submit" text={t('sendButton')} />
           </div>
         </form>
-        <NotificationSendForm/>
+        <NotificationSendForm />
       </div>
     </>
   );

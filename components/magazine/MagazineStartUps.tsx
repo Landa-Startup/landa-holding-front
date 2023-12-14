@@ -1,4 +1,4 @@
-import React from 'react';
+
 import MagazineStartUpsCard from './MagazineStartUpsCard';
 
 export default function MagazineStartUps() {

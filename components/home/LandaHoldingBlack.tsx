@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+
 import Lines from '@/components/icons/LandaHoldingBlack/Lines';
 import ButtonArrow from '@/components/icons/LandaHoldingBlack/ButtonArrow';
 import UlList from '@/components/List/UlList';
@@ -35,7 +35,7 @@ export default async function LandaHoldingBlack() {
           style2="space-y-2 mr-8 mt-4"
           style3="leading-4 md:leading-10 text-md"
         />
-
+        {/* TODO: use <Button> component instead of button input */}
         <button
           className={`relative mt-10 inline-flex items-center justify-center gap-4 ${t('lng') === 'en' ? '' : 'flex-row-reverse'
             } group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}
@@ -78,7 +78,7 @@ export default async function LandaHoldingBlack() {
           style2="space-y-2 mr-8"
           style3="leading-4 md:leading-10 text-md"
         />
-
+        {/* TODO: use <Button> component instead of button input */}
         <button className="group relative mt-10 inline-flex h-6 items-center justify-center gap-4 rounded-sm bg-[#222222] p-5 rtl:flex-row-reverse md:self-center md:p-6">
           <Link href={'/entrepreneurs'}>
             <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">

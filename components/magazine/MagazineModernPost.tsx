@@ -1,4 +1,4 @@
-import React from 'react';
+
 import MagazineModernPostCard from './MagazineModernPostCard';
 import MagazineModernPostCard2 from './MagazineModernPostCard2';
 import MagazineModernPostCard3 from './MagazineModernPostCard3';
