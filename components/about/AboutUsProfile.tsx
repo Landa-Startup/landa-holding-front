@@ -9,7 +9,7 @@ export default async function AboutUsProfile({ lang }: { lang: string }) {
 
   return (
     <div className="flex w-full mb-10 flex-col justify-center bg-[#FAFAFA]">
-      <div className="m-auto flex w-4/5 flex-col justify-center px-4 py-10">
+      <div className="m-auto flex w-5/6 flex-col justify-center px-4 py-10">
         <div
           className={`flex flex-col justify-items-center py-5 text-black lg:ml-64${
             t('lng') === 'fa' && 'mr-10'

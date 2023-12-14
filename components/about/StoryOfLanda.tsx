@@ -76,7 +76,7 @@ export default async function StoryOfLanda({ lang }: { lang: string }) {
         </div>
       </div>
       <div className="flex flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
-        <div className="flex flex-col px-10 font-barlow md:w-full">
+        <div className="flex flex-col font-barlow md:w-full">
           <span className="font-gilda text-3xl text-primary">
             {t('VisionOfTheLanaHolding', { returnObjects: true })[0].title}
           </span>
