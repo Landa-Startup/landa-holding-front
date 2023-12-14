@@ -139,7 +139,6 @@ export default function PartnerMembershipForm() {
                 register={register}
                 errors={errors}
                 nameInput="countryOfResidence"
-                lang={lang}
               />
 
             <div className="col-span-1">
