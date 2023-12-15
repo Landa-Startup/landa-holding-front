@@ -49,7 +49,7 @@ export default function Input({
           },
         })}
         placeholder={placeholder}
-        className={`text-sm ${className + (errors[nameInput] ? ' border-red-500' : '')}`}
+        className={`text-xs ${className + (errors[nameInput] ? ' border-red-500' : '')}`}
         />
       {errors[nameInput] && (
         <span className="mt-4 px-2 text-sm text-yellow-500">

@@ -98,8 +98,8 @@ export default function ContactUsForm() {
       <h2 className="text-center font-gilda text-5xl font-light">
         {t('contactForm', {returnObjects: true}).title}
       </h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="my-4 grid h-full grid-cols-1 gap-x-6 md:grid-cols-2">
+      <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-2'>
+        <div className="my-4 col-span-2 grid h-full grid-cols-1 gap-x-6 md:grid-cols-2">
 
           <PersonalInfoInput
             register={register}
@@ -123,7 +123,7 @@ export default function ContactUsForm() {
               patternValue=""
               patternMessage={t('contactForm', {returnObjects: true}).subjectRequired}
               placeholder={t('contactForm', {returnObjects: true}).subjectPlaceholder}
-              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
               labelClass='text-[#6b6b6b] dark:text-current'
               containerClass=''
             />
@@ -143,11 +143,13 @@ export default function ContactUsForm() {
             />
           </div>
         </div>  
+        <div className='col-span-1'>
         <Button
           type='submit'
           bgColor="Primary"
           disabled={errorsList[0] ? true : false}
         />
+        </div>
       </form>
       <NotificationSendForm />
     </div>
