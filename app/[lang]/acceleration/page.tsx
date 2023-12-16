@@ -1,14 +1,12 @@
 
-import AccelerationServices from '../../../components/acceleration/AccelerationServices';
-import Hero from '../../../components/acceleration/HeroAcceleration';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import AccelerationCard from '../../../components/acceleration/AccelerationCard';
 import { useTranslation } from 'app/i18n';
-// import ButtonRefactor from '@/components/common/ButtonRefactor';
+import AccelerationServices from '@/components/acceleration/AccelerationServices';
+import Hero from '@/components/acceleration/HeroAcceleration';
+import AccelerationCard from '@/components/acceleration/AccelerationCard';
 import Button from '@/components/common/Button';
 
-// Define metadata for the page
 export const metadata: Metadata = {
   title: 'Landa Holding | Acceleration',
   description:
@@ -40,10 +38,12 @@ export default async function Page({
           loading="lazy"
         />
       </div>
+      {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
       <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
         <span
           className={`mb-2 ml-12 mr-8 self-start text-3xl leading-tight text-[#55422A] md:text-5xl`}
         >
+          {/* TODO: delete [0],[1] from translation */}
           {t('LandaAccelerator', { returnObjects: true })[0].title}
         </span>
         <span
@@ -68,7 +68,7 @@ export default async function Page({
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
         </div>
-
+        {/* TODO: make better names like ForughAccelerator */}
         <AccelerationCard
           addedClass="md:h-[756px] mt-6 md:mt-16 pb-3"
           title={t('FORUGHACCELERATOR', { returnObjects: true })[0].title}
@@ -107,6 +107,7 @@ export default async function Page({
           />
         </div>
         <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] ltr:tracking-[2px] md:mx-10 md:text-left rtl:md:text-right">
+          {/* TODO: make svg component */}
           <svg
             className="mt-3 hidden md:block"
             xmlns="http://www.w3.org/2000/svg"

@@ -43,6 +43,7 @@ export default function EntrepreneursForm() {
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
+        // TODO: avoid hardcoding the URL.
         'https://panel.landaholding.com/get-csrf-token'
       );
       handleTokenChange(token);
@@ -103,6 +104,7 @@ export default function EntrepreneursForm() {
     <>
       <div
         className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent"
+        // TODO: avoid hardcoding the direction.
         dir={lang === 'en' ? 'ltr' : 'rtl'}
       >
         <EntrepreneursTitle />

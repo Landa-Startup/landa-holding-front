@@ -16,7 +16,7 @@ export default async function ContactUsDescription() {
   const { t } = await useTranslation(lang, "contact")
 
   return (
-    <div className='h-full' dir={t('lng') === "en" ? "ltr" : "rtl"}>
+    <div className='h-full'>
       <div className="mb-5 mt-10 flex flex-col items-center md:my-0 md:w-[464px] md:items-start">
         <h1 className="font-gilda text-4xl font-light md:text-5xl">
           {t('LandaHolding')}
@@ -25,7 +25,8 @@ export default async function ContactUsDescription() {
           {t('text')}
         </p>
       </div>
-
+      {/* TODO: make code more modular with new components */}
+      {/* TODO: avoid hardcode links and urls */}
       <div className="flex flex-row gap-3">
         <Link
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
@@ -46,7 +47,7 @@ export default async function ContactUsDescription() {
           <IconLinkedinB />
         </Link>
       </div>
-
+      {/* TODO: use translation instead hardcode */}
       <div className={`mt-10 flex flex-col gap-4`}>
         <div className="flex gap-5">
           <Phone />
@@ -75,7 +76,7 @@ export default async function ContactUsDescription() {
             </ul>
           </div>
         </div>
-
+        {/* TODO: Separate component for email information */}
         <div className="flex gap-5">
           <Email />
           <ul>
@@ -87,7 +88,7 @@ export default async function ContactUsDescription() {
             </li>
           </ul>
         </div>
-
+        {/* TODO: Separate component for location information */}
         <div className="flex gap-5">
           <Location />
           <div className="ml-2 flex flex-col ltr:text-left rtl:text-right">
