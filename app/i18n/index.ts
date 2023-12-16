@@ -2,18 +2,27 @@ import { createInstance } from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 import { getOptions } from './setting';
+import i18nextBrowserLanguagedetector from 'i18next-browser-languagedetector';
 
 const initI18next = async (lng: any, ns: any) => {
   const i18nInstance = createInstance();
   await i18nInstance
     .use(initReactI18next)
+    .use(i18nextBrowserLanguagedetector)
     .use(
       resourcesToBackend(
         (language: any, namespace: any) =>
           import(`./locales/${language}/${namespace}.json`)
       )
     )
-    .init(getOptions(lng, ns));
+    .init({
+      detection: {
+        order: ['path', 'navigator'],
+        caches: [],
+        lookupFromPathIndex: 0
+      },
+      ...getOptions(lng, ns)
+    });
   return i18nInstance;
 };
 
