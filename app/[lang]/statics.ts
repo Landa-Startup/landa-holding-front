@@ -298,10 +298,10 @@ const personsEN: personArrayInterface[] = [
   },
   {
     image: '/static/images/our-team/Personals/a3.png',
-    position: 'manager assistant',
+    position: 'Manager Assistant',
     name: 'Lida Parvizi',
     linkedIn: '',
-    category: 'manager assistant'
+    category: 'Manager Assistant'
   },
   {
     image: '/static/images/our-team/Personals/a4.png',
@@ -677,7 +677,7 @@ const rolesEN: Array<string> = [
   'Accountant',
   'Public Relations',
   'Digital Marketer',
-  'Secretary'
+  'Manager Assistant'
 ];
 
 const rolesFA: Array<string> = [
@@ -750,10 +750,10 @@ const companies: CompaniesArrayInterface[] = [
 const items: personArrayInterface[] = [
   {
     image: '/static/images/our-team/Personals/a3.png',
-    position: 'Secretary',
+    position: 'Manager Assistant',
     name: 'Lida Parvizi',
     linkedIn: '',
-    category: 'secretary'
+    category: 'manager Assistant'
   },
   {
     image: '/static/images/our-team/Personals/a6.png',
