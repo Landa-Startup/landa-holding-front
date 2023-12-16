@@ -108,7 +108,7 @@ export default function EntrepreneursForm() {
         dir={lang === 'en' ? 'ltr' : 'rtl'}
       >
         <EntrepreneursTitle />
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-between items-center'>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center justify-between'>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
 
             <PersonalInfoInput
@@ -172,7 +172,7 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="text-center pb-4">
+          <div className="pb-4 text-center">
             <Button
               type='submit'
               bgColor="Primary"

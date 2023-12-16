@@ -94,7 +94,7 @@ export default function ContactUsForm() {
   }))
 
   return (
-    <div className='h-full flex flex-col justify-between items-center md:items-start'>
+    <div className='flex h-full flex-col items-center justify-between md:items-start'>
       <h2 className="text-center font-gilda text-5xl font-light">
         {t('contactForm', {returnObjects: true}).title}
       </h2>
