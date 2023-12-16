@@ -1,36 +1,26 @@
 'use client';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-// import Input from '../common/form/Input';
+import Input from '../common/form/Input';
 import { initialApplicationFormData } from '../../initials/initObjects';
 import { LandaGeneFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
-// import { submitLandaApplicationForm } from 'pages/api/landa-gene';
+import { submitLandaApplicationForm } from 'pages/api/landa-gene';
 
-import { useSubmit } from 'providers/StateProvider';
-// import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 // import ButtonRefactor from '../common/ButtonRefactor';
+import Button from '../common/Button';
 import Image from 'next/image';
-import HandicraftForm from '../common/form/HandicraftForm';
+import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 
-export default function LandaGene({
-  lang,
-  textUp,
-  textMid,
-  textDown,
-  formText
-}: {
-  lang: string;
-  textUp: string;
-  textMid: string;
-  textDown: string;
-  formText: string;
-}) {
+export default function LandaGene() {
   const {
-    // register,
-    // handleSubmit,
-    // reset,
+    register,
+    handleSubmit,
+    reset,
     formState: { errors }
   } = useForm<LandaGeneFormData>({
     mode: 'onBlur',
@@ -38,14 +28,17 @@ export default function LandaGene({
   });
 
   const {
-    // csrfToken,
+    csrfToken,
     handleTokenChange,
-    // handleSubmitingChange,
-    // handleSendChange,
-    // handleNotifChange,
-    // handleChangeSuccess,
-    // handleChangeReject
-  } = useSubmit();
+    handleSubmitingChange,
+    handleSendChange,
+    handleNotifChange,
+    handleSuccessChange,
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang)
+
+  const { t } = useTranslation(lang, "landaGene")
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -58,57 +51,59 @@ export default function LandaGene({
     fetchCsrfToken();
   }, []);
 
-  // const onSubmit = async (formData: LandaGeneFormData) => {
-  //   // Set loading and sending states.
-  //   handleSubmitingChange(true);
-  //   handleSendChange(true);
+  const onSubmit = async (formData: LandaGeneFormData) => {
+    // Set loading and sending states.
+    handleSubmitingChange(true);
+    handleSendChange(true);
 
-  //   console.log(formData);
+    console.log(formData);
 
-  //   // Create a FormData object for form data.
-  //   const sendFormData = new FormData();
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
 
-  //   // Append all non-file form fields.
-  //   Object.entries(formData).forEach(([fieldName, fieldValue]) => {
-  //     if (typeof fieldValue !== 'object' || fieldValue === null) {
-  //       sendFormData.append(fieldName, String(fieldValue));
-  //     }
-  //   });
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
 
-  //   // Send the form data to the API.
-  //   submitLandaApplicationForm(sendFormData, csrfToken)
-  //     .then((response) => {
-  //       handleChangeSuccess();
-  //       reset(initialApplicationFormData); // Country does not reset
-  //       console.log('Form data sent successfully!');
+    // Send the form data to the API.
+    submitLandaApplicationForm(sendFormData, csrfToken)
+      .then((response) => {
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
+        reset(initialApplicationFormData); // Country does not reset
+        console.log('Form data sent successfully!');
 
-  //       setTimeout(() => {
-  //         handleNotifChange(false);
-  //       }, 10000); // 10 seconds in milliseconds
-  //       console.log(response);
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error sending form data:', error);
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error('Error sending form data:', error);
 
-  //       handleChangeReject();
-  //       reset(initialApplicationFormData);
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
+        reset(initialApplicationFormData);
 
-  //       setTimeout(() => {
-  //         handleNotifChange(false);
-  //       }, 10000); // 10 seconds in milliseconds
-  //     });
-  // };
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      });
+  };
 
   const errorsList = Object.entries(errors).map(([name, value]) => ({
     name: name,
     value: value
   }));
 
-  console.log(errorsList);
-
   return (
-    <div className="flex  flex-col items-start gap-[3px]">
-      <div className="flex w-full flex-col items-center md:py-16 md:pr-28 md:flex-row md:justify-evenly md:gap-4">
+    <div className="flex w-full flex-col items-start gap-[3px]">
+      <div className="flex w-full flex-col items-center p-4 md:flex-row md:justify-around md:gap-4">
         <div className="flex flex-col items-center gap-[4px] p-0">
           <div className="relative flex items-start p-0">
             <svg
@@ -142,68 +137,141 @@ export default function LandaGene({
             </svg>
           </div>
           <p className="text-blue font-sans text-[15px]  leading-normal md:text-[25px]">
-            LANDA GENE
+            {t('banner')}
           </p>
         </div>
 
-        <div className="flex md:w-[870px] md:h-[336px] shrink-0 items-center p-4 ">
-          <p className="md:w-[870px] text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-xl lg:leading-[40px]">
-            {textUp}
+        <div className="flex w-full shrink-0 items-center p-4 md:w-3/5">
+          <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:leading-[30px] lg:text-[25px] lg:leading-[40px]">
+            {t('textUp')}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col items-center md:flex-row-reverse md:justify-around md:px-28 md:py-10">
-        <div className="flex relative w-[350px] h-[414px] md:w-[527px] md:h-[524] shrink-0 ">
-          <Image
+      <div className="flex w-full flex-col items-center p-4 md:flex-row-reverse md:justify-around">
+        <div className="flex h-auto w-full shrink-0 p-4 md:h-[500px] md:w-1/2 lg:h-[450px] lg:w-2/5">
+          {/* <Image
+              src="/static/images/gene-1.png"
+              layout='fill'
+              alt="gene-1"
+              fill={true}
+            /> */}
+          {/* <Image
             src="/static/images/gene-1.png"
             alt="gene-1"
             layout='fill'
-            className=""
-          />
+          /> */}
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-3/5">
-          <p className="w-full text-justify font-sans text-[15px]  leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-xl lg:leading-[40px]">
-            {textMid}
+          <p className="w-full text-justify font-sans text-[15px]  leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[40px]">
+            {t('textMid')}
           </p>
         </div>
       </div>
 
-      <div className="flex  flex-col items-center md:px-28 md:py-6 md:flex-row md:justify-between">
-        <div className="flex relative w-[350px] h-[414px] md:w-[500px] md:h-[452px] shrink-0  ">
+      <div className="flex w-full flex-col items-center p-4 md:flex-row md:justify-between">
+        <div className="flex h-auto w-full shrink-0 p-4 md:h-[350px] md:w-1/2 lg:h-[370px] lg:w-1/3">
+          {/* <Image
+              src="/static/images/gene-1.png"
+              alt="gene-1"
+              fill={true}
+            /> */}
           <Image
             src="/static/images/gene-2.png"
             alt="gene-1"
+            className="h-full w-full"
             layout='fill'
-            className=""
           />
         </div>
 
         <div className="flex w-full shrink-0 items-center p-4 md:w-1/2 lg:w-2/3">
-          <p className="md:w-[623px] md:h-[445px] text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-xl lg:leading-[50px]">
-            {textDown}
+          <p className="w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black md:mt-2 md:leading-[28px] lg:text-[25px] lg:leading-[50px]">
+            {t('textDown')}
           </p>
         </div>
       </div>
 
       <div className="flex h-auto w-full items-start bg-[#F8F5F0] px-[32px] py-[31px]">
-        <div className="flex h-auto w-full flex-col items-center justify-between md:py-4 md:px-24">
+        <div className="flex h-auto w-full flex-col items-center justify-between p-0">
           <div className="flex w-full flex-col items-start p-0">
             <p
-              className={`w-full text-justify font-sans md:pb-7 text-[18px] leading-normal  text-primary ${
+              className={`w-full text-justify font-sans text-[18px] leading-normal  text-primary ${
                 lang === 'en' ? 'md:tracking-[2px]' : ''
               }`}
             >
-              {formText}
+              {t('formText')}
             </p>
           </div>
 
-          <HandicraftForm 
-          lang={lang}
-          />
+          <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
+            <div className="my-4 grid w-full grid-cols-1 md:flex md:w-3/5 md:flex-col md:items-center lg:w-2/5">
+              <div className='flex w-full flex-col items-center gap-2 md:flex-row'>
+              <PersonalInfoInput
+                register={register}
+                errors={errors}
+                nameInputs={{
+                  firstName: 'name',
+                  lastName: '',
+                  email: '',
+                  phoneNumber: 'phone'
+                }}
+                noLabel={true}
+              />
+              </div>
 
-          <NotificationSendForm lang={lang}/>
+              <div className="col-span-1 w-full">
+                <Input
+                  register={register}
+                  errors={errors}
+                  nameInput="email"
+                  type="text"
+                  required=""
+                  patternValue=""
+                  patternMessage=""
+                  placeholder={
+                    lang === 'en'
+                      ? 'Your Email'
+                      : 'ایمیل شما'
+                  }
+                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                  containerClass="w-full"
+                  labelClass=""
+                />
+              </div>
+
+              <div className="col-span-1 w-full">
+                <Input
+                  register={register}
+                  errors={errors}
+                  nameInput="company"
+                  type="text"
+                  required=""
+                  patternValue=""
+                  patternMessage=""
+                  placeholder={
+                    lang === 'en'
+                      ? 'Name of Your Organization, if applicable'
+                      : 'نام شرکت خود را در صورت امکان وارد کنید'
+                  }
+                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                  containerClass="w-full"
+                  labelClass=""
+                />
+              </div>
+            </div>
+
+            <div className="w-full text-center md:w-auto">
+              <Button
+                type='submit'
+                bgColor="Primary"
+                disabled={errorsList[0] ? true : false}
+                lang={lang}
+              />
+              {/* <ButtonRefactor type="submit" text="Submit" /> */}
+            </div>
+          </form>
+          <NotificationSendForm />
         </div>
       </div>
     </div>

@@ -9,14 +9,14 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import Input from '../common/form/Input';
 import { initialInvestorRegistrationFormData } from '../../initials/initObjects';
 import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
-import { useSubmit } from '../../providers/StateProvider';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 
-export default function InvestorRegistrationForm({ lang }: { lang: string }) {
-  const { t } = useTranslation(lang, 'formComponent');
+export default function InvestorRegistrationForm() {
   const {
     register,
     handleSubmit,
@@ -33,9 +33,12 @@ export default function InvestorRegistrationForm({ lang }: { lang: string }) {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject
-  } = useSubmit();
+    handleSuccessChange,
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang)
+
+  const { t } = useTranslation(lang, 'formComponent');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -67,7 +70,9 @@ export default function InvestorRegistrationForm({ lang }: { lang: string }) {
       .then((response) => {
         console.log(response);
 
-        handleChangeSuccess();
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
         reset(initialInvestorRegistrationFormData); // Country does not reset
         setTimeout(() => {
           handleNotifChange(false);
@@ -75,7 +80,9 @@ export default function InvestorRegistrationForm({ lang }: { lang: string }) {
       })
       .catch((error) => {
         console.log(error);
-        handleChangeReject();
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
         reset(initialInvestorRegistrationFormData);
 
         setTimeout(() => {
@@ -91,8 +98,8 @@ export default function InvestorRegistrationForm({ lang }: { lang: string }) {
 
   return (
     <>
-      <div className="container m-[-1rem] mx-auto bg-[#faf8f5] px-5 font-barlow dark:bg-transparent lg:p-20">
-        <InvestorRegistrationTitle lang={lang} />
+      <div className="container m-[-1rem] mx-auto my-20 bg-[#F8F5F0] px-5 font-barlow lg:p-20">
+        <InvestorRegistrationTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
@@ -104,7 +111,6 @@ export default function InvestorRegistrationForm({ lang }: { lang: string }) {
                 email: 'email',
                 phoneNumber: ''
               }}
-              lang={lang}
             />
 
             <div className="col-span-1">
@@ -127,7 +133,6 @@ export default function InvestorRegistrationForm({ lang }: { lang: string }) {
               register={register}
               errors={errors}
               nameInput="countryOfResidence"
-              lang={lang}
             />
 
             <div className="col-span-1">
@@ -201,11 +206,11 @@ export default function InvestorRegistrationForm({ lang }: { lang: string }) {
               />
             </div>
           </div>
-          <div className="mx-auto w-fit">
+          <div className="mx-auto w-fit pb-4">
             <ButtonRefactor type="submit" text={t('sendButton')} />
           </div>
         </form>
-        <NotificationSendForm lang={lang} />
+        <NotificationSendForm/>
       </div>
     </>
   );

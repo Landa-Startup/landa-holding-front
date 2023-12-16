@@ -2,18 +2,18 @@ import * as React from 'react';
 import UploadInput from '../common/UploadInput';
 import TextArea from '../common/TextArea';
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormBusinessModel({
   register,
   errors,
-  handleFinancialFileChange,
-  lang
+  handleFinancialFileChange
 }: {
   register: any;
   errors: any;
   handleFinancialFileChange: any;
-  lang: string;
 }) {
+  const { lang } = useLang((s) => s )
   const { t } = useTranslation(lang, 'formComponent');
 
   return (
@@ -47,7 +47,7 @@ export default function StartupFormBusinessModel({
             }
           />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 mb-4 flex flex-col items-start gap-4">
           <TextArea
             title={
               t('startUp', { returnObjects: true }).businessModel
@@ -67,12 +67,9 @@ export default function StartupFormBusinessModel({
                 .structureOfYourSalesRequired
             }
           />
-        </div>
-        {/* <Input
-          register={register}
-          errors={errors}
-        /> */}
-        <UploadInput
+
+          <div>
+          <UploadInput
           title={
             t('startUp', { returnObjects: true }).businessModel.financialPlan
           }
@@ -80,7 +77,13 @@ export default function StartupFormBusinessModel({
           errors={errors}
           nameInput="financial plan"
           handleChange={handleFinancialFileChange}
-        />
+          />
+          </div>
+        </div>
+        {/* <Input
+          register={register}
+          errors={errors}
+        /> */}
         {/* <div className="col-start-1 col-span-1">
           <label className="text-[#6b6b6b] dark:text-current">If your plan has a financial model, please upload</label>
           <div className='flex justify-center'>

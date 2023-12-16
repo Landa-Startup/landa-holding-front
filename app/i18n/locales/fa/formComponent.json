@@ -37,6 +37,16 @@
     "howDidYouKnowUsPlaceholder":"توضیحات",
     "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
 
+    "contactForm": {
+        "title": "با ما تماس بگیرید",
+        "subject": "موضوع",
+        "subjectRequired": "موضوع شما الزامی است",
+        "subjectPlaceholder": "موضوع شما",
+        "message": "پیام شما",
+        "messageRequired": "پیام شما الزامی است",
+        "messagePlaceholder": "پیام شما"
+    },
+
     "jobForm":{
         "lng": "fa",
         "dir": "rtl",

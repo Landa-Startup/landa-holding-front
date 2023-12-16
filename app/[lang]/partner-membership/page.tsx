@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from '../../../components/common/Banner';
 import PartnerMembershipForm from '../../../components/partner-membership/PartnerMembershipForm';
 import { Metadata } from 'next';
-import { SubmitProvider } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
@@ -17,18 +16,16 @@ export default async function AffiliateFormPage({
   params: { lang: string };
 }) {
 
-  const { t } = await useTranslation(lang, "partnerMemberForm")
+  const { t } = await useTranslation(lang, "formComponent")
 
   return (
-    <div dir={t('dir')}>
+    <div>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title={t('banner')}
+        title={t('jobForm', {returnObjects: true}).banner}
         lang={lang}
       />
-      <SubmitProvider>
-        <PartnerMembershipForm lang={lang} />
-      </SubmitProvider>
+      <PartnerMembershipForm />
     </div>
   );
 }

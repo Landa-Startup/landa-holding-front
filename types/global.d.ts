@@ -131,6 +131,8 @@ interface StartupsFormData {
 }
 
 interface Entrepreuneur {
+  firstName: string;
+  lastName: string;
   email: string;
   companyName: string;
   phoneNumber: string;
@@ -250,15 +252,12 @@ interface HomeCardsProps {
   reverse?: boolean;
   addedClass?: string;
   link: string;
-  lang: string;
 }
 
 interface HomeCardsLeftProps {
   text: string;
   addedClass?: string;
   link: string;
-  lang: string;
-  buttonText: string;
 }
 
 interface ImagesInterface {

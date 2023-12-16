@@ -26,7 +26,7 @@ export default async function Page({
         logo="/static/images/handicrafts.svg"
         lang={lang}
       />
-      <div className="mx-8 my-14 flex justify-center flex-col gap-8 md:mx-24">
+      <div className="mx-8 my-14 flex flex-col justify-center gap-8 md:mx-24">
         <div className="relative flex">
           <div className='pr-6 '>
           <Image
@@ -42,11 +42,11 @@ export default async function Page({
             alt="handicraft"
             layout="fill"
           />
-          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] tracking-wider text-black md:mr-10 md:mb-16 md:mt-5">
+          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] tracking-wider text-black md:mb-16 md:mr-10 md:mt-5">
             {t('paragraph1')}
           </p>
         </div>
-        <div className="relative flex justify-center flex-col-reverse gap-5 overflow-hidden md:flex-row">
+        <div className="relative flex flex-col-reverse justify-center gap-5 overflow-hidden md:flex-row">
           <p className="mt-7 text-justify font-barlow text-base font-normal leading-[45px] tracking-wider text-black md:mt-0 md:h-[720px] md:w-[652px]">
             {t('paragraph2')}
             <br />
@@ -60,7 +60,7 @@ export default async function Page({
               layout="fill"
             />
           </div>
-          <div className="relative md:h-[720px] h-[494px] w-full md:w-[565px]">
+          <div className="relative h-[494px] w-full md:h-[720px] md:w-[565px]">
             <Image
               className="rounded-sm object-cover"
               src="/static/images/handicrafts1.jpg"
@@ -69,11 +69,11 @@ export default async function Page({
             />
           </div>
         </div>
-        <div className="flex flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5 md:px-24">
+        <div className="flex w-full flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5">
           <p className="font-openSans text-base font-bold leading-[210%] tracking-wider text-[#AA8453]">
             {t('formTitle')}
           </p>
-          <HandicraftForm lang={lang} />
+          <HandicraftForm />
         </div>
       </div>
     </div>

@@ -1,17 +1,27 @@
 import React from 'react';
 import Check from '../../../components/icons/common/Check';
-import { useSubmit } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n/client';
+import { useSubmit } from 'stores/submitStore';
+import { useLang } from 'stores/langStore';
 
-export default function NotificationSendForm({lang}:{lang:string}) {
-  const { t } = useTranslation(lang, 'formComponent');
+export default function NotificationSendForm() {
 
   const {
     isSubmitting,
     isSuccess,
     send,
-    showNotification
-  } = useSubmit();
+    showNotification,
+  } = useSubmit((s) => s)
+
+  const lang = useLang((s) => s.lang);
+
+  // const isSubmitting = useLang((s) => s.isSubmitting)
+  // const isSuccess = useLang((s) => s.isSuccess)
+  // const send = useLang((s) => s.send)
+  // const showNotification = useLang((s) => s.showNotification)
+  // const lang = useLang((s) => s.lang)
+
+  const { t } = useTranslation(lang, 'formComponent');
 
   return (
     <div className="mx-auto mt-5 w-64 lg:w-96">

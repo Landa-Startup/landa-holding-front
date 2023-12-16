@@ -12,14 +12,17 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
-import { useSubmit } from '../../providers/StateProvider';
 import { useTranslation } from 'app/i18n/client';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
+import Button from '../common/Button';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
+import { useFile } from 'stores/fileStore';
+import StartupFormTrialProduct from './StartupFormTrialProduct';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
-export default function StartupFormForm({ lang }: { lang: string }) {
-  const { t } = useTranslation(lang, 'formComponent');
+export default function StartupFormForm() {
 
   enum Type {
     IDEA = 'IDEA',
@@ -60,15 +63,21 @@ export default function StartupFormForm({ lang }: { lang: string }) {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject,
-    filePost,
-    filePost2,
-    filePost3,
+    handleSuccessChange,
+  } = useSubmit((s) => s)
+
+  const { 
+    filePostBussines,
+    filePostPitch,
+    filePostFinancial,
     handleBusinessFileChange,
     handleFinancialFileChange,
-    handlePitchFileChange
-  } = useSubmit();
+    handlePitchFileChange,
+   } = useFile((s) => s)
+
+  const lang = useLang((s) => s.lang)
+ 
+  const { t } = useTranslation(lang, 'formComponent');
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRadio(event.target.value);
@@ -97,9 +106,9 @@ export default function StartupFormForm({ lang }: { lang: string }) {
 
     // Handle conditional file attachments.
     const filePostMap = {
-      businessPlanFile: filePost.businessPlanFile,
-      pitchDeckFile: filePost2.pitchDeckFile,
-      financialFile: filePost3.financialFile
+      businessPlanFile: filePostBussines.businessPlanFile,
+      pitchDeckFile: filePostPitch.pitchDeckFile,
+      financialFile: filePostFinancial.financialFile
     };
 
     for (const [fieldName, file] of Object.entries(filePostMap)) {
@@ -137,7 +146,9 @@ export default function StartupFormForm({ lang }: { lang: string }) {
     // Send the form data to the API.
     submitStartupsForm(sendFormData, csrfToken)
       .then((response) => {
-        handleChangeSuccess();
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
         reset(initialStartupsFormData); // Country does not reset
         setSelectedRadio('');
 
@@ -148,7 +159,9 @@ export default function StartupFormForm({ lang }: { lang: string }) {
         }, 10000); // 10 seconds in milliseconds
       })
       .catch(() => {
-        handleChangeReject();
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
         reset(initialStartupsFormData);
         setTimeout(() => {
           handleNotifChange(false);
@@ -156,10 +169,10 @@ export default function StartupFormForm({ lang }: { lang: string }) {
       });
   };
 
-  // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   name: name,
-  //   value: value
-  // }));
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }));
 
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
@@ -183,7 +196,6 @@ export default function StartupFormForm({ lang }: { lang: string }) {
           <StartupFormPersonalInformation
             register={register}
             errors={errors}
-            lang={lang}
           />
 
           <div className="col-span-2">
@@ -218,13 +230,7 @@ export default function StartupFormForm({ lang }: { lang: string }) {
           {((): any => {
             switch (selectedRadio) {
               case 'IDEA':
-                return (
-                  <StartupFormIdea
-                    register={register}
-                    errors={errors}
-                    lang={lang}
-                  />
-                );
+                return <StartupFormIdea register={register} errors={errors} />;
                 break;
               case 'MVP':
                 return (
@@ -234,7 +240,17 @@ export default function StartupFormForm({ lang }: { lang: string }) {
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
-                    lang={lang}
+                  />
+                );
+                break;
+              case 'TRIAL':
+                return (
+                  <StartupFormTrialProduct
+                    register={register}
+                    errors={errors}
+                    handlePitchDeckFileChange={handlePitchFileChange}
+                    handleBusinessPlanFileChange={handleBusinessFileChange}
+                    handleFinancialFileChange={handleFinancialFileChange}
                   />
                 );
                 break;
@@ -246,7 +262,6 @@ export default function StartupFormForm({ lang }: { lang: string }) {
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
-                    lang={lang}
                   />
                 );
                 break;
@@ -258,7 +273,6 @@ export default function StartupFormForm({ lang }: { lang: string }) {
                     handlePitchFileChange={handlePitchFileChange}
                     handleBusinessFileChange={handleBusinessFileChange}
                     handleFinancialFileChange={handleFinancialFileChange}
-                    lang={lang}
                   />
                 );
                 break;
@@ -267,16 +281,15 @@ export default function StartupFormForm({ lang }: { lang: string }) {
             }
           })()}
 
-          <div className="mx-auto w-fit">
-            {/* <Button
+          <div className="ml-1 mt-10 text-start">
+            <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
-              lang={lang}
-            /> */}
-            <ButtonRefactor type="submit" text={t('sendButton')} />
+            />
+            {/* <ButtonRefactor type="submit" text="Submit" /> */}
           </div>
-          <NotificationSendForm lang={lang} />
+          <NotificationSendForm />
         </form>
       </div>
     </div>

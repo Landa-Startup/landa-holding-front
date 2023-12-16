@@ -10,17 +10,17 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialPartnerMembershipFormData } from '../../initials/initObjects';
 import { submitPartnerMembershipForm } from '../../pages/api/partner-membership';
 
-import { useSubmit } from '../../providers/StateProvider';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
+import Button from '../common/Button';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 
 // import { PartnerMembership } from '@prisma/client';
 
-export default function PartnerMembershipForm({ lang }: { lang: string }) {
-  const { t } = useTranslation(lang, 'formComponent');
-
+export default function PartnerMembershipForm() {
   const {
     register,
     handleSubmit,
@@ -37,9 +37,12 @@ export default function PartnerMembershipForm({ lang }: { lang: string }) {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleChangeSuccess,
-    handleChangeReject
-  } = useSubmit();
+    handleSuccessChange,
+  } = useSubmit((s) => s )
+
+  const lang = useLang((s) => s.lang)
+
+  const { t } = useTranslation(lang, "formComponent");
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -71,7 +74,9 @@ export default function PartnerMembershipForm({ lang }: { lang: string }) {
     // Send the form data to the API.
     submitPartnerMembershipForm(sendFormData, csrfToken)
       .then((response) => {
-        handleChangeSuccess();
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
         reset(initialPartnerMembershipFormData); // Country does not reset
 
         console.log(response);
@@ -81,7 +86,9 @@ export default function PartnerMembershipForm({ lang }: { lang: string }) {
         }, 10000); // 10 seconds in milliseconds
       })
       .catch(() => {
-        handleChangeReject();
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
         reset(initialPartnerMembershipFormData);
         setTimeout(() => {
           handleNotifChange(false);
@@ -89,17 +96,17 @@ export default function PartnerMembershipForm({ lang }: { lang: string }) {
       });
   };
 
-  // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   name: name,
-  //   value: value
-  // }));
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }));
 
   return (
     <div>
       <div>
-        <div className="container m-[-1rem] mx-auto bg-[#faf8f5] px-5 font-barlow dark:bg-transparent lg:p-20">
-          <PartnerMembershipTitle lang={lang} />
-          <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="container m-[-1rem] mx-auto my-20 bg-[#F8F5F0] px-5 font-barlow lg:p-20">
+          <PartnerMembershipTitle />
+          <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center justify-between'>
             <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
               <PersonalInfoInput
                 register={register}
@@ -110,116 +117,100 @@ export default function PartnerMembershipForm({ lang }: { lang: string }) {
                   email: 'email',
                   phoneNumber: ''
                 }}
-                lang={lang}
               />
 
-              <div className="col-span-1">
-                <Input
-                  register={register}
-                  errors={errors}
-                  nameInput="birthDate"
-                  type="date"
-                  label={lang === 'en' ? 'Date of Birth' : 'تاریخ تولد'}
-                  required={
-                    lang === 'en'
-                      ? 'Date of Birth is Required.'
-                      : 'تاریخ تولد الزامی است'
-                  }
-                  patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
-                  patternMessage="Please enter a valid Date of Birth (e.g., 2001/02/11)"
-                  placeholder={
-                    lang === 'en'
-                      ? 'Enter your Date of Birth'
-                      : 'تاریخ تولد خود را وارد کنید'
-                  }
-                  className="input input-bordered col-span-1 mb-1 mt-2 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                  labelClass="text-[#6b6b6b] dark:text-current"
-                />
-              </div>
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="birthDate"
+                type="date"
+                label={t('birthDate')}
+                required={t('birthDateRequired')}
+                patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
+                patternMessage={t('birthDateErrorMessage')}
+                placeholder={t('birthDatePlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-2 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+              />
+            </div>
 
               <CountryInput
                 register={register}
                 errors={errors}
                 nameInput="countryOfResidence"
-                lang={lang}
               />
 
-              <div className="col-span-1">
-                <Input
-                  register={register}
-                  errors={errors}
-                  nameInput="companyName"
-                  type="text"
-                  label={lang === 'en' ? 'Company Name' : 'نام شرکت'}
-                  required={
-                    lang === 'en'
-                      ? 'Company Name is Required.'
-                      : 'نام شرکت الزامی است'
-                  }
-                  placeholder={
-                    lang === 'en'
-                      ? 'Enter your Company Name'
-                      : 'نام شرکت خود را وارد کنید'
-                  }
-                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                  labelClass="text-[#6b6b6b] dark:text-current"
-                  patternValue=""
-                  patternMessage=""
-                />
-              </div>
-
-              <div className="col-span-1">
-                <Input
-                  register={register}
-                  errors={errors}
-                  nameInput="investmentCeiling"
-                  type="text"
-                  label={
-                    lang === 'en' ? 'Investment Ceiling' : 'سقف سرمایه گذاری'
-                  }
-                  required={
-                    lang === 'en'
-                      ? 'Investment Ceiling is Required.'
-                      : 'سقف سرمایه گذاری الزامی است'
-                  }
-                  placeholder={
-                    lang === 'en'
-                      ? 'Enter your Investment Ceiling'
-                      : 'سقف سرمایه گذاری خود را وارد کنید'
-                  }
-                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                  labelClass="text-[#6b6b6b] dark:text-current"
-                  patternValue={''}
-                  patternMessage={''}
-                />
-              </div>
-
-              <div className="col-span-1 md:col-span-2">
-                <TextArea
-                  title={
-                    lang === 'en'
-                      ? 'How did you hear about us?*'
-                      : 'چگونه درباره ما شنیدید'
-                  }
-                  register={register}
-                  errors={errors}
-                  placeholder={lang === 'en' ? 'Description' : 'توضیحات'}
-                  nameTextArea="howDidYouKnowUs"
-                  patternMessage=""
-                  patternValue=""
-                  required={
-                    lang === 'en'
-                      ? 'This field is required'
-                      : 'پر کردن این قسمت الزامی است'
-                  }
-                />
-              </div>
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="birthDate"
+                type="date"
+                label={t('birthDate')}
+                required={t('birthDateRequired')}
+                patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
+                patternMessage={t('birthDateErrorMessage')}
+                placeholder={t('birthDatePlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-2 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+              />
             </div>
-            <div className="mx-auto w-fit">
-              <ButtonRefactor type="submit" text={t('sendButton')} />
+
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="companyName"
+                type="text"
+                label={t('companyName')}
+                required={t('companyNameRequired')}
+                placeholder={t('companyNamePlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue=""
+                patternMessage=""
+              />
+            </div>
+
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="investmentCeiling"
+                type="text"
+                label={t('investmentCeiling')}
+                required={t('investmentCeilingRequired')} 
+                placeholder={t('investmentCeilingPlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue={''}
+                patternMessage={''}
+              />
+            </div>
+
+            <div className="col-span-1 md:col-span-2">
+              <TextArea
+                title={t('howDidYouKnowUs')}
+                register={register}
+                errors={errors}
+                placeholder={t('howDidYouKnowUsPlaceholder')}
+                nameTextArea="howDidYouKnowUs"
+                patternMessage=""
+                patternValue=""
+                required={t('howDidYouKnowUsRequired')}
+              />
+            </div>
+            </div>
+            <div className="text-center">
+              <Button
+                type='submit'
+                bgColor="Primary"
+                disabled={errorsList[0] ? true : false}
+              />
             </div>
           </form>
-          <NotificationSendForm lang={lang} />
+          <NotificationSendForm />
         </div>
       </div>
     </div>

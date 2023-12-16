@@ -3,16 +3,16 @@ import TextArea from '../common/TextArea';
 import RadioButtonGroup from '../common/RadioButtonGroup';
 // import { preparationStatsOption } from '../../app/[lang]/statics'
 import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 
 export default function StartupFormSolutions({
   register,
-  errors,
-  lang
+  errors
 }:{
   register:any;
   errors:any;
-  lang:string;
 }){
+  const { lang } = useLang((s) => s)
   const { t } = useTranslation(lang, 'formComponent');
   return (
     <>

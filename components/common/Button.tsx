@@ -1,7 +1,8 @@
 'use client';
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { useRouter } from 'next/navigation';
-import { useSubmit } from '../../providers/StateProvider';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/submitStore';
 
 // Define the ButtonProps type
 // go to prop causes a redirext
@@ -16,7 +17,6 @@ type ButtonProps = DetailedHTMLProps<
   bgColor?: 'Primary' | 'Yellow';
   goto?: string;
   disabled?: boolean;
-  lang?: string
   addedClass?: string;
 };
 
@@ -26,14 +26,15 @@ export default function Button({
   type = 'button',
   bgColor,
   goto,
-  lang,
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
 
   const router = useRouter();
 
-  const { send } = useSubmit();
+  const send = useSubmit((s) => s.send)
+  
+  const lang= useLang((s) => s.lang);
 
   return (
     <button

@@ -30,10 +30,10 @@ export default function AboutusPersonalTabs({
         src={image}
         alt="Landa Directors"
         layout="fill"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         quality={90}
       />
-      <div className="z-10 ml-2 mb-2 mt-2 flex flex-col gap-2 rtl:mr-2">
+      <div className="z-10 my-2 ml-2 flex flex-col gap-2 rtl:mr-2">
         <div>
           <Link href={linkedIn} target="_blank">
             <IconLinkedin />
@@ -56,12 +56,12 @@ export default function AboutusPersonalTabs({
           </Link>
         </div>
       </div>
-      <div className="absolute -bottom-[4.4rem] w-full bg-[#F8F5F0] mt-64 flex flex-col items-center px-4 pb-4  ">
-        <span className="text-2xl font-normal text-black font-gilda">
+      <div className="absolute -bottom-[4.4rem] mt-64 flex w-full flex-col items-center bg-[#F8F5F0] px-4 pb-4  ">
+        <span className="font-gilda text-2xl font-normal text-black">
           {name}
         </span>
         <div className="flex w-full items-center justify-center font-light  ">
-          <span className="border-t-3 font-light font-barlow text-[#AA8453] text-lg">
+          <span className="border-t-3 font-barlow text-lg font-light text-[#AA8453]">
             {position}
           </span>
         </div>
