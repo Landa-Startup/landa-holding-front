@@ -204,9 +204,9 @@ export default function LandaGene() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col items-center">
-            <div className="my-4 grid w-full md:w-3/5 lg:w-2/5 grid-cols-1 md:flex md:flex-col md:items-center">
-              <div className='w-full flex flex-col md:flex-row items-center gap-2'>
+          <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
+            <div className="my-4 grid w-full grid-cols-1 md:flex md:w-3/5 md:flex-col md:items-center lg:w-2/5">
+              <div className='flex w-full flex-col items-center gap-2 md:flex-row'>
               <PersonalInfoInput
                 register={register}
                 errors={errors}
@@ -261,7 +261,7 @@ export default function LandaGene() {
               </div>
             </div>
 
-            <div className="text-center w-full md:w-auto">
+            <div className="w-full text-center md:w-auto">
               <Button
                 type='submit'
                 bgColor="Primary"

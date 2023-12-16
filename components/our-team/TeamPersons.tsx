@@ -39,7 +39,7 @@ export default function TeamPersons() {
   }
   return (
     <div>
-      <div className="w-full border flex justify-center">
+      <div className="flex w-full justify-center border">
         <TeamRolesContainer
           onRoleSelect={handleRoleSelect}
           roles={t('roles', { returnObjects: true })}

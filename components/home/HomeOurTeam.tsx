@@ -10,7 +10,7 @@ export default async function HomeOurTeam() {
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
-    <div className="relative my-10 md:mb-16 inline-flex w-full flex-col items-center justify-start gap-9 bg-white">
+    <div className="relative my-10 inline-flex w-full flex-col items-center justify-start gap-9 bg-white md:mb-16">
       <div
         className="flex flex-col ltr:ml-5 ltr:mr-10 rtl:mr-5 lg:self-start ltr:xl:ml-28 rtl:xl:mr-40"
       >
@@ -31,7 +31,7 @@ export default async function HomeOurTeam() {
           width={789}
           height={243}
           alt="OurTeam"
-          className="hidden mb-9 h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
+          className="mb-9 hidden h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
           src="/static/images/Home/OurTeam/desktop.jpg"
         />
         <Image
@@ -39,7 +39,7 @@ export default async function HomeOurTeam() {
           width={375}
           height={200}
           alt="OurTeam"
-          className="object-cover mb-6 md:hidden"
+          className="mb-6 object-cover md:hidden"
           src="/static/images/Home/OurTeam/mobile.jpeg"
         />
       </div>

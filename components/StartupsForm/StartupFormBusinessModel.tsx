@@ -47,7 +47,7 @@ export default function StartupFormBusinessModel({
             }
           />
         </div>
-        <div className="col-span-2 flex flex-col items-start gap-4 mb-4">
+        <div className="col-span-2 mb-4 flex flex-col items-start gap-4">
           <TextArea
             title={
               t('startUp', { returnObjects: true }).businessModel
