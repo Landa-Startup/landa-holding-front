@@ -1,19 +1,11 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 type State = {
-    lang : string;
-}
+  lang: string;
+  setLanguage: (language: string) => void;
+};
 
-type Action = {
-    updateLang: (lang: State['lang']) => void,
-    // handleChangeSuccess: () => void,
-}
-
-const useLang = create<State & Action>((set) => {
-    return {
-        lang: "",
-        updateLang: (lang) => set(() => ({ lang: lang })),
-    };
-});
-
-export { useLang }
+export const useLang = create<State>((set) => ({
+  lang: 'en',
+  setLanguage: (lang) => set(() => ({ lang }))
+}));
