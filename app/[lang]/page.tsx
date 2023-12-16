@@ -24,13 +24,11 @@ export default async function Page({
 }) {
   const { t } = await useTranslation(lang, 'mainPage');
 
-  // console.log(t("cards"));
-
   return (
     <div className="relative">
-      {/* Hero section */}
+      {/* TODO: read t inside hero components using zustend */}
       <Hero
-        lang={t('lng')}
+        lang={lang}
         showLanda
         titles={[t('Acceleration'), t('Investment'), t('Academy')]}
         title={t('LandaHolding')}
@@ -40,13 +38,13 @@ export default async function Page({
         showButton={false}
       />
 
-      <HomeCardsContainer lang={lang} />
-      <LandaHoldingBlack lang={lang} />
-      <LandaHoldingPriority lang={lang} />
-      <HomeOurTeam lang={lang} />
-      <LatestStartups lang={lang} />
-      {/* <AerialViewBusinessTeam lang={lang} /> */}
-      <Partners lang={lang} />
+        <HomeCardsContainer />
+        <LandaHoldingBlack />
+        <LandaHoldingPriority />
+        <HomeOurTeam />
+        <LatestStartups />
+        {/* <AerialViewBusinessTeam /> */}
+        <Partners />
     </div>
   );
 }

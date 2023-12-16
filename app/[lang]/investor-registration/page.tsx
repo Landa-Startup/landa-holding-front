@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from '../../../components/common/Banner';
 import InvestorRegistrationForm from '../../../components/investor-registration/InvestorRegistrationForm';
 import { Metadata } from 'next';
-import { SubmitProvider } from '../../../providers/StateProvider';
 import { useTranslation } from 'app/i18n';
 
 export const metadata: Metadata = {
@@ -20,15 +19,13 @@ export default async function InvestorRegistrationPage({
   const { t } = await useTranslation(lang, "investorForm")
 
   return (
-    <div dir={lang === "en" ? "ltr" : "rtl"}>
+    <div>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
         title={t('banner')}
         lang={lang}
       />
-      <SubmitProvider>
-        <InvestorRegistrationForm lang={lang} />
-      </SubmitProvider>
+      <InvestorRegistrationForm />
     </div>
   );
 }

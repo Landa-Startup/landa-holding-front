@@ -12,7 +12,7 @@ export default function TextArea({
   rows,
   cols,
 }: {
-  title: string;
+  title?: string;
   register: any;
   errors: any;
   required: string;
@@ -27,9 +27,9 @@ export default function TextArea({
   const pattern = new RegExp(patternValue);
 
   return (
-    <div>
+    <div className='flex flex-col items-start'>
       {/* Label for the textarea */}
-      <label className="px-2 text-lg text-[#6b6b6b] dark:text-current">{title}</label>
+      {title && (<label className="px-2 text-lg text-[#6b6b6b] dark:text-current">{title}</label>)}
       <textarea
         rows={rows}
         cols={cols}

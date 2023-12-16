@@ -1,10 +1,17 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import PartnersStartupCard from './PartnersStartupCard';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
+import Button from '../common/Button';
+import { useLang } from 'stores/langStore';
 
-export default function Partners({ lang }: { lang: string }) {
+export default function Partners() {
+
+  const lang = useLang((s) => s.lang)
+
+  console.log(lang);
+
   const { t } = useTranslation(lang, 'mainPage');
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -90,7 +97,12 @@ export default function Partners({ lang }: { lang: string }) {
           />
         ))}
       </div>
-      <ButtonRefactor text="Join Us" type="link" href="/partner-membership" />
+      {/* <ButtonRefactor text="Join Us" type="link" href="/partner-membership" /> */}
+      <Button
+        goto="/partner-membership"
+        size="visit"
+        bgColor="Primary"
+      />
     </div>
   );
 }
