@@ -17,12 +17,10 @@ export default function LanguageSwitch() {
   };
 
   useEffect(() => {
-    // i18next.changeLanguage(language);
     const newPath = pathName?.replace(/^\/(en|fa)/, `/${lang}`);
-    if (!newPath) {
-      return;
+    if (newPath && newPath !== pathName) {
+      router.push(newPath);
     }
-    router.push(newPath);
   }, [lang, pathName, router]);
 
   return (
