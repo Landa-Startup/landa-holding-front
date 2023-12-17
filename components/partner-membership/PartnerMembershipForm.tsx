@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
-import PartnerMembershipTitle from './PartnerMembershipTitle';
+// import PartnerMembershipTitle from './PartnerMembershipTitle';
 import { PartnerMembershipFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
@@ -17,6 +17,7 @@ import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
+import FormTitle from '../common/form/FormTitle';
 
 // import { PartnerMembership } from '@prisma/client';
 
@@ -105,7 +106,8 @@ export default function PartnerMembershipForm() {
     <div>
       <div>
         <div className="container m-[-1rem] mx-auto my-20 bg-[#F8F5F0] px-5 font-barlow lg:p-20">
-          <PartnerMembershipTitle />
+          {/* <PartnerMembershipTitle /> */}
+          <FormTitle formName='partnerForm' />
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center justify-between'>
             <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
               <PersonalInfoInput

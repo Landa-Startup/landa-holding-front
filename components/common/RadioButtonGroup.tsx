@@ -16,11 +16,11 @@ export default function RadioButtonGroup({
   nameRadioButton: string;
 }) {
   return (
-    <div>
-      <label className="text-[#6b6b6b]">{title}</label>
+    <div className='flex flex-col items-start'>
+      <label className="text-[#6b6b6b] px-3">{title}</label>
       <div className="mb-1 mt-3 w-full rounded-lg bg-[#f9f6f3] p-4 drop-shadow-lg">
         {options.map((option) => (
-          <label key={option.value} className="my-4 flex items-center">
+          <label key={option.value} className="my-4 gap-2 flex items-center">
             <input
               type="radio"
               value={option.value}
@@ -34,7 +34,7 @@ export default function RadioButtonGroup({
         ))}
       </div>
       {errors[nameRadioButton] && (
-        <span className="mt-4 text-sm text-yellow-500">
+        <span className="mt-4 text-sm px-3 text-yellow-500">
           {errors[nameRadioButton].message}
         </span>
       )}

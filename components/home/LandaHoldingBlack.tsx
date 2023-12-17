@@ -61,7 +61,7 @@ export default async function LandaHoldingBlack() {
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
           style1={`w-[320px] md:w-[550px] pr-6`}
           style2="space-y-2 mr-8"
-          style3="leading-4 md:leading-10 text-md"
+          style3="leading-4 md:leading-6 text-md"
         />
 
         <ButtonRefactor

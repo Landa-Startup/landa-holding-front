@@ -21,15 +21,15 @@ export default async function Banner({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className="absolute inset-0 h-screen blur-[2px] md:h-[650px] lg:h-[512px]"
+        className="h-full blur-[2px] md:h-[520px] absolute inset-0"
       ></div>
 
       <div
-        className="relative flex h-[650px] items-center justify-center lg:h-[512px]"
+        className="relative flex h-full items-center justify-center lg:h-[520px]"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} // Adding overlay with transparency
       >
         {/* Content Overlay */}
-        <div className="relative flex h-[650px] items-stretch justify-center lg:h-[512px] lg:justify-start">
+        <div className="relative flex h-full items-stretch justify-center lg:h-[520px] lg:justify-start">
           <div className="flex flex-col items-center justify-center text-center md:m-auto lg:m-auto">
             {/* Text Content */}
             <p className={`font-condensed text-xl font-normal text-neutral-50 ltr:tracking-[5.60px]`}>

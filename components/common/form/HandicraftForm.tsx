@@ -134,7 +134,7 @@ export default function HandicraftForm() {
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
     <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
-      <div className='flex w-full flex-col items-center gap-2 md:flex-row'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-x-3'>
       <PersonalInfoInput
         register={register}
         errors={errors}
@@ -154,18 +154,16 @@ export default function HandicraftForm() {
           errors={errors}
           nameInput="email"
           type="text"
-          required=""
+          required={lang === "en" ? "Your email is required" : "وارد کردن ایمیل الزامی است"}
           patternValue=""
-          patternMessage=""
+          patternMessage={lang === "en" ? "Your email is required" : "وارد کردن ایمیل الزامی است"}
           placeholder={
             lang === 'en'
               ? 'Your Email'
               : 'ایمیل شما'
           }
           className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-          containerClass="w-full"
-          labelClass=""
-        />
+          containerClass="w-full"        />
       </div>
 
       <div className="col-span-1 w-full">
@@ -174,7 +172,7 @@ export default function HandicraftForm() {
           errors={errors}
           nameInput="company"
           type="text"
-          required=""
+          required={lang === "en" ? "Your company name is required" : "وارد کردن نام شرکت الزامی است"}
           patternValue=""
           patternMessage=""
           placeholder={

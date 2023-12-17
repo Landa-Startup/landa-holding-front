@@ -47,6 +47,14 @@
         "messagePlaceholder": "پیام شما"
     },
 
+    "partnerForm": {
+        "lng": "fa",
+        "dir": "rtl",
+        "banner": "شرکای کاری",
+        "formTitle": "فرم شریک کاری",
+        "formSubtitle": "اطلااعات شخصی"
+    },
+
     "jobForm":{
         "lng": "fa",
         "dir": "rtl",
@@ -56,6 +64,15 @@
         "formSubtitle": "اطلاعات شخصی",
         "resumeFile": "فایل رزومه:"
     },
+
+    "entrepreneurForm": {
+        "lng": "fa",
+        "banner": "مرکز کارآفرینان",
+        "LandaHolding": "هلدینگ لاندا",
+        "formTitle": "فرم مرکز کارآفرینان",
+        "formSubTitle": "اطلاعات شخصی"
+    },
+
 
     "investorForm":{
         "lng": "en",
@@ -161,15 +178,15 @@
         },
 
         "radioButtonGroup":[
-            { "value": "basicPrinciple", "label": "The basic principle has been observed." },
-            { "value": "technologyConcept", "label": "The technology concept has been formulated." },
-            { "value": "exprimentalProof", "label": "Experimental proof of concept." },
-            { "value": "confirmedTechnologyLab", "label": "The confirmed technology in laboratory." },
-            { "value": "confirmedTechnologyEnv", "label": "The confirmed technology in the environmental conditions" },
-            { "value": "presentedTechnologyEnv", "label": "The presented technology in the environmental conditions" },
-            { "value": "systemPrototypeInMvp", "label": "Show the system prototype in the mvp operating environment." },
-            { "value": "realisticSystem", "label": "The proved realistic system in the operating environment." },
-            { "value": "qualifiedSystem", "label": "A complete and qualified system." }
+            { "value": "basicPrinciple", "label": "اصل اولیه رعایت شده است" },
+            { "value": "technologyConcept", "label": "مفهوم فناوری فرموله شده است" },
+            { "value": "exprimentalProof", "label": "اثبات تجربی مفهوم" },
+            { "value": "confirmedTechnologyLab", "label": "تکنولوژی تایید شده در آزمایشگاه" },
+            { "value": "confirmedTechnologyEnv", "label": "تکنولوژی تایید شده در شرایط محیطی" },
+            { "value": "presentedTechnologyEnv", "label": "فناوری ارائه شده در شرایط محیطی" },
+            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید" },
+            { "value": "realisticSystem", "label": "سیستم واقعی ثابت شده در محیط عملیاتی" },
+            { "value": "qualifiedSystem", "label": "یک سیستم کامل و واجد شرایط" }
         ]
     }
     

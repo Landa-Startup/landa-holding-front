@@ -1,7 +1,8 @@
 'use client';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import InvestorRegistrationTitle from './InvestorRegistrationTitle';
+// import InvestorRegistrationTitle from './InvestorRegistrationTitle';
+import FormTitle from '../common/form/FormTitle';
 import { InvestorRegistrationFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
@@ -98,10 +99,12 @@ export default function InvestorRegistrationForm() {
 
   return (
     <>
-      <div className="container m-[-1rem] mx-auto my-20 bg-[#F8F5F0] px-5 font-barlow lg:p-20">
-        <InvestorRegistrationTitle />
+      <div className="container m-[-1rem] mx-auto my-20 px-5 font-barlow lg:p-20 gap-y-0">
+        <div className='bg-[#F8F5F0] p-2'>
+        <FormTitle formName='investorForm' />
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="my-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0] p-4">
             <PersonalInfoInput
               register={register}
               errors={errors}

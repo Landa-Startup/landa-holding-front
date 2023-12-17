@@ -99,7 +99,7 @@ export default function ContactUsForm() {
         {t('contactForm', {returnObjects: true}).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-2'>
-        <div className="my-4 col-span-2 grid h-full grid-cols-1 gap-x-6 md:grid-cols-2">
+        <div className="my-4 col-span-2 grid h-full grid-cols-1 gap-x-3 md:grid-cols-2">
 
           <PersonalInfoInput
             register={register}
@@ -143,7 +143,7 @@ export default function ContactUsForm() {
             />
           </div>
         </div>  
-        <div className='col-span-1'>
+        <div className='col-span-1 md:mt-8'>
         <Button
           type='submit'
           bgColor="Primary"
