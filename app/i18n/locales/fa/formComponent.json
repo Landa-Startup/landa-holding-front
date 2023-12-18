@@ -22,6 +22,14 @@
     "birthDateErrorMessage":"(لطفا تاریخ تولد خود را به درستی وارد کنید(به شکل ۲۰۰۱/۰۲/۱۱",
     "birthDatePlaceholder":"لطفا تاریخ تولد خود را وارد کنید.",
 
+    "website": "وب سایت",
+    "websiteRequired": "وب سایت شما الزامی است",
+    "websitePlaceholder": "لطفا وب سایت خود را وارد کنید",
+    "prosField": "حوزه های تخصص",
+    "prosFieldRequired": "حوزه های تخصصی شما الزامی است",
+    "prosFieldPlaceholder": "لطفا حوزه های تخصصی خود را وارد کنید",
+
+
     "sendButton": "ارسال",
     "sendingButton": "درحال ارسال ....",
     "visitButton": "مشاهده کنید",

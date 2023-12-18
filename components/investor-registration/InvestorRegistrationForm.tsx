@@ -100,7 +100,7 @@ export default function InvestorRegistrationForm() {
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 px-5 font-barlow lg:p-20 gap-y-0">
-        <div className='bg-[#F8F5F0] p-2'>
+        <div className='bg-[#F8F5F0]'>
         <FormTitle formName='investorForm' />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>

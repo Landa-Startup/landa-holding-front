@@ -23,6 +23,13 @@
     "birthDateErrorMessage":"Please enter a valid Date of Birth(e.g., 2001/02/11)",
     "birthDatePlaceholder":"Enter your Date of Birth",
 
+    "website": "website",
+    "websiteRequired": "Your website is required",
+    "websitePlaceholder": "Your website",
+    "prosField": "Field Of Professional",
+    "prosFieldRequired": "Your Field Of Professional is reaquired",
+    "prosFieldPlaceholder": "Your Field Of Professional",
+
     "sendButton": "Submit",
     "sendingButton": "Submitting ....",
     "visitButton": "Visit Now",
