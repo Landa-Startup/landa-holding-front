@@ -1,6 +1,7 @@
 import React from 'react';
 import UploadInput from './UploadInput';
-
+import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 export default function YesRadioButton({
   title,
   register,
@@ -22,16 +23,18 @@ export default function YesRadioButton({
   handleFileChange: any;
   fileName: string;
 }) {
-
+  const { lang } = useLang();
+  const {t}=useTranslation(lang, "formComponent");
   let uploadInputTitle = ""
+
   switch (title) {
-    case "Do you have Pitch deck?":
+    case t("startUp", {returnObjects: true}).pitchDeck:
       uploadInputTitle = "Pitch deck file"
       break;
-    case "Do you have Business Plan?":
+    case t("startUp", {returnObjects: true}).businessPlan:
       uploadInputTitle = "Business plan file"
       break
-    case "Do you have Financial file?":
+    case t("startUp", {returnObjects: true}).financialFile:
       uploadInputTitle = "Financial file"
     default:
       break;
@@ -43,17 +46,17 @@ export default function YesRadioButton({
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <div className="flex flex-col">
         {/* Radio buttons for 'Yes' and 'No' */}
-        <div className="mt-4 flex flex-row rounded-lg bg-[#f9f6f3] p-4 drop-shadow-lg dark:bg-[#1D232A]">
-          <label className="flex-column mr-10 flex ">
+        <div className="mt-4 flex flex-row rounded-lg bg-[#f9f6f3] p-4 drop-shadow-lg">
+          <label className="flex-column mr-10 flex">
             <input
               type="radio"
               value="true"
               {...register(name, { required: required })}
               checked={selectedRadio === 'true'}
               onChange={handleRadioChange}
-              className="radio mr-2 text-indigo-600 drop-shadow-lg dark:text-indigo-400"
+              className="radio mr-2 text-indigo-600 drop-shadow-lg"
             />
-            <span>Yes</span>
+            <span>{t("startUp", {returnObjects: true}).YesButton}</span>
           </label>
           <label className="flex flex-row">
             <input
@@ -62,9 +65,9 @@ export default function YesRadioButton({
               {...register(name, { required:  'this file is requied!'})}
               checked={selectedRadio === ''}
               onChange={handleRadioChange}
-              className="radio mr-2 text-indigo-600 drop-shadow-lg  dark:text-indigo-400"
+              className="radio mr-2 text-indigo-600 drop-shadow-lg"
             />
-            <span>No</span>
+            <span>{t("startUp", {returnObjects: true}).NoButton}</span>
           </label>
         </div>
 

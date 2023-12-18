@@ -6,7 +6,7 @@ async function submitHandiCraftApplicationForm(
 ) {
     try {
       const response = await apiClient.post(
-        'handicraft-application-form',
+        'handicraft-form',
         sendFormData,
         {
           headers: {

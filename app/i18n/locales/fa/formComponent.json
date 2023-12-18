@@ -26,8 +26,13 @@
     "companyNameRequired": "نام شرکت الزامی است.",
     "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
     "howDidYouKnowUs": "چگونه درباره ما شنیدید",
-    "howDidYouKnowUsPlaceholder": "توضیحات",
-    "howDidYouKnowUsRequired": "پر کردن این قسمت الزامی است",
+    "howDidYouKnowUsPlaceholder":"توضیحات",
+    "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
+
+    "investmentCeiling":"سقف سرمایه گذاری",
+    "investmentCeilingRequired":"این بخش الزامی است.",
+    "investmentCeilingPlaceholder":"لطفا سقف سرمایه گذاری خود را وارد کنید.",
+
     "contactForm": {
         "title": "با ما تماس بگیرید",
         "subject": "موضوع",
@@ -77,6 +82,8 @@
     "startUp": {
         "lng": "fa",
         "dir": "rtl",
+        "YesButton":"بله",
+        "NoButton":"خیر",
         "banner": "اعتبارسنجی استارت آپ ها",
         "formTitle": "فرم اعتبارسنجی استارت آپ",
         "subTitle": "رشد و افزایش مقیاس",
@@ -105,18 +112,21 @@
             "customerProblemRequired": "این قسمت الزامی است.",
             "customerProblemPlaceholder": "توضیحات"
         },
-        "cooperatedWithInvestors": "آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
-        "cooperatedWithInvestorsPlaceholder": "توضیحات",
-        "solutions": {
-            "title": "راه حل ها",
-            "solution": "پیشنهاد ارزش منحصر به فرد شما (نوآوری) چیست؟ چه چیز جدیدی در مورد کاری که انجام می دهید وجود دارد؟",
-            "solutionPlaceholder": "توضیحات",
-            "solutionRequired": "این قسمت الزامی است!",
-            "productLevel": "سطح آمادگی محصول و فناوری شما چقدر است؟",
-            "productLevelRequired": "آمار آماده سازی مورد نیاز است",
-            "scalable": "به طور خلاصه توضیح دهید که چگونه فناوری شما مقیاس پذیر است؟",
-            "scalablePlaceholder": "توضیحات",
-            "scalableRequired": "این قسمت الزامی است!"
+        "cooperatedWithInvestors":"آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
+        "cooperatedWithInvestorsPlaceholder":"توضیحات",
+
+
+
+        "solutions":{
+            "title":"راه حل ها",
+            "solution":"پیشنهاد ارزش منحصر به فرد شما (نوآوری) چیست؟ چه چیز جدیدی در مورد کاری که انجام می دهید وجود دارد؟",
+            "solutionPlaceholder":"توضیحات",
+            "solutionRequired":"این قسمت الزامی است!",
+            "productLevel":"سطح آمادگی محصول و فناوری شما چقدر است؟",
+            "productLevelRequired":"آمار آماده سازی مورد نیاز است",
+            "scalable":"به طور خلاصه توضیح دهید که چگونه فناوری شما مقیاس پذیر است؟",
+            "scalablePlaceholder":"توضیحات",
+            "scalableRequired":"این قسمت الزامی است!"
         },
         "businessModel": {
             "title": "طرح کسب و کار",
@@ -157,43 +167,28 @@
             "estimatedMarketSizePlaceholder": "توضیحات",
             "estimatedMarketSizeRequired": "این قسمت الزامی است!"
         },
-        "radioButtonGroup": [
-            {
-                "value": "basicPrinciple",
-                "label": "اصل اولیه رعایت شده است"
-            },
-            {
-                "value": "technologyConcept",
-                "label": "مفهوم فناوری فرموله شده است"
-            },
-            {
-                "value": "exprimentalProof",
-                "label": "اثبات تجربی مفهوم"
-            },
-            {
-                "value": "confirmedTechnologyLab",
-                "label": "تکنولوژی تایید شده در آزمایشگاه"
-            },
-            {
-                "value": "confirmedTechnologyEnv",
-                "label": "تکنولوژی تایید شده در شرایط محیطی"
-            },
-            {
-                "value": "presentedTechnologyEnv",
-                "label": "فناوری ارائه شده در شرایط محیطی"
-            },
-            {
-                "value": "systemPrototypeInMvp",
-                "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید"
-            },
-            {
-                "value": "realisticSystem",
-                "label": "سیستم واقعی ثابت شده در محیط عملیاتی"
-            },
-            {
-                "value": "qualifiedSystem",
-                "label": "یک سیستم کامل و واجد شرایط"
-            }
+
+        "radioButtonGroup":[
+            { "value": "basicPrinciple", "label": "اصل اساسی رعایت شده است." },
+            { "value": "technologyConcept", "label": "مفهوم فناوری فرموله شده است." },
+            { "value": "exprimentalProof", "label": "اثبات تجربی مفهوم" },
+            { "value": "confirmedTechnologyLab", "label": "تکنولوژی تایید شده در آزمایشگاه" },
+            { "value": "confirmedTechnologyEnv", "label": "تکنولوژی تایید شده در شرایط محیطی" },
+            { "value": "presentedTechnologyEnv", "label": "فناوری ارائه شده در شرایط محیطی" },
+            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید." },
+            { "value": "realisticSystem", "label": "سیستم واقعی ثابت شده در محیط عملیاتی." },
+            { "value": "qualifiedSystem", "label": "یک سیستم کامل و واجد شرایط" }
         ]
-    }
+    },
+    "website":"وبسایت شما:",
+    "websitePlaceholder":"لطفا وبسایت خود را وارد کنید.",
+    "websiteRequired":"این بخش الزامی است.",
+
+    "prosField":"زمینه حرفه شما",
+    "prosFieldRequired":"این بخش الزامی است.",
+    "prosFieldPlaceholder":"زمینه حرفه شما",
+
+
+    "EntrepreneurTitle":"فرم مرکز کارآفرینان",
+    "PersonalInformation":"اطلاعات شخصی"
 }

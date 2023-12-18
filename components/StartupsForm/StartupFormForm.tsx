@@ -13,7 +13,6 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useTranslation } from 'app/i18n/client';
-// import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
