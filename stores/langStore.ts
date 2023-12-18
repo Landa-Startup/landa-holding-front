@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 
 type State = {
-  lang: string;
+  lang: string | undefined;
   setLanguage: (language: string) => void;
 };
 
 export const useLang = create<State>((set) => ({
-  lang: 'en',
+  lang: "en",
   setLanguage: (lang) => set(() => ({ lang }))
 }));

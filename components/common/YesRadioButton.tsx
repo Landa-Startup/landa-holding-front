@@ -1,6 +1,7 @@
 import React from 'react';
 import UploadInput from './UploadInput';
-
+import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
 export default function YesRadioButton({
   title,
   register,
@@ -22,16 +23,18 @@ export default function YesRadioButton({
   handleFileChange: any;
   fileName: string;
 }) {
-
+  const { lang } = useLang();
+  const {t}=useTranslation(lang, "formComponent");
   let uploadInputTitle = ""
+
   switch (title) {
-    case "Do you have Pitch deck?":
+    case t("startUp", {returnObjects: true}).pitchDeck:
       uploadInputTitle = "Pitch deck file"
       break;
-    case "Do you have Business Plan?":
+    case t("startUp", {returnObjects: true}).businessPlan:
       uploadInputTitle = "Business plan file"
       break
-    case "Do you have Financial file?":
+    case t("startUp", {returnObjects: true}).financialFile:
       uploadInputTitle = "Financial file"
     default:
       break;
