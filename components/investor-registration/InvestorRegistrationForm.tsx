@@ -50,7 +50,10 @@ export default function InvestorRegistrationForm() {
     }
     fetchCsrfToken();
   }, []);
-
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }))
   const onSubmit = async (formData: InvestorRegistrationFormData) => {
     // Set loading and sending states.
     handleSubmitingChange(true);
@@ -104,7 +107,7 @@ export default function InvestorRegistrationForm() {
         <FormTitle formName='investorForm' />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0] p-4">
+          <div className="mb-6 grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -210,7 +213,7 @@ export default function InvestorRegistrationForm() {
             </div>
           </div>
           <div className="mx-auto w-fit pb-4">
-            <ButtonRefactor type="submit" text={t('sendButton')} />
+            <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>
           </div>
         </form>
         <NotificationSendForm/>

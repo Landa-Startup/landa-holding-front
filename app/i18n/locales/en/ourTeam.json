@@ -1,5 +1,6 @@
 {
     "title":"Our Team",
+    "defaultRole": "All",
     "persons": [
         {
           "image": "/static/images/our-team/Personals/a1.png",
@@ -34,7 +35,7 @@
           "position": "Secretary",
           "name": "Lida Parvizi",
           "linkedIn": "",
-          "category": "secretary"
+          "category": "Manager Asistant"
         },
         {
           "image": "/static/images/our-team/Personals/a4.png",
@@ -250,6 +251,6 @@
       "Accountant",
       "Public Relations",
       "Digital Marketer",
-      "Secretary"
+      "Manager Asistant"
     ]
 }

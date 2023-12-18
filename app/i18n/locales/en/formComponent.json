@@ -23,13 +23,6 @@
     "birthDateErrorMessage":"Please enter a valid Date of Birth(e.g., 2001/02/11)",
     "birthDatePlaceholder":"Enter your Date of Birth",
 
-    "website": "website",
-    "websiteRequired": "Your website is required",
-    "websitePlaceholder": "Your website",
-    "prosField": "Field Of Professional",
-    "prosFieldRequired": "Your Field Of Professional is reaquired",
-    "prosFieldPlaceholder": "Your Field Of Professional",
-
     "sendButton": "Submit",
     "sendingButton": "Submitting ....",
     "visitButton": "Visit Now",
@@ -137,6 +130,10 @@
         "cooperatedWithInvestors":"Have you previously cooperated with investors or accelerators?",
         "cooperatedWithInvestorsPlaceholder":"Description",
 
+        "investmentCeiling":"Investment Ceiling",
+        "investmentCeilingRequired":"This field is required!",
+        "investmentCeilingPlaceholder":"Please Enter Investment Ceiling.",
+
         "solutions":{
             "title":"Solutions",
             "solution":"What is your unique value proposition (innovation)? What is new about what you do?",
@@ -200,5 +197,15 @@
             { "value": "realisticSystem", "label": "The proved realistic system in the operating environment." },
             { "value": "qualifiedSystem", "label": "A complete and qualified system." }
         ]
-    }
+    },
+    "website":"Your Webstie:",
+    "websitePlaceholder":"Your Webstie*",
+    "websiteRequired":"This field is required!",
+
+    "prosField":"Field Of Professional:",
+    "prosFieldRequired":"This field is required!",
+    "prosFieldPlaceholder":"field of professional",
+
+    "EntrepreneurTitle":"Entrepreneur Center Form",
+    "PersonalInformation":"Personal Information"
 }

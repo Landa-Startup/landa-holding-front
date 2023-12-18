@@ -22,13 +22,6 @@
     "birthDateErrorMessage":"(لطفا تاریخ تولد خود را به درستی وارد کنید(به شکل ۲۰۰۱/۰۲/۱۱",
     "birthDatePlaceholder":"لطفا تاریخ تولد خود را وارد کنید.",
 
-    "website": "وب سایت",
-    "websiteRequired": "وب سایت شما الزامی است",
-    "websitePlaceholder": "لطفا وب سایت خود را وارد کنید",
-    "prosField": "حوزه های تخصص",
-    "prosFieldRequired": "حوزه های تخصصی شما الزامی است",
-    "prosFieldPlaceholder": "لطفا حوزه های تخصصی خود را وارد کنید",
-
 
     "sendButton": "ارسال",
     "sendingButton": "درحال ارسال ....",
@@ -44,6 +37,10 @@
     "howDidYouKnowUs": "چگونه درباره ما شنیدید",
     "howDidYouKnowUsPlaceholder":"توضیحات",
     "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
+
+    "investmentCeiling":"سقف سرمایه گذاری",
+    "investmentCeilingRequired":"این بخش الزامی است.",
+    "investmentCeilingPlaceholder":"لطفا سقف سرمایه گذاری خود را وارد کنید.",
 
     "contactForm": {
         "title": "با ما تماس بگیرید",
@@ -99,6 +96,8 @@
     "startUp":{
         "lng": "fa",
         "dir": "rtl",
+        "YesButton":"بله",
+        "NoButton":"خیر",
         "banner": "اعتبارسنجی استارت آپ ها",
         "formTitle": "فرم اعتبارسنجی استارتاپ",
         "subTitle": "رشد و افزایش مقیاس",
@@ -132,6 +131,8 @@
         },
         "cooperatedWithInvestors":"آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
         "cooperatedWithInvestorsPlaceholder":"توضیحات",
+
+
 
         "solutions":{
             "title":"راه حل ها",
@@ -186,16 +187,26 @@
         },
 
         "radioButtonGroup":[
-            { "value": "basicPrinciple", "label": "اصل اولیه رعایت شده است" },
-            { "value": "technologyConcept", "label": "مفهوم فناوری فرموله شده است" },
+            { "value": "basicPrinciple", "label": "اصل اساسی رعایت شده است." },
+            { "value": "technologyConcept", "label": "مفهوم فناوری فرموله شده است." },
             { "value": "exprimentalProof", "label": "اثبات تجربی مفهوم" },
             { "value": "confirmedTechnologyLab", "label": "تکنولوژی تایید شده در آزمایشگاه" },
             { "value": "confirmedTechnologyEnv", "label": "تکنولوژی تایید شده در شرایط محیطی" },
             { "value": "presentedTechnologyEnv", "label": "فناوری ارائه شده در شرایط محیطی" },
-            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید" },
-            { "value": "realisticSystem", "label": "سیستم واقعی ثابت شده در محیط عملیاتی" },
+            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید." },
+            { "value": "realisticSystem", "label": "سیستم واقعی ثابت شده در محیط عملیاتی." },
             { "value": "qualifiedSystem", "label": "یک سیستم کامل و واجد شرایط" }
         ]
-    }
-    
+    },
+    "website":"وبسایت شما:",
+    "websitePlaceholder":"لطفا وبسایت خود را وارد کنید.",
+    "websiteRequired":"این بخش الزامی است.",
+
+    "prosField":"زمینه حرفه شما",
+    "prosFieldRequired":"این بخش الزامی است.",
+    "prosFieldPlaceholder":"زمینه حرفه خود را وارد کنید",
+
+
+    "EntrepreneurTitle":"فرم مرکز کارآفرینان",
+    "PersonalInformation":"اطلاعات شخصی"
 }

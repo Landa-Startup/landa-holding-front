@@ -1,5 +1,6 @@
 {
     "title":"تیم ما",
+    "defaultRole": "همه",
     "persons": [
         {
             "image": "/static/images/our-team/Personals/a1.png",
