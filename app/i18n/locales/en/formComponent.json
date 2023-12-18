@@ -48,6 +48,22 @@
         "messagePlaceholder": "Your Message"
     },
 
+    "partnerForm": {
+        "lng": "en",
+        "dir": "ltr",
+        "banner": "BUSINESS AFFILIATES",
+        "formTitle": "BUSINESS AFFILIATES FORM",
+        "formSubtitle": "Personal Information"
+    },
+
+    "entrepreneurForm": {
+        "lng": "en",
+        "banner": "ENTREPRENEUR CENTER",
+        "LandaHolding": "Landa Holding",
+        "formTitle": "Entrepreneur Center Form",
+        "formSubtitle": "Personal Information"
+    },
+
     "jobForm":{
         "lng": "en",
         "dir": "ltr",
@@ -63,7 +79,7 @@
         "dir": "ltr",
         "banner": "INVESTOR CENTER",
         "LandaHolding": "Landa Holding",
-        "formTitle": "INVESTOR CENTER FORM",
+        "formTitle": "INVESTOR REGISTRATION FORM",
         "formSubtitle": "Personal Information",
         "interests":"Intrests",
         "interestsRequired":"Intrests is Required.",
@@ -93,7 +109,7 @@
         "pitchDeck":"Do you have Pitch deck?",
         "pitchDeckRequired":"Please choose an option",
 
-        "businessPlan":"Do you have Business Plan??",
+        "businessPlan":"Do you have Business Plan?",
         "businessPlanRequired":"Please choose an option",
 
         "productName":"Product Name",

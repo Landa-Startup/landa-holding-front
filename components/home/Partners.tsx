@@ -10,8 +10,6 @@ export default function Partners() {
 
   const lang = useLang((s) => s.lang)
 
-  console.log(lang);
-
   const { t } = useTranslation(lang, 'mainPage');
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);

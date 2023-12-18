@@ -25,7 +25,7 @@ export default async function HomeCards({
 
   return (
     <div
-      className={`flex-col ltr:md:flex-row rtl:md:flex-row-reverse relative flex items-center justify-between border-b-2 border-primary px-9 py-5 last:border-none md:border-none md:p-28`}
+      className={`relative flex flex-col items-center justify-between border-b-2 border-primary px-9 py-5 last:border-none md:border-none md:p-28 ltr:md:flex-row rtl:md:flex-row-reverse`}
     >
       <HomeCardsLeft text={text} addedClass={addedClass} link={link} />
       <HomeCardsRight images={images} titles={titles} link={link} />

@@ -1,12 +1,10 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'stores/langStore';
-import { useCookies } from 'react-cookie';
 
 export default function Navbar({
   children,
@@ -15,22 +13,10 @@ export default function Navbar({
   children: React.ReactNode;
   lang: string;
 }) {
+  const { t } = useTranslation(lang, 'layout');
 
-  const { t } = useTranslation(lang, "layout")
-
-  const langHandler = useLang((s) => s.updateLang)
-
-  const [cookies, setCookies] = useCookies(['i18next'])
-
-  // console.log(cookies.i18next);
-  setCookies;
-
-  useEffect(() => {
-    langHandler(cookies.i18next);
-  },[])
-
-  const menuItems=t('menuItems', { returnObjects: true })
-  const submenuItems=t('submenuItems', { returnObjects: true })
+  const menuItems = t('menuItems', { returnObjects: true });
+  const submenuItems = t('submenuItems', { returnObjects: true });
 
   const drawerRef = useRef<HTMLInputElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -140,7 +126,7 @@ export default function Navbar({
             {/* <SubmitProvider>
               <LanguageSwitch />
             </SubmitProvider> */}
-            <LanguageSwitch lang={lang} />
+            <LanguageSwitch />
           </div>
         </div>
         <div className="children">{children}</div>
@@ -184,7 +170,7 @@ export default function Navbar({
               {/* <SubmitProvider>
                 <LanguageSwitch />
               </SubmitProvider> */}
-              <LanguageSwitch lang={lang} />
+              <LanguageSwitch />
             </div>
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">
               <Link

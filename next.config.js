@@ -10,9 +10,9 @@ const nextConfig = {
       'panel-back.landaholding.com',
       'panel.landaholding.com',
       'landaholding.com',
-      'localhost',
-    ],
-  },
+      'localhost'
+    ]
+  }
 };
 
 module.exports = nextConfig;

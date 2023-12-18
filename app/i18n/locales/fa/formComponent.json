@@ -51,6 +51,14 @@
         "messagePlaceholder": "پیام شما"
     },
 
+    "partnerForm": {
+        "lng": "fa",
+        "dir": "rtl",
+        "banner": "شرکای کاری",
+        "formTitle": "فرم شریک کاری",
+        "formSubtitle": "اطلااعات شخصی"
+    },
+
     "jobForm":{
         "lng": "fa",
         "dir": "rtl",
@@ -60,6 +68,15 @@
         "formSubtitle": "اطلاعات شخصی",
         "resumeFile": "فایل رزومه:"
     },
+
+    "entrepreneurForm": {
+        "lng": "fa",
+        "banner": "مرکز کارآفرینان",
+        "LandaHolding": "هلدینگ لاندا",
+        "formTitle": "فرم مرکز کارآفرینان",
+        "formSubTitle": "اطلاعات شخصی"
+    },
+
 
     "investorForm":{
         "lng": "en",
