@@ -3,8 +3,7 @@ import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
 
-export default async function AboutUsLandaHolding(
-) {
+export default async function AboutUsLandaHolding() {
 
   const lang = useLang.getState().lang
 
@@ -38,7 +37,7 @@ export default async function AboutUsLandaHolding(
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
-        <p className="mb-20  ml-0 mt-4 text-justify font-barlow font-normal tracking-wide rtl:text-base  md:mt-8 lg:w-[537px]">
+        <p className="mb-20  ml-0 mt-4 text-lg text-justify font-barlow font-normal tracking-wide  md:mt-8 lg:w-[517px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>

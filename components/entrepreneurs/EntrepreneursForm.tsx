@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
 import { Entrepreuneur } from '../../types/global';
-import EntrepreneursTitle from './EntrepreneursTitle';
+// import EntrepreneursTitle from './EntrepreneursTitle';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
@@ -14,6 +14,7 @@ import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
+import FormTitle from '../common/form/FormTitle';
 
 export default function EntrepreneursForm() {
 
@@ -104,10 +105,13 @@ export default function EntrepreneursForm() {
   return (
     <>
       <div
-        className="container m-16 mx-auto bg-[#F8F5F0] p-20 font-barlow"
+        className="container m-16 mx-auto bg-[#F8F5F0] p-1 font-barlow"
         dir={lang === 'en' ? 'ltr' : 'rtl'}
       >
-        <EntrepreneursTitle />
+        {/* <EntrepreneursTitle /> */}
+        <div className='bg-[#F8F5F0]'>
+        <FormTitle formName='entrepreneurForm'/>
+        </div>
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center justify-between'>
           <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
 

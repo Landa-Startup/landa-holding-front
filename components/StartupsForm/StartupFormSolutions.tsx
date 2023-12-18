@@ -36,6 +36,7 @@ export default function StartupFormSolutions({
           />
         </div>
         <div className="col-span-2">
+          {/* options in farsi doesn't work */}
           <RadioButtonGroup
             title={t('startUp',{ returnObjects: true }).solutions.productLevel}
             options={t('startUp.radioButtonGroup',{ returnObjects: true })}

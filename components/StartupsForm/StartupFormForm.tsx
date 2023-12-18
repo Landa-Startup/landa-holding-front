@@ -19,6 +19,7 @@ import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
 import { useFile } from 'stores/fileStore';
 import StartupFormTrialProduct from './StartupFormTrialProduct';
+import FormTitle from '../common/form/FormTitle';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -176,14 +177,12 @@ export default function StartupFormForm() {
 
   return (
     <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
-      <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
+      {/* <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
         <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
           {t('startUp', { returnObjects: true }).formTitle}
         </p>
       </div>
-      <div className="container m-10 mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:p-20">
-        {/* {t('startUp',{ returnObjects: true }).formTitle} */}
-        <div>
+      <div>
           <p className="mb-4 text-4xl">
             {t('startUp', { returnObjects: true }).formSubtitle}
           </p>
@@ -191,7 +190,12 @@ export default function StartupFormForm() {
 
         <div>
           <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
-        </div>
+        </div> */}
+      <div className='bg-[#faf8f5] mx-4'>
+        <FormTitle formName='startUp'/>
+      </div>
+      <div className="container mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:px-4">
+        {/* {t('startUp',{ returnObjects: true }).formTitle} */}
         <form onSubmit={handleSubmit(onSubmit)}>
           <StartupFormPersonalInformation
             register={register}

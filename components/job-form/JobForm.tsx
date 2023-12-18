@@ -14,6 +14,7 @@ import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
 import { useFile } from 'stores/fileStore';
+import FormTitle from '../common/form/FormTitle';
 
 export default function JobForm() {
 
@@ -112,7 +113,7 @@ export default function JobForm() {
   return (
           <div className='m-8'>
             <>
-              <div className="text-center">
+              {/* <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
                   {t('jobForm', { returnObjects: true }).formTitle}
                 </p>
@@ -124,10 +125,13 @@ export default function JobForm() {
               </div>
               <div>
                 <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
-              </div>
+              </div> */}
             </>
+            <div className='bg-[#F8F5F0]'>
+            <FormTitle formName='jobForm' />
+            </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+              <div className="mb-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0] p-3">
                 <PersonalInfoInput
                   register={register}
                   errors={errors}
