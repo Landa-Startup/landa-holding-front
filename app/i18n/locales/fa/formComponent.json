@@ -37,6 +37,10 @@
     "howDidYouKnowUsPlaceholder":"توضیحات",
     "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
 
+    "investmentCeiling":"سقف سرمایه گذاری",
+    "investmentCeilingRequired":"این بخش الزامی است.",
+    "investmentCeilingPlaceholder":"لطفا سقف سرمایه گذاری خود را وارد کنید.",
+
     "contactForm": {
         "title": "با ما تماس بگیرید",
         "subject": "موضوع",
@@ -108,6 +112,8 @@
         "cooperatedWithInvestors":"آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
         "cooperatedWithInvestorsPlaceholder":"توضیحات",
 
+
+
         "solutions":{
             "title":"راه حل ها",
             "solution":"پیشنهاد ارزش منحصر به فرد شما (نوآوری) چیست؟ چه چیز جدیدی در مورد کاری که انجام می دهید وجود دارد؟",
@@ -161,16 +167,25 @@
         },
 
         "radioButtonGroup":[
-            { "value": "basicPrinciple", "label": "The basic principle has been observed." },
-            { "value": "technologyConcept", "label": "The technology concept has been formulated." },
-            { "value": "exprimentalProof", "label": "Experimental proof of concept." },
-            { "value": "confirmedTechnologyLab", "label": "The confirmed technology in laboratory." },
-            { "value": "confirmedTechnologyEnv", "label": "The confirmed technology in the environmental conditions" },
-            { "value": "presentedTechnologyEnv", "label": "The presented technology in the environmental conditions" },
-            { "value": "systemPrototypeInMvp", "label": "Show the system prototype in the mvp operating environment." },
-            { "value": "realisticSystem", "label": "The proved realistic system in the operating environment." },
-            { "value": "qualifiedSystem", "label": "A complete and qualified system." }
+            { "value": "basicPrinciple", "label": "اصل اساسی رعایت شده است." },
+            { "value": "technologyConcept", "label": "مفهوم فناوری فرموله شده است." },
+            { "value": "exprimentalProof", "label": "اثبات تجربی مفهوم" },
+            { "value": "confirmedTechnologyLab", "label": "تکنولوژی تایید شده در آزمایشگاه" },
+            { "value": "confirmedTechnologyEnv", "label": "تکنولوژی تایید شده در شرایط محیطی" },
+            { "value": "presentedTechnologyEnv", "label": "فناوری ارائه شده در شرایط محیطی" },
+            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید." },
+            { "value": "realisticSystem", "label": "سیستم واقعی ثابت شده در محیط عملیاتی." },
+            { "value": "qualifiedSystem", "label": "یک سیستم کامل و واجد شرایط" }
         ]
-    }
-    
+    },
+    "website":"وبسایت شما:",
+    "websitePlaceholder":"لطفا وبسایت خود را وارد کنید.",
+    "websiteRequired":"این بخش الزامی است.",
+
+    "prosField":"زمینه حرفه شما",
+    "prosFieldRequired":"این بخش الزامی است.",
+    "prosFieldPlaceholder":"زمینه حرفه شما",
+
+    "EntrepreneurTitle":"فرم مرکز کارآفرینان",
+    "PersonalInformation":"اطلاعات شخصی"
 }

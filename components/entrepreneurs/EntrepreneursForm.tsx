@@ -9,8 +9,8 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
 import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-// import ButtonRefactor from '../common/ButtonRefactor';
-import Button from '../common/Button';
+import ButtonRefactor from '../common/ButtonRefactor';
+// import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
@@ -105,7 +105,6 @@ export default function EntrepreneursForm() {
     <>
       <div
         className="container m-16 mx-auto bg-[#F8F5F0] p-20 font-barlow"
-        dir={lang === 'en' ? 'ltr' : 'rtl'}
       >
         <EntrepreneursTitle />
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-between items-center'>
@@ -173,12 +172,12 @@ export default function EntrepreneursForm() {
             </div>
           </div>
           <div className="text-center pb-4">
-            <Button
+            {/* <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
-            />
-            {/* <ButtonRefactor text="Submit" type="submit" /> */}
+            /> */}
+            <ButtonRefactor text="Submit" type="submit" disabled={errorsList[0] ? true : false} />
           </div>
         </form>
         <NotificationSendForm />
