@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from '../common/PersonalTab';
 import { useTranslation } from 'app/i18n/client';
@@ -17,19 +17,28 @@ interface item {
 }
 
 export default function TeamPersons() {
-  const { lang } = useLang((s: any) => s);
+  const { lang } = useLang();
   const { t } = useTranslation(lang, 'ourTeam');
 
   // const [selectedRole, setSelectedRole] = useState<string | null>(null);
   const [filteredPersons, setFilteredPersons] = useState(Array<item>);
+  
+
+  // const L: Array<item> = t('persons', {returnObjects: true}).map((person: item) => {
+  //   return person
+  // })
+
+  useEffect(() => {
+    setFilteredPersons(t('persons', {returnObjects: true}));
+  }, [])
 
   function handleRoleSelect(role: string) {
-    // setSelectedRole(role);
+    // // setSelectedRole(role);
     // console.log(role);
-    if (role === 'All' || role === 'همه') {
+    if (role === t("defaultRole") ) {
       setFilteredPersons(t('persons', { returnObjects: true }));
     } else {
-      const persons = t('persons', { returnObjects: true });
+      const persons = t('persons', {returnObjects: true})
       const filteredPersons = persons.filter(
         ({ category }: { category: string }) =>
           category?.toLowerCase().includes(role.toLowerCase())
@@ -37,6 +46,7 @@ export default function TeamPersons() {
       setFilteredPersons(filteredPersons);
     }
   }
+  console.log(filteredPersons)
   return (
     <div>
       <div className="flex w-full justify-center border">

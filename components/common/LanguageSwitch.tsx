@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
+import { getCookie } from 'cookies-next';
+
 export default function LanguageSwitch() {
   const { lang, setLanguage } = useLang();
   const { i18n } = useTranslation();
@@ -15,6 +17,8 @@ export default function LanguageSwitch() {
     setLanguage(newLanguage);
     i18n.changeLanguage(newLanguage);
   };
+
+  console.log(lang, pathName, getCookie('i18next'));
 
   useEffect(() => {
     const newPath = pathName?.replace(/^\/(en|fa)/, `/${lang}`);
@@ -29,16 +33,12 @@ export default function LanguageSwitch() {
       onClick={handleClick}
     >
       <div
-        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black transition-all duration-1000 ${
-          lang === 'en' ? 'bg-white' : ''
-        }`}
+        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black ltr:bg-white transition-all duration-1000`}
       >
         EN
       </div>
       <div
-        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black transition-all duration-1000 ${
-          lang === 'fa' ? 'bg-white' : ''
-        }`}
+        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black rtl:bg-white transition-all duration-1000`}
       >
         FA
       </div>
