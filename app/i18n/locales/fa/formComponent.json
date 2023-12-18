@@ -95,6 +95,8 @@
     "startUp":{
         "lng": "fa",
         "dir": "rtl",
+        "YesButton":"بله",
+        "NoButton":"خیر",
         "banner": "اعتبارسنجی استارت آپ ها",
         "formTitle": "فرم اعتبارسنجی استارتاپ",
         "subTitle": "رشد و افزایش مقیاس",
@@ -202,6 +204,7 @@
     "prosField":"زمینه حرفه شما",
     "prosFieldRequired":"این بخش الزامی است.",
     "prosFieldPlaceholder":"زمینه حرفه شما",
+
 
     "EntrepreneurTitle":"فرم مرکز کارآفرینان",
     "PersonalInformation":"اطلاعات شخصی"

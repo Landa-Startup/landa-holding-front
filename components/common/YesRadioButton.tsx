@@ -46,17 +46,17 @@ export default function YesRadioButton({
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <div className="flex flex-col">
         {/* Radio buttons for 'Yes' and 'No' */}
-        <div className="mt-4 flex flex-row rounded-lg bg-[#f9f6f3] p-4 drop-shadow-lg dark:bg-[#1D232A]">
-          <label className="flex-column mr-10 flex ">
+        <div className="mt-4 flex flex-row rounded-lg bg-[#f9f6f3] p-4 drop-shadow-lg">
+          <label className="flex-column mr-10 flex">
             <input
               type="radio"
               value="true"
               {...register(name, { required: required })}
               checked={selectedRadio === 'true'}
               onChange={handleRadioChange}
-              className="radio mr-2 text-indigo-600 drop-shadow-lg dark:text-indigo-400"
+              className="radio mr-2 text-indigo-600 drop-shadow-lg"
             />
-            <span>Yes</span>
+            <span>{t("startUp", {returnObjects: true}).YesButton}</span>
           </label>
           <label className="flex flex-row">
             <input
@@ -65,9 +65,9 @@ export default function YesRadioButton({
               {...register(name, { required:  'this file is requied!'})}
               checked={selectedRadio === ''}
               onChange={handleRadioChange}
-              className="radio mr-2 text-indigo-600 drop-shadow-lg  dark:text-indigo-400"
+              className="radio mr-2 text-indigo-600 drop-shadow-lg"
             />
-            <span>No</span>
+            <span>{t("startUp", {returnObjects: true}).NoButton}</span>
           </label>
         </div>
 

@@ -44,7 +44,7 @@ export default function EntrepreneursForm() {
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
-        'https://panel.landaholding.com/get-csrf-token'
+        'https://panel-back.landaholding.com/get-csrf-token'
       );
       handleTokenChange(token);
       handleTokenChange(token);
@@ -105,14 +105,14 @@ export default function EntrepreneursForm() {
   return (
     <>
       <div
-        className="container m-16 mx-auto bg-[#F8F5F0] p-20 font-barlow"
+        className="container m-16 mx-auto bg-[#F8F5F0] p-10 font-barlow"
       >
         {/* <EntrepreneursTitle /> */}
         <div className='bg-[#F8F5F0]'>
         <FormTitle formName='entrepreneurForm'/>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center justify-between'>
-          <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-between'>
+          <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-1 lg:grid-cols-3">
 
             <PersonalInfoInput
               register={register}
@@ -175,13 +175,8 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="text-center pb-4">
-            {/* <Button
-              type='submit'
-              bgColor="Primary"
-              disabled={errorsList[0] ? true : false}
-            /> */}
-            <ButtonRefactor text="Submit" type="submit" disabled={errorsList[0] ? true : false} />
+          <div className="mx-auto pb-4 text-center">
+            <ButtonRefactor text={t('sendButton')} type="submit" disabled={errorsList[0] ? true : false} />
           </div>
         </form>
         <NotificationSendForm />
