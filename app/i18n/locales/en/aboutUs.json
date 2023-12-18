@@ -45,7 +45,6 @@
     "LANDAStartups": [
       {
         "title": "LANDA Startups",
-        "StartupAcademy": "Startup Academy, a startup with the aim of fostering and accelerating the growth of teenagers, has been operating since 2017 under the supervision of the FarshTech company.",
         "LandaTrip": "Landa Trip, a startup in the field of tourism and education with an international platform and professional artificial intelligence, began its activities in Iran in 2022.",
         "Diaco": "Diaco, a startup in the field of industry and automation, operates with CNC Wire Cut machines in Canada and markets in the United States and Europe.",
         "VisionRaft": "Vision Raft, a startup in the virtual world, children's education sector, expanded its operations in 2022 with the support of MTA Accelerator in Canada.",
@@ -57,7 +56,6 @@
         "addedClass": ""
       },
       {
-        "StartupAcademy": "StartupAcademy",
         "LandaTrip": "LandaTrip",
         "Diaco": "Diaco",
         "VisionRaft": "VisionRaft",

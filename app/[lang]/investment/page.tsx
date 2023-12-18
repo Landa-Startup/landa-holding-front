@@ -42,7 +42,7 @@ export default async function Page({
             </span>
           </div>
           {/* TODO: make component these texts */}
-          <p className="text-justify font-barlow leading-8 tracking-[1px]">
+          <p className="text-justify font-barlow leading-8">
             {t('text')}
           </p>
         </div>
@@ -58,40 +58,6 @@ export default async function Page({
           />
         </div>
       </div>
-      {/* <div className="relative grid grid-cols-1 gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col">
-            <span className="font-gilda text-2xl text-primary md:text-4xl">
-              {t('typesTitle')}
-            </span>
-          </div>
-          <p className="text-justify font-barlow leading-7 tracking-[1px]">
-            {t('typesText')}
-          </p>
-        </div>
-        <div className="flex flex-col gap-4">
-          <div className="relative h-[171px] md:w-[575px]">
-            <Image
-              className="object-cover"
-              src="/static/images/investment/Incorporation-page-001 1.png"
-              alt="LANDA INVESTMENT"
-              layout="fill"
-            />
-          </div>
-          <span className="font-gilda text-2xl text-primary md:text-4xl">
-            {t('strategyTitle')}
-          </span>
-          <p className="text-justify font-barlow leading-7 tracking-[1px]">
-            {t('strategyText')}
-          </p>
-        </div>
-        <Image
-          src="/static/images/investment/logo 1.png"
-          alt="Logo"
-          layout="fill"
-          className="-z-10 object-contain pb-[500px] md:py-10"
-        />
-      </div> */}
       <div className="grid grid-cols-1 gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
@@ -99,7 +65,7 @@ export default async function Page({
               {t('startUpInvestingTitle')}
             </span>
           </div>
-          <p className="text-justify font-barlow leading-8 tracking-[1px]">
+          <p className="text-justify font-barlow leading-8">
             {t('startUpInvestingText')}
           </p>
           <div className="relative h-[300px] w-[330px] md:h-[168px] md:w-[561px]">
@@ -140,12 +106,8 @@ export default async function Page({
             <Link size={32} addedClass="-ml-10 mb-3 z-10" />
           </div>
         </div>
-        <div className="flex flex-col">
-          <p
-            className={`text-justify font-barlow tracking-[1px] ${
-              lang === 'en' ? 'leading-8' : 'text-lg leading-10'
-            }`}
-          >
+        <div className="flex flex-col items-center justify-center space-y-5 rtl:space-y-reverse">
+          <p className='text-justify font-barlow tracking-[1px] ltr:leading-8 rtl:text-lg rtl:leading-10'>
             {t('focusText')}
           </p>
           {/* <Button
@@ -165,7 +127,7 @@ export default async function Page({
         </div>
       </div>
       <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
-        <div className="text-justify font-barlow leading-8 tracking-[1px]">
+        <div className="text-justify font-barlow leading-8">
           <p>{t('objectiveText1')}</p>
           <p>{t('objectiveText2')}</p>
         </div>

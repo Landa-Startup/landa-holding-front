@@ -37,7 +37,7 @@ export default async function StoryOfLanda() {
             {t('LANDAStartups', { returnObjects: true })[0].title}
           </span>
           <ul className="mt-5  flex flex-col space-y-3 font-barlow">
-            <li className="list-disc marker:text-primary">
+            {/* <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
                 {t('LANDAStartups', { returnObjects: true })[1].StartupAcademy}
               </span>
@@ -45,7 +45,7 @@ export default async function StoryOfLanda() {
               <span className="">
                 {t('LANDAStartups', { returnObjects: true })[0].StartupAcademy}
               </span>
-            </li>
+            </li> */}
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
                 {t('LANDAStartups', { returnObjects: true })[1].LandaTrip}
@@ -80,7 +80,7 @@ export default async function StoryOfLanda() {
         </div>
       </div>
       <div className="flex flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
-        <div className="flex flex-col font-barlow md:w-full">
+        <div className="flex flex-col font-barlow md:w-full p-10 md:p-0 text-ju">
           <span className="font-gilda text-3xl text-primary">
             {t('VisionOfTheLanaHolding', { returnObjects: true })[0].title}
           </span>

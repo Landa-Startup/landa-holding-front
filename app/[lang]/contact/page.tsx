@@ -31,6 +31,7 @@ export default async function ContactUsPage({
       {/* Main Content Grid */}
       <div className={`container mx-auto grid grid-cols-1 gap-40 bg-[#FAFAFA] px-5 py-28 font-barlow text-black md:flex md:flex-row md:justify-between lg:px-20`}>
         {/* ContactUsDescription Component */}
+        {/* TODO: hardcode delete */}
         <ContactUsDescription />
 
         {/* ContactUsForm Component */}

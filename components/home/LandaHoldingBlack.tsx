@@ -16,9 +16,9 @@ export default async function LandaHoldingBlack() {
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span className="rtl:tracking-0 font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
-              {t('LandaHolding')}
+              {/* {t('LandaHolding')} */}
             </span>
-            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+            <span className="w-[340px] border-b border-black pb-3 text-start font-condensed text-4xl font-normal text-black md:border-none">
               {t('InvestorCenter')}
               <br />
             </span>
@@ -35,7 +35,7 @@ export default async function LandaHoldingBlack() {
         <ButtonRefactor
           text={t('signUp')}
           type="link"
-          href="/"
+          href="/investor-registration"
           bgColor="black"
         />
       </div>
@@ -48,9 +48,9 @@ export default async function LandaHoldingBlack() {
                 t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
               } font-condensed`}
             >
-              {t('LandaHolding')}
+              {/* {t('LandaHolding')} */}
             </span>
-            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+            <span className="w-[340px] border-b border-black pb-3 text-start font-condensed text-4xl font-normal text-black md:border-none">
               {t('EntrepreneurCenter')}
               <br />
             </span>

@@ -20,9 +20,9 @@ export default async function AboutUsProfile(
             lang === 'fa' && 'mr-10'
           }`}
         >
-          <h2 className="tracking-0 font-condensed text-xl font-normal leading-normal ltr:tracking-widest md:text-2xl">
+          {/* <h2 className="tracking-0 font-condensed text-xl font-normal leading-normal ltr:tracking-widest md:text-2xl">
             {lang === 'en' ? 'PROFESSIONALS' : 'حرفه ای ها'}
-          </h2>
+          </h2> */}
           <h1 className="rtl:tracking-0 font-gilda text-3xl  font-normal leading-normal md:text-4xl">
             {lang === 'en' ? 'BOARD OF DIRECTORS' : 'هيئت مدیره'}
           </h1>
