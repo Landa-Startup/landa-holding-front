@@ -5,6 +5,7 @@ import ButtonArrow from '@/components/icons/LandaHoldingBlack/ButtonArrow';
 import UlList from '@/components/List/UlList';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default async function LandaHoldingBlack() {
   const lang = useLang.getState().lang;
@@ -29,29 +30,16 @@ export default async function LandaHoldingBlack() {
         <UlList
           list={t('landaHoldingBlackFirst', { returnObjects: true })}
           style1="w-[320px] md:w-[454px]"
-          style2="space-y-2 mr-8 mt-4"
+          style2="space-y-2 mr-8"
           style3="leading-4 md:leading-10 text-md"
         />
 
-        <button
-          className={`relative mx-auto mt-10 inline-flex items-center justify-center gap-4 ${
-            t('lng') === 'en' ? '' : 'flex-row-reverse'
-          } group h-6 rounded-sm bg-[#222222] p-5 md:self-center md:p-6`}
-        >
-          <Link href={'/investor-registration'}>
-            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
-              {t('register')}
-            </div>
-          </Link>
-          <div className="flex items-start justify-start gap-2.5">
-            <div className="relative h-5 w-5">
-              <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
-              <div className="h-full w-full border border-white pb-3">
-                <ButtonArrow />
-              </div>
-            </div>
-          </div>
-        </button>
+        <ButtonRefactor
+          text={t('signUp')}
+          type="link"
+          href="/"
+          bgColor="black"
+        />
       </div>
 
       <div className="z-10 flex px-5 h-[28rem] flex-col justify-between rtl:mr-1">
@@ -78,21 +66,12 @@ export default async function LandaHoldingBlack() {
           style3="leading-4 md:leading-10 text-md"
         />
 
-        <button className="group mx-auto relative mt-10 inline-flex h-6 items-center justify-center gap-4 rounded-sm bg-[#222222] p-5 rtl:flex-row-reverse md:self-center md:p-6">
-          <Link href={'/entrepreneurs'}>
-            <div className="pb-3 font-condensed text-[24px] font-normal leading-6 tracking-[1.5px] text-white md:text-[32px]">
-              {t('register')}
-            </div>
-          </Link>
-          <div className="flex items-start justify-start gap-2.5">
-            <div className="relative h-5 w-5">
-              <div className="absolute inset-0 border border-black bg-black opacity-0 transition duration-1000 ease-in-out hover:opacity-100"></div>
-              <div className="h-full w-full border border-white pb-3">
-                <ButtonArrow />
-              </div>
-            </div>
-          </div>
-        </button>
+        <ButtonRefactor
+          text={t('signUp')}
+          type="link"
+          href="/"
+          bgColor="black"
+        />
       </div>
     </div>
   );
