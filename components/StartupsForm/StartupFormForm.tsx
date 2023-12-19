@@ -190,7 +190,7 @@ export default function StartupFormForm() {
         <div>
           <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
         </div> */}
-      <div className='bg-[#faf8f5] mx-4'>
+      <div className='mx-4 bg-[#faf8f5]'>
         <FormTitle formName='startUp'/>
       </div>
       <div className="container mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:px-4">

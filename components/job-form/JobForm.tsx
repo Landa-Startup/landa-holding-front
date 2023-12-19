@@ -131,7 +131,7 @@ export default function JobForm() {
             <FormTitle formName='jobForm' />
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
-              <div className="mb-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0] p-3">
+              <div className="mb-6 grid grid-cols-1 gap-x-6 gap-y-4 bg-[#F8F5F0] p-3 md:grid-cols-2 lg:grid-cols-3">
                 <PersonalInfoInput
                   register={register}
                   errors={errors}

@@ -33,12 +33,12 @@ export default function LanguageSwitch() {
       onClick={handleClick}
     >
       <div
-        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black ltr:bg-white transition-all duration-1000`}
+        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black transition-all duration-1000 ltr:bg-white`}
       >
         EN
       </div>
       <div
-        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black rtl:bg-white transition-all duration-1000`}
+        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black transition-all duration-1000 rtl:bg-white`}
       >
         FA
       </div>
