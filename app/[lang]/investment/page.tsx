@@ -1,7 +1,7 @@
 import Hero from '@/components/investment/HeroInvestment';
 import Link from '@/components/icons/Link';
 import Image from 'next/image';
-import React from 'react';
+
 import Certificate from '@/components/investment/Certificate';
 import { Metadata } from 'next';
 import FeaturesCardsContainer from '@/components/investment/FeaturesCardsContainer';

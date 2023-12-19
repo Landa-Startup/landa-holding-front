@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
 import { AboutUsCardProps } from '../../types/global';
 import ButtonRefactor from '../common/ButtonRefactor';
 

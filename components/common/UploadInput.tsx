@@ -1,21 +1,21 @@
 import Image from 'next/image';
-import React from 'react';
+
 
 // TO DO : mobile design of file input should change
 // TODO: add i18n
-export default function UploadInput({ 
+export default function UploadInput({
   title,
   register,
   errors,
   nameInput,
   handleChange
- }: { 
+}: {
   title: string;
   register: any;
   errors: any;
   nameInput: string;
   handleChange: any;
-  }) {
+}) {
   return (
     <div className="inline-flex max-w-full flex-col justify-center gap-2.5">
       {/* Label for the upload input */}
@@ -38,9 +38,9 @@ export default function UploadInput({
           className={`text-[13px] font-normal capitalize text-neutral-800 ${errors[nameInput] ? ' border-red-500' : ''}`}
           type="file"
           {...register(nameInput)}
-          onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             // setFileState({nameInput: e.target.files});
-            console.log(e.target.files ? e.target.files[0] : "");
+
             if (e.target.files) {
               handleChange(e.target.files[0]);
             }

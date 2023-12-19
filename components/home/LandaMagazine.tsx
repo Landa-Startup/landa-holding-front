@@ -1,5 +1,6 @@
-import React from 'react';
+
 import LandaMagazineCard from '../magazine/LandaMagazineCard';
+// TODO: import from i18n instead of statics
 import { cardData2 } from '../../app/[lang]/statics';
 import ButtonRefactor from '../common/ButtonRefactor';
 
@@ -15,7 +16,7 @@ export default function LandaMagazine() {
           </div>
           <div className="flex flex-row items-center justify-center">
             <button className="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-white">
-              {/* Left Arrow */}
+              {/* TODO:  create component for svg*/}
               <svg
                 className="h-6 w-6 text-white"
                 xmlns="http://www.w3.org/2000/svg"

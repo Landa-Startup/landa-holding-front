@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Banner from '../../../components/common/Banner';
 import InvestorRegistrationForm from '../../../components/investor-registration/InvestorRegistrationForm';
 import { Metadata } from 'next';

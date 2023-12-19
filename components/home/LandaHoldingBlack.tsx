@@ -1,9 +1,8 @@
-import React from 'react';
-import Lines from '@/components/icons/LandaHoldingBlack/Lines';
-import UlList from '@/components/List/UlList';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
-import ButtonRefactor from '../common/ButtonRefactor';
+import Lines from '@/components/icons/LandaHoldingBlack/Lines';
+import UlList from '@/components/List/UlList';
+import ButtonRefactor from '@/components/common/ButtonRefactor';
 
 export default async function LandaHoldingBlack() {
   const lang = useLang.getState().lang;
@@ -15,9 +14,9 @@ export default async function LandaHoldingBlack() {
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className="rtl:tracking-0 font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
-              {/* {t('LandaHolding')} */}
-            </span>
+            {/* <span className="rtl:tracking-0 font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
+              {t('LandaHolding')}
+            </span> */}
             <span className="w-[340px] border-b border-black pb-3 text-start font-condensed text-4xl font-normal text-black md:border-none">
               {t('InvestorCenter')}
               <br />
@@ -43,13 +42,12 @@ export default async function LandaHoldingBlack() {
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span
-              className={`text-base font-normal text-black ${
-                t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
-              } font-condensed`}
+            {/* <span
+              className={`text-base font-normal text-black ${t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
+                } font-condensed`}
             >
-              {/* {t('LandaHolding')} */}
-            </span>
+              {t('LandaHolding')}
+            </span> */}
             <span className="w-[340px] border-b border-black pb-3 text-start font-condensed text-4xl font-normal text-black md:border-none">
               {t('EntrepreneurCenter')}
               <br />

@@ -14,7 +14,7 @@ import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/submitStore';
 import { useFile } from 'stores/fileStore';
-import FormTitle from '../common/form/FormTitle';
+// import FormTitle from '../common/form/FormTitle';
 
 export default function JobForm() {
 
@@ -37,7 +37,7 @@ export default function JobForm() {
     handleSuccessChange,
   } = useSubmit((s) => s)
 
-  const { cvFileState , handleCvFileChange } = useFile((s) => s)
+  const { cvFileState, handleCvFileChange } = useFile((s) => s)
 
   const lang = useLang((s) => s.lang)
 
@@ -80,25 +80,19 @@ export default function JobForm() {
 
     // Send the form data to the API.
     submitApplyJobForm(sendFormData, csrfToken)
-      .then((response) => {
+      .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
         reset(initialJobFormData); // Country does not reset
-
-        console.log(response);
-
         setTimeout(() => {
           handleNotifChange(false);
         }, 10000); // 10 seconds in milliseconds
       })
-      .catch((error) => {
+      .catch(() => {
         handleSuccessChange(true);
         handleNotifChange(false);
         handleSendChange(false);
-
-        console.log(error);
-
         setTimeout(() => {
           handleNotifChange(false);
         }, 10000); // 10 seconds in milliseconds
@@ -111,56 +105,53 @@ export default function JobForm() {
   }));
 
   return (
-          <div className='m-8'>
-            <>
-              {/* <div className="text-center">
-                <p className="mb-20 font-serif text-2xl tracking-wide">
-                  {t('jobForm', { returnObjects: true }).formTitle}
-                </p>
-              </div>
-              <div>
-                <p className="mb-4 text-4xl">
-                  {t('jobForm', { returnObjects: true }).formSubtitle}
-                </p>
-              </div>
-              <div>
-                <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
-              </div> */}
-            </>
-            <div className='bg-[#F8F5F0]'>
-            <FormTitle formName='jobForm' />
-            </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="mb-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0] p-3">
-                <PersonalInfoInput
-                  register={register}
-                  errors={errors}
-                  nameInputs={{
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    email: 'email',
-                    phoneNumber: 'phoneNumber'
-                  }}
-                />
+    <div className='m-8'>
+      <>
+        <div className="text-center">
+          <p className="mb-20 font-serif text-2xl tracking-wide">
+            {t('jobForm', { returnObjects: true }).formTitle}
+          </p>
+        </div>
+        <div>
+          <p className="mb-4 text-4xl">
+            {t('jobForm', { returnObjects: true }).formSubtitle}
+          </p>
+        </div>
+        <div>
+          <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
+        </div>
+      </>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+          <PersonalInfoInput
+            register={register}
+            errors={errors}
+            nameInputs={{
+              firstName: 'firstName',
+              lastName: 'lastName',
+              email: 'email',
+              phoneNumber: 'phoneNumber'
+            }}
+          />
 
-                <UploadInput
-                  title={t('jobForm', { returnObjects: true }).resumeFile}
-                  register={register}
-                  errors={errors}
-                  handleChange={handleCvFileChange}
-                  nameInput="cvFile"
-                />
-              </div>
-              <div className="text-center">
-                {/* <ButtonRefactor type="submit" text="Submit" /> */}
-                <Button
-                  type='submit'
-                  bgColor="Primary"
-                  disabled={errorsList[0] ? true : false}
-                />
-              </div>
-            </form>
-            <NotificationSendForm />
-          </div>
+          <UploadInput
+            title={t('jobForm', { returnObjects: true }).resumeFile}
+            register={register}
+            errors={errors}
+            handleChange={handleCvFileChange}
+            nameInput="cvFile"
+          />
+        </div>
+        <div className="text-center">
+          {/* <ButtonRefactor type="submit" text="Submit" /> */}
+          <Button
+            type='submit'
+            bgColor="Primary"
+            disabled={errorsList[0] ? true : false}
+          />
+        </div>
+      </form>
+      <NotificationSendForm />
+    </div>
   );
 }

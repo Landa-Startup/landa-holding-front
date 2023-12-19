@@ -66,17 +66,17 @@ export default function StartupFormForm() {
     handleSuccessChange,
   } = useSubmit((s) => s)
 
-  const { 
+  const {
     filePostBussines,
     filePostPitch,
     filePostFinancial,
     handleBusinessFileChange,
     handleFinancialFileChange,
     handlePitchFileChange,
-   } = useFile((s) => s)
+  } = useFile((s) => s)
 
   const lang = useLang((s) => s.lang)
- 
+
   const { t } = useTranslation(lang, 'formComponent');
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -99,7 +99,7 @@ export default function StartupFormForm() {
     handleSubmitingChange(true);
     handleSendChange(true);
 
-    console.log(formData);
+
 
     // Create a FormData object for form data.
     const sendFormData = new FormData();
@@ -145,14 +145,14 @@ export default function StartupFormForm() {
 
     // Send the form data to the API.
     submitStartupsForm(sendFormData, csrfToken)
-      .then((response) => {
+      .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
         reset(initialStartupsFormData); // Country does not reset
         setSelectedRadio('');
 
-        console.log(response);
+
 
         setTimeout(() => {
           handleNotifChange(false);

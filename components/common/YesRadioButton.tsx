@@ -1,4 +1,4 @@
-import React from 'react';
+
 import UploadInput from './UploadInput';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
@@ -62,7 +62,7 @@ export default function YesRadioButton({
             <input
               type="radio"
               value=""
-              {...register(name, { required:  'this file is requied!'})}
+              {...register(name, { required: 'this file is requied!' })}
               checked={selectedRadio === ''}
               onChange={handleRadioChange}
               className="radio mr-2 text-indigo-600 drop-shadow-lg"

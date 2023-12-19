@@ -24,7 +24,7 @@ export default function Navbar({
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
-      console.log(drawerRef);
+
       return;
     }
     drawerRef.current.click();

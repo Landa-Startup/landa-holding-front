@@ -1,4 +1,3 @@
-import React from 'react';
 import LatestStartupsCard from './LatestStartupsCard';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
