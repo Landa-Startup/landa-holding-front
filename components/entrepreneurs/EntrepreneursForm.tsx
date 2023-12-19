@@ -188,7 +188,7 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="pb-4 text-center self-center">
+          <div className="self-center pb-4 text-center">
             <Button
               type='submit'
               bgColor="Primary"

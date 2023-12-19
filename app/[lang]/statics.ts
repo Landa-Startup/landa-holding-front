@@ -541,7 +541,7 @@ const personsFA: personArrayInterface[] = [
   {
     image: '/static/images/our-team/Personals/a8.png',
     position: 'فول استک',
-    name: 'امین اصغریان',
+    name: 'امین عسگریان',
     linkedIn: '',
     category: 'برنامه نویسان'
   },

@@ -11,7 +11,7 @@ export default function FormTitle(
   const { t } = useTranslation(lang, 'formComponent');
 
   return (
-    <>
+    <div className='bg-[#F8F5F0]'>
       <div className='text-center'>
         <p className='mb-20 pt-8 font-condensed text-2xl tracking-wide md:pt-8 md:text-5xl lg:text-6xl xl:text-7xl'>{t(formName,{ returnObjects: true }).formTitle}</p>
       </div>
@@ -21,6 +21,6 @@ export default function FormTitle(
       <div>
         <hr className="mx-3 border-[#000000]" />
       </div>
-    </>
+    </div>
   )
 }

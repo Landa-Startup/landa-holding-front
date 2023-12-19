@@ -147,7 +147,7 @@ export default function HandicraftForm() {
             noLabel={true}
           />
         </div>
-        {/* TODO: fix hardcodes */}
+        {/* TODO: delete hardcodes */}
         <div className="col-span-1 w-full">
           <Input
             register={register}
