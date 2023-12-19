@@ -6,7 +6,7 @@ async function submitLandaApplicationForm(
 ) {
     try {
       const response = await apiClient.post(
-        'landa-application-form',
+        'landagene-form',
         sendFormData,
         {
           headers: {
