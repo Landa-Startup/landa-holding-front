@@ -3,7 +3,7 @@ import HandicraftForm from '@/components/common/form/HandicraftForm';
 import { useTranslation } from 'app/i18n';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import React from 'react';
+
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Handicrafts',
@@ -29,13 +29,13 @@ export default async function Page({
       <div className="mx-8 my-14 flex flex-col justify-center gap-8 md:mx-24">
         <div className="relative flex">
           <div className='pr-6 '>
-          <Image
-            className="hidden md:block"
-            src="/static/images/handicraftLogo.png"
-            alt="handicraft"
-            width={2800}
-            height={1000}
-          /></div>
+            <Image
+              className="hidden md:block"
+              src="/static/images/handicraftLogo.png"
+              alt="handicraft"
+              width={2800}
+              height={1000}
+            /></div>
           <Image
             className="absolute top-1/4 object-cover opacity-20 md:hidden"
             src="/static/images/handicraftLogo.png"

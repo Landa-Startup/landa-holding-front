@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Play from '../icons/PlayButton/Play';
 export default function PromotionalVideo() {
   return (

@@ -79,11 +79,10 @@ const initialJobFormData: JobFormData = {
 };
 
 const initialApplicationFormData: LandaGeneFormData = {
-  firstName: '',
-  lastName: '',
-  phoneNumber: '',
+  full_name: '',
+  phone_number: '',
   email: '',
-  company: ''
+  company_name: ''
 };
 
 const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {

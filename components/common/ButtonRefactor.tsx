@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 

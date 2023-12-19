@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Phone from '../icons/IconPhone';
 import Email from '../icons/IconEmail';
 import Location from '../icons/IconLocation';
@@ -16,7 +16,7 @@ export default async function ContactUsDescription() {
   const { t } = await useTranslation(lang, "contact")
 
   return (
-    <div className='h-full' dir={t('lng') === "en" ? "ltr" : "rtl"}>
+    <div className='h-full'>
       <div className="mb-5 mt-10 flex flex-col items-center md:my-0 md:w-[464px] md:items-start">
         <h1 className="font-gilda text-4xl font-light md:text-5xl">
           {t('LandaHolding')}
@@ -25,7 +25,8 @@ export default async function ContactUsDescription() {
           {t('text')}
         </p>
       </div>
-
+      {/* TODO: make code more modular with new components */}
+      {/* TODO: avoid hardcode links and urls */}
       <div className="flex flex-row gap-3">
         <Link
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
@@ -46,7 +47,7 @@ export default async function ContactUsDescription() {
           <IconLinkedinB />
         </Link>
       </div>
-
+      {/* TODO: use translation instead hardcode */}
       <div className={`mt-10 flex flex-col gap-4`}>
         <div className="flex gap-5">
           <Phone />
@@ -57,25 +58,25 @@ export default async function ContactUsDescription() {
               <li>
                 <Link href="tel:+14165577622">
                   <span>{lang === "en" ? "Toronto: " : "تورنتو: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).cNumber}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).cNumber}</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>{lang === "en" ? "Tehran: " : "تهران: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).tNumber}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).tNumber}</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>{lang === "en" ? "Isfahan: " : "اصفهان: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', {returnObjects: true}).iNumber}</span>
+                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).iNumber}</span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-
+        {/* TODO: Separate component for email information */}
         <div className="flex gap-5">
           <Email />
           <ul>
@@ -87,15 +88,15 @@ export default async function ContactUsDescription() {
             </li>
           </ul>
         </div>
-
+        {/* TODO: Separate component for location information */}
         <div className="flex gap-5">
           <Location />
           <div className="ml-2 flex flex-col ltr:text-left rtl:text-right">
             <span className="font-semibold">{t('address')}</span>
             <ul className="mx-4 list-disc space-y-3">
-              <li>{t('addresses', {returnObjects: true}).canada}</li>
-              <li>{t('addresses', {returnObjects: true}).tehran}</li>
-              <li>{t('addresses', {returnObjects: true}).isfahan}</li>
+              <li>{t('addresses', { returnObjects: true }).canada}</li>
+              <li>{t('addresses', { returnObjects: true }).tehran}</li>
+              <li>{t('addresses', { returnObjects: true }).isfahan}</li>
             </ul>
           </div>
         </div>

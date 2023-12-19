@@ -5,7 +5,7 @@ async function submitEntrepreneurForm(
   csrfToken: string,
 ) {
 
-  console.log(sendFormData);
+
 
   try {
     const response = await apiClient.post(
@@ -18,7 +18,7 @@ async function submitEntrepreneurForm(
         },
       }
     );
-    console.log('Form data sent successfully!');
+
 
     return response;
   } catch (error) {

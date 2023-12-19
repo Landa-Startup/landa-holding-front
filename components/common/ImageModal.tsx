@@ -1,6 +1,6 @@
 // ImageModal.js
 import Image from 'next/image';
-import React from 'react';
+
 
 export default function ImageModal({ src, alt, onClose }: any) {
   return (

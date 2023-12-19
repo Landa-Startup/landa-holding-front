@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Banner from '../../../components/common/Banner';
 import JobForm from '../../../components/job-form/JobForm';
 import { Metadata } from 'next';
@@ -22,7 +22,7 @@ export default async function ApplyFormPage({
     <div dir={t('dir')}>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title={t('jobForm', {returnObjects: true}).banner}
+        title={t('jobForm', { returnObjects: true }).banner}
         lang={lang}
 
       />

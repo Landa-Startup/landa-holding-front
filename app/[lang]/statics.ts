@@ -270,7 +270,7 @@ import {
 const personsEN: personArrayInterface[] = [
   {
     image: '/static/images/our-team/Personals/a1.png',
-    position: 'CEO',
+    position: 'Founder and CEO',
     name: 'Dr.Rasoul Moradimehr',
     linkedIn: '',
     category: 'managers'
@@ -477,7 +477,7 @@ const personsFA: personArrayInterface[] = [
   },
   {
     image: '/static/images/our-team/Personals/a2.png',
-    position: 'COTB',
+    position: 'رئیس هیئت مدیره',
     name: 'دکتر هادی حسن‌پور',
     linkedIn: '',
     category: 'مدیران'
@@ -541,7 +541,7 @@ const personsFA: personArrayInterface[] = [
   {
     image: '/static/images/our-team/Personals/a8.png',
     position: 'فول استک',
-    name: 'امین اصغریان',
+    name: 'امین عسگریان',
     linkedIn: '',
     category: 'برنامه نویسان'
   },
@@ -1203,7 +1203,7 @@ const servicesFA: ServicesInterface[] = [
     image: '11.png'
   },
   {
-    title: 'برگزاری رویدادهای ارائه استارتاپ',
+    title: 'برگزاری رویدادهای ارائه استارت آپ',
     image: '12.png'
   }
 ];
@@ -1299,7 +1299,7 @@ const cardsDataEN: AboutUsDataInterface[] = [
   {
     image: '/static/images/our-team/Personals/a1.png',
     name: 'Rasoul Moradimehr',
-    position: ' CEO',
+    position: 'Founder and CEO',
     links: {
       linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
       whatsapp: 'wa.me/+989134233863',
@@ -1340,8 +1340,8 @@ const cardsDataEN: AboutUsDataInterface[] = [
 const cardsDataFA: AboutUsDataInterface[] = [
   {
     image: '/static/images/our-team/Personals/a1.png',
-    name: 'رسول مرادیمهر',
-    position: ' مدیر عامل',
+    name: 'رسول مرادی مهر',
+    position: ' موسس و مدیر عامل',
     links: {
       linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
       whatsapp: 'wa.me/+989134233863',
@@ -1366,7 +1366,7 @@ const cardsDataFA: AboutUsDataInterface[] = [
   {
     image: '/static/images/our-team/Personals/a2.png',
     name: 'هادی حسن پور',
-    position: 'COTB',
+    position: 'رئیس هیئت مدیره',
     links: {
       linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
       whatsapp: 'https://wa.me/+12892693933',

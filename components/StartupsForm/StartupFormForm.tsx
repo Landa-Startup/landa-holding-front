@@ -23,13 +23,15 @@ import FormTitle from '../common/form/FormTitle';
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
 export default function StartupFormForm() {
+  const lang = useLang((s) => s.lang)
+  const { t } = useTranslation(lang, 'formComponent');
 
   enum Type {
-    IDEA = 'IDEA',
-    MVP = 'MVP',
-    TRIAL = 'TRIAL',
-    FisrtSale = 'FisrtSale', // Typo: Should be "FirstSale"
-    SaleDevelopment = 'SaleDevelopment'
+    IDEA = t("IDEA"),
+    MVP = t('MVP'),
+    TRIAL = t('TRIAL'),
+    FisrtSale = t('FisrtSale'), // Typo: Should be "FirstSale"
+    SaleDevelopment = t('SaleDevelopment')
   }
 
   const Types = [
@@ -40,7 +42,7 @@ export default function StartupFormForm() {
     Type.SaleDevelopment
   ];
 
-  const typesData = Types.map((type: string) => ({
+  const typesData = Types.map((type: any) => ({
     value: type,
     label: type
   }));
@@ -66,18 +68,15 @@ export default function StartupFormForm() {
     handleSuccessChange,
   } = useSubmit((s) => s)
 
-  const { 
+  const {
     filePostBussines,
     filePostPitch,
     filePostFinancial,
     handleBusinessFileChange,
     handleFinancialFileChange,
     handlePitchFileChange,
-   } = useFile((s) => s)
+  } = useFile((s) => s)
 
-  const lang = useLang((s) => s.lang)
- 
-  const { t } = useTranslation(lang, 'formComponent');
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRadio(event.target.value);
@@ -99,7 +98,7 @@ export default function StartupFormForm() {
     handleSubmitingChange(true);
     handleSendChange(true);
 
-    console.log(formData);
+
 
     // Create a FormData object for form data.
     const sendFormData = new FormData();
@@ -145,14 +144,14 @@ export default function StartupFormForm() {
 
     // Send the form data to the API.
     submitStartupsForm(sendFormData, csrfToken)
-      .then((response) => {
+      .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
         reset(initialStartupsFormData); // Country does not reset
         setSelectedRadio('');
 
-        console.log(response);
+
 
         setTimeout(() => {
           handleNotifChange(false);
@@ -175,7 +174,7 @@ export default function StartupFormForm() {
   }));
 
   return (
-    <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
+    <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
       {/* <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
         <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
           {t('startUp', { returnObjects: true }).formTitle}
@@ -190,7 +189,7 @@ export default function StartupFormForm() {
         <div>
           <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
         </div> */}
-      <div className='bg-[#faf8f5] mx-4'>
+      <div className='mx-4 bg-[#faf8f5]'>
         <FormTitle formName='startUp'/>
       </div>
       <div className="container mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:px-4">
@@ -219,7 +218,7 @@ export default function StartupFormForm() {
             required={
               t('startUp', { returnObjects: true }).statusSelectRequired
             }
-            className="select select-bordered mt-4 w-full max-w-xs"
+            className="select select-bordered mt-4 w-full max-w-xs px-8"
             labelClass="text-[#6b6b6b] dark:text-current"
             placeholder={
               t('startUp', { returnObjects: true }).statusSelectPlaceholder
@@ -232,10 +231,10 @@ export default function StartupFormForm() {
 
           {((): any => {
             switch (selectedRadio) {
-              case 'IDEA':
+              case t("IDEA"):
                 return <StartupFormIdea register={register} errors={errors} />;
                 break;
-              case 'MVP':
+              case t('MVP'):
                 return (
                   <StartupFormMVP
                     register={register}
@@ -246,7 +245,7 @@ export default function StartupFormForm() {
                   />
                 );
                 break;
-              case 'TRIAL':
+              case t('TRIAL'):
                 return (
                   <StartupFormTrialProduct
                     register={register}
@@ -257,7 +256,7 @@ export default function StartupFormForm() {
                   />
                 );
                 break;
-              case 'FisrtSale':
+              case t('FisrtSale'):
                 return (
                   <StartupFormFirstSale
                     register={register}
@@ -268,7 +267,7 @@ export default function StartupFormForm() {
                   />
                 );
                 break;
-              case 'SaleDevelopment':
+              case t('SaleDevelopment'):
                 return (
                   <StartupFormSaleDevelopment
                     register={register}
@@ -284,7 +283,7 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <div className="ml-1 mt-10 text-start">
+          <div className="flex justify-center">
             <Button
               type='submit'
               bgColor="Primary"

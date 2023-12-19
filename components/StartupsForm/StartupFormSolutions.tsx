@@ -1,7 +1,5 @@
-import * as React from 'react';
 import TextArea from '../common/TextArea';
 import RadioButtonGroup from '../common/RadioButtonGroup';
-// import { preparationStatsOption } from '../../app/[lang]/statics'
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
