@@ -86,7 +86,7 @@ export default function Hero({
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
-          } text-center font-barlow text-4xl font-bold leading-normal tracking-[11px] text-white rtl:tracking-normal md:text-5xl md:tracking-[22px]`}
+          } text-center font-barlow text-3xl font-bold leading-normal tracking-[11px] text-white rtl:tracking-normal md:text-5xl md:tracking-[22px]`}
         >
           {title}
         </div>

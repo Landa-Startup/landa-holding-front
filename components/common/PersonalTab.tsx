@@ -15,7 +15,7 @@ export default function PersonalTab({
   linkedIn: string;
 }) {
   return (
-    <div className="relative flex h-[320px] w-[300px] flex-col justify-between rounded-sm border border-primary">
+    <div className="relative flex h-[320px] w-[300px] flex-col justify-between rounded-sm">
       {/* Background Image */}
       <Image
         className="object-cover"

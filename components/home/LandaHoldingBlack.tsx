@@ -50,7 +50,7 @@ export default async function LandaHoldingBlack() {
             >
               {t('LandaHolding')}
             </span>
-            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+            <span className="border-b border-black pb-3 text-center font-gilda text-3xl md:text-4xl font-normal text-black md:border-none md:text-start">
               {t('EntrepreneurCenter')}
               <br />
             </span>
@@ -59,9 +59,9 @@ export default async function LandaHoldingBlack() {
         {/* TODO: Why pass 3 styles? */}
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
-          style1={`w-[320px] md:w-[550px] pr-6`}
-          style2="space-y-2 mr-8"
-          style3="leading-4 md:leading-6 text-md"
+          style1={`w-[320px] md:w-[600px]`}
+          style2="space-y-2 md:mr-8"
+          style3="leading-4 md:leading-10 text-md"
         />
 
         <ButtonRefactor
