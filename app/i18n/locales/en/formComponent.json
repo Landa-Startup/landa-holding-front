@@ -93,6 +93,8 @@
     "startUp":{
         "lng": "en",
         "dir": "ltr",
+        "YesButton":"Yes",
+        "NoButton":"No",
         "banner": "STARTUPS VALIDATION FORM",
         "formTitle": "Startup Validation Form",
         "subTitle": "Growth and Scale-up",

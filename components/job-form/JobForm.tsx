@@ -111,7 +111,7 @@ export default function JobForm() {
   }));
 
   return (
-          <div className='m-8'>
+          <div className='container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20'>
             <>
               {/* <div className="text-center">
                 <p className="mb-20 font-serif text-2xl tracking-wide">
@@ -130,7 +130,7 @@ export default function JobForm() {
             <div className='bg-[#F8F5F0]'>
             <FormTitle formName='jobForm' />
             </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
               <div className="mb-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0] p-3">
                 <PersonalInfoInput
                   register={register}
@@ -151,7 +151,7 @@ export default function JobForm() {
                   nameInput="cvFile"
                 />
               </div>
-              <div className="text-center">
+              <div className="mx-auto pb-4 text-center">
                 {/* <ButtonRefactor type="submit" text="Submit" /> */}
                 <Button
                   type='submit'

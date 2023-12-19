@@ -175,7 +175,7 @@ export default function StartupFormForm() {
   }));
 
   return (
-    <div className="container m-10 mx-auto px-5 pt-20 text-center font-barlow lg:p-2">
+    <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
       {/* <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
         <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
           {t('startUp', { returnObjects: true }).formTitle}
@@ -284,7 +284,7 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <div className="ml-1 mt-10 text-start">
+          <div className="flex justify-center">
             <Button
               type='submit'
               bgColor="Primary"

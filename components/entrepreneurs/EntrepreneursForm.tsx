@@ -104,12 +104,12 @@ export default function EntrepreneursForm() {
 
   return (
     <>
-      <div className="container m-[-1rem] mx-auto my-20 px-5 font-barlow lg:p-20 gap-y-0">
+      <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
         <div className='bg-[#F8F5F0]'>
         <FormTitle formName='entrepreneurForm' />
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
-          <div className="mb-6 grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0] p-4">
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
+          <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -169,7 +169,7 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="pb-4 text-center self-center">
+          <div className="self-center pb-4 text-center">
             <Button
               type='submit'
               bgColor="Primary"
