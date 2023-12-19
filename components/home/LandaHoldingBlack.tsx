@@ -29,6 +29,7 @@ export default async function LandaHoldingBlack() {
           list={t('landaHoldingBlackFirst', { returnObjects: true })}
           style1="w-[320px] md:w-[454px] pr-5"
           style2="space-y-2 mr-8"
+          style3="pt-4"
         />
 
         <ButtonRefactor
@@ -60,6 +61,7 @@ export default async function LandaHoldingBlack() {
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
           style1={`w-[320px] md:w-[600px]`}
           style2="space-y-2 md:mr-8"
+          style3="pt-4"
         />
 
         <ButtonRefactor
