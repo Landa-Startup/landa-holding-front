@@ -28,7 +28,7 @@ export default async function LandaHoldingBlack() {
 
         <UlList
           list={t('landaHoldingBlackFirst', { returnObjects: true })}
-          style1="w-[320px] md:w-[454px] pr-5"
+          style1="w-[320px] md:w-[454px]"
           style2="space-y-2 mr-8 mt-4"
           style3="leading-4 md:leading-10 text-md"
         />
@@ -64,7 +64,7 @@ export default async function LandaHoldingBlack() {
             >
               {t('LandaHolding')}
             </span>
-            <span className="border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+            <span className="border-b border-black pb-3 text-center font-gilda text-3xl md:text-4xl font-normal text-black md:border-none md:text-start">
               {t('EntrepreneurCenter')}
               <br />
             </span>
@@ -73,8 +73,8 @@ export default async function LandaHoldingBlack() {
         {/* TODO: Why pass 3 styles? */}
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
-          style1={`w-[320px] md:w-[600px] pr-6`}
-          style2="space-y-2 mr-8"
+          style1={`w-[320px] md:w-[600px]`}
+          style2="space-y-2 md:mr-8"
           style3="leading-4 md:leading-10 text-md"
         />
 
