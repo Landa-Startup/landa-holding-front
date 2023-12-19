@@ -252,5 +252,25 @@
       "link": "https://invigorated-drop-231359.framer.app"
     }
   ],
-  "register": "Register"
+  "register": "Register",
+  "upcomingStartups": {
+    "landaHolding": "LANDA HOLDING",
+    "title": "UPCOMING STARTUPS",
+    "cards":[
+      {
+        "image": "/static/images/handicraft.png",
+        "subTitle": "LANDA HANDICRAFT",
+        "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
+        "goto": "/handicraft",
+        "buttonText" : "Register"
+      },
+      {
+        "image": "/static/images/handicraft.png",
+        "subTitle": "LANDA HANDICRAFT",
+        "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
+        "goto": "/handicraft",
+        "buttonText" : "Register"
+      }
+    ]
+  }
 }

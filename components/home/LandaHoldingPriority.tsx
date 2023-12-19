@@ -14,7 +14,7 @@ export default async function LandaHoldingPriority() {
             {t('LandaHolding')}
             <br />
           </span>
-          <span className="font-condensed text-5xl font-normal text-black ltr:tracking-widest rtl:tracking-normal">
+          <span className="font-condensed text-5xl font-normal text-black ltr:tracking-widest rtl:tracking-normal uppercase">
             {t('Priorities')}
           </span>
         </div>

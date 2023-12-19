@@ -32,12 +32,14 @@ export default async function LandaHoldingBlack() {
           style3="leading-4 md:leading-10 text-md"
         />
 
+        <div className='h-auto w-[224px]'>
         <ButtonRefactor
           text={t('signUp')}
           type="link"
           href="/"
           bgColor="black"
         />
+        </div>
       </div>
 
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
@@ -64,12 +66,14 @@ export default async function LandaHoldingBlack() {
           style3="leading-4 md:leading-6 text-md"
         />
 
+        <div className='h-auto w-[224px]'>
         <ButtonRefactor
           text={t('signUp')}
           type="link"
           href="/"
           bgColor="black"
         />
+        </div>
       </div>
     </div>
   );
