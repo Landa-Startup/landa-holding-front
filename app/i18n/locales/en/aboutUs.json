@@ -93,5 +93,45 @@
     {"name": "VISION RAFT", "logo": "6.png", "link": "https://Visionraft.com"},
     {"name": "HANDI CRAFTS", "logo": "8.png", "link": "/"},
     {"name": "LANDA GENE", "logo": "10.png", "link": "/landa-gene"}
+  ],
+  "professionals": "professionals",
+  "boardOfDirectors": "board Of Directors",
+  "boardMemebers": [
+    {
+      "image": "/static/images/our-team/Personals/a1.png",
+      "name": "Rasul Moraimehr",
+      "position": "Founder & CEO",
+      "links": {
+        "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
+        "whatsapp": "wa.me/+989134233863",
+        "email": "mailto:rasoulmoradimehr@gmail.com",
+        "website": "https://moradimehr.com/",
+        "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=="
+      }
+    },
+    {
+      "image": "/static/images/About/mjafari.jpg",
+      "name": "Morteza Jafari",
+      "position": "International Relations",
+      "links": {
+        "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
+        "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
+        "email": "mailto:morteza_jafari49@yahoo.com",
+        "website": "https://mortezajafari.ca/",
+        "instagram": "https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA=="
+      }
+    },
+    {
+      "image": "/static/images/our-team/Personals/a2.png",
+      "name": "Hadi Hasanpoor",
+      "position": "COTB",
+      "links": {
+        "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
+        "whatsapp": "https://wa.me/+12892693933",
+        "email": "mailto:hadihasanpor@gmail.com",
+        "website": "https://www.hadihasanpour.ca/",
+        "instagram": "https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA=="
+      }
+    }
   ]
 }
