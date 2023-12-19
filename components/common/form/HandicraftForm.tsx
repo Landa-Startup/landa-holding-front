@@ -134,7 +134,7 @@ export default function HandicraftForm() {
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
     <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
-      <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-x-3'>
+      <div className='grid w-full grid-cols-1 gap-x-3 md:grid-cols-2'>
       <PersonalInfoInput
         register={register}
         errors={errors}

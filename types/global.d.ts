@@ -80,11 +80,10 @@ interface JobFormData {
 }
 
 interface LandaGeneFormData {
-  firstName: string;
-  lastName: string;
-  phoneNumber: string;
+  full_name: string;
+  phone_number: string;
   email: string;
-  company: string;
+  company_name: string;
 }
 
 // Define an interface for startups form data

@@ -21,7 +21,7 @@ export default async function Banner({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className="h-full blur-[2px] md:h-[520px] absolute inset-0"
+        className="absolute inset-0 h-full blur-[2px] md:h-[520px]"
       ></div>
 
       <div
