@@ -28,7 +28,7 @@ export default function Select({
 }) {
   return (
     <div className="flex flex-col items-start">
-      <label htmlFor={nameInput} className={`self-start px-2 ${labelClass}`}>
+      <label htmlFor={nameInput} className={`self-start px-4 ${labelClass}`}>
         {label}
       </label>
       {/* TO DO : select placeholder has a problem */}

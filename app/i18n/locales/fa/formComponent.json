@@ -198,6 +198,14 @@
             { "value": "qualifiedSystem", "label": "یک سیستم کامل و واجد شرایط" }
         ]
     },
+    "IDEA":"ایده ها",
+    "MVP":"MVP",
+    "TRIAL":"نسخه آزمایشی",
+    "FisrtSale":"فروش اولیه",
+    "SaleDevelopment":"توسعه فروش",
+
+
+
     "website":"وبسایت شما:",
     "websitePlaceholder":"لطفا وبسایت خود را وارد کنید.",
     "websiteRequired":"این بخش الزامی است.",
