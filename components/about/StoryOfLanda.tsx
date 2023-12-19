@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
 
@@ -23,20 +23,22 @@ export default async function StoryOfLanda() {
           </div>
           <div className="mt-4 px-10 md:pl-0">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
-              {t('TheStoryOfLanda', { returnObjects: true })[0].title}
+              {t('TheStoryOfLanda', { returnObjects: true }).title}
             </span>
             <div className="flex flex-col space-y-4 font-barlow text-[#000]">
-              <p>{t('TheStoryOfLanda', { returnObjects: true })[0].text}</p>
+              <p>{t('TheStoryOfLanda', { returnObjects: true }).text}</p>
               <div className="flex flex-col"></div>
             </div>
           </div>
         </div>
+        {/* TODO: make a for loop for this section instead of duplicate code */}
+        {/* TODO: Why use [0],[1] for all translations? */}
         <div className="flex flex-col  px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
           <span className="font-gilda text-3xl text-primary">
             {t('LANDAStartups', { returnObjects: true })[0].title}
           </span>
           <ul className="mt-5  flex flex-col space-y-3 font-barlow">
-            <li className="list-disc marker:text-primary">
+            {/* <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
                 {t('LANDAStartups', { returnObjects: true })[1].StartupAcademy}
               </span>
@@ -44,7 +46,7 @@ export default async function StoryOfLanda() {
               <span className="">
                 {t('LANDAStartups', { returnObjects: true })[0].StartupAcademy}
               </span>
-            </li>
+            </li> */}
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
                 {t('LANDAStartups', { returnObjects: true })[1].LandaTrip}

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import FeaturesCards from './FeaturesCards';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';

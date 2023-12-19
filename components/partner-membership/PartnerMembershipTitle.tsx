@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useLang } from 'stores/langStore';
 
 export default function PartnerMembershipTitle() {

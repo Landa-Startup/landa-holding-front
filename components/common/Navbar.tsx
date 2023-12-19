@@ -24,7 +24,7 @@ export default function Navbar({
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
-      console.log(drawerRef);
+
       return;
     }
     drawerRef.current.click();
@@ -65,12 +65,12 @@ export default function Navbar({
               <div className="flex flex-col items-center md:flex-row">
                 <Image
                   className="h-10 w-10 md:h-14 md:w-12"
-                  src={'static/images/Logo.svg'}
+                  src='static/images/Logo.svg'
                   alt="Logo"
                   width={50}
                   height={50}
                 />
-                <span className="text-[12px] font-bold tracking-[0.375px] text-primary md:text-xl">
+                <span className="font-condensed text-[12px] font-bold tracking-[0.375px] text-primary md:text-xl">
                   {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>
@@ -97,9 +97,8 @@ export default function Navbar({
                     {lang === 'en' ? 'FORMS' : 'فرم ها'}
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
+                      }`}
                   >
                     {submenuItems.map(
                       ({ label, href }: { label: string; href: string }) => (

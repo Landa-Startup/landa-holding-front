@@ -32,21 +32,22 @@ export default async function LandaHoldingBlack() {
           style3="pt-4"
         />
 
+        <div className='h-auto w-[224px]'>
         <ButtonRefactor
           text={t('signUp')}
           type="link"
           href="/"
           bgColor="black"
         />
+        </div>
       </div>
 
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
-              className={`text-base font-normal text-black ${
-                t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
-              } font-condensed`}
+              className={`text-base font-normal text-black ${t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
+                } font-condensed`}
             >
               {t('LandaHolding')}
             </span>
@@ -64,12 +65,14 @@ export default async function LandaHoldingBlack() {
           style3="pt-4"
         />
 
+        <div className='h-auto w-[224px]'>
         <ButtonRefactor
           text={t('signUp')}
           type="link"
           href="/"
           bgColor="black"
         />
+        </div>
       </div>
     </div>
   );

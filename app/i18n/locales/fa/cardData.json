@@ -21,7 +21,7 @@
       "image": "/static/images/Home/Priority/ai 2.png"
     },
     {
-      "title": "مهندسی بیوپزشکی",
+      "title": "مهندسی پزشکی",
       "image": "/static/images/Home/Priority/man 2.png"
     },
     {
@@ -119,15 +119,15 @@
       "image": "11.png"
     },
     {
-      "title": "برگزاری رویدادهای ارائه استارتاپ",
+      "title": "برگزاری رویدادهای ارائه استارت آپ",
       "image": "12.png"
     }
   ],
   "cardData": [
     {
       "image": "/static/images/our-team/Personals/a1.png",
-      "name": "رسول مرادیمهر",
-      "position": " مدیر عامل",
+      "name": "رسول مرادی مهر",
+      "position": " موسس و مدیر عامل",
       "links": {
         "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
         "whatsapp": "wa.me/+989134233863",
@@ -151,7 +151,7 @@
     {
       "image": "/static/images/our-team/Personals/a2.png",
       "name": "هادی حسن پور",
-      "position": "COTB",
+      "position": "رئیس هیئت مدیره",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",

@@ -2,16 +2,13 @@
     "firstName": "نام",
     "firstNameRequired": "نام اجباری است.",
     "firstNamePlaceholder": "لطفا نام خود را وارد کنید.",
-
     "lastName": "نام خانوادگی",
     "lastNameRequired": "نام خانوادگی اجباری است.",
     "lastNamePlaceholder": "لطفا نام خانوادگی خود را وارد کنید.",
-
     "email": "ایمیل",
     "emailRequired": "ایمیل اجباری است.",
     "emailErrorMessage": "لطفا آدرس ایمیل را به درستی وارد کنید.",
     "EmailPlaceholder": "لطفا ایمیل خود را وارد کنید.",
-
     "phoneNumber": "شماره تماس",
     "phoneNumberRequired": "شماره تماس الزامی است.",
     "phoneNumberErrorMessage": "شماره تماس را به درستی وارد کنید.",
@@ -26,14 +23,11 @@
     "sendButton": "ارسال",
     "sendingButton": "درحال ارسال ....",
     "visitButton": "مشاهده کنید",
-
     "successMessage": "اطلاعات با موفقیت ارسال شد.",
     "failedMessage": "در ارسال اطلاعات مشکلی به وجود آمده! لطفا با پشتیبانی تماس بگیرید.",
-
     "companyName": "نام شرکت",
     "companyNameRequired": "نام شرکت الزامی است.",
     "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
-
     "howDidYouKnowUs": "چگونه درباره ما شنیدید",
     "howDidYouKnowUsPlaceholder":"توضیحات",
     "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
@@ -51,7 +45,6 @@
         "messageRequired": "پیام شما الزامی است",
         "messagePlaceholder": "پیام شما"
     },
-
     "partnerForm": {
         "lng": "fa",
         "dir": "rtl",
@@ -59,8 +52,7 @@
         "formTitle": "فرم شریک کاری",
         "formSubtitle": "اطلااعات شخصی"
     },
-
-    "jobForm":{
+    "jobForm": {
         "lng": "fa",
         "dir": "rtl",
         "LandaHolding": "هلدینگ لاندا",
@@ -69,7 +61,6 @@
         "formSubtitle": "اطلاعات شخصی",
         "resumeFile": "فایل رزومه:"
     },
-
     "entrepreneurForm": {
         "lng": "fa",
         "banner": "مرکز کارآفرینان",
@@ -77,57 +68,52 @@
         "formTitle": "فرم مرکز کارآفرینان",
         "formSubTitle": "اطلاعات شخصی"
     },
-
-
-    "investorForm":{
+    "investorForm": {
         "lng": "en",
         "dir": "ltr",
         "banner": "مرکز سرمایه گذار",
         "LandaHolding": "هلدینگ لاندا",
         "formTitle": "فرم مرکز سرمایه گذاران",
         "formSubtitle": "اطلاعات شخصی",
-        "interests":"علاقه مندی ها",
-        "interestsRequired":"علاقه مندی ها الزامی است",
-        "interestsPlaceholder":"علاقه مندی های خود را وارد کنید",
-        "preferredAreas":"حوزه های ترجیحی برای سرمایه گذاری",
-        "preferredAreasRequired":"پر کردن این قسمت الزامی است",
-        "preferredAreasPlaceholder":"توضیحات"
+        "interests": "علاقه مندی ها",
+        "interestsRequired": "علاقه مندی ها الزامی است",
+        "interestsPlaceholder": "علاقه مندی های خود را وارد کنید",
+        "preferredAreas": "حوزه های ترجیحی برای سرمایه گذاری",
+        "preferredAreasRequired": "پر کردن این قسمت الزامی است",
+        "preferredAreasPlaceholder": "توضیحات"
     },
-    "startUp":{
+    "startUp": {
         "lng": "fa",
         "dir": "rtl",
         "YesButton":"بله",
         "NoButton":"خیر",
         "banner": "اعتبارسنجی استارت آپ ها",
-        "formTitle": "فرم اعتبارسنجی استارتاپ",
+        "formTitle": "فرم اعتبارسنجی استارت آپ",
         "subTitle": "رشد و افزایش مقیاس",
         "formSubtitle": "اطلاعات شخصی",
-        "statusSelect":"وضعیت خود را انتخاب کنید: ",
-        "statusSelectRequired":"وضعیت شما الزامی است",
-        "statusSelectPlaceholder":"وضعیت خود را انتخاب کنید: ",
-        "idea":{
-            "ideaExplanation":"ایده خود را در ۵ خط توضیح دهید؟*",
-            "ideaExplanationPlaceholder":"توضیحات",
-            "ideaExplanationRequired":"پر کردن این قسمت الزامی است."
+        "statusSelect": "وضعیت خود را انتخاب کنید: ",
+        "statusSelectRequired": "وضعیت شما الزامی است",
+        "statusSelectPlaceholder": "وضعیت خود را انتخاب کنید: ",
+        "idea": {
+            "ideaExplanation": "ایده خود را در ۵ خط توضیح دهید؟*",
+            "ideaExplanationPlaceholder": "توضیحات",
+            "ideaExplanationRequired": "پر کردن این قسمت الزامی است."
         },
-        "pitchDeck":"آیا فایل Pitch Deck دارید؟",
-        "pitchDeckRequired":"لطفا یکی از گزینه های زیر را انتخاب کنید.",
-        "businessPlan":"آیا فایل طرح کسب و کار دارید؟",
-        "businessPlanRequired":"لطفا یکی از گزینه های زیر را انتخاب کنید.",
-
-        "productName":"نام محصول",
-        "productNameRequired":"نام محصول الزامی است.",
-        "productNamePlaceholder":"لطفا نام محصول خود را وارد کنید.",
-
-        "siteAddress":"آدرس وب سایت",
-        "siteAddressRequired":"آدرس وب سایت الزامی است.",
-        "siteAddressPlaceholder":"لطفا آدرس وب سایت خود را وارد کنید.",
-        
-        "problems":{
-            "title":"مشکلات",
-            "customerProblem":"توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",
-            "customerProblemRequired":"این قسمت الزامی است.",
-            "customerProblemPlaceholder":"توضیحات"
+        "pitchDeck": "آیا فایل Pitch Deck دارید؟",
+        "pitchDeckRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
+        "businessPlan": "آیا فایل طرح کسب و کار دارید؟",
+        "businessPlanRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
+        "productName": "نام محصول",
+        "productNameRequired": "نام محصول الزامی است.",
+        "productNamePlaceholder": "لطفا نام محصول خود را وارد کنید.",
+        "siteAddress": "آدرس وب سایت",
+        "siteAddressRequired": "آدرس وب سایت الزامی است.",
+        "siteAddressPlaceholder": "لطفا آدرس وب سایت خود را وارد کنید.",
+        "problems": {
+            "title": "مشکلات",
+            "customerProblem": "توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",
+            "customerProblemRequired": "این قسمت الزامی است.",
+            "customerProblemPlaceholder": "توضیحات"
         },
         "cooperatedWithInvestors":"آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
         "cooperatedWithInvestorsPlaceholder":"توضیحات",
@@ -145,45 +131,44 @@
             "scalablePlaceholder":"توضیحات",
             "scalableRequired":"این قسمت الزامی است!"
         },
-        "businessModel":{
-            "title":"طرح کسب و کار",
-            "monetizationOfYourPlan":"روش کسب درآمد از طرح خود را توضیح دهید؟*",
-            "monetizationOfYourPlanPlaceholder":"توضیحات",
-            "monetizationOfYourPlanRequired":"این قسمت الزامی است!",
-            "structureOfYourSales":"لطفاً ساختار چرخه فروش خود را از تماس تا تحویل به وضوح ذکر کنید.",
-            "structureOfYourSalesPlaceholder":"توضیحات",
-            "structureOfYourSalesRequired":"این قسمت الزامی است!",
-            "financialPlan":"اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
+        "businessModel": {
+            "title": "طرح کسب و کار",
+            "monetizationOfYourPlan": "روش کسب درآمد از طرح خود را توضیح دهید؟*",
+            "monetizationOfYourPlanPlaceholder": "توضیحات",
+            "monetizationOfYourPlanRequired": "این قسمت الزامی است!",
+            "structureOfYourSales": "لطفاً ساختار چرخه فروش خود را از تماس تا تحویل به وضوح ذکر کنید.",
+            "structureOfYourSalesPlaceholder": "توضیحات",
+            "structureOfYourSalesRequired": "این قسمت الزامی است!",
+            "financialPlan": "اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
         },
-        "financialFile":"آیا شما تمکن مالی دارید؟",
-        "financialFileRequired":"لطفا یکی از گزینه ها را انتخاب کنید:",
-
-        "property":{
-            "title":"ویژگی ها",
-            "startupRevenue":"استارتاپ شما از زمان شروعش چقدر درآمد داشته است؟",
-            "startupRevenuePlaceholder":"توضیحات",
-            "startupRevenueRequired":"این قسمت الزامی است!",
-            "monthlyIncome":"درآمد ماهانه شما چقدر است؟",
-            "monthlyIncomePlaceholder":"توضیحات",
-            "monthlyIncomeRequired":"این قسمت الزامی است!",
-            "currentRaisedFunding":"قبل از شروع کسب و کارتان چقدر بودجه جاری جمع آوری کردید؟",
-            "currentRaisedFundingPlaceholder":"توضیحات",
-            "currentRaisedFundingRequired":"این قسمت الزامی است!",
-            "neededCapital":"برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟",
-            "neededCapitalPlaceholder":"توضیحات",
-            "neededCapitalRequired":"این قسمت الزامی است!"
+        "financialFile": "آیا شما تمکن مالی دارید؟",
+        "financialFileRequired": "لطفا یکی از گزینه ها را انتخاب کنید:",
+        "property": {
+            "title": "ویژگی ها",
+            "startupRevenue": "استارت آپ شما از زمان شروعش چقدر درآمد داشته است؟",
+            "startupRevenuePlaceholder": "توضیحات",
+            "startupRevenueRequired": "این قسمت الزامی است!",
+            "monthlyIncome": "درآمد ماهانه شما چقدر است؟",
+            "monthlyIncomePlaceholder": "توضیحات",
+            "monthlyIncomeRequired": "این قسمت الزامی است!",
+            "currentRaisedFunding": "قبل از شروع کسب و کارتان چقدر بودجه جاری جمع آوری کردید؟",
+            "currentRaisedFundingPlaceholder": "توضیحات",
+            "currentRaisedFundingRequired": "این قسمت الزامی است!",
+            "neededCapital": "برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟",
+            "neededCapitalPlaceholder": "توضیحات",
+            "neededCapitalRequired": "این قسمت الزامی است!"
         },
-        "targetMarket":{
-            "title":"بازار هدف",
-            "customerCharacteristic":"بر اساس چه ویژگی هایی تصمیم می گیرید مشتریان شما چه کسانی باشند و چه کسانی نباشند؟",
-            "customerCharacteristicPlaceholder":"توضیحات",
-            "customerCharacteristicRequired":"این قسمت الزامی است!",
-            "currentCustomers":"مشتریان فعلی شما چه کسانی هستند؟ تا به حال چند مشتری داشته اید؟",
-            "currentCustomersPlaceholder":"توضیحات",
-            "currentCustomersRequired":"این قسمت الزامی است!",
-            "estimatedMarketSize":"اندازه بازار را چگونه تخمین زده اید؟*",
-            "estimatedMarketSizePlaceholder":"توضیحات",
-            "estimatedMarketSizeRequired":"این قسمت الزامی است!"
+        "targetMarket": {
+            "title": "بازار هدف",
+            "customerCharacteristic": "بر اساس چه ویژگی هایی تصمیم می گیرید مشتریان شما چه کسانی باشند و چه کسانی نباشند؟",
+            "customerCharacteristicPlaceholder": "توضیحات",
+            "customerCharacteristicRequired": "این قسمت الزامی است!",
+            "currentCustomers": "مشتریان فعلی شما چه کسانی هستند؟ تا به حال چند مشتری داشته اید؟",
+            "currentCustomersPlaceholder": "توضیحات",
+            "currentCustomersRequired": "این قسمت الزامی است!",
+            "estimatedMarketSize": "اندازه بازار را چگونه تخمین زده اید؟*",
+            "estimatedMarketSizePlaceholder": "توضیحات",
+            "estimatedMarketSizeRequired": "این قسمت الزامی است!"
         },
 
         "radioButtonGroup":[

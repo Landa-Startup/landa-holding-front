@@ -1,7 +1,7 @@
 import apiClient from '../../../utils/api';
 
 async function submitApplyJobForm(
-  sendFormData: FormData, 
+  sendFormData: FormData,
   csrfToken: string,
 ) {
   try {
@@ -15,7 +15,7 @@ async function submitApplyJobForm(
         },
       }
     );
-    console.log('Form data sent successfully!');
+
 
     return response;
   } catch (error) {

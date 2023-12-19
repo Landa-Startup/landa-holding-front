@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Link from 'next/link';
 import Instagram from '../icons/footer/Instagram';
 import Envelope from '../icons/footer/Envelope';
@@ -25,7 +25,7 @@ export default async function Footer(
             <br />
           </div>
           <div className={`mt-1 text-base font-normal  text-neutral-400`}>
-            {t('about', {returnObjects: true}).text}
+            {t('about', { returnObjects: true }).text}
             <br />
           </div>
           <div className="mt-2 flex h-[22px] w-[126px] flex-row items-center justify-between text-white">
@@ -134,19 +134,19 @@ export default async function Footer(
             {t('contact', { returnObjects: true }).text.canada}
           </div>
           <div dir='ltr' className="text-justify text-base font-normal text-neutral-400">
-            {t('contact', {returnObjects: true}).text.cNumber}
+            {t('contact', { returnObjects: true }).text.cNumber}
           </div>
           <div className="border-t border-t-white pt-1 text-justify text-base font-normal text-neutral-400">
             {t('contact', { returnObjects: true }).text.tehran}
           </div>
           <div dir='ltr' className="border-b border-b-white pb-1 text-justify text-base font-normal text-neutral-400">
-            {t('contact', {returnObjects: true}).text.tNumber}
+            {t('contact', { returnObjects: true }).text.tNumber}
           </div>
           <div className="text-base font-normal text-neutral-400">
             {t('contact', { returnObjects: true }).text.isfahan}
           </div>
           <div dir='ltr' className="text-base font-normal text-neutral-400">
-            {t('contact', {returnObjects: true}).text.iNumber}
+            {t('contact', { returnObjects: true }).text.iNumber}
           </div>
         </div>
       </div>

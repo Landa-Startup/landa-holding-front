@@ -1,7 +1,6 @@
-import React from 'react';
 import HomeCardsLeft from './HomeCardsLeft';
 import HomeCardsRight from './HomeCardsRight';
-import { HomeCardsProps } from '../../types/global';
+import { HomeCardsProps } from '@/types/global';
 
 export default async function HomeCards({
   titles,
@@ -10,18 +9,6 @@ export default async function HomeCards({
   addedClass,
   link
 }: HomeCardsProps) {
-  // Determine the flex direction based on the "reverse" prop
-
-  // const lang = useLang.getState().lang
-
-  // console.log(lang);
-
-  // const { t } = await useTranslation(lang, "mainPage");
-
-  // const value = t('lng') === "en" ? reverse : !reverse
-  // const flexDirectionClass = value
-  //   ? 'flex-col md:flex-row'
-  //   : 'flex-col md:flex-row-reverse';
 
   return (
     <div

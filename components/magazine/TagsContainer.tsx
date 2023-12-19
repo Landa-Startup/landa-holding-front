@@ -8,7 +8,7 @@ export default function TagsContainer() {
     async function fetchTags() {
       const response = await fetch(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}blog/tags`);
       const data = await response.json();
-      console.log(data)
+
       setTags(data);
     }
     fetchTags();
@@ -20,7 +20,7 @@ export default function TagsContainer() {
         Tags
       </span>
       <div className="mt-7 grid grid-cols-3 gap-2">
-        {tags.map((tag:any, index) => (
+        {tags.map((tag: any, index) => (
           <button key={index} className="btn rounded-sm bg-[#D9D9D9] px-2">
             {tag.title}
           </button>

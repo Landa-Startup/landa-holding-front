@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function UpcomingEvents() {
@@ -69,7 +69,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
           </div>
-         <ButtonRefactor text="Register" />
+          <ButtonRefactor text="Register" />
         </div>
       </div>
       <div className="absolute left-10 top-[52px] hidden h-[313.88px] w-16 md:left-[121px] md:block">
