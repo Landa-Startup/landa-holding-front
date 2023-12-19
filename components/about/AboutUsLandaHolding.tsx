@@ -33,7 +33,7 @@ export default async function AboutUsLandaHolding(
       //   objectFit="cover"
       // />
     // </div>
-    <div className="p-10 md:px-28 md:py-10 flex flex-col items-start justify-between bg-[#FAFAFA] lg:flex-row">
+    <div className="p-10 md:px-28 md:py-10 flex flex-col items-start justify-between lg:flex-row">
       <div className="space-y-2 px-6 py-2 text-black md:px-0">
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}

@@ -4,8 +4,7 @@ import React from 'react';
 import { useLang } from 'stores/langStore';
 
 export default async function KeyDifferentiating() {
-
-  const lang = useLang.getState().lang
+  const lang = useLang.getState().lang;
 
   const { t } = await useTranslation(lang, 'aboutUs');
 
