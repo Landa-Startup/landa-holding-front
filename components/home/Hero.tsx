@@ -82,11 +82,11 @@ export default function Hero({
         // This div will serve as the overlay
       ></div>
 
-      <div className="relative z-10 mt-28 flex w-fit flex-col justify-center gap-8 ltr:ml-4 rtl:mr-10 md:mx-24 md:justify-start">
+      <div className="relative z-10 mt-48 flex w-fit flex-col justify-center gap-8 md:ltr:ml-10 rtl:mr-10 md:mx-24 md:justify-start">
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
-          } text-center font-barlow text-4xl font-bold leading-normal tracking-[11px] text-white rtl:tracking-normal md:text-5xl md:tracking-[22px]`}
+          } text-center font-barlow text-3xl font-bold leading-normal tracking-[11px] text-white rtl:tracking-normal md:text-5xl md:tracking-[22px]`}
         >
           {title}
         </div>

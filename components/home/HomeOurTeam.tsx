@@ -27,7 +27,7 @@ export default async function HomeOurTeam() {
         <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mx-4">
         <Image
           loading="lazy"
           width={789}
@@ -45,17 +45,9 @@ export default async function HomeOurTeam() {
           src="/static/images/Home/OurTeam/mobile.jpeg"
         />
       </div>
-      <Link
-        href="/our-team"
-        className="justify-center"
-      >
+      <Link href="/our-team" className="justify-center">
         {/* TODO: delete submit provider */}
-        <Button
-          type="button"
-          size="visit"
-          bgColor="Primary"
-          goto=""
-        />
+        <Button type="button" size="visit" bgColor="Primary" goto="" />
       </Link>
     </div>
   );

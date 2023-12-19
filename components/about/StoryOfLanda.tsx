@@ -4,8 +4,7 @@ import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
 
 export default async function StoryOfLanda() {
-
-  const lang = useLang.getState().lang
+  const lang = useLang.getState().lang;
 
   const { t } = await useTranslation(lang, 'aboutUs');
 
@@ -81,8 +80,8 @@ export default async function StoryOfLanda() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
-        <div className="flex flex-col font-barlow md:w-full p-10 md:p-0 text-ju">
+      <div className="flex w-full flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
+        <div className="flex flex-col font-barlow md:w-full">
           <span className="font-gilda text-3xl text-primary">
             {t('VisionOfTheLanaHolding', { returnObjects: true })[0].title}
           </span>

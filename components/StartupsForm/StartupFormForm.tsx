@@ -23,13 +23,15 @@ import FormTitle from '../common/form/FormTitle';
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
 export default function StartupFormForm() {
+  const lang = useLang((s) => s.lang)
+  const { t } = useTranslation(lang, 'formComponent');
 
   enum Type {
-    IDEA = 'IDEA',
-    MVP = 'MVP',
-    TRIAL = 'TRIAL',
-    FisrtSale = 'FisrtSale', // Typo: Should be "FirstSale"
-    SaleDevelopment = 'SaleDevelopment'
+    IDEA = t("IDEA"),
+    MVP = t('MVP'),
+    TRIAL = t('TRIAL'),
+    FisrtSale = t('FisrtSale'), // Typo: Should be "FirstSale"
+    SaleDevelopment = t('SaleDevelopment')
   }
 
   const Types = [
@@ -40,7 +42,7 @@ export default function StartupFormForm() {
     Type.SaleDevelopment
   ];
 
-  const typesData = Types.map((type: string) => ({
+  const typesData = Types.map((type: any) => ({
     value: type,
     label: type
   }));
@@ -75,9 +77,6 @@ export default function StartupFormForm() {
     handlePitchFileChange,
   } = useFile((s) => s)
 
-  const lang = useLang((s) => s.lang)
-
-  const { t } = useTranslation(lang, 'formComponent');
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRadio(event.target.value);
@@ -219,7 +218,7 @@ export default function StartupFormForm() {
             required={
               t('startUp', { returnObjects: true }).statusSelectRequired
             }
-            className="select select-bordered mt-4 w-full max-w-xs"
+            className="select select-bordered mt-4 w-full max-w-xs px-8"
             labelClass="text-[#6b6b6b] dark:text-current"
             placeholder={
               t('startUp', { returnObjects: true }).statusSelectPlaceholder
@@ -232,10 +231,10 @@ export default function StartupFormForm() {
 
           {((): any => {
             switch (selectedRadio) {
-              case 'IDEA':
+              case t("IDEA"):
                 return <StartupFormIdea register={register} errors={errors} />;
                 break;
-              case 'MVP':
+              case t('MVP'):
                 return (
                   <StartupFormMVP
                     register={register}
@@ -246,7 +245,7 @@ export default function StartupFormForm() {
                   />
                 );
                 break;
-              case 'TRIAL':
+              case t('TRIAL'):
                 return (
                   <StartupFormTrialProduct
                     register={register}
@@ -257,7 +256,7 @@ export default function StartupFormForm() {
                   />
                 );
                 break;
-              case 'FisrtSale':
+              case t('FisrtSale'):
                 return (
                   <StartupFormFirstSale
                     register={register}
@@ -268,7 +267,7 @@ export default function StartupFormForm() {
                   />
                 );
                 break;
-              case 'SaleDevelopment':
+              case t('SaleDevelopment'):
                 return (
                   <StartupFormSaleDevelopment
                     register={register}

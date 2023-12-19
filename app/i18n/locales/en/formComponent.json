@@ -200,6 +200,12 @@
             { "value": "qualifiedSystem", "label": "A complete and qualified system." }
         ]
     },
+    "IDEA":"IDEA",
+    "MVP":"MVP",
+    "TRIAL":"TRIAL",
+    "FisrtSale":"FisrtSale",
+    "SaleDevelopment":"SaleDevelopment",
+
     "website":"Your Webstie:",
     "websitePlaceholder":"Your Webstie*",
     "websiteRequired":"This field is required!",

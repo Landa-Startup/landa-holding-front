@@ -1,11 +1,13 @@
-"use client"
-import { useState, useEffect } from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
+import TeamRolesContainer from './TeamRolesContainer';
+import PersonalTab from '../common/PersonalTab';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import TeamRolesContainer from './TeamRolesContainer';
-import PersonalTab from '../common/PersonalTab'
+// TODO: read from i18n instead of statics
+// import { personsEN, personsFA } from '../../app/[lang]/statics';
+// import { rolesEN, rolesFA } from '../../app/[lang]/statics';
 
-// TODO: move interface to a separate file
 interface item {
   image: string;
   position: string;
@@ -17,13 +19,22 @@ interface item {
 export default function TeamPersons() {
   const { lang } = useLang();
   const { t } = useTranslation(lang, 'ourTeam');
+
+  // const [selectedRole, setSelectedRole] = useState<string | null>(null);
   const [filteredPersons, setFilteredPersons] = useState(Array<item>);
   
+
+  // const L: Array<item> = t('persons', {returnObjects: true}).map((person: item) => {
+  //   return person
+  // })
+
   useEffect(() => {
     setFilteredPersons(t('persons', {returnObjects: true}));
   }, [])
 
   function handleRoleSelect(role: string) {
+    // // setSelectedRole(role);
+    // console.log(role);
     if (role === t("defaultRole") ) {
       setFilteredPersons(t('persons', { returnObjects: true }));
     } else {
