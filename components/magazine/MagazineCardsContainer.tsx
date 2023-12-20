@@ -1,35 +1,38 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PostCard from './PostCard';
-import FetchBlogData from '@/utils/FetchBlogData';
-import { MagazineData } from '@/types/global';
+import { useSubmit } from 'stores/dataStore';
 export default function MagazineCardsContainer() {
-  const [cardData, setCardData] = useState<MagazineData[]>();
+  const {cardsData} = useSubmit();
 
-  useEffect(() => {
-    // Inside the useEffect, fetch the data and update the state
-    async function fetchData() {
-      try {
-        const data = await FetchBlogData('/blog/list?format=json');
-        setCardData(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
+  // useEffect(() => {
+  //   // Inside the useEffect, fetch the data and update the state
+  //   async function fetchData() {
+  //     try {
+  //       const data = await useFetchBlog('/blog/list?format=json');
+  //       setCardsData(data);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   }
 
-    fetchData();
-  }, []); // The empty dependency array ensures this runs only on component mount
+  //   fetchData();
+  // }, []);
+
+
+
+  // console.log(cardsData);
 
   return (
     <div className="col-span-2 flex flex-col gap-16">
-      {cardData?.map((card, index) => (
+      {cardsData?.map(({ title, description, thumbnail, slug, date} : { title: string, description: string | TrustedHTML, thumbnail: string, slug: string, date: string, file: string}, index: number) => (
         <PostCard
-          slug={card.slug}
+          slug={slug}
           key={index}
-          image={card.thumbnail}
-          date={card.date}
-          title={card.title}
-          description={card.description}
+          image={thumbnail}
+          date={date}
+          title={title}
+          description={description}
         />
       ))}
     </div>

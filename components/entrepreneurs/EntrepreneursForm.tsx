@@ -13,7 +13,7 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 // import FormTitle from '../common/form/FormTitle';
 
 export default function EntrepreneursForm() {

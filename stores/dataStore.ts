@@ -1,4 +1,6 @@
 import { create } from "zustand";
+import { MagazineData } from '@/types/global';
+
 
 
 type State = {
@@ -8,6 +10,10 @@ type State = {
     showNotification: boolean;
     csrfToken: string;
     selectedRole: string;
+    cardsData: MagazineData[];
+    cardData: MagazineData;
+    categories: any[];
+    tags: any[];
 }
 
 type Action = {
@@ -16,7 +22,11 @@ type Action = {
     handleSendChange: (bool: State['send']) => void,
     handleNotifChange: (bool: State['send']) => void,
     handleTokenChange: (str: State['csrfToken']) => void,
-    updateRole: (role: State['selectedRole']) => void
+    updateRole: (role: State['selectedRole']) => void,
+    setCardsData: (data: State["cardsData"]) => void,
+    setCardData: (data: State["cardData"]) => void,
+    setCategories: (category: State["categories"]) => void,
+    setTags: (tags: State["tags"]) => void,
     // handleChangeSuccess: () => void,
 }
 
@@ -28,12 +38,27 @@ const useSubmit = create<State & Action>((set) => {
         showNotification: true,
         csrfToken: "",
         selectedRole: "All",
+        cardsData: [],
+        cardData: {
+            title: "",
+            description: "",
+            thumbnail: "",
+            slug: "",
+            date: "",
+            file: "",
+        },
+        categories: [],
+        tags: [],
         handleSubmitingChange: (bool) => set(() => ({isSubmitting: bool})),
         handleSuccessChange: (bool) => set(() => ({isSuccess: bool})),
         handleSendChange: (bool) => set(() => ({send: bool})),
         handleNotifChange: (bool) => set(() => ({showNotification: bool})),
         handleTokenChange: (str) => set(() => ({csrfToken: str})),
-        updateRole: (role) => set(() => ({selectedRole: role}))
+        updateRole: (role) => set(() => ({selectedRole: role})),
+        setCardsData: (data) => set(() => ({cardsData: data})),
+        setCategories: (categories) => set(() => ({categories: categories})),
+        setTags: (tags) => set(() => ({tags: tags})),
+        setCardData: (cardData) => set(() => ({cardData: cardData}))
     };
 });
 

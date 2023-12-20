@@ -272,5 +272,8 @@
         "buttonText" : "Register"
       }
     ]
+  },
+  "upcomingEvents": {
+    "title": "UPCOMING EVENTS"
   }
 }

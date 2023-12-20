@@ -14,7 +14,7 @@ import Button from '../common/Button';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 import * as process from 'process';
 
 export default function LandaGene() {

@@ -1,23 +1,15 @@
 import { create } from 'zustand';
 import { CookieValueTypes, getCookie } from 'cookies-next';
 
-import { useTranslation } from "app/i18n/client";
-
-function roleFinder(lang: string) {
-    const { t } = useTranslation(lang, "ourTeam");
-
-    return t('roles', { returnObjects: true });
-}
-
-
 type State = {
-  lang: string | undefined;
-  setLanguage: (language: string) => void;
+  lang: string | CookieValueTypes | undefined;
 };
 
-const langCookie = getCookie("i18next");
+type Action = {
+  setLanguage: (language: State["lang"]) => void;
+}
 
-export const useLang = create<State>((set) => ({
-  lang: langCookie ? langCookie : "en",
+export const useLang = create<State & Action>((set) => ({
+  lang: getCookie("i18next") ? getCookie("i18next") : "en",
   setLanguage: (lang) => set(() => ({ lang }))
 }));

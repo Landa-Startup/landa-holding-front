@@ -12,7 +12,7 @@ import TextArea from '../TextArea';
 import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 // import { on } from 'events';
 export default function ContactUsForm() {
 

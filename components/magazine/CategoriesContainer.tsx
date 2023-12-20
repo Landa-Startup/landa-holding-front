@@ -1,8 +1,9 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSubmit } from 'stores/dataStore';
 
 export default function CategoriesContainer() {
-  const [categories, setCategories] = useState([]);
+  const {categories, setCategories} = useSubmit();
 
   useEffect(() => {
     async function fetchTags() {

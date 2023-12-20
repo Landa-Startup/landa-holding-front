@@ -1,8 +1,9 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useSubmit } from 'stores/dataStore';
 
 export default function TagsContainer() {
-  const [tags, setTags] = useState([]);
+  const {tags, setTags} = useSubmit();
 
   useEffect(() => {
     async function fetchTags() {
