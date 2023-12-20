@@ -161,7 +161,33 @@
             
             "category": "طراحان"  
             
-            },  
+            }, 
+            {  
+            
+            "image": "/static/images/our-team/Personals/a34.png",  
+            
+            "position": "طراح گرافیک",  
+            
+            "name": "فائزه خانی",  
+            
+            "linkedIn": "",  
+            
+            "category": "طراحان"  
+            
+            }, 
+            {  
+            
+            "image": "/static/images/our-team/Personals/66nn.jpg",   
+            
+            "position": "تولید محتوا",   
+            
+            "name": "مهسا قربانی",   
+            
+            "linkedIn": "",  
+            
+            "category": "تولید کنندگان محتوا"  
+            
+            }, 
             
 
             
@@ -178,6 +204,19 @@
             "category": "تولید کنندگان محتوا"   
             
             },  
+            {  
+            
+            "image": "/static/images/our-team/Personals/milad.jpg",   
+            
+            "position": "تولید محتوا",   
+            
+            "name": "میلاد فاطمی",   
+            
+            "linkedIn": "",  
+            
+            "category": "تولید کنندگان محتوا"  
+            
+            }, 
 
             
             {  
@@ -222,23 +261,7 @@
             
             "category": "برنامه نویسان"  
             
-            },
-            
- 
-            
-            {  
-            
-            "image": "/static/images/our-team/Personals/a30.png",   
-            
-            "position": "فرانت اند",   
-            
-            "name": "رامتین فروزانی",   
-            
-            "linkedIn": "",  
-            
-            "category": "برنامه نویسان"  
-            
-            },  
+            }, 
             
             {
             
@@ -252,9 +275,36 @@
             
             "category": "برنامه نویسان"  
             
+            },
+            {  
+            
+            "image": "/static/images/our-team/Personals/a33.png",  
+            
+            "position": "فرانت اند",   
+            
+            "name": "امیر محمد اصفهانی زاده",  
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"   
+            
             },  
             
+ 
             {  
+            
+            "image": "/static/images/our-team/Personals/a21.png",   
+            
+            "position": "بک اند",   
+            
+            "name": "متین نجات بخش",   
+            
+            "linkedIn": "",  
+            
+            "category": "برنامه نویسان"  
+            
+            },  
+                       {  
             
             "image": "/static/images/our-team/Personals/a32.png",  
             
@@ -266,8 +316,7 @@
             
             "category": "برنامه نویسان"  
             
-            },  
-            
+            }, 
             {  
             
             "image": "/static/images/our-team/Personals/a33.png",  
@@ -281,18 +330,19 @@
             "category": "مسئول روابط عمومی"   
             
             },   
-            
+
+
             {  
             
-            "image": "/static/images/our-team/Personals/a34.png",  
+            "image": "/static/images/our-team/Personals/nedan.jpg",   
             
-            "position": "طراح گرافیک",  
+            "position": "روابط عمومی",   
             
-            "name": "فائزه خانی",  
+            "name": "ندا مشرف",   
             
             "linkedIn": "",  
             
-            "category": "طراحان"  
+            "category": "روابط عمومی"  
             
             }
             

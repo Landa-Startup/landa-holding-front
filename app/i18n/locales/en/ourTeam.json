@@ -136,6 +136,13 @@
           "category": "designers"
         },
         {
+          "image": "/static/images/our-team/Personals/a34.png",
+          "position": "Graphic Designer",
+          "name": "Faezeh Khani",
+          "linkedIn": "",
+          "category": "designers"
+        },
+        {
           "image": "/static/images/our-team/Personals/a23.png",
           "position": "Content Creator",
           "name": "Mahtab Hafizi",
@@ -146,6 +153,21 @@
           "image": "/static/images/our-team/Personals/a25.png",
           "position": "Content Creator",
           "name": "Tiam Safarian",
+          "linkedIn": "",
+          "category": "content creators"
+        },       
+       {
+          "image": "/static/images/our-team/Personals/66nn.jpg",
+          "position": "Content Creator",
+          "name": "Mahsa Ghorbani",
+          "linkedIn": "",
+          "category": "content creators"
+        },
+
+        {
+          "image": "/static/images/our-team/Personals/milad.jpg",
+          "position": "Content Creator",
+          "name": "Milad Fatemi",
           "linkedIn": "",
           "category": "content creators"
         },
@@ -164,13 +186,6 @@
           "category": "programmers"
         },
         {
-          "image": "/static/images/our-team/Personals/a30.png",
-          "position": "Front-end",
-          "name": "Ramtin Foroozani",
-          "linkedIn": "",
-          "category": "programmers"
-        },
-        {
           "image": "/static/images/our-team/Personals/a31.png",
           "position": "Front-end",
           "name": "Barad Dehghani",
@@ -185,18 +200,32 @@
           "category": "programmers"
         },
         {
+          "image": "/static/images/our-team/Personals/65.jpg",
+          "position": "Back-end",
+          "name": "Matin Nejatbakhsh",
+          "linkedIn": "",
+          "category": "programmers"
+        }, 
+       {
+          "image": "/static/images/our-team/Personals/121.jpg",
+          "position": "Front-end",
+          "name": "Amir Mohammad Esfahanizade",
+          "linkedIn": "",
+          "category": "programmers"
+        },
+        {
           "image": "/static/images/our-team/Personals/a33.png",
           "position": "Public Relations Officer",
           "name": "Gelareh Bahrami",
           "linkedIn": "",
-          "category": "public relations officer"
+          "category": " officer"
         },
         {
-          "image": "/static/images/our-team/Personals/a34.png",
-          "position": "Graphic Designer",
-          "name": "Faezeh Khani",
+          "image": "/static/images/our-team/Personals/Nedan.jpg",
+          "position": "public relations",
+          "name": "Neda Mosharaf",
           "linkedIn": "",
-          "category": "designers"
+          "category": "public relations"
         }
     ],
     "roles": [
