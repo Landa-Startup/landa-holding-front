@@ -1,6 +1,7 @@
 
-import { ChevronRightIcon } from '@heroicons/react/24/solid';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
+import { useLang } from 'stores/langStore';
 
 type ButtonProps = {
   text: string;
@@ -17,6 +18,9 @@ export default function ButtonRefactor({
   disabled,
   bgColor
 }: ButtonProps) {
+
+  const { lang } = useLang.getState()
+
   switch (type) {
     // If the type is 'Link'
     case 'link':
@@ -27,14 +31,15 @@ export default function ButtonRefactor({
               disabled={disabled}
               className={`bg-${
                 bgColor ? bgColor : 'primary'
-              } flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white`}
+              } flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white hover:bg-primary transition duration-150 delay-50 ease-in-out`}
+              // className='transition flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white ease-in-out delay-150 bg-black hover:bg-primary duration-300'
             >
-              <div className="z-10 flex items-center rtl:flex-row-reverse">
-                <span>{text}</span>
-                <ChevronRightIcon className="h-5 w-5" />
+              <div className="z-10 flex gap-2 items-center">
+                <span className='text-lg'>{text}</span>
+                {lang === "en" ? <ChevronRightIcon className="h-5 w-5" /> : <ChevronLeftIcon className='h-5 w-5' />}
               </div>
             </button>
-            <span className="absolute inset-0 rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span>
+            {/* <span className="absolute inset-0 rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span> */}
           </Link>
         )
       );

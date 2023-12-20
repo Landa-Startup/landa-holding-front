@@ -6,6 +6,7 @@ import LandaHoldingBlack from '@/components/home/LandaHoldingBlack';
 import HomeCardsContainer from '@/components/home/HomeCardsContainer';
 import Partners from '@/components/home/Partners';
 import HomeOurTeam from '@/components/home/HomeOurTeam';
+// import UpcomingEvents from '@/components/home/UpcomingEvents';
 // import AerialViewBusinessTeam from '@/components/home/BusinessTeam';
 
 import { useTranslation } from '../i18n';
@@ -41,6 +42,7 @@ export default async function Page({
         <HomeCardsContainer />
         <LandaHoldingBlack />
         <HomeUpComingStartups/>
+        {/* <UpcomingEvents /> */}
         <LandaHoldingPriority />
         <HomeOurTeam />
         <LatestStartups />

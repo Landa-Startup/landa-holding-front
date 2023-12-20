@@ -24,7 +24,7 @@ export default async function HomeUpComingStartups() {
   };
 
   return (
-    <div className='min-h-[400px] mb-8'>
+    <div className='min-h-[400px] mt-12 md:mt-0 mb-8'>
         <div className='relative h-[400px]'>
         <Image
           loading="lazy"

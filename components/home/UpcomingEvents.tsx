@@ -72,6 +72,7 @@ export default function UpcomingEvents() {
           <ButtonRefactor text="Register" />
         </div>
       </div>
+      <div className='relative'>
       <div className="absolute left-10 top-[52px] hidden h-[313.88px] w-16 md:left-[121px] md:block">
         <div className="absolute left-0 top-[307px] h-0 w-[306px] origin-top-left -rotate-90 border border-neutral-800 bg-neutral-800"></div>
         <div className="absolute left-0 top-[103.03px] h-0 w-14 border border-neutral-800 bg-neutral-800"></div>
@@ -81,6 +82,7 @@ export default function UpcomingEvents() {
         <div className="absolute left-14 top-[97px] h-3 w-3 rounded-full border border-neutral-800 bg-neutral-800" />
         <div className="absolute left-14 top-[194px] h-3 w-3 rounded-full border border-neutral-800 bg-neutral-800" />
         <div className="absolute left-14 top-[300px] h-3 w-3 rounded-full border border-neutral-800 bg-neutral-800" />
+      </div>
       </div>
     </div>
   );

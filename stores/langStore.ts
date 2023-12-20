@@ -11,7 +11,7 @@ function roleFinder(lang: string) {
 
 
 type State = {
-  lang: string | CookieValueTypes | undefined;
+  lang: string | undefined;
   setLanguage: (language: string) => void;
 };
 
