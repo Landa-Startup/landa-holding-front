@@ -4,24 +4,26 @@ import InstagramMedia from '@/components/icons/sosial-media/InstagramMedia';
 import LinkedinMedia from '@/components/icons/sosial-media/LinkedinMedia';
 import WhatsappMedia from '@/components/icons/sosial-media/WhatsappMedia';
 import Link from 'next/link';
-// import { usePathname } from 'next/navigation';
-// import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
-  // const pathname = usePathname();
-  // const slug = pathname?.replace('profile/', '');
+  const pathname = usePathname();
+  const slug = pathname?.replace('/en/profile/', '');
+  const [data,setData] = useState()
 
-  // useEffect(() => {
-  //   async function fetchTags() {
-  //     const response = await fetch(
-  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}profile/${slug}/?format=json`
-  //     );
-  //     const data = await response.json();
-  //     console.log(data);
-  //     setCardData(data);
-  //   }
-  //   fetchTags();
-  // }, [slug]);
+  useEffect(() => {
+    async function fetchTags() {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/user/profile/${slug}?format=json`);
+      const data:any = await response.json();
+
+      setData(data);
+
+    }
+    // console.log(fetchTags())
+    fetchTags();
+
+  }, [slug]);
 
   return (
     <div className="h-screen py-24 md:px-40 flex justify-center">
