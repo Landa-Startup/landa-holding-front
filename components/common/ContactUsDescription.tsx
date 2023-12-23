@@ -1,29 +1,25 @@
-
 import Phone from '../icons/IconPhone';
 import Email from '../icons/IconEmail';
 import Location from '../icons/IconLocation';
 import Link from 'next/link';
-import IconInstagram from '../icons/IconInstagram';
-import IconWhatApp from '../icons/IconWhatsApp';
 import IconLinkedinB from '../icons/IconLinkedinB';
 import IconEmailB from '../icons/IconEmailB';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
+import InstagramIconNew from '../icons/socialMediaIcons/InstagramIconNew';
+import WhatsappIconNew from '../icons/socialMediaIcons/WhatsappIconNew';
 export default async function ContactUsDescription() {
+  const lang = useLang.getState().lang;
 
-  const lang = useLang.getState().lang
-
-  const { t } = await useTranslation(lang, "contact")
+  const { t } = await useTranslation(lang, 'contact');
 
   return (
-    <div className='h-full'>
+    <div className="h-full">
       <div className="mb-5 mt-10 flex flex-col items-center md:my-0 md:w-[464px] md:items-start">
         <h1 className="font-gilda text-4xl font-light md:text-5xl">
           {t('LandaHolding')}
         </h1>
-        <p className="my-5 text-justify text-base">
-          {t('text')}
-        </p>
+        <p className="my-5 text-justify text-base">{t('text')}</p>
       </div>
       {/* TODO: make code more modular with new components */}
       {/* TODO: avoid hardcode links and urls */}
@@ -32,10 +28,14 @@ export default async function ContactUsDescription() {
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
           target="_blank"
         >
-          <IconInstagram />
+          <InstagramIconNew
+            className="bi bi-instagram"
+            width="28"
+            height="28"
+          />
         </Link>
         <Link href={'https://wa.me/989120539563'} target="_blank">
-          <IconWhatApp />
+          <WhatsappIconNew className="bi bi-whatsapp" width="28" height="28" />
         </Link>
         <Link href={'mailto:info@landaholding.com'}>
           <IconEmailB />
@@ -57,20 +57,26 @@ export default async function ContactUsDescription() {
               {/* TODO: create component for below icons */}
               <li>
                 <Link href="tel:+14165577622">
-                  <span>{lang === "en" ? "Toronto: " : "تورنتو: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).cNumber}</span>
+                  <span>{lang === 'en' ? 'Toronto: ' : 'تورنتو: '}</span>
+                  <span dir="ltr" className="text-[#AA8453]">
+                    {t('addresses', { returnObjects: true }).cNumber}
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
-                  <span>{lang === "en" ? "Tehran: " : "تهران: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).tNumber}</span>
+                  <span>{lang === 'en' ? 'Tehran: ' : 'تهران: '}</span>
+                  <span dir="ltr" className="text-[#AA8453]">
+                    {t('addresses', { returnObjects: true }).tNumber}
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
-                  <span>{lang === "en" ? "Isfahan: " : "اصفهان: "}</span>
-                  <span dir='ltr' className="text-[#AA8453]">{t('addresses', { returnObjects: true }).iNumber}</span>
+                  <span>{lang === 'en' ? 'Isfahan: ' : 'اصفهان: '}</span>
+                  <span dir="ltr" className="text-[#AA8453]">
+                    {t('addresses', { returnObjects: true }).iNumber}
+                  </span>
                 </Link>
               </li>
             </ul>
@@ -80,9 +86,14 @@ export default async function ContactUsDescription() {
         <div className="flex gap-5">
           <Email />
           <ul>
-            <li className="font-semibold ltr:text-left rtl:text-right">{t('email')}</li>
+            <li className="font-semibold ltr:text-left rtl:text-right">
+              {t('email')}
+            </li>
             <li>
-              <a className="rtl-text-right text-[#AA8453] ltr:text-left" href="mailto:info@landaholding.com">
+              <a
+                className="rtl-text-right text-[#AA8453] ltr:text-left"
+                href="mailto:info@landaholding.com"
+              >
                 info@landaholding.com
               </a>
             </li>

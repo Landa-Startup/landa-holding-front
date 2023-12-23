@@ -32,13 +32,13 @@ export default async function LandaHoldingBlack() {
           style3="pt-4"
         />
 
-        <div className='h-auto w-[224px] p-2'>
-        <ButtonRefactor
-          text={t('signUp')}
-          type="link"
-          href="/"
-          bgColor="black"
-        />
+        <div className="h-auto w-[224px] p-2">
+          <ButtonRefactor
+            text={t('signUp')}
+            type="link"
+            href="/"
+            bgColor="black"
+          />
         </div>
       </div>
 
@@ -46,8 +46,9 @@ export default async function LandaHoldingBlack() {
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
-              className={`text-base font-normal text-black ${t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
-                } font-condensed`}
+              className={`text-base font-normal text-black ${
+                t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
+              } font-condensed`}
             >
               {t('LandaHolding')}
             </span>
@@ -61,17 +62,17 @@ export default async function LandaHoldingBlack() {
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
           style1={`w-[320px] md:w-[600px]`}
-          style2="space-y-2 md:mr-8"
+          style2="md:mr-8"
           style3="pt-4"
         />
 
-        <div className='h-auto w-[224px] p-2'>
-        <ButtonRefactor
-          text={t('signUp')}
-          type="link"
-          href="/"
-          bgColor="black"
-        />
+        <div className="h-auto w-[224px] p-2">
+          <ButtonRefactor
+            text={t('signUp')}
+            type="link"
+            href="/"
+            bgColor="black"
+          />
         </div>
       </div>
     </div>
