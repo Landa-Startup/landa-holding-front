@@ -742,13 +742,6 @@ const personsFA: personArrayInterface[] = [
     
     }, 
   {
-    image: '/static/images/our-team/Personals/a32.png',
-    position: 'فرانت اند',
-    name: 'متین جان قربانی',
-    linkedIn: '',
-    category: 'برنامه نویسان'
-  },
-  {
     image: '/static/images/our-team/Personals/a33.png',
     position: 'روابط عمومی',
     name: 'گلاره بهرامی',
