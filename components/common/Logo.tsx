@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
 
 export default function Logo({ route }: { route: 'holding' | 'academy' }) {
   return (
@@ -21,9 +21,8 @@ export default function Logo({ route }: { route: 'holding' | 'academy' }) {
             height={106}
           />
           <span
-            className={`${
-              route === 'academy' ? 'text-lime-400' : 'text-primary'
-            } text-[12px] font-bold tracking-[0.375px] md:text-xl`}
+            className={`${route === 'academy' ? 'text-lime-400' : 'text-primary'
+              } text-[12px] font-bold tracking-[0.375px] md:text-xl`}
           >
             {route === 'academy' ? 'Academy' : 'Landa'}
           </span>

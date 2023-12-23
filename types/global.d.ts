@@ -35,8 +35,8 @@ interface ContactUSFormData {
 
 // Define an interface for contact form data
 interface HandicraftForm {
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   email: string;
   organization: string;
 }
@@ -80,11 +80,10 @@ interface JobFormData {
 }
 
 interface LandaGeneFormData {
-  firstName: string;
-  lastName: string;
-  phoneNumber: string;
+  full_name: string;
+  phone_number: string;
   email: string;
-  company: string;
+  company_name: string;
 }
 
 // Define an interface for startups form data

@@ -1,14 +1,15 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useSubmit } from 'stores/dataStore';
 
 export default function TagsContainer() {
-  const [tags, setTags] = useState([]);
+  const {tags, setTags} = useSubmit();
 
   useEffect(() => {
     async function fetchTags() {
       const response = await fetch(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}blog/tags`);
       const data = await response.json();
-      console.log(data)
+
       setTags(data);
     }
     fetchTags();
@@ -20,7 +21,7 @@ export default function TagsContainer() {
         Tags
       </span>
       <div className="mt-7 grid grid-cols-3 gap-2">
-        {tags.map((tag:any, index) => (
+        {tags.map((tag: any, index) => (
           <button key={index} className="btn rounded-sm bg-[#D9D9D9] px-2">
             {tag.title}
           </button>

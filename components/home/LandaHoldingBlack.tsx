@@ -16,9 +16,9 @@ export default async function LandaHoldingBlack() {
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span className="rtl:tracking-0 font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
-              {/* {t('LandaHolding')} */}
+              {t('LandaHolding')}
             </span>
-            <span className="w-[340px] border-b border-black pb-3 text-start font-condensed text-4xl font-normal text-black md:border-none">
+            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
               {t('InvestorCenter')}
               <br />
             </span>
@@ -28,29 +28,30 @@ export default async function LandaHoldingBlack() {
         <UlList
           list={t('landaHoldingBlackFirst', { returnObjects: true })}
           style1="w-[320px] md:w-[454px] pr-5"
-          style2="space-y-2 mr-8 mt-4"
-          style3="leading-4 md:leading-10 text-md"
+          style2="space-y-2 mr-8"
+          style3="pt-4"
         />
 
+        <div className='h-auto w-[224px] p-2'>
         <ButtonRefactor
           text={t('signUp')}
           type="link"
-          href="/investor-registration"
+          href="/"
           bgColor="black"
         />
+        </div>
       </div>
 
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
             <span
-              className={`text-base font-normal text-black ${
-                t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
-              } font-condensed`}
+              className={`text-base font-normal text-black ${t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
+                } font-condensed`}
             >
-              {/* {t('LandaHolding')} */}
+              {t('LandaHolding')}
             </span>
-            <span className="w-[340px] border-b border-black pb-3 text-start font-condensed text-4xl font-normal text-black md:border-none">
+            <span className="border-b border-black pb-3 text-center font-gilda text-3xl md:text-4xl font-normal text-black md:border-none md:text-start">
               {t('EntrepreneurCenter')}
               <br />
             </span>
@@ -59,17 +60,19 @@ export default async function LandaHoldingBlack() {
         {/* TODO: Why pass 3 styles? */}
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
-          style1={`w-[320px] md:w-[550px] pr-6`}
-          style2="space-y-2 mr-8"
-          style3="leading-4 md:leading-6 text-md"
+          style1={`w-[320px] md:w-[600px]`}
+          style2="space-y-2 md:mr-8"
+          style3="pt-4"
         />
 
+        <div className='h-auto w-[224px] p-2'>
         <ButtonRefactor
           text={t('signUp')}
           type="link"
           href="/"
           bgColor="black"
         />
+        </div>
       </div>
     </div>
   );

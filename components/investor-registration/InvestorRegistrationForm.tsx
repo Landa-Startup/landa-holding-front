@@ -15,7 +15,7 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 
 export default function InvestorRegistrationForm() {
   const {
@@ -71,9 +71,7 @@ export default function InvestorRegistrationForm() {
 
     // Send the form data to the API.
     submitInvestorRegistrationForm(sendFormData, csrfToken)
-      .then((response) => {
-        console.log(response);
-
+      .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
@@ -82,8 +80,7 @@ export default function InvestorRegistrationForm() {
           handleNotifChange(false);
         }, 10000); // 10 seconds in milliseconds
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
         handleSuccessChange(true);
         handleNotifChange(false);
         handleSendChange(false);
@@ -102,12 +99,12 @@ export default function InvestorRegistrationForm() {
 
   return (
     <>
-      <div className="container m-[-1rem] mx-auto my-20 px-5 font-barlow lg:p-20 gap-y-0">
+      <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
         <div className='bg-[#F8F5F0]'>
         <FormTitle formName='investorForm' />
         </div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-6 grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
+          <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -216,7 +213,7 @@ export default function InvestorRegistrationForm() {
             <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>
           </div>
         </form>
-        <NotificationSendForm/>
+        <NotificationSendForm />
       </div>
     </>
   );

@@ -8,13 +8,14 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import { submitLandaApplicationForm } from 'pages/api/landa-gene';
 
-import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
+import { LandaGeneInput } from '@/components/landa-gene/LandageneInput';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
+import * as process from 'process';
 
 export default function LandaGene() {
   const {
@@ -43,7 +44,7 @@ export default function LandaGene() {
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
-        'https://panel-back.landaholding.com/get-csrf-token'
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
       );
       handleTokenChange(token);
     }
@@ -207,14 +208,12 @@ export default function LandaGene() {
           <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
             <div className="my-4 grid w-full grid-cols-1 gap-y-2 md:flex md:w-3/5 md:flex-col md:items-center lg:w-[35%]">
               <div className='flex w-full flex-col items-center gap-x-4 md:flex-row'>
-              <PersonalInfoInput
+              <LandaGeneInput
                 register={register}
                 errors={errors}
                 nameInputs={{
-                  firstName: 'name',
-                  lastName: '',
-                  email: '',
-                  phoneNumber: 'phone'
+                  full_name: 'full_name',
+                  phone_number: 'phone_number',
                 }}
                 noLabel={true}
               />
@@ -226,14 +225,10 @@ export default function LandaGene() {
                   errors={errors}
                   nameInput="email"
                   type="text"
-                  required=""
-                  patternValue=""
-                  patternMessage=""
-                  placeholder={
-                    lang === 'en'
-                      ? 'Your Email'
-                      : 'ایمیل شما'
-                  }
+                  required={t('emailRequired')}
+                  patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                  patternMessage={t('emailErrorMessage')}
+                  placeholder={t('emailPlaceholder')}
                   className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                   containerClass="w-full"
                   labelClass=""
@@ -244,16 +239,12 @@ export default function LandaGene() {
                 <Input
                   register={register}
                   errors={errors}
-                  nameInput="company"
+                  nameInput="company_name"
                   type="text"
                   required=""
                   patternValue=""
                   patternMessage=""
-                  placeholder={
-                    lang === 'en'
-                      ? 'Name of Your Organization, if applicable'
-                      : 'نام شرکت خود را در صورت امکان وارد کنید'
-                  }
+                  placeholder={t('companyNamePlaceholder')}
                   className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                   containerClass="w-full"
                   labelClass=""

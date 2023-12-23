@@ -22,7 +22,7 @@ export default function Page() {
         `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}blog/details/${slug}/?format=json`
       );
       const data = await response.json();
-      console.log(data);
+
       setCardData(data);
     }
     fetchTags();

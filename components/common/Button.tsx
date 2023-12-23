@@ -2,7 +2,7 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 
 // Define the ButtonProps type
 // go to prop causes a redirext

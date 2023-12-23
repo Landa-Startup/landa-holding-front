@@ -1,5 +1,5 @@
-import React from 'react';
 import PartnersDiamond from './PartnersDiamond';
+// TODO: import from i18n instead of statics
 import { partners1, partners2, partners3 } from '../../app/[lang]/statics';
 
 export default function PartnersDiamondsContainer() {

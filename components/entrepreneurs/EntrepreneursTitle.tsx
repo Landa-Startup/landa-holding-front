@@ -1,5 +1,5 @@
 // import { useTranslation } from 'app/i18n';
-import React from 'react';
+
 import { useLang } from 'stores/langStore';
 import { useTranslation } from 'app/i18n/client';
 
@@ -9,7 +9,7 @@ export default async function EntrepreneursTitle(
 
   const { t } = useTranslation(lang, "formComponent")
 
-  return(
+  return (
     <>
     <div className='text-center'>
       <p className='font-weight: 400 mb-20 pt-8 font-condensed text-lg tracking-wide md:pt-8 md:text-5xl lg:text-6xl xl:text-7xl'>

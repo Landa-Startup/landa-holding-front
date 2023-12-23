@@ -23,15 +23,6 @@ export default function AccelerationServices({
           />
         </div>
       ))}
-      {/* <div className="flex mx-auto items-center gap-2">
-        <span
-          className="font-gilda text-center cursor-pointer"
-          onClick={toggleExpanded}
-        >
-          {expanded ? 'See Less' : 'See More'}
-        </span>
-        <ArrowDown />
-      </div> */}
     </div>
   );
 }

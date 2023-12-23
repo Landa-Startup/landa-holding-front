@@ -1,24 +1,26 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import FetchBlogData from '../../utils/FetchBlogData';
-import { MagazineData } from '../../types/global';
-export default function MagazineCardContainer({ url }: { url: string }) {
-  const [cardData, setCardData] = useState<MagazineData>();
+import React from 'react';
+// import useFetchBlog from '../../utils/useFetchBlog';
+import { useSubmit } from 'stores/dataStore';
+export default function MagazineCardContainer(
+  // { url }: { url: string }
+) {
+  const { cardData } = useSubmit();
 
-  useEffect(() => {
-    // Inside the useEffect, fetch the data and update the state
-    async function fetchData() {
-      try {
-        const data = await FetchBlogData(`blog/details/${url}/?format=json`);
-        setCardData(data);
-        console.log(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
+  // useEffect(() => {
+  //   // Inside the useEffect, fetch the data and update the state
+  //   async function fetchData() {
+  //     try {
+  //       const data = await useFetchBlog(`blog/details/${url}/?format=json`);
+  //       setCardData(data);
 
-    fetchData();
-  }, [url]); // Add 'url' to the dependency array
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   }
+
+  //   fetchData();
+  // }, [url]); // Add 'url' to the dependency array
 
   return (
     <div>

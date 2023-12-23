@@ -1,9 +1,8 @@
-import React from 'react';
-import ContactUsForm from '../../../components/common/form/ContactUsForm';
-import ContactUsDescription from '../../../components/common/ContactUsDescription';
-import Banner from '../../../components/common/Banner';
 import { Metadata } from 'next';
 import { useTranslation } from 'app/i18n';
+import ContactUsForm from '@/components/common/form/ContactUsForm';
+import ContactUsDescription from '@/components/common/ContactUsDescription';
+import Banner from '@/components/common/Banner';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Contact',
@@ -29,12 +28,10 @@ export default async function ContactUsPage({
       />
 
       {/* Main Content Grid */}
-      <div className={`container mx-auto grid grid-cols-1 gap-40 bg-[#FAFAFA] px-5 py-28 font-barlow text-black md:flex md:flex-row md:justify-between lg:px-20`}>
-        {/* ContactUsDescription Component */}
-        {/* TODO: hardcode delete */}
+      {/* ContactUsDescription Component */}
+      {/* TODO: hardcode delete */}
+      <div className='container mx-auto grid grid-cols-1 gap-12 bg-[#FAFAFA] px-5 py-28 font-barlow text-black md:flex md:flex-row md:justify-between lg:px-28'>
         <ContactUsDescription />
-
-        {/* ContactUsForm Component */}
         <ContactUsForm />
       </div>
     </div>

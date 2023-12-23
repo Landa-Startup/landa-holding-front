@@ -1,7 +1,7 @@
-import React from 'react';
+
 import Check from '../../../components/icons/common/Check';
 import { useTranslation } from 'app/i18n/client';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 import { useLang } from 'stores/langStore';
 
 export default function NotificationSendForm() {

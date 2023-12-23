@@ -1,14 +1,15 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSubmit } from 'stores/dataStore';
 
 export default function CategoriesContainer() {
-  const [categories, setCategories] = useState([]);
+  const {categories, setCategories} = useSubmit();
 
   useEffect(() => {
     async function fetchTags() {
       const response = await fetch(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}blog/categories`);
       const data = await response.json();
-      console.log(data)
+
       setCategories(data);
     }
     fetchTags();
@@ -19,7 +20,7 @@ export default function CategoriesContainer() {
         Categories
       </span>
       <ul className="mt-7 space-y-4 font-condensed text-xl text-[#6B6B6B]">
-      {categories.map((category:any, index) => (
+        {categories.map((category: any, index) => (
           <li key={index}>
             {category.title}
           </li>

@@ -79,11 +79,10 @@ const initialJobFormData: JobFormData = {
 };
 
 const initialApplicationFormData: LandaGeneFormData = {
-  firstName: '',
-  lastName: '',
-  phoneNumber: '',
+  full_name: '',
+  phone_number: '',
   email: '',
-  company: ''
+  company_name: ''
 };
 
 const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
@@ -119,8 +118,8 @@ const ContactFormData: ContactUSFormData = {
 };
 
 const HandicraftFormData: HandicraftFormData = {
-  firstName: '',
-  lastName: '',
+  first_name: '',
+  last_name: '',
   email: '',
   organization: ''
 };

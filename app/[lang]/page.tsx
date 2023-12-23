@@ -1,15 +1,17 @@
-import React from 'react';
 import { Metadata } from 'next';
-import Hero from '../../components/home/Hero';
-import LandaHoldingPriority from '../../components/home/LandaHoldingPriority';
-import LatestStartups from '../../components/home/LatestStartups';
-import LandaHoldingBlack from '../../components/home/LandaHoldingBlack';
-import HomeCardsContainer from '../../components/home/HomeCardsContainer';
-import Partners from '../../components/home/Partners';
-import HomeOurTeam from '../../components/home/HomeOurTeam';
-// import AerialViewBusinessTeam from '../../components/home/BusinessTeam';
+import Hero from '@/components/home/Hero';
+import LandaHoldingPriority from '@/components/home/LandaHoldingPriority';
+import LatestStartups from '@/components/home/LatestStartups';
+import LandaHoldingBlack from '@/components/home/LandaHoldingBlack';
+import HomeCardsContainer from '@/components/home/HomeCardsContainer';
+import Partners from '@/components/home/Partners';
+import HomeOurTeam from '@/components/home/HomeOurTeam';
+// import UpcomingEvents from '@/components/home/UpcomingEvents';
+// import AerialViewBusinessTeam from '@/components/home/BusinessTeam';
 
 import { useTranslation } from '../i18n';
+import HomeUpComingStartups from '@/components/home/HomeUpComingStartups';
+// import HomeUpcomingEvents from '@/components/home/HomeUpcomingEvents';
 
 export const metadata: Metadata = {
   title: 'Landa Holding',
@@ -40,6 +42,8 @@ export default async function Page({
 
         <HomeCardsContainer />
         <LandaHoldingBlack />
+        <HomeUpComingStartups/>
+        {/* <HomeUpcomingEvents /> */}
         <LandaHoldingPriority />
         <HomeOurTeam />
         <LatestStartups />

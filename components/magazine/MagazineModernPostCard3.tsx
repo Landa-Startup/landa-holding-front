@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Image from 'next/image';
 import UlList from '../List/UlList';
 
@@ -47,9 +47,9 @@ export default function MagazineModernPostCard3() {
             />
             <UlList
               list={[
-                "This is an item in the list, for example.", 
-                "This is another item in the list, for example.", 
-                "This is another item in the list, for example.", 
+                "This is an item in the list, for example.",
+                "This is another item in the list, for example.",
+                "This is another item in the list, for example.",
                 "This is another item in the list, for example."
               ]}
               style1="px-4 mt-3 text-slate-950"

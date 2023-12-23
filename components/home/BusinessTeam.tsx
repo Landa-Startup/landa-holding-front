@@ -7,7 +7,7 @@ import BusinessTeamCard from './BusinessTeamCard';
 import { useTranslation } from 'app/i18n';
 
 export default function AerialViewBusinessTeam(
-  {lang} : {lang: string}
+  { lang }: { lang: string }
 ) {
   const commentsData = [
     {
@@ -47,13 +47,13 @@ export default function AerialViewBusinessTeam(
 
   // const { t } = await useTranslation(lang, "mainPage")
 
-  // console.log(t('LandaHolding'))
+  // 
 
   const LangChangeHandle = async (lang: string) => {
     const { t } = await useTranslation(lang, "mainPage")
 
     return t;
-  } 
+  }
 
   const translated = LangChangeHandle(lang);
 
@@ -157,11 +157,10 @@ export default function AerialViewBusinessTeam(
               <button
                 key={index}
                 aria-label={`Comments Navigation ${index + 1}`}
-                className={`h-[10px] w-[10px] rounded-full md:h-[15px] md:w-[15px] ${
-                  currentIndex === index
+                className={`h-[10px] w-[10px] rounded-full md:h-[15px] md:w-[15px] ${currentIndex === index
                     ? 'bg-primary transition-all duration-300'
                     : 'border border-white transition-all duration-300'
-                }`}
+                  }`}
                 onClick={() => handleCommentsNavigationClick(index)}
               />
             ))}

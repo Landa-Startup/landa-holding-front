@@ -16,7 +16,7 @@ import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 import FormTitle from '../common/form/FormTitle';
 
 
@@ -104,11 +104,11 @@ export default function PartnerMembershipForm() {
   return (
     <div>
       <div>
-        <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
+        <div className="container  m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
           {/* <PartnerMembershipTitle /> */}
           <FormTitle formName='partnerForm' />
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-6 grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
+          <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
+            <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3">
               <PersonalInfoInput
                 register={register}
                 errors={errors}
@@ -187,7 +187,7 @@ export default function PartnerMembershipForm() {
               />
             </div>
             </div>
-            <div className="text-center">
+            <div className="mx-auto pb-4 text-center">
               <Button
                 type='submit'
                 bgColor="Primary"

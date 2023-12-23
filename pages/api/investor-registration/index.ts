@@ -15,7 +15,7 @@ async function submitInvestorRegistrationForm(
         },
       }
     );
-    console.log('Form data sent successfully!');
+
 
     return response;
   } catch (error) {

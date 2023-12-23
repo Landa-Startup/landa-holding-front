@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ArrowLeftShort from '../icons/common/ArrowLeftShort';
 import ArrowRightShort from '../icons/common/ArrowRightShort';
 

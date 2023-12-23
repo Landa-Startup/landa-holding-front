@@ -252,5 +252,28 @@
       "link": "https://invigorated-drop-231359.framer.app"
     }
   ],
-  "register": "ثبت نام"
+  "register": "ثبت نام",
+  "upcomingStartups": {
+    "landaHolding": "هلدینگ لاندا",
+    "title": "استارت آپ های پیش رو",
+    "cards":[
+      {
+        "image": "/static/images/handicraft.png",
+        "subTitle": "صنایع دستی لاندا",
+        "text": "صنایع دستی لاندا با استفاده از هوش مصنوعی، واقعیت افزوده و NFT قصد دارد یک پل ارتباطی امن بین سازندگان و خریداران ایجاد کند",
+        "goto": "/handicraft",
+        "buttonText": "ثبت نام"
+      },
+      {
+        "image": "/static/images/handicraft.png",
+        "subTitle": "صنایع دستی لاندا",
+        "text": "صنایع دستی لاندا با استفاده از هوش مصنوعی، واقعیت افزوده و NFT قصد دارد یک پل ارتباطی امن بین سازندگان و خریداران ایجاد کند",
+        "goto": "/handicraft",
+        "buttonText": "ثبت نام"
+      }
+    ]
+  },
+  "upcomingEvents": {
+    "title": "رویداد های پیش رو"
+  }
 }

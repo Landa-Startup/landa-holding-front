@@ -1,10 +1,8 @@
 'use client';
-import React from 'react';
-import { useSubmit } from 'stores/submitStore';
-
-// interface Props {
-//   onRoleSelect: (role: string) => void;
-// }
+import { useTranslation } from 'app/i18n/client';
+import React, { useEffect, useState } from 'react';
+import { useLang } from 'stores/langStore';
+// import { useSubmit } from 'stores/submitStore';
 
 export default function TeamRolesContainer({
   roles,
@@ -13,22 +11,29 @@ export default function TeamRolesContainer({
   roles: string[];
   onRoleSelect: (role: string) => void;
 }) {
-  const {selectedRole, updateRole} = useSubmit();
+  // const {selectedRole, updateRole} = useSubmit();
+
+  const { lang } = useLang();
+
+  const { t } = useTranslation(lang, "ourTeam");
+
+  const [selectedRole, setSelectedRole] = useState("")
+
+  useEffect(() => {
+    setSelectedRole(t("defaultRole"));
+  },[])
 
   function handleRoleClick(role: string) {
     onRoleSelect(role);
-    updateRole(role);
+    setSelectedRole(role);
   }
   return (
-    <div className="flex flex-wrap justify-center gap-1 bg-slate-50  pb-5  pt-10 font-barlow">
+    <div className="flex flex-wrap justify-center gap-1 md:gap-6 pb-5  pt-10 font-barlow">
       {roles.map((role, index) => (
         <button
           onClick={() => handleRoleClick(role)}
           key={index}
-          className={`btn btn-outline rounded-sm border-[#222] capitalize ${
-            selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'
-          }`}
-        >
+          className={`btn btn-outline md:w-[100px] rounded-sm border-[#222] capitalize ${selectedRole === role ? 'bg-[#222] text-white' : 'text-[#222]'}`}>
           {role}
         </button>
       ))}

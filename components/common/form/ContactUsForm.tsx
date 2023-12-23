@@ -12,7 +12,7 @@ import TextArea from '../TextArea';
 import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 // import { on } from 'events';
 export default function ContactUsForm() {
 
@@ -95,11 +95,11 @@ export default function ContactUsForm() {
 
   return (
     <div className='flex h-full flex-col items-center justify-between md:items-start'>
-      <h2 className="text-center font-gilda text-5xl font-light">
+      <h2 className="text-center font-gilda text-5xl font-light ltr:tracking-[.25em] ml-36">
         {t('contactForm', {returnObjects: true}).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-2'>
-        <div className="my-4 col-span-2 grid h-full grid-cols-1 gap-x-3 md:grid-cols-2">
+        <div className="col-span-2 my-4 grid h-full grid-cols-1 gap-x-3 md:grid-cols-2">
 
           <PersonalInfoInput
             register={register}

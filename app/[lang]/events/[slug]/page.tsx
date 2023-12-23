@@ -1,6 +1,6 @@
 import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
-import React from 'react';
+
 import Image from 'next/image';
 import Calender from '@/components/icons/Panel/Calender';
 import Instagram from '@/components/icons/footer/Instagram';
@@ -28,7 +28,7 @@ export default function Page({
   //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}blog/details/${slug}/?format=json`
   //     );
   //     const data = await response.json();
-  //     console.log(data);
+  //     
   //     setCardData(data);
   //   }
   //   fetchTags();

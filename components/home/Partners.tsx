@@ -1,7 +1,6 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PartnersStartupCard from './PartnersStartupCard';
-// import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
@@ -22,6 +21,7 @@ export default function Partners() {
     const scrollContainer = scrollContainerRef.current;
 
     function scrollAutomatically() {
+      // TODO: add scroll for fa
       if (lang === 'fa') {
         return;
       }
@@ -42,7 +42,7 @@ export default function Partners() {
     return () => clearInterval(intervalId);
   }, [isScrolling]);
 
-  // Add event listeners to stop automatic scroll on mouse enter
+  // TODO: move js functions to a separate file
   const handleMouseEnter = () => {
     setIsScrolling(false); // Stop scrolling
   };

@@ -6,13 +6,13 @@ import { useForm } from 'react-hook-form';
 import { HandicraftFormData } from 'initials/initObjects';
 import { HandicraftForm } from '../../../types/global';
 import Input from './Input';
-
-// import { useTranslation } from 'app/i18n/client';
+import NotificationSendForm from './NotificationSendForm';
+import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../ButtonRefactor';
 import Button from '../Button';
 import { useLang } from 'stores/langStore';
 import { submitHandiCraftApplicationForm } from 'pages/api/handiCrafts';
-import { useSubmit } from 'stores/submitStore';
+import { useSubmit } from 'stores/dataStore';
 
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
 export default function HandicraftForm() {
@@ -27,6 +27,8 @@ export default function HandicraftForm() {
    } = useSubmit((s) => s)
 
    const lang = useLang((s) => s.lang)
+
+    const { t } = useTranslation(lang, 'handicraft');
 
     const {
       register,
@@ -94,7 +96,6 @@ export default function HandicraftForm() {
       value: value
     }));
 
-  // const { t } = useTranslation(lang, 'handicraft');
 
   return (
     // <form className="flex flex-col gap-4">
@@ -134,15 +135,15 @@ export default function HandicraftForm() {
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
     <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
-      <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-x-3'>
+      <div className='grid w-full grid-cols-1 gap-x-3 md:grid-cols-2'>
       <PersonalInfoInput
         register={register}
         errors={errors}
         nameInputs={{
-          firstName: 'name',
-          lastName: '',
+          firstName: 'first_name',
+          lastName: 'last_name',
           email: '',
-          phoneNumber: 'phone'
+          phoneNumber: ''
         }}
         noLabel={true}
       />
@@ -154,32 +155,24 @@ export default function HandicraftForm() {
           errors={errors}
           nameInput="email"
           type="text"
-          required={lang === "en" ? "Your email is required" : "وارد کردن ایمیل الزامی است"}
-          patternValue=""
-          patternMessage={lang === "en" ? "Your email is required" : "وارد کردن ایمیل الزامی است"}
-          placeholder={
-            lang === 'en'
-              ? 'Your Email'
-              : 'ایمیل شما'
-          }
+          required={t('form', { returnObjects: true }).emailRequired}
+          patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          patternMessage={t('form', { returnObjects: true }).emailErrorMessage}
+          placeholder={t('form', { returnObjects: true }).emailPlaceholder}
           className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-          containerClass="w-full"        />
+          containerClass="w-full"/>
       </div>
 
       <div className="col-span-1 w-full">
         <Input
           register={register}
           errors={errors}
-          nameInput="company"
+          nameInput="organization"
           type="text"
-          required={lang === "en" ? "Your company name is required" : "وارد کردن نام شرکت الزامی است"}
+          required={t('form', { returnObjects: true }).organizationRequired}
           patternValue=""
           patternMessage=""
-          placeholder={
-            lang === 'en'
-              ? 'Name of Your Organization, if applicable'
-              : 'نام شرکت خود را در صورت امکان وارد کنید'
-          }
+          placeholder={t('form', { returnObjects:true }).organizationPlaceholder}
           className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
           containerClass="w-full"
           labelClass=""
@@ -196,6 +189,7 @@ export default function HandicraftForm() {
       />
       {/* <ButtonRefactor type="submit" text="Submit" /> */}
     </div>
+    <NotificationSendForm />
   </form>
   );
 }

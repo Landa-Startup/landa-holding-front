@@ -7,8 +7,15 @@
   "form": {
     "firstName": "Name",
     "lastName": "Last Name",
+
     "email": "Email",
-    "organization": "Organization",
+    "emailRequired": "Your email is required.",
+    "emailErrorMessage": "Enter a Valid Email Address.",
+    "emailPlaceholder": "Enter your Email",
+
+    "organizationRequired": "Your organization name is required",
+    "organizationPlaceholder": "Name of Your Organization, if applicable",
+
     "submit": "Submit"
   }
 }

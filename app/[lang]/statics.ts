@@ -298,10 +298,10 @@ const personsEN: personArrayInterface[] = [
   },
   {
     image: '/static/images/our-team/Personals/a3.png',
-    position: 'manager assistant',
+    position: 'Manager Assistant',
     name: 'Lida Parvizi',
     linkedIn: '',
-    category: 'manager assistant'
+    category: 'Manager Assistant'
   },
   {
     image: '/static/images/our-team/Personals/a4.png',
@@ -403,6 +403,13 @@ const personsEN: personArrayInterface[] = [
     category: 'designers'
   },
   {
+    image: '/static/images/our-team/Personals/a34.png',
+    position: 'Graphic Designer',
+    name: 'Faezeh Khani',
+    linkedIn: '',
+    category: 'designers'
+  },
+  {
     image: '/static/images/our-team/Personals/a23.png',
     position: 'Content Creator',
     name: 'Mahtab Hafizi',
@@ -415,6 +422,21 @@ const personsEN: personArrayInterface[] = [
     name: 'Tiam Safarian',
     linkedIn: '',
     category: 'content creators'
+  },
+  {
+    "image": "/static/images/our-team/Personals/66nn.jpg",
+    "position": "Content Creator",
+    "name": "Mahsa Ghorbani",
+    "linkedIn": "",
+    "category": "content creators"
+  },
+
+  {
+    "image": "/static/images/our-team/Personals/milad.jpg",
+    "position": "Content Creator",
+    "name": "Milad Fatemi",
+    "linkedIn": "",
+    "category": "content creators"
   },
   {
     image: '/static/images/our-team/Personals/a27.png',
@@ -431,18 +453,32 @@ const personsEN: personArrayInterface[] = [
     category: 'programmers'
   },
   {
-    image: '/static/images/our-team/Personals/a30.png',
-    position: 'Front-end',
-    name: 'Ramtin Foroozani',
-    linkedIn: '',
-    category: 'programmers'
-  },
-  {
     image: '/static/images/our-team/Personals/a31.png',
     position: 'Front-end',
     name: 'Barad Dehghani',
     linkedIn: '',
     category: 'programmers'
+  },
+  {
+    "image": "/static/images/our-team/Personals/a32.png",
+    "position": "Front-end",
+    "name": "Matin Janghorbani",
+    "linkedIn": "",
+    "category": "programmers"
+  },
+  {
+    "image": "/static/images/our-team/Personals/65.jpg",
+    "position": "Back-end",
+    "name": "Matin Nejatbakhsh",
+    "linkedIn": "",
+    "category": "programmers"
+  }, 
+ {
+    "image": "/static/images/our-team/Personals/121.jpg",
+    "position": "Front-end",
+    "name": "Amir Mohammad Esfahanizade",
+    "linkedIn": "",
+    "category": "programmers"
   },
   {
     image: '/static/images/our-team/Personals/a32.png',
@@ -459,12 +495,13 @@ const personsEN: personArrayInterface[] = [
     category: 'public relations officer'
   },
   {
-    image: '/static/images/our-team/Personals/a34.png',
-    position: 'Graphic Designer',
-    name: 'Faezeh Khani',
-    linkedIn: '',
-    category: 'designers'
+    "image": "/static/images/our-team/Personals/Nedan.jpg",
+    "position": "public relations",
+    "name": "Neda Mosharaf",
+    "linkedIn": "",
+    "category": "public relations"
   }
+
 ];
 
 const personsFA: personArrayInterface[] = [
@@ -541,7 +578,7 @@ const personsFA: personArrayInterface[] = [
   {
     image: '/static/images/our-team/Personals/a8.png',
     position: 'فول استک',
-    name: 'امین اصغریان',
+    name: 'امین عسگریان',
     linkedIn: '',
     category: 'برنامه نویسان'
   },
@@ -602,12 +639,32 @@ const personsFA: personArrayInterface[] = [
     category: 'طراحان'
   },
   {
+    image: '/static/images/our-team/Personals/a34.png',
+    position: 'طراح گرافیک',
+    name: 'فائزه خانی',
+    linkedIn: '',
+    category: 'طراحان'
+  },
+  {
     image: '/static/images/our-team/Personals/a23.png',
     position: 'تولید کننده محتوا',
     name: 'مهتاب حافظی',
     linkedIn: '',
     category: 'تولید کننده محتوا'
   },
+  {  
+            
+    "image": "/static/images/our-team/Personals/milad.jpg",   
+    
+    "position": "تولید محتوا",   
+    
+    "name": "میلاد فاطمی",   
+    
+    "linkedIn": "",  
+    
+    "category": "تولید کنندگان محتوا"  
+    
+    },
   {
     image: '/static/images/our-team/Personals/a25.png',
     position: 'تولید کننده محتوا',
@@ -643,13 +700,47 @@ const personsFA: personArrayInterface[] = [
     linkedIn: '',
     category: 'برنامه نویسان'
   },
-  {
-    image: '/static/images/our-team/Personals/a32.png',
-    position: 'فرانت اند',
-    name: 'متین جان قربانی',
-    linkedIn: '',
-    category: 'برنامه نویسان'
-  },
+  {  
+            
+    "image": "/static/images/our-team/Personals/a33.png",  
+    
+    "position": "فرانت اند",   
+    
+    "name": "امیر محمد اصفهانی زاده",  
+    
+    "linkedIn": "",  
+    
+    "category": "برنامه نویسان"   
+    
+    },  
+    
+
+    {  
+    
+    "image": "/static/images/our-team/Personals/a21.png",   
+    
+    "position": "بک اند",   
+    
+    "name": "متین نجات بخش",   
+    
+    "linkedIn": "",  
+    
+    "category": "برنامه نویسان"  
+    
+    },  
+     {  
+    
+    "image": "/static/images/our-team/Personals/a32.png",  
+    
+    "position": "فرانت اند",  
+    
+    "name": "متین جانقربانی",   
+    
+    "linkedIn": "",  
+    
+    "category": "برنامه نویسان"  
+    
+    }, 
   {
     image: '/static/images/our-team/Personals/a33.png',
     position: 'روابط عمومی',
@@ -657,13 +748,20 @@ const personsFA: personArrayInterface[] = [
     linkedIn: '',
     category: 'روابط عمومی'
   },
-  {
-    image: '/static/images/our-team/Personals/a34.png',
-    position: 'طراح گرافیک',
-    name: 'فائزه خانی',
-    linkedIn: '',
-    category: 'طراحان'
-  }
+  {  
+            
+    "image": "/static/images/our-team/Personals/nedan.jpg",   
+    
+    "position": "روابط عمومی",   
+    
+    "name": "ندا مشرف",   
+    
+    "linkedIn": "",  
+    
+    "category": "روابط عمومی"  
+    
+    }
+
 ];
 
 const rolesEN: Array<string> = [
@@ -677,7 +775,7 @@ const rolesEN: Array<string> = [
   'Accountant',
   'Public Relations',
   'Digital Marketer',
-  'Secretary'
+  'Manager Assistant'
 ];
 
 const rolesFA: Array<string> = [
@@ -750,10 +848,10 @@ const companies: CompaniesArrayInterface[] = [
 const items: personArrayInterface[] = [
   {
     image: '/static/images/our-team/Personals/a3.png',
-    position: 'Secretary',
+    position: 'Manager Assistant',
     name: 'Lida Parvizi',
     linkedIn: '',
-    category: 'secretary'
+    category: 'manager Assistant'
   },
   {
     image: '/static/images/our-team/Personals/a6.png',
