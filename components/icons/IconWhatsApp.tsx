@@ -1,4 +1,4 @@
-
+// change to WhatsAppIcon
 
 export default function IconWhatApp() {
   return (

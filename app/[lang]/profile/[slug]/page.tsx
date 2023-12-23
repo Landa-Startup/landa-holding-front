@@ -1,10 +1,10 @@
 'use client';
-import EnvelopeMedia from '@/components/icons/sosial-media/EnvelopeMedia';
-import InstagramMedia from '@/components/icons/sosial-media/InstagramMedia';
-import LinkedinMedia from '@/components/icons/sosial-media/LinkedinMedia';
-import WhatsappMedia from '@/components/icons/sosial-media/WhatsappMedia';
+import EnvelopeMediaIconNew from '@/components/icons/socialMediaIcons/EnvelopeMediaIconNew';
+import InstagramIconNew from '@/components/icons/socialMediaIcons/InstagramIconNew';
+import LinkedinIconNew from '@/components/icons/socialMediaIcons/LinkedinIconNew';
+import WhatsappIconNew from '@/components/icons/socialMediaIcons/WhatsappIconNew';
 import Link from 'next/link';
-// import { usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 // import { useEffect } from 'react';
 
 export default function Page() {
@@ -14,11 +14,10 @@ export default function Page() {
   // useEffect(() => {
   //   async function fetchTags() {
   //     const response = await fetch(
-  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}profile/${slug}/?format=json`
+  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/profile/${slug}/?format=json`
   //     );
   //     const data = await response.json();
   //     console.log(data);
-  //     setCardData(data);
   //   }
   //   fetchTags();
   // }, [slug]);
@@ -77,14 +76,19 @@ export default function Page() {
               className="hover:text-primary"
               target="_blank"
             >
-              <InstagramMedia />
+              <InstagramIconNew className="bi bi-instagram h-8 w-8" />
             </Link>
             <Link
               aria-label="Email"
               href={'mailto:info@landaholding.com'}
               className="hover:text-primary"
+              target="_blank"
             >
-              <EnvelopeMedia />
+              <EnvelopeMediaIconNew
+                className="bi bi-envelope h-8 w-8"
+                width="16"
+                height="16"
+              />
             </Link>
             <Link
               aria-label="Whatsapp"
@@ -92,7 +96,11 @@ export default function Page() {
               className="hover:text-primary"
               target="_blank"
             >
-              <WhatsappMedia />
+              <WhatsappIconNew
+                width="16"
+                height="16"
+                className="bi bi-whatsapp h-8 w-8"
+              />
             </Link>
             <Link
               aria-label="Linkedin"
@@ -100,7 +108,11 @@ export default function Page() {
               className="hover:text-primary"
               target="_blank"
             >
-              <LinkedinMedia />
+              <LinkedinIconNew
+                width="16"
+                height="16"
+                className="bi bi-linkedin h-8 w-8"
+              />
             </Link>
           </div>
         </div>
