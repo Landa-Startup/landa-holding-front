@@ -7,8 +7,15 @@
   "form": {
     "firstName": "نام",
     "lastName": "نام خانوادگی",
+
     "email": "ایمیل",
-    "organization": "سازمان",
+    "emailRequired": "ایمیل اجباری است.",
+    "emailErrorMessage": "لطفا آدرس ایمیل را به درستی وارد کنید.",
+    "emailPlaceholder": "لطفا ایمیل خود را وارد کنید.",
+
+    "organizationRequired": "نام سازمان شما اجباری است.",
+    "organizationPlaceholder": "نام سازمان خود را در صورت امکان وارد کنید.",
+
     "submit": "ثبت"
   }
 }

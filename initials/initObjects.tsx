@@ -118,8 +118,8 @@ const ContactFormData: ContactUSFormData = {
 };
 
 const HandicraftFormData: HandicraftFormData = {
-  firstName: '',
-  lastName: '',
+  first_name: '',
+  last_name: '',
   email: '',
   organization: ''
 };
