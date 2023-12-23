@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { HandicraftFormData } from 'initials/initObjects';
 import { HandicraftForm } from '../../../types/global';
 import Input from './Input';
-
+import NotificationSendForm from './NotificationSendForm';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../ButtonRefactor';
 import Button from '../Button';
@@ -189,6 +189,7 @@ export default function HandicraftForm() {
       />
       {/* <ButtonRefactor type="submit" text="Submit" /> */}
     </div>
+    <NotificationSendForm />
   </form>
   );
 }
