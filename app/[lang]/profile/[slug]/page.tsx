@@ -4,7 +4,7 @@ import InstagramIconNew from '@/components/icons/socialMediaIcons/InstagramIconN
 import LinkedinIconNew from '@/components/icons/socialMediaIcons/LinkedinIconNew';
 import WhatsappIconNew from '@/components/icons/socialMediaIcons/WhatsappIconNew';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 // import { useEffect } from 'react';
 
 export default function Page() {
