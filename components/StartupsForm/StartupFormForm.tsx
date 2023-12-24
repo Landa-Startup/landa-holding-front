@@ -174,7 +174,7 @@ export default function StartupFormForm() {
   }));
 
   return (
-    <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
+    <div className="container m-[-1rem] mx-auto my-20 gap-y-0 font-barlow lg:p-20">
       {/* <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
         <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
           {t('startUp', { returnObjects: true }).formTitle}
@@ -189,7 +189,7 @@ export default function StartupFormForm() {
         <div>
           <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
         </div> */}
-      <div className='mx-4 bg-[#faf8f5]'>
+      <div className='mx-5 bg-[#faf8f5]'>
         <FormTitle formName='startUp'/>
       </div>
       <div className="container mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:px-4">
@@ -203,7 +203,7 @@ export default function StartupFormForm() {
           <div className="col-span-2">
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
-                <p className="mb-3 w-[310px] border-b py-5 pl-10 text-xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
+                <p className="mb-3 w-[310px] border-b py-5 px-10 text-2xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
                   {t('startUp', { returnObjects: true }).subTitle}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />

@@ -61,7 +61,7 @@ export default async function LandaHoldingBlack() {
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
           style1={`w-[320px] md:w-[600px]`}
-          style2="space-y-2 md:mr-8"
+          style2="space-y-0 md:mr-8"
           style3="pt-4"
         />
 

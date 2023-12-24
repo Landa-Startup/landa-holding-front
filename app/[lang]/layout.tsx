@@ -5,6 +5,7 @@ import { dir } from 'i18next'
 import { languages } from 'app/i18n/setting'
 import './globals.css';
 import { useLang } from 'stores/langStore';
+import i18next from 'i18next';
 
 export async function generateStaticParams() {
   return languages.map((lang) => ({ lang }));
@@ -16,6 +17,10 @@ export default function RootLayout({
   params: { lang: string };
   children: React.ReactNode;
 }) {
+
+  // const i18next = require("i18next");
+
+  i18next.loadLanguages(["en", "fa"]);
 
   useLang.setState({
     lang: lang
