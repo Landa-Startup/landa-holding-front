@@ -11,6 +11,7 @@ type State = {
     csrfToken: string;
     selectedRole: string;
     cardsData: MagazineData[];
+    cardData: MagazineData;
     categories: any[];
     tags: any[];
 }
@@ -23,6 +24,7 @@ type Action = {
     handleTokenChange: (str: State['csrfToken']) => void,
     updateRole: (role: State['selectedRole']) => void,
     setCardsData: (data: State["cardsData"]) => void,
+    setCardData: (data: State["cardData"]) => void,
     setCategories: (category: State["categories"]) => void,
     setTags: (tags: State["tags"]) => void,
     // handleChangeSuccess: () => void,
@@ -37,6 +39,14 @@ const useSubmit = create<State & Action>((set) => {
         csrfToken: "",
         selectedRole: "All",
         cardsData: [],
+        cardData: {
+            title: "",
+            description: "",
+            thumbnail: "",
+            slug: "",
+            date: "",
+            file: "",
+        },
         categories: [],
         tags: [],
         handleSubmitingChange: (bool) => set(() => ({isSubmitting: bool})),
@@ -48,6 +58,7 @@ const useSubmit = create<State & Action>((set) => {
         setCardsData: (data) => set(() => ({cardsData: data})),
         setCategories: (categories) => set(() => ({categories: categories})),
         setTags: (tags) => set(() => ({tags: tags})),
+        setCardData: (cardData) => set(() => ({cardData: cardData}))
     };
 });
 
