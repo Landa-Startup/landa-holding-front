@@ -139,7 +139,7 @@
           "image": "/static/images/our-team/Personals/a34.png",
           "position": "Graphic Designer",
           "name": "Faezeh Khani",
-          "linkedIn": "",
+          "linkedIn": "linkedin.com/in/faezeh-khani-4362b62a5",
           "category": "designers"
         },
         {
@@ -155,6 +155,14 @@
           "name": "Tiam Safarian",
           "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
           "category": "content creators"
+        },
+        
+        {
+          "image": "/static/images/our-team/Personals/milad copy 2.jpg",
+          "position": "Content Creator",
+          "name": "Milad Fatemi",
+          "linkedIn": "https://www.linkedin.com/in/milad-fatemi-48157b78",
+          "category": "content creators"
         },       
        {
           "image": "/static/images/our-team/Personals/66nn.jpg",
@@ -164,13 +172,7 @@
           "category": "content creators"
         },
 
-        {
-          "image": "/static/images/our-team/Personals/milad.jpg",
-          "position": "Content Creator",
-          "name": "Milad Fatemi",
-          "linkedIn": "",
-          "category": "content creators"
-        },
+
         {
           "image": "/static/images/our-team/Personals/a27.png",
           "position": "Full Stack",
@@ -217,14 +219,14 @@
           "image": "/static/images/our-team/Personals/a33.png",
           "position": "Public Relations Officer",
           "name": "Gelareh Bahrami",
-          "linkedIn": "",
+          "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
           "category": " officer"
         },
         {
           "image": "/static/images/our-team/Personals/Nedan.jpg",
           "position": "public relations",
           "name": "Neda Mosharaf",
-          "linkedIn": "",
+          "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",
           "category": "public relations"
         }
     ],
