@@ -9,8 +9,10 @@ export default async function StoryOfLanda() {
   const { t } = await useTranslation(lang, 'aboutUs');
 
   return (
-    <div className="flex flex-col gap-12 bg-[#F7F3EE] py-10 md:px-32 md:py-14">
-      <div className="flex flex-col gap-12 text-[#000] lg:flex-row">
+    <div className="flex flex-col gap-12 pb-10 ">
+      {/* top */}
+      <div className="flex flex-col gap-12 md:px-32 pt-0 pb-14 sm:py-14 bg-[#FAFAFA] text-[#000] lg:flex-row">
+        {/* top - left */}
         <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2">
           <div className="relative h-[310px] w-screen md:h-[310px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
             <Image
@@ -23,16 +25,18 @@ export default async function StoryOfLanda() {
           </div>
           <div className="mt-4 px-10 md:pl-0">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
-              {t('TheStoryOfLanda', { returnObjects: true }).title}
+              {t('TheStoryOfLanda', { returnObjects: true })[0].title}
             </span>
             <div className="flex flex-col space-y-4 font-barlow text-[#000]">
-              <p>{t('TheStoryOfLanda', { returnObjects: true }).text}</p>
+              <p>{t('TheStoryOfLanda', { returnObjects: true })[0].text}</p>
               <div className="flex flex-col"></div>
             </div>
           </div>
         </div>
+        {/* top - left */}
         {/* TODO: make a for loop for this section instead of duplicate code */}
         {/* TODO: Why use [0],[1] for all translations? */}
+        {/* top - right */}
         <div className="flex flex-col  px-10 md:w-full md:text-justify lg:w-1/2 xl:w-1/2">
           <span className="font-gilda text-3xl text-primary">
             {t('LANDAStartups', { returnObjects: true })[0].title}
@@ -79,9 +83,13 @@ export default async function StoryOfLanda() {
             </li>
           </ul>
         </div>
+        {/* top - right */}
       </div>
-      <div className="flex w-full flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
-        <div className="flex flex-col font-barlow md:w-full">
+      {/* top */}
+
+      {/* down */}
+      <div className="flex w-full md:px-32 flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
+        <div className="flex flex-col font-barlow md:w-full px-10 sm:px-0">
           <span className="font-gilda text-3xl text-primary">
             {t('VisionOfTheLanaHolding', { returnObjects: true })[0].title}
           </span>
@@ -92,6 +100,7 @@ export default async function StoryOfLanda() {
           </div>
         </div>
       </div>
+      {/* down */}
     </div>
   );
 }
