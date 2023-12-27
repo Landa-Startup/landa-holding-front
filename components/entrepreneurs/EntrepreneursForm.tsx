@@ -17,7 +17,6 @@ import { useSubmit } from 'stores/dataStore';
 // import FormTitle from '../common/form/FormTitle';
 
 export default function EntrepreneursForm() {
-
   const {
     register,
     handleSubmit,
@@ -34,12 +33,12 @@ export default function EntrepreneursForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleSuccessChange,
-  } = useSubmit((s) => s)
+    handleSuccessChange
+  } = useSubmit((s) => s);
 
-  const lang = useLang((s) => s.lang)
+  const lang = useLang((s) => s.lang);
 
-  const { t } = useTranslation(lang, "formComponent")
+  const { t } = useTranslation(lang, 'formComponent');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -59,8 +58,6 @@ export default function EntrepreneursForm() {
     handleSubmitingChange(true);
     handleSendChange(true);
 
-
-
     // Create a FormData object for form data.
     const sendFormData = new FormData();
 
@@ -70,8 +67,6 @@ export default function EntrepreneursForm() {
         sendFormData.append(fieldName, String(fieldValue));
       }
     });
-
-
 
     // Send the form data to the API.
     submitEntrepreneurForm(sendFormData, csrfToken)
@@ -99,7 +94,7 @@ export default function EntrepreneursForm() {
   const errorsList = Object.entries(errors).map(([name, value]) => ({
     name: name,
     value: value
-  }))
+  }));
 
   return (
     <>
@@ -190,13 +185,13 @@ export default function EntrepreneursForm() {
           </div>
           <div className="self-center pb-4 text-center">
             <Button
-              type='submit'
+              type="submit"
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
             />
           </div>
         </form>
-        <NotificationSendForm/>
+        <NotificationSendForm />
       </div>
     </>
   );

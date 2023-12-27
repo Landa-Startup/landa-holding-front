@@ -5,38 +5,25 @@ import LinkedinIconNew from '@/components/icons/socialMediaIcons/LinkedinIconNew
 import WhatsappIconNew from '@/components/icons/socialMediaIcons/WhatsappIconNew';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
   const pathname = usePathname();
   const slug = pathname?.replace('/en/profile/', '');
-  // const [data,setData] = useState()
+  const [data, setData] = useState();
 
-<<<<<<< HEAD
-  // useEffect(() => {
-  //   async function fetchTags() {
-  //     const response = await fetch(
-  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/profile/${slug}/?format=json`
-  //     );
-  //     const data = await response.json();
-  //     console.log(data);
-  //   }
-  //   fetchTags();
-  // }, [slug]);
-=======
   useEffect(() => {
     async function fetchTags() {
-      // const response = await fetch(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/user/profile/${slug}?format=json`);
-      // const data:any = await response.json();
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}user/profile/${slug}?format=json`
+      );
+      const data: any = await response.json();
 
-      //setData(data);
-
+      setData(data);
     }
-    // console.log(fetchTags())
+    console.log(data);
     fetchTags();
-
   }, [slug]);
->>>>>>> 6e71d91f0c84857931c0c8047d606467d564023a
 
   return (
     <div className="h-screen py-24 md:px-40 flex justify-center">
