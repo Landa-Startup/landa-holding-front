@@ -20,7 +20,7 @@ export default async function UpcomingStartupsCard({image, subTitle, text, goto,
   return (
     <>
         <div>
-            <div className="shadow-xl w-[400px] md:w-[400px] h-[460px] md:h-auto flex flex-col justify-start md:justify-between items-center">
+            <div className="shadow-xl w-full md:w-[400px] h-[460px] md:h-auto flex flex-col justify-start md:justify-between items-center">
                     <div className="relative h-[151px] w-[150px] md:h-[275px] md:w-[300px] bg-white">
                         <Image
                           loading='lazy'
