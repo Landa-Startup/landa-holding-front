@@ -61,7 +61,7 @@ export default function Navbar({
           </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
-              <div className="flex flex-col items-center md:flex-row">
+              <div className="flex flex-col items-center md:items-end md:flex-row">
                 <Image
                   className="h-10 w-10 md:h-14 md:w-12"
                   src="static/images/Logo.svg"
@@ -69,7 +69,7 @@ export default function Navbar({
                   width={50}
                   height={50}
                 />
-                <span className="font-condensed text-[12px] font-bold tracking-[0.375px] text-primary md:text-xl">
+                <span className="font-condensed text-[12px] font-bold tracking-[0.25rem] text-primary md:text-xl">
                   {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>
