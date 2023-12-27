@@ -34,7 +34,9 @@ export default function Button({
 
   const send = useSubmit((s) => s.send)
   
-  const lang= useLang((s) => s.lang);
+  const lang = useLang((s) => s.lang);
+
+  console.log(lang)
 
   return (
     <button

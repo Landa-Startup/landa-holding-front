@@ -24,7 +24,11 @@ i18next
   )
   .init({
     backend: {
-      loadPath: './locales/{lng}/{ns}.json' 
+      backendOptions: [{
+        expirationTime: 7 * 24 * 60 * 60 * 1000 // 7 days
+      }, {
+        loadPath: '/locales/{{lng}}/{{ns}}.json'
+      }] 
     },
     cache: {
       enabled: true,
@@ -33,9 +37,10 @@ i18next
     ...getOptions(),
     lng: undefined, // let detect the language on client side
     detection: {
-      order: ['path', 'htmlTag', 'cookie', 'navigator']
+      order: ['path', 'htmlTag', 'cookie', 'navigator'],
+      caches: ['cookie'],
     },
-    preload: runsOnServerSide ? languages : []
+    preload: runsOnServerSide ? languages : ["en", "fa"]
   });
 
 export function useTranslation(lng: any, ns: any, options?: any) {

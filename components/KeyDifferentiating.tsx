@@ -11,7 +11,7 @@ export default async function KeyDifferentiating() {
   return (
     // TODO: don't use [0], [1] for translations
     <div className="grid grid-cols-1 justify-items-end   bg-[#FAFAFA] md:grid-cols-2">
-      <div className="m-5 flex flex-col pr-4  gap-5 md:my-20 md:mr-40 md:rtl:ml-40">
+      <div className="m-5 flex flex-col pr-4  gap-5 md:my-20 md:mx-30">
         <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
@@ -37,7 +37,7 @@ export default async function KeyDifferentiating() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 hidden md:block">
+      <div className="mt-10 mx-10 hidden md:block">
         <Image
           src="/static/images/Home/KeyDifferentiating/Vector 58.png"
           alt="Landa Key Differentiating"

@@ -4,6 +4,27 @@ import { initReactI18next } from 'react-i18next/initReactI18next';
 import { getOptions } from './setting';
 import i18nextBrowserLanguagedetector from 'i18next-browser-languagedetector';
 
+import i18next from 'i18next';
+
+// const i18next = require('i18next');
+// const Backend = require('i18next-node-fs-backend');
+
+// const path = require('path');
+
+// // Inform backend of where translations will be  
+// i18next.use(Backend)
+  
+// i18next.init({
+//     fallbackLng: 'en',
+//     backend: {
+//       loadPath: path.join(__dirname, '/locales/{{lng}}/{{ns}}.json'),
+//     }
+//   });
+
+// preload ALL languages  
+const languages = ['en', 'fa'];
+i18next.loadLanguages(languages);
+
 const initI18next = async (lng: any, ns: any) => {
   const i18nInstance = createInstance();
   await i18nInstance
@@ -17,15 +38,19 @@ const initI18next = async (lng: any, ns: any) => {
     )
     .init({
       backend: {
-        loadPath: './locales/{{lng}}/{{ns}}.json' 
+        backendOptions: [{
+          expirationTime: 7 * 24 * 60 * 60 * 1000 // 7 days
+        }, {
+          loadPath: '/locales/{{lng}}/{{ns}}.json'
+        }]
       },
       cache: {
         enabled: true,
         prefix: 'i18n',
       },
       detection: {
-        order: ['path', 'navigator'],
-        caches: [],
+        order: ['path', 'cookie', 'navigator'],
+        caches: ['cookie'],
         lookupFromPathIndex: 0
       },
       ...getOptions(lng, ns)
