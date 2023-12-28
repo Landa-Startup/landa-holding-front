@@ -5,6 +5,9 @@ import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
+// import { i18n } from 'next-i18next';
+// import { getCookie } from 'cookies-next';
+// import { useLang } from 'stores/langStore';
 
 export default function Navbar({
   children,
@@ -17,6 +20,13 @@ export default function Navbar({
 
   const menuItems = t('menuItems', { returnObjects: true });
   const submenuItems = t('submenuItems', { returnObjects: true });
+
+  // const { setRendered } = useLang();
+
+  // useEffect(() => {
+  //   i18n?.changeLanguage(getCookie("i18next") ? getCookie("i18next") : "en");
+  //   setRendered(true);
+  // },[])
 
   const drawerRef = useRef<HTMLInputElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

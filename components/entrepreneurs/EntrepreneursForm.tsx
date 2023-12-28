@@ -92,27 +92,19 @@ export default function EntrepreneursForm() {
       });
   };
 
-<<<<<<< HEAD
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }));
-=======
   // const errorsList = Object.entries(errors).map(([name, value]) => ({
   //   name: name,
   //   value: value
   // }))
->>>>>>> 0f9171e38f3d8db8593256c770c49cb680834a6d
 
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-        <div className='bg-[#F8F5F0]'>
-        <FormTitle formName='entrepreneurForm' />
+        <div className="bg-[#F8F5F0]">
+          <FormTitle formName="entrepreneurForm" />
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
           <div className="mb-6 w-full p-2 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#faf8f5]">
-
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -174,16 +166,7 @@ export default function EntrepreneursForm() {
           </div>
           <div className="mx-auto w-full md:w-auto pb-4">
             {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
-            <Button
-<<<<<<< HEAD
-              type="submit"
-              bgColor="Primary"
-              disabled={errorsList[0] ? true : false}
-=======
-             type='submit'
-             bgColor='Primary'
->>>>>>> 0f9171e38f3d8db8593256c770c49cb680834a6d
-            />
+            <Button type="submit" bgColor="Primary" />
           </div>
         </form>
         <NotificationSendForm />

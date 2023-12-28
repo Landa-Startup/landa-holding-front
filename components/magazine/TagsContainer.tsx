@@ -13,7 +13,7 @@ export default function TagsContainer() {
       <span className="block border-b-2 border-[#AA84534D] pb-4 font-gilda text-xl tracking-[4px]">
         Tags
       </span>
-      <div className="mt-7 grid grid-cols-3 gap-2">
+      <div className={`mt-7 grid grid-cols-${tags.length} gap-2`}>
         {tags.map((tag: any, index) => (
           <button key={index} className="btn rounded-sm bg-[#D9D9D9] px-2">
             {tag.title}

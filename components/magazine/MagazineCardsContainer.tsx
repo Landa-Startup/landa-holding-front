@@ -10,6 +10,8 @@ export default function MagazineCardsContainer() {
 
   useFetchBlog('cardsData');
 
+  console.log(cardsData);
+
   return (
     <div className="col-span-2 flex flex-col gap-16">
       {cardsData?.map(({ title, description, thumbnail, slug, date} : { title: string, description: string | TrustedHTML, thumbnail: string, slug: string, date: string, file: string}, index: number) => (
