@@ -2,26 +2,13 @@
 import React from 'react';
 import PostCard from './PostCard';
 import { useSubmit } from 'stores/dataStore';
+import useFetchBlog from '@/utils/useFetchBlog';
+
 export default function MagazineCardsContainer() {
+
   const {cardsData} = useSubmit();
 
-  // useEffect(() => {
-  //   // Inside the useEffect, fetch the data and update the state
-  //   async function fetchData() {
-  //     try {
-  //       const data = await useFetchBlog('/blog/list?format=json');
-  //       setCardsData(data);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
-
-
-
-  // console.log(cardsData);
+  useFetchBlog('cardsData');
 
   return (
     <div className="col-span-2 flex flex-col gap-16">

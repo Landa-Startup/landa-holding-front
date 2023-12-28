@@ -29,7 +29,7 @@ export default async function AboutUsLandaHolding() {
     // />
     // </div>
     <div className="flex flex-col items-start justify-between bg-[#FAFAFA] p-10 md:px-28 md:py-10 lg:flex-row">
-      <div className="space-y-2 px-6 py-2 text-black md:px-0">
+      <div className="space-y-2 px-2 py-2 text-black md:px-0">
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>

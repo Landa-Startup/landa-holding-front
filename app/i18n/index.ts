@@ -16,6 +16,13 @@ const initI18next = async (lng: any, ns: any) => {
       )
     )
     .init({
+      backend: {
+        loadPath: './locales/{{lng}}/{{ns}}.json' 
+      },
+      cache: {
+        enabled: true,
+        prefix: 'i18n',
+      },
       detection: {
         order: ['path', 'navigator'],
         caches: [],

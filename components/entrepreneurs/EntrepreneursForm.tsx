@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
 import { Entrepreuneur } from '../../types/global';
-import EntrepreneursTitle from './EntrepreneursTitle';
+// import EntrepreneursTitle from './EntrepreneursTitle';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
@@ -14,6 +14,7 @@ import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
+import FormTitle from '../common/form/FormTitle';
 // import FormTitle from '../common/form/FormTitle';
 
 export default function EntrepreneursForm() {
@@ -91,38 +92,26 @@ export default function EntrepreneursForm() {
       });
   };
 
+<<<<<<< HEAD
   const errorsList = Object.entries(errors).map(([name, value]) => ({
     name: name,
     value: value
   }));
+=======
+  // const errorsList = Object.entries(errors).map(([name, value]) => ({
+  //   name: name,
+  //   value: value
+  // }))
+>>>>>>> 0f9171e38f3d8db8593256c770c49cb680834a6d
 
   return (
     <>
-      <div
-        className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent"
-        // TODO: avoid hardcoding the direction.
-        dir={lang === 'en' ? 'ltr' : 'rtl'}
-      >
-        <EntrepreneursTitle />
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
-            <div className="col-span-1">
-              <div className="col-span-1">
-                <Input
-                  register={register}
-                  errors={errors}
-                  nameInput="companyName"
-                  type="text"
-                  label={t('companyName')}
-                  required={t('companyNameRequired')}
-                  patternValue=""
-                  patternMessage=""
-                  placeholder={t('companyNamePlaceholder')}
-                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                  labelClass="text-[#6b6b6b] dark:text-current"
-                />
-              </div>
-            </div>
+      <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
+        <div className='bg-[#F8F5F0]'>
+        <FormTitle formName='entrepreneurForm' />
+        </div>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+          <div className="mb-6 w-full p-2 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#faf8f5]">
 
             <PersonalInfoInput
               register={register}
@@ -183,11 +172,17 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="self-center pb-4 text-center">
+          <div className="mx-auto w-full md:w-auto pb-4">
+            {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
             <Button
+<<<<<<< HEAD
               type="submit"
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
+=======
+             type='submit'
+             bgColor='Primary'
+>>>>>>> 0f9171e38f3d8db8593256c770c49cb680834a6d
             />
           </div>
         </form>
