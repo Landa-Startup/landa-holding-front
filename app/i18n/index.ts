@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next/initReactI18next';
 import { getOptions } from './setting';
 import i18nextBrowserLanguagedetector from 'i18next-browser-languagedetector';
 
-import i18next from 'i18next';
+// import i18next from 'i18next';
 
 // const i18next = require('i18next');
 // const Backend = require('i18next-node-fs-backend');
@@ -22,8 +22,8 @@ import i18next from 'i18next';
 //   });
 
 // preload ALL languages  
-const languages = ['en', 'fa'];
-i18next.loadLanguages(languages);
+// const languages = ['en', 'fa'];
+// i18next.loadLanguages(languages);
 
 const initI18next = async (lng: any, ns: any) => {
   const i18nInstance = createInstance();
