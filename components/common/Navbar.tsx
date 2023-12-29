@@ -23,9 +23,14 @@ export default function Navbar({
 
   // const { setRendered } = useLang();
 
+  // const { setLanguage } = useLang();
+
+  // const language = getCookie("i18next") ? getCookie("i18next") : "en";
+
   // useEffect(() => {
-  //   i18n?.changeLanguage(getCookie("i18next") ? getCookie("i18next") : "en");
-  //   setRendered(true);
+  //   i18n?.changeLanguage(language);
+  //   setLanguage(language)
+  //   // setRendered(true);
   // },[])
 
   const drawerRef = useRef<HTMLInputElement>(null);

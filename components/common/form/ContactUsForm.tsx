@@ -13,7 +13,10 @@ import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
-// import { on } from 'events';
+// import { Trans } from 'react-i18next';
+
+
+
 export default function ContactUsForm() {
 
   const {
@@ -98,6 +101,7 @@ export default function ContactUsForm() {
       <h2 className="text-center font-gilda text-5xl font-light ltr:tracking-[.25em]">
         {t('contactForm', {returnObjects: true}).title}
       </h2>
+      {/* <Trans i18nKey='contactForm.title'></Trans> */}
       <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-2'>
         <div className="col-span-2 my-4 grid h-full grid-cols-1 gap-x-3 md:grid-cols-2">
 

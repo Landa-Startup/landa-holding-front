@@ -36,18 +36,6 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        {/* {(() : any => {
-          rendered ? (
-            <Navbar lang={lang} >
-              <main>
-                {children}
-              </main>
-              <Footer lang={lang} />
-              <ScrollUpButton />
-          </Navbar>
-          )
-          : ( <Loading /> )
-        })()} */}
         <Navbar lang={lang} >
           <main>
             {children}
