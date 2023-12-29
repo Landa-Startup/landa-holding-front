@@ -42,9 +42,7 @@ export default async function Page({
             </span>
           </div>
           {/* TODO: make component these texts */}
-          <p className="text-justify font-barlow leading-8">
-            {t('text')}
-          </p>
+          <p className="text-justify font-barlow leading-8">{t('text')}</p>
         </div>
         <div className="relative h-[300px] w-[320px] md:h-[450px] md:w-[600px]">
           <Image
@@ -107,7 +105,7 @@ export default async function Page({
           </div>
         </div>
         <div className="flex flex-col items-center justify-center space-y-5 rtl:space-y-reverse">
-          <p className='text-justify font-barlow tracking-[1px] ltr:leading-8 rtl:text-lg rtl:leading-10'>
+          <p className="text-justify font-barlow tracking-[1px] ltr:leading-8 rtl:text-lg rtl:leading-10">
             {t('focusText')}
           </p>
           {/* <Button
@@ -117,13 +115,7 @@ export default async function Page({
             bgColor="Primary"
             lang={lang}
           /> */}
-          <ButtonRefactor
-            text={
-              lang === 'en'
-                ? 'Federal Canada Corporation Information'
-                : 'اطلاعات شرکت فدرال کانادا'
-            }
-          />
+          <ButtonRefactor text={t('buttonTitle')} />
         </div>
       </div>
       <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">

@@ -1,5 +1,3 @@
-
-
 export default function IconEmailB() {
   return (
     <div>

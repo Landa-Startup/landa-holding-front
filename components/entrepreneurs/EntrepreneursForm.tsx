@@ -18,7 +18,6 @@ import FormTitle from '../common/form/FormTitle';
 // import FormTitle from '../common/form/FormTitle';
 
 export default function EntrepreneursForm() {
-
   const {
     register,
     handleSubmit,
@@ -35,12 +34,12 @@ export default function EntrepreneursForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleSuccessChange,
-  } = useSubmit((s) => s)
+    handleSuccessChange
+  } = useSubmit((s) => s);
 
-  const lang = useLang((s) => s.lang)
+  const lang = useLang((s) => s.lang);
 
-  const { t } = useTranslation(lang, "formComponent")
+  const { t } = useTranslation(lang, 'formComponent');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -60,8 +59,6 @@ export default function EntrepreneursForm() {
     handleSubmitingChange(true);
     handleSendChange(true);
 
-
-
     // Create a FormData object for form data.
     const sendFormData = new FormData();
 
@@ -71,8 +68,6 @@ export default function EntrepreneursForm() {
         sendFormData.append(fieldName, String(fieldValue));
       }
     });
-
-
 
     // Send the form data to the API.
     submitEntrepreneurForm(sendFormData, csrfToken)
@@ -105,12 +100,11 @@ export default function EntrepreneursForm() {
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-        <div className='bg-[#F8F5F0]'>
-        <FormTitle formName='entrepreneurForm' />
+        <div className="bg-[#F8F5F0]">
+          <FormTitle formName="entrepreneurForm" />
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
           <div className="mb-6 w-full p-2 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#faf8f5]">
-
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -172,10 +166,7 @@ export default function EntrepreneursForm() {
           </div>
           <div className="mx-auto w-full md:w-auto pb-4">
             {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
-            <Button
-             type='submit'
-             bgColor='Primary'
-            />
+            <Button type="submit" bgColor="Primary" />
           </div>
         </form>
         <NotificationSendForm />

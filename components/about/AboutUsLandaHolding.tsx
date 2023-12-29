@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
 import { useLang } from 'stores/langStore';
