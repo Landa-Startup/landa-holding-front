@@ -41,18 +41,18 @@ export default function EntrepreneursForm() {
 
   const { t } = useTranslation(lang, "formComponent")
 
-  // useEffect(() => {
-  //   async function fetchCsrfToken() {
-  //     const token = await GetCsrfToken(
-  //       // TODO: avoid hardcoding the URL.
-  //       'https://landa-back.landaholding.com/get-csrf-token'
-  //     );
-  //     handleTokenChange(token);
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken(
+        // TODO: avoid hardcoding the URL.
+        'https://landa-back.landaholding.com/get-csrf-token'
+      );
+      handleTokenChange(token);
       
-  //   }
+    }
 
-  //   fetchCsrfToken();
-  // }, []);
+    fetchCsrfToken();
+  }, []);
 
   const onSubmit = async (formData: Entrepreuneur) => {
     // Set loading and sending states.
