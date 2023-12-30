@@ -19,6 +19,7 @@ import { useSubmit } from 'stores/dataStore';
 import { useFile } from 'stores/fileStore';
 import StartupFormTrialProduct from './StartupFormTrialProduct';
 import FormTitle from '../common/form/FormTitle';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -283,13 +284,13 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <div className="flex justify-center">
-            <Button
+          <div className="flex justify-center pb-4">
+            {/* <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
-            />
-            {/* <ButtonRefactor type="submit" text="Submit" /> */}
+            /> */}
+            <ButtonRefactor type="submit" text="Submit" disabled={errorsList[0] ? true : false}/>
           </div>
           <NotificationSendForm />
         </form>

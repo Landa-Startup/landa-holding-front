@@ -9,8 +9,8 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
 import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-// import ButtonRefactor from '../common/ButtonRefactor';
-import Button from '../common/Button';
+import ButtonRefactor from '../common/ButtonRefactor';
+// import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
@@ -41,18 +41,18 @@ export default function EntrepreneursForm() {
 
   const { t } = useTranslation(lang, "formComponent")
 
-  useEffect(() => {
-    async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        // TODO: avoid hardcoding the URL.
-        'https://panel.landaholding.com/get-csrf-token'
-      );
-      handleTokenChange(token);
-      handleTokenChange(token);
-    }
+  // useEffect(() => {
+  //   async function fetchCsrfToken() {
+  //     const token = await GetCsrfToken(
+  //       // TODO: avoid hardcoding the URL.
+  //       'https://landa-back.landaholding.com/get-csrf-token'
+  //     );
+  //     handleTokenChange(token);
+      
+  //   }
 
-    fetchCsrfToken();
-  }, []);
+  //   fetchCsrfToken();
+  // }, []);
 
   const onSubmit = async (formData: Entrepreuneur) => {
     // Set loading and sending states.
@@ -96,17 +96,16 @@ export default function EntrepreneursForm() {
       });
   };
 
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }))
+  // const errorsList = Object.entries(errors).map(([name, value]) => ({
+  //   name: name,
+  //   value: value
+  // }))
 
   return (
     <>
       <div
         className="container m-16 mx-auto bg-[#faf8f5] p-20 font-barlow dark:bg-transparent"
         // TODO: avoid hardcoding the direction.
-        dir={lang === 'en' ? 'ltr' : 'rtl'}
       >
         <EntrepreneursTitle />
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -188,12 +187,8 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="self-center pb-4 text-center">
-            <Button
-              type='submit'
-              bgColor="Primary"
-              disabled={errorsList[0] ? true : false}
-            />
+          <div className="flex justify-center pb-4">
+          <ButtonRefactor type="submit" text="Submit"/>
           </div>
         </form>
         <NotificationSendForm/>

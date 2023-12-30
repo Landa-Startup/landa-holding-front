@@ -1,4 +1,3 @@
-'use client';
 import EnvelopeMedia from '@/components/icons/sosial-media/EnvelopeMedia';
 import InstagramMedia from '@/components/icons/sosial-media/InstagramMedia';
 import LinkedinMedia from '@/components/icons/sosial-media/LinkedinMedia';
@@ -10,14 +9,14 @@ import { useEffect } from 'react';
 export default function Page() {
   const pathname = usePathname();
   const slug = pathname?.replace('/en/profile/', '');
-  // const [data,setData] = useState()
+  const [data,setData] = useState()
 
   useEffect(() => {
     async function fetchTags() {
-      // const response = await fetch(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/user/profile/${slug}?format=json`);
-      // const data:any = await response.json();
+      const response = await fetch(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/user/profile/${slug}?format=json`);
+      const data:any = await response.json();
 
-      //setData(data);
+      setData(data);
 
     }
     // console.log(fetchTags())
