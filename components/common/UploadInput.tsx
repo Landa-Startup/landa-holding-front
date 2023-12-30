@@ -17,7 +17,7 @@ export default function UploadInput({
   handleChange: any;
 }) {
   return (
-    <div className="inline-flex max-w-full flex-col justify-center gap-2.5">
+    <div className="inline-flex max-w-full flex-col justify-center gap-3">
       {/* Label for the upload input */}
       <div className="self-start px-2 text-[15px] font-normal text-neutral-800">{title}</div>
 
@@ -35,7 +35,7 @@ export default function UploadInput({
 
         {/* The actual input */}
         <input
-          className={`text-[13px] font-normal capitalize text-neutral-800 ${errors[nameInput] ? ' border-red-500' : ''}`}
+          className={`text-[13px] h-7 font-normal capitalize text-neutral-800 ${errors[nameInput] ? ' border-red-500' : ''}`}
           type="file"
           {...register(nameInput)}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

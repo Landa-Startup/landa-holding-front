@@ -127,11 +127,9 @@ export default function JobForm() {
                 <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
               </div> */}
             </>
-            <div className='bg-[#F8F5F0]'>
             <FormTitle formName='jobForm' />
-            </div>
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
-              <div className="mb-6 grid grid-cols-1 gap-x-6 gap-y-4 bg-[#F8F5F0] p-3 md:grid-cols-2 lg:grid-cols-3">
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+              <div className="mb-6 grid grid-cols-1  gap-x-6 gap-y-4 bg-[#F8F5F0] p-3 md:grid-cols-2 lg:grid-cols-3">
                 <PersonalInfoInput
                   register={register}
                   errors={errors}
@@ -143,13 +141,16 @@ export default function JobForm() {
                   }}
                 />
 
-                <UploadInput
-                  title={t('jobForm', { returnObjects: true }).resumeFile}
-                  register={register}
-                  errors={errors}
-                  handleChange={handleCvFileChange}
-                  nameInput="cvFile"
-                />
+                <div className='mt-2'>
+                  <UploadInput
+                    title={t('jobForm', { returnObjects: true }).resumeFile}
+                    register={register}
+                    errors={errors}
+                    handleChange={handleCvFileChange}
+                    nameInput="cvFile"
+                  />
+                </div>
+
               </div>
               <div className="mx-auto pb-4 text-center">
                 {/* <ButtonRefactor type="submit" text="Submit" /> */}

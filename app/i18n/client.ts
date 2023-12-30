@@ -23,10 +23,18 @@ i18next
     )
   )
   .init({
+    backend: {
+      loadPath: './locales/{lng}/{ns}.json' 
+    },
+    cache: {
+      enabled: true,
+      prefix: 'i18n',
+    },
     ...getOptions(),
     lng: undefined, // let detect the language on client side
     detection: {
-      order: ['path', 'htmlTag', 'cookie', 'navigator']
+      order: ['path', 'htmlTag', 'cookie', 'navigator'],
+      caches: ['cookie']
     },
     preload: runsOnServerSide ? languages : []
   });

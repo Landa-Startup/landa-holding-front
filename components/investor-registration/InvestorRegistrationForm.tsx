@@ -12,10 +12,11 @@ import { initialInvestorRegistrationFormData } from '../../initials/initObjects'
 import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
 import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
+import Button from '../common/Button';
 
 export default function InvestorRegistrationForm() {
   const {
@@ -50,10 +51,7 @@ export default function InvestorRegistrationForm() {
     }
     fetchCsrfToken();
   }, []);
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }))
+
   const onSubmit = async (formData: InvestorRegistrationFormData) => {
     // Set loading and sending states.
     handleSubmitingChange(true);
@@ -103,8 +101,8 @@ export default function InvestorRegistrationForm() {
         <div className='bg-[#F8F5F0]'>
         <FormTitle formName='investorForm' />
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
-          <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3">
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+          <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0]">
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -209,8 +207,12 @@ export default function InvestorRegistrationForm() {
               />
             </div>
           </div>
-          <div className="mx-auto w-fit pb-4">
-            <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>
+          <div className="mx-auto w-full md:w-auto pb-4">
+            {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
+            <Button
+             type='submit'
+             bgColor='Primary'
+            />
           </div>
         </form>
         <NotificationSendForm />

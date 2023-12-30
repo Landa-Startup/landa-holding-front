@@ -1,4 +1,3 @@
-
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
@@ -6,6 +5,7 @@ import AccelerationServices from '@/components/acceleration/AccelerationServices
 import Hero from '@/components/acceleration/HeroAcceleration';
 import AccelerationCard from '@/components/acceleration/AccelerationCard';
 import Button from '@/components/common/Button';
+import Circle from '@/components/icons/CircleIcon';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Acceleration',
@@ -107,23 +107,7 @@ export default async function Page({
           />
         </div>
         <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] ltr:tracking-[2px] md:mx-10 md:text-left rtl:md:text-right">
-          {/* TODO: make svg component */}
-          <svg
-            className="mt-3 hidden md:block"
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 21 21"
-            fill="none"
-          >
-            <circle
-              id="Ellipse 169"
-              cx="10.5"
-              cy="10.5"
-              r="10"
-              fill="#AA8453"
-            />
-          </svg>
+          <Circle />
           {t('text')}
         </div>
         <Button

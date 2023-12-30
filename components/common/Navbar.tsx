@@ -5,6 +5,9 @@ import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
+// import { i18n } from 'next-i18next';
+// import { getCookie } from 'cookies-next';
+// import { useLang } from 'stores/langStore';
 
 export default function Navbar({
   children,
@@ -18,13 +21,24 @@ export default function Navbar({
   const menuItems = t('menuItems', { returnObjects: true });
   const submenuItems = t('submenuItems', { returnObjects: true });
 
+  // const { setRendered } = useLang();
+
+  // const { setLanguage } = useLang();
+
+  // const language = getCookie("i18next") ? getCookie("i18next") : "en";
+
+  // useEffect(() => {
+  //   i18n?.changeLanguage(language);
+  //   setLanguage(language)
+  //   // setRendered(true);
+  // },[])
+
   const drawerRef = useRef<HTMLInputElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     if (!drawerRef.current) {
-
       return;
     }
     drawerRef.current.click();
@@ -62,15 +76,15 @@ export default function Navbar({
           </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
-              <div className="flex flex-col items-center md:flex-row">
+              <div className="flex flex-col items-center md:items-end md:flex-row">
                 <Image
                   className="h-10 w-10 md:h-14 md:w-12"
-                  src='static/images/Logo.svg'
+                  src="static/images/Logo.svg"
                   alt="Logo"
                   width={50}
                   height={50}
                 />
-                <span className="font-condensed text-[12px] font-bold tracking-[0.375px] text-primary md:text-xl">
+                <span className="font-condensed text-[12px] font-bold tracking-[0.25rem] text-primary md:text-xl">
                   {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>
@@ -97,8 +111,9 @@ export default function Navbar({
                     {lang === 'en' ? 'FORMS' : 'فرم ها'}
                   </summary>
                   <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${isMenuOpen ? '' : 'hidden'
-                      }`}
+                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-1 bg-stone-100 p-2 shadow ${
+                      isMenuOpen ? '' : 'hidden'
+                    }`}
                   >
                     {submenuItems.map(
                       ({ label, href }: { label: string; href: string }) => (
@@ -157,7 +172,7 @@ export default function Navbar({
                 ({ label, href }: { label: string; href: string }) => (
                   <li key={label} onClick={() => handleLinkClick()}>
                     <Link href={href} className="font-condensed">
-                      {label}{' '}
+                      {label}
                     </Link>
                   </li>
                 )

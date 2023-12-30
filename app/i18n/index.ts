@@ -3,6 +3,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 import { getOptions } from './setting';
 import i18nextBrowserLanguagedetector from 'i18next-browser-languagedetector';
+// import i18next from 'i18next';
 
 const initI18next = async (lng: any, ns: any) => {
   const i18nInstance = createInstance();
@@ -16,13 +17,23 @@ const initI18next = async (lng: any, ns: any) => {
       )
     )
     .init({
+      backend: {
+        loadPath: './locales/{{lng}}/{{ns}}.json' 
+      },
+      cache: {
+        enabled: true,
+        prefix: 'i18n',
+      },
       detection: {
-        order: ['path', 'navigator'],
-        caches: [],
+        order: ['path', 'cookie', 'navigator'],
+        caches: ['cookie'],
         lookupFromPathIndex: 0
       },
       ...getOptions(lng, ns)
     });
+    // preload languages
+    // i18next.loadLanguages('en'); 
+    // i18next.loadLanguages('fa');
   return i18nInstance;
 };
 

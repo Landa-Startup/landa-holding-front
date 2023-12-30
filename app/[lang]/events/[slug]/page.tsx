@@ -7,6 +7,8 @@ import Instagram from '@/components/icons/footer/Instagram';
 import Whatsapp from '@/components/icons/footer/Whatsapp';
 import LinkedIn from '@/components/icons/footer/LinkedIn';
 import ButtonRefactor from '@/components/common/ButtonRefactor';
+import LocationIcon from '@/components/icons/LocationIcon';
+import TagIcon from '@/components/icons/TagIcon';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Event',
@@ -28,7 +30,7 @@ export default function Page({
   //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}blog/details/${slug}/?format=json`
   //     );
   //     const data = await response.json();
-  //     
+  //
   //     setCardData(data);
   //   }
   //   fetchTags();
@@ -161,17 +163,7 @@ export default function Page({
                 />
                 <div className="mt-6 flex flex-col gap-4 text-primary">
                   <div className="flex items-center gap-2 font-gilda">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-geo-alt"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                    </svg>
+                    <LocationIcon />
                     <span>{card.location}</span>
                   </div>
 
@@ -182,17 +174,7 @@ export default function Page({
                           key={index}
                           className="flex items-center gap-2 font-gilda"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            className="bi bi-tag"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0" />
-                            <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z" />
-                          </svg>
+                          <TagIcon />
                           <span key={index}>{tag}</span>
                         </div>
                       );

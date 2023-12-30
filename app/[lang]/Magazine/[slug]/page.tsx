@@ -15,6 +15,7 @@ const preData: MagazineData = {
 export default function Page() {
   const pathname = usePathname();
   const slug = pathname?.replace('/magazine/', '');
+
   const [cardData, setCardData] = useState<MagazineData>(preData);
   useEffect(() => {
     async function fetchTags() {

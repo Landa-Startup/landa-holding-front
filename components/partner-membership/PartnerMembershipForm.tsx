@@ -107,8 +107,8 @@ export default function PartnerMembershipForm() {
         <div className="container  m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
           {/* <PartnerMembershipTitle /> */}
           <FormTitle formName='partnerForm' />
-          <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col bg-[#F8F5F0]'>
-            <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3">
+          <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+            <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0]">
               <PersonalInfoInput
                 register={register}
                 errors={errors}
@@ -187,7 +187,7 @@ export default function PartnerMembershipForm() {
               />
             </div>
             </div>
-            <div className="mx-auto pb-4 text-center">
+            <div className="mx-auto pb-4 text-center w-full md:w-auto">
               <Button
                 type='submit'
                 bgColor="Primary"

@@ -1,5 +1,3 @@
-
-
 export default function Location() {
   return (
     <div className='self-start py-2'>
