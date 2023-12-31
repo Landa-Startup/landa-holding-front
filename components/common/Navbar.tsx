@@ -25,11 +25,12 @@ export default function Navbar({
 
   // const { setLanguage } = useLang();
 
+
   // const language = getCookie("i18next") ? getCookie("i18next") : "en";
 
   // useEffect(() => {
   //   i18n?.changeLanguage(language);
-  //   setLanguage(language)
+  //   // setLanguage(language)
   //   // setRendered(true);
   // },[])
 
@@ -84,7 +85,7 @@ export default function Navbar({
                   width={50}
                   height={50}
                 />
-                <span className="font-condensed text-[12px] font-bold tracking-[0.25rem] text-primary md:text-xl">
+                <span className="font-condensed text-[12px] font-bold ltr:tracking-[0.25rem] text-primary md:text-xl">
                   {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>

@@ -32,9 +32,9 @@ export default function Button({
 
   const router = useRouter();
 
-  const send = useSubmit((s) => s.send)
+  const { send } = useSubmit()
   
-  const lang = useLang((s) => s.lang);
+  const { lang } = useLang();
 
   console.log(lang)
 

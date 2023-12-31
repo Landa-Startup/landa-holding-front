@@ -20,7 +20,7 @@ export default async function UpcomingStartupsCard({image, subTitle, text, goto,
   return (
     <>
         <div>
-            <div className="shadow-xl w-full md:w-[400px] h-[460px] md:h-auto flex flex-col justify-start md:justify-between items-center">
+            <div className="shadow-xl border border-1 w-full md:w-[400px] h-[460px] md:h-[660px] flex flex-col justify-start md:gap-8 items-center">
                     <div className="relative h-[151px] w-[150px] md:h-[275px] md:w-[300px] bg-white">
                         <Image
                           loading='lazy'
@@ -33,12 +33,12 @@ export default async function UpcomingStartupsCard({image, subTitle, text, goto,
                     <div className='p-2 font-gilda text-[24px] fonst-normal fonst-[400] leading-normal self-start'>
                         {subTitle}
                     </div>
-                    <div className='flex flex-col gap-6'>
-                        <div className='w-full mt-4 px-3 md:px-0'>
+                    <div className='flex flex-col gap-4'>
+                        <div className='w-full px-3 md:px-0'>
                             <hr className='bg-black h-[2px] w-full'/>
                         </div>
                         <div className='flex px-2 md:px-6 flex-col justify-between gap-3 items-center'>
-                            <div className=''>
+                            <div className='max-h-[100px] overflow-auto'>
                                 <p className='text-[15px] md:text-[20px] font-barlow leading-[30px]'>
                                     {text}
                                 </p>
