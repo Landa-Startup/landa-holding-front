@@ -171,7 +171,13 @@
           "linkedIn": "",
           "category": "content creators"
         },
-
+       {
+        "image": "/static/images/our-team/Personals/aria.png",
+        "position": "Content Creator",
+        "name": "Aria Bagheour",
+        "linkdin": "",
+        "category": "content creators"
+       },
 
         {
           "image": "/static/images/our-team/Personals/a27.png",
