@@ -13,13 +13,13 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useTranslation } from 'app/i18n/client';
-// import Button from '../common/Button';
+import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
 import { useFile } from 'stores/fileStore';
 import StartupFormTrialProduct from './StartupFormTrialProduct';
 import FormTitle from '../common/form/FormTitle';
-import ButtonRefactor from '../common/ButtonRefactor';
+// import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -285,12 +285,12 @@ export default function StartupFormForm() {
           })()}
 
           <div className="flex justify-center pb-4">
-            {/* <Button
+            <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
-            /> */}
-            <ButtonRefactor type="submit" text="Submit" disabled={errorsList[0] ? true : false}/>
+            />
+            {/* <ButtonRefactor type="submit" text="Submit" disabled={errorsList[0] ? true : false}/> */}
           </div>
           <NotificationSendForm />
         </form>
