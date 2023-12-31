@@ -20,7 +20,7 @@ export default async function HomeOurTeam() {
           {t('LandaHolding')}
         </span> */}
         <p
-          className={`font-condensed text-5xl font-normal tracking-normal text-black ltr:p-4 ltr:tracking-widest md:mr-20 xl:mr-0`}
+          className={`font-condensed text-5xl font-normal tracking-normal text-black ltr:tracking-widest md:mr-20 xl:mr-0`}
         >
           {t('OurTeam')}
         </p>

@@ -25,11 +25,12 @@ export default function Navbar({
 
   // const { setLanguage } = useLang();
 
+
   // const language = getCookie("i18next") ? getCookie("i18next") : "en";
 
   // useEffect(() => {
   //   i18n?.changeLanguage(language);
-  //   setLanguage(language)
+  //   // setLanguage(language)
   //   // setRendered(true);
   // },[])
 
