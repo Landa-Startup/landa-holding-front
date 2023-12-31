@@ -36,22 +36,22 @@ export default async function LandaHoldingBlack() {
         <ButtonRefactor
           text={t('signUp')}
           type="link"
-          href="/investor-registration"
+          href="/"
           bgColor="black"
         />
         </div>
       </div>
 
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
-        <div className="flex w-full flex-col items-center self-start md:items-start">
-          <div className="flex w-full flex-col">
+        <div className="flex flex-col w-full items-center self-start md:items-start">
+          <div className="flex flex-col w-full">
             <span
               className={`text-base font-normal text-black ${t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
                 } font-condensed`}
             >
               {t('LandaHolding')}
             </span>
-            <span className="border-b border-black pb-3 text-center font-gilda text-3xl font-normal text-black md:border-none md:text-start md:text-4xl">
+            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
               {t('EntrepreneurCenter')}
               <br />
             </span>
@@ -69,7 +69,7 @@ export default async function LandaHoldingBlack() {
         <ButtonRefactor
           text={t('signUp')}
           type="link"
-          href="/formEntrepreneurs"
+          href="/"
           bgColor="black"
         />
         </div>

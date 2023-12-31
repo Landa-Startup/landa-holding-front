@@ -12,7 +12,7 @@ export default async function LatestStartups() {
       <div className="flex flex-col items-center bg-whiteGold p-5 text-center">
         <div className="flex flex-col items-start">
           <div className="flex-col items-start justify-start md:self-start">
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-center md:items-start md:mr-0 mr-4">
               <div
                 className={`ltr:tracking-0 md:tracking-0 ps-1 font-condensed text-xl font-normal text-neutral-800 ltr:tracking-[3.5px] md:text-base`}
               >
