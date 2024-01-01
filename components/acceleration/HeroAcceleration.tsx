@@ -7,7 +7,8 @@ export default async function Hero({
   showLanda,
   leftImage,
   showButton,
-  lang
+  lang,
+  link
 }: {
   showLanda: boolean;
   buttonBg?: string;
@@ -15,6 +16,7 @@ export default async function Hero({
   leftImage: string;
   showButton?: boolean;
   lang: string;
+  link?: string
 }) {
   const { t } = await useTranslation(lang, 'mainPage');
 
@@ -29,9 +31,8 @@ export default async function Hero({
     >
       <div className="flex flex-col items-center justify-center space-y-5 py-36 md:h-screen">
         <div
-          className={` ${
-            showLanda ? 'block' : 'hidden'
-          } text-center font-barlow text-2xl font-normal text-white ltr:tracking-[7px] md:text-4xl ltr:md:tracking-[12.6px]`}
+          className={` ${showLanda ? 'block' : 'hidden'
+            } text-center font-barlow text-2xl font-normal text-white ltr:tracking-[7px] md:text-4xl ltr:md:tracking-[12.6px]`}
         >
           {t('LandaHolding')}
         </div>
@@ -47,9 +48,14 @@ export default async function Hero({
           //   bgColor="Primary"
           //   lang={lang}
           // />
-          <ButtonRefactor
-            text={t('lng') === 'en' ? 'Register Now' : 'همین الان ثبت نام کنید'}
-          />
+          <div className='w-64'>
+            <ButtonRefactor
+              text={t('lng') === 'en' ? 'Register Now' : 'همین الان ثبت نام کنید'}
+              href={link}
+              type='link'
+            />
+          </div>
+
         ) : (
           <></>
         )}
