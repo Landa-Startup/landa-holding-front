@@ -31,10 +31,10 @@ export default function ButtonRefactor({
               disabled={disabled}
               className={`bg-${
                 bgColor ? bgColor : 'primary'
-              } flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white hover:bg-primary transition duration-150 delay-50 ease-in-out`}
+              } delay-50 flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white transition duration-150 ease-in-out hover:bg-primary`}
               // className='transition flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white ease-in-out delay-150 bg-black hover:bg-primary duration-300'
             >
-              <div className="z-10 flex gap-2 items-center">
+              <div className="z-10 flex items-center gap-2">
                 <span className='text-lg'>{text}</span>
                 {lang === "en" ? <ChevronRightIcon className="h-5 w-5" /> : <ChevronLeftIcon className='h-5 w-5' />}
               </div>

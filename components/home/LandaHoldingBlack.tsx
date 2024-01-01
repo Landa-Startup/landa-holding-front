@@ -43,15 +43,15 @@ export default async function LandaHoldingBlack() {
       </div>
 
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
-        <div className="flex flex-col w-full items-center self-start md:items-start">
-          <div className="flex flex-col w-full">
+        <div className="flex w-full flex-col items-center self-start md:items-start">
+          <div className="flex w-full flex-col">
             <span
               className={`text-base font-normal text-black ${t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
                 } font-condensed`}
             >
               {t('LandaHolding')}
             </span>
-            <span className="border-b border-black pb-3 text-center font-gilda text-3xl md:text-4xl font-normal text-black md:border-none md:text-start">
+            <span className="border-b border-black pb-3 text-center font-gilda text-3xl font-normal text-black md:border-none md:text-start md:text-4xl">
               {t('EntrepreneurCenter')}
               <br />
             </span>

@@ -33,7 +33,7 @@ export default async function Page({
       />
       <div className="grid grid-cols-1 items-end gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col whitespace-nowrap gap-4 font-gilda">
+          <div className="flex flex-col gap-4 whitespace-nowrap font-gilda">
             <span className="text-3xl text-[#55422A] md:text-5xl">
               {t('LandaInvestment')}
             </span>

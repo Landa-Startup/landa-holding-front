@@ -54,11 +54,11 @@ export default function Profile(
   console.log(data);
 
   return (
-    <div className="h-screen py-24 md:px-40 flex justify-center">
-      <section className="md:w-[60%] flex flex-col items-center justify-between">
+    <div className="flex h-screen justify-center py-24 md:px-40">
+      <section className="flex flex-col items-center justify-between md:w-[60%]">
         {/* top */}
         <div className="flex flex-col items-center">
-          <div className="w-[5.5rem] h-[5.5rem] rounded-full border border-gray-600"><Image src={data.thumbnail} className='w-[5.5rem] h-[5.5rem] rounded-full' width={100} height={100} alt='thumbnail'/></div>
+          <div className="h-[5.5rem] w-[5.5rem] rounded-full border border-gray-600"><Image src={data.thumbnail} className='h-[5.5rem] w-[5.5rem] rounded-full' width={100} height={100} alt='thumbnail'/></div>
           <p className="my-3 text-xl">
             {data?.first_name} {data?.last_name}
           </p>

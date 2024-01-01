@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-import LanguageSwitch from './LanguageSwitch';
+// import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
 // import { i18n } from 'next-i18next';
 // import { getCookie } from 'cookies-next';
@@ -77,7 +77,7 @@ export default function Navbar({
           </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
-              <div className="flex flex-col items-center md:items-end md:flex-row">
+              <div className="flex flex-col items-center md:flex-row md:items-end">
                 <Image
                   className="h-10 w-10 md:h-14 md:w-12"
                   src="static/images/Logo.svg"
@@ -85,7 +85,7 @@ export default function Navbar({
                   width={50}
                   height={50}
                 />
-                <span className="font-condensed text-[12px] font-bold ltr:tracking-[0.25rem] text-primary md:text-xl">
+                <span className="font-condensed text-[12px] font-bold text-primary ltr:tracking-[0.25rem] md:text-xl">
                   {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>
@@ -137,12 +137,9 @@ export default function Navbar({
               </li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            {/* <SubmitProvider>
-              <LanguageSwitch />
-            </SubmitProvider> */}
+          {/* <div className="hidden md:block">
             <LanguageSwitch />
-          </div>
+          </div> */}
         </div>
         <div className="children">{children}</div>
       </div>
@@ -181,12 +178,9 @@ export default function Navbar({
             </ul>
           </li>
           <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
-            <div className=" mx-auto py-3">
-              {/* <SubmitProvider>
-                <LanguageSwitch />
-              </SubmitProvider> */}
+            {/* <div className=" mx-auto py-3">
               <LanguageSwitch />
-            </div>
+            </div> */}
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">
               <Link
                 href={
