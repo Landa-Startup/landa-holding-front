@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-import LanguageSwitch from './LanguageSwitch';
+// import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
 // import { i18n } from 'next-i18next';
 // import { getCookie } from 'cookies-next';
