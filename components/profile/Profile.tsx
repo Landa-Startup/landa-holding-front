@@ -5,26 +5,20 @@ import InstagramIconNew from '@/components/icons/socialMediaIcons/InstagramIconN
 import LinkedinIconNew from '@/components/icons/socialMediaIcons/LinkedinIconNew';
 import WhatsappIconNew from '@/components/icons/socialMediaIcons/WhatsappIconNew';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-interface ProfileData{
-    first_name:string;
-    last_name:string;
-    websites:string[];
-    job_title:string;
-    instagram:string;
-    email:string;
-    linkedin:string;
-    whatsapp:string;
-    thumbnail:string;
-}
+import { ProfileData } from '@/types/global';
 
 
 
 
-export default function Profile() {
+export default function Profile(
+  {slug} : {slug: string}
+) {
+
+
     const ProfileDataObject:ProfileData = {
         first_name:'',
         last_name:'',
@@ -38,20 +32,26 @@ export default function Profile() {
     }
 
 
-  const pathname = usePathname();
-  const slug = pathname?.replace('/en/profile/', '');
+  // const pathname = usePathname();
+  // const slug = pathname?.replace('/en/profile/', '');
 
   const [data, setData] = useState<ProfileData>(ProfileDataObject);
+
+  console.log(data)
+
   useEffect(() => {
     async function fetchTags() {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}user/profile/${slug}?format=json`
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}user/profile/${slug}?format=json`,
+        {}
       );
       // console.log(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}user/profile/${slug}?format=json`)
       setData(await response.json());
     }
     fetchTags();
   }, [slug]);
+
+  console.log(data);
 
   return (
     <div className="flex h-screen justify-center py-24 md:px-40">
@@ -80,7 +80,7 @@ export default function Profile() {
                         </div>
                         <div className="w-10"></div>
                     </li>
-                    </Link>
+                  </Link>
                 )
             })}
           </ul>

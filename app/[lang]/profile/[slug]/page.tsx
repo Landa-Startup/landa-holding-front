@@ -1,8 +1,12 @@
 import Profile from '@/components/profile/Profile';
 
 
-export default function Page() {
+export default function Page({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   return (
-    <Profile/>
+    <Profile slug={slug} />
   );
 }

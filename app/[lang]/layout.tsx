@@ -4,7 +4,7 @@ import ScrollUpButton from '../../components/common/ScrollUpButton';
 import { dir } from 'i18next'
 import { languages } from 'app/i18n/setting'
 import './globals.css';
-import { useLang } from 'stores/langStore';
+// import { useLang } from 'stores/langStore';
 // import i18next from 'i18next';
 
 // import Loading from './loading';
@@ -24,9 +24,9 @@ export default function RootLayout({
 
   // i18next.loadLanguages(["en", "fa"]);
 
-  useLang.setState({
-    lang: lang
-  })
+  // useLang.setState({
+  //   lang: lang
+  // })
 
   
 
