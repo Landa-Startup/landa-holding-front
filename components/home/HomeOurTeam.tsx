@@ -27,7 +27,7 @@ export default async function HomeOurTeam() {
         <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
       </div>
 
-      <div className="flex flex-col items-center mx-4">
+      <div className="mx-4 flex flex-col items-center">
         <Image
           loading="lazy"
           width={789}

@@ -102,7 +102,7 @@ export default function InvestorRegistrationForm() {
         <FormTitle formName='investorForm' />
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
-          <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0]">
+          <div className="mb-6 grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -207,7 +207,7 @@ export default function InvestorRegistrationForm() {
               />
             </div>
           </div>
-          <div className="mx-auto w-full md:w-auto pb-4">
+          <div className="mx-auto w-full pb-4 md:w-auto">
             {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
             <Button
              type='submit'

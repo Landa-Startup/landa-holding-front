@@ -204,7 +204,7 @@ export default function StartupFormForm() {
           <div className="col-span-2">
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
-                <p className="mb-3 w-[310px] border-b py-5 px-10 text-2xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
+                <p className="mb-3 w-[310px] border-b px-10 py-5 text-2xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
                   {t('startUp', { returnObjects: true }).subTitle}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />

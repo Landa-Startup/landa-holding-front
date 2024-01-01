@@ -11,7 +11,7 @@ export default async function StoryOfLanda() {
   return (
     <div className="flex flex-col gap-12 pb-10 ">
       {/* top */}
-      <div className="flex flex-col gap-12 md:px-32 pt-0 pb-14 sm:py-14 bg-[#FAFAFA] text-[#000] lg:flex-row">
+      <div className="flex flex-col gap-12 bg-[#FAFAFA] pb-14 pt-0 text-[#000] sm:py-14 md:px-32 lg:flex-row">
         {/* top - left */}
         <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2">
           <div className="relative h-[310px] w-screen md:h-[310px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
@@ -88,8 +88,8 @@ export default async function StoryOfLanda() {
       {/* top */}
 
       {/* down */}
-      <div className="flex w-full md:px-32 flex-col gap-12 text-[#000] md:flex-col lg:flex-row xl:flex-row">
-        <div className="flex flex-col font-barlow md:w-full px-10 sm:px-0">
+      <div className="flex w-full flex-col gap-12 text-[#000] md:flex-col md:px-32 lg:flex-row xl:flex-row">
+        <div className="flex flex-col px-10 font-barlow sm:px-0 md:w-full">
           <span className="font-gilda text-3xl text-primary">
             {t('VisionOfTheLanaHolding', { returnObjects: true })[0].title}
           </span>

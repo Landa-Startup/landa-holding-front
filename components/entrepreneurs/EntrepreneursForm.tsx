@@ -104,7 +104,7 @@ export default function EntrepreneursForm() {
           <FormTitle formName="entrepreneurForm" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
-          <div className="mb-6 w-full p-2 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2 lg:grid-cols-3 bg-[#faf8f5]">
+          <div className="mb-6 grid w-full grid-cols-1 gap-x-6 gap-y-4 bg-[#faf8f5] p-2 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
               register={register}
               errors={errors}
@@ -164,7 +164,7 @@ export default function EntrepreneursForm() {
               />
             </div>
           </div>
-          <div className="mx-auto w-full md:w-auto pb-4">
+          <div className="mx-auto w-full pb-4 md:w-auto">
             {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
             <Button type="submit" bgColor="Primary" />
           </div>
