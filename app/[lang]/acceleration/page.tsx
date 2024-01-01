@@ -26,6 +26,7 @@ export default async function Page({
         backgroundImage="../public/static/images/acceleration/banner.png"
         leftImage="Landa.svg"
         showButton={true}
+        link='/StartupsForm'
         lang={lang}
       />
       <div className="relative mt-6 hidden h-[284px] sm:block md:hidden md:w-[490px] ">
