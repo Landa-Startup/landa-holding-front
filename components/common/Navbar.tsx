@@ -137,12 +137,9 @@ export default function Navbar({
               </li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            {/* <SubmitProvider>
-              <LanguageSwitch />
-            </SubmitProvider> */}
+          {/* <div className="hidden md:block">
             <LanguageSwitch />
-          </div>
+          </div> */}
         </div>
         <div className="children">{children}</div>
       </div>
@@ -181,12 +178,9 @@ export default function Navbar({
             </ul>
           </li>
           <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
-            <div className=" mx-auto py-3">
-              {/* <SubmitProvider>
-                <LanguageSwitch />
-              </SubmitProvider> */}
+            {/* <div className=" mx-auto py-3">
               <LanguageSwitch />
-            </div>
+            </div> */}
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">
               <Link
                 href={
