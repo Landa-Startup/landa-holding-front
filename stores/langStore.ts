@@ -12,7 +12,7 @@ type Action = {
 }
 
 export const useLang = create<State & Action>((set) => ({
-  lang: getCookie("i18next") ? getCookie("i18next") : "",
+  lang: "en",
   rendered: false,
   setLanguage: (lang) => set(() => ({ lang: lang })),
   setRendered: (value) => set(() => ({rendered: value})),
