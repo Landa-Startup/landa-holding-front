@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-// import LanguageSwitch from './LanguageSwitch';
+import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
 // import { i18n } from 'next-i18next';
 // import { getCookie } from 'cookies-next';
@@ -137,9 +137,9 @@ export default function Navbar({
               </li>
             </ul>
           </div>
-          {/* <div className="hidden md:block">
+          <div className="hidden md:block">
             <LanguageSwitch />
-          </div> */}
+          </div>
         </div>
         <div className="children">{children}</div>
       </div>
@@ -178,9 +178,9 @@ export default function Navbar({
             </ul>
           </li>
           <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
-            {/* <div className=" mx-auto py-3">
+            <div className=" mx-auto py-3">
               <LanguageSwitch />
-            </div> */}
+            </div>
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">
               <Link
                 href={
