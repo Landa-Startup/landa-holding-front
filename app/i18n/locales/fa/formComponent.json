@@ -109,6 +109,11 @@
         "siteAddress": "آدرس وب سایت",
         "siteAddressRequired": "آدرس وب سایت الزامی است.",
         "siteAddressPlaceholder": "لطفا آدرس وب سایت خود را وارد کنید.",
+
+        "investmentCeiling":"سقف سرمایه گذاری",
+        "investmentCeilingRequired":"سقف سرمایه گذاری الزامی است.",
+        "investmentCeilingPlaceholder":"لطفا سقف سرمایه گذاری خود را وارد کنید.",
+
         "problems": {
             "title": "مشکلات",
             "customerProblem": "توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",

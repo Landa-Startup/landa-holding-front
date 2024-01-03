@@ -266,7 +266,7 @@
         "gene": false
       },
       {
-        "image": "/static/images/handicraft.png",
+        "image": "/static/images/About/companies/10.png",
         "subTitle": "LANDA GENE",
         "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
         "goto": "/land-gene",

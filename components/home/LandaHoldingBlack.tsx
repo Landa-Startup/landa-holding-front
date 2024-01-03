@@ -33,22 +33,19 @@ export default async function LandaHoldingBlack() {
         />
 
         <div className='h-auto w-[224px] p-2'>
-        <ButtonRefactor
-          text={t('signUp')}
-          type="link"
-          href="/"
-          bgColor="black"
-        />
+          <ButtonRefactor
+            text={t('signUp')}
+            type="link"
+            href="/investor-registration"
+            bgColor="black"
+          />
         </div>
       </div>
 
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
-        <div className="flex flex-col w-full items-center self-start md:items-start">
-          <div className="flex flex-col w-full pt-4 md:pt-0">
-            <span
-              className={`text-base font-normal text-black ${t('lng') === 'en' ? 'tracking-[5.60px]' : 'tracking-0 text-xl'
-                } font-condensed`}
-            >
+        <div className="flex flex-col items-center self-start md:items-start">
+          <div className="flex flex-col pt-4 md:pt-0">
+            <span className="rtl:tracking-0 font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
               {t('LandaHolding')}
             </span>
             <span className="border-b border-black pb-3 text-center font-gilda text-3xl font-normal text-black md:border-none md:text-start md:text-4xl">
@@ -66,11 +63,11 @@ export default async function LandaHoldingBlack() {
         />
 
         <div className='h-auto w-[224px] p-2'>
-        <ButtonRefactor
-          text={t('signUp')}
-          type="link"
-          href="/"
-          bgColor="black"
+          <ButtonRefactor
+            text={t('signUp')}
+            type="link"
+            href="/formEntrepreneurs"
+            bgColor="black"
         />
         </div>
       </div>

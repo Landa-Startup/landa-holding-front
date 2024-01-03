@@ -92,7 +92,7 @@ export default function Navbar({
             </Link>
           </div>
 
-          <div className="ml-32 mr-20 hidden justify-center ltr:mr-60 xl:flex xl:flex-1">
+          <div className="hidden justify-center ltr:mr-12 xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (

@@ -102,8 +102,7 @@ export default function ContactUsForm() {
       <h2 className="w-full flex justify-center font-gilda text-4xl md:text-5xl font-light ltr:tracking-[.25em]">
         {t('contactForm', { returnObjects: true }).title}
       </h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2">
-        <div className="col-span-2 my-4 grid h-full grid-cols-1 gap-x-3 md:grid-cols-2">
+      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-2">
           <PersonalInfoInput
             register={register}
             errors={errors}
@@ -155,7 +154,7 @@ export default function ContactUsForm() {
               cols={20}
             />
           </div>
-        </div>
+
         <div className="col-span-1 md:mt-8">
           <Button
             type="submit"

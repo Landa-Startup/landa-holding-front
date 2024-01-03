@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-// import { getCookie } from 'cookies-next';
+import { getCookie, setCookie } from 'cookies-next';
 
 export default function LanguageSwitch() {
   const { lang, setLanguage } = useLang();
@@ -16,9 +16,10 @@ export default function LanguageSwitch() {
     const newLanguage = lang === 'en' ? 'fa' : 'en';
     setLanguage(newLanguage);
     i18n.changeLanguage(newLanguage);
+    setCookie("i18next", newLanguage);
   };
 
-  // console.log(lang, pathName, getCookie('i18next'));
+  console.log(lang, pathName, getCookie('i18next'));
 
   useEffect(() => {
     const newPath = pathName?.replace(/^\/(en|fa)/, `/${lang}`);

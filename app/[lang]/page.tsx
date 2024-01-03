@@ -10,7 +10,7 @@ import HomeOurTeam from '@/components/home/HomeOurTeam';
 // import AerialViewBusinessTeam from '@/components/home/BusinessTeam';
 
 import { useTranslation } from '../i18n';
-// import HomeUpComingStartups from '@/components/home/HomeUpComingStartups';
+import HomeUpComingStartups from '@/components/home/HomeUpComingStartups';
 // import HomeUpcomingEvents from '@/components/home/HomeUpcomingEvents';
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default async function Page({
 
         <HomeCardsContainer />
         <LandaHoldingBlack />
-        {/* <HomeUpComingStartups/> */}
+        <HomeUpComingStartups/>
         {/* <HomeUpcomingEvents /> */}
         <LandaHoldingPriority />
         <HomeOurTeam />

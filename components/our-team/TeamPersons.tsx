@@ -55,7 +55,7 @@ export default function TeamPersons() {
           roles={t('roles', { returnObjects: true })}
         />
       </div>
-      <div className="grid grid-cols-1 justify-items-center gap-4 py-5 md:container md:mx-auto md:grid-cols-2 md:px-12 lg:grid-cols-3 lg:px-10 xl:grid-cols-4  xl:px-28">
+      <div className="grid grid-cols-1 justify-items-center gap-12 py-5 md:container md:mx-auto md:grid-cols-2 md:px-12 lg:grid-cols-3 lg:px-10 xl:grid-cols-4  xl:px-28">
         {filteredPersons.map(
           (
             {

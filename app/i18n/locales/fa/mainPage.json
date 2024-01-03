@@ -266,7 +266,7 @@
         "gene": false
       },
       {
-        "image": "/static/images/handicraft.png",
+        "image": "/static/images/About/companies/10.png",
         "subTitle": "لاندا ژن",
         "text": "لاندا ژن یک استارت آپ خلاق، تخیلی و هوشمند است که با انجام آزمایشات ژنتیکی در پی انقلاب پزشکی و پیشگیری از اختلالات ارثی مانند سرطان شروع به فعالیت می کند",
         "goto": "/landa-gene",
