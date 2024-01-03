@@ -42,6 +42,16 @@
       "addedClass": ""
     }
   ],
+  "Our mission and purpose": [
+    {
+      "title":"Our mission and purpose",
+      "text":"Our mission is to identify and evaluate the most innovative startup plans in order to minimize the probability of failure for the investors who have placed their trust in us. On the other hand, at Landa International Holding, we seek to provide all the necessary tools and resources to our customers; A way to ensure success for both parties.",
+      "reverse": true,
+      "show": true,
+      "index": 2,
+      "addedClass":""
+    }
+  ],
   "LANDAStartups": [
     {
       "title": "LANDA Startups",
