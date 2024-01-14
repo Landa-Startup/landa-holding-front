@@ -46,7 +46,6 @@ export default async function UpcomingStartupsCard({ image, subTitle, text, goto
               </div>
               <div className='w-[170px] self-end p-2 md:w-[224px] md:self-center md:p-6'>
                 <ButtonRefactor
-                  className='font-condensed text-[20px]'
                   text={buttonText}
                   type='link'
                   href={goto}
