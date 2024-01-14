@@ -54,7 +54,7 @@ export default function Navbar({
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full flex-row items-center justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ltr:flex-row-reverse md:ltr:flex-row ">
+        <div className="navbar fixed flex w-full flex-row items-center justify-between bg-neutral-800 bg-opacity-80 p-0 text-white ltr:flex-row-reverse md:px-12 md:ltr:flex-row ">
           <div className="mt-3 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -85,14 +85,14 @@ export default function Navbar({
                   width={50}
                   height={50}
                 />
-                <span className="font-condensed text-[12px] font-bold text-primary md:text-xl ltr:tracking-[0.25rem]">
+                <span className="font-condensed text-[12px] font-bold text-primary ltr:tracking-[0.25rem] md:text-xl">
                   {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>
             </Link>
           </div>
 
-          <div className="hidden justify-center xl:flex xl:flex-1 ltr:mr-12">
+          <div className="hidden justify-center ltr:mr-12 xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
@@ -145,7 +145,7 @@ export default function Navbar({
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black md:hidden ltr:left-[110px]">
+        <ul className="menu absolute h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
             <li
               className="font-condensed font-bold first:text-primary"
@@ -177,7 +177,7 @@ export default function Navbar({
               )}
             </ul>
           </li>
-          <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
+          <div className="absolute bottom-5 w-72 rounded bg-[#222] p-2">
             <div className=" mx-auto py-3">
               <LanguageSwitch />
             </div>

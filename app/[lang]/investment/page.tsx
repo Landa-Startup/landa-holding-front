@@ -80,6 +80,7 @@ export default async function Page({
       </div>
       <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
         <div className="text-justify font-barlow leading-8">
+          <span className='font-gilda text-lg text-primary md:text-4xl '>{t('investmentstrategy')}</span>
           <p>{t('objectiveText1')}</p>
 
         </div>
