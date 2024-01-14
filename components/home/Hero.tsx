@@ -82,15 +82,15 @@ export default function Hero({
         // This div will serve as the overlay
       ></div>
 
-      <div className="relative z-10 mt-48 flex w-fit flex-col justify-center gap-8 rtl:mr-10 md:mx-24 md:justify-start md:ltr:ml-10">
+      <div className="relative z-10 mt-48 flex w-fit flex-col justify-center gap-8 md:mx-24 md:justify-start md:ltr:ml-10 rtl:mr-10">
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
-          } text-center font-barlow text-3xl font-bold leading-normal tracking-[11px] text-white rtl:tracking-normal md:text-5xl md:tracking-[22px]`}
+          } text-center font-barlow text-3xl font-bold leading-normal tracking-[11px] text-white md:text-5xl md:tracking-[22px] rtl:tracking-normal`}
         >
           {title}
         </div>
-        <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] rtl:tracking-normal md:text-4xl md:tracking-[3.6px]">
+        <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] md:text-4xl md:tracking-[3.6px] rtl:tracking-normal">
           {titles.map((title: string, index: number) => (
             <li key={index} className="marker:text-primary">
               {title}
@@ -113,9 +113,9 @@ export default function Hero({
         >
           {currentTitle}
         </div> */}
-      <div className="absolute top-2/3 flex items-center justify-center rounded bg-[#AA845380] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[800px] md:rtl:right-0">
+      <div className="absolute top-2/3 flex items-center justify-center rounded bg-[#AA845380] p-4 md:top-2/3 md:w-[800px] ltr:left-0 rtl:right-0 md:rtl:right-0">
         <div
-          className={`text-center font-barlow text-2xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:text-4xl`}
+          className={`text-center font-barlow text-2xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ltr:tracking-[4px]`}
         >
           {subTitle ? subTitle : ''}
         </div>
@@ -123,7 +123,7 @@ export default function Hero({
       {showButton ? <ButtonRefactor text="Register Now" /> : <></>}
       <Image
         loading="lazy"
-        className="absolute bottom-0 mr-0 h-[365px] w-[500px] ltr:-right-32 rtl:-left-32 sm:h-[365px] sm:w-[500px] md:mr-0 md:h-[365px] md:w-[500px] ltr:md:right-0 md:rtl:left-0 md:rtl:right-auto xl:h-[560px] xl:w-[420px] "
+        className="absolute bottom-0 mr-0 h-[365px] w-[500px] sm:h-[365px] sm:w-[500px] md:mr-0 md:h-[365px] md:w-[500px] xl:h-[560px] xl:w-[420px] ltr:-right-32 ltr:md:right-0 rtl:-left-32 md:rtl:left-0 md:rtl:right-auto "
         src={`/static/images/${leftImage}`}
         alt="Landa"
         width={500}

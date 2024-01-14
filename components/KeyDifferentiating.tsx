@@ -27,7 +27,7 @@ export default async function KeyDifferentiating() {
                 .textTitle
             }
           </span>
-          <ul className="list-decimal rtl:mr-8 md:ltr:ml-16 md:rtl:mr-16">
+          <ul className="list-decimal md:ltr:ml-16 rtl:mr-8 md:rtl:mr-16">
             {t('itemList', { returnObjects: true }).map(
               (item: string, index: number) => (
                 <li key={index}>{item}</li>

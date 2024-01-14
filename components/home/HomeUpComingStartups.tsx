@@ -37,10 +37,10 @@ export default async function HomeUpComingStartups() {
         </div>
         <div className='mx-3 my-4 flex flex-col items-center justify-start gap-6 md:ml-6 md:mr-0 md:items-start md:p-[32px]'>
             <div className='flex flex-col items-start justify-between md:w-[400px]'>
-                <p className='rtl:tracking-0 font-condensed font-normal text-black ltr:tracking-[5.60px] md:text-xl'>{t('upcomingStartups', {returnObjects: true}).landaHolding}</p>
+                <p className='rtl:tracking-0 font-condensed font-normal text-black md:text-xl ltr:tracking-[5.60px]'>{t('upcomingStartups', {returnObjects: true}).landaHolding}</p>
                 <p className='tw-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start'>{t('upcomingStartups', {returnObjects: true}).title}</p>
             </div>
-            <div className='flex flex-col items-center gap-8 md:flex-row'>
+            <div className='flex flex-col gap-8 md:flex-row'>
                 {renderCards(t('upcomingStartups', { returnObjects: true }).cards)}
             </div>
         </div>

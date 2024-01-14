@@ -52,7 +52,7 @@ export default async function Page({
         >
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
-        <div className={`mt-6 flex flex-col ltr:gap-2 rtl:gap-12 md:flex-row`}>
+        <div className={`mt-6 flex flex-col md:flex-row ltr:gap-2 rtl:gap-12`}>
           <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10">
             <Image
               className=" object-cover"
@@ -64,7 +64,7 @@ export default async function Page({
             />
           </div>
           <p
-            className={`w-[340px] text-justify font-barlow leading-8 ltr:text-lg ltr:tracking-[1.6px] rtl:text-base md:h-[248px]  md:w-[520px] lg:w-[680px] lg:pr-2`}
+            className={`w-[340px] text-justify font-barlow leading-8 md:h-[248px] md:w-[520px] lg:w-[680px] lg:pr-2  ltr:text-lg ltr:tracking-[1.6px] rtl:text-base`}
           >
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
@@ -107,7 +107,7 @@ export default async function Page({
             }
           />
         </div>
-        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] ltr:tracking-[2px] md:mx-10 md:text-left rtl:md:text-right">
+        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] md:mx-10 md:text-left ltr:tracking-[2px] rtl:md:text-right">
           <Circle />
           {t('text')}
         </div>

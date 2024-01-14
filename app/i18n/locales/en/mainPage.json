@@ -258,7 +258,7 @@
     "title": "UPCOMING STARTUPS",
     "cards":[
       {
-        "image": "/static/images/handicraft.png",
+        "image": "/static/images/Home/upcomming-Sartup/handicraft.png",
         "subTitle": "LANDA HANDICRAFT",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
         "goto": "/handicraft",
@@ -266,10 +266,10 @@
         "gene": false
       },
       {
-        "image": "/static/images/About/companies/10.png",
+        "image": "/static/images/Home/upcomming-Sartup/10.png",
         "subTitle": "LANDA GENE",
         "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
-        "goto": "/land-gene",
+        "goto": "/landa-gene",
         "buttonText" : "Register",
         "gene": true
       }

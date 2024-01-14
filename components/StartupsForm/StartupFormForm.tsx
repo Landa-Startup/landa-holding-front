@@ -193,7 +193,7 @@ export default function StartupFormForm() {
       <div className='mx-5 bg-[#faf8f5]'>
         <FormTitle formName='startUp'/>
       </div>
-      <div className="container mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:px-4">
+      <div className="container mx-auto bg-[#faf8f5] px-5 lg:px-4 dark:bg-transparent">
         {/* {t('startUp',{ returnObjects: true }).formTitle} */}
         <form onSubmit={handleSubmit(onSubmit)}>
           <StartupFormPersonalInformation

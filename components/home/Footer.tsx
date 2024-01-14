@@ -24,7 +24,7 @@ export default async function Footer(
             {t('about', { returnObjects: true }).title}
             <br />
           </div>
-          <div className={`mt-1 text-base font-normal  text-neutral-400 text-justify`}>
+          <div className={`mt-1 text-justify text-base  font-normal text-neutral-400`}>
             {t('about', { returnObjects: true }).text}
             <br />
           </div>

@@ -56,14 +56,14 @@ export default async function AccelerationCard({
           </div>
         </div>
 
-        <div className="ltr:text-normal mt-6 flex flex-col pb-3 font-barlow leading-[24px] text-[#000] rtl:text-right md:ml-48 lg:ml-20 xl:ml-0">
+        <div className="ltr:text-normal mt-6 flex flex-col pb-3 font-barlow leading-[24px] text-[#000] md:ml-48 lg:ml-20 xl:ml-0 rtl:text-right">
           <p className={`${t('lng') && ''}`}>{textUp}</p>
           <p className={`mt-5 ${t('lng') && ''}`}>{textDown}</p>
         </div>
         <div className="flex justify-start">
           {itemsList && (
             <span
-              className={`rtl: mt-8 font-gilda text-lg text-[#AA8453] ltr:text-right xl:text-2xl`}
+              className={`rtl: mt-8 font-gilda text-lg text-[#AA8453] xl:text-2xl ltr:text-right`}
             >
               {t('AcceleratorProcess', { returnObjects: true })[0].title}
             </span>
@@ -75,7 +75,7 @@ export default async function AccelerationCard({
             {itemsList?.map((item, index) => (
               <span
                 key={index}
-                className={`ltr:text-normal rtl:text-right lg:text-lg`}
+                className={`ltr:text-normal lg:text-lg rtl:text-right`}
               >
                 {item}
               </span>

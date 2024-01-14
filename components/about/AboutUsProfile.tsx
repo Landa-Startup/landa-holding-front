@@ -10,7 +10,7 @@ export default async function AboutUsProfile() {
     <div className="mb-10 flex w-full flex-col justify-center">
       <div className="m-auto flex flex-col justify-center px-4 py-10 md:w-5/6">
         <div className="flex flex-col justify-items-center py-5 text-black rtl:mr-10 ">
-          <h2 className="tracking-0 font-condensed text-xl font-normal uppercase leading-normal ltr:tracking-widest md:text-2xl">
+          <h2 className="tracking-0 font-condensed text-xl font-normal uppercase leading-normal md:text-2xl ltr:tracking-widest">
             {t('professionals')}
           </h2>
           <h1 className="rtl:tracking-0 font-gilda text-3xl  font-normal uppercase leading-normal md:text-4xl">
