@@ -145,7 +145,7 @@ export default function Navbar({
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
+        <ul className="menu absolute h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
             <li
               className="font-condensed font-bold first:text-primary"
@@ -177,7 +177,7 @@ export default function Navbar({
               )}
             </ul>
           </li>
-          <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
+          <div className="absolute bottom-5 w-72 rounded bg-[#222] p-2">
             <div className=" mx-auto py-3">
               <LanguageSwitch />
             </div>
