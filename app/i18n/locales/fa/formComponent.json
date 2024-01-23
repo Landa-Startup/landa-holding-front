@@ -28,7 +28,7 @@
     "companyName": "نام شرکت",
     "companyNameRequired": "نام شرکت الزامی است.",
     "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
-    "howDidYouKnowUs": "چگونه درباره ما شنیدید",
+    "howDidYouKnowUs": "نحوه آشنایی با ما",
     "howDidYouKnowUsPlaceholder":"توضیحات",
     "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
 
@@ -78,7 +78,7 @@
         "interests": "علاقه مندی ها",
         "interestsRequired": "علاقه مندی ها الزامی است",
         "interestsPlaceholder": "علاقه مندی های خود را وارد کنید",
-        "preferredAreas": "حوزه های ترجیحی برای سرمایه گذاری",
+        "preferredAreas": "زمینه مورد نظر جهت سرمایه‌گذاری",
         "preferredAreasRequired": "پر کردن این قسمت الزامی است",
         "preferredAreasPlaceholder": "توضیحات"
     },
@@ -89,9 +89,9 @@
         "NoButton":"خیر",
         "banner": "اعتبارسنجی استارت آپ ها",
         "formTitle": "فرم اعتبارسنجی استارت آپ",
-        "subTitle": "رشد و افزایش مقیاس",
+        "subTitle": "رشد و توسعه",
         "formSubtitle": "اطلاعات شخصی",
-        "statusSelect": "وضعیت خود را انتخاب کنید: ",
+        "statusSelect": "استارت‌آپ شما در چه مرحله‌ای است؟ ",
         "statusSelectRequired": "وضعیت شما الزامی است",
         "statusSelectPlaceholder": "وضعیت خود را انتخاب کنید: ",
         "idea": {
@@ -99,9 +99,9 @@
             "ideaExplanationPlaceholder": "توضیحات",
             "ideaExplanationRequired": "پر کردن این قسمت الزامی است."
         },
-        "pitchDeck": "آیا فایل Pitch Deck دارید؟",
+        "pitchDeck": "آیا پیچ دک تهیه کرده‌اید؟",
         "pitchDeckRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
-        "businessPlan": "آیا فایل طرح کسب و کار دارید؟",
+        "businessPlan": "آیا بیزینس پلن آماده کرده‌اید؟",
         "businessPlanRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
         "productName": "نام محصول",
         "productNameRequired": "نام محصول الزامی است.",
@@ -127,12 +127,12 @@
 
         "solutions":{
             "title":"راه حل ها",
-            "solution":"پیشنهاد ارزش منحصر به فرد شما (نوآوری) چیست؟ چه چیز جدیدی در مورد کاری که انجام می دهید وجود دارد؟",
+            "solution":"میزان آمادگی محصول شما در چه مرحله‌ای قرار دارد؟",
             "solutionPlaceholder":"توضیحات",
             "solutionRequired":"این قسمت الزامی است!",
             "productLevel":"سطح آمادگی محصول و فناوری شما چقدر است؟",
             "productLevelRequired":"آمار آماده سازی مورد نیاز است",
-            "scalable":"به طور خلاصه توضیح دهید که چگونه فناوری شما مقیاس پذیر است؟",
+            "scalable":"لطفا به طور خلاصه توضیح دهید که چگونه قرار است محصول شما مقیاس پذیر باشد",
             "scalablePlaceholder":"توضیحات",
             "scalableRequired":"این قسمت الزامی است!"
         },
@@ -141,7 +141,7 @@
             "monetizationOfYourPlan": "روش کسب درآمد از طرح خود را توضیح دهید؟*",
             "monetizationOfYourPlanPlaceholder": "توضیحات",
             "monetizationOfYourPlanRequired": "این قسمت الزامی است!",
-            "structureOfYourSales": "لطفاً ساختار چرخه فروش خود را از تماس تا تحویل به وضوح ذکر کنید.",
+            "structureOfYourSales": "لطفا ساختار فروش خود را از ابتدا توضیح دهید",
             "structureOfYourSalesPlaceholder": "توضیحات",
             "structureOfYourSalesRequired": "این قسمت الزامی است!",
             "financialPlan": "اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
@@ -149,7 +149,7 @@
         "financialFile": "آیا شما تمکن مالی دارید؟",
         "financialFileRequired": "لطفا یکی از گزینه ها را انتخاب کنید:",
         "property": {
-            "title": "ویژگی ها",
+            "title": "دارایی",
             "startupRevenue": "استارت آپ شما از زمان شروعش چقدر درآمد داشته است؟",
             "startupRevenuePlaceholder": "توضیحات",
             "startupRevenueRequired": "این قسمت الزامی است!",
@@ -165,27 +165,27 @@
         },
         "targetMarket": {
             "title": "بازار هدف",
-            "customerCharacteristic": "بر اساس چه ویژگی هایی تصمیم می گیرید مشتریان شما چه کسانی باشند و چه کسانی نباشند؟",
+            "customerCharacteristic": "مشتریان خود را بر اساس چه معیاری انتخاب می‌کنید؟",
             "customerCharacteristicPlaceholder": "توضیحات",
             "customerCharacteristicRequired": "این قسمت الزامی است!",
-            "currentCustomers": "مشتریان فعلی شما چه کسانی هستند؟ تا به حال چند مشتری داشته اید؟",
+            "currentCustomers": "مشتریان فعلی شما چه کسانی هستند؟ چه تعداد مشتری تا امروز داشته‌اید؟",
             "currentCustomersPlaceholder": "توضیحات",
             "currentCustomersRequired": "این قسمت الزامی است!",
-            "estimatedMarketSize": "اندازه بازار را چگونه تخمین زده اید؟*",
+            "estimatedMarketSize": "چگونه مقیاس و انداره بازار هدف خود را محاسبه می‌کنید؟",
             "estimatedMarketSizePlaceholder": "توضیحات",
             "estimatedMarketSizeRequired": "این قسمت الزامی است!"
         },
 
         "radioButtonGroup":[
-            { "value": "basicPrinciple", "label": "اصل اساسی رعایت شده است." },
-            { "value": "technologyConcept", "label": "مفهوم فناوری فرموله شده است." },
-            { "value": "exprimentalProof", "label": "اثبات تجربی مفهوم" },
-            { "value": "confirmedTechnologyLab", "label": "تکنولوژی تایید شده در آزمایشگاه" },
-            { "value": "confirmedTechnologyEnv", "label": "تکنولوژی تایید شده در شرایط محیطی" },
-            { "value": "presentedTechnologyEnv", "label": "فناوری ارائه شده در شرایط محیطی" },
-            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید." },
-            { "value": "realisticSystem", "label": "سیستم واقعی ثابت شده در محیط عملیاتی." },
-            { "value": "qualifiedSystem", "label": "یک سیستم کامل و واجد شرایط" }
+            { "value": "basicPrinciple", "label": "اصول اولیه مشخص شده است" },
+            { "value": "technologyConcept", "label": "ایده اولیه تکنولوژی شکل گرفته است" },
+            { "value": "exprimentalProof", "label": "ایده اولیه آزمایش شده است" },
+            { "value": "confirmedTechnologyLab", "label": "تاییدیه فنی در محیط آزمایشگاهی گرفته شده است" },
+            { "value": "confirmedTechnologyEnv", "label": "تاییدیه فنی در شرایط محیطی گرفته شده است" },
+            { "value": "presentedTechnologyEnv", "label": "فناوری و تکنولوژی در شرایط محیطی ارائه شده است" },
+            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه در محیط عملیاتی نشان داده شده است" },
+            { "value": "realisticSystem", "label": "سیستم واقعی در محیط عملیاتی ارائه شده است" },
+            { "value": "qualifiedSystem", "label": "به‌عنوان یک سیستم کامل و واجد شرایط آماده شده است" }
         ]
     },
     "IDEA":"ایده ها",
