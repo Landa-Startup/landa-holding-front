@@ -29,7 +29,7 @@ export default function YesRadioButton({
 
   switch (title) {
     case t("startUp", {returnObjects: true}).pitchDeck:
-      uploadInputTitle = ""
+      uploadInputTitle = "Pitch deck file"
       break;
     case t("startUp", {returnObjects: true}).businessPlan:
       uploadInputTitle = "Business plan file"
