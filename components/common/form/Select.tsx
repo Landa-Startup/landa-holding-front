@@ -1,5 +1,5 @@
 'use client';
-import React from "react";
+import React from 'react';
 
 export default function Select({
   register,
@@ -33,33 +33,32 @@ export default function Select({
       </label>
       {/* TO DO : select placeholder has a problem */}
       <div className="flex w-full flex-col items-start">
-      <select
-        id={nameInput}
-        {...register(nameInput, {
-          required: required,
-        })}
-        className={className + (errors[nameInput] ? ' border-red-500' : '')}
-        onChange={handleChange}
-      >
-        <option disabled selected value={""}>
-          {selected ? selected : placeholder}
-        </option>
-        {options.map((option, index) => (
-          <option key={index} value={option.value}>
-            {option.label}
+        <select
+          id={nameInput}
+          {...register(nameInput, {
+            required: required
+          })}
+          className={className + (errors[nameInput] ? ' border-red-500' : '')}
+          onChange={handleChange}
+        >
+          <option disabled selected value={''}>
+            {selected ? selected : placeholder}
           </option>
-        ))}
-      </select>
+          {options.map((option, index) => (
+            <option key={index} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
 
-      {errors[nameInput] && (
-        <span className="mt-2 inline text-sm text-yellow-500">
-          {errors[nameInput].message}
-        </span>
-      )}
+        {errors[nameInput] && (
+          <span className="mt-2 inline text-sm text-red-500">
+            {errors[nameInput].message}
+          </span>
+        )}
       </div>
 
       <br />
     </div>
   );
 }
-  

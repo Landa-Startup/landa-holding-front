@@ -24,7 +24,7 @@
   "Priorities": "Priorities",
   "businessTeamText": "What Our Cooperation Members Say",
   "visit": "Visit Now",
-  "signUp": "Sign Up",
+  "Register": "Register",
 
   "cards": [
     {
@@ -256,20 +256,20 @@
   "upcomingStartups": {
     "landaHolding": "LANDA HOLDING",
     "title": "UPCOMING STARTUPS",
-    "cards":[
+    "cards": [
       {
         "image": "/static/images/handicraft.png",
         "subTitle": "LANDA HANDICRAFT",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
         "goto": "/handicraft",
-        "buttonText" : "Register"
+        "buttonText": "Register"
       },
       {
         "image": "/static/images/handicraft.png",
         "subTitle": "LANDA HANDICRAFT",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
         "goto": "/handicraft",
-        "buttonText" : "Register"
+        "buttonText": "Register"
       }
     ]
   },

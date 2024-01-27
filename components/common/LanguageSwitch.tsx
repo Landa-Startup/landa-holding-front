@@ -29,16 +29,16 @@ export default function LanguageSwitch() {
 
   return (
     <div
-      className="mx-auto flex h-10 w-[12rem] flex-shrink-0 cursor-pointer select-none items-center rounded-lg bg-white bg-opacity-50 p-1 backdrop-blur-md md:w-[7rem]"
+      className="mx-auto flex h-10 w-[12rem] flex-shrink-0 cursor-pointer select-none items-center rounded-xl bg-white bg-opacity-50 p-1 backdrop-blur-md md:w-[7rem]"
       onClick={handleClick}
     >
       <div
-        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black transition-all duration-1000 ltr:bg-white`}
+        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-[10px] text-black transition-all duration-1000 ltr:bg-white`}
       >
         EN
       </div>
       <div
-        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-lg text-black transition-all duration-1000 rtl:bg-white`}
+        className={`flex h-8 w-1/2 items-center justify-center gap-2.5 rounded-[10px] text-black transition-all duration-1000 rtl:bg-white`}
       >
         FA
       </div>

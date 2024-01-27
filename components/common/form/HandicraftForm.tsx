@@ -17,7 +17,7 @@ import { useSubmit } from 'stores/dataStore';
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
 export default function HandicraftForm() {
 
-  const { 
+  const {
     csrfToken,
     handleTokenChange,
     handleSubmitingChange,
@@ -95,7 +95,6 @@ export default function HandicraftForm() {
       name: name,
       value: value
     }));
-
 
   return (
     // <form className="flex flex-col gap-4">

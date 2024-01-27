@@ -34,7 +34,7 @@ export default async function LandaHoldingBlack() {
 
         <div className="h-auto w-[224px] p-2">
           <ButtonRefactor
-            text={t('signUp')}
+            text={t('Register')}
             type="link"
             href="/"
             bgColor="black"
@@ -68,7 +68,7 @@ export default async function LandaHoldingBlack() {
 
         <div className="h-auto w-[224px] p-2">
           <ButtonRefactor
-            text={t('signUp')}
+            text={t('Register')}
             type="link"
             href="/"
             bgColor="black"

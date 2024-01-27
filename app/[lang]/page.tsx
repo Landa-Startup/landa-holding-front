@@ -32,7 +32,7 @@ export default async function Page({
       <Hero
         lang={lang}
         showLanda
-        titles={[ t('Investment'), t('Acceleration'), t('Academy')]}
+        titles={[t('Investment'), t('Acceleration'), t('Academy')]}
         title={t('LandaHolding')}
         subTitle={t('HeroSubtitle')}
         backgroundImage="Hero.png"
@@ -40,15 +40,15 @@ export default async function Page({
         showButton={false}
       />
 
-        <HomeCardsContainer />
-        <LandaHoldingBlack />
-        <HomeUpComingStartups/>
-        {/* <HomeUpcomingEvents /> */}
-        <LandaHoldingPriority />
-        <HomeOurTeam />
-        <LatestStartups />
-        {/* <AerialViewBusinessTeam /> */}
-        <Partners />
+      <HomeCardsContainer />
+      <LandaHoldingBlack />
+      <HomeUpComingStartups />
+      {/* <HomeUpcomingEvents /> */}
+      <LandaHoldingPriority />
+      <HomeOurTeam />
+      <LatestStartups />
+      {/* <AerialViewBusinessTeam /> */}
+      <Partners />
     </div>
   );
 }

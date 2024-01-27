@@ -50,7 +50,7 @@ export default function RadioButton({
   
         {/* Error message for radio buttons */}
         {errors[name] && (
-          <span className="mt-4 text-sm text-yellow-500">
+          <span className="mt-4 text-sm text-red-500">
             {errors[name].message}
           </span>
         )}

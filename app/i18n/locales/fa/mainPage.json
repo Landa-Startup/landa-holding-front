@@ -25,7 +25,7 @@
   "Priorities": "اولویت های سرمایه گذاری",
   "businessTeamText": "آنچه اعضای مجموعه ما می گویند",
   "visit": "بازدید کنید",
-  "signUp": "ثبت نام",
+  "Register": "ثبت نام",
   "cards": [
     {
       "title": "سرمایه‌گذاری",
@@ -256,7 +256,7 @@
   "upcomingStartups": {
     "landaHolding": "هلدینگ لاندا",
     "title": "استارت آپ های پیش رو",
-    "cards":[
+    "cards": [
       {
         "image": "/static/images/handicraft.png",
         "subTitle": "صنایع دستی لاندا",
