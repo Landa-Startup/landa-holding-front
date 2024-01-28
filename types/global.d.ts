@@ -322,25 +322,17 @@ interface translationCard {
   addedClass: string;
 }
 
-// interface translation {
-//   Acceleration: "Acceleration",
-//   Investment: "Investment",
-//   Academy: "Academy",
-//   hero_subtitle: "Feel The Future",
-//   LandaHolding: "Landa Holding",
-//   "Home": "Home",
-//   "ABOUT US": "ABOUT US",
-//   "ACCELERATION": "ACCELERATION",
-//   "CONTACT US": "CONTACT US",
-//   "OUR TEAM": "OUR TEAM",
-//   "FORMS": "FORMS",
-//   "INVESTOR CENTER": "INVESTOR CENTER",
-//   "ENTREPRENEUR CENTER": "ENTREPRENEUR CENTER",
-//   "BUSINESS PARTNERS": "BUSINESS PARTNERS",
-//   "STARTUPS VALIDATION": "STARTUPS VALIDATION",
-//   "APPLY JOB": "APPLY JOB",
-//   "acceleration": "acceleration",
-// }
+interface ProfileData{
+  first_name:string;
+  last_name:string;
+  websites:string[];
+  job_title:string;
+  instagram:string;
+  email:string;
+  linkedin:string;
+  whatsapp:string;
+  thumbnail:string;
+}
 
 export {
   ContactUSFormData,
@@ -374,5 +366,6 @@ export {
   TableData,
   MagazineData,
   translationCard,
-  HandicraftForm
+  HandicraftForm,
+  ProfileData
 };

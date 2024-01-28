@@ -79,7 +79,7 @@
           "alt": ""
         },
         {
-          "src": "/static/images/Home main/2.jpg",
+          "src": "/static/images/Home main/7.jpeg",
           "alt": ""
         }
       ]
@@ -104,61 +104,61 @@
     "title": "Join Our Business Affiliates",
     "logos": [
       {
-        "number": 1,
+        "number": 2,
         "title": "Islamic Azad University of Isfahan(Khorasgan)",
         "description": "Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.",
         "alt": "Islamic Azad University of Isfahan(Khorasgan)"
       },
       {
-        "number": 2,
+        "number": 3,
         "title": "Dr. Nekui Educational Holding",
-        "description": "We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.",
+        "description":"We are honored to work with Dr. Nekui holding to ensure a bright future for startups and innovative ideas",
         "alt": "Dr. Nekui Educational Holding"
       },
       {
-        "number": 3,
+        "number": 4,
         "title": "University of Kashan",
         "description": "Since 1399, we started cooperating with Kashan University in the field of acceleration center",
         "alt": "University of Kashan"
       },
       {
-        "number": 4,
+        "number": 7,
         "title": "ASIAHITECH",
         "description": "Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.",
         "alt": "ASIAHITECH"
       },
       {
-        "number": 5,
+        "number": 8,
         "title": "Chamber of Commerce, Industries, Mines and Agriculture",
         "description": "We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.",
         "alt": "Chamber of Commerce, Industries, Mines and Agriculture"
       },
       {
-        "number": 6,
+        "number": 2,
         "title": "Islamic Azad University of Isfahan(Khorasgan)",
         "description": "Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.",
         "alt": "Islamic Azad University of Isfahan(Khorasgan)"
       },
       {
-        "number": 7,
+        "number": 3,
         "title": "Dr. Nekui Educational Holding",
-        "description": "We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.",
+        "description":"We are honored to work with Dr. Nekui holding to ensure a bright future for startups and innovative ideas",
         "alt": "Dr. Nekui Educational Holding"
       },
       {
-        "number": 8,
+        "number": 4,
         "title": "University of Kashan",
         "description": "Since 1399, we started cooperating with Kashan University in the field of acceleration center",
         "alt": "University of Kashan"
       },
       {
-        "number": 9,
+        "number": 7,
         "title": "ASIAHITECH",
         "description": "Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.",
         "alt": "ASIAHITECH"
       },
       {
-        "number": 10,
+        "number": 8,
         "title": "Chamber of Commerce, Industries, Mines and Agriculture",
         "description": "We have been cooperating with the Isfahan Chamber of Commerce for 4 months in the field of startup investment.",
         "alt": "Chamber of Commerce, Industries, Mines and Agriculture"
@@ -258,18 +258,20 @@
     "title": "UPCOMING STARTUPS",
     "cards": [
       {
-        "image": "/static/images/handicraft.png",
+        "image": "/static/images/Home/upcomming-Sartup/handicraft.png",
         "subTitle": "LANDA HANDICRAFT",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
         "goto": "/handicraft",
-        "buttonText": "Register"
+        "buttonText" : "Register",
+        "gene": false
       },
       {
-        "image": "/static/images/handicraft.png",
-        "subTitle": "LANDA HANDICRAFT",
-        "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
-        "goto": "/handicraft",
-        "buttonText": "Register"
+        "image": "/static/images/Home/upcomming-Sartup/10.png",
+        "subTitle": "LANDA GENE",
+        "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
+        "goto": "/landa-gene",
+        "buttonText" : "Register",
+        "gene": true
       }
     ]
   },

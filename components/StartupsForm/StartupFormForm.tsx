@@ -19,6 +19,7 @@ import { useSubmit } from 'stores/dataStore';
 import { useFile } from 'stores/fileStore';
 import StartupFormTrialProduct from './StartupFormTrialProduct';
 import FormTitle from '../common/form/FormTitle';
+// import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
 
@@ -192,7 +193,7 @@ export default function StartupFormForm() {
       <div className='mx-5 bg-[#faf8f5]'>
         <FormTitle formName='startUp'/>
       </div>
-      <div className="container mx-auto bg-[#faf8f5] px-5 dark:bg-transparent lg:px-4">
+      <div className="container mx-auto bg-[#faf8f5] px-5 lg:px-4 dark:bg-transparent">
         {/* {t('startUp',{ returnObjects: true }).formTitle} */}
         <form onSubmit={handleSubmit(onSubmit)}>
           <StartupFormPersonalInformation
@@ -203,7 +204,7 @@ export default function StartupFormForm() {
           <div className="col-span-2">
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
-                <p className="mb-3 w-[310px] border-b py-5 px-10 text-2xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
+                <p className="mb-3 w-[310px] border-b px-10 py-5 text-2xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
                   {t('startUp', { returnObjects: true }).subTitle}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
@@ -283,13 +284,13 @@ export default function StartupFormForm() {
             }
           })()}
 
-          <div className="flex justify-center">
+          <div className="flex justify-center pb-4">
             <Button
               type='submit'
               bgColor="Primary"
               disabled={errorsList[0] ? true : false}
             />
-            {/* <ButtonRefactor type="submit" text="Submit" /> */}
+            {/* <ButtonRefactor type="submit" text="Submit" disabled={errorsList[0] ? true : false}/> */}
           </div>
           <NotificationSendForm />
         </form>

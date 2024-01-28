@@ -33,7 +33,7 @@ export default function BusinessTeamCard({
           alt="Avatar"
         />
         <div className="absolute left-[115px] top-[210px] h-0 w-[200px] origin-top-left -rotate-90 border border-white bg-white md:top-[170px] md:hidden md:w-[170px]"></div>
-        <div className="absolute left-0 top-[120px] hidden h-[1px] w-[285px] border border-white bg-white rtl:right-0 md:block"></div>
+        <div className="absolute left-0 top-[120px] hidden h-[1px] w-[285px] border border-white bg-white md:block rtl:right-0"></div>
         <div className="flex flex-col items-center justify-center gap-[3px] text-center md:items-start ">
           <div className=" inline-flex font-barlow text-base font-medium text-white md:w-48 md:text-xl">
             {name}

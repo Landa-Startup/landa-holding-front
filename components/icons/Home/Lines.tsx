@@ -2,7 +2,7 @@ export default function Lines() {
   return (
     <svg
     // remove lg:
-      className="absolute top-[135px] hidden rtl:-scale-x-95 md:block  lg:right-[64px] ltr:xl:right-[378px]"
+      className="absolute top-[135px] hidden md:block lg:right-[64px]  ltr:xl:right-[378px] rtl:-scale-x-95"
       xmlns="http://www.w3.org/2000/svg"
       width="1092"
       height="2573"

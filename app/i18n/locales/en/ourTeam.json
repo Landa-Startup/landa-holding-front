@@ -165,13 +165,19 @@
           "category": "content creators"
         },       
        {
-          "image": "/static/images/our-team/Personals/66nn.jpg",
+          "image": "/static/images/our-team/Personals/MAHSA.jpg",
           "position": "Content Creator",
           "name": "Mahsa Ghorbani",
           "linkedIn": "",
           "category": "content creators"
         },
-
+       {
+        "image": "/static/images/our-team/Personals/ARYA.jpg",
+        "position": "Content Creator",
+        "name": "Aria Bagherpour",
+        "linkdin": "",
+        "category": "content creators"
+       },
 
         {
           "image": "/static/images/our-team/Personals/a27.png",

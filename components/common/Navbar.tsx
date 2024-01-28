@@ -23,9 +23,15 @@ export default function Navbar({
 
   // const { setRendered } = useLang();
 
+  // const { setLanguage } = useLang();
+
+
+  // const language = getCookie("i18next") ? getCookie("i18next") : "en";
+
   // useEffect(() => {
-  //   i18n?.changeLanguage(getCookie("i18next") ? getCookie("i18next") : "en");
-  //   setRendered(true);
+  //   i18n?.changeLanguage(language);
+  //   // setLanguage(language)
+  //   // setRendered(true);
   // },[])
 
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -71,7 +77,7 @@ export default function Navbar({
           </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
-              <div className="flex flex-col items-center md:items-end md:flex-row">
+              <div className="flex flex-col items-center md:flex-row md:items-end">
                 <Image
                   className="h-10 w-10 md:h-14 md:w-12"
                   src="static/images/Logo.svg"
@@ -79,14 +85,14 @@ export default function Navbar({
                   width={50}
                   height={50}
                 />
-                <span className="font-condensed text-[12px] font-bold tracking-[0.25rem] text-primary md:text-xl">
+                <span className="font-condensed text-[12px] font-bold text-primary ltr:tracking-[0.25rem] md:text-xl">
                   {lang == 'en' ? 'LANDA' : 'لاندا'}
                 </span>
               </div>
             </Link>
           </div>
 
-          <div className="ml-32 mr-20 hidden justify-center ltr:mr-60 xl:flex xl:flex-1">
+          <div className="hidden justify-center ltr:mr-12 xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
@@ -132,9 +138,6 @@ export default function Navbar({
             </ul>
           </div>
           <div className="hidden md:block">
-            {/* <SubmitProvider>
-              <LanguageSwitch />
-            </SubmitProvider> */}
             <LanguageSwitch />
           </div>
         </div>
@@ -142,7 +145,7 @@ export default function Navbar({
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
+        <ul className="menu absolute h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
             <li
               className="font-condensed font-bold first:text-primary"
@@ -174,11 +177,8 @@ export default function Navbar({
               )}
             </ul>
           </li>
-          <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
+          <div className="absolute bottom-5 w-72 rounded bg-[#222] p-2">
             <div className=" mx-auto py-3">
-              {/* <SubmitProvider>
-                <LanguageSwitch />
-              </SubmitProvider> */}
               <LanguageSwitch />
             </div>
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">

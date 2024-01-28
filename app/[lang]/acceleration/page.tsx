@@ -26,6 +26,7 @@ export default async function Page({
         backgroundImage="../public/static/images/acceleration/banner.png"
         leftImage="Landa.svg"
         showButton={true}
+        link='/StartupsForm'
         lang={lang}
       />
       <div className="relative mt-6 hidden h-[284px] sm:block md:hidden md:w-[490px] ">
@@ -41,17 +42,17 @@ export default async function Page({
       {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
       <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
         <span
-          className={`mb-2 ml-12 mr-8 self-start text-3xl leading-tight text-[#55422A] md:text-5xl`}
+          className={`mb-2 md:ml-32 ml-5 mr-8 self-start text-3xl leading-tight text-[#55422A] md:text-5xl`}
         >
           {/* TODO: delete [0],[1] from translation */}
           {t('LandaAccelerator', { returnObjects: true })[0].title}
         </span>
         <span
-          className={`ml-12 mr-8 self-start text-xl leading-tight text-[#AA8453] md:text-4xl`}
+          className={`md:ml-32 ml-5 mr-8 self-start text-xl leading-tight text-[#AA8453] md:text-4xl`}
         >
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
-        <div className={`mt-6 flex flex-col ltr:gap-2 rtl:gap-12 md:flex-row`}>
+        <div className={`mt-6 flex flex-col md:flex-row ltr:gap-2 rtl:gap-12`}>
           <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10">
             <Image
               className=" object-cover"
@@ -63,7 +64,7 @@ export default async function Page({
             />
           </div>
           <p
-            className={`w-[340px] text-justify font-barlow leading-8 ltr:text-lg ltr:tracking-[1.6px] rtl:text-base md:h-[248px]  md:w-[520px] lg:w-[680px] lg:pr-2`}
+            className={`w-[340px] text-justify font-barlow leading-8 md:h-[248px] md:w-[520px] lg:w-[680px] lg:pr-2  ltr:text-lg ltr:tracking-[1.6px] rtl:text-base`}
           >
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
@@ -106,7 +107,7 @@ export default async function Page({
             }
           />
         </div>
-        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] ltr:tracking-[2px] md:mx-10 md:text-left rtl:md:text-right">
+        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] md:mx-10 md:text-left ltr:tracking-[2px] rtl:md:text-right">
           <Circle />
           {t('text')}
         </div>

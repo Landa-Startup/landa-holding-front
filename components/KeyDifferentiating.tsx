@@ -9,25 +9,25 @@ export default async function KeyDifferentiating() {
 
   return (
     // TODO: don't use [0], [1] for translations
-    <div className="grid px-10 sm:px-0 grid-cols-1 justify-items-end md:rtl:pr-32 bg-[#FAFAFA] md:grid-cols-2">
-      <div className="my-20 ltr:md:mr-24 flex flex-col gap-5 rtl:mr-6md:mr-40 md:rtl:ml-40">
-        <span className="font-gilda text-2xl leading-5 text-primary md:text-3xl">
+    <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-10 sm:px-0 md:grid-cols-2 md:rtl:pr-32">
+      <div className="rtl:mr-6md:mr-40 my-20 flex flex-col gap-5 ltr:md:mr-24 md:rtl:ml-40">
+        <span className="font-gilda text-2xl leading-8 text-primary md:text-3xl md:ltr:ml-8 md:rtl:mr-8">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
         <div className="gap-2 font-barlow leading-7 text-black md:w-[350px] lg:w-[450px] xl:w-[550px]">
-          <p>
+          <p className='md:ltr:ml-10 md:rtl:mr-10'>
             {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .titleText
             }
           </p>
-          <span className="font-bold text-primary">
+          <span className="font-bold text-primary md:ltr:ml-10 md:rtl:mr-10">
             {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .textTitle
             }
           </span>
-          <ul className="list-decimal ltr:ml-4 rtl:mr-4">
+          <ul className="list-decimal md:ltr:ml-16 rtl:mr-8 md:rtl:mr-16">
             {t('itemList', { returnObjects: true }).map(
               (item: string, index: number) => (
                 <li key={index}>{item}</li>
@@ -36,7 +36,7 @@ export default async function KeyDifferentiating() {
           </ul>
         </div>
       </div>
-      <div className="hidden md:flex items-end">
+      <div className="hidden items-end md:flex">
         <Image
           src="/static/images/Home/KeyDifferentiating/Vector 58.png"
           alt="Landa Key Differentiating"

@@ -35,7 +35,7 @@ export default function UploadInput({
 
         {/* The actual input */}
         <input
-          className={`text-[13px] h-7 font-normal capitalize text-neutral-800 ${errors[nameInput] ? ' border-red-500' : ''}`}
+          className={`h-7 text-[13px] font-normal capitalize text-neutral-800 ${errors[nameInput] ? ' border-red-500' : ''}`}
           type="file"
           {...register(nameInput)}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

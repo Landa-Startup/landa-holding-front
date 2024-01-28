@@ -13,7 +13,10 @@ import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
-// import { on } from 'events';
+// import { Trans } from 'react-i18next';
+
+
+
 export default function ContactUsForm() {
   const {
     register,
@@ -96,11 +99,10 @@ export default function ContactUsForm() {
 
   return (
     <div className="flex h-full flex-col items-center justify-between md:items-start">
-      <h2 className="w-full flex justify-center font-gilda text-5xl font-light ltr:tracking-[.25em]">
+      <h2 className="flex w-full justify-center font-gilda text-4xl font-light md:text-5xl ltr:tracking-[.25em]">
         {t('contactForm', { returnObjects: true }).title}
       </h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2">
-        <div className="col-span-2 my-4 grid h-full grid-cols-1 gap-x-3 md:grid-cols-2">
+      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-2">
           <PersonalInfoInput
             register={register}
             errors={errors}
@@ -152,7 +154,7 @@ export default function ContactUsForm() {
               cols={20}
             />
           </div>
-        </div>
+
         <div className="col-span-1 md:mt-8">
           <Button
             type="submit"

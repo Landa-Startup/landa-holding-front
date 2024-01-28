@@ -108,7 +108,7 @@ export default function PartnerMembershipForm() {
           {/* <PartnerMembershipTitle /> */}
           <FormTitle formName='partnerForm' />
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
-            <div className="mb-6 grid grid-cols-1 gap-x-6 p-4 md:grid-cols-2 lg:grid-cols-3 bg-[#F8F5F0]">
+            <div className="mb-6 grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
               <PersonalInfoInput
                 register={register}
                 errors={errors}
@@ -164,9 +164,9 @@ export default function PartnerMembershipForm() {
                 errors={errors}
                 nameInput="investmentCeiling"
                 type="text"
-                label={t('investmentCeiling')}
-                required={t('investmentCeilingRequired')} 
-                placeholder={t('investmentCeilingPlaceholder')}
+                label={t('startUp', {returnObjects: true}).investmentCeiling}
+                required={t('startUp', {returnObjects: true}).investmentCeilingRequired} 
+                placeholder={t('startUp', {returnObjects: true}).investmentCeilingPlaceholder}
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
@@ -187,7 +187,7 @@ export default function PartnerMembershipForm() {
               />
             </div>
             </div>
-            <div className="mx-auto pb-4 text-center w-full md:w-auto">
+            <div className="mx-auto w-full pb-4 text-center md:w-auto">
               <Button
                 type='submit'
                 bgColor="Primary"

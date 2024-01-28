@@ -9,15 +9,10 @@ type Props = {
   text: string;
   goto: string;
   buttonText: string;
-};
+}
 
-export default async function UpcomingStartupsCard({
-  image,
-  subTitle,
-  text,
-  goto,
-  buttonText
-}: Props) {
+export default async function UpcomingStartupsCard({ image, subTitle, text, goto, buttonText }: Props) {
+
   const { lang } = useLang.getState();
 
   console.log(lang);
@@ -25,35 +20,36 @@ export default async function UpcomingStartupsCard({
   return (
     <>
       <div>
-        <div className="shadow-xl w-full md:w-[400px] h-[460px] md:h-auto flex flex-col justify-start md:justify-between items-center">
-          <div className="relative h-[151px] w-[150px] bg-white">
+        <div className='border-1 flex h-full w-full flex-col justify-start border shadow-xl md:w-[400px] md:gap-8'>
+          <div className='relative m-auto bg-white md:w-full'>
             <Image
-              loading="lazy"
-              className="object-cover p-1"
+              loading='lazy'
+              className='m-auto h-[150px] w-auto pt-5'
               src={image}
               alt={subTitle}
-              layout="fill"
+              width={100}
+              height={100}
             />
           </div>
-          <div className="p-2 font-gilda text-[24px] fonst-normal fonst-[400] leading-normal self-start">
+          <div className='self-start p-2 font-gilda text-[24px] font-normal leading-normal'>
             {subTitle}
           </div>
-          <div className="flex flex-col gap-6">
-            <div className="w-full mt-4 px-3 md:px-0">
-              <hr className="bg-black h-[2px] w-full" />
+          <div className='flex h-full flex-col gap-4'>
+            <div className='w-full px-3 md:px-0'>
+              <hr className='h-[2px] w-full bg-black' />
             </div>
-            <div className="flex px-2 md:px-6 flex-col justify-between gap-3 items-center">
-              <div className="">
-                <p className="text-[15px] md:text-[20px] font-barlow leading-[30px]">
+            <div className='flex h-full flex-col items-center justify-between gap-3 px-2 md:px-6'>
+              <div>
+                <p className='font-barlow text-[15px] leading-[30px] md:text-[16px]'>
                   {text}
                 </p>
               </div>
-              <div className="w-[170px] md:w-[224px] self-center p-2 md:p-6">
+              <div className='w-[170px] self-end p-2 md:w-[224px] md:self-center md:p-6'>
                 <ButtonRefactor
                   text={buttonText}
-                  type="link"
+                  type='link'
                   href={goto}
-                  bgColor="black"
+                  bgColor='black'
                 />
               </div>
             </div>
