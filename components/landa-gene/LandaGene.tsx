@@ -103,7 +103,7 @@ export default function LandaGene() {
   }));
 
   return (
-    <div className='container  my-20 flex flex-col items-start gap-24 '>
+    <div className='my-20 flex flex-col items-start gap-24 '>
       <div className='mx-auto flex w-10/12 flex-col gap-x-8 md:flex-row md:justify-between'>
         <div className='basis-1/4'>
           <Image
@@ -116,7 +116,7 @@ export default function LandaGene() {
         </div>
         <div className='basis-3/4 '>
           <p
-            className='text-justify font-sans text-[15px] leading-[48px] tracking-[2px] text-black lg:text-[20px]'>
+            className='text-justify font-sans text-[15px] leading-[48px] ltr:tracking-[2px] text-black lg:text-[20px]'>
             {t('textUp')}
           </p>
         </div>

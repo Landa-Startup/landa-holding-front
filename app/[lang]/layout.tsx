@@ -12,6 +12,7 @@ import { useLang } from 'stores/langStore';
 export async function generateStaticParams() {
   return languages.map((lang) => ({ lang }));
 }
+
 export default function RootLayout({
   params: { lang },
   children
