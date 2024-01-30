@@ -1,12 +1,12 @@
 import Hero from '@/components/investment/HeroInvestment';
-import Link from '@/components/icons/Link';
+//import Link from '@/components/icons/Link';
 import Image from 'next/image';
 
-import Certificate from '@/components/investment/Certificate';
+//import Certificate from '@/components/investment/Certificate';
 import { Metadata } from 'next';
 import FeaturesCardsContainer from '@/components/investment/FeaturesCardsContainer';
 import { useTranslation } from 'app/i18n';
-import ButtonRefactor from '@/components/common/ButtonRefactor';
+//import ButtonRefactor from '@/components/common/ButtonRefactor';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Investment',
@@ -55,7 +55,7 @@ export default async function Page({
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 items-center gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
+      {/* <div className="grid grid-cols-1 items-center gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <span className="font-gilda text-2xl text-primary md:text-4xl">
             {t('certificate')}
@@ -68,7 +68,7 @@ export default async function Page({
         <div className="flex flex-col items-center justify-center space-y-5 rtl:space-y-reverse">
           <p className="text-justify font-barlow tracking-[1px] ltr:leading-8 rtl:text-lg rtl:leading-10">
             {t('focusText')}
-          </p>
+          </p> */}
           {/* <Button
             goto="/"
             size="not"
@@ -76,9 +76,9 @@ export default async function Page({
             bgColor="Primary"
             lang={lang}
           /> */}
-          <ButtonRefactor text={t('buttonTitle')} />
+          {/* <ButtonRefactor text={t('buttonTitle')} />
         </div>
-      </div>
+      </div> */}
       <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
         <div className="text-justify font-barlow leading-8">
           <span className="font-gilda text-lg text-primary md:text-4xl ">
