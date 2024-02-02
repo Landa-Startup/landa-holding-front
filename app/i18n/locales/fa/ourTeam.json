@@ -1,5 +1,5 @@
 {
-    "title":"تیم ما",
+    "title": "تیم ما",
     "defaultRole": "همه",
     "persons": [
         {
@@ -59,25 +59,11 @@
             "category": "حسابدار"
         },
         {
-            "image": "/static/images/our-team/Personals/a6.png",
-            "position": "مدیر ارشد فناوری",
-            "name": "ایمان نصر",
-            "linkedIn": "https://www.linkedin.com/in/iman-nasr-esfahani",
-            "category": "مربیان"
-        },
-        {
             "image": "/static/images/our-team/Personals/a7.png",
             "position": "Full stack",
             "name": "سجاد مومنی",
             "linkedIn": "https://www.linkedin.com/in/sajjad-momeni-17ab4778/",
             "category": "مربیان"
-        },
-        {
-            "image": "/static/images/our-team/Personals/a8.png",
-            "position": "Full stack",
-            "name": "امین عسگریان",
-            "linkedIn": "https://www.linkedin.com/in/amin-asgarian/",
-            "category": "برنامه نویسان"
         },
         {
             "image": "/static/images/our-team/Personals/a9.png",
@@ -101,257 +87,117 @@
             "category": "طراحان"
         },
         {
-            "image": "/static/images/our-team/Personals/a16.png",
-            "position": "Full stack",
-            "name": "سبحان امامی",
-            "linkedIn": "https://www.linkedin.com/in/sobhan-emami/",
-            "category": "برنامه نویسان"
-          },
-        {
-            
             "image": "/static/images/our-team/Personals/a17.png",
-            
-            "position": "Front end",  
-            
-            "name": "فهیمه سجادی",  
-            
-            "linkedIn": "https://www.linkedin.com/in/fahimeh-sajadi-50a399202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",  
-            
-            "category": "برنامه نویسان"  
-            
-            },  
-            
-            {  
-            
-            "image": "/static/images/our-team/Personals/a19.png",  
-            
-            "position": "Front end",  
-            
-            "name": "محسن کیانی",  
-            
-            "linkedIn": "https://www.linkedin.com/in/mohsen-kiani-85920a267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",  
-            
-            "category": "برنامه نویسان"  
-            
-            },  
-            
-            {   
-            
-            "image": "/static/images/our-team/Personals/a20.png",   
-            
-            "position": "توسعه دهنده برنامه های کاربردی",   
-            
-            "name": "علی خاوری",   
-            
-            "linkedIn": "https://www.linkedin.com/in/ali-khavari-10b737191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",  
-            
-            "category": "برنامه نویسان"  
-            
-            },  
-            
-            {  
-            
-            "image": "/static/images/our-team/Personals/a21.png",   
-            
-            "position": "طراح گرافیک",   
-            
-            "name": "هدی مهدی",   
-            
-            "linkedIn": "https://www.linkedin.com/in/hoda-mahdi-896855269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",  
-            
-            "category": "طراحان"  
-            
-            }, 
-            {  
-            
-            "image": "/static/images/our-team/Personals/a34.png",  
-            
-            "position": "طراح گرافیک",  
-            
-            "name": "فائزه خانی",  
-            
-            "linkedIn": "",  
-            
-            "category": "طراحان"  
-            
-            }, 
-            {  
-            
-            "image": "/static/images/our-team/Personals/MAHSA.jpg",   
-            
-            "position": "تولید محتوا",   
-            
-            "name": "مهسا قربانی",   
-            
-            "linkedIn": "",  
-            
-            "category": "تولید کنندگان محتوا"  
-            
-            }, 
-            {
-                "image": "/static/images/our-team/Personals/ARYA.jpg",
-                "position": "تولید محتوا",
-                "name": "آریا باغرپور",
-                "linkdin": "",
-                "category": "تولید کنندگان محتوا"
-               },
-
-            
-            {  
-            
-            "image": "/static/images/our-team/Personals/a23.png",  
-            
-            "position": "تولید محتوا",  
-            
-            "name": "مهتاب حافظی",  
-            
-            "linkedIn": "",  
-            
-            "category": "تولید کنندگان محتوا"   
-            
-            },  
-            {  
-            
-            "image": "/static/images/our-team/Personals/milad copy 2.jpg",   
-            
-            "position": "تولید محتوا",   
-            
-            "name": "میلاد فاطمی",   
-            
-            "linkedIn": "",  
-            
-            "category": "تولید کنندگان محتوا"  
-            
-            }, 
-
-            
-            {  
-            
-            "image": "/static/images/our-team/Personals/a25.png",  
-        
-            "position": "تولید محتوا", 
-            
-            "name": "تیام صفریان", 
-            
-            "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",  
-            
-            "category": "تولید کنندگان محتوا"
-            
-            },
-            
-
-            
-            {  
-            
-            "image": "/static/images/our-team/Personals/a27.png",  
-            
-            "position": "Full stack", 
-            
-            "name": "معراج بیغمیان",  
-            
-            "linkedIn": "https://www.linkedin.com/in/meraj-bighamian-7034581a3",  
-            
+            "position": "Front end",
+            "name": "فهیمه سجادی",
+            "linkedIn": "https://www.linkedin.com/in/fahimeh-sajadi-50a399202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
             "category": "برنامه نویسان"
-            
-            },  
-            
-            {  
-            
-            "image": "/static/images/our-team/Personals/a28.png",   
-            
-            "position": "Front end",   
-            
-            "name": "مهدی سلمان زاده",   
-            
-            "linkedIn": "https://www.linkedin.com/in/mehdisa/",  
-            
-            "category": "برنامه نویسان"  
-            
-            }, 
-            
-            {
-            
-            "image": "/static/images/our-team/Personals/a31.png",   
-            
-            "position": "Front end",   
-            
-            "name": "باراد دهقانی",   
-            
-            "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",  
-            
-            "category": "برنامه نویسان"  
-            
-            },
-            {  
-            
-            "image": "/static/images/our-team/Personals/121.jpg",  
-            
-            "position": "Front end",   
-            
-            "name": "امیر محمد اصفهانی زاده",  
-            
-            "linkedIn": "",  
-            
-            "category": "برنامه نویسان"   
-            
-            },  
-            
- 
-            {  
-            
-            "image": "/static/images/our-team/Personals/65.jpg",   
-            
-            "position": "Back end",   
-            
-            "name": "متین نجات بخش",   
-            
-            "linkedIn": "",  
-            
-            "category": "برنامه نویسان"  
-            
-            },  
-                       {  
-            
-            "image": "/static/images/our-team/Personals/a32.png",  
-            
-            "position": "Front end",  
-            
-            "name": "متین جانقربانی",   
-            
-            "linkedIn": "",  
-            
-            "category": "برنامه نویسان"  
-            
-            }, 
-            {  
-            
-            "image": "/static/images/our-team/Personals/a33.png",  
-            
-            "position": "مسئول روابط عمومی",   
-            
-            "name": "گلاره بهرامی",  
-            
-            "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",  
-            
-            "category": "مسئول روابط عمومی"   
-            
-            },   
-
-
-            {  
-            
-            "image": "/static/images/our-team/Personals/nedan.jpg",  
-            
-            "position": "روابط عمومی",   
-            
-            "name": "ندا مشرف",   
-            
-            "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",  
-            
-            "category": "روابط عمومی"  
-            
-            }
-            
+        },
+        {
+            "image": "/static/images/our-team/Personals/a20.png",
+            "position": "توسعه دهنده برنامه های کاربردی",
+            "name": "علی خاوری",
+            "linkedIn": "https://www.linkedin.com/in/ali-khavari-10b737191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a21.png",
+            "position": "طراح گرافیک",
+            "name": "هدی مهدی",
+            "linkedIn": "https://www.linkedin.com/in/hoda-mahdi-896855269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "category": "طراحان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a34.png",
+            "position": "طراح گرافیک",
+            "name": "فائزه خانی",
+            "linkedIn": "",
+            "category": "طراحان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/MAHSA.jpg",
+            "position": "تولید محتوا",
+            "name": "مهسا قربانی",
+            "linkedIn": "",
+            "category": "تولید کنندگان محتوا"
+        },
+        {
+            "image": "/static/images/our-team/Personals/ARYA.jpg",
+            "position": "تولید محتوا",
+            "name": "آریا باغرپور",
+            "linkdin": "",
+            "category": "تولید کنندگان محتوا"
+        },
+        {
+            "image": "/static/images/our-team/Personals/milad copy 2.jpg",
+            "position": "تولید محتوا",
+            "name": "میلاد فاطمی",
+            "linkedIn": "",
+            "category": "تولید کنندگان محتوا"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a25.png",
+            "position": "تولید محتوا",
+            "name": "تیام صفریان",
+            "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
+            "category": "تولید کنندگان محتوا"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a27.png",
+            "position": "Full stack",
+            "name": "معراج بیغمیان",
+            "linkedIn": "https://www.linkedin.com/in/meraj-bighamian-7034581a3",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a28.png",
+            "position": "Front end",
+            "name": "مهدی سلمان زاده",
+            "linkedIn": "https://www.linkedin.com/in/mehdisa/",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a31.png",
+            "position": "Front end",
+            "name": "باراد دهقانی",
+            "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/121.jpg",
+            "position": "Front end",
+            "name": "امیر محمد اصفهانی زاده",
+            "linkedIn": "",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/65.jpg",
+            "position": "Back end",
+            "name": "متین نجات بخش",
+            "linkedIn": "",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a32.png",
+            "position": "Front end",
+            "name": "متین جانقربانی",
+            "linkedIn": "",
+            "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a33.png",
+            "position": "مسئول روابط عمومی",
+            "name": "گلاره بهرامی",
+            "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
+            "category": "مسئول روابط عمومی"
+        },
+        {
+            "image": "/static/images/our-team/Personals/nedan.jpg",
+            "position": "روابط عمومی",
+            "name": "ندا مشرف",
+            "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",
+            "category": "روابط عمومی"
+        }
     ],
     "roles": [
         "همه",
@@ -364,5 +210,5 @@
         "روابط عمومی",
         "بازاریاب دیجیتال",
         "دستیار مدیر"
-      ]
+    ]
 }
