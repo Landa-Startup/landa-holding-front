@@ -148,7 +148,7 @@ export default function Navbar({
         <ul className="menu absolute h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
             <li
-              className="font-condensed font-bold first:text-primary"
+              className="font-condensed font-bold"
               key={label}
               onClick={() => handleLinkClick()}
             >
@@ -165,7 +165,7 @@ export default function Navbar({
               <IconDown />
             </div>
 
-            <ul>
+            <ul className='mx-4'>
               {submenuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li key={label} onClick={() => handleLinkClick()}>
