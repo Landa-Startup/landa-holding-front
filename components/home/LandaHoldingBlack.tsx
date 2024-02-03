@@ -48,7 +48,7 @@ export default async function LandaHoldingBlack() {
             <span className="rtl:tracking-0 font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
               {t('LandaHolding')}
             </span>
-            <span className="border-b border-black pb-3 text-right md:text-center font-gilda text-3xl font-normal text-black md:border-none md:text-start md:text-4xl">
+            <span className="border-b border-black pb-3 text-right md:text-center font-gilda text-3xl font-normal text-black md:border-none md:text-4xl">
               {t('EntrepreneurCenter')}
               <br />
             </span>
