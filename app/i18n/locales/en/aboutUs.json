@@ -44,12 +44,12 @@
   ],
   "Our mission and purpose": [
     {
-      "title":"Our mission and purpose",
-      "text":"Our mission is to identify and evaluate the most innovative startup plans in order to minimize the probability of failure for the investors who have placed their trust in us. On the other hand, at Landa International Holding, we seek to provide all the necessary tools and resources to our customers; A way to ensure success for both parties.",
+      "title": "Our mission and purpose",
+      "text": "Our mission is to identify and evaluate the most innovative startup plans in order to minimize the probability of failure for the investors who have placed their trust in us. On the other hand, at Landa International Holding, we seek to provide all the necessary tools and resources to our customers; A way to ensure success for both parties.",
       "reverse": true,
       "show": true,
       "index": 2,
-      "addedClass":""
+      "addedClass": ""
     }
   ],
   "LANDAStartups": [
@@ -87,22 +87,50 @@
   "itemList": [
     "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other.",
     "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities.",
-     "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events.",
-     "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
-     "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
-     "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
+    "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events.",
+    "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
+    "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
+    "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
   ],
   "companies": [
-    {"name": "ACADEMY", "logo": "3.png", "link": "https://landaholding.com/academy"},
-    {"name": "DIACO", "logo": "5.png", "link": "https://Diacocenter.com"},
-    {"name": "FARAZAMAN", "logo": "7.png", "link": "https://landaholding.com/acceleration"},
-    {"name": "FOROUGH", "logo": "9.png", "link": "/acceleration"},
-    {"name": "IRIMMIGRATION", "logo": "2.png", "link": "https://Irimmigration.ca"},
-    {"name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/"},
-    {"name": "TOLU ROSHAN", "logo": "4.png", "link": "/investment"},
-    {"name": "VISION RAFT", "logo": "6.png", "link": "https://Visionraft.com"},
-    {"name": "HANDI CRAFTS", "logo": "8.png", "link": "/"},
-    {"name": "LANDA GENE", "logo": "10.png", "link": "/landa-gene"}
+    {
+      "name": "ACADEMY",
+      "logo": "3.png",
+      "link": "https://academy.landaholding.com/"
+    },
+    { "name": "DIACO", "logo": "5.png", "link": "https://Diacocenter.com" },
+    {
+      "name": "FARAZAMAN",
+      "logo": "7.png",
+      "link": "https://landaholding.com/acceleration"
+    },
+    {
+      "name": "FOROUGH",
+      "logo": "9.png",
+      "link": "https://landaholding.com/acceleration"
+    },
+    {
+      "name": "IRIMMIGRATION",
+      "logo": "2.png",
+      "link": "https://Irimmigration.ca"
+    },
+    { "name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/" },
+    {
+      "name": "TOLU ROSHAN",
+      "logo": "4.png",
+      "link": "https://landaholding.com/investment"
+    },
+    {
+      "name": "VISION RAFT",
+      "logo": "6.png",
+      "link": "https://Visionraft.com"
+    },
+    { "name": "HANDI CRAFTS", "logo": "8.png", "link": "#" },
+    {
+      "name": "LANDA GENE",
+      "logo": "10.png",
+      "link": "https://landagene.landaholding.com/"
+    }
   ],
   "professionals": "professionals",
   "boardOfDirectors": "board Of Directors",

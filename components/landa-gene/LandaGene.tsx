@@ -103,64 +103,61 @@ export default function LandaGene() {
   }));
 
   return (
-    <div className='my-20 flex flex-col items-start gap-24 '>
-      <div className='mx-auto flex w-10/12 flex-col gap-x-8 md:flex-row md:justify-between'>
-        <div className='basis-1/4'>
+    <div className="my-20 flex flex-col items-start gap-24 ">
+      <div className="mx-auto flex w-10/12 flex-col gap-x-8 md:flex-row md:justify-between">
+        <div className="basis-1/4">
           <Image
-            src='/static/images/gene-logo.svg'
-            alt='gene-logo'
-            className='hidden w-3/5 md:block'
+            src="/static/images/gene-logo.svg"
+            alt="gene-logo"
+            className="hidden w-3/5 md:block"
             width={100}
             height={100}
           />
         </div>
-        <div className='basis-3/4 '>
-          <p
-            className='text-justify font-sans text-[15px] leading-[48px] ltr:tracking-[2px] text-black lg:text-[20px]'>
+        <div className="basis-3/4 ">
+          <p className="text-justify font-sans text-[15px] leading-[36px]  md:leading-[48px] ltr:tracking-[2px] text-black lg:text-[20px]">
             {t('textUp')}
           </p>
         </div>
       </div>
 
-      <div className='mx-auto flex w-10/12 flex-col gap-8 md:flex-row-reverse md:justify-between'>
-        <div className='basis-2/5'>
+      <div className="mx-auto flex w-10/12 flex-col gap-8 md:flex-row-reverse md:justify-between">
+        <div className="basis-2/5">
           <Image
-            src='/static/images/gene.svg'
-            alt='gene-1'
-            className='h-full w-full p-0'
+            src="/static/images/gene.svg"
+            alt="gene-1"
+            className="h-full w-full p-0"
             width={100}
             height={100}
           />
         </div>
-        <div className='basis-3/5'>
-          <p
-            className='w-full text-justify font-sans text-[15px]  leading-normal tracking-[0px] text-black  md:leading-[28px] lg:text-[20px] lg:leading-[40px]'>
+        <div className="basis-3/5">
+          <p className="w-full text-justify font-sans text-[15px] text-black leading-[36px] lg:text-[20px] md:leading-[48px]">
             {t('textMid')}
           </p>
         </div>
       </div>
 
-      <div className='mx-auto flex w-10/12 flex-col gap-8 md:flex-row md:justify-between'>
-        <div className='basis-2/5 '>
+      <div className="mx-auto flex w-10/12 flex-col gap-8 md:flex-row md:justify-between">
+        <div className="basis-2/5 ">
           <Image
-            src='/static/images/gene-2.svg'
-            alt='gene-2'
-            className='h-full w-full p-0'
+            src="/static/images/gene-2.svg"
+            alt="gene-2"
+            className="h-full w-full p-0"
             width={100}
             height={100}
           />
         </div>
-        <div className='basis-3/5 '>
-          <p
-            className='w-full text-justify font-sans text-[15px] leading-normal tracking-[0px] text-black  md:leading-[28px] lg:text-[20px] lg:leading-[50px]'>
+        <div className="basis-3/5 ">
+          <p className="w-full text-justify font-sans text-[15px] text-black leading-[36px] lg:text-[20px] md:leading-[48px]">
             {t('textDown')}
           </p>
         </div>
       </div>
 
-      <div className='flex h-auto w-full items-start bg-[#F8F5F0] px-[32px] py-[31px]'>
-        <div className='flex h-auto w-full flex-col  justify-between p-0'>
-          <div className='flex w-full flex-col   p-0'>
+      <div className="flex h-auto w-10/12 mx-auto bg-[#F8F5F0] px-[32px] py-[31px]">
+        <div className="flex h-auto w-full flex-col  justify-between p-0">
+          <div className="flex w-full flex-col   p-0">
             <p
               className={`w-full text-justify font-sans text-[18px] leading-normal  text-primary ${
                 lang === 'en' ? 'md:tracking-[2px]' : ''
@@ -170,9 +167,12 @@ export default function LandaGene() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className='mt-10 flex w-full flex-col items-center'>
-            <div className='my-4 grid w-full grid-cols-1 gap-y-2 md:flex md:w-3/5 md:flex-col md:lg:w-[35%]'>
-              <div className='flex w-full flex-col gap-x-4 md:flex-row'>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="mt-10 flex w-full flex-col items-center"
+          >
+            <div className="my-4 grid w-full grid-cols-1 gap-y-2 md:flex md:w-3/5 md:flex-col md:lg:w-[35%]">
+              <div className="flex w-full flex-col gap-x-4 md:flex-row">
                 <LandaGeneInput
                   register={register}
                   errors={errors}
@@ -184,42 +184,42 @@ export default function LandaGene() {
                 />
               </div>
 
-              <div className='col-span-1 w-full'>
+              <div className="col-span-1 w-full">
                 <Input
                   register={register}
                   errors={errors}
-                  nameInput='email'
-                  type='text'
+                  nameInput="email"
+                  type="text"
                   required={t('emailRequired')}
-                  patternValue='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
+                  patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                   patternMessage={t('emailErrorMessage')}
                   placeholder={t('emailPlaceholder')}
-                  className='input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
-                  containerClass='w-full'
-                  labelClass=''
+                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                  containerClass="w-full"
+                  labelClass=""
                 />
               </div>
 
-              <div className='col-span-1 w-full'>
+              <div className="col-span-1 w-full">
                 <Input
                   register={register}
                   errors={errors}
-                  nameInput='company_name'
-                  type='text'
-                  required=''
-                  patternValue=''
-                  patternMessage=''
+                  nameInput="company_name"
+                  type="text"
+                  required=""
+                  patternValue=""
+                  patternMessage=""
                   placeholder={t('companyNamePlaceholder')}
-                  className='input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
-                  containerClass='w-full'
-                  labelClass=''
+                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                  containerClass="w-full"
+                  labelClass=""
                 />
               </div>
             </div>
-            <div className='w-full text-center md:w-auto'>
+            <div className="w-full text-center md:w-auto">
               <Button
-                type='submit'
-                bgColor='Primary'
+                type="submit"
+                bgColor="Primary"
                 disabled={errorsList[0] ? true : false}
                 lang={lang}
               />
@@ -230,10 +230,6 @@ export default function LandaGene() {
         </div>
       </div>
     </div>
-
-
-
-
 
     // <div className='container w-10/12 mx-auto flex flex-col items-start gap-[3px] '>
     //   <div className='flex w-full flex-col md:flex-row md:justify-between md:ga my-20'>

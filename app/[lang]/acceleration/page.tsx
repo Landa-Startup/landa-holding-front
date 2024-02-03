@@ -26,7 +26,7 @@ export default async function Page({
         backgroundImage="../public/static/images/acceleration/banner.png"
         leftImage="Landa.svg"
         showButton={true}
-        link='/StartupsForm'
+        link="/StartupsForm"
         lang={lang}
       />
       <div className="relative mt-6 hidden h-[284px] sm:block md:hidden md:w-[490px] ">
@@ -53,7 +53,7 @@ export default async function Page({
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
         <div className={`mt-6 flex flex-col md:flex-row ltr:gap-2 rtl:gap-12`}>
-          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10">
+          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10 xl:mt-7">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
@@ -107,7 +107,7 @@ export default async function Page({
             }
           />
         </div>
-        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] md:mx-10 md:text-left ltr:tracking-[2px] rtl:md:text-right">
+        <div className="my-11 flex gap-2 text-center font-barlow text-xl leading-9 text-[#55422A] md:ml-[11.5rem] md:mr-[8.5rem] md:text-left ltr:tracking-[2px] rtl:md:text-right">
           <Circle />
           {t('text')}
         </div>

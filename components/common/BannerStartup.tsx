@@ -32,7 +32,7 @@ export default function BannerStartUp({
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} // Adding overlay with transparency
       >
         {/* Content Overlay */}
-        <div className="relative flex h-[650px] items-stretch justify-center lg:h-[512px] lg:justify-start">
+        <div className="relative flex h-[650px] items-stretch justify-center lg:justify-start">
           <div className="flex flex-col items-center justify-center gap-6 text-center md:m-auto lg:m-auto">
             {/* Text Content */}
             <p

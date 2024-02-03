@@ -31,7 +31,7 @@ export default function AboutUsLandaHolding() {
     // />
     // </div>
     <div className="flex flex-col items-start justify-between bg-[#FAFAFA] p-10 md:px-28 md:py-10 lg:flex-row">
-      <div className="space-y-2 p-2 text-black md:px-0">
+      <div className="space-y-2 p-2 md:pt-8 text-black md:px-0">
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
@@ -40,7 +40,7 @@ export default function AboutUsLandaHolding() {
         </p>
       </div>
       <Image
-        className="brightness-95 contrast-[1.15] drop-shadow-md"
+        className="brightness-95 contrast-[1.15] drop-shadow-md mt-8"
         loading="lazy"
         src="/static/images/About/team.jpg"
         width={661}

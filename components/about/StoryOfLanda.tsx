@@ -24,7 +24,7 @@ export default function StoryOfLanda() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className="mt-4 px-10 md:pl-0">
+          <div className="mt-4 px-10 md:px-0 md:pl-0">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
               {t('TheStoryOfLanda', { returnObjects: true })[0].title}
             </span>
