@@ -1,6 +1,7 @@
+'use client'
 import PrimaryDot from '../icons/acceleration/PrimaryDot';
 import Image from 'next/image';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
 // TODO: define props in types file and import it
@@ -16,7 +17,7 @@ type Props = {
   itemsList?: Array<string>;
 };
 
-export default async function AccelerationCard({
+export default function AccelerationCard({
   addedClass,
   title,
   slogan,
@@ -26,9 +27,9 @@ export default async function AccelerationCard({
   secondImageSrc,
   itemsList
 }: Props) {
-  const lang = useLang.getState().lang;
+  const lang = useLang().lang;
 
-  const { t } = await useTranslation(lang, 'acceleration');
+  const { t } = useTranslation(lang, 'acceleration');
 
   return (
     <>

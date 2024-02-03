@@ -1,10 +1,11 @@
+'use client'
 import AboutusPersonalTabs from './AboutusPersonalTabs';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
-export default async function AboutUsProfile() {
-  const lang = useLang.getState().lang;
-  const { t } = await useTranslation(lang, 'aboutUs');
+export default function AboutUsProfile() {
+  const lang = useLang().lang;
+  const { t } = useTranslation(lang, 'aboutUs');
 
   return (
     <div className="mb-10 flex w-full flex-col justify-center">

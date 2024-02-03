@@ -1,7 +1,8 @@
-import { useTranslation } from 'app/i18n';
+'use client'
+import { useTranslation } from 'app/i18n/client';
 import Image from 'next/image';
 
-export default async function BannerStartUp({
+export default function BannerStartUp({
   image,
   title,
   logo,
@@ -12,7 +13,7 @@ export default async function BannerStartUp({
   logo: string;
   lang: string;
 }) {
-  const { t } = await useTranslation(lang, 'aboutUs');
+  const { t } = useTranslation(lang, 'aboutUs');
 
   return (
     <div className="relative md:h-[520px]">

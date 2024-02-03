@@ -1,11 +1,12 @@
-import { useTranslation } from 'app/i18n';
+'use client'
+import { useTranslation } from 'app/i18n/client';
 import Image from 'next/image';
 
 import { useLang } from 'stores/langStore';
 
-export default async function KeyDifferentiating() {
-  const lang = useLang.getState().lang;
-  const { t } = await useTranslation(lang, 'aboutUs');
+export default function KeyDifferentiating() {
+  const lang = useLang().lang;
+  const { t } = useTranslation(lang, 'aboutUs');
 
   return (
     // TODO: don't use [0], [1] for translations
