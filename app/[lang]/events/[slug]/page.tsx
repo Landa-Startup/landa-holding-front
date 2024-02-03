@@ -88,7 +88,7 @@ export default function Page({
           <div className="flex w-2/3 flex-col gap-4">
             {cardData.map((card, index) => {
               return (
-                <div key={index}>
+                <div key={index} className='flex flex-col gap-4'>
                   <p className="font-barlow">{card.description1}</p>
                   <p className="font-barlow">{card.description2}</p>
                   <div className="mb-12 mt-5 grid grid-cols-2 justify-around gap-10 font-gilda md:grid-cols-4">
