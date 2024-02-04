@@ -144,73 +144,95 @@
         "category": "content creators"
        },
 
-        {
-          "image": "/static/images/our-team/Personals/a27.png",
-          "position": "Full Stack",
-          "name": "Meraj Bighamian",
-          "linkedIn": "https://www.linkedin.com/in/meraj-bighamian-7034581a3",
-          "category": "programmers"
-        },
-        {
-          "image": "/static/images/our-team/Personals/a28.png",
-          "position": "Front-end",
-          "name": "Mahdi Salmanzadeh",
-          "linkedIn": "https://www.linkedin.com/in/mehdisa/",
-          "category": "programmers"
-        },
-        {
-          "image": "/static/images/our-team/Personals/a31.png",
-          "position": "Front-end",
-          "name": "Barad Dehghani",
-          "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
-          "category": "programmers"
-        },
-        {
-          "image": "/static/images/our-team/Personals/a32.png",
-          "position": "Front-end",
-          "name": "Matin Janghorbani",
-          "linkedIn": "",
-          "category": "programmers"
-        },
-        {
-          "image": "/static/images/our-team/Personals/65.jpg",
-          "position": "Back-end",
-          "name": "Matin Nejatbakhsh",
-          "linkedIn": "",
-          "category": "programmers"
-        }, 
-       {
-          "image": "/static/images/our-team/Personals/121.jpg",
-          "position": "Front-end",
-          "name": "Amir Mohammad Esfahanizade",
-          "linkedIn": "",
-          "category": "programmers"
-        },
-        {
-          "image": "/static/images/our-team/Personals/a33.png",
-          "position": "Public Relations Officer",
-          "name": "Gelareh Bahrami",
-          "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
-          "category": " officer"
-        },
-        {
-          "image": "/static/images/our-team/Personals/Nedan.jpg",
-          "position": "public relations",
-          "name": "Neda Mosharaf",
-          "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",
-          "category": "public relations"
-        }
-    ],
-    "roles": [
-      "All",
-      "Managers",
-      "Mentors",
-      "Programmers",
-      "Designers",
-      "Content Creators",
-      "Accountant",
-      "Public Relations",
-      "Digital Marketer",
-      "Manager Assistant"
-    ]
+    {
+      "image": "/static/images/our-team/Personals/milad copy 2.jpg",
+      "position": "Content Creator",
+      "name": "Milad Fatemi",
+      "linkedIn": "https://www.linkedin.com/in/milad-fatemi-48157b78",
+      "category": "content creators"
+    },
+    {
+      "image": "/static/images/our-team/Personals/MAHSA.jpg",
+      "position": "Content Creator",
+      "name": "Mahsa Ghorbani",
+      "linkedIn": "",
+      "category": "content creators"
+    },
+    {
+      "image": "/static/images/our-team/Personals/ARYA.jpg",
+      "position": "Content Creator",
+      "name": "Aria Bagherpour",
+      "linkdin": "",
+      "category": "content creators"
+    },
+
+    {
+      "image": "/static/images/our-team/Personals/a27.png",
+      "position": "Full Stack",
+      "name": "Meraj Bighamian",
+      "linkedIn": "https://www.linkedin.com/in/meraj-bighamian-7034581a3",
+      "category": "programmers"
+    },
+    {
+      "image": "/static/images/our-team/Personals/a28.png",
+      "position": "Front-end",
+      "name": "Mahdi Salmanzadeh",
+      "linkedIn": "https://www.linkedin.com/in/mehdisa/",
+      "category": "programmers"
+    },
+    {
+      "image": "/static/images/our-team/Personals/a31.png",
+      "position": "Front-end",
+      "name": "Barad Dehghani",
+      "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
+      "category": "programmers"
+    },
+    {
+      "image": "/static/images/our-team/Personals/a32.png",
+      "position": "Front-end",
+      "name": "Matin Janghorbani",
+      "linkedIn": "",
+      "category": "programmers"
+    },
+    {
+      "image": "/static/images/our-team/Personals/65.jpg",
+      "position": "Back-end",
+      "name": "Matin Nejatbakhsh",
+      "linkedIn": "",
+      "category": "programmers"
+    },
+    {
+      "image": "/static/images/our-team/Personals/121.jpg",
+      "position": "Front-end",
+      "name": "Amir Mohammad Esfahanizade",
+      "linkedIn": "",
+      "category": "programmers"
+    },
+    {
+      "image": "/static/images/our-team/Personals/a33.png",
+      "position": "Public Relations Officer",
+      "name": "Gelareh Bahrami",
+      "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
+      "category": " officer"
+    },
+    {
+      "image": "/static/images/our-team/Personals/Nedan.jpg",
+      "position": "public relations",
+      "name": "Neda Mosharaf",
+      "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",
+      "category": "public relations"
+    }
+  ],
+  "roles": [
+    "All",
+    "Managers",
+    "Mentors",
+    "Programmers",
+    "Designers",
+    "Content Creators",
+    "Accountant",
+    "Public Relations",
+    "Digital Marketer",
+    "Manager Assistant"
+  ]
 }

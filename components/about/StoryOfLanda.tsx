@@ -1,12 +1,13 @@
+'use client'
 import Image from 'next/image';
 
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
-export default async function StoryOfLanda() {
-  const lang = useLang.getState().lang;
+export default function StoryOfLanda() {
+  const lang = useLang().lang;
 
-  const { t } = await useTranslation(lang, 'aboutUs');
+  const { t } = useTranslation(lang, 'aboutUs');
 
   return (
     <div className="flex flex-col gap-12 pb-10 ">
@@ -23,7 +24,7 @@ export default async function StoryOfLanda() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className="mt-4 px-10 md:pl-0">
+          <div className="mt-4 px-10 md:px-0 md:pl-0">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
               {t('TheStoryOfLanda', { returnObjects: true })[0].title}
             </span>

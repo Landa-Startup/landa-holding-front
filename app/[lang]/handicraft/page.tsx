@@ -4,7 +4,6 @@ import { useTranslation } from 'app/i18n';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-
 export const metadata: Metadata = {
   title: 'Landa Holding | Handicrafts',
   description:
@@ -28,31 +27,32 @@ export default async function Page({
       />
       <div className="mx-8 my-14 flex flex-col justify-center gap-8 md:mx-24">
         <div className="relative flex">
-          <div className='pr-6 '>
+          <div className="pr-6 ">
             <Image
               className="hidden md:block"
               src="/static/images/handicraftLogo.png"
               alt="handicraft"
               width={2800}
               height={1000}
-            /></div>
+            />
+          </div>
           <Image
             className="absolute top-1/4 object-cover opacity-20 md:hidden"
             src="/static/images/handicraftLogo.png"
             alt="handicraft"
             layout="fill"
           />
-          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] tracking-wider text-black md:mb-16 md:mr-10 md:mt-5">
+          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] tracking-wider text-black md:mr-10 md:mt-20">
             {t('paragraph1')}
           </p>
         </div>
-        <div className="relative flex flex-col-reverse justify-center gap-5 overflow-hidden md:flex-row">
+        <div className="relative flex flex-col-reverse justify-between gap-5 overflow-hidden md:flex-row">
           <p className="mt-7 text-justify font-barlow text-base font-normal leading-[45px] tracking-wider text-black md:mt-0 md:h-[720px] md:w-[652px]">
             {t('paragraph2')}
             <br />
             {t('paragraph3')}
           </p>
-          <div className="absolute -bottom-56 -right-40 h-[650px] w-screen md:hidden">
+          <div className="absolute bottom-20 -right-7 h-[650px] w-screen md:hidden">
             <Image
               className=" object-cover opacity-20 md:hidden"
               src="/static/images/handicraftLogo.png"

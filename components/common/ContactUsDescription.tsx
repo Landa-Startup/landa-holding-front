@@ -1,17 +1,18 @@
+'use client'
 import Phone from '../icons/IconPhone';
 import Email from '../icons/IconEmail';
 import Location from '../icons/IconLocation';
 import Link from 'next/link';
 import IconLinkedinB from '../icons/IconLinkedinB';
 import IconEmailB from '../icons/IconEmailB';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import InstagramIconNew from '../icons/socialMediaIcons/InstagramIconNew';
 import WhatsappIconNew from '../icons/socialMediaIcons/WhatsappIconNew';
-export default async function ContactUsDescription() {
-  const lang = useLang.getState().lang;
+export default function ContactUsDescription() {
+  const lang = useLang().lang;
 
-  const { t } = await useTranslation(lang, 'contact');
+  const { t } = useTranslation(lang, 'contact');
 
   return (
     <div className="h-full">

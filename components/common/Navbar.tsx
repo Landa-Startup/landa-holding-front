@@ -5,6 +5,7 @@ import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
+// import { useRouter } from 'next/navigation';
 // import { i18n } from 'next-i18next';
 // import { getCookie } from 'cookies-next';
 // import { useLang } from 'stores/langStore';
@@ -32,6 +33,12 @@ export default function Navbar({
   //   i18n?.changeLanguage(language);
   //   // setLanguage(language)
   //   // setRendered(true);
+  // },[])
+
+  // const router = useRouter()
+
+  // useEffect(() => {
+  //   router.refresh();
   // },[])
 
   const drawerRef = useRef<HTMLInputElement>(null);
