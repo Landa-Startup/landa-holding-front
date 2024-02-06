@@ -35,10 +35,10 @@ export default function InvestorRegistrationForm() {
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleSuccessChange,
-  } = useSubmit((s) => s)
+    handleSuccessChange
+  } = useSubmit((s) => s);
 
-  const lang = useLang((s) => s.lang)
+  const lang = useLang((s) => s.lang);
 
   const { t } = useTranslation(lang, 'formComponent');
 
@@ -98,10 +98,10 @@ export default function InvestorRegistrationForm() {
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-        <div className='bg-[#F8F5F0]'>
-        <FormTitle formName='investorForm' />
+        <div className="bg-[#F8F5F0]">
+          <FormTitle formName="investorForm" />
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
           <div className="mb-6 grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
               register={register}
@@ -121,7 +121,7 @@ export default function InvestorRegistrationForm() {
                 nameInput="birthDate"
                 type="date"
                 label={t('birthDate')}
-                required={t('birthDateRequired')}
+                required=""
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
                 patternMessage={t('birthDateErrorMessage')}
                 placeholder={t('birthDatePlaceholder')}
@@ -133,6 +133,7 @@ export default function InvestorRegistrationForm() {
             <CountryInput
               register={register}
               errors={errors}
+              required=""
               nameInput="countryOfResidence"
             />
 
@@ -140,79 +141,54 @@ export default function InvestorRegistrationForm() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="companyName"
+                nameInput="phone"
                 type="text"
-                label={t('companyName')}
-                required={t('companyNameRequired')}
-                placeholder={t('companyNamePlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                label={t('phoneNumber')}
+                required={t('phoneNumberRequired')}
+                patternValue="^[0-9]{11}$"
+                patternMessage={t('phoneNumberErrorMessage')}
+                placeholder={t('phoneNumberPlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
-                patternValue=""
-                patternMessage=""
               />
             </div>
 
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="interests"
-                type="text"
-                label={t('investorForm', { returnObjects: true }).interests}
-                required={
-                  t('investorForm', { returnObjects: true }).interestsRequired
-                }
-                placeholder={
-                  t('investorForm', { returnObjects: true })
-                    .interestsPlaceholder
-                }
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-                patternValue={''}
-                patternMessage={''}
-              />
-            </div>
+            <div className="col-span-1 md:col-span-3">
+              <div className="">
+                <TextArea
+                  title={
+                    t('investorForm', { returnObjects: true }).preferredAreas
+                  }
+                  register={register}
+                  errors={errors}
+                  placeholder={
+                    t('investorForm', { returnObjects: true })
+                      .preferredAreasPlaceholder
+                  }
+                  nameTextArea="preferredAreas"
+                  patternMessage=""
+                  patternValue=""
+                  required=""
+                />
+              </div>
 
-            <div className="col-span-1 md:col-span-2">
-              <TextArea
-                title={
-                  t('investorForm', { returnObjects: true }).preferredAreas
-                }
-                register={register}
-                errors={errors}
-                placeholder={
-                  t('investorForm', { returnObjects: true })
-                    .preferredAreasPlaceholder
-                }
-                nameTextArea="preferredAreas"
-                patternMessage=""
-                patternValue=""
-                required={
-                  t('investorForm', { returnObjects: true })
-                    .preferredAreasRequired
-                }
-              />
-            </div>
-
-            <div className="col-span-1 md:col-span-2">
-              <TextArea
-                title={t('howDidYouKnowUs')}
-                register={register}
-                errors={errors}
-                placeholder={t('howDidYouKnowUsPlaceholder')}
-                nameTextArea="howDidYouKnowUs"
-                patternMessage=""
-                patternValue=""
-                required={t('howDidYouKnowUsRequired')}
-              />
+              <div className="">
+                <TextArea
+                  title={t('howDidYouKnowUs')}
+                  register={register}
+                  errors={errors}
+                  placeholder={t('howDidYouKnowUsPlaceholder')}
+                  nameTextArea="howDidYouKnowUs"
+                  patternMessage=""
+                  patternValue=""
+                  required=""
+                />
+              </div>
             </div>
           </div>
           <div className="mx-auto w-full pb-4 md:w-auto">
             {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
-            <Button
-             type='submit'
-             bgColor='Primary'
-            />
+            <Button type="submit" bgColor="Primary" />
           </div>
         </form>
         <NotificationSendForm />
