@@ -9,7 +9,7 @@
   "aboutLandaHolding": [
     {
       "title": "About Landa Holding",
-      "text": "We are a team of Angel Investors who help you make your own team, define your business model, and increase the value of your startup in international markets. What distinguishes us and makes us unique is our assistance in attracting resources and investment, inviting international investors and business associates, in addition to our entrepreneurs, that will all lead to success. Landa Holding aims to gather all resources from all over the world and introduce the best investment opportunities for start-up businesses.",
+      "text": "Landa International Holding is composed of ten Iranian and Canadian subsidiary corporations, each of which maintains an operational office in Tehran, Isfahan, Toronto, and Vancouver. Our objective is to provide financial backing to innovative entrepreneurs and assist them throughout the entire process of conceiving and establishing a global venture. Landa is distinguished by its cross-border perspective, which affords your company the chance to attract capital from international investors. We are a team of Angel Investors who help you make your own team, define your business model, and increase the value of your startup in international markets. What distinguishes us and makes us unique is our assistance in attracting resources and investment, inviting international investors and business associates, in addition to our entrepreneurs, that will all lead to success. Landa Holding aims to gather all resources from all over the world and introduce the best investment opportunities for start-up businesses.",
       "reverse": true,
       "show": true,
       "index": 2,
@@ -120,7 +120,7 @@
     },
     { "name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/" },
     {
-      "name": "TOLU ROSHAN",
+      "name": "TOLU",
       "logo": "4.png",
       "link": "https://landaholding.com/investment"
     },
@@ -129,7 +129,7 @@
       "logo": "6.png",
       "link": "https://Visionraft.com"
     },
-    { "name": "HANDI CRAFTS", "logo": "8.png", "link": "#" },
+    { "name": "LANDA CRAFTS", "logo": "8.png", "link": "#" },
     {
       "name": "LANDA GENE",
       "logo": "10.png",
@@ -139,18 +139,7 @@
   "professionals": "professionals",
   "boardOfDirectors": "board Of Directors",
   "boardMemebers": [
-    {
-      "image": "/static/images/our-team/Personals/a1.png",
-      "name": "Rasul Moraimehr",
-      "position": "Founder & CEO",
-      "links": {
-        "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
-        "whatsapp": "wa.me/+989134233863",
-        "email": "mailto:rasoulmoradimehr@gmail.com",
-        "website": "https://moradimehr.com/",
-        "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=="
-      }
-    },
+
     {
       "image": "/static/images/About/mjafari.jpg",
       "name": "Morteza Jafari",
@@ -164,9 +153,22 @@
       }
     },
     {
+      "image": "/static/images/our-team/Personals/a1.png",
+      "name": "Rasul Moraimehr",
+      "position": " Co Founder & CEO",
+      "links": {
+        "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
+        "whatsapp": "wa.me/+989134233863",
+        "email": "mailto:rasoulmoradimehr@gmail.com",
+        "website": "https://moradimehr.com/",
+        "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=="
+      }
+    },
+
+    {
       "image": "/static/images/our-team/Personals/a2.png",
       "name": "Hadi Hasanpoor",
-      "position": "COTB",
+      "position": "Co Founder & CEO",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",
