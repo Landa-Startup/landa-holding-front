@@ -23,18 +23,18 @@ export default function KeyDifferentiating() {
             }
           </p>
           <span className="font-bold text-primary md:ltr:ml-10 md:rtl:mr-10">
-            {
+            {/* {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .textTitle
-            }
+            } */}
           </span>
-          <ul className="list-decimal md:ltr:ml-16 rtl:mr-8 md:rtl:mr-16">
+          {/* <ul className="list-decimal md:ltr:ml-16 rtl:mr-8 md:rtl:mr-16">
             {t('itemList', { returnObjects: true }).map(
               (item: string, index: number) => (
                 <li key={index}>{item}</li>
               )
             )}
-          </ul>
+          </ul> */}
         </div>
       </div>
       <div className="hidden items-end md:flex">

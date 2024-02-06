@@ -33,8 +33,8 @@ export default async function HomeOurTeam() {
           width={789}
           height={243}
           alt="OurTeam"
-          className="mb-9 hidden h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
-          src="/static/images/Home/OurTeam/desktop.jpg"
+          className="mb-9 hidden h-[284px] w-[444px] object-cover md:block md:h-[973px] md:w-[1192px]"
+          src="/static/images/Home/OurTeam/ourteam.png"
         />
         <Image
           loading="lazy"
