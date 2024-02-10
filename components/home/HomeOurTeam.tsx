@@ -34,7 +34,7 @@ export default async function HomeOurTeam() {
           height={243}
           alt="OurTeam"
           className="mb-9 hidden h-[284px] w-[444px] object-cover md:block md:h-[973px] md:w-[1192px]"
-          src="/static/images/Home/OurTeam/ourteam.png"
+          src="/static/images/Home/OurTeam/ourteam1.png"
         />
         <Image
           loading="lazy"
