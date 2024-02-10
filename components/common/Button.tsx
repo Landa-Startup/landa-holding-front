@@ -57,7 +57,7 @@ export default function Button({
       {/* TODO: use i18n in this component */}
       {isVisitSize && !text && (
         <span className="absolute inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
-          {lang === "en" ? "Visit Now" : "مشاهده کنید"}
+          {lang === "en" ? "Join Us" : "به شرکای تجاری ما بپیوندید"}
         </span>
       )}
     </button>
