@@ -35,7 +35,7 @@ export default function AboutUsLandaHolding() {
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
-        <p className="mb-20  ml-0 mt-4 text-justify font-barlow text-lg font-normal tracking-wide  md:mt-8 lg:w-[517px]">
+        <p className="mb-20  ml-0 mt-4 text-justify font-barlow text-lg font-normal tracking-wide  md:mt-8 lg:w-[548px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>

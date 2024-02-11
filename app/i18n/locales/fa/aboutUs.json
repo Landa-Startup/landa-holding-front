@@ -9,7 +9,7 @@
   "aboutLandaHolding": [
     {
       "title": "درباره هلدینگ لاندا",
-      "text": "هلدینگ بین‌المللی لاندا به‌عنوان گروهی از سرمایه‌گذاران فرشته (Angel Investors) با هدف کمک به شما تاسیس شده است. ما در مسیر جمع‌آوری یک تیم مناسب، تعریف یک مدل کسب‌وکار کارآمد و همچنین افزایش ارزش استارت‌آپ شما در بازارهای بین‌المللی کنارتان هستیم. آنچه باعث وجه تمایز لاندا شده است، دید فرامرزی ما و در نتیجه ایجاد فرصت جذب منابع از سرمایه‌گذاران بین‌المللی برای کسب‌وکار شما است.",
+      "text": "هلدینگ بین‌المللی لاندا متشکل از ۱۰ شرکت زیرمجموعه در کشورهای کانادا و ایران با دفاتر فعال در شهرهای تورنتو، ونکوور، تهران و اصفهان است. ماموریت ما، سرمایه‌گذاری روی کارآفرینان خلاق و حمایت آنها از مرحله ایده‌پردازی تا راه‌اندازی یک استارت‌آپ بین‌المللی است. آنچه باعث وجه تمایز لاندا شده، دید فرامرزی ما و در نتیجه ایجاد فرصت جذب منابع از سرمایه‌گذاران بین‌المللی برای کسب‌وکار شما است.      هلدینگ بین‌المللی لاندا به‌عنوان گروهی از سرمایه‌گذاران فرشته (Angel Investors) با هدف کمک به شما تاسیس شده است. ما در مسیر جمع‌آوری یک تیم مناسب، تعریف یک مدل کسب‌وکار کارآمد و همچنین افزایش ارزش استارت‌آپ شما در بازارهای بین‌المللی کنارتان هستیم. آنچه باعث وجه تمایز لاندا شده است، دید فرامرزی ما و در نتیجه ایجاد فرصت جذب منابع از سرمایه‌گذاران بین‌المللی برای کسب‌وکار شما است.      ",
       "reverse": true,
       "show": true,
       "index": 2,
@@ -129,7 +129,7 @@
       "link": "https://landatrip.com/"
     },
     {
-      "name": "طلوع روشن",
+      "name": "طلوع",
       "logo": "4.png",
       "link": "https://landaholding.com/investment"
     },
@@ -149,21 +149,9 @@
       "link": "https://landagene.landaholding.com/"
     }
   ],
-  "professionals": "متخصصین",
+  "professionals": "موسسین",
   "boardOfDirectors": "هیئت مدیره",
   "boardMemebers": [
-    {
-      "image": "/static/images/our-team/Personals/a1.png",
-      "name": "رسول مرادیمهر",
-      "position": " مدیر عامل",
-      "links": {
-        "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
-        "whatsapp": "wa.me/+989134233863",
-        "email": "mailto:rasoulmoradimehr@gmail.com",
-        "website": "https://moradimehr.com/",
-        "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=="
-      }
-    },
     {
       "image": "/static/images/About/mjafari.jpg",
       "name": "مرتضی جعفری",
@@ -176,6 +164,19 @@
         "instagram": "https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA=="
       }
     },
+    {
+      "image": "/static/images/our-team/Personals/a1.png",
+      "name": "رسول مرادی مهر",
+      "position": " مدیر عامل",
+      "links": {
+        "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
+        "whatsapp": "wa.me/+989134233863",
+        "email": "mailto:rasoulmoradimehr@gmail.com",
+        "website": "https://moradimehr.com/",
+        "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=="
+      }
+    },
+ 
     {
       "image": "/static/images/our-team/Personals/a2.png",
       "name": "هادی حسن پور",
