@@ -133,7 +133,6 @@ export default function InvestorRegistrationForm() {
             <CountryInput
               register={register}
               errors={errors}
-              required=""
               nameInput="countryOfResidence"
             />
 
