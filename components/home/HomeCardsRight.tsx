@@ -1,28 +1,22 @@
 import Image from 'next/image';
 import { useLang } from 'stores/langStore';
 
-
 export default function HomeCardsRight({
   images,
-  titles,
+  titles
 }: {
   titles: string;
   images: Array<{ src: string; alt: string }>;
   link: string;
 }) {
+  const lang = useLang.getState().lang;
 
-  const lang = useLang.getState().lang
-
-  console.log("lang => ",lang)
+  console.log('lang => ', lang);
 
   return (
     <div className="flex flex-col self-start md:self-center">
       <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">
         <div className="flex flex-col gap-2 rtl:flex-row-reverse">
-          <span className="font-condensed text-3xl ltr:tracking-[11px]">
-            {/* TODO: add i18n  */}
-            {lang === 'en' ? 'LANDA' : 'لاندا'}
-          </span>
           <span className="lrt:tracking-[6.5px] font-gilda text-4xl md:text-6xl">
             {titles}
           </span>
@@ -31,8 +25,9 @@ export default function HomeCardsRight({
       <div className="flex space-x-7 rtl:mt-11 rtl:space-x-reverse">
         {images.map((image, index) => (
           <div
-            className={`relative mt-3 hidden h-96 w-64 ${lang === 'en' ? 'last:mt-14' : 'last:mt-[5.25rem]'
-              } md:block md:first:mt-44 lg:mb-0`}
+            className={`relative mt-3 hidden h-96 w-64 ${
+              lang === 'en' ? 'last:mt-14' : 'last:mt-[5.25rem]'
+            } md:block md:first:mt-44 lg:mb-0`}
             key={index}
           >
             <Image
