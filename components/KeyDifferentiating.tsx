@@ -1,27 +1,44 @@
 'use client'
 import { useTranslation } from 'app/i18n/client';
 import Image from 'next/image';
+import React, { useState } from 'react'; 
 
 import { useLang } from 'stores/langStore';
+
+const paragraphStyles: React.CSSProperties = {
+  WebkitLineClamp: 10,
+  WebkitBoxOrient: 'vertical',
+  overflow: 'hidden',
+  display: '-webkit-box'
+};
 
 export default function KeyDifferentiating() {
   const lang = useLang().lang;
   const { t } = useTranslation(lang, 'aboutUs');
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     // TODO: don't use [0], [1] for translations
-    <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-10 sm:px-0 md:grid-cols-2 md:rtl:pr-32">
+    <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-10 sm:px-0 md:grid-cols-2 md:rtl:pr-48 md:ltr:pl-16">
       <div className="rtl:mr-6 my-20 flex flex-col gap-5 ltr:md:mr-24 md:rtl:ml-40">
         <span className="font-gilda text-2xl leading-8 text-primary md:text-3xl md:ltr:ml-8 md:rtl:mr-8">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
-        <div className="gap-2 font-barlow leading-7 text-black md:w-[350px] lg:w-[450px] xl:w-[550px]">
-          <p className="md:ltr:ml-10 md:rtl:mr-10">
+        <div className="gap-2 font-barlow leading-7 text-black md:w-[690px]">
+          <p  style={isOpen ? {} : paragraphStyles}
+          className="md:ltr:ml-10 md:rtl:mr-10">
             {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .titleText
             }
           </p>
+          <button className='md:rtl:mr-10 md:ltr:ml-10 mt-4 text-primary'
+           onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? 'Read Less' : 'Read More'}
+      </button>
+
+          
           <span className="font-bold text-primary md:ltr:ml-10 md:rtl:mr-10">
             {/* {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
@@ -37,11 +54,11 @@ export default function KeyDifferentiating() {
           </ul> */}
         </div>
       </div>
-      <div className="hidden items-end md:flex">
+      <div className="hidden items-center md:flex rtl:pl-20 ltr:pr-24">
         <Image
           src="/static/images/Home/KeyDifferentiating/Vector 58.png"
           alt="Landa Key Differentiating"
-          width={586}
+          width={486}
           height={741}
           loading="lazy"
         />
