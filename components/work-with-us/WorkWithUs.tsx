@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 // import InvestorRegistrationTitle from './InvestorRegistrationTitle';
 import { WorkWithUSFormData } from '../../types/global';
@@ -7,12 +7,13 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import Input from '../common/form/Input';
 import { initialWorkWithUSFormData } from '../../initials/initObjects';
-import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
+import { submitWorkWithUsForm } from 'pages/api/work-with-us';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
 import Button from '../common/Button';
+import Select from '../common/form/Select';
 
 export default function WorkWithUs() {
   const {
@@ -24,6 +25,54 @@ export default function WorkWithUs() {
     mode: 'onBlur',
     defaultValues: initialWorkWithUSFormData
   });
+
+  enum Positions {
+    Professor = "Professor",
+    Student = "Student"
+  }
+
+  const PositionsItem = [
+    Positions.Professor,
+    Positions.Student,
+  ];
+
+  const PositionsData = PositionsItem.map((type: any) => ({
+    value: type,
+    label: type
+  }));
+
+  const [selectPosition, setSelectPosition] = useState('');
+
+  const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectPosition(event.target.value);
+  };
+
+
+
+  enum TypeOfContract {
+    Hiring = "Hiring",
+    Intership = "Intership",
+    UniversityIntership = "University Intership"
+  }
+
+  const TypeOfContractItem = [
+    TypeOfContract.Hiring,
+    TypeOfContract.Intership,
+    TypeOfContract.UniversityIntership
+  ];
+
+  const TypeOfContractData = TypeOfContractItem.map((type: any) => ({
+    value: type,
+    label: type
+  }));
+
+  const [selectTypeOfContract, setSelectTypeOfContract] = useState('');
+
+  const handleContractItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectTypeOfContract(event.target.value);
+  };
+
+
 
   const {
     csrfToken,
@@ -64,7 +113,7 @@ export default function WorkWithUs() {
     });
 
     // Send the form data to the API.
-    submitInvestorRegistrationForm(sendFormData, csrfToken)
+    submitWorkWithUsForm(sendFormData, csrfToken)
       .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
@@ -101,37 +150,34 @@ export default function WorkWithUs() {
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
           <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="your_first_name"
-                type="text"
-                label="Your First Name *"
-                required={t('companyNameRequired')}
-                placeholder={t('companyNamePlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-                patternValue=""
-                patternMessage=""
-              />
-            </div>
+          <Select
+            register={register}
+            errors={errors}
+            nameInput="statusSelect"
+            label="Your Position?"
+            required="Position is required!"
+            className="select select-bordered mt-4 w-full max-w-xs px-8"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            placeholder="Select Your Position"
+            options={PositionsData}
+            handleChange={handleItemChange}
+            selected={selectPosition}
+          />
 
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="your_first_name"
-                type="text"
-                label="Your last Name *"
-                required=""
-                placeholder="Your last Name"
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-                patternValue=""
-                patternMessage=""
-              />
-            </div>
+            
+          <Select
+            register={register}
+            errors={errors}
+            nameInput="statusSelect"
+            label="Type of Contract?"
+            required="Type of Contract is required!"
+            className="select select-bordered mt-4 w-full max-w-xs px-8"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            placeholder="Select Your Type of Contract"
+            options={TypeOfContractData}
+            handleChange={handleContractItemChange}
+            selected={selectTypeOfContract}
+          />
           </div>
           {/* next line */}
           <div className="border-b-2 bg-[#F8F5F0] border-black">

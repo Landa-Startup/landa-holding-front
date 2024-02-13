@@ -1,6 +1,6 @@
 import apiClient from '../../../utils/api';
 
-async function submitInvestorRegistrationForm(
+async function submitWorkWithUsForm(
   sendFormData: FormData,
   csrfToken: string
 ) {
@@ -18,4 +18,4 @@ async function submitInvestorRegistrationForm(
   }
 }
 
-export { submitInvestorRegistrationForm };
+export { submitWorkWithUsForm };
