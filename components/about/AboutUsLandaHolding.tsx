@@ -30,8 +30,8 @@ export default function AboutUsLandaHolding() {
     //   objectFit="cover"
     // />
     // </div>
-    <div className="flex flex-col items-start justify-between bg-[#FAFAFA] p-10 md:px-28 md:py-10 lg:flex-row">
-      <div className="space-y-2 p-2 md:pt-8 text-black md:px-0">
+    <div className="flex flex-col items-start justify-between bg-[#FAFAFA]  md:px-28 md:py-10 lg:flex-row">
+      <div className="space-y-2 p-10 md:pt-8 text-black md:px-0">
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
