@@ -88,6 +88,19 @@
     "preferredAreasPlaceholder": "Description"
   },
 
+  "joinUsForm": {
+    "lng": "en",
+    "dir": "ltr",
+    "banner": "INVESTOR CENTER",
+    "LandaHolding": "Landa Holding",
+    "formTitle": "Work With Us",
+    "formSubtitle": "Let’s Talk About How We Can Grow Together",
+    "positionRequired": "please select you position",
+    "positionPlaceholder": "Select Your Position",
+    "contractType": "Type of Contract",
+    "contractTypePlaceholder": "Select Your Type of Contract"
+  },
+
   "startUp": {
     "lng": "en",
     "dir": "ltr",
