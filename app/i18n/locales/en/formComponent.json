@@ -1,219 +1,257 @@
 {
-    "firstName": "First Name",
-    "firstNameRequired": "First Name is Required.",
-    "firstNamePlaceholder": "Enter your First Name",
+  "firstName": "First Name",
+  "firstNameRequired": "First Name is Required.",
+  "firstNamePlaceholder": "Enter your First Name",
 
-    "lastName": "Last Name",
-    "lastNameRequired": "Last Name is Required.",
-    "lastNamePlaceholder": "Enter your Last Name",
+  "lastName": "Last Name",
+  "lastNameRequired": "Last Name is Required.",
+  "lastNamePlaceholder": "Enter your Last Name",
 
-    "email": "Email",
-    "emailRequired": "Email is Required.",
-    "emailErrorMessage": "Enter a Valid Email Address.",
-    "EmailPlaceholder": "Enter your Email",
+  "email": "Email",
+  "emailRequired": "Email is Required.",
+  "emailErrorMessage": "Enter a Valid Email Address.",
+  "EmailPlaceholder": "Enter your Email",
 
+  "phoneNumber": "Phone Number",
+  "phoneNumberRequired": "Phone Number is Required.",
+  "phoneNumberErrorMessage": "Enter a Valid Phone Number",
+  "phoneNumberPlaceholder": "Enter your Phone Number",
 
-    "phoneNumber": "Phone Number",
-    "phoneNumberRequired": "Phone Number is Required.",
-    "phoneNumberErrorMessage": "Enter a Valid Phone Number",
-    "phoneNumberPlaceholder": "Enter your Phone Number",
+  "birthDate": "Date of Birth",
+  "birthDateRequired": "Date of Birth is Required.",
+  "birthDateErrorMessage": "Please enter a valid Date of Birth(e.g., 2001/02/11)",
+  "birthDatePlaceholder": "Enter your Date of Birth",
 
-    "birthDate":"Date of Birth",
-    "birthDateRequired":"Date of Birth is Required.",
-    "birthDateErrorMessage":"Please enter a valid Date of Birth(e.g., 2001/02/11)",
-    "birthDatePlaceholder":"Enter your Date of Birth",
+  "sendButton": "Submit",
+  "sendingButton": "Submitting ....",
+  "visitButton": "Visit Now",
 
-    "sendButton": "Submit",
-    "sendingButton": "Submitting ....",
-    "visitButton": "Visit Now",
+  "successMessage": "Form Submitted Successfully.",
+  "failedMessage": "An error occurred. Please Contact Support.",
 
-    "successMessage": "Form Submitted Successfully.",
-    "failedMessage": "An error occurred. Please Contact Support.",
+  "companyName": "Company Name",
+  "companyNameRequired": "Company Name is Required.",
+  "companyNamePlaceholder": "Enter your Company Name",
 
-    "companyName": "Company Name",
-    "companyNameRequired": "Company Name is Required.",
-    "companyNamePlaceholder": "Enter your Company Name",
+  "howDidYouKnowUs": "How did you hear about us?*",
+  "howDidYouKnowUsRequired": "This field is required",
+  "howDidYouKnowUsPlaceholder": "Description",
 
-    "howDidYouKnowUs": "How did you hear about us?*",
-    "howDidYouKnowUsRequired":"This field is required",
-    "howDidYouKnowUsPlaceholder":"Description",
+  "contactForm": {
+    "title": "Reach us",
+    "subject": "Subject",
+    "subjectRequired": "Your Subject is Required",
+    "subjectPlaceholder": "Your Subject",
+    "message": "Message",
+    "messageRequired": "Your Message is Required",
+    "messagePlaceholder": "Your Message"
+  },
 
-    "contactForm": {
-        "title": "Reach us",
-        "subject": "Subject",
-        "subjectRequired": "Your Subject is Required",
-        "subjectPlaceholder": "Your Subject",
-        "message": "Message",
-        "messageRequired": "Your Message is Required",
-        "messagePlaceholder": "Your Message"
+  "partnerForm": {
+    "lng": "en",
+    "dir": "ltr",
+    "banner": "BUSINESS AFFILIATES",
+    "formTitle": "BUSINESS AFFILIATES",
+    "formSubtitle": "Personal Information"
+  },
+
+  "entrepreneurForm": {
+    "lng": "en",
+    "banner": "ENTREPRENEUR CENTER",
+    "LandaHolding": "Landa Holding",
+    "formTitle": "Entrepreneur Center",
+    "formSubtitle": "Personal Information"
+  },
+
+  "jobForm": {
+    "lng": "en",
+    "dir": "ltr",
+    "LandaHolding": "Landa Holding",
+    "banner": "APPLY JOB",
+    "formTitle": "Apply Job",
+    "formSubtitle": "Personal Information",
+    "resumeFile": "CV File:"
+  },
+
+  "investorForm": {
+    "lng": "en",
+    "dir": "ltr",
+    "banner": "INVESTOR CENTER",
+    "LandaHolding": "Landa Holding",
+    "formTitle": "INVESTOR REGISTRATION",
+    "formSubtitle": "Personal Information",
+    "interests": "Intrests",
+    "interestsRequired": "Intrests is Required.",
+    "interestsPlaceholder": "Enter your Intrests.",
+    "preferredAreas": "Preferred Areas for Investment",
+    "preferredAreasRequired": "This field is required",
+    "preferredAreasPlaceholder": "Description"
+  },
+
+  "joinUsForm": {
+    "lng": "en",
+    "dir": "ltr",
+    "banner": "INVESTOR CENTER",
+    "LandaHolding": "Landa Holding",
+    "formTitle": "Work With Us",
+    "formSubtitle": "Let’s Talk About How We Can Grow Together",
+    "positionRequired": "please select you position",
+    "positionPlaceholder": "Select Your Position",
+    "contractType": "Type of Contract",
+    "contractTypePlaceholder": "Select Your Type of Contract"
+  },
+
+  "startUp": {
+    "lng": "en",
+    "dir": "ltr",
+    "YesButton": "Yes",
+    "NoButton": "No",
+    "banner": "STARTUPS VALIDATION FORM",
+    "formTitle": "Startup Validation",
+    "subTitle": "Growth and Scale-up",
+    "formSubtitle": "Personal Information",
+    "statusSelect": "Select Your Status:",
+    "statusSelectRequired": "Your Status is Required",
+    "statusSelectPlaceholder": "Select Your Status:",
+    "idea": {
+      "ideaExplanation": "Explain your idea in 5 lines?*",
+      "ideaExplanationPlaceholder": "Description",
+      "ideaExplanationRequired": "This field is required"
     },
 
-    "partnerForm": {
-        "lng": "en",
-        "dir": "ltr",
-        "banner": "BUSINESS AFFILIATES",
-        "formTitle": "BUSINESS AFFILIATES FORM",
-        "formSubtitle": "Personal Information"
+    "pitchDeck": "Do you have Pitch deck?",
+    "pitchDeckRequired": "Please choose an option",
+
+    "businessPlan": "Do you have Business Plan?",
+    "businessPlanRequired": "Please choose an option",
+
+    "productName": "Product Name",
+    "productNameRequired": "Product Name is Required.",
+    "productNamePlaceholder": "Enter your Product Name",
+
+    "siteAddress": "Site Address",
+    "siteAddressRequired": "Site Address is Required.",
+    "siteAddressPlaceholder": "Enter your Site Address",
+
+    "problems": {
+      "title": "Problems",
+      "customerProblem": "Describe the customer problem you want to solve with your product or service.",
+      "customerProblemRequired": "This field is required!",
+      "customerProblemPlaceholder": "Description"
     },
 
-    "entrepreneurForm": {
-        "lng": "en",
-        "banner": "ENTREPRENEUR CENTER",
-        "LandaHolding": "Landa Holding",
-        "formTitle": "Entrepreneur Center Form",
-        "formSubtitle": "Personal Information"
+    "cooperatedWithInvestors": "Have you previously cooperated with investors or accelerators?",
+    "cooperatedWithInvestorsPlaceholder": "Description",
+
+    "investmentCeiling": "Investment Ceiling",
+    "investmentCeilingRequired": "This field is required!",
+    "investmentCeilingPlaceholder": "Please Enter Investment Ceiling.",
+
+    "solutions": {
+      "title": "Solutions",
+      "solution": "What is your unique value proposition (innovation)? What is new about what you do?",
+      "solutionPlaceholder": "Description",
+      "solutionRequired": "This field is required!",
+      "productLevel": "How much is level of your product and technology preparation?",
+      "productLevelRequired": "Preparation Stats Required",
+      "scalable": "Briefly explain how your technology is scalable?",
+      "scalablePlaceholder": "Description",
+      "scalableRequired": "This field is required!"
+    },
+    "businessModel": {
+      "title": "Business Model",
+      "monetizationOfYourPlan": "Describe the method of monetization of your plan?*",
+      "monetizationOfYourPlanPlaceholder": "Description",
+      "monetizationOfYourPlanRequired": "This field is required!",
+      "structureOfYourSales": "Please clearly mention the structure of your sales cycle from contact to delivery.",
+      "structureOfYourSalesPlaceholder": "Description",
+      "structureOfYourSalesRequired": "This field is requried!",
+      "financialPlan": "If your plan has a financial model, please upload."
+    },
+    "financialFile": "Do you have Financial?",
+    "financialFileRequired": "Please choose an option",
+
+    "property": {
+      "title": "Property",
+      "startupRevenue": "How much revenue has your startup made since its inception?",
+      "startupRevenuePlaceholder": "Description",
+      "startupRevenueRequired": "This field is required!",
+      "monthlyIncome": "How much is your monthly income?",
+      "monthlyIncomePlaceholder": "Description",
+      "monthlyIncomeRequired": "This field is required!",
+      "currentRaisedFunding": "How much current funding did you raise before starting your business?",
+      "currentRaisedFundingPlaceholder": "Description",
+      "currentRaisedFundingRequired": "This field is required!",
+      "neededCapital": "How much capital do you need to start your project?",
+      "neededCapitalPlaceholder": "Description",
+      "neededCapitalRequired": "This field is required!"
+    },
+    "targetMarket": {
+      "title": "Target Market",
+      "customerCharacteristic": "Based on what characteristics do you decide who are your customers and who are not?",
+      "customerCharacteristicPlaceholder": "Description",
+      "customerCharacteristicRequired": "This field is required!",
+      "currentCustomers": "Who are your current customers? How many customers have you had so far?",
+      "currentCustomersPlaceholder": "Description",
+      "currentCustomersRequired": "This field is required!",
+      "estimatedMarketSize": "How have you estimated the size of the market?*",
+      "estimatedMarketSizePlaceholder": "Description",
+      "estimatedMarketSizeRequired": "This field is required!"
     },
 
-    "jobForm":{
-        "lng": "en",
-        "dir": "ltr",
-        "LandaHolding": "Landa Holding",
-        "banner": "APPLY JOB",
-        "formTitle": "Apply Job Form",
-        "formSubtitle": "Personal Information",
-        "resumeFile": "CV File:"
-    },
+    "radioButtonGroup": [
+      {
+        "value": "basicPrinciple",
+        "label": "The basic principle has been observed."
+      },
+      {
+        "value": "technologyConcept",
+        "label": "The technology concept has been formulated."
+      },
+      {
+        "value": "exprimentalProof",
+        "label": "Experimental proof of concept."
+      },
+      {
+        "value": "confirmedTechnologyLab",
+        "label": "The confirmed technology in laboratory."
+      },
+      {
+        "value": "confirmedTechnologyEnv",
+        "label": "The confirmed technology in the environmental conditions"
+      },
+      {
+        "value": "presentedTechnologyEnv",
+        "label": "The presented technology in the environmental conditions"
+      },
+      {
+        "value": "systemPrototypeInMvp",
+        "label": "Show the system prototype in the mvp operating environment."
+      },
+      {
+        "value": "realisticSystem",
+        "label": "The proved realistic system in the operating environment."
+      },
+      {
+        "value": "qualifiedSystem",
+        "label": "A complete and qualified system."
+      }
+    ]
+  },
+  "IDEA": "IDEA",
+  "MVP": "MVP",
+  "TRIAL": "TRIAL",
+  "FisrtSale": "FisrtSale",
+  "SaleDevelopment": "SaleDevelopment",
 
-    "investorForm":{
-        "lng": "en",
-        "dir": "ltr",
-        "banner": "INVESTOR CENTER",
-        "LandaHolding": "Landa Holding",
-        "formTitle": "INVESTOR REGISTRATION FORM",
-        "formSubtitle": "Personal Information",
-        "interests":"Intrests",
-        "interestsRequired":"Intrests is Required.",
-        "interestsPlaceholder":"Enter your Intrests.",
-        "preferredAreas":"Preferred Areas for Investment",
-        "preferredAreasRequired":"This field is required",
-        "preferredAreasPlaceholder":"Description"
-        
-    },
+  "website": "Your Webstie:",
+  "websitePlaceholder": "Your Webstie*",
+  "websiteRequired": "This field is required!",
 
-    "startUp":{
-        "lng": "en",
-        "dir": "ltr",
-        "YesButton":"Yes",
-        "NoButton":"No",
-        "banner": "STARTUPS VALIDATION FORM",
-        "formTitle": "Startup Validation Form",
-        "subTitle": "Growth and Scale-up",
-        "formSubtitle": "Personal Information",
-        "statusSelect":"Select Your Status:",
-        "statusSelectRequired":"Your Status is Required",
-        "statusSelectPlaceholder":"Select Your Status:",        
-        "idea":{
-            "ideaExplanation":"Explain your idea in 5 lines?*",
-            "ideaExplanationPlaceholder":"Description",
-            "ideaExplanationRequired":"This field is required"
-        },
+  "prosField": "Field Of Professional:",
+  "prosFieldRequired": "This field is required!",
+  "prosFieldPlaceholder": "field of professional",
 
-        "pitchDeck":"Do you have Pitch deck?",
-        "pitchDeckRequired":"Please choose an option",
-
-        "businessPlan":"Do you have Business Plan?",
-        "businessPlanRequired":"Please choose an option",
-
-        "productName":"Product Name",
-        "productNameRequired":"Product Name is Required.",
-        "productNamePlaceholder":"Enter your Product Name",
-
-        "siteAddress":"Site Address",
-        "siteAddressRequired":"Site Address is Required.",
-        "siteAddressPlaceholder":"Enter your Site Address",
-
-        "problems":{
-            "title":"Problems",
-            "customerProblem":"Describe the customer problem you want to solve with your product or service.",
-            "customerProblemRequired":"This field is required!",
-            "customerProblemPlaceholder":"Description"
-        },
-
-        "cooperatedWithInvestors":"Have you previously cooperated with investors or accelerators?",
-        "cooperatedWithInvestorsPlaceholder":"Description",
-
-        "investmentCeiling":"Investment Ceiling",
-        "investmentCeilingRequired":"This field is required!",
-        "investmentCeilingPlaceholder":"Please Enter Investment Ceiling.",
-
-        "solutions":{
-            "title":"Solutions",
-            "solution":"What is your unique value proposition (innovation)? What is new about what you do?",
-            "solutionPlaceholder":"Description",
-            "solutionRequired":"This field is required!",
-            "productLevel":"How much is level of your product and technology preparation?",
-            "productLevelRequired":"Preparation Stats Required",
-            "scalable":"Briefly explain how your technology is scalable?",
-            "scalablePlaceholder":"Description",
-            "scalableRequired":"This field is required!"
-        },
-        "businessModel":{
-            "title":"Business Model",
-            "monetizationOfYourPlan":"Describe the method of monetization of your plan?*",
-            "monetizationOfYourPlanPlaceholder":"Description",
-            "monetizationOfYourPlanRequired":"This field is required!",
-            "structureOfYourSales":"Please clearly mention the structure of your sales cycle from contact to delivery.",
-            "structureOfYourSalesPlaceholder":"Description",
-            "structureOfYourSalesRequired":"This field is requried!",
-            "financialPlan":"If your plan has a financial model, please upload."
-        },
-        "financialFile":"Do you have Financial?",
-        "financialFileRequired":"Please choose an option",
-
-        "property":{
-            "title":"Property",
-            "startupRevenue":"How much revenue has your startup made since its inception?",
-            "startupRevenuePlaceholder":"Description",
-            "startupRevenueRequired":"This field is required!",
-            "monthlyIncome":"How much is your monthly income?",
-            "monthlyIncomePlaceholder":"Description",
-            "monthlyIncomeRequired":"This field is required!",
-            "currentRaisedFunding":"How much current funding did you raise before starting your business?",
-            "currentRaisedFundingPlaceholder":"Description",
-            "currentRaisedFundingRequired":"This field is required!",
-            "neededCapital":"How much capital do you need to start your project?",
-            "neededCapitalPlaceholder":"Description",
-            "neededCapitalRequired":"This field is required!"
-        },
-        "targetMarket":{
-            "title":"Target Market",
-            "customerCharacteristic":"Based on what characteristics do you decide who are your customers and who are not?",
-            "customerCharacteristicPlaceholder":"Description",
-            "customerCharacteristicRequired":"This field is required!",
-            "currentCustomers":"Who are your current customers? How many customers have you had so far?",
-            "currentCustomersPlaceholder":"Description",
-            "currentCustomersRequired":"This field is required!",
-            "estimatedMarketSize":"How have you estimated the size of the market?*",
-            "estimatedMarketSizePlaceholder":"Description",
-            "estimatedMarketSizeRequired":"This field is required!"
-        },
-
-        "radioButtonGroup":[
-            { "value": "basicPrinciple", "label": "The basic principle has been observed." },
-            { "value": "technologyConcept", "label": "The technology concept has been formulated." },
-            { "value": "exprimentalProof", "label": "Experimental proof of concept." },
-            { "value": "confirmedTechnologyLab", "label": "The confirmed technology in laboratory." },
-            { "value": "confirmedTechnologyEnv", "label": "The confirmed technology in the environmental conditions" },
-            { "value": "presentedTechnologyEnv", "label": "The presented technology in the environmental conditions" },
-            { "value": "systemPrototypeInMvp", "label": "Show the system prototype in the mvp operating environment." },
-            { "value": "realisticSystem", "label": "The proved realistic system in the operating environment." },
-            { "value": "qualifiedSystem", "label": "A complete and qualified system." }
-        ]
-    },
-    "IDEA":"IDEA",
-    "MVP":"MVP",
-    "TRIAL":"TRIAL",
-    "FisrtSale":"FisrtSale",
-    "SaleDevelopment":"SaleDevelopment",
-
-    "website":"Your Webstie:",
-    "websitePlaceholder":"Your Webstie*",
-    "websiteRequired":"This field is required!",
-
-    "prosField":"Field Of Professional:",
-    "prosFieldRequired":"This field is required!",
-    "prosFieldPlaceholder":"field of professional",
-
-    "EntrepreneurTitle":"Entrepreneur Center Form",
-    "PersonalInformation":"Personal Information"
+  "EntrepreneurTitle": "Entrepreneur Center Form",
+  "PersonalInformation": "Personal Information"
 }

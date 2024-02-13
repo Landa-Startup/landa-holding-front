@@ -93,7 +93,7 @@ export default function Navbar({
                   height={50}
                 />
                 <span className="font-condensed text-[12px] font-bold text-primary ltr:tracking-[0.25rem] md:text-xl">
-                  {lang == 'en' ? 'LANDA' : ''}
+                  {lang == 'en' ? 'LANDA' : 'LANDA'}
                 </span>
               </div>
             </Link>

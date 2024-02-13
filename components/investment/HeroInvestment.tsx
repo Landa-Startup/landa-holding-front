@@ -28,27 +28,29 @@ export default function Hero({
       {/* TODO: delete hardcode i18n */}
       <div className="flex flex-col items-center justify-center space-y-5 py-36 md:h-screen">
         <div
-          className={` ${showLanda ? 'block' : 'hidden'
-            } text-center font-barlow text-2xl font-normal text-white md:text-4xl ${lang === 'en'
+          className={` ${
+            showLanda ? 'block' : 'hidden'
+          } text-center font-barlow text-2xl font-normal text-white md:text-4xl ${
+            lang === 'en'
               ? 'tracking-[7px] md:tracking-[12.6px]'
               : 'tracking-normal'
-            }`}
+          }`}
         >
           {lang === 'en' ? 'Landa Holding' : 'هلدینگ لاندا'}
         </div>
         <div
-          className={`text-center font-gilda text-4xl md:text-6xl ${lang === 'en' && 'tracking-[6.4px]'
-            } text-[#F8F5F0]`}
+          className={`text-center font-gilda text-4xl md:text-6xl ${
+            lang === 'en' && 'tracking-[6.4px]'
+          } text-[#F8F5F0]`}
         >
           {lang === 'en' ? 'Investment Center' : 'مرکز سرمایه گذاری'}
         </div>
-        <div className='w-64'>
+        <div className="w-64">
           {showButton ? (
             <ButtonRefactor
               text={lang === 'en' ? 'Register Now' : 'همین حالا ثبت نام کنید'}
-              href='/investor-registration'
-              type='link'
-
+              href="/investor-registration"
+              type="link"
             />
           ) : (
             <></>

@@ -1,0 +1,251 @@
+'use client';
+import React, { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+// import InvestorRegistrationTitle from './InvestorRegistrationTitle';
+import { WorkWithUSFormData } from '../../types/global';
+import NotificationSendForm from '../common/form/NotificationSendForm';
+import GetCsrfToken from '../../utils/get-csrf-token';
+import Input from '../common/form/Input';
+import { initialWorkWithUSFormData } from '../../initials/initObjects';
+import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
+// import ButtonRefactor from '../common/ButtonRefactor';
+import { useTranslation } from 'app/i18n/client';
+import { useLang } from 'stores/langStore';
+import { useSubmit } from 'stores/dataStore';
+import Button from '../common/Button';
+
+export default function WorkWithUs() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<WorkWithUSFormData>({
+    mode: 'onBlur',
+    defaultValues: initialWorkWithUSFormData
+  });
+
+  const {
+    csrfToken,
+    handleTokenChange,
+    handleSubmitingChange,
+    handleSendChange,
+    handleNotifChange,
+    handleSuccessChange
+  } = useSubmit((s) => s);
+
+  const lang = useLang((s) => s.lang);
+
+  const { t } = useTranslation(lang, 'formComponent');
+
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken(
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+      );
+      handleTokenChange(token);
+    }
+    fetchCsrfToken();
+  }, []);
+
+  const onSubmit = async (formData: WorkWithUSFormData) => {
+    // Set loading and sending states.
+    handleSubmitingChange(true);
+    handleSendChange(true);
+
+    // Create a FormData object for form data.
+    const sendFormData = new FormData();
+
+    // Append all non-file form fields.
+    Object.entries(formData).forEach(([fieldName, fieldValue]) => {
+      if (typeof fieldValue !== 'object' || fieldValue === null) {
+        sendFormData.append(fieldName, String(fieldValue));
+      }
+    });
+
+    // Send the form data to the API.
+    submitInvestorRegistrationForm(sendFormData, csrfToken)
+      .then(() => {
+        handleSuccessChange(true);
+        handleNotifChange(true);
+        handleSendChange(false);
+        reset(initialWorkWithUSFormData); // Country does not reset
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      })
+      .catch(() => {
+        handleSuccessChange(true);
+        handleNotifChange(false);
+        handleSendChange(false);
+        reset(initialWorkWithUSFormData);
+
+        setTimeout(() => {
+          handleNotifChange(false);
+        }, 10000); // 10 seconds in milliseconds
+      });
+  };
+
+  // const errorsList = Object.entries(errors).map(([name, value]) => ({
+  //   name: name,
+  //   value: value
+  // }))
+
+  return (
+    <>
+      <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
+        <div className="bg-[#F8F5F0] py-10">
+          <h3 className="text-center text-3xl">
+            Let’s Talk About How We Can Grow Together
+          </h3>
+        </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
+          <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="your_first_name"
+                type="text"
+                label="Your First Name *"
+                required={t('companyNameRequired')}
+                placeholder={t('companyNamePlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue=""
+                patternMessage=""
+              />
+            </div>
+
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="your_first_name"
+                type="text"
+                label="Your last Name *"
+                required=""
+                placeholder="Your last Name"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue=""
+                patternMessage=""
+              />
+            </div>
+          </div>
+          {/* next line */}
+          <div className="border-b-2 bg-[#F8F5F0] border-black">
+            <p className="text-2xl py-3 px-5 md:text-3xl">
+              Personal Information
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="your_first_name"
+                type="text"
+                label="Your First Name *"
+                required={t('companyNameRequired')}
+                placeholder={t('companyNamePlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue=""
+                patternMessage=""
+              />
+            </div>
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="your_first_name"
+                type="text"
+                label="Your last Name *"
+                required=""
+                placeholder="Your last Name"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue=""
+                patternMessage=""
+              />
+            </div>
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="Your_national_id_number"
+                type="text"
+                label="Your National ID Number *"
+                required={t('phoneNumberRequired')}
+                patternValue=""
+                patternMessage=""
+                placeholder="Enter Your National ID Number"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b]"
+              />
+            </div>
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="phone"
+                type="text"
+                label="Phone Number *"
+                required={t('phoneNumberRequired')}
+                patternValue="^[0-9]{11}$"
+                patternMessage={t('phoneNumberErrorMessage')}
+                placeholder={t('phoneNumberPlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b]"
+              />
+            </div>
+          </div>
+          {/* next line */}
+          <div className="border-b-2 bg-[#F8F5F0] border-black">
+            <p className="text-2xl py-3 px-5 md:text-3xl">
+              Academic / Professional Information
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="your_first_name"
+                type="text"
+                label="Your First Name *"
+                required={t('companyNameRequired')}
+                placeholder={t('companyNamePlaceholder')}
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue=""
+                patternMessage=""
+              />
+            </div>
+            <div className="col-span-1">
+              <Input
+                register={register}
+                errors={errors}
+                nameInput="your_first_name"
+                type="text"
+                label="Your last Name *"
+                required=""
+                placeholder="Your last Name"
+                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                patternValue=""
+                patternMessage=""
+              />
+            </div>
+          </div>
+          <div className="mx-auto w-full pb-4 md:w-auto">
+            {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
+            <Button type="submit" bgColor="Primary" />
+          </div>
+        </form>
+        <NotificationSendForm />
+      </div>
+    </>
+  );
+}

@@ -1,38 +1,38 @@
 {
-    "lng": "en",
-    "dir": "ltr",
-    "LandaHolding": "Landa Holding",
-    "about": {
-        "title": "About Landa",
-        "text": "Landa International Holding is composed of ten Iranian and Canadian subsidiary corporations, each of which maintains an operational office in Tehran, Isfahan, Toronto, and Vancouver. Our objective is to provide financial backing to innovative entrepreneurs and assist them throughout the entire process of conceiving and establishing a global venture. Landa is distinguished by its cross-border perspective, which affords your company the chance to attract capital from international investors."
-    },
-    "explore": {
-        "title": "Explore",
-        "text": {
-            "home": "Home",
-            "about": "About Us",
-            "contact": "Contact Us",
-            "ourTeam": "Our Team"
-        }
-    },
-    "forms": {
-        "title": "Forms",
-        "text": {
-            "startUp": "Startups",
-            "investor": "Investor Center",
-            "entrepreneur": "Entrepreneur Center",
-            "prtners": "Our Business Partners"
-        }
-    },
-    "contact": {
-        "title": "Contact",
-        "text": {
-            "canada": "No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada",
-            "cNumber": "(+1) 289 269-3933",
-            "tehran": "Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran",
-            "tNumber": "(+98) 912 0539563",
-            "isfahan": "5th Floor, Tala Complex, Sa'adat Abad Street, Isfahan, Iran",
-            "iNumber": "(+98) 313 1311914"
-        }
+  "lng": "en",
+  "dir": "ltr",
+  "LandaHolding": "Landa Holding",
+  "about": {
+    "title": "About Landa",
+    "text": "Landa International Holding is composed of ten Iranian and Canadian subsidiary corporations, each of which maintains an operational office in Tehran, Isfahan, Toronto, and Vancouver. Our objective is to provide financial backing to innovative entrepreneurs and assist them throughout the entire process of conceiving and establishing a global venture. Landa is distinguished by its cross-border perspective, which affords your company the chance to attract capital from international investors."
+  },
+  "explore": {
+    "title": "Explore",
+    "text": {
+      "home": "Home",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "ourTeam": "Our Team"
     }
+  },
+  "forms": {
+    "title": "Forms",
+    "text": {
+      "startUp": "Startup validation",
+      "investor": "Investor Center",
+      "entrepreneur": "Entrepreneur Center",
+      "prtners": "Our Business Partners"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text": {
+      "canada": "No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada",
+      "cNumber": "(+1) 289 269-3933",
+      "tehran": "Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran",
+      "tNumber": "(+98) 912 0539563",
+      "isfahan": "5th Floor, Tala Complex, Sa'adat Abad Street, Isfahan, Iran",
+      "iNumber": "(+98) 313 1311914"
+    }
+  }
 }
