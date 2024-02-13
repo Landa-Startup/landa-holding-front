@@ -100,6 +100,7 @@ export default function WorkWithUs() {
     // Create a FormData object for form data.
     const sendFormData = new FormData();
 
+
     // Append all non-file form fields.
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
       if (typeof fieldValue !== 'object' || fieldValue === null) {
@@ -148,7 +149,7 @@ export default function WorkWithUs() {
             <Select
               register={register}
               errors={errors}
-              nameInput="statusSelect"
+              nameInput="w"
               label={
                 t('workWithUS', { returnObjects: true }).PositionPlaceholder
               }
@@ -207,7 +208,7 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="your_first_name"
+                nameInput="your_last_name"
                 type="text"
                 label={t('lastName')}
                 required={t('lastNameRequired')}
@@ -268,7 +269,7 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="your_first_name"
+                nameInput="study_field"
                 type="text"
                 label={t('workWithUS', { returnObjects: true }).StudyField}
                 required={
@@ -287,7 +288,7 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="your_first_name"
+                nameInput="study_sub_field"
                 type="text"
                 label={t('workWithUS', { returnObjects: true }).StudySubField}
                 required={
