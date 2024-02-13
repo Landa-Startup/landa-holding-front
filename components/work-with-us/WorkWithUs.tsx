@@ -147,7 +147,7 @@ export default function WorkWithUs() {
             <Select
               register={register}
               errors={errors}
-              nameInput="w"
+              nameInput="your_position"
               label={
                 t('workWithUS', { returnObjects: true }).PositionPlaceholder
               }
@@ -165,7 +165,7 @@ export default function WorkWithUs() {
             <Select
               register={register}
               errors={errors}
-              nameInput="statusSelect"
+              nameInput="type_of_contract"
               label={
                 t('workWithUS', { returnObjects: true }).contractPlaceholder
               }
@@ -221,7 +221,7 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="Your_national_id_number"
+                nameInput="your_national_id_number"
                 type="text"
                 label={
                   t('workWithUS', { returnObjects: true }).NationalIDNumber
@@ -244,7 +244,7 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="phone"
+                nameInput="phone_number"
                 type="text"
                 label={t('phoneNumber')}
                 required={t('phoneNumberRequired')}
@@ -267,7 +267,7 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="study_field"
+                nameInput="your_field_of_study"
                 type="text"
                 label={t('workWithUS', { returnObjects: true }).StudyField}
                 required={
@@ -286,7 +286,7 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="study_sub_field"
+                nameInput="your_subfield"
                 type="text"
                 label={t('workWithUS', { returnObjects: true }).StudySubField}
                 required={
