@@ -26,15 +26,16 @@ export default function WorkWithUs() {
     defaultValues: initialWorkWithUSFormData
   });
 
+  const lang = useLang((s) => s.lang);
+
+  const { t } = useTranslation(lang, 'formComponent');
+
   enum Positions {
-    Professor = "Professor",
-    Student = "Student"
+    Professor = t('workWithUS.Professor'),
+    Student = t('workWithUS.student')
   }
 
-  const PositionsItem = [
-    Positions.Professor,
-    Positions.Student,
-  ];
+  const PositionsItem = [Positions.Professor, Positions.Student];
 
   const PositionsData = PositionsItem.map((type: any) => ({
     value: type,
@@ -47,12 +48,10 @@ export default function WorkWithUs() {
     setSelectPosition(event.target.value);
   };
 
-
-
   enum TypeOfContract {
-    Hiring = "Hiring",
-    Intership = "Intership",
-    UniversityIntership = "University Intership"
+    Hiring = t('workWithUS.hiring'),
+    Intership = t('workWithUS.Internship'),
+    UniversityIntership = t('workWithUS.UniversityInternship')
   }
 
   const TypeOfContractItem = [
@@ -68,11 +67,11 @@ export default function WorkWithUs() {
 
   const [selectTypeOfContract, setSelectTypeOfContract] = useState('');
 
-  const handleContractItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleContractItemChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     setSelectTypeOfContract(event.target.value);
   };
-
-
 
   const {
     csrfToken,
@@ -82,10 +81,6 @@ export default function WorkWithUs() {
     handleNotifChange,
     handleSuccessChange
   } = useSubmit((s) => s);
-
-  const lang = useLang((s) => s.lang);
-
-  const { t } = useTranslation(lang, 'formComponent');
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -144,45 +139,52 @@ export default function WorkWithUs() {
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
         <div className="bg-[#F8F5F0] py-10">
-          <h3 className="text-center text-3xl">
-            Let’s Talk About How We Can Grow Together
+          <h3 className="text-center text-2xl md:text-3xl">
+            {t('workWithUS', { returnObjects: true }).formTitle}
           </h3>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
           <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
-          <Select
-            register={register}
-            errors={errors}
-            nameInput="statusSelect"
-            label="Your Position?"
-            required="Position is required!"
-            className="select select-bordered mt-4 w-full max-w-xs px-8"
-            labelClass="text-[#6b6b6b] dark:text-current"
-            placeholder="Select Your Position"
-            options={PositionsData}
-            handleChange={handleItemChange}
-            selected={selectPosition}
-          />
+            <Select
+              register={register}
+              errors={errors}
+              nameInput="statusSelect"
+              label={
+                t('workWithUS', { returnObjects: true }).PositionPlaceholder
+              }
+              required=""
+              className="select select-bordered mt-4 w-full max-w-xs px-8"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              placeholder={
+                t('workWithUS', { returnObjects: true }).PositionPlaceholder
+              }
+              options={PositionsData}
+              handleChange={handleItemChange}
+              selected={selectPosition}
+            />
 
-            
-          <Select
-            register={register}
-            errors={errors}
-            nameInput="statusSelect"
-            label="Type of Contract?"
-            required="Type of Contract is required!"
-            className="select select-bordered mt-4 w-full max-w-xs px-8"
-            labelClass="text-[#6b6b6b] dark:text-current"
-            placeholder="Select Your Type of Contract"
-            options={TypeOfContractData}
-            handleChange={handleContractItemChange}
-            selected={selectTypeOfContract}
-          />
+            <Select
+              register={register}
+              errors={errors}
+              nameInput="statusSelect"
+              label={
+                t('workWithUS', { returnObjects: true }).contractPlaceholder
+              }
+              required=""
+              className="select select-bordered mt-4 w-full max-w-xs px-8"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              placeholder={
+                t('workWithUS', { returnObjects: true }).contractPlaceholder
+              }
+              options={TypeOfContractData}
+              handleChange={handleContractItemChange}
+              selected={selectTypeOfContract}
+            />
           </div>
           {/* next line */}
           <div className="border-b-2 bg-[#F8F5F0] border-black">
             <p className="text-2xl py-3 px-5 md:text-3xl">
-              Personal Information
+              {t('workWithUS', { returnObjects: true }).formSubtitleTop}
             </p>
           </div>
           <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
@@ -192,9 +194,9 @@ export default function WorkWithUs() {
                 errors={errors}
                 nameInput="your_first_name"
                 type="text"
-                label="Your First Name *"
-                required={t('companyNameRequired')}
-                placeholder={t('companyNamePlaceholder')}
+                label={t('firstName')}
+                required={t('firstNameRequired')}
+                placeholder={t('firstNamePlaceholder')}
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -207,9 +209,9 @@ export default function WorkWithUs() {
                 errors={errors}
                 nameInput="your_first_name"
                 type="text"
-                label="Your last Name *"
-                required=""
-                placeholder="Your last Name"
+                label={t('lastName')}
+                required={t('lastNameRequired')}
+                placeholder={t('lastNamePlaceholder')}
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -222,11 +224,19 @@ export default function WorkWithUs() {
                 errors={errors}
                 nameInput="Your_national_id_number"
                 type="text"
-                label="Your National ID Number *"
-                required={t('phoneNumberRequired')}
+                label={
+                  t('workWithUS', { returnObjects: true }).NationalIDNumber
+                }
+                required={
+                  t('workWithUS', { returnObjects: true })
+                    .NationalIDNumberRequired
+                }
                 patternValue=""
                 patternMessage=""
-                placeholder="Enter Your National ID Number"
+                placeholder={
+                  t('workWithUS', { returnObjects: true })
+                    .NationalIDNumberPlaceholder
+                }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b]"
               />
@@ -237,7 +247,7 @@ export default function WorkWithUs() {
                 errors={errors}
                 nameInput="phone"
                 type="text"
-                label="Phone Number *"
+                label={t('phoneNumber')}
                 required={t('phoneNumberRequired')}
                 patternValue="^[0-9]{11}$"
                 patternMessage={t('phoneNumberErrorMessage')}
@@ -250,7 +260,7 @@ export default function WorkWithUs() {
           {/* next line */}
           <div className="border-b-2 bg-[#F8F5F0] border-black">
             <p className="text-2xl py-3 px-5 md:text-3xl">
-              Academic / Professional Information
+              {t('workWithUS', { returnObjects: true }).formSubtitleBottom}
             </p>
           </div>
           <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
@@ -260,9 +270,13 @@ export default function WorkWithUs() {
                 errors={errors}
                 nameInput="your_first_name"
                 type="text"
-                label="Your First Name *"
-                required={t('companyNameRequired')}
-                placeholder={t('companyNamePlaceholder')}
+                label={t('workWithUS', { returnObjects: true }).StudyField}
+                required={
+                  t('workWithUS', { returnObjects: true }).StudyFieldRequired
+                }
+                placeholder={
+                  t('workWithUS', { returnObjects: true }).StudyFieldPlaceholder
+                }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
@@ -275,9 +289,14 @@ export default function WorkWithUs() {
                 errors={errors}
                 nameInput="your_first_name"
                 type="text"
-                label="Your last Name *"
-                required=""
-                placeholder="Your last Name"
+                label={t('workWithUS', { returnObjects: true }).StudySubField}
+                required={
+                  t('workWithUS', { returnObjects: true }).StudySubFieldRequired
+                }
+                placeholder={
+                  t('workWithUS', { returnObjects: true })
+                    .StudySubFieldPlaceholder
+                }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""

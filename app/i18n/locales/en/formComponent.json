@@ -73,6 +73,34 @@
     "resumeFile": "CV File:"
   },
 
+  "workWithUS": {
+    "lng": "en",
+    "dir": "ltr",
+    "LandaHolding": "Landa Holding",
+    "banner": "APPLY JOB",
+    "BannerTitle": "Work With Us",
+    "formTitle": "Let’s Talk About How We Can Grow Together",
+    "formSubtitleTop": "Personal Information",
+    "formSubtitleBottom": "Academic / Professional Information",
+    "resumeFile": "CV File:",
+    "NationalIDNumber": "Your National ID Number",
+    "NationalIDNumberPlaceholder": "Enter Your National ID Number",
+    "NationalIDNumberRequired": "your national ID number is required",
+    "StudyField": "Your Study Field",
+    "StudyFieldPlaceholder": "Enter Your StudyField",
+    "StudyFieldRequired": "your StudyField is required",
+    "StudySubField": "Your Study sub Field",
+    "StudySubFieldPlaceholder": "Enter Your Study sub Field",
+    "StudySubFieldRequired": "your Study sub Field is required",
+    "PositionPlaceholder": "Select Your Position",
+    "contractPlaceholder": "select your contract",
+    "student": "student",
+    "Professor": "Professor",
+    "hiring": "hiring",
+    "Internship": "Internship",
+    "UniversityInternship": "UniversityInternship"
+  },
+
   "investorForm": {
     "lng": "en",
     "dir": "ltr",
@@ -198,7 +226,7 @@
       "estimatedMarketSizePlaceholder": "Description",
       "estimatedMarketSizeRequired": "This field is required!"
     },
-    
+
     "radioButtonGroup": [
       {
         "value": "basicPrinciple",
