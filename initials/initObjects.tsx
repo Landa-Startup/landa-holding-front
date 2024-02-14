@@ -106,6 +106,9 @@ const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
 const initialWorkWithUSFormData: WorkWithUSFormData = {
   firstName: '',
   lastName: '',
+  phoneNumber: '',
+  position: '',
+  contract: '',
   NationalIDNumber: '',
   FieldStudy: '',
   Subfield: '',
