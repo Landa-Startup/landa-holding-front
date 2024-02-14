@@ -99,10 +99,10 @@
   "companies": [
     {
       "name": "ACADEMY",
-      "logo": "3.png",
+      "logo": "acadmy.png",
       "link": "https://academy.landaholding.com/"
     },
-    { "name": "DIACO", "logo": "5.png", "link": "https://Diacocenter.com" },
+    { "name": "DIACO", "logo": "diaco.png", "link": "https://Diacocenter.com" },
     {
       "name": "FARAZAMAN",
       "logo": "7.png",
@@ -118,10 +118,10 @@
       "logo": "2.png",
       "link": "https://Irimmigration.ca"
     },
-    { "name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/" },
+    { "name": "LANDA TRIP", "logo": "trip.png", "link": "https://landatrip.com/" },
     {
       "name": "TOLU",
-      "logo": "4.png",
+      "logo": "tolu.png",
       "link": "https://landaholding.com/investment"
     },
     {
@@ -129,10 +129,10 @@
       "logo": "6.png",
       "link": "https://Visionraft.com"
     },
-    { "name": "LANDA CRAFTS", "logo": "8.png", "link": "#" },
+    { "name": "LANDA CRAFT", "logo": "craft.png", "link": "#" },
     {
       "name": "LANDA GENE",
-      "logo": "10.png",
+      "logo": "gene.png",
       "link": "https://landagene.landaholding.com/"
     }
   ],

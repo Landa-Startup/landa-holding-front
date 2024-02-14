@@ -100,12 +100,12 @@
   "companies": [
     {
       "name": "آکادمی",
-      "logo": "3.png",
+      "logo": "acadmy.png",
       "link": "https://academy.landaholding.com/"
     },
     {
       "name": "دیاکو سنتر",
-      "logo": "5.png",
+      "logo": "diaco.png",
       "link": "https://Diacocenter.com"
     },
     {
@@ -125,12 +125,12 @@
     },
     {
       "name": "لاندا تریپ",
-      "logo": "1.png",
+      "logo": "trip.png",
       "link": "https://landatrip.com/"
     },
     {
       "name": "طلوع",
-      "logo": "4.png",
+      "logo": "tolu.png",
       "link": "https://landaholding.com/investment"
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "name": "لانداکرفت",
-      "logo": "8.png",
+      "logo": "craft.png",
       "link": "#"
     },
     {
