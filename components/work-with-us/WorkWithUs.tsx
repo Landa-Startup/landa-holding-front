@@ -44,6 +44,9 @@ export default function WorkWithUs() {
 
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectPosition(event.target.value);
+    // if(event.target.value === t('workWithUS.Professor')) {
+    //   // console.log("Professor");
+    // }
   };
 
   enum TypeOfContract {
@@ -162,27 +165,25 @@ export default function WorkWithUs() {
               selected={selectPosition}
             />
 
-            <Select
-              register={register}
-              errors={errors}
-              nameInput="type_of_contract"
-              label={
-                t('workWithUS', { returnObjects: true }).contractPlaceholder
-              }
-              required=""
-              className="select select-bordered mt-4 w-full max-w-xs px-8"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              placeholder={
-                t('workWithUS', { returnObjects: true }).contractPlaceholder
-              }
-              options={TypeOfContractData}
-              handleChange={handleContractItemChange}
-              selected={selectTypeOfContract}
-            />
+            {selectPosition !== t('workWithUS.Professor') ? (
+              <Select
+                register={register}
+                errors={errors}
+                nameInput="type_of_contract"
+                label={t('workWithUS', { returnObjects: true }).contractPlaceholder}
+                required=""
+                className="select select-bordered mt-4 w-full max-w-xs px-8"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                placeholder={t('workWithUS', { returnObjects: true }).contractPlaceholder}
+                options={TypeOfContractData}
+                handleChange={handleContractItemChange}
+                selected={selectTypeOfContract}
+              />
+            ) : null}
           </div>
           {/* next line */}
-          <div className="border-b-2 bg-[#F8F5F0] border-black">
-            <p className="text-2xl py-3 px-5 md:text-3xl">
+          <div className="border-b-2 border-black bg-[#F8F5F0]">
+            <p className="px-5 py-3 text-2xl md:text-3xl">
               {t('workWithUS', { returnObjects: true }).formSubtitleTop}
             </p>
           </div>
@@ -257,8 +258,8 @@ export default function WorkWithUs() {
             </div>
           </div>
           {/* next line */}
-          <div className="border-b-2 bg-[#F8F5F0] border-black">
-            <p className="text-2xl py-3 px-5 md:text-3xl">
+          <div className="border-b-2 border-black bg-[#F8F5F0]">
+            <p className="px-5 py-3 text-2xl md:text-3xl">
               {t('workWithUS', { returnObjects: true }).formSubtitleBottom}
             </p>
           </div>

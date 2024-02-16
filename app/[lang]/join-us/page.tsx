@@ -20,10 +20,10 @@ export default async function ApplyFormPage({
     <div dir={t('dir')}>
       <Banner
         image="/static/images/Work-with-us/fb8f5583aaf3e9e272e717954c84f0be.png"
-        title={"Work With Us"}
+        title={t('workWithUS', { returnObjects: true })['BannerTitle']}
         lang={lang}
       />
-      <WorkWithUs/>
+      <WorkWithUs />
     </div>
   );
 }
