@@ -1,4 +1,8 @@
-import { HandicraftForm as HandicraftFormData, StartupsFormData } from '../types/global';
+import {
+  HandicraftForm as HandicraftFormData,
+  StartupsFormData,
+  WorkWithUSFormData
+} from '../types/global';
 import { PartnerMembershipFormData } from '../types/global';
 import { JobFormData } from '../types/global';
 import { InvestorRegistrationFormData } from '../types/global';
@@ -99,6 +103,18 @@ const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
   howDidYouKnowUs: ''
 };
 
+const initialWorkWithUSFormData: WorkWithUSFormData = {
+  firstName: '',
+  lastName: '',
+  phoneNumber: '',
+  position: '',
+  contract: '',
+  NationalIDNumber: '',
+  FieldStudy: '',
+  Subfield: '',
+  CreditsPassedNumber: ''
+};
+
 const initialFormData: Entrepreuneur = {
   firstName: '',
   lastName: '',
@@ -138,5 +154,6 @@ export {
   ContactFormData,
   RegisterationFormData,
   initialApplicationFormData,
-  HandicraftFormData
+  HandicraftFormData,
+  initialWorkWithUSFormData
 };

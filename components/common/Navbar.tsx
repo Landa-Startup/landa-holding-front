@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
-// import LanguageSwitch from './LanguageSwitch';
+import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
+// import { useRouter } from 'next/navigation';
 // import { i18n } from 'next-i18next';
 // import { getCookie } from 'cookies-next';
 // import { useLang } from 'stores/langStore';
@@ -32,6 +33,12 @@ export default function Navbar({
   //   i18n?.changeLanguage(language);
   //   // setLanguage(language)
   //   // setRendered(true);
+  // },[])
+
+  // const router = useRouter()
+
+  // useEffect(() => {
+  //   router.refresh();
   // },[])
 
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -86,13 +93,13 @@ export default function Navbar({
                   height={50}
                 />
                 <span className="font-condensed text-[12px] font-bold text-primary ltr:tracking-[0.25rem] md:text-xl">
-                  {lang == 'en' ? 'LANDA' : 'لاندا'}
+                  {lang == 'en' ? 'LANDA' : 'LANDA'}
                 </span>
               </div>
             </Link>
           </div>
 
-          <div className="ml-32 mr-20 hidden justify-center ltr:mr-60 xl:flex xl:flex-1">
+          <div className="hidden justify-center ltr:mr-12 xl:flex xl:flex-1">
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
@@ -137,18 +144,18 @@ export default function Navbar({
               </li>
             </ul>
           </div>
-          {/* <div className="hidden md:block">
+          <div className="hidden md:block">
             <LanguageSwitch />
-          </div> */}
+          </div>
         </div>
         <div className="children">{children}</div>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu absolute top-[72px] h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
+        <ul className="menu absolute h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
             <li
-              className="font-condensed font-bold first:text-primary"
+              className="font-condensed font-bold"
               key={label}
               onClick={() => handleLinkClick()}
             >
@@ -165,7 +172,7 @@ export default function Navbar({
               <IconDown />
             </div>
 
-            <ul>
+            <ul className='mx-4'>
               {submenuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li key={label} onClick={() => handleLinkClick()}>
@@ -177,10 +184,10 @@ export default function Navbar({
               )}
             </ul>
           </li>
-          <div className="absolute bottom-20 w-72 rounded bg-[#222] p-2">
-            {/* <div className=" mx-auto py-3">
+          <div className="absolute bottom-5 w-72 rounded bg-[#222] p-2">
+            <div className=" mx-auto py-3">
               <LanguageSwitch />
-            </div> */}
+            </div>
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">
               <Link
                 href={

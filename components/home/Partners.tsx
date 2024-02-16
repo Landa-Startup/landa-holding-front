@@ -86,9 +86,9 @@ export default function Partners() {
         onMouseUp={handleMouseUp}
         className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-5 overflow-x-scroll px-3 md:overflow-x-hidden"
       >
-        {t('partners', { returnObjects: true }).logos.map((logo: any) => (
+        {t('partners', { returnObjects: true }).logos.map((logo: any, index: number) => (
           <PartnersStartupCard
-            key={logo.number}
+            key={index}
             logo={logo.number}
             title={logo.title}
             description={logo.description}

@@ -47,7 +47,7 @@ export default function UploadInput({
           }}
         />
         {errors[nameInput] && (
-          <span className="mt-4 text-sm text-yellow-500">
+          <span className="mt-4 text-sm text-red-500">
             {errors[nameInput].message}
           </span>
         )}

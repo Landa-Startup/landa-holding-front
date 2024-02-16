@@ -24,7 +24,7 @@ export default async function Footer(
             {t('about', { returnObjects: true }).title}
             <br />
           </div>
-          <div className={`mt-1 text-base font-normal  text-neutral-400`}>
+          <div className={`mt-1 text-justify text-base  font-normal text-neutral-400`}>
             {t('about', { returnObjects: true }).text}
             <br />
           </div>
@@ -125,7 +125,7 @@ export default async function Footer(
             </Link>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col space-y-1 md:ml-1 md:w-1/4">
+        <div className="col-span-1 flex flex-col space-y-1 md:ml-1 md:w-1/3">
           <div className="h-[30px] w-[93px]  text-xl font-medium text-white">
             {t('contact', { returnObjects: true }).title}
             <br />

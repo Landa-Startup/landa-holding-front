@@ -1,12 +1,12 @@
 import Hero from '@/components/investment/HeroInvestment';
-import Link from '@/components/icons/Link';
+//import Link from '@/components/icons/Link';
 import Image from 'next/image';
 
-import Certificate from '@/components/investment/Certificate';
+//import Certificate from '@/components/investment/Certificate';
 import { Metadata } from 'next';
 import FeaturesCardsContainer from '@/components/investment/FeaturesCardsContainer';
 import { useTranslation } from 'app/i18n';
-import ButtonRefactor from '@/components/common/ButtonRefactor';
+//import ButtonRefactor from '@/components/common/ButtonRefactor';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Investment',
@@ -31,33 +31,9 @@ export default async function Page({
         showButton
         lang={lang}
       />
-      <div className="grid grid-cols-1 items-end gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-4 whitespace-nowrap font-gilda">
-            <span className="text-3xl text-[#55422A] md:text-5xl">
-              {t('LandaInvestment')}
-            </span>
-            <span className="text-lg text-primary md:text-4xl">
-              {t('question')}
-            </span>
-          </div>
-          {/* TODO: make component these texts */}
-          <p className="text-justify font-barlow leading-8">{t('text')}</p>
-        </div>
-        <div className="relative h-[300px] w-[320px] md:h-[450px] md:w-[600px]">
-          <Image
-            className="object-cover"
-            src="/static/images/investment/1.jpg"
-            alt="LANDA INVESTMENT"
-            layout="fill"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            placeholder="blur"
-            blurDataURL="data:image/svg+xml;base64,CiAgICA8c3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDggNSc+CiAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0nMScgLz4KICAgICAgPC9maWx0ZXI+CgogICAgICA8aW1hZ2UgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgZmlsdGVyPSd1cmwoI2IpJyB4PScwJyB5PScwJyBoZWlnaHQ9JzEwMCUnIHdpZHRoPScxMDAlJyAKICAgICAgaHJlZj0nZGF0YTppbWFnZS9hdmlmO2Jhc2U2NCwvOWovMndCREFBZ0dCZ2NHQlFnSEJ3Y0pDUWdLREJRTkRBc0xEQmtTRXc4VUhSb2ZIaDBhSEJ3Z0pDNG5JQ0lzSXh3Y0tEY3BMREF4TkRRMEh5YzVQVGd5UEM0ek5ETC8yd0JEQVFrSkNRd0xEQmdORFJneUlSd2hNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpML3dBQVJDQUFMQUJBREFTSUFBaEVCQXhFQi84UUFGZ0FCQVFFQUFBQUFBQUFBQUFBQUFBQUFCZ01ILzhRQUloQUFBZ0lDQWdFRkFRQUFBQUFBQUFBQUFRSURCQVVSQUNFU0JoTVVNVUhCLzhRQUZRRUJBUUFBQUFBQUFBQUFBQUFBQUFBQUFBTC94QUFaRVFBREFBTUFBQUFBQUFBQUFBQUFBQUFBQVJFQ0lUSC8yZ0FNQXdFQUFoRURFUUEvQU5KdFhNbEZqekxjaGZIMVl4dDVQa3B2ZjUzL0FEWGZJeGVzemtFclJZK3V0eVYxVVNsU3dDc1U4aHM2ME5nRTY0aEVVZCtrOWEzR2swRWkrTG82Z2dnOWNNNTJOYU9GdFdxbzltWlN6cXlIV2pvOWdmWDd3M3VsNHpoLy85az0nIC8+CiAgICA8L3N2Zz4KICA="
-          />
-        </div>
-      </div>
+
       <div className="grid grid-cols-1 gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col justify-center gap-6">
           <div className="flex flex-col">
             <span className="font-gilda text-2xl text-primary md:text-4xl">
               {t('startUpInvestingTitle')}
@@ -66,7 +42,9 @@ export default async function Page({
           <p className="text-justify font-barlow leading-8">
             {t('startUpInvestingText')}
           </p>
-          <div className="relative h-[300px] w-[330px] md:h-[168px] md:w-[561px]">
+        </div>
+        <div>
+          <div className="relative h-[300px] w-[330px] md:h-[168p] md:w-[561px]">
             <Image
               className="object-cover"
               src="/static/images/investment/Incorporation-page-001 1 (2).png"
@@ -76,25 +54,8 @@ export default async function Page({
             />
           </div>
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="relative hidden h-[230px] md:block md:w-[575px]">
-            <Image
-              className="object-cover"
-              src="/static/images/investment/Incorporation-page-001 1 (5).png"
-              alt="LANDA INVESTMENT"
-              layout="fill"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          <span className="font-gilda text-2xl text-primary md:text-4xl">
-            {t('visionTitle')}
-          </span>
-          <p className="text-justify font-barlow leading-7 tracking-[1px]">
-            {t('visionText')}
-          </p>
-        </div>
       </div>
-      <div className="grid grid-cols-1 items-center gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
+      {/* <div className="grid grid-cols-1 items-center gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
         <div className="flex flex-col gap-6">
           <span className="font-gilda text-2xl text-primary md:text-4xl">
             {t('certificate')}
@@ -107,7 +68,7 @@ export default async function Page({
         <div className="flex flex-col items-center justify-center space-y-5 rtl:space-y-reverse">
           <p className="text-justify font-barlow tracking-[1px] ltr:leading-8 rtl:text-lg rtl:leading-10">
             {t('focusText')}
-          </p>
+          </p> */}
           {/* <Button
             goto="/"
             size="not"
@@ -115,13 +76,15 @@ export default async function Page({
             bgColor="Primary"
             lang={lang}
           /> */}
-          <ButtonRefactor text={t('buttonTitle')} />
+          {/* <ButtonRefactor text={t('buttonTitle')} />
         </div>
-      </div>
+      </div> */}
       <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
         <div className="text-justify font-barlow leading-8">
+          <span className="font-gilda text-lg text-primary md:text-4xl ">
+            {t('investmentstrategy')}
+          </span>
           <p>{t('objectiveText1')}</p>
-          <p>{t('objectiveText2')}</p>
         </div>
         <FeaturesCardsContainer />
       </div>

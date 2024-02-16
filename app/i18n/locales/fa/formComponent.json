@@ -1,205 +1,253 @@
 {
-    "firstName": "نام",
-    "firstNameRequired": "نام اجباری است.",
-    "firstNamePlaceholder": "لطفا نام خود را وارد کنید.",
-    "lastName": "نام خانوادگی",
-    "lastNameRequired": "نام خانوادگی اجباری است.",
-    "lastNamePlaceholder": "لطفا نام خانوادگی خود را وارد کنید.",
-    "email": "ایمیل",
-    "emailRequired": "ایمیل اجباری است.",
-    "emailErrorMessage": "لطفا آدرس ایمیل را به درستی وارد کنید.",
-    "EmailPlaceholder": "لطفا ایمیل خود را وارد کنید.",
-    "phoneNumber": "شماره تماس",
-    "phoneNumberRequired": "شماره تماس الزامی است.",
-    "phoneNumberErrorMessage": "شماره تماس را به درستی وارد کنید.",
-    "phoneNumberPlaceholder": "لطفا شماره تماس خود را وارد کنید.",
+  "firstName": "نام",
+  "firstNameRequired": "نام اجباری است.",
+  "firstNamePlaceholder": "لطفا نام خود را وارد کنید.",
+  "lastName": "نام خانوادگی",
+  "lastNameRequired": "نام خانوادگی اجباری است.",
+  "lastNamePlaceholder": "لطفا نام خانوادگی خود را وارد کنید.",
+  "email": "ایمیل",
+  "emailRequired": "ایمیل اجباری است.",
+  "emailErrorMessage": "لطفا آدرس ایمیل را به درستی وارد کنید.",
+  "EmailPlaceholder": "لطفا ایمیل خود را وارد کنید.",
+  "phoneNumber": "شماره تماس",
+  "phoneNumberRequired": "شماره تماس الزامی است.",
+  "phoneNumberErrorMessage": "شماره تماس را به درستی وارد کنید.",
+  "phoneNumberPlaceholder": "لطفا شماره تماس خود را وارد کنید.",
 
-    "birthDate":"تاریخ تولد",
-    "birthDateRequired":"تاریخ تولد الزامی است.",
-    "birthDateErrorMessage":"(لطفا تاریخ تولد خود را به درستی وارد کنید(به شکل ۲۰۰۱/۰۲/۱۱",
-    "birthDatePlaceholder":"لطفا تاریخ تولد خود را وارد کنید.",
+  "birthDate": "تاریخ تولد",
+  "birthDateRequired": "تاریخ تولد الزامی است.",
+  "birthDateErrorMessage": "(لطفا تاریخ تولد خود را به درستی وارد کنید(به شکل ۲۰۰۱/۰۲/۱۱",
+  "birthDatePlaceholder": "لطفا تاریخ تولد خود را وارد کنید.",
 
+  "sendButton": "ارسال",
+  "sendingButton": "درحال ارسال ....",
+  "visitButton": "مشاهده کنید",
+  "successMessage": "اطلاعات با موفقیت ارسال شد.",
+  "failedMessage": "در ارسال اطلاعات مشکلی به وجود آمده! لطفا با پشتیبانی تماس بگیرید.",
+  "companyName": "نام شرکت",
+  "companyNameRequired": "نام شرکت الزامی است.",
+  "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
+  "howDidYouKnowUs": "نحوه آشنایی با ما",
+  "howDidYouKnowUsPlaceholder": "توضیحات",
+  "howDidYouKnowUsRequired": "پر کردن این قسمت الزامی است",
 
-    "sendButton": "ارسال",
-    "sendingButton": "درحال ارسال ....",
-    "visitButton": "مشاهده کنید",
-    "successMessage": "اطلاعات با موفقیت ارسال شد.",
-    "failedMessage": "در ارسال اطلاعات مشکلی به وجود آمده! لطفا با پشتیبانی تماس بگیرید.",
-    "companyName": "نام شرکت",
-    "companyNameRequired": "نام شرکت الزامی است.",
-    "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
-    "howDidYouKnowUs": "چگونه درباره ما شنیدید",
-    "howDidYouKnowUsPlaceholder":"توضیحات",
-    "howDidYouKnowUsRequired":"پر کردن این قسمت الزامی است",
+  "investmentCeiling": "سقف سرمایه گذاری",
+  "investmentCeilingRequired": "این بخش الزامی است.",
+  "investmentCeilingPlaceholder": "لطفا سقف سرمایه گذاری خود را وارد کنید.",
 
-    "investmentCeiling":"سقف سرمایه گذاری",
-    "investmentCeilingRequired":"این بخش الزامی است.",
-    "investmentCeilingPlaceholder":"لطفا سقف سرمایه گذاری خود را وارد کنید.",
+  "contactForm": {
+    "title": "با ما تماس بگیرید",
+    "subject": "موضوع",
+    "subjectRequired": "موضوع شما الزامی است",
+    "subjectPlaceholder": "موضوع شما",
+    "message": "پیام شما",
+    "messageRequired": "پیام شما الزامی است",
+    "messagePlaceholder": "پیام شما"
+  },
+  "partnerForm": {
+    "lng": "fa",
+    "dir": "rtl",
+    "banner": "شرکای کاری",
+    "formTitle": "فرم شریک کاری",
+    "formSubtitle": "اطلااعات شخصی"
+  },
+  "jobForm": {
+    "lng": "fa",
+    "dir": "rtl",
+    "LandaHolding": "هلدینگ لاندا",
+    "banner": "درخواست همکاری",
+    "formTitle": "فرم درخواست همکاری",
+    "formSubtitle": "اطلاعات شخصی",
+    "resumeFile": "فایل رزومه:"
+  },
 
-    "contactForm": {
-        "title": "با ما تماس بگیرید",
-        "subject": "موضوع",
-        "subjectRequired": "موضوع شما الزامی است",
-        "subjectPlaceholder": "موضوع شما",
-        "message": "پیام شما",
-        "messageRequired": "پیام شما الزامی است",
-        "messagePlaceholder": "پیام شما"
+  "workWithUS": {
+    "lng": "fa",
+    "dir": "rtl",
+    "LandaHolding": "هلدینگ لاندا",
+    "banner": "درخواست کار",
+    "BannerTitle": "همکار ی با ما",
+    "formTitle": "بیایید در مورد اینکه چگونه می توانیم با هم رشد کنیم صحبت کنیم",
+    "formSubtitleTop": "اطلاعات شخصی",
+    "formSubtitleBottom": "اطلاعات آکادمیک / حرفه ای",
+    "resumeFile": "فایل رزومه:",
+    "NationalIDNumber": "کدملی",
+    "NationalIDNumberPlaceholder": "کد ملی خود را وارد کنید",
+    "NationalIDNumberRequired": "کد ملی اجباریست",
+    "StudyField": "زمینه تحصیلی ",
+    "StudyFieldPlaceholder": "زمینه تحصیلی خود را وارد کنید",
+    "StudyFieldRequired": "زمینه تحصلی اجباریست",
+    "StudySubField": "زیر رشته",
+    "StudySubFieldPlaceholder": "زیر رشته خود را انتخاب کنید",
+    "StudySubFieldRequired": "زیر رشته الزامی است",
+    "PositionPlaceholder": "سمت خود را انتخاب کنید",
+    "contractPlaceholder": "نوع قرارداد خود را انتخاب کنید",
+    "student": "دانش آموز",
+    "Professor": "استاد دانشگاه",
+    "hiring": "استخدام",
+    "Internship": "کارآموزی",
+    "UniversityInternship": "طرح پویش"
+  },
+  "entrepreneurForm": {
+    "lng": "fa",
+    "banner": "مرکز کارآفرینان",
+    "LandaHolding": "هلدینگ لاندا",
+    "formTitle": "فرم مرکز کارآفرینان",
+    "formSubTitle": "اطلاعات شخصی"
+  },
+  "investorForm": {
+    "lng": "en",
+    "dir": "ltr",
+    "banner": "مرکز سرمایه گذار",
+    "LandaHolding": "هلدینگ لاندا",
+    "formTitle": "فرم مرکز سرمایه گذاران",
+    "formSubtitle": "اطلاعات شخصی",
+    "interests": "علاقه مندی ها",
+    "interestsRequired": "علاقه مندی ها الزامی است",
+    "interestsPlaceholder": "علاقه مندی های خود را وارد کنید",
+    "preferredAreas": "زمینه مورد نظر جهت سرمایه‌گذاری",
+    "preferredAreasRequired": "پر کردن این قسمت الزامی است",
+    "preferredAreasPlaceholder": "توضیحات"
+  },
+  "startUp": {
+    "lng": "fa",
+    "dir": "rtl",
+    "YesButton": "بله",
+    "NoButton": "خیر",
+    "banner": "اعتبارسنجی استارت آپ ها",
+    "formTitle": "فرم اعتبارسنجی استارت آپ",
+    "subTitle": "رشد و توسعه",
+    "formSubtitle": "اطلاعات شخصی",
+    "statusSelect": "استارت‌آپ شما در چه مرحله‌ای است؟ ",
+    "statusSelectRequired": "وضعیت شما الزامی است",
+    "statusSelectPlaceholder": "وضعیت خود را انتخاب کنید: ",
+    "idea": {
+      "ideaExplanation": "ایده خود را در ۵ خط توضیح دهید؟*",
+      "ideaExplanationPlaceholder": "توضیحات",
+      "ideaExplanationRequired": "پر کردن این قسمت الزامی است."
     },
-    "partnerForm": {
-        "lng": "fa",
-        "dir": "rtl",
-        "banner": "شرکای کاری",
-        "formTitle": "فرم شریک کاری",
-        "formSubtitle": "اطلااعات شخصی"
+    "pitchDeck": "آیا پیچ دک تهیه کرده‌اید؟",
+    "pitchDeckRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
+    "businessPlan": "آیا بیزینس پلن آماده کرده‌اید؟",
+    "businessPlanRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
+    "productName": "نام محصول",
+    "productNameRequired": "نام محصول الزامی است.",
+    "productNamePlaceholder": "لطفا نام محصول خود را وارد کنید.",
+    "siteAddress": "آدرس وب سایت",
+    "siteAddressRequired": "آدرس وب سایت الزامی است.",
+    "siteAddressPlaceholder": "لطفا آدرس وب سایت خود را وارد کنید.",
+
+    "investmentCeiling": "سقف سرمایه گذاری",
+    "investmentCeilingRequired": "سقف سرمایه گذاری الزامی است.",
+    "investmentCeilingPlaceholder": "لطفا سقف سرمایه گذاری خود را وارد کنید.",
+
+    "problems": {
+      "title": "مشکلات",
+      "customerProblem": "توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",
+      "customerProblemRequired": "این قسمت الزامی است.",
+      "customerProblemPlaceholder": "توضیحات"
     },
-    "jobForm": {
-        "lng": "fa",
-        "dir": "rtl",
-        "LandaHolding": "هلدینگ لاندا",
-        "banner": "درخواست همکاری",
-        "formTitle": "فرم درخواست همکاری",
-        "formSubtitle": "اطلاعات شخصی",
-        "resumeFile": "فایل رزومه:"
+    "cooperatedWithInvestors": "آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
+    "cooperatedWithInvestorsPlaceholder": "توضیحات",
+
+    "solutions": {
+      "title": "راه حل ها",
+      "solution": "میزان آمادگی محصول شما در چه مرحله‌ای قرار دارد؟",
+      "solutionPlaceholder": "توضیحات",
+      "solutionRequired": "این قسمت الزامی است!",
+      "productLevel": "سطح آمادگی محصول و فناوری شما چقدر است؟",
+      "productLevelRequired": "آمار آماده سازی مورد نیاز است",
+      "scalable": "لطفا به طور خلاصه توضیح دهید که چگونه قرار است محصول شما مقیاس پذیر باشد",
+      "scalablePlaceholder": "توضیحات",
+      "scalableRequired": "این قسمت الزامی است!"
     },
-    "entrepreneurForm": {
-        "lng": "fa",
-        "banner": "مرکز کارآفرینان",
-        "LandaHolding": "هلدینگ لاندا",
-        "formTitle": "فرم مرکز کارآفرینان",
-        "formSubTitle": "اطلاعات شخصی"
+    "businessModel": {
+      "title": "طرح کسب و کار",
+      "monetizationOfYourPlan": "روش کسب درآمد از طرح خود را توضیح دهید؟*",
+      "monetizationOfYourPlanPlaceholder": "توضیحات",
+      "monetizationOfYourPlanRequired": "این قسمت الزامی است!",
+      "structureOfYourSales": "لطفا ساختار فروش خود را از ابتدا توضیح دهید",
+      "structureOfYourSalesPlaceholder": "توضیحات",
+      "structureOfYourSalesRequired": "این قسمت الزامی است!",
+      "financialPlan": "اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
     },
-    "investorForm": {
-        "lng": "en",
-        "dir": "ltr",
-        "banner": "مرکز سرمایه گذار",
-        "LandaHolding": "هلدینگ لاندا",
-        "formTitle": "فرم مرکز سرمایه گذاران",
-        "formSubtitle": "اطلاعات شخصی",
-        "interests": "علاقه مندی ها",
-        "interestsRequired": "علاقه مندی ها الزامی است",
-        "interestsPlaceholder": "علاقه مندی های خود را وارد کنید",
-        "preferredAreas": "حوزه های ترجیحی برای سرمایه گذاری",
-        "preferredAreasRequired": "پر کردن این قسمت الزامی است",
-        "preferredAreasPlaceholder": "توضیحات"
+    "financialFile": "آیا شما تمکن مالی دارید؟",
+    "financialFileRequired": "لطفا یکی از گزینه ها را انتخاب کنید:",
+    "property": {
+      "title": "دارایی",
+      "startupRevenue": "استارت آپ شما از زمان شروعش چقدر درآمد داشته است؟",
+      "startupRevenuePlaceholder": "توضیحات",
+      "startupRevenueRequired": "این قسمت الزامی است!",
+      "monthlyIncome": "درآمد ماهانه شما چقدر است؟",
+      "monthlyIncomePlaceholder": "توضیحات",
+      "monthlyIncomeRequired": "این قسمت الزامی است!",
+      "currentRaisedFunding": "قبل از شروع کسب و کارتان چقدر بودجه جاری جمع آوری کردید؟",
+      "currentRaisedFundingPlaceholder": "توضیحات",
+      "currentRaisedFundingRequired": "این قسمت الزامی است!",
+      "neededCapital": "برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟",
+      "neededCapitalPlaceholder": "توضیحات",
+      "neededCapitalRequired": "این قسمت الزامی است!"
     },
-    "startUp": {
-        "lng": "fa",
-        "dir": "rtl",
-        "YesButton":"بله",
-        "NoButton":"خیر",
-        "banner": "اعتبارسنجی استارت آپ ها",
-        "formTitle": "فرم اعتبارسنجی استارت آپ",
-        "subTitle": "رشد و افزایش مقیاس",
-        "formSubtitle": "اطلاعات شخصی",
-        "statusSelect": "وضعیت خود را انتخاب کنید: ",
-        "statusSelectRequired": "وضعیت شما الزامی است",
-        "statusSelectPlaceholder": "وضعیت خود را انتخاب کنید: ",
-        "idea": {
-            "ideaExplanation": "ایده خود را در ۵ خط توضیح دهید؟*",
-            "ideaExplanationPlaceholder": "توضیحات",
-            "ideaExplanationRequired": "پر کردن این قسمت الزامی است."
-        },
-        "pitchDeck": "آیا فایل Pitch Deck دارید؟",
-        "pitchDeckRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
-        "businessPlan": "آیا فایل طرح کسب و کار دارید؟",
-        "businessPlanRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
-        "productName": "نام محصول",
-        "productNameRequired": "نام محصول الزامی است.",
-        "productNamePlaceholder": "لطفا نام محصول خود را وارد کنید.",
-        "siteAddress": "آدرس وب سایت",
-        "siteAddressRequired": "آدرس وب سایت الزامی است.",
-        "siteAddressPlaceholder": "لطفا آدرس وب سایت خود را وارد کنید.",
-        "problems": {
-            "title": "مشکلات",
-            "customerProblem": "توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",
-            "customerProblemRequired": "این قسمت الزامی است.",
-            "customerProblemPlaceholder": "توضیحات"
-        },
-        "cooperatedWithInvestors":"آیا قبلا با سرمایه گذاران یا شتاب دهنده ها کار کرده اید؟",
-        "cooperatedWithInvestorsPlaceholder":"توضیحات",
-
-
-
-        "solutions":{
-            "title":"راه حل ها",
-            "solution":"پیشنهاد ارزش منحصر به فرد شما (نوآوری) چیست؟ چه چیز جدیدی در مورد کاری که انجام می دهید وجود دارد؟",
-            "solutionPlaceholder":"توضیحات",
-            "solutionRequired":"این قسمت الزامی است!",
-            "productLevel":"سطح آمادگی محصول و فناوری شما چقدر است؟",
-            "productLevelRequired":"آمار آماده سازی مورد نیاز است",
-            "scalable":"به طور خلاصه توضیح دهید که چگونه فناوری شما مقیاس پذیر است؟",
-            "scalablePlaceholder":"توضیحات",
-            "scalableRequired":"این قسمت الزامی است!"
-        },
-        "businessModel": {
-            "title": "طرح کسب و کار",
-            "monetizationOfYourPlan": "روش کسب درآمد از طرح خود را توضیح دهید؟*",
-            "monetizationOfYourPlanPlaceholder": "توضیحات",
-            "monetizationOfYourPlanRequired": "این قسمت الزامی است!",
-            "structureOfYourSales": "لطفاً ساختار چرخه فروش خود را از تماس تا تحویل به وضوح ذکر کنید.",
-            "structureOfYourSalesPlaceholder": "توضیحات",
-            "structureOfYourSalesRequired": "این قسمت الزامی است!",
-            "financialPlan": "اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
-        },
-        "financialFile": "آیا شما تمکن مالی دارید؟",
-        "financialFileRequired": "لطفا یکی از گزینه ها را انتخاب کنید:",
-        "property": {
-            "title": "ویژگی ها",
-            "startupRevenue": "استارت آپ شما از زمان شروعش چقدر درآمد داشته است؟",
-            "startupRevenuePlaceholder": "توضیحات",
-            "startupRevenueRequired": "این قسمت الزامی است!",
-            "monthlyIncome": "درآمد ماهانه شما چقدر است؟",
-            "monthlyIncomePlaceholder": "توضیحات",
-            "monthlyIncomeRequired": "این قسمت الزامی است!",
-            "currentRaisedFunding": "قبل از شروع کسب و کارتان چقدر بودجه جاری جمع آوری کردید؟",
-            "currentRaisedFundingPlaceholder": "توضیحات",
-            "currentRaisedFundingRequired": "این قسمت الزامی است!",
-            "neededCapital": "برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟",
-            "neededCapitalPlaceholder": "توضیحات",
-            "neededCapitalRequired": "این قسمت الزامی است!"
-        },
-        "targetMarket": {
-            "title": "بازار هدف",
-            "customerCharacteristic": "بر اساس چه ویژگی هایی تصمیم می گیرید مشتریان شما چه کسانی باشند و چه کسانی نباشند؟",
-            "customerCharacteristicPlaceholder": "توضیحات",
-            "customerCharacteristicRequired": "این قسمت الزامی است!",
-            "currentCustomers": "مشتریان فعلی شما چه کسانی هستند؟ تا به حال چند مشتری داشته اید؟",
-            "currentCustomersPlaceholder": "توضیحات",
-            "currentCustomersRequired": "این قسمت الزامی است!",
-            "estimatedMarketSize": "اندازه بازار را چگونه تخمین زده اید؟*",
-            "estimatedMarketSizePlaceholder": "توضیحات",
-            "estimatedMarketSizeRequired": "این قسمت الزامی است!"
-        },
-
-        "radioButtonGroup":[
-            { "value": "basicPrinciple", "label": "اصل اساسی رعایت شده است." },
-            { "value": "technologyConcept", "label": "مفهوم فناوری فرموله شده است." },
-            { "value": "exprimentalProof", "label": "اثبات تجربی مفهوم" },
-            { "value": "confirmedTechnologyLab", "label": "تکنولوژی تایید شده در آزمایشگاه" },
-            { "value": "confirmedTechnologyEnv", "label": "تکنولوژی تایید شده در شرایط محیطی" },
-            { "value": "presentedTechnologyEnv", "label": "فناوری ارائه شده در شرایط محیطی" },
-            { "value": "systemPrototypeInMvp", "label": "نمونه اولیه سیستم را در محیط عملیاتی mvp نشان دهید." },
-            { "value": "realisticSystem", "label": "سیستم واقعی ثابت شده در محیط عملیاتی." },
-            { "value": "qualifiedSystem", "label": "یک سیستم کامل و واجد شرایط" }
-        ]
+    "targetMarket": {
+      "title": "بازار هدف",
+      "customerCharacteristic": "مشتریان خود را بر اساس چه معیاری انتخاب می‌کنید؟",
+      "customerCharacteristicPlaceholder": "توضیحات",
+      "customerCharacteristicRequired": "این قسمت الزامی است!",
+      "currentCustomers": "مشتریان فعلی شما چه کسانی هستند؟ چه تعداد مشتری تا امروز داشته‌اید؟",
+      "currentCustomersPlaceholder": "توضیحات",
+      "currentCustomersRequired": "این قسمت الزامی است!",
+      "estimatedMarketSize": "چگونه مقیاس و انداره بازار هدف خود را محاسبه می‌کنید؟",
+      "estimatedMarketSizePlaceholder": "توضیحات",
+      "estimatedMarketSizeRequired": "این قسمت الزامی است!"
     },
-    "IDEA":"ایده ها",
-    "MVP":"MVP",
-    "TRIAL":"نسخه آزمایشی",
-    "FisrtSale":"فروش اولیه",
-    "SaleDevelopment":"توسعه فروش",
 
+    "radioButtonGroup": [
+      { "value": "basicPrinciple", "label": "اصول اولیه مشخص شده است" },
+      {
+        "value": "technologyConcept",
+        "label": "ایده اولیه تکنولوژی شکل گرفته است"
+      },
+      { "value": "exprimentalProof", "label": "ایده اولیه آزمایش شده است" },
+      {
+        "value": "confirmedTechnologyLab",
+        "label": "تاییدیه فنی در محیط آزمایشگاهی گرفته شده است"
+      },
+      {
+        "value": "confirmedTechnologyEnv",
+        "label": "تاییدیه فنی در شرایط محیطی گرفته شده است"
+      },
+      {
+        "value": "presentedTechnologyEnv",
+        "label": "فناوری و تکنولوژی در شرایط محیطی ارائه شده است"
+      },
+      {
+        "value": "systemPrototypeInMvp",
+        "label": "نمونه اولیه در محیط عملیاتی نشان داده شده است"
+      },
+      {
+        "value": "realisticSystem",
+        "label": "سیستم واقعی در محیط عملیاتی ارائه شده است"
+      },
+      {
+        "value": "qualifiedSystem",
+        "label": "به‌عنوان یک سیستم کامل و واجد شرایط آماده شده است"
+      }
+    ]
+  },
+  "IDEA": "ایده ها",
+  "MVP": "MVP",
+  "TRIAL": "نسخه آزمایشی",
+  "FisrtSale": "فروش اولیه",
+  "SaleDevelopment": "توسعه فروش",
 
+  "website": "وبسایت شما:",
+  "websitePlaceholder": "لطفا وبسایت خود را وارد کنید.",
+  "websiteRequired": "این بخش الزامی است.",
 
-    "website":"وبسایت شما:",
-    "websitePlaceholder":"لطفا وبسایت خود را وارد کنید.",
-    "websiteRequired":"این بخش الزامی است.",
+  "prosField": "زمینه حرفه شما",
+  "prosFieldRequired": "این بخش الزامی است.",
+  "prosFieldPlaceholder": "زمینه حرفه خود را وارد کنید",
 
-    "prosField":"زمینه حرفه شما",
-    "prosFieldRequired":"این بخش الزامی است.",
-    "prosFieldPlaceholder":"زمینه حرفه خود را وارد کنید",
-
-
-    "EntrepreneurTitle":"فرم مرکز کارآفرینان",
-    "PersonalInformation":"اطلاعات شخصی"
+  "EntrepreneurTitle": "فرم مرکز کارآفرینان",
+  "PersonalInformation": "اطلاعات شخصی"
 }

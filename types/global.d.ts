@@ -56,6 +56,18 @@ interface InvestorRegistrationFormData {
   howDidYouKnowUs: string;
 }
 
+interface WorkWithUSFormData {
+  firstName: string;
+  lastName: string;
+  phoneNumber: string,
+  position: string,
+  contract: string,
+  NationalIDNumber: string;
+  FieldStudy: string;
+  Subfield: string;
+  CreditsPassedNumber: string;
+}
+
 // Define an interface for partner membership form data
 interface PartnerMembershipFormData {
   firstName: string;
@@ -322,16 +334,16 @@ interface translationCard {
   addedClass: string;
 }
 
-interface ProfileData{
-  first_name:string;
-  last_name:string;
-  websites:string[];
-  job_title:string;
-  instagram:string;
-  email:string;
-  linkedin:string;
-  whatsapp:string;
-  thumbnail:string;
+interface ProfileData {
+  first_name: string;
+  last_name: string;
+  websites: string[];
+  job_title: string;
+  instagram: string;
+  email: string;
+  linkedin: string;
+  whatsapp: string;
+  thumbnail: string;
 }
 
 export {
@@ -367,5 +379,6 @@ export {
   MagazineData,
   translationCard,
   HandicraftForm,
-  ProfileData
+  ProfileData,
+  WorkWithUSFormData
 };

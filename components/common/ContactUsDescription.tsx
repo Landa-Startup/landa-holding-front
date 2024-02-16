@@ -1,17 +1,20 @@
+'use client'
 import Phone from '../icons/IconPhone';
 import Email from '../icons/IconEmail';
 import Location from '../icons/IconLocation';
 import Link from 'next/link';
-import IconLinkedinB from '../icons/IconLinkedinB';
-import IconEmailB from '../icons/IconEmailB';
-import { useTranslation } from 'app/i18n';
+//import IconLinkedinB from '../icons/IconLinkedinB';
+//import IconEmailB from '../icons/IconEmailB';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import InstagramIconNew from '../icons/socialMediaIcons/InstagramIconNew';
-import WhatsappIconNew from '../icons/socialMediaIcons/WhatsappIconNew';
-export default async function ContactUsDescription() {
-  const lang = useLang.getState().lang;
+//import InstagramIconNew from '../icons/socialMediaIcons/InstagramIconNew';
+//import WhatsappIconNew from '../icons/socialMediaIcons/WhatsappIconNew';
+import Image from 'next/image';
 
-  const { t } = await useTranslation(lang, 'contact');
+export default function ContactUsDescription() {
+  const lang = useLang().lang;
+
+  const { t } = useTranslation(lang, 'contact');
 
   return (
     <div className="h-full">
@@ -28,23 +31,44 @@ export default async function ContactUsDescription() {
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
           target="_blank"
         >
-          <InstagramIconNew
-            className="bi bi-instagram"
-            width="28"
-            height="28"
-          />
+        <Image
+          src="/static/images/icons/insta.png"
+          alt="Landa Key Differentiating"
+          width={26}
+          height={741}
+          loading="lazy"
+        />
         </Link>
         <Link href={'https://wa.me/989120539563'} target="_blank">
-          <WhatsappIconNew className="bi bi-whatsapp" width="28" height="28" />
+        <Image
+          src="/static/images/icons/whatsapp.png"
+          alt="Landa Key Differentiating"
+          width={26}
+          height={741}
+          loading="lazy"
+        />
         </Link>
         <Link href={'mailto:info@landaholding.com'}>
-          <IconEmailB />
+        <Image
+        className='pt-1'
+          src="/static/images/icons/email.png"
+          alt="Landa Key Differentiating"
+          width={30}
+          height={741}
+          loading="lazy"
+        />
         </Link>
         <Link
           href={'https://www.linkedin.com/company/landa-startup-inc'}
           target="_blank"
         >
-          <IconLinkedinB />
+          <Image
+          src="/static/images/icons/web.png"
+          alt="Landa Key Differentiating"
+          width={26}
+          height={741}
+          loading="lazy"
+        />
         </Link>
       </div>
       {/* TODO: use translation instead hardcode */}
@@ -104,7 +128,7 @@ export default async function ContactUsDescription() {
           <Location />
           <div className="ml-2 flex flex-col ltr:text-left rtl:text-right">
             <span className="font-semibold">{t('address')}</span>
-            <ul className="mx-4 list-disc space-y-3">
+            <ul className="mx-4 list-disc space-y-3 text-[#AA8453]">
               <li>{t('addresses', { returnObjects: true }).canada}</li>
               <li>{t('addresses', { returnObjects: true }).tehran}</li>
               <li>{t('addresses', { returnObjects: true }).isfahan}</li>

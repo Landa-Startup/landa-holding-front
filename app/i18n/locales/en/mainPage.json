@@ -5,7 +5,7 @@
   "Investment": "Investor",
   "Academy": "Incubator",
   "HeroSubtitle": "Feel The Future",
-  "LandaHolding": "LANDA HOLDING",
+  "LandaHolding": "LANDA INTERNATIONAL HOLDING",
   "Home": "Home",
   "AboutUs": "ABOUT US",
   "ContactUs": "CONTACT US",
@@ -21,10 +21,10 @@
   "PartnersTitle": "Join Our Business Partners",
   "PartnersDescription": "At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape. To become an affiliate, please complete our free questionnaire for our confidential review.",
   "LatestStartups": "LATEST STARTUPS",
-  "Priorities": "Priorities",
+  "Priorities": "Investment Priorities",
   "businessTeamText": "What Our Cooperation Members Say",
   "visit": "Visit Now",
-  "signUp": "Sign Up",
+  "Register": "Register",
 
   "cards": [
     {
@@ -112,7 +112,7 @@
       {
         "number": 3,
         "title": "Dr. Nekui Educational Holding",
-        "description": "We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.",
+        "description":"We are honored to work with Dr. Nekui holding to ensure a bright future for startups and innovative ideas",
         "alt": "Dr. Nekui Educational Holding"
       },
       {
@@ -142,7 +142,7 @@
       {
         "number": 3,
         "title": "Dr. Nekui Educational Holding",
-        "description": "We are proud to cooperate with the educational holding of Dr. Nekui Academy of Business and Investment in the field of youth startups and we are moving forward for a bright future of youth startups and ideas.",
+        "description":"We are honored to work with Dr. Nekui holding to ensure a bright future for startups and innovative ideas",
         "alt": "Dr. Nekui Educational Holding"
       },
       {
@@ -237,13 +237,13 @@
       "image": "/static/images/Home/Startups/trip.png",
       "title": "LANDA TRIP",
       "description": "Landa trip is an innovative start-up company that creates, promotes, and runs useful educational courses for all interested people and businesses.",
-      "link": "https://landatrip.com/"
+      "link": "https://landatrip.ca"
     },
     {
       "image": "/static/images/Home/Startups/diaco.png",
       "title": "DIACO",
       "description": "Diaco is an open innovation platform which acts as an intermediary between technology seekers and providers to fulfill their technological demands.",
-      "link": "https://irdiaco.ca/"
+      "link": "https://diacocenter.com"
     },
     {
       "image": "/static/images/Home/Startups/vision-raft.png",
@@ -256,20 +256,20 @@
   "upcomingStartups": {
     "landaHolding": "LANDA HOLDING",
     "title": "UPCOMING STARTUPS",
-    "cards":[
+    "cards": [
       {
-        "image": "/static/images/handicraft.png",
-        "subTitle": "LANDA HANDICRAFT",
+        "image": "/static/images/Home/upcomming-Sartup/handicraft.png",
+        "subTitle": "LANDA CRAFT",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
         "goto": "/handicraft",
         "buttonText" : "Register",
         "gene": false
       },
       {
-        "image": "/static/images/handicraft.png",
+        "image": "/static/images/Home/upcomming-Sartup/10.png",
         "subTitle": "LANDA GENE",
         "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
-        "goto": "/land-gene",
+        "goto": "/landa-gene",
         "buttonText" : "Register",
         "gene": true
       }

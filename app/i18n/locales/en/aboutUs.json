@@ -2,10 +2,14 @@
   "lng": "en",
   "banner": "About Us",
   "LandaHolding": "Landa Holding",
+  "certificate": "Certificate of Incorporation",
+  "buttonTitle": "Federal Canada Corporation Information",
+  "focusText": "Landa holding companies are primarily focused on ownership control and do not engage in manufacturing, sales of products or services, or any other operational activities. Their main purpose is to possess majority stock or membership interests in other companies, giving rise to the term &apos;pure holding company.&apos; In contrast, some holding companies not only hold ownership stakes in subsidiaries but also conduct their own business operations. These are known as &apos;mixed holding companies. Additionally, there are other categories of holding companies, such as immediate and intermediate holding companies. These types of holding companies are themselves owned by other holding companies or larger businesses.",
+
   "aboutLandaHolding": [
     {
       "title": "About Landa Holding",
-      "text": "We are a team of Angel Investors who help you make your own team, define your business model, and increase the value of your startup in international markets. What distinguishes us and makes us unique is our assistance in attracting resources and investment, inviting international investors and business associates, in addition to our entrepreneurs, that will all lead to success. Landa Holding aims to gather all resources from all over the world and introduce the best investment opportunities for start-up businesses.",
+      "text": "Landa International Holding is composed of ten Iranian and Canadian subsidiary corporations, each of which maintains an operational office in Tehran, Isfahan, Toronto, and Vancouver. Our objective is to provide financial backing to innovative entrepreneurs and assist them throughout the entire process of conceiving and establishing a global venture. Landa is distinguished by its cross-border perspective, which affords your company the chance to attract capital from international investors. We are a team of Angel Investors who help you make your own team, define your business model, and increase the value of your startup in international markets. What distinguishes us and makes us unique is our assistance in attracting resources and investment, inviting international investors and business associates, in addition to our entrepreneurs, that will all lead to success. Landa Holding aims to gather all resources from all over the world and introduce the best investment opportunities for start-up businesses.",
       "reverse": true,
       "show": true,
       "index": 2,
@@ -42,6 +46,16 @@
       "addedClass": ""
     }
   ],
+  "Our mission and purpose": [
+    {
+      "title": "Our mission and purpose",
+      "text": "Our mission is to identify and evaluate the most innovative startup plans in order to minimize the probability of failure for the investors who have placed their trust in us. On the other hand, at Landa International Holding, we seek to provide all the necessary tools and resources to our customers; A way to ensure success for both parties.",
+      "reverse": true,
+      "show": true,
+      "index": 2,
+      "addedClass": ""
+    }
+  ],
   "LANDAStartups": [
     {
       "title": "LANDA Startups",
@@ -66,7 +80,7 @@
   "KeyDifferentiatingFactors": [
     {
       "title": "Key Differentiating Factors:",
-      "titleText": "First and foremost, it's essential to understand that the most critical aspect is the mental model and perspective behind these key differentiating factors. The way we perceive and approach a business can create various points of distinction.",
+      "titleText": "The start of any startup and the growth of its initial idea until it reaches the international market requires various services. We are proud to announce that as the first group, we have provided a platform at Landa Holding so that people can benefit from all the necessary services in a safe and professional environment. The first and perhaps the most important step to start a startup is its idea; An idea that should be creative and profitable. The existence of a professional environment that introduces you to different businesses and nurtures your ideas can play a very important role in your entrepreneurial journey. By identifying this need and benefiting from expert and experienced mentors in various fields, we have created a department called Landa Business Academy. Now that you have found your suitable idea and plan and brought it to the stage of evolution and maturity at the Landa Academy center, now it is the turn of the next step, the stage of implementing that idea. In order to accelerate the achievement of this goal and the rapid growth of a startup, the use of local and international expert mentors, networking and initial investment are considered to be the most important and influential factors. You can use all the facilities and opportunities available in the Landa Entrepreneurship Center to speed up the growth process of your new business and reach the level of foreign markets. In the final step, when your idea grows and matures enough with the help of the Academy and the Landa Entrepreneurship Center arrived and ready to enter the market, the issue of investment is raised. Entering international markets and competing at this level requires capital. After reaching sufficient stability, our third assistance to you at Landa Holding will begin. Landa Investment Center will be by your side with the aim of providing capital to be present at the international level. Along with providing all the services mentioned under the umbrella of Landa Holding, another distinguishing feature of us is that we are not limited to the domestic market and are always looking for We have been expanding startups in the global and international market.",
       "textTitle": "What sets us apart:",
       "reverse": true,
       "show": true,
@@ -77,38 +91,55 @@
   "itemList": [
     "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other.",
     "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities.",
-     "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events.",
-     "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
-     "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
-     "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
+    "Focus on Building Investor Connections: Our primary approach is to foster connections among members, involving not only charitable activities but also numerous entertaining activities and social events.",
+    "Value Supporters'Financial Contributions: We highly value the financial contributions of our supporters. Their opinions and guidance contribute to all aspects of the holding's operations.",
+    "Inclusive Structure: Our structure provides an opportunity for entrepreneurs to engage with reputable investors who have the capacity to invest at the startup level. ",
+    "Collaboration with Other Investment Centers: We welcome collaboration with other investment centers and investment communities. Entrepreneurs seeking capital from multiple investor groups benefit from this collaboration."
   ],
   "companies": [
-    {"name": "ACADEMY", "logo": "3.png", "link": "https://landaholding.com/academy"},
-    {"name": "DIACO", "logo": "5.png", "link": "https://Diacocenter.com"},
-    {"name": "FARAZAMAN", "logo": "7.png", "link": "https://landaholding.com/acceleration"},
-    {"name": "FOROUGH", "logo": "9.png", "link": "/acceleration"},
-    {"name": "IRIMMIGRATION", "logo": "2.png", "link": "https://Irimmigration.ca"},
-    {"name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/"},
-    {"name": "TOLU ROSHAN", "logo": "4.png", "link": "/investment"},
-    {"name": "VISION RAFT", "logo": "6.png", "link": "https://Visionraft.com"},
-    {"name": "HANDI CRAFTS", "logo": "8.png", "link": "/"},
-    {"name": "LANDA GENE", "logo": "10.png", "link": "/landa-gene"}
+    {
+      "name": "ACADEMY",
+      "logo": "3.png",
+      "link": "https://academy.landaholding.com/"
+    },
+    { "name": "DIACO", "logo": "5.png", "link": "https://Diacocenter.com" },
+    {
+      "name": "FARAZAMAN",
+      "logo": "7.png",
+      "link": "https://landaholding.com/acceleration"
+    },
+    {
+      "name": "FOROUGH",
+      "logo": "9.png",
+      "link": "https://landaholding.com/acceleration"
+    },
+    {
+      "name": "IRIMMIGRATION",
+      "logo": "2.png",
+      "link": "https://Irimmigration.ca"
+    },
+    { "name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/" },
+    {
+      "name": "TOLU",
+      "logo": "4.png",
+      "link": "https://landaholding.com/investment"
+    },
+    {
+      "name": "VISION RAFT",
+      "logo": "6.png",
+      "link": "https://Visionraft.com"
+    },
+    { "name": "LANDA CRAFTS", "logo": "8.png", "link": "#" },
+    {
+      "name": "LANDA GENE",
+      "logo": "10.png",
+      "link": "https://landagene.landaholding.com/"
+    }
   ],
   "professionals": "professionals",
   "boardOfDirectors": "board Of Directors",
   "boardMemebers": [
-    {
-      "image": "/static/images/our-team/Personals/a1.png",
-      "name": "Rasul Moraimehr",
-      "position": "Founder & CEO",
-      "links": {
-        "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
-        "whatsapp": "wa.me/+989134233863",
-        "email": "mailto:rasoulmoradimehr@gmail.com",
-        "website": "https://moradimehr.com/",
-        "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=="
-      }
-    },
+
     {
       "image": "/static/images/About/mjafari.jpg",
       "name": "Morteza Jafari",
@@ -122,9 +153,22 @@
       }
     },
     {
+      "image": "/static/images/our-team/Personals/a1.png",
+      "name": "Rasul Moraimehr",
+      "position": " Co Founder & CEO",
+      "links": {
+        "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
+        "whatsapp": "wa.me/+989134233863",
+        "email": "mailto:rasoulmoradimehr@gmail.com",
+        "website": "https://moradimehr.com/",
+        "instagram": "https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=="
+      }
+    },
+
+    {
       "image": "/static/images/our-team/Personals/a2.png",
       "name": "Hadi Hasanpoor",
-      "position": "COTB",
+      "position": "Co Founder & CEO",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",

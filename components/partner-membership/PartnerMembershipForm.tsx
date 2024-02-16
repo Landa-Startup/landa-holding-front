@@ -164,9 +164,9 @@ export default function PartnerMembershipForm() {
                 errors={errors}
                 nameInput="investmentCeiling"
                 type="text"
-                label={t('investmentCeiling')}
-                required={t('investmentCeilingRequired')} 
-                placeholder={t('investmentCeilingPlaceholder')}
+                label={t('startUp', {returnObjects: true}).investmentCeiling}
+                required={t('startUp', {returnObjects: true}).investmentCeilingRequired} 
+                placeholder={t('startUp', {returnObjects: true}).investmentCeilingPlaceholder}
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}

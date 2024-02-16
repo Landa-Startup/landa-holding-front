@@ -47,7 +47,7 @@ export default function TextArea({
         placeholder={placeholder}
       />
       {errors[nameTextArea] && (
-        <span className="mt-4 text-sm text-yellow-500">
+        <span className="mt-4 text-sm text-red-500">
           {errors[nameTextArea].message}
         </span>
       )}

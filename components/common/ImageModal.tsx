@@ -1,7 +1,6 @@
 // ImageModal.js
 import Image from 'next/image';
 
-
 export default function ImageModal({ src, alt, onClose }: any) {
   return (
     <div className="modal">

@@ -35,7 +35,7 @@ export default function ButtonRefactor({
               // className='transition flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white ease-in-out delay-150 bg-black hover:bg-primary duration-300'
             >
               <div className="z-10 flex items-center gap-2">
-                <span className='text-lg'>{text}</span>
+                <span className='text-md'>{text}</span>
                 {lang === "en" ? <ChevronRightIcon className="h-5 w-5" /> : <ChevronLeftIcon className='h-5 w-5' />}
               </div>
             </button>

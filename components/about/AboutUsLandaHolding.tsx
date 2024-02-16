@@ -1,11 +1,13 @@
+'use client'
 import Image from 'next/image';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
+// import { getInitialProps } from 'react-i18next';
 
-export default async function AboutUsLandaHolding() {
-  const lang = useLang.getState().lang;
+export default function AboutUsLandaHolding() {
+  const lang = useLang().lang;
 
-  const { t } = await useTranslation(lang, 'aboutUs');
+  const { t } = useTranslation(lang, 'aboutUs');
 
   return (
     // <div className="flex flex-col items-center justify-between bg-[#FAFAFA] pt-5 md:pr-[6.5rem] lg:flex-col xl:flex-row">
@@ -28,17 +30,17 @@ export default async function AboutUsLandaHolding() {
     //   objectFit="cover"
     // />
     // </div>
-    <div className="flex flex-col items-start justify-between bg-[#FAFAFA] p-10 md:px-28 md:py-10 lg:flex-row">
-      <div className="space-y-2 p-2 text-black md:px-0">
+    <div className="flex flex-col items-start justify-between bg-[#FAFAFA]  md:px-28 md:py-10 lg:flex-row">
+      <div className="space-y-2 p-10 md:pt-8 text-black md:px-0">
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
-        <p className="mb-20  ml-0 mt-4 text-justify font-barlow text-lg font-normal tracking-wide  md:mt-8 lg:w-[517px]">
+        <p className="mb-20  ml-0 mt-4 text-justify font-barlow text-lg font-normal tracking-wide  md:mt-8 lg:w-[548px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>
       <Image
-        className="brightness-95 contrast-[1.15] drop-shadow-md"
+        className="brightness-95 contrast-[1.15] drop-shadow-md mt-8"
         loading="lazy"
         src="/static/images/About/team.jpg"
         width={661}

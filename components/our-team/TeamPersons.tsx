@@ -22,23 +22,22 @@ export default function TeamPersons() {
 
   // const [selectedRole, setSelectedRole] = useState<string | null>(null);
   const [filteredPersons, setFilteredPersons] = useState(Array<item>);
-  
 
   // const L: Array<item> = t('persons', {returnObjects: true}).map((person: item) => {
   //   return person
   // })
 
   useEffect(() => {
-    setFilteredPersons(t('persons', {returnObjects: true}));
-  }, [])
+    setFilteredPersons(t('persons', { returnObjects: true }));
+  }, []);
 
   function handleRoleSelect(role: string) {
     // // setSelectedRole(role);
     // console.log(role);
-    if (role === t("defaultRole") ) {
+    if (role === t('defaultRole')) {
       setFilteredPersons(t('persons', { returnObjects: true }));
     } else {
-      const persons = t('persons', {returnObjects: true})
+      const persons = t('persons', { returnObjects: true });
       const filteredPersons = persons.filter(
         ({ category }: { category: string }) =>
           category?.toLowerCase().includes(role.toLowerCase())
@@ -46,7 +45,7 @@ export default function TeamPersons() {
       setFilteredPersons(filteredPersons);
     }
   }
-  console.log(filteredPersons)
+  console.log(filteredPersons);
   return (
     <div>
       <div className="flex w-full justify-center">
@@ -55,7 +54,7 @@ export default function TeamPersons() {
           roles={t('roles', { returnObjects: true })}
         />
       </div>
-      <div className="grid grid-cols-1 justify-items-center gap-4 py-5 md:container md:mx-auto md:grid-cols-2 md:px-12 lg:grid-cols-3 lg:px-10 xl:grid-cols-4  xl:px-28">
+      <div className="grid grid-cols-1 justify-items-center gap-12 md:gap-x-40 py-5 md:container md:mx-auto md:grid-cols-2 md:px-12 lg:grid-cols-3 lg:px-10 xl:grid-cols-4  xl:px-28">
         {filteredPersons.map(
           (
             {

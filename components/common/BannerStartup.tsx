@@ -1,7 +1,8 @@
-import { useTranslation } from 'app/i18n';
+'use client'
+import { useTranslation } from 'app/i18n/client';
 import Image from 'next/image';
 
-export default async function BannerStartUp({
+export default function BannerStartUp({
   image,
   title,
   logo,
@@ -12,7 +13,7 @@ export default async function BannerStartUp({
   logo: string;
   lang: string;
 }) {
-  const { t } = await useTranslation(lang, 'aboutUs');
+  const { t } = useTranslation(lang, 'aboutUs');
 
   return (
     <div className="relative md:h-[520px]">
@@ -31,7 +32,7 @@ export default async function BannerStartUp({
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} // Adding overlay with transparency
       >
         {/* Content Overlay */}
-        <div className="relative flex h-[650px] items-stretch justify-center lg:h-[512px] lg:justify-start">
+        <div className="relative flex h-[650px] items-stretch justify-center lg:justify-start">
           <div className="flex flex-col items-center justify-center gap-6 text-center md:m-auto lg:m-auto">
             {/* Text Content */}
             <p

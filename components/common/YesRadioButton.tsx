@@ -82,7 +82,7 @@ export default function YesRadioButton({
               handleChange={handleFileChange}
             />
             {errors[fileName] && (
-              <span className="mt-4 text-sm text-yellow-500">
+              <span className="mt-4 text-sm text-red-500">
                 {errors[fileName].message}
               </span>
             )}
@@ -92,7 +92,7 @@ export default function YesRadioButton({
 
       {/* Error message for radio buttons */}
       {errors[name] && (
-        <span className="mt-4 text-sm text-yellow-500">
+        <span className="mt-4 text-sm text-red-500">
           {errors[name].message}
         </span>
       )}

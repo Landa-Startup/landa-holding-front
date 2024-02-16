@@ -12,7 +12,7 @@ export default async function HomeOurTeam() {
   return (
     <div className="relative my-10 inline-flex w-full flex-col items-center justify-start gap-9 bg-white md:mb-16">
       <div
-        className="flex flex-col ltr:ml-5 ltr:mr-10 rtl:mr-5 lg:self-start ltr:xl:ml-28 rtl:xl:mr-40"
+        className="flex flex-col lg:self-start ltr:ml-5 ltr:mr-10 ltr:xl:ml-28 rtl:mr-5 rtl:xl:mr-40"
       >
         {/* TODO: make component for headers */}
 
@@ -20,7 +20,7 @@ export default async function HomeOurTeam() {
           {t('LandaHolding')}
         </span> */}
         <p
-          className={`font-condensed text-5xl font-normal tracking-normal text-black ltr:tracking-widest md:mr-20 xl:mr-0`}
+          className={`font-condensed text-5xl font-normal tracking-normal text-black md:mr-20 xl:mr-0 ltr:tracking-widest`}
         >
           {t('OurTeam')}
         </p>
@@ -33,8 +33,8 @@ export default async function HomeOurTeam() {
           width={789}
           height={243}
           alt="OurTeam"
-          className="mb-9 hidden h-[284px] w-[444px] object-cover md:block md:h-[693px] md:w-[1192px]"
-          src="/static/images/Home/OurTeam/desktop.jpg"
+          className="mb-9 hidden h-[284px] w-[444px] object-cover md:block md:h-[973px] md:w-[1192px]"
+          src="/static/images/Home/OurTeam/ourteam1.png"
         />
         <Image
           loading="lazy"
