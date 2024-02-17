@@ -35,6 +35,21 @@ export default function Partners() {
           scrollContainer.scrollLeft -= scrollAmount;
         }
       }
+      // if (lang === 'fa') {
+        // const scrollAmount = 1;
+        // if (scrollContainer != null && isScrolling) {
+        //   const isScrollingLeft = scrollContainer.scrollLeft > 0;
+        //   const isScrollingRight = scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        //   if (!isScrollingLeft && !isScrollingRight) {
+        //     scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+        //   } else if (isScrollingLeft) {
+        //     scrollContainer.scrollLeft -= scrollAmount;
+        //   } else if (isScrollingRight) {
+        //     scrollContainer.scrollLeft += scrollAmount;
+        //   }
+        // }
+        // return;
+      // }
     }
 
     const intervalId = setInterval(scrollAutomatically, 50); // Adjust the interval as needed.
@@ -74,7 +89,7 @@ export default function Partners() {
 
   return (
     <div className="my-6 flex flex-col items-center gap-12">
-      <span className="text-3xl text-primary md:text-4xl">
+      <span className="text-3xl text-primary md:text-4xl font-condensed">
         {t('partners', { returnObjects: true }).title}
       </span>
       <div

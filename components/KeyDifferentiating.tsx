@@ -20,20 +20,20 @@ export default function KeyDifferentiating() {
 
   return (
     // TODO: don't use [0], [1] for translations
-    <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-10 sm:px-0 md:grid-cols-2 md:rtl:pr-48 md:ltr:pl-16">
-      <div className="rtl:mr-6 my-20 flex flex-col gap-5 ltr:md:mr-24 md:rtl:ml-40">
+    <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-5 sm:px-0 md:grid-cols-2 md:ltr:pl-16 md:rtl:pr-48">
+      <div className="my-20 flex flex-col gap-5 rtl:mr-6 ltr:md:mr-24 md:rtl:ml-40">
         <span className="font-gilda text-2xl leading-8 text-primary md:text-3xl md:ltr:ml-8 md:rtl:mr-8">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
         <div className="gap-2 font-barlow leading-7 text-black md:w-[690px]">
           <p  style={isOpen ? {} : paragraphStyles}
-          className="md:ltr:ml-10 md:rtl:mr-10">
+          className="text-justify md:ltr:ml-10 md:rtl:mr-10">
             {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .titleText
             }
           </p>
-          <button className='md:rtl:mr-10 md:ltr:ml-10 mt-4 text-primary'
+          <button className='mt-4 text-primary md:ltr:ml-10 md:rtl:mr-10'
            onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? 'Read Less' : 'Read More'}
       </button>
@@ -54,7 +54,7 @@ export default function KeyDifferentiating() {
           </ul> */}
         </div>
       </div>
-      <div className="hidden items-center md:flex rtl:pl-20 ltr:pr-24">
+      <div className="hidden items-center ltr:pr-24 rtl:pl-20 md:flex">
         <Image
           src="/static/images/Home/KeyDifferentiating/Vector 58.png"
           alt="Landa Key Differentiating"
