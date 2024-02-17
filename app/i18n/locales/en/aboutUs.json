@@ -79,8 +79,8 @@
   ],
   "KeyDifferentiatingFactors": [
     {
-      "title": "Key Differentiating Factors:",
-      "titleText": "The start of any startup and the growth of its initial idea until it reaches the international market requires various services. We are proud to announce that as the first group, we have provided a platform at Landa Holding so that people can benefit from all the necessary services in a safe and professional environment. The first and perhaps the most important step to start a startup is its idea; An idea that should be creative and profitable. The existence of a professional environment that introduces you to different businesses and nurtures your ideas can play a very important role in your entrepreneurial journey. By identifying this need and benefiting from expert and experienced mentors in various fields, we have created a department called Landa Business Academy. Now that you have found your suitable idea and plan and brought it to the stage of evolution and maturity at the Landa Academy center, now it is the turn of the next step, the stage of implementing that idea. In order to accelerate the achievement of this goal and the rapid growth of a startup, the use of local and international expert mentors, networking and initial investment are considered to be the most important and influential factors. You can use all the facilities and opportunities available in the Landa Entrepreneurship Center to speed up the growth process of your new business and reach the level of foreign markets. In the final step, when your idea grows and matures enough with the help of the Academy and the Landa Entrepreneurship Center arrived and ready to enter the market, the issue of investment is raised. Entering international markets and competing at this level requires capital. After reaching sufficient stability, our third assistance to you at Landa Holding will begin. Landa Investment Center will be by your side with the aim of providing capital to be present at the international level. Along with providing all the services mentioned under the umbrella of Landa Holding, another distinguishing feature of us is that we are not limited to the domestic market and are always looking for We have been expanding startups in the global and international market.",
+      "title": "The Distinctive Features of Landa Holding :",
+      "titleText": "Every business requires a range of services to start up and grow to its desired scale before going global. We're delighted to announce that, as a pioneering organization, Landa International Holding offers a platform where individuals can access all essential services in a secure and professional environment.An innovative and profitable concept is often the initial and arguably most pivotal step in starting a business. Your journey as an entrepreneur can greatly benefit from being immersed in a professional environment that exposes you to diverse companies and nurtures your ideas. In response to this need, we have created the Landa Business Academy, providing access to knowledgeable and experienced mentors across various disciplines.Now, it's time for the next phase: putting your viable concept and plan into action at the Landa Academy Center. You've already brought it to a stage of development and maturity. Leveraging regional and global expert mentors, networking opportunities, and initial funding are deemed crucial elements that can accelerate achieving this objective and facilitate the rapid growth of a company. By tapping into all the resources and opportunities provided by the Landa Entrepreneurship Center, you can swiftly expand your new venture and explore international markets.As your concept matures and evolves with the backing of the Landa Academy and Entrepreneurship Center, the issue of funding naturally arises as you prepare to take it public and enter foreign markets. Capital becomes essential to compete at this level. At Landa International Holding, our third form of assistance kicks in once we've established sufficient stability. The Landa Investment Center will stand alongside you, providing funding to support your international expansion efforts.In addition to providing all the services encompassed within the Landa Holding framework, another aspect that distinguishes us is our commitment to expanding businesses beyond the local market. We have consistently focused on fostering growth in the global and international arena.",
       "textTitle": "What sets us apart:",
       "reverse": true,
       "show": true,
@@ -99,10 +99,10 @@
   "companies": [
     {
       "name": "ACADEMY",
-      "logo": "3.png",
+      "logo": "acadmy.png",
       "link": "https://academy.landaholding.com/"
     },
-    { "name": "DIACO", "logo": "5.png", "link": "https://Diacocenter.com" },
+    { "name": "DIACO", "logo": "diaco.png", "link": "https://Diacocenter.com" },
     {
       "name": "FARAZAMAN",
       "logo": "7.png",
@@ -118,10 +118,10 @@
       "logo": "2.png",
       "link": "https://Irimmigration.ca"
     },
-    { "name": "LANDA TRIP", "logo": "1.png", "link": "https://landatrip.com/" },
+    { "name": "LANDA TRIP", "logo": "trip.png", "link": "https://landatrip.com/" },
     {
       "name": "TOLU",
-      "logo": "4.png",
+      "logo": "tolu.png",
       "link": "https://landaholding.com/investment"
     },
     {
@@ -129,10 +129,10 @@
       "logo": "6.png",
       "link": "https://Visionraft.com"
     },
-    { "name": "LANDA CRAFTS", "logo": "8.png", "link": "#" },
+    { "name": "LANDA CRAFT", "logo": "craft.png", "link": "#" },
     {
       "name": "LANDA GENE",
-      "logo": "10.png",
+      "logo": "gene.png",
       "link": "https://landagene.landaholding.com/"
     }
   ],
