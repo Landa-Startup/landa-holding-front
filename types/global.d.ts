@@ -62,9 +62,10 @@ interface WorkWithUSFormData {
   phoneNumber: string,
   position: string,
   contract: string,
-  NationalIDNumber: string;
   FieldStudy: string;
   Subfield: string;
+  email: string;
+  cvFile?: File | '' | undefined;
   CreditsPassedNumber: string;
 }
 

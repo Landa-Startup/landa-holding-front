@@ -8,13 +8,15 @@ export default function UploadInput({
   register,
   errors,
   nameInput,
-  handleChange
+  handleChange,
+  required
 }: {
   title: string;
   register: any;
   errors: any;
   nameInput: string;
   handleChange: any;
+  required?:string;
 }) {
   return (
     <div className="inline-flex max-w-full flex-col justify-center gap-3">
@@ -37,7 +39,7 @@ export default function UploadInput({
         <input
           className={`h-7 text-[13px] font-normal capitalize text-neutral-800 ${errors[nameInput] ? ' border-red-500' : ''}`}
           type="file"
-          {...register(nameInput)}
+          {...register(nameInput,{required:required})}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             // setFileState({nameInput: e.target.files});
 

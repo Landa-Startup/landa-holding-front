@@ -12,6 +12,8 @@ import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
 import Button from '../common/Button';
 import Select from '../common/form/Select';
+import { useFile } from 'stores/fileStore';
+import UploadInput from '../common/UploadInput';
 
 export default function WorkWithUs() {
   const {
@@ -33,6 +35,11 @@ export default function WorkWithUs() {
     Student = t('workWithUS.student')
   }
 
+  const {
+    cvFileState,
+    handleCvFileChange,
+  } = useFile((s) => s)
+
   const PositionsItem = [Positions.Professor, Positions.Student];
 
   const PositionsData = PositionsItem.map((type: any) => ({
@@ -42,8 +49,14 @@ export default function WorkWithUs() {
 
   const [selectPosition, setSelectPosition] = useState('');
 
+  const [cvFileRequired,setCvFileRequired] = useState('');
+
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectPosition(event.target.value);
+    if (event.target.value == "Professor"){
+      setCvFileRequired(t('workWithUS', { returnObjects: true }).cvFileRequired)
+    }
+
     // if(event.target.value === t('workWithUS.Professor')) {
     //   // console.log("Professor");
     // }
@@ -101,6 +114,15 @@ export default function WorkWithUs() {
     // Create a FormData object for form data.
     const sendFormData = new FormData();
 
+    const filePostMap = {
+      cvFile: cvFileState.cvFile,
+    };
+
+    for (const [fieldName, file] of Object.entries(filePostMap)) {
+      if (file) {
+        sendFormData.append(fieldName, file, file.name);
+      }
+    }
 
     // Append all non-file form fields.
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
@@ -109,6 +131,10 @@ export default function WorkWithUs() {
       }
     });
 
+    if (formData.cvFile) {
+      sendFormData.append('pitchDeckFile', formData.cvFile as Blob);
+    }
+  
     // Send the form data to the API.
     submitWorkWithUsForm(sendFormData, csrfToken)
       .then(() => {
@@ -222,20 +248,20 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="your_national_id_number"
+                nameInput="email"
                 type="text"
                 label={
-                  t('workWithUS', { returnObjects: true }).NationalIDNumber
+                  t('workWithUS', { returnObjects: true }).email
                 }
                 required={
                   t('workWithUS', { returnObjects: true })
-                    .NationalIDNumberRequired
+                    .emailRequired
                 }
                 patternValue=""
                 patternMessage=""
                 placeholder={
                   t('workWithUS', { returnObjects: true })
-                    .NationalIDNumberPlaceholder
+                    .emailPlaceholder
                 }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b]"
@@ -283,6 +309,7 @@ export default function WorkWithUs() {
                 patternMessage=""
               />
             </div>
+
             <div className="col-span-1">
               <Input
                 register={register}
@@ -301,6 +328,18 @@ export default function WorkWithUs() {
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
                 patternMessage=""
+              />
+            </div>
+            <div className="col-span-1">
+            <UploadInput
+              title={
+                t('workWithUS', { returnObjects: true }).cvFile
+              }
+              register={register}
+              required={cvFileRequired}
+              errors={errors}
+              nameInput="cv_file"
+              handleChange={handleCvFileChange}
               />
             </div>
           </div>

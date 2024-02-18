@@ -94,6 +94,14 @@
     "StudySubFieldRequired": "your Study sub Field is required",
     "PositionPlaceholder": "Select your position",
     "contractPlaceholder": "Select your contract",
+
+    "email": "Email",
+    "emailRequired": "Email is Required.",
+    "emailPlaceholder": "Enter your Email",
+
+    "cvFile": "CV File",
+    "cvFileRequired": "cv file is Required.",
+    "cvFilePlaceholder": "please upload your cv file.",
     "student": "student",
     "Professor": "Professor",
     "hiring": "hiring",
