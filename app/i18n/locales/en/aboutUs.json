@@ -10,8 +10,8 @@
 
   "aboutLandaHolding": [
     {
-      "title": "About Landa Holding",
-      "text": "Landa International Holding is composed of ten Iranian and Canadian subsidiary corporations, each of which maintains an operational office in Tehran, Isfahan, Toronto, and Vancouver. Our objective is to provide financial backing to innovative entrepreneurs and assist them throughout the entire process of conceiving and establishing a global venture. Landa is distinguished by its cross-border perspective, which affords your company the chance to attract capital from international investors. We are a team of Angel Investors who help you make your own team, define your business model, and increase the value of your startup in international markets. What distinguishes us and makes us unique is our assistance in attracting resources and investment, inviting international investors and business associates, in addition to our entrepreneurs, that will all lead to success. Landa Holding aims to gather all resources from all over the world and introduce the best investment opportunities for start-up businesses.",
+      "title": "About Landa International Holding",
+      "text": "Landa International Holding is comprised of ten subsidiaries spread across Canada and Iran, with offices strategically located in Toronto, Vancouver, Tehran, and Isfahan. The primary aim of Landa is to invest in and support innovative entrepreneurs throughout their entire thrive, from the initial idea phase to launching their businesses on a global scale. What sets Landa apart from its competitors is its broad international perspective, empowering entrepreneurs to access resources from investors worldwide to stimulate the expansion of their businesses.As per the conjectures stated, in 2024 businesses focusing on areas such as the education of children and adolescents, artificial intelligence, tourism, environmental sustainability, online commerce, and educational platforms are expected to attract significant attention.Landa Holding maintains strong partnerships and actively collaborates with financial institutions, academic entities, and investment firms. For us at Landa, having access to the right networks, funding, technology, and resources has significantly enhanced our investment endeavors. Additionally, Landa facilitates connections for business owners with potential investors, clients, board members, advisors, and other experts through various meetings and interactions.",
       "reverse": true,
       "show": true,
       "index": 2,
@@ -50,8 +50,8 @@
   ],
   "Our mission and purpose": [
     {
-      "title": "Our mission and purpose",
-      "text": "Our mission is to identify and evaluate the most innovative startup plans in order to minimize the probability of failure for the investors who have placed their trust in us. On the other hand, at Landa International Holding, we seek to provide all the necessary tools and resources to our customers; A way to ensure success for both parties.",
+      "title": "The Mission of Landa Holding",
+      "text": "Our goal is to strengthen the confidence of the investors who have trusted us by carefully evaluating and selecting the most innovative startup proposals. At Landa International Holding, we are committed to providing our clients with comprehensive resources and expertise to ensure all parties' success.",
       "reverse": true,
       "show": true,
       "index": 2,
@@ -61,22 +61,22 @@
   "LANDAStartups": [
     {
       "title": "LANDA Startups",
-      "LandaTrip": "Landa Trip, a startup in the field of tourism and education with an international platform and professional artificial intelligence, began its activities in Iran in 2022.",
-      "Diaco": "Diaco, a startup in the field of industry and automation, operates with CNC Wire Cut machines in Canada and markets in the United States and Europe.",
-      "VisionRaft": "Vision Raft, a startup in the virtual world, children's education sector, expanded its operations in 2022 with the support of MTA Accelerator in Canada.",
-      "LandaHandicraft": "Landa Handicraft, a startup in the handicraft industry, an online store, and a reference point for handicrafts, attracted the necessary capital for platform development for the international market in 2023.",
-      "SteadySkull": "Steady Skull, a startup in the medical field, developed a product to facilitate brain surgery procedures, starting its activities in 2019 with a specialized team.",
+      "LandaTrip": "Landa Trip is an innovative company providing a platform for individuals to engage in diverse training courses worldwide, leveraging a skilled team and artificial intelligence. This intelligent platform serves as the ultimate choice for travel enthusiasts to connect and share their memorable experiences and courses with others, acting as a social network tailored to their interests.",
+      "Diaco": "The Diaco Center startup is an AI-driven platform serving as a bridge between technology seekers and providers. It aims to address industry and technological needs by utilizing an intelligent recommendation system, facilitating solutions to various challenges and requirements.",
+      "VisionRaft": "With the rising growth and spread of technology in everyday life, it is time to teach children in new and innovative ways that will replace old approaches. The startup Vision Raft began working with the specific goal of integrating augmented reality with education to spark a revolution in this field.",
+      "LandaHandicraft": "The proliferation of counterfeit handicrafts has become a significant concern for those involved in the industry. Landa Craft, a venture, has addressed this issue by creating a secure marketplace for handicraft enthusiasts. By harnessing the power of artificial intelligence, augmented reality, and NFT technologies, along with the expertise of renowned specialists, Landa Craft ensures authenticity and quality in the handicraft market.",
+      "LandaGene": "Landa Gene collaborates with leading experts in genetics, augmented by artificial intelligence, to conduct thorough genetic testing. This enables a detailed assessment of gene behavior and the development of personalized health programs. The primary objective of Landa Gene is to prevent illnesses like cancer among members of society.",
       "reverse": true,
       "show": true,
       "index": 2,
       "addedClass": ""
     },
     {
-      "LandaTrip": "LandaTrip",
+      "LandaTrip": "Landa Trip",
       "Diaco": "Diaco",
-      "VisionRaft": "VisionRaft",
-      "LandaHandicraft": "LandaHandicraft",
-      "SteadySkull": "SteadySkull"
+      "VisionRaft": "Vision Raft",
+      "LandaHandicraft": "Landa Craft",
+      "LandaGene": "Landa GENE"
     }
   ],
   "KeyDifferentiatingFactors": [
@@ -90,6 +90,9 @@
       "addedClass": ""
     }
   ],
+  "ReadMore": {
+    
+  },
   "itemList": [
     "Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other.",
     "Members Invest Directly: Members invest directly in startups of their choice, creating an environment where no member feels pressured to invest, and no member misses out on potential investment opportunities.",

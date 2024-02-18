@@ -35,12 +35,12 @@ export default function AboutUsLandaHolding() {
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
-        <p className="mb-20  ml-0 mt-4 text-justify font-barlow text-lg font-normal tracking-wide  md:mt-8 lg:w-[548px]">
+        <p className="mb-20  ml-0 mt-4 text-justify font-barlow text-lg font-normal tracking-wide  md:mt-8 lg:w-[748px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>
       <Image
-        className="brightness-95 contrast-[1.15] drop-shadow-md mt-10"
+        className="brightness-95 contrast-[1.15] drop-shadow-md mt-8 md:mt-20"
         loading="lazy"
         src="/static/images/About/team.jpg"
         width={655}

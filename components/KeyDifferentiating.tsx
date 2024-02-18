@@ -22,14 +22,14 @@ export default function KeyDifferentiating() {
 
   return (
     // TODO: don't use [0], [1] for translations
-    <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-5 sm:px-0 md:grid-cols-2 md:ltr:pl-16 md:rtl:pr-48">
-      <div className="my-20 flex flex-col gap-5 rtl:mr-6 ltr:md:pl-24 md:rtl:pr-20">
+    <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-10 sm:px-0 md:grid-cols-2 md:rtl:pr-48 md:ltr:pl-16">
+      <div className="rtl:mr-2 my-20 flex flex-col gap-5 ltr:md:mr-24 md:rtl:ml-40">
         <span className="font-gilda text-2xl leading-8 text-primary md:text-3xl md:ltr:ml-8 md:rtl:mr-8">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
         <div className="gap-2 font-barlow leading-7 text-black md:w-[690px]">
           <p  style={isOpen ? {} : paragraphStyles}
-          className="text-justify md:ltr:ml-10 md:rtl:mr-10">
+          className="rtl:ml-2 md:ltr:ml-10 md:rtl:mr-10 text-justify">
             {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .titleText
