@@ -53,7 +53,7 @@ export default async function Page({
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
         <div className={`mt-6 flex flex-col md:flex-row ltr:gap-2 rtl:gap-12`}>
-          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10 xl:mt-7">
+          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10 ">
             <Image
               className=" object-cover"
               src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"

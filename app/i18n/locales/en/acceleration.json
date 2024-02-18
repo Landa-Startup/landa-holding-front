@@ -1,11 +1,11 @@
 {
     "lng": "en",
-    "text": "If you have an innovative startup idea or are a student looking for acceleration opportunities, we are waiting for your applications.",
+    "text": "If you have an innovative idea or are exploring entrepreneurial opportunities, please reach out to us.",
     "LandaAccelerator": [
       {
-        "title": "LANDA ACCELERATOR :",
-        "subTitle": "Growth and Transformation into a Leading Startup",
-        "text": "Our accelerator division, as a leader in the field of startup acceleration and development on a global scale, assists individuals with innovative ideas and startup potentials at all stages, from launch and growth to success. Landa Accelerator aims to support the rapid development and expansion of startups and talented students looking to turn their ideas into high-performing businesses. We are in search of enthusiastic individuals and teams with the necessary skills and creativity to tackle challenges along the way as we accompany them on their journey and these young and well trained experts will be the one we invest in. There is a long way between the start of a business and success, and this is what our company is able to accelerate, which is the main aim in Landa Acceleration Center.",
+        "title": "Landa Entrepreneurship :",
+        "subTitle": "Opportunity to Generate New Ideas",
+        "text": "Landa's Entrepreneurship division, dedicated to nurturing businesses on a global scale, has established an acceleration department aimed at guiding individuals with innovative ideas from inception to triumph. This part of Landa Entrepreneurship endeavors to foster exceptional entrepreneurs and expedite the rapid growth and expansion of businesses. We are seeking individuals and teams with the necessary skills and creativity to overcome challenges along this journey.",
         "reverse": true,
         "show": true,
         "index": 2,
@@ -14,9 +14,9 @@
     ],
     "FORUGHACCELERATOR": [
       {
-        "title": "FORUGH ACCELERATOR :",
+        "title": "Forough Consulting and Entrepreneurship Center :",
         "subTitle": "Igniting Ideas and Startups",
-        "textUp": "In the Landa Accelerator division, innovative ideas and startups are carefully examined and evaluated. After confirming the value of an idea, we provide investment and connect startups with international networks to guide them through the development and expansion process. Our goal is to help startups progress more quickly and establish a strong presence in global markets.",
+        "textUp": "Forough Roshan Pasargad Company is an Iran-based consultancy and entrepreneurship center specializing in meticulously evaluating business concepts. Forough's mission is to support emerging businesses in their development and help them gain recognition on the global stage.",
         "textDown" : "Startups collaborating with us receive support from their early stages to their transformation into large companies. We provide you with opportunities to grow, achieve remarkable accomplishments, and enter global markets.",
         "reverse": true,
         "show": true,
@@ -63,7 +63,7 @@
     ],
     "LandaAcceleratorServices":[
       {
-        "title":"Landa Accelerator Services",
+        "title":"Landa Entrepreneurship Services",
         "text":"",
         "reverse": true,
         "show": true,
