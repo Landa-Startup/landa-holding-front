@@ -73,7 +73,7 @@
     },
     {
       "LandaTrip": "Landa Trip",
-      "Diaco": "Diaco",
+      "Diaco": "Diaco Center",
       "VisionRaft": "Vision Raft",
       "LandaHandicraft": "Landa Craft",
       "LandaGene": "Landa GENE"
@@ -103,7 +103,7 @@
   ],
   "companies": [
     {
-      "name": "ACADEMY",
+      "name": "LANDA ACADEMY",
       "logo": "acadmy.png",
       "link": "https://academy.landaholding.com/"
     },
@@ -148,7 +148,7 @@
     {
       "image": "/static/images/About/mjafari.jpg",
       "name": "Morteza Jafari",
-      "position": "International Relations",
+      "position": "Director Of Public Relation",
       "links": {
         "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
         "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
@@ -173,7 +173,7 @@
     {
       "image": "/static/images/our-team/Personals/a2.png",
       "name": "Hadi Hasanpoor",
-      "position": "Co Founder & CEO",
+      "position": "Co Founder & COB",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",
