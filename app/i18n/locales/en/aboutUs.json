@@ -103,11 +103,11 @@
   ],
   "companies": [
     {
-      "name": "ACADEMY",
+      "name": "LANDA ACADEMY",
       "logo": "acadmy.png",
       "link": "https://academy.landaholding.com/"
     },
-    { "name": "DIACO", "logo": "diaco.png", "link": "https://Diacocenter.com" },
+    { "name": "DIACO CENTERR", "logo": "diaco.png", "link": "https://Diacocenter.com" },
     {
       "name": "FARAZAMAN",
       "logo": "7.png",
@@ -148,7 +148,7 @@
     {
       "image": "/static/images/About/mjafari.jpg",
       "name": "Morteza Jafari",
-      "position": "International Relations",
+      "position": "Director Of Public Relations",
       "links": {
         "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
         "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
