@@ -5,6 +5,7 @@ import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
 export default function StoryOfLanda() {
+  
   const lang = useLang().lang;
 
   const { t } = useTranslation(lang, 'aboutUs');

@@ -13,7 +13,9 @@ const paragraphStyles: React.CSSProperties = {
 };
 
 export default function KeyDifferentiating() {
+
   const lang = useLang().lang;
+  
   const { t } = useTranslation(lang, 'aboutUs');
 
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +23,7 @@ export default function KeyDifferentiating() {
   return (
     // TODO: don't use [0], [1] for translations
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-5 sm:px-0 md:grid-cols-2 md:ltr:pl-16 md:rtl:pr-48">
-      <div className="my-20 flex flex-col gap-5 rtl:mr-6 ltr:md:mr-24 md:rtl:ml-40">
+      <div className="my-20 flex flex-col gap-5 rtl:mr-6 ltr:md:pl-24 md:rtl:pr-20">
         <span className="font-gilda text-2xl leading-8 text-primary md:text-3xl md:ltr:ml-8 md:rtl:mr-8">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
@@ -34,17 +36,17 @@ export default function KeyDifferentiating() {
             }
           </p>
           <button className='mt-4 text-primary md:ltr:ml-10 md:rtl:mr-10'
-           onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? 'Read Less' : 'Read More'}
-      </button>
+            onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? t("readLess") : t("readMore")}
+          </button>
 
           
-          <span className="font-bold text-primary md:ltr:ml-10 md:rtl:mr-10">
+          {/* <span className="font-bold text-primary md:ltr:ml-10 md:rtl:mr-10"> */}
             {/* {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .textTitle
             } */}
-          </span>
+          {/* </span> */}
           {/* <ul className="list-decimal md:ltr:ml-16 rtl:mr-8 md:rtl:mr-16">
             {t('itemList', { returnObjects: true }).map(
               (item: string, index: number) => (

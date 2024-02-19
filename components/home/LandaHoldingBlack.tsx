@@ -1,13 +1,14 @@
+'use client'
 import React from 'react';
 import Lines from '@/components/icons/LandaHoldingBlack/Lines';
 import UlList from '@/components/List/UlList';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import ButtonRefactor from '../common/ButtonRefactor';
 
-export default async function LandaHoldingBlack() {
-  const lang = useLang.getState().lang;
-  const { t } = await useTranslation(lang, 'mainPage');
+export default function LandaHoldingBlack() {
+  const lang = useLang().lang;
+  const { t } = useTranslation(lang, 'mainPage');
 
   return (
     <div className="md:pr-40' relative flex flex-col items-center  justify-evenly space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:flex-row md:justify-between md:py-10 md:pr-20 ltr:md:pl-36 rtl:md:pl-20">

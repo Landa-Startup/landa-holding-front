@@ -1,13 +1,14 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import UpcomingStartupsCard from './UpcomingStartupsCard';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
-export default async function HomeUpComingStartups() {
-  const { lang } = useLang.getState();
+export default function HomeUpComingStartups() {
+  const { lang } = useLang();
 
-  const { t } = await useTranslation(lang, 'mainPage');
+  const { t } = useTranslation(lang, 'mainPage');
 
   const renderCards = (
     cardData: Array<{

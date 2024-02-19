@@ -166,7 +166,7 @@ export default function WorkWithUs() {
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-        <div className="bg-[#F8F5F0] py-10">
+        <div className="py-10">
           <h3 className="text-center text-2xl md:text-3xl">
             {t('workWithUS', { returnObjects: true }).formTitle}
           </h3>

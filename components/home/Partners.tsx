@@ -7,7 +7,7 @@ import { useLang } from 'stores/langStore';
 
 export default function Partners() {
 
-  const lang = useLang((s) => s.lang)
+  const lang = useLang().lang
 
   const { t } = useTranslation(lang, 'mainPage');
 

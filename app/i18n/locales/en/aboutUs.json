@@ -5,6 +5,8 @@
   "certificate": "Certificate of Incorporation",
   "buttonTitle": "Federal Canada Corporation Information",
   "focusText": "Landa holding companies are primarily focused on ownership control and do not engage in manufacturing, sales of products or services, or any other operational activities. Their main purpose is to possess majority stock or membership interests in other companies, giving rise to the term &apos;pure holding company.&apos; In contrast, some holding companies not only hold ownership stakes in subsidiaries but also conduct their own business operations. These are known as &apos;mixed holding companies. Additionally, there are other categories of holding companies, such as immediate and intermediate holding companies. These types of holding companies are themselves owned by other holding companies or larger businesses.",
+  "readMore": "Read More",
+  "readLess": "Read Less",
 
   "aboutLandaHolding": [
     {

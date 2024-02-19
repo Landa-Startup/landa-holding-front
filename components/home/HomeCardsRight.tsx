@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import { useLang } from 'stores/langStore';
 
@@ -9,7 +10,7 @@ export default function HomeCardsRight({
   images: Array<{ src: string; alt: string }>;
   link: string;
 }) {
-  const lang = useLang.getState().lang;
+  const lang = useLang().lang;
 
   console.log('lang => ', lang);
 

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import ButtonRefactor from '../common/ButtonRefactor';
@@ -11,7 +12,7 @@ type Props = {
   buttonText: string;
 }
 
-export default async function UpcomingStartupsCard({ image, subTitle, text, goto, buttonText }: Props) {
+export default function UpcomingStartupsCard({ image, subTitle, text, goto, buttonText }: Props) {
 
   const { lang } = useLang.getState();
 

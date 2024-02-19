@@ -1,12 +1,13 @@
+'use client'
 import HomeCards from './HomeCards';
 import Lines from '../icons/Home/Lines';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { CompanySectionsInterface } from '@/types/global';
 import { useLang } from 'stores/langStore';
 
-const HomeCardsContainer = async () => {
-  const lang = useLang.getState().lang
-  const { t } = await useTranslation(lang, 'mainPage');
+const HomeCardsContainer = () => {
+  const lang = useLang().lang
+  const { t } = useTranslation(lang, 'mainPage');
 
   const renderHomeCards = (cardData: CompanySectionsInterface[]) => {
     return cardData.map(({ title, text, reverse, index, link, addedClass, images }) => (

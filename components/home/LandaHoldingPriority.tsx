@@ -1,10 +1,11 @@
+'use client'
 import LandaHoldingPriorityCard from './LandaHoldingPriorityCard';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
-export default async function LandaHoldingPriority() {
-  const lang = useLang.getState().lang;
-  const { t } = await useTranslation(lang, 'mainPage');
+export default function LandaHoldingPriority() {
+  const lang = useLang().lang;
+  const { t } = useTranslation(lang, 'mainPage');
 
   return (
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
