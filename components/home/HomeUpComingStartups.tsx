@@ -34,7 +34,7 @@ export default function HomeUpComingStartups() {
   };
 
   return (
-    <div className="mb-8 mt-12 min-h-[400px] md:mt-0">
+    <div className="mb-8 mt-20 min-h-[400px] md:mt-0">
       <div className="relative h-[400px]">
         <Image
           loading="lazy"

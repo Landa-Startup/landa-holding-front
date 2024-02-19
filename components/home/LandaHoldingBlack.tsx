@@ -43,7 +43,7 @@ export default function LandaHoldingBlack() {
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
         <div className="flex flex-col w-full items-center self-start md:items-start">
           <div className="flex flex-col pt-4 md:pt-0 w-full">
-            <span className="border-b border-black pb-3 text-right md:text-center font-gilda text-3xl font-normal text-black md:border-none md:text-4xl">
+            <span className="border-b border-black pb-3 pt-4 text-right md:text-center font-gilda text-3xl font-normal text-black md:border-none md:text-4xl md:pt-0">
               {t('EntrepreneurCenter')}
               <br />
             </span>
