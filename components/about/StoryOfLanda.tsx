@@ -5,7 +5,6 @@ import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
 export default function StoryOfLanda() {
-  
   const lang = useLang().lang;
 
   const { t } = useTranslation(lang, 'aboutUs');
@@ -25,7 +24,7 @@ export default function StoryOfLanda() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className="mt-10 px-10 md:px-0 md:pl-0">
+          <div className="mt-4 px-10 md:px-0 md:pl-0">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
               {t('TheStoryOfLanda', { returnObjects: true })[0].title}
             </span>
@@ -61,9 +60,9 @@ export default function StoryOfLanda() {
             </li>
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
-                {t('LANDAStartups', { returnObjects: true })[1].Diaco}
+                {t('LANDAStartups', { returnObjects: true })[1].DiacoCenter}
               </span>
-              :{t('LANDAStartups', { returnObjects: true })[0].Diaco}
+              :{t('LANDAStartups', { returnObjects: true })[0].DiacoCenter}
             </li>
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
@@ -79,9 +78,9 @@ export default function StoryOfLanda() {
             </li>
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
-                {t('LANDAStartups', { returnObjects: true })[1].LandaGene}
+                {t('LANDAStartups', { returnObjects: true })[1].landaGene}
               </span>
-              :{t('LANDAStartups', { returnObjects: true })[0].LandaGene}
+              :{t('LANDAStartups', { returnObjects: true })[0].landaGene}
             </li>
           </ul>
         </div>
