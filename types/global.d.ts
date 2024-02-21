@@ -59,9 +59,9 @@ interface InvestorRegistrationFormData {
 interface WorkWithUSFormData {
   firstName: string;
   lastName: string;
-  phoneNumber: string,
-  position: string,
-  contract: string,
+  phoneNumber: string;
+  position: string;
+  contract: string;
   FieldStudy: string;
   Subfield: string;
   email: string;
