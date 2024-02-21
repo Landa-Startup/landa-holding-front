@@ -158,8 +158,8 @@
       }
     },
     {
-      "image": "/static/images/our-team/Personals/a1.png",
-      "name": "Rasul Moraimehr",
+      "image": "/static/images/our-team/Personals/drimage.jpg",      
+      "name": "Rasoul Moradimehr",
       "position": " Co Founder & CEO",
       "links": {
         "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
@@ -171,9 +171,9 @@
     },
 
     {
-      "image": "/static/images/our-team/Personals/a2.png",
-      "name": "Hadi Hasanpoor",
-      "position": "Co Founder & CEO",
+      "image": "/static/images/our-team/Personals/dr2image.jpg",     
+      "name": "Hadi Hasanpour",
+      "position": "Co Founder & COB",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",

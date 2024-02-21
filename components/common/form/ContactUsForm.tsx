@@ -15,8 +15,6 @@ import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
 // import { Trans } from 'react-i18next';
 
-
-
 export default function ContactUsForm() {
   const {
     register,
@@ -102,7 +100,8 @@ export default function ContactUsForm() {
       <h2 className="flex w-full justify-center font-gilda text-4xl font-light md:text-5xl ltr:tracking-[.25em]">
         {t('contactForm', { returnObjects: true }).title}
       </h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-2">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid grid-cols-2 gap-2 md:w-[524px]">
           <PersonalInfoInput
             register={register}
             errors={errors}
@@ -154,8 +153,9 @@ export default function ContactUsForm() {
               cols={20}
             />
           </div>
+        </div>
 
-        <div className="col-span-1 md:mt-8">
+        <div className="md:pl-28">
           <Button
             type="submit"
             bgColor="Primary"
@@ -163,6 +163,7 @@ export default function ContactUsForm() {
           />
         </div>
       </form>
+
       <NotificationSendForm />
     </div>
   );
