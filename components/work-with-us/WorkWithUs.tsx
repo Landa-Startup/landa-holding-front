@@ -12,6 +12,8 @@ import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
 import Button from '../common/Button';
 import Select from '../common/form/Select';
+import { useFile } from 'stores/fileStore';
+import UploadInput from '../common/UploadInput';
 
 export default function WorkWithUs() {
   const {
@@ -33,6 +35,8 @@ export default function WorkWithUs() {
     Student = t('workWithUS.student')
   }
 
+  const { cvFileState, handleCvFileChange } = useFile((s) => s);
+
   const PositionsItem = [Positions.Professor, Positions.Student];
 
   const PositionsData = PositionsItem.map((type: any) => ({
@@ -42,36 +46,68 @@ export default function WorkWithUs() {
 
   const [selectPosition, setSelectPosition] = useState('');
 
+  const [cvFileRequired, setCvFileRequired] = useState('');
+
   const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectPosition(event.target.value);
+    if (event.target.value == 'Professor') {
+      setCvFileRequired(
+        t('workWithUS', { returnObjects: true }).cvFileRequired
+      );
+    }
+
     // if(event.target.value === t('workWithUS.Professor')) {
     //   // console.log("Professor");
     // }
   };
 
-  enum TypeOfContract {
+  enum TypeOfContractWithStudent { 
     Hiring = t('workWithUS.hiring'),
     Intership = t('workWithUS.Internship'),
     UniversityIntership = t('workWithUS.UniversityInternship')
   }
 
-  const TypeOfContractItem = [
-    TypeOfContract.Hiring,
-    TypeOfContract.Intership,
-    TypeOfContract.UniversityIntership
+  enum TypeOfContractWithProfessor {
+    Consultation = t('workWithUS.professionalConsultation')
+  }
+
+  const TypeOfContractWithStudentItem = [
+    TypeOfContractWithStudent.Hiring,
+    TypeOfContractWithStudent.Intership,
+    TypeOfContractWithStudent.UniversityIntership
   ];
 
-  const TypeOfContractData = TypeOfContractItem.map((type: any) => ({
-    value: type,
-    label: type
-  }));
+  const TypeOfContractWithProfessorItem = [
+    TypeOfContractWithProfessor.Consultation
+  ];
 
-  const [selectTypeOfContract, setSelectTypeOfContract] = useState('');
+  const TypeOfContractWithStudentData = TypeOfContractWithStudentItem.map(
+    (type: any) => ({
+      value: type,
+      label: type
+    })
+  );
 
-  const handleContractItemChange = (
+  const TypeOfContractWithProfessorData = TypeOfContractWithProfessorItem.map(
+    (type: any) => ({
+      value: type,
+      label: type
+    })
+  );
+
+  const [selectStudentContract, setSelectStudentContract] = useState('');
+  const [selectProfessorContract, setSelectProfessorContract] = useState('');
+
+  const handleContractWithStudentItemChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    setSelectTypeOfContract(event.target.value);
+    setSelectStudentContract(event.target.value);
+  };
+
+  const handleContractWithProfessorItemChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setSelectProfessorContract(event.target.value);
   };
 
   const {
@@ -101,17 +137,31 @@ export default function WorkWithUs() {
     // Create a FormData object for form data.
     const sendFormData = new FormData();
 
+    const filePostMap = {
+      cvFile: cvFileState.cvFile
+    };
+
+    for (const [fieldName, file] of Object.entries(filePostMap)) {
+      if (file) {
+        sendFormData.append(fieldName, file, file.name);
+      }
+    }
 
     // Append all non-file form fields.
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
       if (typeof fieldValue !== 'object' || fieldValue === null) {
         sendFormData.append(fieldName, String(fieldValue));
-      }
+      } else sendFormData.append(fieldName, fieldValue[0]);
     });
+
+    // if (formData.cvFile) {
+    //   sendFormData.append('cvFile', formData.cvFile as Blob);
+    // }
 
     // Send the form data to the API.
     submitWorkWithUsForm(sendFormData, csrfToken)
       .then(() => {
+        console.log(sendFormData)
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
@@ -140,7 +190,7 @@ export default function WorkWithUs() {
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-        <div className="bg-[#F8F5F0] py-10">
+        <div className="py-10">
           <h3 className="text-center text-2xl md:text-3xl">
             {t('workWithUS', { returnObjects: true }).formTitle}
           </h3>
@@ -170,16 +220,38 @@ export default function WorkWithUs() {
                 register={register}
                 errors={errors}
                 nameInput="type_of_contract"
-                label={t('workWithUS', { returnObjects: true }).contractPlaceholder}
+                label={
+                  t('workWithUS', { returnObjects: true }).contractPlaceholder
+                }
                 required=""
                 className="select select-bordered mt-4 w-full max-w-xs px-8"
                 labelClass="text-[#6b6b6b] dark:text-current"
-                placeholder={t('workWithUS', { returnObjects: true }).contractPlaceholder}
-                options={TypeOfContractData}
-                handleChange={handleContractItemChange}
-                selected={selectTypeOfContract}
+                placeholder={
+                  t('workWithUS', { returnObjects: true }).contractPlaceholder
+                }
+                options={TypeOfContractWithStudentData}
+                handleChange={handleContractWithStudentItemChange}
+                selected={selectStudentContract}
               />
-            ) : null}
+            ) : (
+              <Select
+                register={register}
+                errors={errors}
+                nameInput="type_of_contract"
+                label={
+                  t('workWithUS', { returnObjects: true }).contractPlaceholder
+                }
+                required=""
+                className="select select-bordered mt-4 w-full max-w-xs px-8"
+                labelClass="text-[#6b6b6b] dark:text-current"
+                placeholder={
+                  t('workWithUS', { returnObjects: true }).contractPlaceholder
+                }
+                options={TypeOfContractWithProfessorData}
+                handleChange={handleContractWithProfessorItemChange}
+                selected={selectProfessorContract}
+              />
+            )}
           </div>
           {/* next line */}
           <div className="border-b-2 border-black bg-[#F8F5F0]">
@@ -222,20 +294,16 @@ export default function WorkWithUs() {
               <Input
                 register={register}
                 errors={errors}
-                nameInput="your_national_id_number"
+                nameInput="email"
                 type="text"
-                label={
-                  t('workWithUS', { returnObjects: true }).NationalIDNumber
-                }
+                label={t('workWithUS', { returnObjects: true }).email}
                 required={
-                  t('workWithUS', { returnObjects: true })
-                    .NationalIDNumberRequired
+                  t('workWithUS', { returnObjects: true }).emailRequired
                 }
                 patternValue=""
                 patternMessage=""
                 placeholder={
-                  t('workWithUS', { returnObjects: true })
-                    .NationalIDNumberPlaceholder
+                  t('workWithUS', { returnObjects: true }).emailPlaceholder
                 }
                 className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b]"
@@ -283,6 +351,7 @@ export default function WorkWithUs() {
                 patternMessage=""
               />
             </div>
+
             <div className="col-span-1">
               <Input
                 register={register}
@@ -303,6 +372,16 @@ export default function WorkWithUs() {
                 patternMessage=""
               />
             </div>
+            <div className="col-span-1">
+              <UploadInput
+                title={t('workWithUS', { returnObjects: true }).cvFile}
+                register={register}
+                required={cvFileRequired}
+                errors={errors}
+                nameInput="cvFile"
+                handleChange={handleCvFileChange}
+              />
+            </div>
           </div>
           <div className="mx-auto w-full pb-4 md:w-auto">
             {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
@@ -313,4 +392,5 @@ export default function WorkWithUs() {
       </div>
     </>
   );
+// eslint-disable-next-line max-lines
 }

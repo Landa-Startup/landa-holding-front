@@ -34,11 +34,11 @@ export default function JobForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange
-  } = useSubmit((s) => s);
+  } = useSubmit();
 
-  const { cvFileState, handleCvFileChange } = useFile((s) => s);
+  const { cvFileState, handleCvFileChange } = useFile();
 
-  const lang = useLang((s) => s.lang);
+  const lang = useLang().lang;
 
   const { t } = useTranslation(lang, 'formComponent');
 

@@ -1,4 +1,4 @@
-
+'use client'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { useLang } from 'stores/langStore';
@@ -19,7 +19,7 @@ export default function ButtonRefactor({
   bgColor
 }: ButtonProps) {
 
-  const { lang } = useLang.getState()
+  const { lang } = useLang();
 
   switch (type) {
     // If the type is 'Link'

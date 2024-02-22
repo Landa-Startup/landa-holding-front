@@ -1,5 +1,4 @@
-
-
+'use client'
 import { HomeCardsLeftProps } from '../../types/global';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';

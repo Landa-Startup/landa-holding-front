@@ -109,8 +109,9 @@ const initialWorkWithUSFormData: WorkWithUSFormData = {
   phoneNumber: '',
   position: '',
   contract: '',
-  NationalIDNumber: '',
   FieldStudy: '',
+  email: '',
+  cvFile: '' as File | '',
   Subfield: '',
   CreditsPassedNumber: ''
 };

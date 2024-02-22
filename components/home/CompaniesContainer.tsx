@@ -1,11 +1,10 @@
 'use client'
-
 import CompaniesCard from './CompaniesCard';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
 export default function CompaniesContainer() {
-  const lang = useLang((s) => s.lang)
+  const lang = useLang().lang
 
   const { t } = useTranslation(lang, 'aboutUs');
 

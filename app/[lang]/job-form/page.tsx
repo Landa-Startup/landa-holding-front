@@ -1,4 +1,3 @@
-
 import Banner from '../../../components/common/Banner';
 import JobForm from '../../../components/job-form/JobForm';
 import { Metadata } from 'next';

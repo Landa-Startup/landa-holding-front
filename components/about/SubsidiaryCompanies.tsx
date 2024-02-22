@@ -1,13 +1,14 @@
-
+'use client'
 import CompaniesContainer from '../home/CompaniesContainer';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 
-export default async function SubsidiaryCompanies(
+export default function SubsidiaryCompanies(
 ) {
 
-  const lang = useLang.getState().lang
-  const { t } = await useTranslation(lang, "aboutUs")
+  const lang = useLang().lang
+
+  const { t } = useTranslation(lang, "aboutUs")
 
   return (
     <div className="p-10 md:px-28 md:py-10">

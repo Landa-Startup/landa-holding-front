@@ -59,12 +59,13 @@ interface InvestorRegistrationFormData {
 interface WorkWithUSFormData {
   firstName: string;
   lastName: string;
-  phoneNumber: string,
-  position: string,
-  contract: string,
-  NationalIDNumber: string;
+  phoneNumber: string;
+  position: string;
+  contract: string;
   FieldStudy: string;
   Subfield: string;
+  email: string;
+  cvFile?: File | '' | undefined;
   CreditsPassedNumber: string;
 }
 

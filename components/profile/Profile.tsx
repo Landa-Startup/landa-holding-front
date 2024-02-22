@@ -11,33 +11,25 @@ import { useEffect, useState } from 'react';
 
 import { ProfileData } from '@/types/global';
 
-
-
-
-export default function Profile(
-  {slug} : {slug: string}
-) {
-
-
-    const ProfileDataObject:ProfileData = {
-        first_name:'',
-        last_name:'',
-        websites:[],
-        job_title:'',
-        instagram:'',
-        email:'',
-        linkedin:'',
-        whatsapp:'',
-        thumbnail:'',
-    }
-
+export default function Profile({ slug }: { slug: string }) {
+  const ProfileDataObject: ProfileData = {
+    first_name: '',
+    last_name: '',
+    websites: [],
+    job_title: '',
+    instagram: '',
+    email: '',
+    linkedin: '',
+    whatsapp: '',
+    thumbnail: ''
+  };
 
   // const pathname = usePathname();
   // const slug = pathname?.replace('/en/profile/', '');
 
   const [data, setData] = useState<ProfileData>(ProfileDataObject);
 
-  console.log(data)
+  console.log(data);
 
   useEffect(() => {
     async function fetchTags() {
@@ -54,11 +46,19 @@ export default function Profile(
   console.log(data);
 
   return (
-    <div className="flex h-screen justify-center py-24 md:px-40">
-      <section className="flex flex-col items-center justify-between md:w-[60%]">
+    <div className="flex h-screen justify-center w-full py-24 md:px-40">
+      <section className="flex flex-col items-center justify-between w-full px-4 md:w-[60%]">
         {/* top */}
         <div className="flex flex-col items-center">
-          <div className="h-[5.5rem] w-[5.5rem] rounded-full border border-gray-600"><Image src={data.thumbnail} className='h-[5.5rem] w-[5.5rem] rounded-full' width={100} height={100} alt='thumbnail'/></div>
+          <div className="px-3 flex items-center justify-center rounded-full">
+            <Image
+              src={data.thumbnail}
+              className=""
+              width={200}
+              height={200}
+              alt="thumbnail"
+            />
+          </div>
           <p className="my-3 text-xl">
             {data?.first_name} {data?.last_name}
           </p>
@@ -68,31 +68,43 @@ export default function Profile(
         {/* middle */}
         <div className="w-full">
           <ul className="w-full">
-            {data?.websites.map((website:any,index:number) => {
-                return(
-                <Link key={index} href={"https://landaholding.com"} className="hover:text-primary" target="_blank">
-                    <li className="mt-3 flex justify-between px-2 py-3 shadow-md">
-                        <div className="mr-0">
-                        <div className="h-10 w-10  bg-red-400"><Image src={website.logo} width={100} height={100} alt='logo'/></div>
-                        </div>
-                        <div className="flex">
-                        <p className="m-auto text-lg">{website.title}</p>
-                        </div>
-                        <div className="w-10"></div>
-                    </li>
-                  </Link>
-                )
+            {data?.websites.map((website: any, index: number) => {
+              return (
+                <Link
+                  key={index}
+                  href={'https://landaholding.com'}
+                  className="hover:text-primary"
+                  target="_blank"
+                >
+                  <li className="mt-3 flex justify-between items-center px-2 py-3 shadow-lg">
+                    <div className="">
+                      <div className="h-10 w-10 flex justify-between items-center ">
+                        <Image
+                          src={website.logo}
+                          width={100}
+                          height={100}
+                          alt="logo"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <p className="m-auto text-lg">{website.title}</p>
+                    </div>
+                    <div className="w-10"></div>
+                  </li>
+                </Link>
+              );
             })}
           </ul>
         </div>
         {/* middle */}
         {/* down */}
         <div>
-            {/* TODO: change default address */}
+          {/* TODO: change default address */}
           <div className="mt-2 flex h-[22px] w-[200px] flex-row items-center justify-between">
             <Link
               aria-label="Instagram"
-              href={data?.instagram||"https://landaholding.com"}
+              href={data?.instagram || 'https://landaholding.com'}
               className="hover:text-primary"
               target="_blank"
             >
@@ -112,7 +124,7 @@ export default function Profile(
             </Link>
             <Link
               aria-label="Whatsapp"
-              href={data?.whatsapp||"https://landaholding.com"}
+              href={data?.whatsapp || 'https://landaholding.com'}
               className="hover:text-primary"
               target="_blank"
             >
@@ -124,7 +136,7 @@ export default function Profile(
             </Link>
             <Link
               aria-label="Linkedin"
-              href={data?.linkedin||"https://landaholding.com"}
+              href={data?.linkedin || 'https://landaholding.com'}
               className="hover:text-primary"
               target="_blank"
             >

@@ -1,7 +1,7 @@
 {
   "lng": "en",
   "Acceleration": "Accelerator",
-  "AccelerationCenter": "ACCELERATION CENTER",
+  "AccelerationCenter": "ENTREPRENEURSHIP CENTER",
   "Investment": "Investor",
   "Academy": "Incubator",
   "HeroSubtitle": "Feel The Future",
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "title": "Acceleration",
-      "text": "At Landa Acceleration Center, entrepreneurs are provided with a dynamic and nurturing environment designed to foster creativity and collaboration. The acceleration center boasts useful facilities, cutting-edge resources, experienced mentors, and professional experts, which will all help individuals to accelerate their own businesses and expand their new creative startups. Landa Holding understand that the challenges startups face. Therefore, we offer comprehensive programs that address business development, and market expansion.",
+      "title": "Entrepreneurship",
+      "text": "The vibrant Landa Entrepreneurship Center was founded to foster and cultivate entrepreneurial innovation. By embracing individuals who are constantly on the lookout for fresh ideas while acknowledging the inherent risks and uncertainties in every new venture, the center empowers them to transform these ideas into new opportunities. This is made possible through the supportive facilities and skilled professionals available at the center.",
       "reverse": true,
       "show": true,
       "index": 2,

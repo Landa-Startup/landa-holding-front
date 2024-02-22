@@ -97,42 +97,9 @@ export default function HandicraftForm() {
     }));
 
   return (
-    // <form className="flex flex-col gap-4">
-    //   <PersonalInfoInput
-    //     lang={lang}
-    //     errors={''}
-    //     register={''}
-    //     nameInputs={{
-    //       firstName: 'First Name',
-    //       lastName: 'Last Name',
-    //       email: 'Email',
-    //       phoneNumber: ''
-    //     }}
-    //   />
-    // </form>
-    // <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 justify-items-center gap-4 md:w-1/2">
-    //   <input
-    //     className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-    //     placeholder={t('form.firstName')}
-    //   ></input>
-    //   <input
-    //     className="h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-    //     placeholder={t('form.lastName')}
-    //   ></input>
-    //   <input
-    //     className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-    //     placeholder={t('form.email')}
-    //   ></input>
-    //   <input
-    //     className="col-span-2 h-[50px] w-full rounded-lg border-[#FAFAFA] bg-[#FAFAFA] p-4 shadow-sm"
-    //     placeholder={t('form.organization')}
-    //   ></input>
-    //   <div className="col-span-2">
-    //     <ButtonRefactor text={t('form.submit')} type="submit" />
-    //   </div>
-    // </form>
+    
 
-    <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center font-barlow">
     <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
       <div className='grid w-full grid-cols-1 gap-x-3 md:grid-cols-2'>
       <PersonalInfoInput

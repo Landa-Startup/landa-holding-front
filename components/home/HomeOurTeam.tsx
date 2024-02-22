@@ -1,13 +1,14 @@
-
+'use client'
 import Image from 'next/image';
 import Button from '../common/Button';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import Link from 'next/link';
-export default async function HomeOurTeam() {
-  const lang = useLang.getState().lang;
+export default function HomeOurTeam() {
 
-  const { t } = await useTranslation(lang, 'mainPage');
+  const lang = useLang().lang;
+
+  const { t } = useTranslation(lang, 'mainPage');
 
   return (
     <div className="relative my-10 inline-flex w-full flex-col items-center justify-start gap-9 bg-white md:mb-16">

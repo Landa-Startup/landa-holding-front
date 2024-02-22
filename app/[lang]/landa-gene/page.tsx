@@ -18,7 +18,7 @@ export default async function Page({
   const { t } = await useTranslation(lang, "landaGene")
 
   return (
-    <div dir={t('dir')}>
+    <div>
       <Banner
         image="/static/images/gene.jpg"
         title={t('banner')}

@@ -42,12 +42,12 @@ export default async function Page({
             alt="handicraft"
             layout="fill"
           />
-          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] tracking-wider text-black md:mr-10 md:mt-20">
+          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-20">
             {t('paragraph1')}
           </p>
         </div>
         <div className="relative flex flex-col-reverse justify-between gap-5 overflow-hidden md:flex-row">
-          <p className="mt-7 text-justify font-barlow text-base font-normal leading-[45px] tracking-wider text-black md:mt-0 md:h-[720px] md:w-[652px]">
+          <p className="mt-7 text-justify font-barlow text-base font-normal leading-[45px] text-black md:mt-0 md:h-[720px] md:w-[652px]">
             {t('paragraph2')}
             <br />
             {t('paragraph3')}
@@ -70,7 +70,7 @@ export default async function Page({
           </div>
         </div>
         <div className="flex w-full flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5">
-          <p className="font-openSans text-base font-bold leading-[210%] tracking-wider text-[#AA8453]">
+          <p className="font-openSans text-base font-bold leading-[210%] text-[#AA8453]">
             {t('formTitle')}
           </p>
           <HandicraftForm />

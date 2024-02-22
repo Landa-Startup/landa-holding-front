@@ -13,7 +13,9 @@ const paragraphStyles: React.CSSProperties = {
 };
 
 export default function KeyDifferentiating() {
+
   const lang = useLang().lang;
+  
   const { t } = useTranslation(lang, 'aboutUs');
 
   const [isOpen, setIsOpen] = useState(false);
@@ -21,30 +23,30 @@ export default function KeyDifferentiating() {
   return (
     // TODO: don't use [0], [1] for translations
     <div className="grid grid-cols-1 justify-items-end bg-[#FAFAFA] px-10 sm:px-0 md:grid-cols-2 md:rtl:pr-48 md:ltr:pl-16">
-      <div className="rtl:mr-6 my-20 flex flex-col gap-5 ltr:md:mr-24 md:rtl:ml-40">
+      <div className="rtl:mr-2 my-20 flex flex-col gap-5 ltr:md:mr-24 md:rtl:ml-40">
         <span className="font-gilda text-2xl leading-8 text-primary md:text-3xl md:ltr:ml-8 md:rtl:mr-8">
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
         <div className="gap-2 font-barlow leading-7 text-black md:w-[690px]">
           <p  style={isOpen ? {} : paragraphStyles}
-          className="md:ltr:ml-10 md:rtl:mr-10">
+          className="rtl:ml-2 md:ltr:ml-10 md:rtl:mr-10 text-justify">
             {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .titleText
             }
           </p>
-          <button className='md:rtl:mr-10 md:ltr:ml-10 mt-4 text-primary'
-           onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? 'Read Less' : 'Read More'}
-      </button>
+          <button className='mt-4 text-primary md:ltr:ml-10 md:rtl:mr-10'
+            onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? t("readLess") : t("readMore")}
+          </button>
 
           
-          <span className="font-bold text-primary md:ltr:ml-10 md:rtl:mr-10">
+          {/* <span className="font-bold text-primary md:ltr:ml-10 md:rtl:mr-10"> */}
             {/* {
               t('KeyDifferentiatingFactors', { returnObjects: true })[0]
                 .textTitle
             } */}
-          </span>
+          {/* </span> */}
           {/* <ul className="list-decimal md:ltr:ml-16 rtl:mr-8 md:rtl:mr-16">
             {t('itemList', { returnObjects: true }).map(
               (item: string, index: number) => (
@@ -54,7 +56,7 @@ export default function KeyDifferentiating() {
           </ul> */}
         </div>
       </div>
-      <div className="hidden items-center md:flex rtl:pl-20 ltr:pr-24">
+      <div className="hidden items-center ltr:pr-24 rtl:pl-20 md:flex">
         <Image
           src="/static/images/Home/KeyDifferentiating/Vector 58.png"
           alt="Landa Key Differentiating"

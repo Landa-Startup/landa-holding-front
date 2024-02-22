@@ -1,3 +1,4 @@
+'use client'
 import HomeCardsLeft from './HomeCardsLeft';
 import HomeCardsRight from './HomeCardsRight';
 import { HomeCardsProps } from '@/types/global';

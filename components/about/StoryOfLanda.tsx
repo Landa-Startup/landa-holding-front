@@ -60,9 +60,9 @@ export default function StoryOfLanda() {
             </li>
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
-                {t('LANDAStartups', { returnObjects: true })[1].Diaco}
+                {t('LANDAStartups', { returnObjects: true })[1].DiacoCenter}
               </span>
-              :{t('LANDAStartups', { returnObjects: true })[0].Diaco}
+              :{t('LANDAStartups', { returnObjects: true })[0].DiacoCenter}
             </li>
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
@@ -78,9 +78,9 @@ export default function StoryOfLanda() {
             </li>
             <li className="list-disc marker:text-primary">
               <span className="font-bold text-primary">
-                {t('LANDAStartups', { returnObjects: true })[1].SteadySkull}
+                {t('LANDAStartups', { returnObjects: true })[1].landaGene}
               </span>
-              :{t('LANDAStartups', { returnObjects: true })[0].SteadySkull}
+              :{t('LANDAStartups', { returnObjects: true })[0].landaGene}
             </li>
           </ul>
         </div>
