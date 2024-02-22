@@ -61,7 +61,7 @@ export default function WorkWithUs() {
     // }
   };
 
-  enum TypeOfContractWithStudent {
+  enum TypeOfContractWithStudent { 
     Hiring = t('workWithUS.hiring'),
     Intership = t('workWithUS.Internship'),
     UniversityIntership = t('workWithUS.UniversityInternship')
@@ -151,16 +151,17 @@ export default function WorkWithUs() {
     Object.entries(formData).forEach(([fieldName, fieldValue]) => {
       if (typeof fieldValue !== 'object' || fieldValue === null) {
         sendFormData.append(fieldName, String(fieldValue));
-      }
+      } else sendFormData.append(fieldName, fieldValue[0]);
     });
 
-    if (formData.cvFile) {
-      sendFormData.append('cvFile', formData.cvFile as Blob);
-    }
+    // if (formData.cvFile) {
+    //   sendFormData.append('cvFile', formData.cvFile as Blob);
+    // }
 
     // Send the form data to the API.
     submitWorkWithUsForm(sendFormData, csrfToken)
       .then(() => {
+        console.log(sendFormData)
         handleSuccessChange(true);
         handleNotifChange(true);
         handleSendChange(false);
@@ -377,7 +378,7 @@ export default function WorkWithUs() {
                 register={register}
                 required={cvFileRequired}
                 errors={errors}
-                nameInput="cv_file"
+                nameInput="cvFile"
                 handleChange={handleCvFileChange}
               />
             </div>
@@ -391,4 +392,5 @@ export default function WorkWithUs() {
       </div>
     </>
   );
+// eslint-disable-next-line max-lines
 }
