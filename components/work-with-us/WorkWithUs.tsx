@@ -14,6 +14,7 @@ import Button from '../common/Button';
 import Select from '../common/form/Select';
 import { useFile } from 'stores/fileStore';
 import UploadInput from '../common/UploadInput';
+import Image from 'next/image';
 
 export default function WorkWithUs() {
   const {
@@ -190,6 +191,9 @@ export default function WorkWithUs() {
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
+        <div className='flex justify-center'>
+          <Image src="/static/images/Work-with-us/forough.png" alt="Work with us" width={300} height={300} />
+        </div>
         <div className="py-10">
           <h3 className="text-center text-2xl md:text-3xl">
             {t('workWithUS', { returnObjects: true }).formTitle}
