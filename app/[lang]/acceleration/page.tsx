@@ -39,6 +39,7 @@ export default async function Page({
           loading="lazy"
         />
       </div>
+      
       {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
       <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
         <span
@@ -64,7 +65,7 @@ export default async function Page({
             />
           </div>
           <p
-            className={`w-[340px] text-justify font-barlow leading-8 md:h-[248px] md:w-[520px] lg:w-[680px] lg:pr-2  ltr:text-lg ltr:tracking-[1.6px] rtl:text-base rtl:mt-6`}
+            className={`w-[340px] text-justify font-barlow leading-8 md:h-[248px] md:w-[520px] lg:w-[680px] lg:pr-2  ltr:text-lg ltr:tracking-[1.6px] rtl:text-base rtl:mt-6 md:pt-10`}
           >
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
@@ -80,8 +81,8 @@ export default async function Page({
           textDown={t('FORUGHACCELERATOR', { returnObjects: true })[0].textDown}
           secondImageSrc="/static/images/acceleration/87ac8df38c4ff428ee903bb8595ad970.png"
           itemsList={t('FORUGHACCELERATOR', { returnObjects: true })[0].items}
+          
         />
-
         <AccelerationCard
           addedClass="md:h-[756px] mt-6 md:mt-16 pb-3"
           title={t('FARAZAMANACCELERATOR', { returnObjects: true })[0].title}

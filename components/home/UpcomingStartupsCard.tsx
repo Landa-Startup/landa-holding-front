@@ -39,7 +39,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
             <div className='w-full px-3 md:px-0'>
               <hr className='h-[2px] w-full bg-black' />
             </div>
-            <div className='flex h-full flex-col items-center justify-between gap-3 px-2 md:px-6'>
+            <div className='flex h-full flex-col items-center justify-between gap-3 px-2 md:px-6 text-justify'>
               <div>
                 <p className='font-barlow text-[15px] leading-[30px] md:text-[16px]'>
                   {text}
