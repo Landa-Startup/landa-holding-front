@@ -46,7 +46,7 @@ export default function AccelerationCard({
                 </span>
               </div>
             </div>
-            <div className="flex flex-col ml-6 md:ml-0 font-gilda text-xs text-[#AA8453] md:text-3xl">
+            <div className="flex flex-col ml-6 pt-4 md:ml-0 font-gilda text-xs text-[#AA8453] md:text-3xl">
               {slogan}
             </div>
           </div>
@@ -84,7 +84,17 @@ export default function AccelerationCard({
                 {item}
               </span>
             ))}
+
+        <div className='pt-14 text-[#AA8453] text-lg md:text-2xl rtl:text-right w-[320px] pl-2 md:pl-0 md:w-[1100px]'>
+        {t('CharacteristicsOfEntrepreneurship', { returnObjects: true }).title}
+        <ul role="list" className="marker:text-[#AA8453] w-full list-disc space-y-3 text-black md:text-lg pt-6 text-sm pb-6 md:pb-0 rtl:text-right">
+        <li>{t('itemsCharecter', { returnObjects: true }).item1}</li>
+        <li>{t('itemsCharecter', { returnObjects: true }).item2}</li>
+        <li>{t('itemsCharecter', { returnObjects: true }).item3}</li>
+        </ul>
+        </div>
           </div>
+
         )}
         <Image
           className="absolute bottom-0 right-0 opacity-20"

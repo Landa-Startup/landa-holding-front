@@ -23,26 +23,24 @@
         "index": 2,
         "addedClass": "",
         "items": [
-            "1. Idea generation for innovative business creation",
-            "2. Idea nurturing",
-            "3. Creating a pitch deck",
-            "4. Financial modelling",
-            "5. Mentorship programs",
-            "6. Networking",
-            "7. Cooperative workspace",
-            "8. Digital marketing",
-            "9. Consultation for necessary permits",
-            "10. Seed investment",
-            "11. Market share expansion",
-            "12. Marketing and sales strategy",
-            "13. Business development",
-            "14. Preparation and valuation of business plans"
+            "1. Discover the appropriate opportunity",
+            "2. Ideation",
+            "3. Implementing the idea",
+            "4. Developing ideas"
         ]
       }
     ],
+    "CharacteristicsOfEntrepreneurship": {
+      "title": "Characteristics of Entrepreneurship:"
+    },
+    "itemsCharecter" : {
+      "item1":"Entrepreneurship is a vibrant and economically impactful endeavor",
+      "item2":"Entrepreneurship is intimately tied to innovation",
+      "item3":"Entrepreneurship involves embracing risk"
+    },
     "AcceleratorProcess": [
       {
-        "title": "Accelerator Process",
+        "title": "Accelerator Process :",
         "text": "1. Idea generation for innovative business creation  2. Idea nurturing  3. Creating a pitch deck  4. Financial modelling  5. Mentorship programs  6. Networking  7. Cooperative workspace  8. Digital marketing  9. Consultation for necessary permits  10. Seed investment  11. Market share expansion 12. Marketing and sales strategy  13. Business development  14. Preparation and valuation of business plans",
         "reverse": true,
         "show": true,

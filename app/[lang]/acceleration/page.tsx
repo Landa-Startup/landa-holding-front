@@ -43,13 +43,13 @@ export default async function Page({
       {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
       <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
         <span
-          className={`mb-2 md:ml-32 ml-5 mr-8 self-start text-3xl leading-tight text-[#55422A] md:text-5xl`}
+          className={`mb-2 md:ml-32 ml-5 mr-8 self-start text-3xl leading-tight text-[#55422A] md:text-5xl md:pr-28`}
         >
           {/* TODO: delete [0],[1] from translation */}
           {t('LandaAccelerator', { returnObjects: true })[0].title}
         </span>
         <span
-          className={`md:ml-32 ml-5 mr-8 self-start text-xl leading-tight text-[#AA8453] md:text-4xl`}
+          className={`md:ml-32 ml-5 mr-8 self-start text-xl leading-tight text-[#AA8453] md:text-4xl md:pr-28`}
         >
           {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
         </span>
