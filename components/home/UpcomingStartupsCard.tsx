@@ -45,7 +45,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
                   {text}
                 </p>
               </div>
-              <div className='w-[170px] self-end p-2 md:w-[224px] md:self-center md:p-6'>
+              <div className='w-[170px]  p-2 md:w-[224px] self-center md:p-6'>
                 <ButtonRefactor
                   text={buttonText}
                   type='link'
