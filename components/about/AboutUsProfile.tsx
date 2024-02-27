@@ -18,7 +18,7 @@ export default function AboutUsProfile() {
           <h2 className="tracking-0 font-condensed text-xl font-normal uppercase leading-normal md:text-2xl ltr:tracking-widest">
             {t('professionals')}
           </h2>
-          <h1 className="rtl:tracking-0 font-gilda text-3xl  font-normal uppercase leading-normal md:text-4xl">
+          <h1 className="rtl:tracking-0 font-gilda text-3xl  font-normal uppercase leading-normal md:text-4xl my-2">
             {t('boardOfDirectors')}
           </h1>
         </div>
