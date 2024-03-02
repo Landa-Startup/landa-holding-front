@@ -151,7 +151,7 @@
     "statusSelectRequired": "Your Status is Required",
     "statusSelectPlaceholder": "Select Your Status:",
     "idea": {
-      "ideaExplanation": "Explain your idea in 5 lines?*",
+      "ideaExplanation": "Explain your idea in 5 lines? *",
       "ideaExplanationPlaceholder": "Description",
       "ideaExplanationRequired": "This field is required"
     },
@@ -162,17 +162,17 @@
     "businessPlan": "Do you have Business Plan?",
     "businessPlanRequired": "Please choose an option",
 
-    "productName": "Product Name",
+    "productName": "Product Name *",
     "productNameRequired": "Product Name is Required.",
     "productNamePlaceholder": "Enter your Product Name",
 
-    "siteAddress": "Site Address",
+    "siteAddress": "Site Address *",
     "siteAddressRequired": "Site Address is Required.",
     "siteAddressPlaceholder": "Enter your Site Address",
 
     "problems": {
       "title": "Problems",
-      "customerProblem": "Describe the customer problem you want to solve with your product or service.",
+      "customerProblem": "Describe the customer problem you want to solve with your product or service. *",
       "customerProblemRequired": "This field is required!",
       "customerProblemPlaceholder": "Description"
     },
@@ -186,21 +186,21 @@
 
     "solutions": {
       "title": "Solutions",
-      "solution": "What is your unique value proposition (innovation)? What is new about what you do?",
+      "solution": "What is your unique value proposition (innovation)? What is new about what you do? *",
       "solutionPlaceholder": "Description",
       "solutionRequired": "This field is required!",
       "productLevel": "How much is level of your product and technology preparation?",
       "productLevelRequired": "Preparation Stats Required",
-      "scalable": "Briefly explain how your technology is scalable?",
+      "scalable": "Briefly explain how your technology is scalable? *",
       "scalablePlaceholder": "Description",
       "scalableRequired": "This field is required!"
     },
     "businessModel": {
       "title": "Business Model",
-      "monetizationOfYourPlan": "Describe the method of monetization of your plan?*",
+      "monetizationOfYourPlan": "Describe the method of monetization of your plan? *",
       "monetizationOfYourPlanPlaceholder": "Description",
       "monetizationOfYourPlanRequired": "This field is required!",
-      "structureOfYourSales": "Please clearly mention the structure of your sales cycle from contact to delivery.",
+      "structureOfYourSales": "Please clearly mention the structure of your sales cycle from contact to delivery. *",
       "structureOfYourSalesPlaceholder": "Description",
       "structureOfYourSalesRequired": "This field is requried!",
       "financialPlan": "If your plan has a financial model, please upload."
@@ -210,28 +210,28 @@
 
     "property": {
       "title": "Property",
-      "startupRevenue": "How much revenue has your startup made since its inception?",
+      "startupRevenue": "How much revenue has your startup made since its inception? *",
       "startupRevenuePlaceholder": "Description",
       "startupRevenueRequired": "This field is required!",
-      "monthlyIncome": "How much is your monthly income?",
+      "monthlyIncome": "How much is your monthly income? *",
       "monthlyIncomePlaceholder": "Description",
       "monthlyIncomeRequired": "This field is required!",
-      "currentRaisedFunding": "How much current funding did you raise before starting your business?",
+      "currentRaisedFunding": "How much current funding did you raise before starting your business? *",
       "currentRaisedFundingPlaceholder": "Description",
       "currentRaisedFundingRequired": "This field is required!",
-      "neededCapital": "How much capital do you need to start your project?",
+      "neededCapital": "How much capital do you need to start your project? *",
       "neededCapitalPlaceholder": "Description",
       "neededCapitalRequired": "This field is required!"
     },
     "targetMarket": {
       "title": "Target Market",
-      "customerCharacteristic": "Based on what characteristics do you decide who are your customers and who are not?",
+      "customerCharacteristic": "Based on what characteristics do you decide who are your customers and who are not? *",
       "customerCharacteristicPlaceholder": "Description",
       "customerCharacteristicRequired": "This field is required!",
-      "currentCustomers": "Who are your current customers? How many customers have you had so far?",
+      "currentCustomers": "Who are your current customers? How many customers have you had so far? *",
       "currentCustomersPlaceholder": "Description",
       "currentCustomersRequired": "This field is required!",
-      "estimatedMarketSize": "How have you estimated the size of the market?*",
+      "estimatedMarketSize": "How have you estimated the size of the market? *",
       "estimatedMarketSizePlaceholder": "Description",
       "estimatedMarketSizeRequired": "This field is required!"
     },

@@ -27,7 +27,7 @@
   "companyName": "نام شرکت",
   "companyNameRequired": "نام شرکت الزامی است.",
   "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
-  "howDidYouKnowUs": "نحوه آشنایی با ما",
+  "howDidYouKnowUs": "نحوه آشنایی با ما *",
   "howDidYouKnowUsPlaceholder": "توضیحات",
   "howDidYouKnowUsRequired": "پر کردن این قسمت الزامی است",
 
@@ -129,7 +129,7 @@
     "statusSelectRequired": "وضعیت شما الزامی است",
     "statusSelectPlaceholder": "وضعیت خود را انتخاب کنید: ",
     "idea": {
-      "ideaExplanation": "ایده خود را در ۵ خط توضیح دهید؟*",
+      "ideaExplanation": "ایده خود را در ۵ خط توضیح دهید؟ *",
       "ideaExplanationPlaceholder": "توضیحات",
       "ideaExplanationRequired": "پر کردن این قسمت الزامی است."
     },
@@ -137,10 +137,10 @@
     "pitchDeckRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
     "businessPlan": "آیا بیزینس پلن آماده کرده‌اید؟",
     "businessPlanRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
-    "productName": "نام محصول",
+    "productName": "نام محصول *",
     "productNameRequired": "نام محصول الزامی است.",
     "productNamePlaceholder": "لطفا نام محصول خود را وارد کنید.",
-    "siteAddress": "آدرس وب سایت",
+    "siteAddress": "آدرس وب سایت *",
     "siteAddressRequired": "آدرس وب سایت الزامی است.",
     "siteAddressPlaceholder": "لطفا آدرس وب سایت خود را وارد کنید.",
 
@@ -150,7 +150,7 @@
 
     "problems": {
       "title": "مشکلات",
-      "customerProblem": "توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟",
+      "customerProblem": "توضیح دهید که محصول شما چه مشکلی از کاربر را برطرف میکند؟ *",
       "customerProblemRequired": "این قسمت الزامی است.",
       "customerProblemPlaceholder": "توضیحات"
     },
@@ -159,12 +159,12 @@
 
     "solutions": {
       "title": "راه حل ها",
-      "solution": "میزان آمادگی محصول شما در چه مرحله‌ای قرار دارد؟",
+      "solution": "میزان آمادگی محصول شما در چه مرحله‌ای قرار دارد؟ *",
       "solutionPlaceholder": "توضیحات",
       "solutionRequired": "این قسمت الزامی است!",
       "productLevel": "سطح آمادگی محصول و فناوری شما چقدر است؟",
       "productLevelRequired": "آمار آماده سازی مورد نیاز است",
-      "scalable": "لطفا به طور خلاصه توضیح دهید که چگونه قرار است محصول شما مقیاس پذیر باشد",
+      "scalable": "لطفا به طور خلاصه توضیح دهید که چگونه قرار است محصول شما مقیاس پذیر باشد *",
       "scalablePlaceholder": "توضیحات",
       "scalableRequired": "این قسمت الزامی است!"
     },
@@ -173,7 +173,7 @@
       "monetizationOfYourPlan": "روش کسب درآمد از طرح خود را توضیح دهید؟*",
       "monetizationOfYourPlanPlaceholder": "توضیحات",
       "monetizationOfYourPlanRequired": "این قسمت الزامی است!",
-      "structureOfYourSales": "لطفا ساختار فروش خود را از ابتدا توضیح دهید",
+      "structureOfYourSales": "لطفا ساختار فروش خود را از ابتدا توضیح دهید *",
       "structureOfYourSalesPlaceholder": "توضیحات",
       "structureOfYourSalesRequired": "این قسمت الزامی است!",
       "financialPlan": "اگر طرح شما مدل مالی دارد، لطفا آپلود کنید."
@@ -182,28 +182,28 @@
     "financialFileRequired": "لطفا یکی از گزینه ها را انتخاب کنید:",
     "property": {
       "title": "دارایی",
-      "startupRevenue": "استارت آپ شما از زمان شروعش چقدر درآمد داشته است؟",
+      "startupRevenue": "استارت آپ شما از زمان شروعش چقدر درآمد داشته است؟ *",
       "startupRevenuePlaceholder": "توضیحات",
       "startupRevenueRequired": "این قسمت الزامی است!",
-      "monthlyIncome": "درآمد ماهانه شما چقدر است؟",
+      "monthlyIncome": "درآمد ماهانه شما چقدر است؟ *",
       "monthlyIncomePlaceholder": "توضیحات",
       "monthlyIncomeRequired": "این قسمت الزامی است!",
-      "currentRaisedFunding": "قبل از شروع کسب و کارتان چقدر بودجه جاری جمع آوری کردید؟",
+      "currentRaisedFunding": "قبل از شروع کسب و کارتان چقدر بودجه جاری جمع آوری کردید؟ *",
       "currentRaisedFundingPlaceholder": "توضیحات",
       "currentRaisedFundingRequired": "این قسمت الزامی است!",
-      "neededCapital": "برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟",
+      "neededCapital": "برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟ *",
       "neededCapitalPlaceholder": "توضیحات",
       "neededCapitalRequired": "این قسمت الزامی است!"
     },
     "targetMarket": {
       "title": "بازار هدف",
-      "customerCharacteristic": "مشتریان خود را بر اساس چه معیاری انتخاب می‌کنید؟",
+      "customerCharacteristic": "مشتریان خود را بر اساس چه معیاری انتخاب می‌کنید؟ *",
       "customerCharacteristicPlaceholder": "توضیحات",
       "customerCharacteristicRequired": "این قسمت الزامی است!",
-      "currentCustomers": "مشتریان فعلی شما چه کسانی هستند؟ چه تعداد مشتری تا امروز داشته‌اید؟",
+      "currentCustomers": "مشتریان فعلی شما چه کسانی هستند؟ چه تعداد مشتری تا امروز داشته‌اید؟ *",
       "currentCustomersPlaceholder": "توضیحات",
       "currentCustomersRequired": "این قسمت الزامی است!",
-      "estimatedMarketSize": "چگونه مقیاس و انداره بازار هدف خود را محاسبه می‌کنید؟",
+      "estimatedMarketSize": "چگونه مقیاس و انداره بازار هدف خود را محاسبه می‌کنید؟ *",
       "estimatedMarketSizePlaceholder": "توضیحات",
       "estimatedMarketSizeRequired": "این قسمت الزامی است!"
     },
