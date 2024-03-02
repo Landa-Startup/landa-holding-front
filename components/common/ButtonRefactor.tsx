@@ -49,6 +49,8 @@ export default function ButtonRefactor({
     case 'submit':
     case 'reset':
       return (
+        <Link href="https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpDtls.html?corpId=12980266">
+        
         <div className="group relative w-fit overflow-hidden order-first md:order-last mr-2">
           <button
             type={type}
@@ -61,6 +63,7 @@ export default function ButtonRefactor({
           </button>
           <span className="absolute inset-0 -translate-x-full rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span>
         </div>
+        </Link>
       );
 
     // If the type is any other value

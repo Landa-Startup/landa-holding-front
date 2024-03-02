@@ -73,6 +73,13 @@
           "category": "digital marketer"
         },
         {
+          "image": "/static/images/our-team/Personals/ARYA.jpg",
+          "position": "Digital Marketer",
+          "name": "Aria Bagherpour",
+          "linkdin": "",
+          "category": "Digital Marketer"
+        },
+        {
           "image": "/static/images/our-team/Personals/a13.png",
           "position": "UX/UI Designer",
           "name": "Ariana Shafie",
@@ -121,28 +128,6 @@
           "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
           "category": "content creators"
         },
-        
-        {
-          "image": "/static/images/our-team/Personals/milad copy 2.jpg",
-          "position": "Content Creator",
-          "name": "Milad Fatemi",
-          "linkedIn": "https://www.linkedin.com/in/milad-fatemi-48157b78",
-          "category": "content creators"
-        },       
-       {
-          "image": "/static/images/our-team/Personals/MAHSA.jpg",
-          "position": "Content Creator",
-          "name": "Mahsa Ghorbani",
-          "linkedIn": "",
-          "category": "content creators"
-        },
-       {
-        "image": "/static/images/our-team/Personals/ARYA.jpg",
-        "position": "Content Creator",
-        "name": "Aria Bagherpour",
-        "linkdin": "",
-        "category": "content creators"
-       },
 
     {
       "image": "/static/images/our-team/Personals/milad copy 2.jpg",
@@ -158,13 +143,7 @@
       "linkedIn": "",
       "category": "content creators"
     },
-    {
-      "image": "/static/images/our-team/Personals/ARYA.jpg",
-      "position": "Digital Marketer",
-      "name": "Aria Bagherpour",
-      "linkdin": "",
-      "category": "Digital Marketer"
-    },
+
 
     {
       "image": "/static/images/our-team/Personals/a27.png",

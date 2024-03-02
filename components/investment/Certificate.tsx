@@ -11,7 +11,7 @@ export default function Certificate() {
   const showModal = () => setIsOpen(true);
 
   return (
-    <Link href="/static/images/investment/Incorporation-page-001 1 (3).png">
+    <Link href="https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpDtls.html?corpId=12980266">
       <div onClick={showModal}>
         <Image
           src="/static/images/investment/Incorporation-page-001 1 (3).png"
