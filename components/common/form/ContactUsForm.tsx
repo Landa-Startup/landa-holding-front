@@ -97,7 +97,7 @@ export default function ContactUsForm() {
 
   return (
     <div className="flex h-full flex-col items-center justify-between md:items-start">
-      <h2 className="flex w-full justify-center font-gilda text-4xl font-light md:text-5xl ltr:tracking-[.25em]">
+      <h2 className="flex w-full justify-center font-gilda text-4xl font-light ltr:tracking-[.25em] md:text-5xl">
         {t('contactForm', { returnObjects: true }).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
