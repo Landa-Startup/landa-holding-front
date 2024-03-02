@@ -14,7 +14,7 @@ export default function Certificate() {
     <Link href="https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpDtls.html?corpId=12980266">
       <div onClick={showModal}>
         <Image
-          src="/static/images/investment/Incorporation-page-001 1 (3).png"
+          src="/static/images/investment/Incorporation-1.png"
           alt="Certificate"
           width={1000}
           height={1000}
