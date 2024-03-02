@@ -73,6 +73,13 @@
             "category": "بازاریاب دیجیتال"
         },
         {
+            "image": "/static/images/our-team/Personals/ARYA.jpg",
+            "position": "بازاریاب دیجیتال",
+            "name": "آریا باغرپور",
+            "linkdin": "",
+            "category": "بازاریاب دیجیتال"
+        },
+        {
             "image": "/static/images/our-team/Personals/a13.png",
             "position": "طراح تجربه و رابط کاربری",
             "name": "آریانا شفیعی",
@@ -121,13 +128,7 @@
             "linkedIn": "",
             "category": "تولید کنندگان محتوا"
         },
-        {
-            "image": "/static/images/our-team/Personals/ARYA.jpg",
-            "position": "تولید محتوا",
-            "name": "آریا باغرپور",
-            "linkdin": "",
-            "category": "تولید کنندگان محتوا"
-        },
+
         {
             "image": "/static/images/our-team/Personals/milad copy 2.jpg",
             "position": "تولید محتوا",
