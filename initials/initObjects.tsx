@@ -113,7 +113,9 @@ const initialWorkWithUSFormData: WorkWithUSFormData = {
   email: '',
   cvFile: '' as File | '',
   Subfield: '',
-  CreditsPassedNumber: ''
+  CreditsPassedNumber: '',
+  uni: '',
+  langLevel: ''
 };
 
 const initialFormData: Entrepreuneur = {

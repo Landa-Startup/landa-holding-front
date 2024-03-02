@@ -62,6 +62,10 @@ export default function WorkWithUs() {
     // }
   };
 
+  const handleUniChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectUni(event.target.value);
+  }
+
   enum TypeOfContractWithStudent { 
     Hiring = t('workWithUS.hiring'),
     Intership = t('workWithUS.Internship'),
@@ -72,11 +76,49 @@ export default function WorkWithUs() {
     Consultation = t('workWithUS.professionalConsultation')
   }
 
+  const unis = t("universities", {returnObjects: true});
+
+  const langLevel = t("langLevel", {returnObjects: true});
+
+  // console.log(langLevel);
+
+  const unisList: any[] = []
+
+  const skillLevels: any[] = []
+
+  Object.entries(unis.unis).forEach(([name, value]) => {
+    unisList.push(value);
+    console.log(name);
+  })
+
+  Object.entries(langLevel.levels).forEach(([name, value]) => {
+    skillLevels.push(value);
+    console.log(name);
+  })
+
+  const TypeOfUnis = unisList.map(
+    (type: any) => ({
+      value: type,
+      label:type
+    })
+  )
+
+  const TypeOfSkillLevels = skillLevels.map(
+    (type: any) => ({
+      value: type,
+      label: type
+    })
+  )
+
+
   const TypeOfContractWithStudentItem = [
     TypeOfContractWithStudent.Hiring,
     TypeOfContractWithStudent.Intership,
     TypeOfContractWithStudent.UniversityIntership
   ];
+
+  // console.log(TypeOfContractWithStudentItem);
+
 
   const TypeOfContractWithProfessorItem = [
     TypeOfContractWithProfessor.Consultation
@@ -98,6 +140,7 @@ export default function WorkWithUs() {
 
   const [selectStudentContract, setSelectStudentContract] = useState('');
   const [selectProfessorContract, setSelectProfessorContract] = useState('');
+  const [selectUni, setSelectUni] = useState(unis.placeholder);
 
   const handleContractWithStudentItemChange = (
     event: React.ChangeEvent<HTMLSelectElement>
@@ -111,14 +154,8 @@ export default function WorkWithUs() {
     setSelectProfessorContract(event.target.value);
   };
 
-  const {
-    csrfToken,
-    handleTokenChange,
-    handleSubmitingChange,
-    handleSendChange,
-    handleNotifChange,
-    handleSuccessChange
-  } = useSubmit((s) => s);
+  const { csrfToken, handleTokenChange, handleSubmitingChange, handleSendChange, handleNotifChange, handleSuccessChange
+  } = useSubmit();
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -188,74 +225,35 @@ export default function WorkWithUs() {
   //   value: value
   // }))
 
+  console.log(langLevel.placeholder)
+
   return (
     <>
-      <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-        <div className='flex justify-center'>
-          <Image src="/static/images/Work-with-us/forough.png" alt="Work with us" width={300} height={300} />
+      <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20 flex flex-col items-center">
+        <div className='flex justify-center relative w-[200px] h-[200px]'>
+          <Image src="/static/images/Work-with-us/forough.png" alt="Work with us" layout='fill'className='object-cover'
+          />
         </div>
         <div className="py-10">
           <h3 className="text-center text-2xl md:text-3xl">
             {t('workWithUS', { returnObjects: true }).formTitle}
           </h3>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full">
           <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
-            <Select
-              register={register}
-              errors={errors}
-              nameInput="your_position"
-              label={
-                t('workWithUS', { returnObjects: true }).PositionPlaceholder
-              }
-              required=""
-              className="select select-bordered mt-4 w-full max-w-xs px-8"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              placeholder={
-                t('workWithUS', { returnObjects: true }).PositionPlaceholder
-              }
-              options={PositionsData}
-              handleChange={handleItemChange}
-              selected={selectPosition}
+            <Select register={register} errors={errors} nameInput="your_position" label={   t('workWithUS', { returnObjects: true }).PositionPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).PositionPlaceholder } options={PositionsData} handleChange={handleItemChange} selected={selectPosition}
             />
 
             {selectPosition !== t('workWithUS.Professor') ? (
-              <Select
-                register={register}
-                errors={errors}
-                nameInput="type_of_contract"
-                label={
-                  t('workWithUS', { returnObjects: true }).contractPlaceholder
-                }
-                required=""
-                className="select select-bordered mt-4 w-full max-w-xs px-8"
-                labelClass="text-[#6b6b6b] dark:text-current"
-                placeholder={
-                  t('workWithUS', { returnObjects: true }).contractPlaceholder
-                }
-                options={TypeOfContractWithStudentData}
-                handleChange={handleContractWithStudentItemChange}
-                selected={selectStudentContract}
+              <Select register={register} errors={errors} nameInput="type_of_contract" label={   t('workWithUS', { returnObjects: true }).contractPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).contractPlaceholder } options={TypeOfContractWithStudentData} handleChange={handleContractWithStudentItemChange} selected={selectStudentContract}
               />
             ) : (
-              <Select
-                register={register}
-                errors={errors}
-                nameInput="type_of_contract"
-                label={
-                  t('workWithUS', { returnObjects: true }).contractPlaceholder
-                }
-                required=""
-                className="select select-bordered mt-4 w-full max-w-xs px-8"
-                labelClass="text-[#6b6b6b] dark:text-current"
-                placeholder={
-                  t('workWithUS', { returnObjects: true }).contractPlaceholder
-                }
-                options={TypeOfContractWithProfessorData}
-                handleChange={handleContractWithProfessorItemChange}
-                selected={selectProfessorContract}
+              <Select register={register} errors={errors} nameInput="type_of_contract" label={   t('workWithUS', { returnObjects: true }).contractPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).contractPlaceholder } options={TypeOfContractWithProfessorData} handleChange={handleContractWithProfessorItemChange} selected={selectProfessorContract}
               />
             )}
+
+            <Select register={register} errors={errors} nameInput="uni" label={unis.placeholder} required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={unis.placeholder} options={TypeOfUnis} handleChange={handleUniChange} selected={selectUni}
+            />
           </div>
           {/* next line */}
           <div className="border-b-2 border-black bg-[#F8F5F0]">
@@ -376,7 +374,7 @@ export default function WorkWithUs() {
                 patternMessage=""
               />
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 mt-1">
               <UploadInput
                 title={t('workWithUS', { returnObjects: true }).cvFile}
                 register={register}
@@ -384,6 +382,11 @@ export default function WorkWithUs() {
                 errors={errors}
                 nameInput="cvFile"
                 handleChange={handleCvFileChange}
+              />
+            </div>
+
+            <div className='col-span-1'>
+              <Select register={register} errors={errors} nameInput="langLevel" label={langLevel.placeholder} required="" className="select select-bordered mt-4 w-full px-8 shadow-sm" labelClass="text-[#6b6b6b] dark:text-current" placeholder={langLevel.placeholder} options={TypeOfSkillLevels} handleChange={handleUniChange} selected={selectUni}
               />
             </div>
           </div>

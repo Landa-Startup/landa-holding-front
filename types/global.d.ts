@@ -67,6 +67,8 @@ interface WorkWithUSFormData {
   email: string;
   cvFile?: File | '' | undefined;
   CreditsPassedNumber: string;
+  uni: string;
+  langLevel: string;
 }
 
 // Define an interface for partner membership form data

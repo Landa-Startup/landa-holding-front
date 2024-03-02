@@ -275,6 +275,27 @@
       }
     ]
   },
+
+  "universities": {
+    "placeholder": "university",
+    "unis": {
+      "azadNjaf": "Azad University - NajafAbad Unit",
+      "azadIsf": "Azad University - Isfahan Unit",
+      "dolati": "Govermental Universities",
+      "etc": "etc"
+    }
+  },
+
+  "langLevel": {
+    "placeholder": "Language Skill Level",
+    "levels": {
+      "base": "Base",
+      "elementary": "Elementary",
+      "good": "Good",
+      "expert": "Expert"
+    }
+  },
+
   "IDEA": "IDEA",
   "MVP": "MVP",
   "TRIAL": "TRIAL",
