@@ -172,6 +172,8 @@ export default function WorkWithUs() {
     handleSubmitingChange(true);
     handleSendChange(true);
 
+    console.log(formData);
+
     // Create a FormData object for form data.
     const sendFormData = new FormData();
 
@@ -225,14 +227,18 @@ export default function WorkWithUs() {
   //   value: value
   // }))
 
-  console.log(langLevel.placeholder)
+  // console.log(langLevel.placeholder)
 
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20 flex flex-col items-center">
-        <div className='flex justify-center relative w-[200px] h-[200px]'>
-          <Image src="/static/images/Work-with-us/forough.png" alt="Work with us" layout='fill'className='object-cover'
-          />
+        <div className='flex flex-col md:flex-row gap-6'>
+          <div className='flex justify-center relative w-[200px] h-[200px] mt-6'>
+            <Image src="/static/images/Work-with-us/forough.png" alt="Work with us" layout='fill'className='object-cover' />
+          </div>
+          <div className='flex justify-center relative w-[200px] h-[210px]'>
+            <Image src="/static/images/Work-with-us/FARA.png" alt="Work with us" layout='fill'className='object-cover' />
+          </div>
         </div>
         <div className="py-10">
           <h3 className="text-center text-2xl md:text-3xl">
@@ -374,7 +380,7 @@ export default function WorkWithUs() {
                 patternMessage=""
               />
             </div>
-            <div className="col-span-1 mt-1">
+            <div className="col-span-1 mt-2">
               <UploadInput
                 title={t('workWithUS', { returnObjects: true }).cvFile}
                 register={register}
@@ -386,7 +392,7 @@ export default function WorkWithUs() {
             </div>
 
             <div className='col-span-1'>
-              <Select register={register} errors={errors} nameInput="langLevel" label={langLevel.placeholder} required="" className="select select-bordered mt-4 w-full px-8 shadow-sm" labelClass="text-[#6b6b6b] dark:text-current" placeholder={langLevel.placeholder} options={TypeOfSkillLevels} handleChange={handleUniChange} selected={selectUni}
+              <Select register={register} errors={errors} nameInput="langLevel" label={langLevel.placeholder} required="" className="select select-bordered mt-4 w-full px-8 shadow-sm" labelClass="text-[#6b6b6b] dark:text-current" placeholder={langLevel.placeholder} options={TypeOfSkillLevels} handleChange={handleUniChange} selected={langLevel.placeholder}
               />
             </div>
           </div>
