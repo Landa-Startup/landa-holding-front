@@ -225,7 +225,7 @@ interface CompanySectionsInterface {
   link: string;
   addedClass: string;
   images: imageList[];
-  buttonText: string;
+  buttonText: string || undefined;
 }
 
 interface WorkFieldsInterface {

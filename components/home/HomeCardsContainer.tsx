@@ -10,17 +10,8 @@ const HomeCardsContainer = () => {
   const { t } = useTranslation(lang, 'mainPage');
 
   const renderHomeCards = (cardData: CompanySectionsInterface[]) => {
-    return cardData.map(({ title, text, reverse, index, link, addedClass, images, buttonText} : {
-      title: string;
-      text: string;
-      reverse: boolean;
-      show: boolean;
-      index: number;
-      link: string;
-      addedClass: string;
-      images: {src: string, alt: string}[];
-      buttonText: string;
-    }) => (
+    console.log(cardData[0].buttonText)
+    return cardData.map(({ title, text, reverse, index, link, addedClass, images, buttonText}) => (
       <HomeCards
         key={index}
         titles={title}
@@ -33,6 +24,8 @@ const HomeCardsContainer = () => {
       />
     ));
   };
+
+  // console.log(t('cards', { returnObjects: true }));
 
   return (
     <div className="relative bg-whiteGold text-black" id="LandaHolding">
