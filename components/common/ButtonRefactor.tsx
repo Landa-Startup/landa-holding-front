@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLang } from 'stores/langStore';
 
 type ButtonProps = {
-  text: string | undefined;
+  text: string;
   type?: 'button' | 'reset' | 'submit' | 'link';
   href?: string;
   disabled?: boolean;
@@ -18,8 +18,6 @@ export default function ButtonRefactor({
   disabled,
   bgColor
 }: ButtonProps) {
-
-  console.log(text);
 
   const { lang } = useLang();
 
