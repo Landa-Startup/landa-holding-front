@@ -10,7 +10,17 @@ const HomeCardsContainer = () => {
   const { t } = useTranslation(lang, 'mainPage');
 
   const renderHomeCards = (cardData: CompanySectionsInterface[]) => {
-    return cardData.map(({ title, text, reverse, index, link, addedClass, images, buttonText}) => (
+    return cardData.map(({ title, text, reverse, index, link, addedClass, images, buttonText} : {
+      title: string;
+      text: string;
+      reverse: boolean;
+      show: boolean;
+      index: number;
+      link: string;
+      addedClass: string;
+      images: {src: string, alt: string}[];
+      buttonText: string;
+    }) => (
       <HomeCards
         key={index}
         titles={title}
