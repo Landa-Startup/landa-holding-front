@@ -225,7 +225,7 @@ interface CompanySectionsInterface {
   link: string;
   addedClass: string;
   images: imageList[];
-  buttonText: string | undefined;
+  buttonText: string;
 }
 
 interface WorkFieldsInterface {
@@ -267,14 +267,14 @@ interface HomeCardsProps {
   reverse?: boolean;
   addedClass?: string;
   link: string;
-  buttonText: string | undefined;
+  buttonText: string;
 }
 
 interface HomeCardsLeftProps {
   text: string;
   addedClass?: string;
   link: string;
-  buttonText: string | undefined;
+  buttonText: string;
 }
 
 interface ImagesInterface {
