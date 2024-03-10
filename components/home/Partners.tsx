@@ -22,9 +22,9 @@ export default function Partners() {
 
     function scrollAutomatically() {
       // TODO: add scroll for fa
-      if (lang === 'fa') {
-        return;
-      }
+      // if (lang === 'fa') {
+      //   return;
+      // }
 
       const scrollAmount = 1;
       if (scrollContainer != null && isScrolling) {

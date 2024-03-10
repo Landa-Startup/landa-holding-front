@@ -30,25 +30,25 @@ export default function AboutUsLandaHolding() {
     //   objectFit="cover"
     // />
     // </div>
-    <div className="flex flex-col items-start justify-between bg-[#FAFAFA]  md:px-28 md:py-10 lg:flex-row lg:gap-8">
-      <div className="space-y-2 p-10 md:pt-8 text-black md:px-0">
+    <div className="flex flex-col items-start justify-between bg-[#FAFAFA] md:px-28 md:py-10 md:flex-row md:gap-8">
+      <div className="space-y-4 p-10 md:pt-8 text-black md:px-0">
         <p className="font-gilda text-3xl font-semibold">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
-        <p className="mb-20  ml-0 mt-4 text-justify font-barlow text-lg font-normal tracking-wide  md:mt-8 lg:w-[648px]">
+        <p className="mb-20 ml-0 mt-4 text-justify font-barlow text-medium font-normal tracking-wide md:mt-8 lg:w-[500px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>
+      <div className='relative w-[661px] h-[419px]'>
       <Image
-        className="brightness-95 contrast-[1.15] drop-shadow-md mt-10 md:mt-32"
+        className="brightness-95 contrast-[1.15] drop-shadow-md"
         loading="lazy"
+        layout='fill'
         src="/static/images/About/team.jpg"
-        width={655}
-        height={404}
-        quality={100}
         alt="Landa Team"
         objectFit="cover"
       />
+      </div>
     </div>
   );
 }
