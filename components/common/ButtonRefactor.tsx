@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLang } from 'stores/langStore';
 
 type ButtonProps = {
-  text: string;
+  text: string | undefined;
   type?: 'button' | 'reset' | 'submit' | 'link';
   href?: string;
   disabled?: boolean;
