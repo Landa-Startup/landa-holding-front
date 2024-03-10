@@ -19,6 +19,8 @@ export default function ButtonRefactor({
   bgColor
 }: ButtonProps) {
 
+  console.log(text);
+
   const { lang } = useLang();
 
   switch (type) {

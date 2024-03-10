@@ -44,7 +44,8 @@
           "src": "/static/images/Home main/1.jpg",
           "alt": ""
         }
-      ]
+      ],
+      "buttonText": "مشاهده کنید"
     },
     {
       "title": "شتابدهی",
@@ -63,7 +64,8 @@
           "src": "/static/images/Home main/4.jpg",
           "alt": ""
         }
-      ]
+      ],
+      "buttonText": "مشاهده کنید"
     },
     {
       "title": "آکادمی",
@@ -82,7 +84,8 @@
           "src": "/static/images/Home main/6.jpg",
           "alt": ""
         }
-      ]
+      ],
+      "buttonText": "مشاهده کنید"
     }
   ],
   "landaHoldingBlackFirst": [

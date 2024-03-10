@@ -8,14 +8,15 @@ export default async function HomeCards({
   text,
   images,
   addedClass,
-  link
+  link,
+  buttonText
 }: HomeCardsProps) {
 
   return (
     <div
       className={`relative flex flex-col items-center justify-between border-b-2 border-primary px-9 py-5 last:border-none md:border-none md:p-28 ltr:md:flex-row rtl:md:flex-row-reverse`}
     >
-      <HomeCardsLeft text={text} addedClass={addedClass} link={link} />
+      <HomeCardsLeft text={text} addedClass={addedClass} link={link} buttonText={buttonText} />
       <HomeCardsRight images={images} titles={titles} link={link} />
     </div>
   );

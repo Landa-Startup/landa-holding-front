@@ -44,7 +44,8 @@
           "src": "/static/images/Home main/1.jpg",
           "alt": ""
         }
-      ]
+      ],
+      "buttonText": "Vsit Now"
     },
     {
       "title": "Entrepreneurship",
@@ -63,7 +64,8 @@
           "src": "/static/images/Home main/4.jpg",
           "alt": ""
         }
-      ]
+      ],
+      "buttonText": "Vsit Now"
     },
     {
       "title": "Academy",
@@ -82,7 +84,8 @@
           "src": "/static/images/Home main/7.jpeg",
           "alt": ""
         }
-      ]
+      ],
+      "buttonText": "Vsit Now"
     }
   ],
   "landaHoldingBlackFirst": [

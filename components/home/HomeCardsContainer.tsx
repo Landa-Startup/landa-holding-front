@@ -10,7 +10,7 @@ const HomeCardsContainer = () => {
   const { t } = useTranslation(lang, 'mainPage');
 
   const renderHomeCards = (cardData: CompanySectionsInterface[]) => {
-    return cardData.map(({ title, text, reverse, index, link, addedClass, images }) => (
+    return cardData.map(({ title, text, reverse, index, link, addedClass, images, buttonText}) => (
       <HomeCards
         key={index}
         titles={title}
@@ -19,6 +19,7 @@ const HomeCardsContainer = () => {
         reverse={reverse}
         addedClass={addedClass}
         link={link}
+        buttonText={buttonText}
       />
     ));
   };
