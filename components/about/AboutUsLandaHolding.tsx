@@ -39,7 +39,7 @@ export default function AboutUsLandaHolding() {
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>
-      <div className='relative w-[661px] h-[419px]'>
+      <div className='relative object-contain mx-auto h-48 w-96  md:w-[761px] md:h-[419px] md:mt-8'>
       <Image
         className="brightness-95 contrast-[1.15] drop-shadow-md"
         loading="lazy"
