@@ -47,8 +47,8 @@
   "partnerForm": {
     "lng": "fa",
     "dir": "rtl",
-    "banner": "شرکای کاری",
-    "formTitle": "فرم شریک کاری",
+    "banner": "شرکای تجاری",
+    "formTitle": "فرم شریک تجاری",
     "formSubtitle": "اطلااعات شخصی"
   },
   "jobForm": {
