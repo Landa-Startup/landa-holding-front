@@ -155,7 +155,7 @@ export default function ContactUsForm() {
           </div>
         </div>
 
-        <div className="md:pl-28">
+        <div className="md:pl-28 md:rtl:pr-28">
           <Button
             type="submit"
             bgColor="Primary"
