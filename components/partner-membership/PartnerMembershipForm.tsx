@@ -10,7 +10,7 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialPartnerMembershipFormData } from '../../initials/initObjects';
 import { submitPartnerMembershipForm } from '../../pages/api/partner-membership';
 
-import CountryInput from '../common/form/CountryInput';
+// import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 // import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
@@ -136,11 +136,11 @@ export default function PartnerMembershipForm() {
               />
             </div>
 
-              <CountryInput
-                register={register}
-                errors={errors}
-                nameInput="countryOfResidence"
-              />
+              {/*<CountryInput*/}
+              {/*  register={register}*/}
+              {/*  errors={errors}*/}
+              {/*  nameInput="countryOfResidence"*/}
+              {/*/>*/}
 
             <div className="col-span-1">
               <Input
