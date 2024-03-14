@@ -54,7 +54,7 @@ export default function ButtonRefactor({
         <div className="group relative w-fit overflow-hidden order-first md:order-last mr-2">
           <button
             type={type}
-            className="flex h-[56px] w-[224px] flex-wrap content-center items-center justify-center rounded bg-[#AA8453] p-2 text-white"
+            className="flex h-[56px] w-[224px] md:w-[284px] flex-wrap content-center items-center justify-center rounded bg-[#AA8453] p-2 text-white"
           >
             <div className="z-10 flex items-center gap-2 rtl:flex-row-reverse text-sm">
               <span>{text}</span>
