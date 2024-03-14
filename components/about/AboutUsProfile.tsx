@@ -65,7 +65,7 @@ export default function AboutUsProfile() {
           <span className="font-gilda text-xl text-primary md:text-4xl">
             {t('certificate')}
           </span>
-          <div className="flex items-end px-4 ml-4 md:mt-4 md:ml-0 ">
+          <div className="flex items-end mr-14 ml-4 md:mt-4 md:ml-0 ">
             <Certificate />
             <Link size={32} addedClass="-ml-10 mb-3 z-10" />
           </div>
