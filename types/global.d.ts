@@ -50,6 +50,7 @@ interface InvestorRegistrationFormData {
   countryOfResidence: string;
   provinceOfResidence: string;
   companyName: string;
+  phoneNumber: string;
   interests: string;
   positionInTeam: string;
   preferredAreas: string;
@@ -77,6 +78,7 @@ interface PartnerMembershipFormData {
   lastName: string;
   birthDate: Date;
   email: string;
+  phoneNumber: string;
   countryOfResidence: string;
   provinceOfResidence: string;
   companyName: string;
@@ -149,7 +151,7 @@ interface Entrepreuneur {
   lastName: string;
   email: string;
   companyName: string;
-  phoneNumber: string;
+  phone: string;
   website: string;
   fieldOfProfessional: string;
 }

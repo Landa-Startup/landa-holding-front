@@ -109,8 +109,8 @@ export default function EntrepreneursForm() {
               register={register}
               errors={errors}
               nameInputs={{
-                firstName: 'firstName',
-                lastName: 'lastName',
+                firstName: 'first_name',
+                lastName: 'last_name',
                 email: 'email',
                 phoneNumber: 'phone'
               }}

@@ -7,7 +7,7 @@ import { InvestorRegistrationFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
 import GetCsrfToken from '../../utils/get-csrf-token';
-import Input from '../common/form/Input';
+// import Input from '../common/form/Input';
 import { initialInvestorRegistrationFormData } from '../../initials/initObjects';
 import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
 // import CountryInput from '../common/form/CountryInput';
@@ -50,6 +50,7 @@ export default function InvestorRegistrationForm() {
       );
       handleTokenChange(token);
     }
+
     fetchCsrfToken();
   }, []);
 
@@ -111,7 +112,7 @@ export default function InvestorRegistrationForm() {
                 firstName: 'firstName',
                 lastName: 'lastName',
                 email: 'email',
-                phoneNumber: ''
+                phoneNumber: 'phoneNumber'
               }}
             />
 
@@ -138,21 +139,21 @@ export default function InvestorRegistrationForm() {
             {/*/>*/}
 
 
-            <div className="col-span-1">
-              <Input
-                register={register}
-                errors={errors}
-                nameInput="phone"
-                type="text"
-                label={t('phoneNumber')}
-                required={t('phoneNumberRequired')}
-                patternValue="^[0-9]{11}$"
-                patternMessage={t('phoneNumberErrorMessage')}
-                placeholder={t('phoneNumberPlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
-              />
-            </div>
+            {/*<div className="col-span-1">*/}
+            {/*  <Input*/}
+            {/*    register={register}*/}
+            {/*    errors={errors}*/}
+            {/*    nameInput="phone"*/}
+            {/*    type="text"*/}
+            {/*    label={t('phoneNumber')}*/}
+            {/*    required={t('phoneNumberRequired')}*/}
+            {/*    patternValue="^[0-9]{11}$"*/}
+            {/*    patternMessage={t('phoneNumberErrorMessage')}*/}
+            {/*    placeholder={t('phoneNumberPlaceholder')}*/}
+            {/*    className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"*/}
+            {/*    labelClass="text-[#6b6b6b] dark:text-current"*/}
+            {/*  />*/}
+            {/*</div>*/}
 
             <div className="col-span-1 md:col-span-3">
               <div className="">
