@@ -32,14 +32,14 @@ export default function AboutUsLandaHolding() {
     // </div>
     <div className="flex flex-col items-start justify-between bg-[#FAFAFA] md:px-28 md:py-10 md:flex-row md:gap-8">
       <div className="space-y-4 p-10 md:pt-8 text-black md:px-0">
-        <p className="font-gilda text-3xl font-semibold">
+        <p className="font-gilda text-3xl">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
         <p className="mb-20 ml-0 mt-4 text-justify font-barlow text-medium font-normal tracking-wide md:mt-8 lg:w-[500px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>
-      <div className='relative object-contain mx-auto h-48 w-96  md:w-[761px] md:h-[419px] md:mt-8'>
+      <div className='relative object-contain mx-auto h-48 w-96  md:w-[761px] md:h-[419px] md:mt-8 md:mr-32'>
       <Image
         className="brightness-95 contrast-[1.15] drop-shadow-md"
         loading="lazy"
