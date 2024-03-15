@@ -21,26 +21,25 @@ export default function Partners() {
     function scrollAutomatically() {
       const scrollContainer = scrollContainerRef.current;
 
-      // if (scrollContainer && lang === 'fa') {
-      //   scrollContainer.scrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      // }
-
       // TODO: add scroll for fa
       if (lang === 'fa') {
         const scrollAmount = 1;
         if (scrollContainer != null && isScrolling) {
-          const isScrollingRight = scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth;
+          const isScrollingRight = scrollContainer.scrollLeft > -2542.5;
           if (isScrollingRight) {
-            scrollContainer.scrollLeft += scrollAmount;
+            scrollContainer.scrollLeft -= scrollAmount;
+            // console.log(scrollContainer.clientLeft, scrollContainer.scrollLeft)
           } else {
-            scrollContainer.scrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            scrollContainer.scrollLeft = 0.5
           }
+          // console.log(l, scrollContainer.scrollLeft)
         }
       } else {
           const scrollAmount = 1;
           if (scrollContainer != null && isScrolling) {
             const isScrollingLeft = scrollContainer.scrollLeft > 0;
             if (!isScrollingLeft) {
+              console.log(scrollContainer.scrollLeft)
               scrollContainer.scrollLeft = scrollContainer.scrollWidth;
             } else {
               scrollContainer.scrollLeft -= scrollAmount;
