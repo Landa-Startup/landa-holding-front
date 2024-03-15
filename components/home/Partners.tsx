@@ -48,7 +48,7 @@ export default function Partners() {
       }
     }
 
-    const intervalId = setInterval(scrollAutomatically, 5); // Adjust the interval as needed.
+    const intervalId = setInterval(scrollAutomatically, 40); // Adjust the interval as needed.
 
     return () => clearInterval(intervalId);
   }, [isScrolling]);
