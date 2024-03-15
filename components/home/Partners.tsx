@@ -18,41 +18,38 @@ export default function Partners() {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-
     function scrollAutomatically() {
-      // TODO: add scroll for fa
-      // if (lang === 'fa') {
-      //   return;
+      const scrollContainer = scrollContainerRef.current;
+
+      // if (scrollContainer && lang === 'fa') {
+      //   scrollContainer.scrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
       // }
 
-      const scrollAmount = 1;
-      if (scrollContainer != null && isScrolling) {
-        const isScrollingLeft = scrollContainer.scrollLeft > 0;
-        if (!isScrollingLeft) {
-          scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-        } else {
-          scrollContainer.scrollLeft -= scrollAmount;
+      // TODO: add scroll for fa
+      if (lang === 'fa') {
+        const scrollAmount = 1;
+        if (scrollContainer != null && isScrolling) {
+          const isScrollingRight = scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth;
+          if (isScrollingRight) {
+            scrollContainer.scrollLeft += scrollAmount;
+          } else {
+            scrollContainer.scrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+          }
         }
+      } else {
+          const scrollAmount = 1;
+          if (scrollContainer != null && isScrolling) {
+            const isScrollingLeft = scrollContainer.scrollLeft > 0;
+            if (!isScrollingLeft) {
+              scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+            } else {
+              scrollContainer.scrollLeft -= scrollAmount;
+            }
+          }
       }
-      // if (lang === 'fa') {
-        // const scrollAmount = 1;
-        // if (scrollContainer != null && isScrolling) {
-        //   const isScrollingLeft = scrollContainer.scrollLeft > 0;
-        //   const isScrollingRight = scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth;
-        //   if (!isScrollingLeft && !isScrollingRight) {
-        //     scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-        //   } else if (isScrollingLeft) {
-        //     scrollContainer.scrollLeft -= scrollAmount;
-        //   } else if (isScrollingRight) {
-        //     scrollContainer.scrollLeft += scrollAmount;
-        //   }
-        // }
-        // return;
-      // }
     }
 
-    const intervalId = setInterval(scrollAutomatically, 50); // Adjust the interval as needed.
+    const intervalId = setInterval(scrollAutomatically, 5); // Adjust the interval as needed.
 
     return () => clearInterval(intervalId);
   }, [isScrolling]);

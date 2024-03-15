@@ -27,7 +27,7 @@ export default async function Page({
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       {/* TODO: read t inside hero components using zustend */}
       <Hero
         lang={lang}
