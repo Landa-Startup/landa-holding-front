@@ -68,6 +68,7 @@ const initialPartnerMembershipFormData: PartnerMembershipFormData = {
   email: '',
   countryOfResidence: '',
   provinceOfResidence: '',
+  phoneNumber: '',
   companyName: '',
   investmentCeiling: '',
   preferredAreas: '',
@@ -97,6 +98,7 @@ const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
   countryOfResidence: '',
   provinceOfResidence: '',
   companyName: '',
+  phoneNumber: '',
   interests: '',
   positionInTeam: '',
   preferredAreas: '',
@@ -123,7 +125,7 @@ const initialFormData: Entrepreuneur = {
   lastName: '',
   email: '',
   companyName: '',
-  phoneNumber: '',
+  phone: '',
   website: '',
   fieldOfProfessional: ''
 };

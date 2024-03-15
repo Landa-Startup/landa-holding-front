@@ -14,7 +14,7 @@ export default function LatestStartups() {
       <div className="flex flex-col items-center bg-whiteGold p-5 text-center">
         <div className="flex flex-col items-start">
           <div className="flex-col items-start justify-start md:self-start">
-            <div className="mr-4 flex flex-col items-center md:mr-0 md:items-start">
+            <div className="mr-4 flex flex-col items-center md:mr-0 md:items-start mx-auto">
               <div
                 className={`ltr:tracking-0 md:tracking-0 ps-1 font-condensed text-xl font-normal text-neutral-800 md:text-base ltr:tracking-[3.5px]`}
               >
@@ -27,7 +27,7 @@ export default function LatestStartups() {
               </div>
             </div>
           </div>
-          <div className="mt-2 flex justify-center ">
+          <div className="mt-2 flex justify-center mx-auto">
             <div className="mt-3 grid grid-cols-1 gap-3 md:mt-10 md:grid-cols-1 md:gap-[7.5rem] lg:grid-cols-1 xl:grid-cols-3 ">
               {t('LatestStartupsList', { returnObjects: true }).map(
                 (
