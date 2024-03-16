@@ -37,12 +37,12 @@ export default function Partners() {
       } else {
           const scrollAmount = 1;
           if (scrollContainer != null && isScrolling) {
-            const isScrollingLeft = scrollContainer.scrollLeft > 0;
-            if (!isScrollingLeft) {
-              console.log(scrollContainer.scrollLeft)
-              scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+            const isScrollingRight = scrollContainer.scrollLeft <= 2543;
+            if (isScrollingRight) {
+              scrollContainer.scrollLeft += scrollAmount;
+              // console.log(scrollContainer.clientLeft, scrollContainer.scrollLeft)
             } else {
-              scrollContainer.scrollLeft -= scrollAmount;
+              scrollContainer.scrollLeft = 1
             }
           }
       }
