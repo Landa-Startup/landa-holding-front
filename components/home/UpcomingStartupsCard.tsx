@@ -32,20 +32,20 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
               height={100}
             />
           </div>
-          <div className='self-start p-2 font-gilda text-[24px] font-normal leading-normal'>
+          <div className='self-center p-2 font-gilda text-[24px] font-normal leading-normal'>
             {subTitle}
           </div>
           <div className='flex h-full flex-col gap-4'>
             <div className='w-full px-3 md:px-0'>
               <hr className='h-[2px] w-full bg-black' />
             </div>
-            <div className='flex h-full flex-col items-center justify-between gap-3 px-2 md:px-6 text-justify'>
+            <div className='flex h-full flex-col items-center justify-between gap-3 px-2 text-justify md:px-6'>
               <div>
                 <p className='font-barlow text-[15px] leading-[30px] md:text-[16px]'>
                   {text}
                 </p>
               </div>
-              <div className='w-[170px]  p-2 md:w-[224px] self-center md:p-6'>
+              <div className='w-[170px] self-center p-2 md:w-[224px] md:p-6'>
                 <ButtonRefactor
                   text={buttonText}
                   type='link'
