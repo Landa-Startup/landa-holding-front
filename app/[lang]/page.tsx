@@ -11,6 +11,7 @@ import HomeOurTeam from '@/components/home/HomeOurTeam';
 
 import { useTranslation } from '../i18n';
 import HomeUpComingStartups from '@/components/home/HomeUpComingStartups';
+import HomeLandaAcademy from '@/components/home/HomeLandaAcademy';
 // import HomeUpcomingEvents from '@/components/home/HomeUpcomingEvents';
 
 export const metadata: Metadata = {
@@ -43,6 +44,8 @@ export default async function Page({
       <HomeCardsContainer />
       <LandaHoldingBlack />
       <HomeUpComingStartups />
+      <HomeLandaAcademy />
+
       {/* <HomeUpcomingEvents /> */}
       <LandaHoldingPriority />
       <HomeOurTeam />

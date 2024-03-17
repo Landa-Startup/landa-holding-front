@@ -88,6 +88,9 @@
       "buttonText": "Vsit Now"
     }
   ],
+  "LandaAcademy": "Landa Academy",
+  "Landaholding": "Landa Holding",
+  "LandaAcademyInfo": "At Landa Academy, we provide a nurturing place for individuals to discover and grow their interests and skills efficiently. Our academy operates as a dynamic place that identifies and evaluates the potential of talented individuals, particularly the youth, and invests in their development and creative ideas. By providing comprehensive programs and resources and through a combination of mentoring, skill-building workshops, and exposure to various opportunities, Landa Academy equips participants with the tools and knowledge necessary to thrive and succeed in their chosen fields",
   "landaHoldingBlackFirst": [
     "Global investment opportunities within your reach.",
     "Access to a network of successful entrepreneurs and investors.",
@@ -267,6 +270,14 @@
         "goto": "/handicraft",
         "buttonText" : "Register",
         "gene": false
+      },
+      {
+        "image": "/static/images/Home/upcomming-Sartup/10.png",
+        "subTitle": "LANDA GENE",
+        "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
+        "goto": "/landa-gene",
+        "buttonText" : "Register",
+        "gene": true
       },
       {
         "image": "/static/images/Home/upcomming-Sartup/10.png",

@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
-import ButtonRefactor from '../common/ButtonRefactor';
 import { useLang } from 'stores/langStore';
 
 type Props = {
@@ -12,7 +11,7 @@ type Props = {
   buttonText: string;
 }
 
-export default function UpcomingStartupsCard({ image, subTitle, text, goto, buttonText }: Props) {
+export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
 
   const { lang } = useLang.getState();
 
@@ -21,7 +20,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
   return (
     <>
       <div>
-        <div className='border-1 flex h-full w-full flex-col justify-start border shadow-xl md:w-[400px] md:gap-8'>
+        <div className='border-1 flex h-full w-full flex-col justify-start border p-5 shadow-xl md:w-[400px] md:gap-8'>
           <div className='relative m-auto bg-white md:w-full'>
             <Image
               loading='lazy'
@@ -45,14 +44,14 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
                   {text}
                 </p>
               </div>
-              <div className='w-[170px] self-center p-2 md:w-[224px] md:p-6'>
+              {/* <div className='w-[170px] self-center p-2 md:w-[224px] md:p-6'>
                 <ButtonRefactor
                   text={buttonText}
                   type='link'
                   href={goto}
                   bgColor='black'
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
