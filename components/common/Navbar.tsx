@@ -178,11 +178,11 @@ export default function Navbar({
           <li>
             {/* new// */}
            
-          <details className="collapse">
-  <summary className="font-condensed font-bold mr-28 rtl:ml-24 rtl:mr-25">
-   {lang === 'en' ? 'FORMS' : 'فرم ها'}
-   </summary>
-  <div className="collapse-content"> 
+            <details className="">
+  <summary className="m-1 btn pt-2 font-condensed font-Barlow text-xl">{lang === 'en' ? 'FORMS' : 'فرم ها'}
+</summary>
+  <ul className="p-2">
+
     
 {/* //item */}
             <ul className=''>
@@ -196,9 +196,12 @@ export default function Navbar({
                 )
               )}
             </ul>
-            {/* //item */}
-  </div>
+
+  </ul>
 </details>
+            
+            {/* //item */}
+
 
 {/* new// */}
 
