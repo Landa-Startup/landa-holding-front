@@ -20,7 +20,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
   return (
     <>
       <div>
-        <div className='border-1 flex h-full w-full flex-col justify-start border p-5 shadow-xl md:w-[400px] md:gap-8'>
+        <div className='border-1 flex justify-center h-full w-full flex-col  border py-3 shadow-xl md:gap-8'>
           <div className='relative m-auto bg-white md:w-full'>
             <Image
               loading='lazy'
