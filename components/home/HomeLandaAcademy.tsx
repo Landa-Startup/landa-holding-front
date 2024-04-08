@@ -1,5 +1,6 @@
 "use client"
 import { useTranslation } from 'app/i18n/client';
+import Image from 'next/image';
 import { useLang } from 'stores/langStore';
 // import ArrowRight from '../icons/common/ArrowRight';
 
@@ -21,8 +22,13 @@ export default function HomeLandaAcademy() {
         </div>
         
         <div className="relative hidden w-[58%] md:block">
-            <div className="absolute right-0 top-10 h-[336px] w-[576px] bg-[#F7F3EE] rtl:left-0 rtl:right-auto "></div>
-            <div className="absolute right-60 top-56 h-[228px] w-[448px] bg-[#DDCEBA] rtl:left-60 rtl:right-auto"></div>
+            <div className="absolute right-0 top-10 h-[366px] w-[576px]  rtl:left-0 rtl:right-auto ">
+                <Image src="/static/images/Home/Academy/3.webp" alt="academy" layout="fill" objectFit="contain" />
+            </div>
+            <div className="absolute right-60 top-56 h-[328px] w-[448px]  rtl:left-60 rtl:right-auto">
+            <Image src="/static/images/Home/Academy/18.webp" alt="academy" layout="fill" objectFit="contain" />
+ 
+            </div>
         </div>
     </div>
   )
