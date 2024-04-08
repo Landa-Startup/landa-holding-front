@@ -1,8 +1,8 @@
 {
   "bannerTitle": "LANDA Handicrafts",
-  "paragraph1": "Landa Handicraft is an innovative and astute start-up that was founded with the goal of establishing a direct and dependable communication bridge between producers and customers all over the world, as well as addressing the challenges and worries that this industry faces. As a subsidiary of Landa International Holding, this start-up has begun its operations for handicraft aficionados all over the world. We have formed a group of outstanding and experienced individuals after years of study in the global craft business.",
-  "paragraph2": "Using NFT on this platform is one of the qualities that separates Landa Handicraft from its competitors. We were able to bring the NFT system into the handicraft area by investing heavily and utilizing our skilled staff. We can address concerns regarding the authenticity of artistic and cultural works under consideration with the assistance of this feature. With the help of a team of Artificial intelligence (AI) and Augmented Reality (AR) specialists, the presence of prominent individuals in the field of handicrafts, and initial approval from the Canadian government, the Landa Handicraft startup has established itself as a reliable platform for those who love and value handicrafts, especially those who appreciate the importance of preserving their products' authenticity.",
-  "paragraph3": "With the help of a team of Artificial intelligence (AI) and Augmented Reality (AR) specialists, the presence of prominent individuals in the field of handicrafts, and initial approval from the Canadian government, the Landa Handicraft startup has established itself as a reliable platform for those who love and value handicrafts, especially those who appreciate the importance of preserving their products&apos; authenticity.",
+  "paragraph1": "The existence of a limited market on the one hand and the challenges of producing works of art to introduce and show their products to enthusiasts on the other hand, as well as the presence of fake links and handicrafts on the way from the producer to the buyer, have caused a lot of damage to this industry.",
+  "paragraph2": "These problems and challenges in the craft market have led to the birth of a creative startup called Landa Craft with the aim of creating an innovative and safe platform by Landa International Holding. After years of research and development, the start-up Landa Craft is trying to enter this field by creating a direct and reliable communication bridge between producers and buyers around the world by using prominent and experienced professionals.",
+  "paragraph3": "One of the features that distinguishes Landa Craft from other competitors is the use of NFT in this smart platform. NFT (a type of digital asset that gives a unique and unique nature to works of art) is used to allocate the originality of works of art in order to become a reliable platform for those interested in this field and also to create a suitable opportunity to introduce unknown and young artists to the world on the Landa Craft platform. Placed.",
   "formTitle": "Please fill out the following form to indicate your interest in collaborating with the Landa Handicrafts startup or future opportunities:",
   "form": {
     "firstName": "Name",
@@ -17,5 +17,29 @@
     "organizationPlaceholder": "Name of Your Organization, if applicable",
 
     "submit": "Submit"
-  }
+  },
+  "difference-craft" : {
+    "title":"The distinguishing feature of startup craft",
+    "item1":"Investment of the top managers in the field of handicrafts on this platform",
+    "item2":"Using Artificial Intelligence (AI) and Augmented Reality (AR)",
+    "item3":"Obtaining initial approval from organizations approved by the Canadian government",
+    "item4":"The possibility of checking the product before purchase through augmented reality (AR)",
+    "item5":"Introducing and communicating with expert experts in the field of handicrafts",
+    "item6":"Supporting unknown and local artists to present their art and creativity"
+  },
+  "Advantages-NFT": {
+    "title":"مزایای NFT در استارت اپ لاندا کرفت",
+    "item1":"تخصیص هویت منحصربه‌فرد به آثار هنری",
+    "item2":"ذخیره اطلاعات دقیق و کامل سازنده محصول و امضای آن در NFT",
+    "item3":"امکان انتقال مالکیت به شخصی دیگر",
+    "item4":"اطلاع از چرخه دست به دست شدن آثار هنری",
+    "item5":"تایید آثار هنری ازطریق کارشناسان خبره"
+  },
+  "MembershipBenefits" : {
+    "title":"مزایای عضویت در استارت‌آپ لاندا کرفت",
+    "item1":"دریافت حداقل ۱۰ درصد سهام از استارت آپ لاندا ژن",
+    "item2":"دریافت سود متناسب با میزان سرمایه‌گذاری",
+    "item3":"اخذ اقامت دائم کانادا برای شما و خانوادتان",
+    "item4":"امکان بهره‌مندی از تمامی حقوق یک شهروند کانادایی"
+    }
 }

@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
-import IconDown from '../icons/IconDown';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
 // import { useRouter } from 'next/navigation';
@@ -104,6 +103,7 @@ export default function Navbar({
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li className="h-9 text-2xl" key={label}>
+                    
                     <Link href={href} className="text-white hover:bg-white">
                       {label}
                     </Link>
@@ -111,6 +111,7 @@ export default function Navbar({
                 )
               )}
               <li className="h-9">
+                
                 <details className="dropdown mb-32">
                   <summary
                     className="hover:white text-2xl hover:bg-white"
@@ -152,10 +153,20 @@ export default function Navbar({
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu absolute h-full w-80 space-y-5 bg-[#F8F5F0] p-4 text-xl text-black ltr:left-[110px] md:hidden">
+        
+        <ul className="menu absolute h-full w-80 space-y-5 bg-white p-4 text-xl text-black ltr:left-[110px] md:hidden  divide-y divide-solid">
+        <Image
+        className='mx-auto '
+          src="static/images/Logo.svg"
+          alt="Landa Key Differentiating"
+          width={96}
+          height={4}
+          loading="lazy"
+        />
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
+            
             <li
-              className="font-condensed font-bold"
+              className="font-condensed font-Barlow flex items-center"
               key={label}
               onClick={() => handleLinkClick()}
             >
@@ -165,14 +176,16 @@ export default function Navbar({
             </li>
           ))}
           <li>
-            <div className="">
-              <Link className="font-condensed font-bold" href={'#'}>
-                {lang === 'en' ? 'FORMS' : 'فرم ها'}
-              </Link>
-              <IconDown />
-            </div>
+            {/* new// */}
+           
+            <details className="">
+  <summary className="m-1 btn pt-2 font-condensed font-Barlow text-xl">{lang === 'en' ? 'FORMS' : 'فرم ها'}
+</summary>
+  <ul className="p-2">
 
-            <ul className='mx-4'>
+    
+{/* //item */}
+            <ul className=''>
               {submenuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li key={label} onClick={() => handleLinkClick()}>
@@ -183,12 +196,31 @@ export default function Navbar({
                 )
               )}
             </ul>
+
+  </ul>
+</details>
+            
+            {/* //item */}
+
+
+{/* new// */}
+
+
+            {/* <div className="mx-auto pl-8">
+              <Link className="font-condensed font-bold" href={'#'}>
+                {lang === 'en' ? 'FORMS' : 'فرم ها'}
+              </Link>
+              <IconDown />
+            </div> */}
+
+
           </li>
-          <div className="absolute bottom-5 w-72 rounded bg-[#222] p-2">
-            <div className=" mx-auto py-3">
+          <div className="absolute bottom-5 rounded mx-auto w-72 pr-12 pl-12">
+            <div className=" mx-auto py-3 bg-[#DCDCDC] rounded-lg">
               <LanguageSwitch />
             </div>
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">
+              
               <Link
                 href={
                   'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='
@@ -251,6 +283,7 @@ export default function Navbar({
             </div>
           </div>
         </ul>
+        
       </div>
       <style>{`
         .children {
