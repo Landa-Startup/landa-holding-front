@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useLang } from 'stores/langStore';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 type Props = {
   image: string;
@@ -11,7 +12,7 @@ type Props = {
   buttonText: string;
 }
 
-export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
+export default function UpcomingStartupsCard({ image, subTitle, text, goto, buttonText }: Props) {
 
   const { lang } = useLang.getState();
 
@@ -44,14 +45,14 @@ export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
                   {text}
                 </p>
               </div>
-              {/* <div className='w-[170px] self-center p-2 md:w-[224px] md:p-6'>
-                <ButtonRefactor
-                  text={buttonText}
-                  type='link'
-                  href={goto}
-                  bgColor='black'
-                />
-              </div> */}
+              <div className="h-auto w-[224px] mt-6 p-2">
+          <ButtonRefactor
+             text={buttonText}
+            type="link"
+            href={goto}
+            bgColor="black"
+          />
+        </div>
             </div>
           </div>
         </div>

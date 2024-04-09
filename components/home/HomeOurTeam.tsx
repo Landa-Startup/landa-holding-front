@@ -21,11 +21,11 @@ export default function HomeOurTeam() {
           {t('LandaHolding')}
         </span> */}
         <p
-          className={`font-condensed text-5xl font-normal tracking-normal text-black md:mr-20 xl:mr-0 ltr:tracking-widest`}
+          className={`font-condensed text-5xl font-normal tracking-normal text-black md:mr-20 md:pl-14 xl:mr-0 ltr:tracking-widest`}
         >
           {t('OurTeam')}
         </p>
-        <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
+        <p className="mb-4 mt-8 font-barlow pl-14">{t('ourTeamText')}</p>
       </div>
 
       <div className="mx-4 flex flex-col items-center">
