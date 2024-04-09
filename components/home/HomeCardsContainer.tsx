@@ -29,7 +29,7 @@ const HomeCardsContainer = () => {
   return (
     <div className="relative bg-whiteGold text-black" id="LandaHolding">
       <div>
-        <Lines />
+        {/* <Lines /> */}
       </div>
       {renderHomeCards(t('cards', { returnObjects: true }))}
     </div>
