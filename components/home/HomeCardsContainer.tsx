@@ -1,6 +1,6 @@
 'use client'
 import HomeCards from './HomeCards';
-import Lines from '../icons/Home/Lines';
+// import Lines from '../icons/Home/Lines';
 import { useTranslation } from 'app/i18n/client';
 import { CompanySectionsInterface } from '@/types/global';
 import { useLang } from 'stores/langStore';
