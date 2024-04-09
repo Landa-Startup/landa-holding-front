@@ -110,7 +110,7 @@ export default async function Page({
               height={100}
             />
             <div className='md:pr-12 ltr:ml-12'>
-            <p className='text-primary text-2xl md:text-3xl md:pb-12'>{t('MembershipBenefits', { returnObjects: true }).item1}</p>
+            <p className='text-primary text-2xl md:text-3xl md:pb-12'>{t('MembershipBenefits', { returnObjects: true }).title}</p>
             <div className='text-sm pt-12 md:pt-0 md:text-base'>
             <li>{t('MembershipBenefits', { returnObjects: true }).item1}</li>
             <li>{t('MembershipBenefits', { returnObjects: true }).item2}</li>
