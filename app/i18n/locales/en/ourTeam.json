@@ -79,13 +79,7 @@
           "linkdin": "",
           "category": "Digital Marketer"
         },
-        {
-          "image": "/static/images/our-team/Personals/a13.png",
-          "position": "UX/UI Designer",
-          "name": "Ariana Shafie",
-          "linkedIn": "https://www.linkedin.com/in/ariana-shafie-2b38ab190/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-          "category": "designers"
-        },
+
         {
           "image": "/static/images/our-team/Personals/a14.png",
           "position": "UX/UI Designer",
@@ -144,21 +138,6 @@
       "category": "content creators"
     },
 
-
-    {
-      "image": "/static/images/our-team/Personals/a27.png",
-      "position": "Full Stack",
-      "name": "Meraj Bighamian",
-      "linkedIn": "https://www.linkedin.com/in/meraj-bighamian-7034581a3",
-      "category": "programmers"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a28.png",
-      "position": "Front-end",
-      "name": "Mahdi Salmanzadeh",
-      "linkedIn": "https://www.linkedin.com/in/mehdisa/",
-      "category": "programmers"
-    },
     {
       "image": "/static/images/our-team/Personals/a31.png",
       "position": "Front-end",

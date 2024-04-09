@@ -75,17 +75,11 @@
         {
             "image": "/static/images/our-team/Personals/ARYA.jpg",
             "position": "بازاریاب دیجیتال",
-            "name": "آریا باغرپور",
+            "name": "آریا باقرپور",
             "linkdin": "",
             "category": "بازاریاب دیجیتال"
         },
-        {
-            "image": "/static/images/our-team/Personals/a13.png",
-            "position": "طراح تجربه و رابط کاربری",
-            "name": "آریانا شفیعی",
-            "linkedIn": "https://www.linkedin.com/in/ariana-shafie-2b38ab190/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-            "category": "طراحان"
-        },
+
         {
             "image": "/static/images/our-team/Personals/a14.png",
             "position": "طراح تجربه و رابط کاربری",
@@ -143,20 +137,8 @@
             "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
             "category": "تولید کنندگان محتوا"
         },
-        {
-            "image": "/static/images/our-team/Personals/a27.png",
-            "position": "Full stack",
-            "name": "معراج بیغمیان",
-            "linkedIn": "https://www.linkedin.com/in/meraj-bighamian-7034581a3",
-            "category": "برنامه نویسان"
-        },
-        {
-            "image": "/static/images/our-team/Personals/a28.png",
-            "position": "Front end",
-            "name": "مهدی سلمان زاده",
-            "linkedIn": "https://www.linkedin.com/in/mehdisa/",
-            "category": "برنامه نویسان"
-        },
+
+
         {
             "image": "/static/images/our-team/Personals/a31.png",
             "position": "Front end",
