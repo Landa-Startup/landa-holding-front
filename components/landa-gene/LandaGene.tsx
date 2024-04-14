@@ -106,7 +106,7 @@ export default function LandaGene() {
     <div className="my-20 flex flex-col items-start gap-24 font-barlow">
       <div className="mx-auto flex w-10/12 flex-col gap-x-8 md:flex-row md:justify-between">
 
-      <div className="basis-3/4 md:pl-20">
+      <div className="basis-3/4">
           <p className="text-justify font-barlow text-base leading-[36px]  text-black ltr:tracking-[2px]">
             {t('textUp')}
           </p>
@@ -134,7 +134,7 @@ export default function LandaGene() {
           />
         </div>
         <div className="basis-4/5">
-          <p className="w-full text-justify font-barlow text-base leading-[36px] text-black">
+          <p className="w-full text-justify font-barlow text-base leading-[36px] text-black ">
             <p className='text-primary text-2xl md:text-3xl pb-3'>
             {t('Services-Gen', { returnObjects: true }).title}
             </p>
@@ -152,7 +152,7 @@ export default function LandaGene() {
 
 
       <div className=' md:rtl:pr-36 w-full'>
-        <p className='text-primary mr-8 pb-12 text-2xl md:text-3xl'>
+        <p className='text-primary pr-10 pl-8  md:pr-0 md:flex md:pl-36 pb-12 text-2xl md:text-3xl'>
         {t('ReasonsForSelection', { returnObjects: true }).title}
         </p>
       <div className='grid gap-4 justify-center md:pl-24'>
