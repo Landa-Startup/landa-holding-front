@@ -24,7 +24,7 @@
     "companyNamePlaceholder": "Name of Your Organization, if applicable",
     "Services-Gen": {
         "title":"Landa Gene Services :",
-        "item1":"Connection with common gadgets for data collection",
+        "item1":"Connection with gadgets for data collection",
         "item2":"Web-based and mobile app for Android and iOS",
         "item3":"AI-powered reports on potential future diseases",
         "item4":"Customized health and prevention plans ",
@@ -35,7 +35,7 @@
         "item1":"In-depth analysis of gene behavior",
         "item2":"Personalized wellness plans",
         "item3":"Reminders and follow-ups to ensure compliance",
-        "item4":"Authorization by reputable Canadian government organizations",
+        "item4":"Authorization by reputable Canadian organizations",
         "item5":"Family profile creation for shared genetic insights"
     },
     "InvestmentBenefits" : {
