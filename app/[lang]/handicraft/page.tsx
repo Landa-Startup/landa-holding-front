@@ -46,29 +46,29 @@ export default async function Page({
               height={1000}
             />
           </div>
-          <Image
+          {/* <Image
             className="absolute top-1/4 object-cover opacity-20 md:hidden"
             src="/static/images/handicraftLogo.png"
             alt="handicraft"
             layout="fill"
-          />
+          /> */}
 
         </div>
         <div className="relative flex flex-col-reverse justify-between w-ful gap-5 overflow-hidden md:flex-row">
 
           <div className="absolute bottom-20 -right-7 h-[650px] w-screen md:hidden">
-            <Image
+            {/* <Image
               className=" object-cover opacity-20 md:hidden"
               src="/static/images/handicraftLogo.png"
               alt="handicraft"
               layout="fill"
-            />
+            /> */}
           </div>
           <div className='flex flex-col'>
           <div className='text-primary text-3xl pb-10'>
           {t('difference-craft', { returnObjects: true }).title}
           </div>
-          <div className=' font-barlow text-base font-normal leading-8 md:grid grid-cols-2 gap-5'>
+          <div className=' font-barlow text-xs md:text-base font-normal leading-8 md:grid grid-cols-2 gap-5'>
           <li>{t('difference-craft', { returnObjects: true }).item1}</li>
           <li>{t('difference-craft', { returnObjects: true }).item2}</li>
           <li>{t('difference-craft', { returnObjects: true }).item3}</li>
@@ -92,12 +92,12 @@ export default async function Page({
         <p className='text-primary justify-strat w-full pb-12 text-2xl md:text-3xl'>
         {t('Advantages-NFT', { returnObjects: true }).title}
         </p>
-      <div className='grid gap-4 justify-center md:pl-24 text-base'>
-      <li className='btn bg-white  rounded-sm border-primary  md:w-[800px] '>{t('Advantages-NFT', { returnObjects: true }).item1}</li>
-        <li className='btn bg-white  rounded-sm border-primary  md:w-[800px] leading-6'>{t('Advantages-NFT', { returnObjects: true }).item2}</li>
-        <li className='btn bg-white  rounded-sm border-primary  md:w-[800px] '>{t('Advantages-NFT', { returnObjects: true }).item3}</li>
-        <li className='btn bg-white  rounded-sm border-primary  md:w-[800px]'>{t('Advantages-NFT', { returnObjects: true }).item4}</li>
-        <li className='btn bg-white rounded-sm border-primary  md:w-[800px] '>{t('Advantages-NFT', { returnObjects: true }).item5}</li>
+      <div className='grid gap-4 justify-center md:pl-24 font-barlow md:text-lg text-xs'>
+      <li className='btn bg-white rounded-sm border-primary capitalize md:w-[800px]  md:text-md'>{t('Advantages-NFT', { returnObjects: true }).item1}</li>
+        <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px]  md:text-md'>{t('Advantages-NFT', { returnObjects: true }).item2}</li>
+        <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px]  md:text-md'>{t('Advantages-NFT', { returnObjects: true }).item3}</li>
+        <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px]  md:text-md'>{t('Advantages-NFT', { returnObjects: true }).item4}</li>
+        <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px]  md:text-md'>{t('Advantages-NFT', { returnObjects: true }).item5}</li>
       </div>
       </div>
       <div className='flex flex-row h-[400px]'>
@@ -111,7 +111,7 @@ export default async function Page({
             />
             <div className='md:pr-12 md:ltr:ml-12'>
             <p className='text-primary text-2xl md:text-3xl md:pb-12'>{t('MembershipBenefits', { returnObjects: true }).title}</p>
-            <div className='text-sm pt-12 md:pt-0 md:text-base space-y-4 text-justify'>
+            <div className='text-xs pt-12 md:pt-0 md:text-base space-y-6 text-justify'>
             <li>{t('MembershipBenefits', { returnObjects: true }).item1}</li>
             <li>{t('MembershipBenefits', { returnObjects: true }).item2}</li>
             <li>{t('MembershipBenefits', { returnObjects: true }).item3}</li>
