@@ -62,10 +62,10 @@ export default function AboutUsProfile() {
       </div>
       <div className="grid grid-cols-1 mt-10 items-center gap-6 px-12  py-10 md:grid-cols-2 md:gap-24 md:px-32  md:py-6 md:pt-20 bg-[#FAFAFA]">
         <div className="flex flex-col gap-6">
-          <span className="font-gilda text-xl text-primary md:text-4xl">
+          <span className="font-gilda text-2xl w-[300px] md:w-[500px] text-primary md:text-4xl">
             {t('certificate')}
           </span>
-          <div className="flex size-full pl-10 md:mt-4 md:ml-0 md:mr-0">
+          <div className="flex size-full pr-20 pl-10 md:mt-4 md:ml-0 md:mr-0">
             <Certificate />
             <Link size={32} addedClass="-ml-10 mb-3 z-10" />
           </div>

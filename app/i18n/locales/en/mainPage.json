@@ -280,10 +280,10 @@
         "gene": true
       },
       {
-        "image": "/static/images/Home/upcomming-Sartup/10.png",
+        "image": "/static/images/Home/upcomming-Sartup/LOGO AR.png",
         "subTitle": "LANDA AR",
-        "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
-        "goto": "/landa-gene",
+        "text": "Furnishing and selecting the right decor requires a keen eye for detail and a touch of personal flair. Envisioning how furniture and decor will look in a particular space can be a daunting task. Landa AR, an innovative startup, harnesses the power of augmented reality (AR) and artificial intelligence (AI) to help you achieve your dream interior design.",
+        "goto": "#",
         "buttonText" : "Register",
         "gene": true
       }
