@@ -769,7 +769,8 @@ const rolesEN: Array<string> = [
   'Accountant',
   'Public Relations',
   'Digital Marketer',
-  'Manager Assistant'
+  'Manager Assistant',
+  'R&D Specialist'
 ];
 
 const rolesFA: Array<string> = [
@@ -783,7 +784,8 @@ const rolesFA: Array<string> = [
   'حسابدار',
   'روابط عمومی',
   'بازاریاب دیجیتال',
-  'دستیار مدیر'
+  'دستیار مدیر',
+  'تحلیل و توسعه'
 ];
 
 const companies: CompaniesArrayInterface[] = [

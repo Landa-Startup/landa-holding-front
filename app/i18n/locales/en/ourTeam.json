@@ -122,13 +122,19 @@
           "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
           "category": "content creators"
         },
-
+        {
+          "image": "/static/images/our-team/Personals/Landa_Image.jpg",
+          "position": "R&D Specialist",
+          "name": "sobhan mohammadi",
+          "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
+          "category": "R&D Department"
+      },
     {
       "image": "/static/images/our-team/Personals/milad copy 2.jpg",
-      "position": "Content Creator",
+      "position": "R&D Specialist",
       "name": "Milad Fatemi",
-      "linkedIn": "https://www.linkedin.com/in/milad-fatemi-48157b78",
-      "category": "content creators"
+      "linkedIn": "https://www.linkedin.com/in/miladfatemi/",
+      "category": "R&D Department"
     },
     {
       "image": "/static/images/our-team/Personals/MAHSA.jpg",
@@ -180,6 +186,7 @@
       "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",
       "category": "public relations"
     }
+
   ],
   "roles": [
     "All",
@@ -191,6 +198,7 @@
     "Accountant",
     "Public Relations",
     "Digital Marketer",
-    "Manager Assistant"
+    "Manager Assistant",
+    "R&D Department"
   ]
 }

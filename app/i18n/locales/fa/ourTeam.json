@@ -122,13 +122,20 @@
             "linkedIn": "",
             "category": "تولید کنندگان محتوا"
         },
+        {
+            "image": "/static/images/our-team/Personals/Landa_Image.jpg",
+            "position": "تحقیق و توسعه",
+            "name": "سبحان محمدی",
+            "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
+            "category": "تحقیق و توسعه"
+        },
 
         {
             "image": "/static/images/our-team/Personals/milad copy 2.jpg",
-            "position": "تولید محتوا",
+            "position": "تحقیق و توسعه",
             "name": "میلاد فاطمی",
-            "linkedIn": "",
-            "category": "تولید کنندگان محتوا"
+            "linkedIn": "https://www.linkedin.com/in/miladfatemi/",
+            "category": "تحقیق و توسعه"
         },
         {
             "image": "/static/images/our-team/Personals/a25.png",
@@ -181,6 +188,7 @@
             "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",
             "category": "روابط عمومی"
         }
+
     ],
     "roles": [
         "همه",
@@ -192,6 +200,7 @@
         "حسابدار",
         "روابط عمومی",
         "بازاریاب دیجیتال",
-        "دستیار مدیر"
+        "دستیار مدیر",
+        "تحقیق و توسعه"
     ]
 }
