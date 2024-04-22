@@ -25,7 +25,7 @@ export default function HomeOurTeam() {
         >
           {t('OurTeam')}
         </p>
-        <p className="mb-4 mt-8 font-barlow pl-14">{t('ourTeamText')}</p>
+        <p className="mb-4 mt-8 font-barlow md:pl-14">{t('ourTeamText')}</p>
       </div>
 
       <div className="mx-4 flex flex-col items-center">
