@@ -19,7 +19,7 @@ export default function ContactUsDescription() {
   return (
     <div className="h-full">
       <div className="mb-5 mt-10 flex flex-col items-center md:my-0 md:w-[464px] md:items-start">
-        <h1 className="font-gilda text-4xl font-light md:text-5xl">
+        <h1 className="font-gilda text-4xl font-light md:text-5xl text-primary">
           {t('LandaHolding')}
         </h1>
         <p className="my-5 text-justify text-base">{t('text')}</p>
