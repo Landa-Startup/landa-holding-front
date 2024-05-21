@@ -8,7 +8,7 @@ export default function Hero({
   titles,
   subTitle,
   backgroundImage,
-  leftImage,
+  // leftImage,
   showButton,
   title
 }: {
@@ -17,7 +17,7 @@ export default function Hero({
   subTitle?: string;
   buttonBg?: string;
   backgroundImage: string;
-  leftImage: string;
+  // leftImage: string;
   showButton?: boolean;
   lang: string;
   title: string;
@@ -78,7 +78,7 @@ export default function Hero({
       className="relative h-[calc(100vh)] overflow-hidden md:h-screen"
     >
       <div
-        className="absolute inset-0 bg-black opacity-70"
+        className="absolute inset-0 opacity-70"
         // This div will serve as the overlay
       ></div>
 
@@ -86,13 +86,13 @@ export default function Hero({
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
-          } text-center md:text-center px-2 md:px-0 font-barlow text-3xl font-bold leading-normal tracking-[5.5px] text-white md:text-4xl md:tracking-[12px] rtl:tracking-normal`}
+          } text-center md:text-center px-2 md:px-0 font-gilda text-3xl font-bold text-white md:text-6xl md:ml-6 md:tracking-[12px] rtl:tracking-normal`}
         >
           {title}
         </div>
-        <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] md:text-4xl md:tracking-[3.6px] rtl:tracking-normal">
+        <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] md:text-4xl md:tracking-[3.6px] rtl:tracking-normal md:pt-24">
           {titles.map((title: string, index: number) => (
-            <li key={index} className="marker:text-primary">
+            <li key={index} className="marker:text-white">
               {title}
             </li>
           ))}
@@ -113,9 +113,9 @@ export default function Hero({
         >
           {currentTitle}
         </div> */}
-      <div className="absolute top-2/3 flex items-center justify-center rounded-tr-md rounded-br-md bg-[#AA845380] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[800px] md:rtl:right-0">
+      <div className="absolute top-2/3 flex items-center justify-center rounded-tr-xl rounded-br-md bg-[#DDCEBA] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[700px] md:rtl:right-0">
         <div
-          className={`text-center font-barlow text-2xl font-semibold leading-10 text-white text-opacity-95 md:text-4xl ltr:tracking-[4px]`}
+          className={`text-center md:font-gilda font-barlow text-2xl font-semibold text-bold leading-10 text-white text-opacity-95 md:text-6xl ltr:tracking-[4px]`}
         >
           {subTitle ? subTitle : ''}
         </div>
@@ -123,8 +123,8 @@ export default function Hero({
       {showButton ? <ButtonRefactor text="Register Now" /> : <></>}
       <Image
         loading="lazy"
-        className="absolute bottom-0 mr-0 h-[365px] w-[500px] sm:h-[365px] sm:w-[500px] md:mr-0 md:h-[365px] md:w-[500px] xl:h-[560px] xl:w-[420px] ltr:-right-32 ltr:md:right-0 rtl:-left-32 md:rtl:left-0 md:rtl:right-auto "
-        src={`/static/images/${leftImage}`}
+        className="absolute bottom-0 mr-12 h-[365px] ml-24 md:ml-0 w-[300px] sm:h-[365px] sm:w-[500px] md:mr-0 md:h-[365px] md:w-[500px] xl:h-[560px] xl:w-[420px] ltr:-right-32 ltr:md:right-0 rtl:-left-32 md:rtl:left-0 md:rtl:right-auto "
+        src="/static/images/Vector 58 (1).png"
         alt="Landa"
         width={500}
         height={500}
