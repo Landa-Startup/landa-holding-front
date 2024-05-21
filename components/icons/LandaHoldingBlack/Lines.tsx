@@ -3,7 +3,7 @@
 export default function Lines() {
   return (
     <>
-      <svg
+      {/* <svg
         className="absolute mb-[1px] ml-[32.5px] hidden md:left-[43.55%] md:block rtl:md:left-[43.18%]"
         xmlns="http://www.w3.org/2000/svg"
         width="238"
@@ -16,8 +16,8 @@ export default function Lines() {
           stroke="#AA8453"
           strokeWidth="2"
         />
-      </svg>
-      <svg
+      </svg> */}
+      {/* <svg
         className="absolute bottom-0 right-0"
         xmlns="http://www.w3.org/2000/svg"
         width="242"
@@ -58,7 +58,7 @@ export default function Lines() {
             />
           </filter>
         </defs>
-      </svg>
+      </svg> */}
       <svg
         className="absolute left-[640px] hidden md:hidden"
         xmlns="http://www.w3.org/2000/svg"

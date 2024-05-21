@@ -21,11 +21,11 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
   return (
     <>
       <div>
-        <div className='border-1 flex h-full w-full flex-col justify-start border p-5 shadow-2xl md:w-[400px] md:gap-8'>
+        <div className='border-1 flex h-full w-full flex-col justify-start border p-5 shadow-2xl md:w-[450px] md:gap-8  rounded-xl'>
           <div className='relative m-auto bg-white md:w-full'>
             <Image
               loading='lazy'
-              className='m-auto h-[150px] w-auto pt-5'
+              className='m-auto h-[100px] w-auto pt-5'
               src={image}
               alt={subTitle}
               width={100}
@@ -37,7 +37,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
           </div>
           <div className='flex h-full flex-col gap-4'>
             <div className='w-full px-3 md:px-0'>
-              <hr className='h-[2px] w-full bg-black' />
+              {/* <hr className='h-[2px] w-full bg-black' /> */}
             </div>
             <div className='flex h-full flex-col items-center justify-between gap-3 px-2 text-justify md:px-6'>
               <div>

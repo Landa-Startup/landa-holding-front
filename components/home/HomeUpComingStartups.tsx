@@ -44,13 +44,13 @@ export default function HomeUpComingStartups() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div> */}
-      <div className="mx-3 my-4 flex flex-col items-center justify-start gap-6 md:ml-6 md:mr-0 md:items-start md:p-[32px]">
+      <div className="mx-3 my-4 flex flex-col items-center justify-start gap-6 md:ml-6 md:mr-0 md:items-start md:p-[32px] md:pt-24">
         <div className="flex flex-col items-start justify-between md:w-[400px] pt-10">
-          <p className="tw-[340px] border-b border-black pb-3 md:rtl:pr-32 md:ltr:pl-24 md:w-[540px] font-gilda text-3xl md:text-4xl font-normal text-black md:border-none md:text-start">
+          <p className="tw-[340px] border-b border-black pb-3 md:rtl:pr-32 md:ltr:pl-24 md:w-[540px] font-gilda text-3xl md:text-4xl font-normal text-black md:border-none md:text-start md:pt-12">
             {t('upcomingStartups', { returnObjects: true }).title}
           </p>
         </div>
-        <div className="flex flex-col gap-8 md:flex-row md:rtl:pr-44 md:ltr:pl-44">
+        <div className="flex flex-col gap-8 md:flex-row md:rtl:pr-28 md:ltr:pl-24">
           {renderCards(t('upcomingStartups', { returnObjects: true }).cards)}
         </div>
       </div>

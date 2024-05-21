@@ -19,9 +19,9 @@ export default function HomeCards({
 
   return (
     <div
-      className={`${flexDirectionClass} flex items-center justify-between border-b-2 border-primary px-9 py-5 last:border-none md:border-none md:p-32`}
+      className={`${flexDirectionClass} flex items-center justify-between border-b-2 border-primary px-9 py-5 md:py-0 last:border-none md:border-none md:px-40`}
     >
-      <HomeCardsLeft text={text} addedClass={addedClass} link={link} buttonText={buttonText} />
+      <HomeCardsLeft text={text} titles={titles} addedClass={addedClass} link={link} buttonText={buttonText} />
       <HomeCardsRight images={images} titles={titles} link={link} />
     </div>
   );

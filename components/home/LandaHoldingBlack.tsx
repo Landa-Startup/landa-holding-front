@@ -11,12 +11,12 @@ export default function LandaHoldingBlack() {
   const { t } = useTranslation(lang, 'mainPage');
 
   return (
-    <div className="md:pr-40' relative flex flex-col items-center  justify-evenly space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:flex-row md:justify-between md:py-10 md:pr-20 ltr:md:pl-36 rtl:md:pl-20">
+    <div className="relative flex flex-col items-center  justify-evenly space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:pt-48 md:pb-32 md:flex-row md:py-10">
       <Lines />
-      <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
+      <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className="w-[340px] border-b border-black pb-3 text-center font-gilda text-4xl font-normal text-black md:border-none md:text-start">
+            <span className="w-[390px] border-b border-black pb-3 text-center font-gilda text-4xl font-bold text-black md:border-none md:text-start md:ltr:pl-48 md:w-[600px] md:pt-14 md:rtl:pr-16">
               {t('InvestorCenter')}
               <br />
             </span>
@@ -25,12 +25,12 @@ export default function LandaHoldingBlack() {
 
         <UlList
           list={t('landaHoldingBlackFirst', { returnObjects: true })}
-          style1="w-[320px] md:w-[454px] pr-5"
-          style2="space-y-2 mr-8"
+          style1="w-[360px] md:w-[700px] md:ltr:pl-12 rtl:md:pr-24"
+          style2="space-y-2"
           style3="pt-4"
         />
 
-        <div className="h-auto w-[224px] mt-6 p-2">
+        <div className="h-auto w-[224px] mt-6 p-2 md:pb-8">
           <ButtonRefactor
             text={t('Register')}
             type="link"
@@ -39,11 +39,11 @@ export default function LandaHoldingBlack() {
           />
         </div>
       </div>
-
-      <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1">
+ 
+      <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1 md:pt-8 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
         <div className="flex flex-col w-full items-center self-start md:items-start">
           <div className="flex flex-col pt-4 md:pt-0 w-full">
-            <span className="border-b border-black pb-3 pt-4 text-right md:text-center font-gilda text-3xl font-normal text-black md:border-none md:text-4xl md:pt-0">
+            <span className="border-b border-black pb-3 pt-4 text-center md:text-center font-gilda text-3xl font-bold text-black md:border-none md:text-4xl md:pt-5">
               {t('EntrepreneurCenter')}
               <br />
             </span>
@@ -52,12 +52,12 @@ export default function LandaHoldingBlack() {
         {/* TODO: Why pass 3 styles? */}
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
-          style1={`w-[320px] md:w-[600px] pr-10`}
+          style1={`w-[360px] md:w-[700px] md:pl-12 md:rtl:pr-16`}
           style2="space-y-0 md:mr-8"
           style3="pt-4"
         />
 
-        <div className="h-auto w-[224px] mt-6 p-2">
+        <div className="h-auto w-[224px] mt-6 p-2 md:pb-8">
           <ButtonRefactor
             text={t('Register')}
             type="link"

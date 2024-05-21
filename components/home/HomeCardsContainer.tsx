@@ -27,7 +27,7 @@ const HomeCardsContainer = () => {
   // console.log(t('cards', { returnObjects: true }));
 
   return (
-    <div className="relative bg-whiteGold text-black" id="LandaHolding">
+    <div className="relative text-black" id="LandaHolding">
       <div>
         {/* <Lines /> */}
       </div>
