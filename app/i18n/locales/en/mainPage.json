@@ -3,17 +3,17 @@
   "Acceleration": "Entrepreneurship",
   "AccelerationCenter": "ENTREPRENEURSHIP CENTER",
   "Investment": "Investor",
-  "Academy": "Incubator",
+  "Academy": "StartUp",
   "HeroSubtitle": "Feel The Future",
-  "LandaHolding": "LANDA INTERNATIONAL HOLDING",
+  "LandaHolding": "LANDA HOLDING",
   "Home": "Home",
   "AboutUs": "ABOUT US",
   "ContactUs": "CONTACT US",
   "OurTeam": "OUR TEAM",
   "ourTeamText": "Our team of experts is comprised of professionals who are passionate about their work, and have an extensive background in a wide variety of applications, and are willing to help at any time",
   "Forms": "FORMS",
-  "InvestorCenter": "INVESTOR CENTER",
-  "EntrepreneurCenter": "ENTREPRENEUR CENTER",
+  "InvestorCenter": "Investment",
+  "EntrepreneurCenter": "ENTREPRENEUR",
   "BusinessPartners": "BUSINESS PARTNERS",
   "Startups Validation": "STARTUPS VALIDATION",
   "ApplyJob": "APPLY JOB",
@@ -68,7 +68,7 @@
       "buttonText": "Vsit Now"
     },
     {
-      "title": "Academy",
+      "title": "StartUp",
       "text": "At Landa Academy, we provide individuals with a nurturing place to discover and grow their interests and skills efficiently. Our academy operates as a dynamic place that identifies and evaluates the potential of talented individuals, particularly youth, and invests in their development and creative ideas. By providing comprehensive programs and resources and through a combination of mentoring, skill-building workshops, and exposure to various opportunities, Landa Academy equips participants with the tools and knowledge necessary to thrive and succeed in their chosen fields.",
       "reverse": false,
       "show": false,
@@ -107,16 +107,16 @@
     "Online platform for connecting with other entrepreneurs"
   ],
   "partners": {
-    "title": "Join Our Business Affiliates",
+    "title": "Our Business Affiliates",
     "logos": [
       {
-        "number": 98,
+        "number": 102,
         "title": "Islamic Azad University of Isfahan(Khorasgan)",
         "description": "Since 1396, at the same time as Farazman was established, we have been working with Isfahan Azad University in the field of student investment and acceleration.",
         "alt": "Islamic Azad University of Isfahan(Khorasgan)"
       },
       {
-        "number": 3,
+        "number": 104,
         "title": "Dr. Nekui Educational Holding",
         "description":"We are honored to work with Dr. Nekui holding to ensure a bright future for startups and innovative ideas",
         "alt": "Dr. Nekui Educational Holding"
@@ -128,7 +128,7 @@
         "alt": "University of Kashan"
       },
       {
-        "number": 77,
+        "number": 101,
         "title": "ASIAHITECH",
         "description": "Since 1397, we are proud to cooperate with the advanced technologies of Asia in the field of investing in startups.",
         "alt": "ASIAHITECH"
@@ -280,9 +280,9 @@
         "gene": true
       },
       {
-        "image": "/static/images/Home/upcomming-Sartup/LOGO AR.png",
-        "subTitle": "LANDA AR",
-        "text": "Furnishing and selecting the right decor requires a keen eye for detail and a touch of personal flair. Envisioning how furniture and decor will look in a particular space can be a daunting task. Landa AR, an innovative startup, harnesses the power of augmented reality (AR) and artificial intelligence (AI) to help you achieve your dream interior design.",
+        "image": "/static/images/Home/upcomming-Sartup/2.png",
+        "subTitle": "PREVENTI GENE",
+        "text": "PreventiGene, a startup that uses genetic testing to understand your genetic makeup and identify potential diseases like breast cancer, goes beyond just understanding your genes. It provides personalized plans to help you take action",
         "goto": "#",
         "buttonText" : "Register",
         "gene": true
