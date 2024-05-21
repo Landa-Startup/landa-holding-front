@@ -105,13 +105,7 @@ export default function LandaGene() {
   return (
     <div className="my-20 flex flex-col items-start gap-24 font-barlow">
       <div className="mx-auto flex w-10/12 flex-col gap-x-8 md:flex-row md:justify-between">
-
-      <div className="basis-3/4">
-          <p className="text-justify font-barlow text-base md:leading-[36px]  text-black md:ltr:tracking-[2px]">
-            {t('textUp')}
-          </p>
-        </div>
-        <div className="basis-2/4 md:ltr:pl-72 md:rtl:pr-72">
+        <div className="basis-1/4">
           <Image
             src="/static/images/gene-logo.svg"
             alt="gene-logo"
@@ -120,7 +114,11 @@ export default function LandaGene() {
             height={100}
           />
         </div>
-
+        <div className="basis-3/4 ">
+          <p className="text-justify text-[15px] leading-[36px]  text-black ltr:tracking-[2px] md:leading-[48px] lg:text-[20px]">
+            {t('textUp')}
+          </p>
+        </div>
       </div>
 
       <div className="mx-auto flex w-10/12 flex-col gap-8 md:flex-row-reverse md:justify-between">
@@ -133,35 +131,11 @@ export default function LandaGene() {
             height={100}
           />
         </div>
-        <div className="basis-4/5">
-          <p className="w-full text-justify font-barlow text-base leading-[36px] text-black ">
-            <p className='text-primary text-2xl md:text-3xl pb-3'>
-            {t('Services-Gen', { returnObjects: true }).title}
-            </p>
-            <div className='space-y-4'>        
-        <li className='text-sm md:text-lg'>{t('Services-Gen', { returnObjects: true }).item1}</li>
-        <li className='text-sm md:text-lg'>{t('Services-Gen', { returnObjects: true }).item2}</li>
-        <li className='text-sm md:text-lg'>{t('Services-Gen', { returnObjects: true }).item3}</li>
-        <li className='text-sm md:text-lg'>{t('Services-Gen', { returnObjects: true }).item4}</li>
-        <li className='text-sm md:text-lg'>{t('Services-Gen', { returnObjects: true }).item5}</li>
-        </div>
-
+        <div className="basis-3/5">
+          <p className="w-full text-justify  text-[15px] leading-[36px] text-black md:leading-[48px] lg:text-[20px]">
+            {t('textMid')}
           </p>
         </div>
-      </div>
-
-
-      <div className=' md:rtl:pr-36 w-full'>
-        <p className='text-primary pr-10 pl-8  md:pr-0 md:flex md:pl-36 pb-12 text-2xl md:text-3xl'>
-        {t('ReasonsForSelection', { returnObjects: true }).title}
-        </p>
-      <div className='grid gap-4 justify-center md:pl-24'>
-      <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px]   md:text-md'>{t('ReasonsForSelection', { returnObjects: true }).item1}</li>
-        <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px] md:text-md'>{t('ReasonsForSelection', { returnObjects: true }).item2}</li>
-        <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px] md:text-md'>{t('ReasonsForSelection', { returnObjects: true }).item3}</li>
-        <li className='btn bg-white  rounded-sm border-primary capitalize md:w-[800px] md:text-md'>{t('ReasonsForSelection', { returnObjects: true }).item4}</li>
-        <li className='btn bg-white rounded-sm border-primary  capitalize md:w-[800px] md:text-md'>{t('ReasonsForSelection', { returnObjects: true }).item5}</li>
-      </div>
       </div>
 
       <div className="mx-auto flex w-10/12 flex-col gap-8 md:flex-row md:justify-between">
@@ -175,26 +149,17 @@ export default function LandaGene() {
           />
         </div>
         <div className="basis-3/5 ">
-          <p className="w-full text-justify  font-barlow text-base leading-[36px] text-black md:leading-[48px]">
-            <p className='text-primary text-2xl md:text-3xl pb-10 space-y-4'>{t('InvestmentBenefits', { returnObjects: true }).title}</p>
-           <div className='text-xs md:text-lg space-y-5'>          
-          <li >{t('InvestmentBenefits', { returnObjects: true }).item1}</li>
-          <li>{t('InvestmentBenefits', { returnObjects: true }).item2}</li>
-          <li>{t('InvestmentBenefits', { returnObjects: true }).item3}</li>
-          <li>{t('InvestmentBenefits', { returnObjects: true }).item4}</li>
-          </div>
-
-
-
+          <p className="w-full text-justify  text-[15px] leading-[36px] text-black md:leading-[48px] lg:text-[20px]">
+            {t('textDown')}
           </p>
         </div>
       </div>
 
       <div className="mx-auto flex h-auto w-10/12 bg-[#F8F5F0] px-[32px] py-[31px]">
         <div className="flex h-auto w-full flex-col  justify-between p-0">
-          <div className="flex w-full flex-col p-0">
+          <div className="flex w-full flex-col   p-0">
             <p
-              className={`w-full md:text-justify  text-[18px] leading-normal  text-primary ${
+              className={`w-full text-justify  text-[18px] leading-normal  text-primary ${
                 lang === 'en' ? 'md:tracking-[2px]' : ''
               }`}
             >
