@@ -99,7 +99,7 @@ export default function Navbar({
           </div>
 
           <div className="hidden justify-center ltr:mr-12 xl:flex xl:flex-1">
-            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
+            <ul className="menu menu-horizontal flex justify-center md:mb-3 space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li className="h-9 text-2xl" key={label}>
