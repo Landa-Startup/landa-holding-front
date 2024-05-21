@@ -25,7 +25,7 @@ export default async function Page({
     <div>
       <Banner
         title={t('banner')}
-        image="/static/images/a52.jpeg"
+        image="/static/images/group.png"  
         lang={lang}
       />
       <AboutUsLandaHolding />
