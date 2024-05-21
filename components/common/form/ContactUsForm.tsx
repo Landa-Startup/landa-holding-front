@@ -97,7 +97,7 @@ export default function ContactUsForm() {
 
   return (
     <div className="flex h-full flex-col items-center justify-between md:items-start">
-      <h2 className="flex w-full justify-center font-gilda text-4xl font-light ltr:tracking-[.25em] md:text-5xl">
+      <h2 className="flex w-full justify-center font-gilda text-4xl font-light ltr:tracking-[.em] md:text-5xl">
         {t('contactForm', { returnObjects: true }).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -130,7 +130,7 @@ export default function ContactUsForm() {
               placeholder={
                 t('contactForm', { returnObjects: true }).subjectPlaceholder
               }
-              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+              className="input  col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
               labelClass="text-[#6b6b6b] dark:text-current"
               containerClass=""
             />
@@ -155,7 +155,7 @@ export default function ContactUsForm() {
           </div>
         </div>
 
-        <div className="md:pl-28 md:rtl:pr-28">
+        <div className="md:pl-44 md:rtl:pr-28">
           <Button
             type="submit"
             bgColor="Primary"
