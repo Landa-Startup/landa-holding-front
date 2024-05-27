@@ -113,9 +113,9 @@ export default function Hero({
         >
           {currentTitle}
         </div> */}
-      <div className="absolute top-2/3 flex items-center justify-center rounded-tr-xl rounded-br-md bg-[#DDCEBA] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[700px] md:rtl:right-0">
+      <div className="absolute top-2/3 flex items-center justify-center rtl:rounded-bl-2xl ltr:rounded-br-2xl  bg-[#DDCEBA] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[700px] md:rtl:right-0">
         <div
-          className={`text-center md:font-gilda font-barlow text-2xl font-semibold text-bold leading-10 text-white text-opacity-95 md:text-6xl ltr:tracking-[4px]`}
+          className={`text-center md:font-gilda font-barlow  font-semibold text-bold leading-10 text-white text-opacity-95 md:text-5xl text-xl ltr:tracking-[4px]`}
         >
           {subTitle ? subTitle : ''}
         </div>

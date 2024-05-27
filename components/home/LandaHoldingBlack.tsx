@@ -25,7 +25,7 @@ export default function LandaHoldingBlack() {
 
         <UlList
           list={t('landaHoldingBlackFirst', { returnObjects: true })}
-          style1="w-[360px] md:w-[700px] md:ltr:pl-12 rtl:md:pr-24"
+          style1="w-[360px] md:w-[700px] md:ltr:pl-12 rtl:md:pr-24 rtl:pr-12"
           style2="space-y-2"
           style3="pt-4"
         />
@@ -52,7 +52,7 @@ export default function LandaHoldingBlack() {
         {/* TODO: Why pass 3 styles? */}
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
-          style1={`w-[360px] md:w-[700px] md:pl-12 md:rtl:pr-16`}
+          style1={`w-[360px] md:w-[700px] md:pl-12 md:rtl:pr-16 rtl:pr-12`}
           style2="space-y-0 md:mr-8"
           style3="pt-4"
         />
