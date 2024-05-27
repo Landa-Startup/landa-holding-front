@@ -30,18 +30,19 @@ export default function AboutUsLandaHolding() {
     //   objectFit="cover"
     // />
     // </div>
-    <div className="flex flex-col items-start justify-between bg-[#FAFAFA] md:px-28 md:py-10 md:flex-row md:gap-8">
+    <div className='flex-col w-full'>
+    <div className="flex flex-col items-start justify-between md:px-28 md:py-10 md:flex-row md:gap-8">
       <div className="space-y-4 p-10 md:pt-8 text-black md:px-0">
-        <p className="font-gilda text-3xl text-primary">
+        <p className="font-gilda text-2xl md:text-4xl text-black md:w-[600px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
-        <p className="mb-20 ml-0 mt-4 text-justify font-barlow text-medium font-normal tracking-wide md:mt-8 lg:w-[500px]">
+        <p className="mb-20 ml-0 mt-4 text-justify font-barlow text-medium font-normal tracking-wide md:pt-28 lg:w-[500px]">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>
       <div className='relative object-contain mx-auto h-48 w-96  md:w-[761px] md:h-[419px] md:mt-8 rtl:md:mr-32 md:ltr:ml-32'>
       <Image
-        className="brightness-95 contrast-[1.15] drop-shadow-md"
+        className="brightness-95 contrast-[1.15] drop-shadow-md md:rounded-xl"
         loading="lazy"
         layout='fill'
         src="/static/images/About/team.jpg"
@@ -49,6 +50,27 @@ export default function AboutUsLandaHolding() {
         objectFit="cover"
       />
       </div>
+    </div>
+    <div className='flex flex-row items-start md:pl-24 md:rtl:pr-24 pb-24 md:mt-16'>
+    <div className="relative h-[310px] hidden md:block w-screen md:h-[419px] md:w-[761px]"> 
+            <Image
+              className="object-cover w-full rounded-xl"
+              src="/static/images/About/story/1.png"
+              alt="story of landa"
+              layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          <div className="mt-10 order-first px-10 md:px-0 md:ltr:pl-12 md:rtl:pr-12 md:order-last md:w-[600px] md:pt-0">
+            <span className="mb-5 mt-9 font-gilda text-4xl text-bold">
+              {t('TheStoryOfLanda', { returnObjects: true })[0].title}
+            </span>
+            <div className="flex flex-col space-y-4 font-barlow text-[#000] pt-24">
+              <p>{t('TheStoryOfLanda', { returnObjects: true })[0].text}</p>
+              <div className="flex flex-col"></div>
+            </div>
+          </div>
+    </div>
     </div>
   );
 }
