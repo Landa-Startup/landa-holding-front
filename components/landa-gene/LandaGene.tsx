@@ -107,7 +107,7 @@ export default function LandaGene() {
       <div className="mx-auto flex w-10/12 flex-col gap-x-8 md:flex-row md:justify-between">
         <div className="basis-1/4">
           <Image
-            src="/static/images/gene-logo.svg"
+            src="/static/images/Home/upcomming-Sartup/2.png"
             alt="gene-logo"
             className="hidden w-3/5 md:block"
             width={100}
@@ -115,33 +115,33 @@ export default function LandaGene() {
           />
         </div>
         <div className="basis-3/4 ">
-          <p className="text-justify text-[15px] leading-[36px]  text-black ltr:tracking-[2px] md:leading-[48px] lg:text-[20px]">
+          <p className="font-gilda leading-[36px] text-xl  text-black">
             {t('textUp')}
           </p>
         </div>
       </div>
 
-      <div className="mx-auto flex w-10/12 flex-col gap-8 md:flex-row-reverse md:justify-between">
-        <div className="basis-2/5">
+      <div className="mx-auto flex w-full md:w-10/12 flex-col gap-8 md:flex-row-reverse md:justify-between">
+        <div className="basis-3/5 w-full md:h-[450px] md:w-[1000px]">
           <Image
-            src="/static/images/gene.svg"
+            src="/static/images/gene2.png"
             alt="gene-1"
             className="h-full w-full p-0"
             width={100}
             height={100}
           />
         </div>
-        <div className="basis-3/5">
+        <div className="basis-4/5">
           <p className="w-full text-justify  text-[15px] leading-[36px] text-black md:leading-[48px] lg:text-[20px]">
             {t('textMid')}
           </p>
         </div>
       </div>
 
-      <div className="mx-auto flex w-10/12 flex-col gap-8 md:flex-row md:justify-between">
-        <div className="basis-2/5 ">
+      <div className="mx-auto w-full flex md:w-10/12 flex-col gap-8 md:flex-row md:justify-between">
+        <div className="basis-2/5 w-full">
           <Image
-            src="/static/images/gene-2.svg"
+            src="/static/images/gen1.png"
             alt="gene-2"
             className="h-full w-full p-0"
             width={100}
