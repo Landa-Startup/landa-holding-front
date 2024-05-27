@@ -11,12 +11,15 @@ export default function SubsidiaryCompanies(
   const { t } = useTranslation(lang, "aboutUs")
 
   return (
-    <div className="p-10 md:px-28 md:py-10">
-      <span className="font-gilda text-3xl leading-10 text-primary md:text-4xl">
-        {t('subsids', { returnObjects: true }).title}
+    <div className="px-10 md:py-10">
+      <div>
+      {t('', { returnObjects: true }).title}
+      </div>
+      <span className="font-gilda text-3xl leading-10 md:px-16 md:text-4xl">
+        {t('SubsidiaryCompanies', { returnObjects: true }).title}
       </span>
-      <p className="my-4 text-justify font-barlow text-xl leading-8">
-        {t('subsids', { returnObjects: true }).text}
+      <p className="my-4 text-justify font-barlow text-lg md:px-16 leading-8 md:pt-12">
+        {t('SubsidiaryCompanies', { returnObjects: true }).text}
       </p>
       <CompaniesContainer />
     </div>
