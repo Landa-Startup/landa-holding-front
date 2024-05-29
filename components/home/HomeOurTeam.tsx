@@ -1,55 +1,6 @@
 'use client'
-import Image from 'next/image';
-import Button from '../common/Button';
-import { useTranslation } from 'app/i18n/client';
-import { useLang } from 'stores/langStore';
-import Link from 'next/link';
 export default function HomeOurTeam() {
 
-  const lang = useLang().lang;
 
-  const { t } = useTranslation(lang, 'mainPage');
 
-  return (
-    <div className="relative my-10 inline-flex w-full flex-col items-center justify-start gap-9 bg-white md:mb-16">
-      <div
-        className="flex flex-col lg:self-start ltr:ml-5 ltr:mr-10 ltr:xl:ml-28 rtl:mr-5 rtl:xl:mr-40"
-      >
-        {/* TODO: make component for headers */}
-
-        {/* <span className="font-condensed text-xl font-normal text-black ltr:tracking-[5.60px]">
-          {t('LandaHolding')}
-        </span> */}
-        <p
-          className={`font-condensed text-5xl font-normal tracking-normal text-black md:mr-20 xl:mr-0 ltr:tracking-widest`}
-        >
-          {t('OurTeam')}
-        </p>
-        <p className="mb-4 mt-8 font-barlow">{t('ourTeamText')}</p>
-      </div>
-
-      <div className="mx-4 flex flex-col items-center">
-        <Image
-          loading="lazy"
-          width={789}
-          height={243}
-          alt="OurTeam"
-          className="mb-9 hidden h-[284px] w-[444px] object-cover md:block md:h-[973px] md:w-[1192px]"
-          src="/static/images/Home/OurTeam/ourteam1.png"
-        />
-        <Image
-          loading="lazy"
-          width={375}
-          height={200}
-          alt="OurTeam"
-          className="mb-6 object-cover md:hidden"
-          src="/static/images/Home/OurTeam/mobile.jpeg"
-        />
-      </div>
-      <Link href="/our-team" className="justify-center">
-        {/* TODO: delete submit provider */}
-        <Button type="button" size="visit" bgColor="Primary" goto="" />
-      </Link>
-    </div>
-  );
 }

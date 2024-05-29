@@ -4,7 +4,6 @@ import { useLang } from 'stores/langStore';
 
 export default function HomeCardsRight({
   images,
-  titles
 }: {
   titles: string;
   images: Array<{ src: string; alt: string }>;
@@ -18,22 +17,22 @@ export default function HomeCardsRight({
     <div className="flex flex-col self-start md:self-center">
       <div className="mt-9 flex flex-col items-start space-y-2 md:mt-0 md:items-center">
         <div className="flex flex-col gap-2 rtl:flex-row-reverse">
-          <span className="lrt:tracking-[6.5px] font-gilda text-4xl md:text-6xl">
+          {/* <span className="lrt:tracking-[6.5px] font-gilda text-4xl md:text-6xl">
             {titles}
-          </span>
+          </span> */}
         </div>
       </div>
-      <div className="flex space-x-7 rtl:mt-11 rtl:space-x-reverse">
+      <div className="flex space-x-7 rtl:mt-11 rtl:space-x-reverse pb-20 md:pb-0">
         {images.map((image, index) => (
           <div
-            className={`relative mt-3 hidden h-96 w-64 ${
-              lang === 'en' ? 'last:mt-14' : 'last:mt-[5.25rem]'
-            } md:block md:first:mt-44 lg:mb-0`}
+            className={`relative hidden h-96 w-64 ${
+              lang === 'en' ? 'ltr:md:mt-20' : 'last:mt-[5.25rem]'
+            } md:block md:first:mt-20 md:mb-20`}
             key={index}
           >
             <Image
               loading="lazy"
-              className="object-cover"
+              className="rounded-lg"
               src={image.src}
               alt={image.alt}
               fill

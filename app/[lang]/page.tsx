@@ -5,7 +5,6 @@ import LatestStartups from '@/components/home/LatestStartups';
 import LandaHoldingBlack from '@/components/home/LandaHoldingBlack';
 import HomeCardsContainer from '@/components/home/HomeCardsContainer';
 import Partners from '@/components/home/Partners';
-import HomeOurTeam from '@/components/home/HomeOurTeam';
 // import UpcomingEvents from '@/components/home/UpcomingEvents';
 // import AerialViewBusinessTeam from '@/components/home/BusinessTeam';
 
@@ -37,7 +36,7 @@ export default async function Page({
         title={t('LandaHolding')}
         subTitle={t('HeroSubtitle')}
         backgroundImage="Hero.png"
-        leftImage="Landa.svg"
+        // leftImage="Landa.svg"
         showButton={false}
       />
 
@@ -48,7 +47,6 @@ export default async function Page({
 
       {/* <HomeUpcomingEvents /> */}
       <LandaHoldingPriority />
-      <HomeOurTeam />
       <LatestStartups />
       {/* <AerialViewBusinessTeam /> */}
       <Partners />

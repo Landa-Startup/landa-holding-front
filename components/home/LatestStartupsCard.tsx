@@ -18,7 +18,7 @@ export default function LatestStartupsCard({
 }) {
   return (
     <Link href={link} target={link}>
-      <div className="group relative h-[290px] w-[264px] border border-black hover:shadow-lg md:h-[468px] md:w-[350px]">
+      <div className="group relative h-[290px] w-[264px] border border-black hover:shadow-lg md:h-[498px] md:w-[450px] rounded-lg">
         {/* Image Container */}
         <div className="absolute left-0 top-0 h-[254px] w-[264px] md:h-[468px] md:w-[350px]" />
 
@@ -26,14 +26,14 @@ export default function LatestStartupsCard({
         <Image
           loading="lazy"
           alt={image}
-          className="absolute left-[71px] top-2 h-[116px] w-[124px] object-contain transition-all group-hover:scale-110 md:left-[80px] md:top-[18px] md:h-[198px] md:w-[200px]"
+          className="absolute left-[71px] top-2 h-[116px] w-[124px] object-contain transition-all group-hover:scale-110 md:left-[120px] md:top-[18px] md:h-[198px] md:w-[200px]"
           src={image}
           width={500}
           height={500}
         />
 
         {/* Decorative Lines */}
-        <div className={`h-[0px] w-[155px] md:w-[298px] ${lang === "en" ? "left-4" : "right-4"} ${lang === "en" ? "md:left-0" : "md:right-0"} absolute top-[160px] border border-neutral-800 md:top-[295px]`}></div>
+        <div className={`h-[0px] w-[155px] md:w-[448px] ${lang === "en" ? "left-4" : "right-4"} ${lang === "en" ? "md:left-0" : "md:right-0"} absolute top-[160px] border border-neutral-800 md:top-[295px]`}></div>
 
         {/* Title */}
         <div className={`absolute font-gilda text-2xl font-normal text-neutral-800 ${lang === "en" ? "left-4 top-[130px] md:top-[250px]" : "right-5 top-[125px] md:top-[255px]"}`}>
@@ -46,7 +46,7 @@ export default function LatestStartupsCard({
         </div>
 
         {/* Link and Icon */}
-        <div className="absolute bottom-[15px] right-[15px] inline-flex h-6 w-6 items-start justify-start gap-2.5 border bg-neutral-800 md:left-[298px] md:top-[411px] md:h-10 md:w-10">
+        <div className="absolute bottom-[15px] right-[15px] inline-flex h-6 w-6 items-start justify-start gap-2.5 border bg-neutral-800 md:left-[378px] md:top-[441px] md:h-10 md:w-10 rounded-lg">
           <StartupsArrowLeft />
         </div>
       </div>
