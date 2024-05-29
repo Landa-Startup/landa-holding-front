@@ -273,6 +273,7 @@ interface HomeCardsProps {
 }
 
 interface HomeCardsLeftProps {
+  titles: string;
   text: string;
   addedClass?: string;
   link: string;

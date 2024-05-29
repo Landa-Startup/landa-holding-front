@@ -17,13 +17,6 @@
           "category": "managers"
         },
         {
-          "image": "/static/images/our-team/Personals/a10.png",
-          "position": "Manager",
-          "name": "Mehrnoosh Heibati",
-          "linkedIn": "https://www.linkedin.com/in/mehrnoosh-heibati-62b117223/",
-          "category": "managers"
-        },
-        {
           "image": "/static/images/our-team/Personals/a11.png",
           "position": "Case Manager",
           "name": "Mahsa Esmaeili",
@@ -31,11 +24,11 @@
           "category": "managers"
         },
         {
-          "image": "/static/images/our-team/Personals/a3.png",
-          "position": "Manager Assistant",
-          "name": "Lida Parvizi",
-          "linkedIn": "https://www.linkedin.com/in/lida-parvizi-ab7b8721a/",
-          "category": "Manager Assistant"
+          "image": "/static/images/our-team/Personals/a10.png",
+          "position": "Manager",
+          "name": "Mehrnoosh Heibati",
+          "linkedIn": "https://www.linkedin.com/in/mehrnoosh-heibati-62b117223/",
+          "category": "managers"
         },
         {
           "image": "/static/images/our-team/Personals/a4.png",
@@ -45,6 +38,22 @@
           "category": "public relations officer"
         },
         {
+          "image": "/static/images/our-team/Personals/a33.png",
+          "position": "Public Relations Officer",
+          "name": "Gelareh Bahrami",
+          "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
+          "category": " officer"
+        },
+
+        {
+          "image": "/static/images/our-team/Personals/a3.png",
+          "position": "Manager Assistant",
+          "name": "Lida Parvizi",
+          "linkedIn": "https://www.linkedin.com/in/lida-parvizi-ab7b8721a/",
+          "category": "Manager Assistant"
+        },
+
+        {
           "image": "/static/images/our-team/Personals/a35.jpg",
           "position": "Director of Public Relations",
           "name": "Arash Aryanik",
@@ -52,11 +61,11 @@
           "category": "public relations officer"
         },
         {
-          "image": "/static/images/our-team/Personals/a5.png",
-          "position": "Accountant",
-          "name": "Ali Soleimani",
-          "linkedIn": "https://www.linkedin.com/in/ali-soleymani-b761b6223/",
-          "category": "accountant"
+          "image": "/static/images/our-team/Personals/saedi.png",
+          "position": "Full stack",
+          "name": "Mahdi Saedi",
+          "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
+          "category": "mentors"
         },
         {
           "image": "/static/images/our-team/Personals/a7.png",
@@ -66,6 +75,13 @@
           "category": "mentors"
         },
         {
+          "image": "/static/images/our-team/Personals/a14.png",
+          "position": "UX/UI Designer",
+          "name": "Arshia Nasiri",
+          "linkedIn": "https://www.linkedin.com/in/marshian03",
+          "category": "designers"
+        },
+        {
           "image": "/static/images/our-team/Personals/a9.png",
           "position": "Digital Marketer",
           "name": "Ehsan Aliakbari",
@@ -73,24 +89,24 @@
           "category": "digital marketer"
         },
         {
-          "image": "/static/images/our-team/Personals/ARYA.jpg",
-          "position": "Digital Marketer",
-          "name": "Aria Bagherpour",
-          "linkdin": "",
-          "category": "Digital Marketer"
+          "image": "/static/images/our-team/Personals/a5.png",
+          "position": "Accountant",
+          "name": "Ali Soleimani",
+          "linkedIn": "https://www.linkedin.com/in/ali-soleymani-b761b6223/",
+          "category": "accountant"
         },
         {
-          "image": "/static/images/our-team/Personals/a13.png",
-          "position": "UX/UI Designer",
-          "name": "Ariana Shafie",
-          "linkedIn": "https://www.linkedin.com/in/ariana-shafie-2b38ab190/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "image": "/static/images/our-team/Personals/a21.png",
+          "position": "Graphic Designer",
+          "name": "Hoda Mahdi",
+          "linkedIn": "https://www.linkedin.com/in/hoda-mahdi-896855269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "category": "designers"
         },
         {
-          "image": "/static/images/our-team/Personals/a14.png",
-          "position": "UX/UI Designer",
-          "name": "Arshia Nasiri",
-          "linkedIn": "https://www.linkedin.com/in/marshian03",
+          "image": "/static/images/our-team/Personals/a34.png",
+          "position": "Graphic Designer",
+          "name": "Faezeh Khani",
+          "linkedIn": "linkedin.com/in/faezeh-khani-4362b62a5",
           "category": "designers"
         },
         {
@@ -108,63 +124,62 @@
           "category": "programmers"
         },
         {
-          "image": "/static/images/our-team/Personals/a21.png",
-          "position": "Graphic Designer",
-          "name": "Hoda Mahdi",
-          "linkedIn": "https://www.linkedin.com/in/hoda-mahdi-896855269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-          "category": "designers"
+          "image": "/static/images/our-team/Personals/65.jpg",
+          "position": "Back-end",
+          "name": "Matin Nejatbakhsh",
+          "linkedIn": "",
+          "category": "programmers"
         },
         {
-          "image": "/static/images/our-team/Personals/a34.png",
-          "position": "Graphic Designer",
-          "name": "Faezeh Khani",
-          "linkedIn": "linkedin.com/in/faezeh-khani-4362b62a5",
-          "category": "designers"
+          "image": "/static/images/our-team/Personals/barad1.jpg",
+          "position": "Front-end",
+          "name": "Barad Dehghani",
+          "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
+          "category": "programmers"
         },
         {
-          "image": "/static/images/our-team/Personals/a25.png",
-          "position": "Content Creator",
-          "name": "Tiam Safarian",
-          "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
-          "category": "content creators"
+          "image": "/static/images/our-team/Personals/121.jpg",
+          "position": "Front-end",
+          "name": "Amir Mohammad Esfahanizade",
+          "linkedIn": "",
+          "category": "programmers"
         },
 
+        {
+          "image": "/static/images/our-team/Personals/sobhan1.jpg",
+          "position": "R&D Specialist",
+          "name": "sobhan mohammadi",
+          "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
+          "category": "R&D Department"
+      },
     {
       "image": "/static/images/our-team/Personals/milad copy 2.jpg",
-      "position": "Content Creator",
+      "position": "R&D Specialist",
       "name": "Milad Fatemi",
-      "linkedIn": "https://www.linkedin.com/in/milad-fatemi-48157b78",
-      "category": "content creators"
+      "linkedIn": "https://www.linkedin.com/in/miladfatemi/",
+      "category": "R&D Department"
     },
     {
       "image": "/static/images/our-team/Personals/MAHSA.jpg",
       "position": "Content Creator",
       "name": "Mahsa Ghorbani",
-      "linkedIn": "",
+      "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
       "category": "content creators"
     },
-
-
     {
-      "image": "/static/images/our-team/Personals/a27.png",
-      "position": "Full Stack",
-      "name": "Meraj Bighamian",
-      "linkedIn": "https://www.linkedin.com/in/meraj-bighamian-7034581a3",
-      "category": "programmers"
+      "image": "/static/images/our-team/Personals/sama.png",
+      "position": "Public Relations",
+      "name": "Sama Alinaghian",
+      "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
+      "category": "Public relations"
     },
+
     {
-      "image": "/static/images/our-team/Personals/a28.png",
-      "position": "Front-end",
-      "name": "Mahdi Salmanzadeh",
-      "linkedIn": "https://www.linkedin.com/in/mehdisa/",
-      "category": "programmers"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a31.png",
-      "position": "Front-end",
-      "name": "Barad Dehghani",
-      "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
-      "category": "programmers"
+      "image": "/static/images/our-team/Personals/a25.png",
+      "position": "Content Creator",
+      "name": "Tiam Safarian",
+      "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
+      "category": "content creators"
     },
     {
       "image": "/static/images/our-team/Personals/a32.png",
@@ -174,33 +189,13 @@
       "category": "programmers"
     },
     {
-      "image": "/static/images/our-team/Personals/65.jpg",
-      "position": "Back-end",
-      "name": "Matin Nejatbakhsh",
+      "image": "/static/images/our-team/Personals/shamim.jpg",
+      "position": "Motion Graphic",
+      "name": "Shamim Beheshti",
       "linkedIn": "",
-      "category": "programmers"
-    },
-    {
-      "image": "/static/images/our-team/Personals/121.jpg",
-      "position": "Front-end",
-      "name": "Amir Mohammad Esfahanizade",
-      "linkedIn": "",
-      "category": "programmers"
-    },
-    {
-      "image": "/static/images/our-team/Personals/a33.png",
-      "position": "Public Relations Officer",
-      "name": "Gelareh Bahrami",
-      "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
-      "category": " officer"
-    },
-    {
-      "image": "/static/images/our-team/Personals/Nedan.jpg",
-      "position": "public relations",
-      "name": "Neda Mosharaf",
-      "linkedIn": "https://wwwlinkedin.com/in/neda-mosharaf-6963752a0",
-      "category": "public relations"
+      "category": "designers"
     }
+
   ],
   "roles": [
     "All",
@@ -212,6 +207,7 @@
     "Accountant",
     "Public Relations",
     "Digital Marketer",
-    "Manager Assistant"
+    "Manager Assistant",
+    "R&D Department"
   ]
 }

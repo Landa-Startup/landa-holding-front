@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useLang } from 'stores/langStore';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 type Props = {
   image: string;
@@ -11,7 +12,7 @@ type Props = {
   buttonText: string;
 }
 
-export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
+export default function UpcomingStartupsCard({ image, subTitle, text, goto, buttonText }: Props) {
 
   const { lang } = useLang.getState();
 
@@ -20,11 +21,11 @@ export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
   return (
     <>
       <div>
-        <div className='border-1 flex justify-center h-full w-full flex-col  border py-3 shadow-xl md:gap-8'>
+        <div className='border-1 flex h-full w-full flex-col justify-start rounded-xl border p-5 shadow-2xl md:w-[450px]  md:gap-8'>
           <div className='relative m-auto bg-white md:w-full'>
             <Image
               loading='lazy'
-              className='m-auto h-[150px] w-auto pt-5'
+              className='m-auto h-[100px] w-auto pt-5'
               src={image}
               alt={subTitle}
               width={100}
@@ -36,7 +37,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
           </div>
           <div className='flex h-full flex-col gap-4'>
             <div className='w-full px-3 md:px-0'>
-              <hr className='h-[2px] w-full bg-black' />
+              {/* <hr className='h-[2px] w-full bg-black' /> */}
             </div>
             <div className='flex h-full flex-col items-center justify-between gap-3 px-2 text-justify md:px-6'>
               <div>
@@ -44,14 +45,14 @@ export default function UpcomingStartupsCard({ image, subTitle, text }: Props) {
                   {text}
                 </p>
               </div>
-              {/* <div className='w-[170px] self-center p-2 md:w-[224px] md:p-6'>
-                <ButtonRefactor
-                  text={buttonText}
-                  type='link'
-                  href={goto}
-                  bgColor='black'
-                />
-              </div> */}
+              <div className="mt-6 h-auto w-[224px] p-2">
+          <ButtonRefactor
+             text={buttonText}
+            type="link"
+            href={goto}
+            bgColor="black"
+          />
+        </div>
             </div>
           </div>
         </div>

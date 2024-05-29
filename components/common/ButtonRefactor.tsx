@@ -30,8 +30,8 @@ export default function ButtonRefactor({
             <button
               disabled={disabled}
               className={`bg-${
-                bgColor ? bgColor : 'primary'
-              } delay-50 flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white transition duration-150 ease-in-out hover:bg-primary`}
+                bgColor ? bgColor : 'black'
+              } delay-50 flex h-[56px] w-full flex-wrap content-center justify-center rounded-xl p-2 text-white transition duration-150 ease-in-out hover:bg-primary`}
               // className='transition flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white ease-in-out delay-150 bg-black hover:bg-primary duration-300'
             >
               <div className="z-10 flex items-center gap-2">

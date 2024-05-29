@@ -1,6 +1,6 @@
 'use client'
 import HomeCards from './HomeCards';
-import Lines from '../icons/Home/Lines';
+// import Lines from '../icons/Home/Lines';
 import { useTranslation } from 'app/i18n/client';
 import { CompanySectionsInterface } from '@/types/global';
 import { useLang } from 'stores/langStore';
@@ -27,9 +27,9 @@ const HomeCardsContainer = () => {
   // console.log(t('cards', { returnObjects: true }));
 
   return (
-    <div className="relative bg-whiteGold text-black" id="LandaHolding">
+    <div className="relative text-black" id="LandaHolding">
       <div>
-        <Lines />
+        {/* <Lines /> */}
       </div>
       {renderHomeCards(t('cards', { returnObjects: true }))}
     </div>
