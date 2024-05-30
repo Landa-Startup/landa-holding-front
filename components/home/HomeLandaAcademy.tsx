@@ -18,7 +18,7 @@ export default function HomeLandaAcademy() {
             <p className="leading-8">
                 {t('LandaAcademyInfo')}
             </p>
-            <div className="h-auto w-[224px] mt-6 p-2">
+            <div className="mt-6 h-auto w-[224px] p-2">
           <ButtonRefactor
             text={t('visit')}
             type="link"
@@ -28,11 +28,11 @@ export default function HomeLandaAcademy() {
             </div>
         </div>
         
-        <div className="relative hidden w-[58%] md:block justify-between">
-            <div className="absolute right-5 top-10 left-100 h-[368px] w-[256px] rtl:left-0 rtl:right-auto">
+        <div className="relative hidden w-[58%] justify-between md:block">
+            {/* <div className="left-100 absolute right-5 top-10 h-[368px] w-[256px] rtl:left-0 rtl:right-auto">
                 <Image src="/static/images/Home/Academy/academy1.png" alt="academy" layout="fill" objectFit="contain" />
-            </div>
-            <div className="absolute right-100 top-10 h-[368px] w-[628px]  md:rtl:left-20 md:rtl:right-auto">
+            </div> */}
+            <div className="right-100 absolute top-10 h-[368px] w-[628px]  md:rtl:left-20 md:rtl:right-auto">
             <Image src="/static/images/Home/Academy/academy2.png" alt="academy" layout="fill" objectFit="contain"/>
  
             </div>
