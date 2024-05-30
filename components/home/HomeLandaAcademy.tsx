@@ -3,7 +3,6 @@ import { useTranslation } from 'app/i18n/client';
 import Image from 'next/image';
 import { useLang } from 'stores/langStore';
 import ButtonRefactor from '../common/ButtonRefactor';
-// import ArrowRight from '../icons/common/ArrowRight';
 
 
 export default function HomeLandaAcademy() {
