@@ -22,12 +22,12 @@ export default function HomeCardsRight({
           </span> */}
         </div>
       </div>
-      <div className="flex space-x-7 rtl:mt-11 rtl:space-x-reverse pb-20 md:pb-0">
+      <div className="flex space-x-7 pb-20 rtl:mt-11 rtl:space-x-reverse md:pb-0">
         {images.map((image, index) => (
           <div
             className={`relative hidden h-96 w-64 ${
               lang === 'en' ? 'ltr:md:mt-20' : 'last:mt-[5.25rem]'
-            } md:block md:first:mt-20 md:mb-20`}
+            } md:mb-20 md:block md:first:mt-20`}
             key={index}
           >
             <Image

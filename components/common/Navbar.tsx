@@ -99,7 +99,7 @@ export default function Navbar({
           </div>
 
           <div className="hidden justify-center ltr:mr-12 xl:flex xl:flex-1">
-            <ul className="menu menu-horizontal flex justify-center md:mb-3 space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse ">
+            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse md:mb-3 ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li className="h-9 text-2xl" key={label}>
@@ -145,16 +145,16 @@ export default function Navbar({
               </li>
             </ul>
           </div>
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <LanguageSwitch />
-          </div>
+          </div> */}
         </div>
         <div className="children">{children}</div>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         
-        <ul className="menu absolute h-full w-80 space-y-5 bg-white p-4 text-xl text-black ltr:left-[110px] md:hidden  divide-y divide-solid">
+        <ul className="menu absolute h-full w-80 space-y-5 divide-y divide-solid bg-white p-4 text-xl text-black  ltr:left-[110px] md:hidden">
         <Image
         className='mx-auto '
           src="static/images/Logo.svg"
@@ -166,7 +166,7 @@ export default function Navbar({
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
             
             <li
-              className="font-condensed font-Barlow flex items-center"
+              className="font-Barlow flex items-center font-condensed"
               key={label}
               onClick={() => handleLinkClick()}
             >
@@ -179,7 +179,7 @@ export default function Navbar({
             {/* new// */}
            
             <details className="">
-  <summary className="m-1 btn pt-2 font-condensed font-Barlow text-xl">{lang === 'en' ? 'FORMS' : 'فرم ها'}
+  <summary className="font-Barlow btn m-1 pt-2 font-condensed text-xl">{lang === 'en' ? 'FORMS' : 'فرم ها'}
 </summary>
   <ul className="p-2">
 
@@ -215,8 +215,8 @@ export default function Navbar({
 
 
           </li>
-          <div className="absolute bottom-5 rounded mx-auto w-72 pr-12 pl-12">
-            <div className=" mx-auto py-3 bg-[#DCDCDC] rounded-lg">
+          <div className="absolute bottom-5 mx-auto w-72 rounded px-12">
+            <div className=" mx-auto rounded-lg bg-[#DCDCDC] py-3">
               <LanguageSwitch />
             </div>
             <div className="flex h-10 items-center justify-between px-10 text-white md:hidden">

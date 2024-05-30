@@ -29,9 +29,9 @@ export default function HomeLandaAcademy() {
         </div>
         
         <div className="relative hidden w-[58%] justify-between md:block">
-            <div className="left-100 absolute right-5 top-10 h-[368px] w-[256px] rtl:left-0 rtl:right-auto">
+            {/* <div className="left-100 absolute right-5 top-10 h-[368px] w-[256px] rtl:left-0 rtl:right-auto">
                 <Image src="/static/images/Home/Academy/academy1.png" alt="academy" layout="fill" objectFit="contain" />
-            </div>
+            </div> */}
             <div className="right-100 absolute top-10 h-[368px] w-[628px]  md:rtl:left-20 md:rtl:right-auto">
             <Image src="/static/images/Home/Academy/academy2.png" alt="academy" layout="fill" objectFit="contain"/>
  
