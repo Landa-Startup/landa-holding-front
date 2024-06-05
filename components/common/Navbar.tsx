@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
-import IconDown from '../icons/IconDown';
+// import IconDown from '../icons/IconDown';
 // import { useRouter } from 'next/navigation';
 // import { i18n } from 'next-i18next';
 // import { getCookie } from 'cookies-next';

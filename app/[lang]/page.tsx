@@ -11,7 +11,7 @@ import Partners from '@/components/home/Partners';
 import { useTranslation } from '../i18n';
 import HomeUpComingStartups from '@/components/home/HomeUpComingStartups';
 import HomeLandaAcademy from '@/components/home/HomeLandaAcademy';
-import HomeUpcomingEvents from '@/components/home/HomeUpcomingEvents';
+// import HomeUpcomingEvents from '@/components/home/HomeUpcomingEvents';
 // import HomeUpcomingEvents from '@/components/home/HomeUpcomingEvents';
 
 export const metadata: Metadata = {

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
-import { useLang } from 'stores/langStore';
+// import { useLang } from 'stores/langStore';
 import ButtonRefactor from '../common/ButtonRefactor';
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 
 export default function UpcomingStartupsCard({ image, subTitle, text, goto, buttonText }: Props) {
 
-  const { lang } = useLang.getState();
+  // const { lang } = useLang.getState();
 
   // console.log(lang);
 
