@@ -219,6 +219,7 @@ interface CompaniesArrayInterface {
 }
 
 interface CompanySectionsInterface {
+  smallTitle: string;
   title: string;
   text: string;
   reverse: boolean;
@@ -263,10 +264,11 @@ interface LogosInterface {
 }
 
 interface HomeCardsProps {
+  smallTitle: string;
   titles: string;
   text: string;
   images: Array<{ src: string; alt: string }>;
-  reverse?: boolean;
+  reverse: boolean;
   addedClass?: string;
   link: string;
   buttonText: string;

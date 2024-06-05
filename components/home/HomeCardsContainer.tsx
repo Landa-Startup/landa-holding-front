@@ -10,8 +10,9 @@ const HomeCardsContainer = () => {
   const { t } = useTranslation(lang, 'mainPage');
 
   const renderHomeCards = (cardData: CompanySectionsInterface[]) => {
-    return cardData.map(({ title, text, reverse, index, link, addedClass, images, buttonText}) => (
+    return cardData.map(({smallTitle, title, text, reverse, index, link, addedClass, images, buttonText}) => (
       <HomeCards
+        smallTitle={smallTitle}
         key={index}
         titles={title}
         text={text}
@@ -27,7 +28,7 @@ const HomeCardsContainer = () => {
   // console.log(t('cards', { returnObjects: true }));
 
   return (
-    <div className="relative text-black" id="LandaHolding">
+    <div className="relative text-black mt-24" id="LandaHolding">
       <div>
         {/* <Lines /> */}
       </div>

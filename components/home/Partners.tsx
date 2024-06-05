@@ -84,8 +84,8 @@ export default function Partners() {
   };
 
   return (
-    <div className="my-6 flex flex-col items-center gap-12">
-      <span className="text-3xl text-primary md:text-4xl font-condensed">
+    <div className="mb-40 mt-6 mx-12 flex flex-col items-center gap-8 ">
+      <span className="text-3xl text-black font-gilda md:text-4xl self-start pl-5 ">
         {t('partners', { returnObjects: true }).title}
       </span>
       <div
@@ -95,7 +95,7 @@ export default function Partners() {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-5 overflow-x-scroll px-3 md:overflow-x-hidden"
+        className="scrollContainer grid w-[calc(100%-2%)] cursor-pointer grid-flow-col gap-14 overflow-x-scroll px-3 md:overflow-x-hidden"
       >
         {t('partners', { returnObjects: true }).logos.map((logo: any, index: number) => (
           <PartnersStartupCard

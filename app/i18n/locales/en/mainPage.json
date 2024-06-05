@@ -3,7 +3,7 @@
   "Acceleration": "Entrepreneurship",
   "AccelerationCenter": "ENTREPRENEURSHIP CENTER",
   "Investment": "Investor",
-  "Academy": "StartUp",
+  "StartUp": "StartUp",
   "HeroSubtitle": "Feel The Future",
   "LandaHolding": "LANDA HOLDING",
   "Home": "Home",
@@ -16,8 +16,9 @@
   "EntrepreneurCenter": "ENTREPRENEUR",
   "BusinessPartners": "BUSINESS PARTNERS",
   "Startups Validation": "STARTUPS VALIDATION",
+  "SeeMore": "SEE MORE",
   "ApplyJob": "APPLY JOB",
-  "Landa": "LANDA",
+  "Landa": "Landa",
   "PartnersTitle": "Join Our Business Partners",
   "PartnersDescription": "At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape. To become an affiliate, please complete our free questionnaire for our confidential review.",
   "LatestStartups": "LATEST STARTUPS",
@@ -28,6 +29,7 @@
 
   "cards": [
     {
+      "smallTitle" : "Landa",
       "title": "Investment",
       "text": "At Landa Investment Center, we typically focus on investing in innovative, scalable startups with international market potential and the valuation of up to $5 million. We are a group of angel investors who can help you build your team, define your business model, and increase the value of your startup in global markets. With initial investment, capital raising, and access to a network of global investors, we will assist you in achieving success and increasing your business development.",
       "reverse": false,
@@ -48,6 +50,7 @@
       "buttonText": "Vsit Now"
     },
     {
+      "smallTitle" : "Landa",
       "title": "Entrepreneurship",
       "text": "The vibrant Landa Entrepreneurship Center was founded to foster and cultivate entrepreneurial innovation. By embracing individuals who are constantly on the lookout for fresh ideas while acknowledging the inherent risks and uncertainties in every new venture, the center empowers them to transform these ideas into new opportunities. This is made possible through the supportive facilities and skilled professionals available at the center.",
       "reverse": true,
@@ -68,6 +71,7 @@
       "buttonText": "Vsit Now"
     },
     {
+      "smallTitle" : "Landa",
       "title": "StartUp",
       "text": "At Landa Academy, we provide individuals with a nurturing place to discover and grow their interests and skills efficiently. Our academy operates as a dynamic place that identifies and evaluates the potential of talented individuals, particularly youth, and invests in their development and creative ideas. By providing comprehensive programs and resources and through a combination of mentoring, skill-building workshops, and exposure to various opportunities, Landa Academy equips participants with the tools and knowledge necessary to thrive and succeed in their chosen fields.",
       "reverse": false,
@@ -77,18 +81,19 @@
       "addedClass": "",
       "images": [
         {
-          "src": "/static/images/Home main/1.jpg",
+          "src": "/static/images/Home main/5.jpg",
           "alt": ""
         },
         {
-          "src": "/static/images/Home main/7.jpeg",
+          "src": "/static/images/Home main/6.jpg",
           "alt": ""
         }
       ],
       "buttonText": "Vsit Now"
     }
   ],
-  "LandaAcademy": "Landa Academy",
+
+  "Academy": " Academy",
   "Landaholding": "Landa Holding",
   "LandaAcademyInfo": "At Landa Academy, we provide a nurturing place for individuals to discover and grow their interests and skills efficiently. Our academy operates as a dynamic place that identifies and evaluates the potential of talented individuals, particularly the youth, and invests in their development and creative ideas. By providing comprehensive programs and resources and through a combination of mentoring, skill-building workshops, and exposure to various opportunities, Landa Academy equips participants with the tools and knowledge necessary to thrive and succeed in their chosen fields",
   "landaHoldingBlackFirst": [

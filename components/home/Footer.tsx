@@ -24,11 +24,11 @@ export default async function Footer(
             {t('about', { returnObjects: true }).title}
             <br />
           </div>
-          <div className={`mt-1 text-justify text-base  font-normal text-neutral-400`}>
+          <div className={`mt-1 text-justify text-base  font-normal text-black`}>
             {t('about', { returnObjects: true }).text}
             <br />
           </div>
-          <div className="mt-2 flex h-[22px] w-[126px] flex-row items-center justify-between text-neutral-400">
+          <div className="mt-2 flex h-[22px] w-[126px] flex-row items-center justify-between text-black">
             <Link
               aria-label="Instagram"
               href={
@@ -72,25 +72,25 @@ export default async function Footer(
           <div className="flex flex-col space-y-1">
             <Link
               href={'/'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('explore', { returnObjects: true }).text.home}
             </Link>
             <Link
               href={'/about'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('explore', { returnObjects: true }).text.about}
             </Link>
             <Link
               href={'/contact'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('explore', { returnObjects: true }).text.contact}
             </Link>
             <Link
               href={'/our-team'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('explore', { returnObjects: true }).text.ourTeam}
             </Link>
@@ -101,25 +101,25 @@ export default async function Footer(
           <div className="inline-flex flex-col items-start justify-start self-stretch">
             <Link
               href={'/StartupsForm'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('forms', { returnObjects: true }).text.startUp}
             </Link>
             <Link
               href={'/investor-registration'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('forms', { returnObjects: true }).text.investor}
             </Link>
             <Link
               href={'/entrepreneurs'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('forms', { returnObjects: true }).text.entrepreneur}
             </Link>
             <Link
               href={'/partner-membership'}
-              className="max-w-fit text-base font-normal text-neutral-400 hover:text-primary"
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
               {t('forms', { returnObjects: true }).text.partners}
             </Link>
@@ -130,27 +130,27 @@ export default async function Footer(
             {t('contact', { returnObjects: true }).title}
             <br />
           </div>
-          <div className="text-justify text-base font-normal text-neutral-400">
+          <div className="text-justify text-base font-normal text-black">
             {t('contact', { returnObjects: true }).text.canada}
           </div>
-          <div dir='ltr' className="text-justify text-base font-normal text-neutral-400">
+          <div dir='ltr' className="text-justify text-base font-normal text-black">
             {t('contact', { returnObjects: true }).text.cNumber}
           </div>
-          <div className="border-t border-t-[#AA8453] pt-1 text-justify text-base font-normal text-neutral-400">
+          <div className="border-t border-t-[#AA8453] pt-1 text-justify text-base font-normal text-black">
             {t('contact', { returnObjects: true }).text.tehran}
           </div>
-          <div dir='ltr' className="border-b border-b-[#AA8453] pb-1 text-justify text-base font-normal text-neutral-400">
+          <div dir='ltr' className="border-b border-b-[#AA8453] pb-1 text-justify text-base font-normal text-black">
             {t('contact', { returnObjects: true }).text.tNumber}
           </div>
-          <div className="text-base font-normal text-neutral-400">
+          <div className="text-base font-normal text-black">
             {t('contact', { returnObjects: true }).text.isfahan}
           </div>
-          <div dir='ltr' className="text-base font-normal text-neutral-400">
+          <div dir='ltr' className="text-base font-normal text-black">
             {t('contact', { returnObjects: true }).text.iNumber}
           </div>
         </div>
       </div>
-      <div className="self-stretch border-t border-[#AA8453] pt-4 text-center text-[#DDCEBA]" dir='ltr'>
+      <div className="self-stretch border-t border-[#DDCEBA] pt-4 text-center text-[#DDCEBA]" dir='ltr'>
         © Copyright {GetYear()} by{' '}
         <Link href={'/'} className="text-[#DDCEBA]">
           LandaHolding

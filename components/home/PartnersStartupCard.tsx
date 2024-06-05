@@ -10,16 +10,18 @@ export default function PartnersStartupCard({
   description: string;
 }) {
   return (
-    <div className="flex flex-col h-[300px] w-[275px] select-none items-center gap-4 overflow-x-auto rounded-md bg-whiteGold p-5 shadow-lg">
-      <Image
-        className="object-contain"
-        src={`/static/images/Home/contact/${logo}.png`}
-        alt="r"
-        width={60}
-        height={60}
-      />
-      <div className="flex flex-col gap-2">
-        <span className="font-gilda text-md">{title}</span>
+    <div className="h-[300px] w-[275px] select-none items-center gap-4 overflow-x-auto rounded-md bg-whiteGold p-3 shadow-lg">
+      <div className='w-20 h-20 relative mx-auto'>
+        <Image
+          className="object-contain"
+          src={`/static/images/Home/contact/${logo}.png`}
+          alt="r"
+          layout='fill'
+          sizes='50vw, 33vw'
+        />
+      </div>
+      <div className="flex flex-col gap-8 mt-5">
+        <span className="font-gilda  text-md">{title}</span>
         <p className="font-barlow leading-4 text-xs">
           {description}
         </p>

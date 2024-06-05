@@ -5,10 +5,11 @@ import HomeCardsSection from './HomeCardsSection';
 import { HomeCardsProps } from '@/types/global';
 
 export default function HomeCards({
+  smallTitle,
   titles,
   text,
   images,
-  // reverse = false, // Added a default value for the "reverse" prop
+  reverse,
   // addedClass,
   link,
   buttonText
@@ -30,7 +31,7 @@ export default function HomeCards({
     // </div>
     // </div>
     <div>
-       <HomeCardsSection text={text} images={images} reverse={false} link={link} titles={titles} buttonText={buttonText}/>
+       <HomeCardsSection smallTitle={smallTitle} text={text} images={images} reverse={reverse} link={link} titles={titles} buttonText={buttonText}/>
     </div>
   );
 }

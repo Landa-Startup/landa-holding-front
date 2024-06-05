@@ -82,17 +82,20 @@ export default function Hero({
         // This div will serve as the overlay
       ></div>
 
-      <div className="relative z-10 mt-48 flex w-fit flex-col justify-center gap-8 md:mx-24 md:justify-start md:ltr:ml-10 ">
+      <div className="relative z-10 mt-64 flex w-fit flex-col justify-center gap-8 md:mx-24 md:justify-start md:ltr:ml-10 ">
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
-          } text-center md:text-center px-2 md:px-0 font-gilda text-3xl font-bold text-white md:text-6xl md:ml-6 md:tracking-[12px] rtl:tracking-normal`}
+          } text-center drop-shadow-2xl md:text-center px-2 md:px-0 font-gilda text-3xl font-bold text-white md:text-[90px] md:ml-6 md:tracking-[12px] rtl:tracking-normal`}
         >
           {title}
         </div>
         <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] md:text-4xl md:tracking-[3.6px] rtl:tracking-normal md:pt-24">
           {titles.map((title: string, index: number) => (
-            <li key={index} className="marker:text-white">
+            <li key={index} className={`marker:text-white
+              ${index === 1 ? "ml-24 rtl:mr-24" : ""}
+              ${index === 2 ? "ml-48 rtl:mr-48" : ""}
+            `}>
               {title}
             </li>
           ))}
@@ -113,11 +116,11 @@ export default function Hero({
         >
           {currentTitle}
         </div> */}
-      <div className="absolute top-2/3 flex items-center justify-center rtl:rounded-bl-2xl ltr:rounded-br-2xl  bg-[#DDCEBA] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[700px] md:rtl:right-0">
+      <div className="absolute top-2/3 flex items-center mt-20 justify-center rtl:rounded-bl-2xl ltr:rounded-br-2xl  bg-[#DDCEBA] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[700px] md:rtl:right-0">
         <div
-          className={`text-center md:font-gilda font-barlow  font-semibold text-bold leading-10 text-white text-opacity-95 md:text-5xl text-xl ltr:tracking-[4px]`}
+          className={`text-center md:font-gilda font-barlow font-semibold text-bold leading-10 text-white text-opacity-95 md:text-5xl text-xl ltr:tracking-[4px]`}
         >
-          {subTitle ? subTitle : ''}
+         {subTitle ? subTitle : ''}
         </div>
       </div>
       {showButton ? <ButtonRefactor text="Register Now" /> : <></>}

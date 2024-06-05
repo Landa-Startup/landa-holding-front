@@ -41,7 +41,7 @@ export default function LatestStartupsCard({
         </div>
 
         {/* Description */}
-        <div className={`absolute left-[16px] top-[170px] w-[225px] text-left font-barlow text-sm font-normal leading-[15px] text-neutral-800 md:bottom-20 md:top-[310px] md:w-[320px] md:text-base ${lang === "en" ? "text-left" : "text-right"}`}>
+        <div className={`absolute left-[16px] top-[170px] w-[225px] font-barlow text-sm font-normal leading-[15px] text-neutral-800 md:bottom-15 md:top-[310px] md:w-[320px] md:text-base ${lang === "en" ? "text-left right-auto" : "text-right right-5"}`}>
           {description}
         </div>
 

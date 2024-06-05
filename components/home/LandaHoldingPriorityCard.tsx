@@ -13,7 +13,7 @@ export default function LandaHoldingPriorityCard({
       {/* Background Image */}
       <Image
         loading="lazy"
-        className="absolute -bottom-2 -right-2 h-12 w-12 opacity-5 md:-bottom-8 md:-right-6 md:h-[120px] md:w-[120px]"
+        className="absolute bottom-2 -right-2 h-12 w-12 opacity-10 md:bottom-1 md:right-1 md:h-[145px] md:w-[145px]"
         src={image}
         alt=""
         width={500}
@@ -22,7 +22,7 @@ export default function LandaHoldingPriorityCard({
 
       {/* Title Container */}
       <div className="inline-flex items-center justify-center gap-2.5">
-        <div className="flex w-10 items-center justify-center text-center font-gilda text-base font-normal text-gray-600 md:w-52 md:text-2xl">
+        <div className="flex w-10 items-center justify-center text-center font-gilda text-base font-normal text-Secondary md:w-52 md:text-2xl">
           {title}
         </div>
       </div>

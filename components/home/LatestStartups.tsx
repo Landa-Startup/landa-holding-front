@@ -2,6 +2,7 @@
 import LatestStartupsCard from './LatestStartupsCard';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function LatestStartups() {
 
@@ -20,6 +21,9 @@ export default function LatestStartups() {
               >
                 {/* {t('LandaHolding')} */}
               </div>
+              <p className='font-gilda'>
+              {t('LandaHolding')}
+              </p>
               <div
                 className={`ltr:tracking-0 md:tracking-0 font-gilda text-4xl font-bold text-black md:mt-3 md:text-[44px] ltr:tracking-[3.5px]`}
               >
@@ -55,6 +59,14 @@ export default function LatestStartups() {
                 )
               )}
             </div>
+          </div>
+          <div className="my-14 h-auto w-[224px] p-2 mx-auto">
+            <ButtonRefactor
+              text={t('SeeMore')}
+              type="link"
+              href="https://academy.landaholding.com/"
+              bgColor="black"
+            />
           </div>
         </div>
       </div>
