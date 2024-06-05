@@ -11,7 +11,7 @@ export default function LandaHoldingBlack() {
   const { t } = useTranslation(lang, 'mainPage');
 
   return (
-    <div className="relative flex flex-col items-center  justify-evenly space-y-5 bg-[#ffffff] py-5 md:h-[590px] md:pt-48 md:pb-32 md:flex-row md:py-10">
+    <div className="relative flex flex-col items-center justify-evenly bg-[#ffffff] py-5 md:h-[590px] md:py-32 md:flex-row">
       <Lines />
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
         <div className="flex flex-col items-center">

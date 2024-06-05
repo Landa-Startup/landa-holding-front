@@ -23,18 +23,15 @@ export default async function Banner({
         className="absolute inset-0 h-full md:h-[520px]"
       ></div>
 
-      <div
-        className="relative flex h-full items-center justify-center md:items-start md:justify-start md:pl-12 lg:h-[520px]"
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} // Adding overlay with transparency
-      >
+      <div>
         {/* Content Overlay */}
-        <div className="relative flex h-full items-stretch justify-center lg:h-[520px] lg:justify-start">
-          <div className="flex flex-col items-center justify-center text-center md:m-auto lg:m-auto">
+        <div className="">
+          <div className="">
             {/* Text Content */}
             {/* <p className={`font-condensed text-xl font-normal text-neutral-50 ltr:tracking-[5.60px]`}>
               {(t('LandaHolding'))}
             </p> */}
-            <p className="font-gilda text-[32px] font-normal text-neutral-50 md:text-[50px] md:text-4xlcshadow-xl md:rtl:pr-12">
+            <p className="">
               {title}
             </p>
           </div>

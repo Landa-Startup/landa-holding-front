@@ -1,5 +1,6 @@
 // 'use client';
 import Image from 'next/image';
+import '../../app/[lang]/globals.css';
 // import React, { useEffect, useState } from 'react';
 import ButtonRefactor from '../common/ButtonRefactor';
 
@@ -86,16 +87,13 @@ export default function Hero({
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
-          } text-center drop-shadow-2xl md:text-center px-2 md:px-0 font-gilda text-3xl font-bold text-white md:text-[90px] md:ml-6 md:tracking-[12px] rtl:tracking-normal`}
+          } get-shadow text-center drop-shadow-2xl md:text-center px-2 md:px-0 font-gilda text-3xl font-bold text-white md:text-[90px] md:ml-6`}
         >
           {title}
         </div>
         <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] md:text-4xl md:tracking-[3.6px] rtl:tracking-normal md:pt-24">
           {titles.map((title: string, index: number) => (
-            <li key={index} className={`marker:text-white
-              ${index === 1 ? "ml-24 rtl:mr-24" : ""}
-              ${index === 2 ? "ml-48 rtl:mr-48" : ""}
-            `}>
+            <li key={index} className={`marker:text-white get-shadow`}>
               {title}
             </li>
           ))}

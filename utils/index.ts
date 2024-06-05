@@ -31,4 +31,4 @@ export function convertDateFormat(inputDate:any) {
     const isoDate = `${dateObject.getFullYear()}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}Z`;
   
     return isoDate;
-  }
+}

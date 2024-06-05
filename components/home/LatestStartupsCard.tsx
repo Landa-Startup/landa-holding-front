@@ -18,7 +18,7 @@ export default function LatestStartupsCard({
 }) {
   return (
     <Link href={link} target={link}>
-      <div className="group relative h-[290px] w-[264px] border border-black hover:shadow-lg md:h-[498px] md:w-[450px] rounded-lg">
+      <div className="group relative h-[290px] w-[264px] border border-black hover:shadow-lg md:h-[488px] md:w-[440px] rounded-lg">
         {/* Image Container */}
         <div className="absolute left-0 top-0 h-[254px] w-[264px] md:h-[468px] md:w-[350px]" />
 
