@@ -146,9 +146,9 @@ export default function Navbar({
               </li>
             </ul>
           </div>
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <LanguageSwitch />
-          </div>
+          </div> */}
         </div>
         <div className="children">{children}</div>
       </div>

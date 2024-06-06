@@ -86,11 +86,11 @@ export default function Hero({
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
-          } text-center drop-shadow-2xl md:text-center px-2 md:px-0 font-gilda text-3xl font-bold text-white md:text-[90px] md:ml-6 md:tracking-[12px] rtl:tracking-normal`}
+          } px-2 text-center font-gilda text-3xl font-bold text-white drop-shadow-2xl rtl:tracking-normal md:ml-6 md:px-0 md:text-center md:text-[90px] md:tracking-[12px]`}
         >
           {title}
         </div>
-        <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] md:text-4xl md:tracking-[3.6px] rtl:tracking-normal md:pt-24">
+        <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] rtl:tracking-normal md:pt-24 md:text-4xl md:tracking-[3.6px]">
           {titles.map((title: string, index: number) => (
             <li key={index} className={`marker:text-white
               ${index === 1 ? "ml-24 rtl:mr-24" : ""}
@@ -116,9 +116,9 @@ export default function Hero({
         >
           {currentTitle}
         </div> */}
-      <div className="absolute top-2/3 flex items-center mt-20 justify-center rtl:rounded-bl-2xl ltr:rounded-br-2xl  bg-[#DDCEBA] p-4 ltr:left-0 rtl:right-0 md:top-2/3 md:w-[700px] md:rtl:right-0">
+      <div className="absolute top-2/3 mt-20 flex items-center justify-center bg-[#DDCEBA] p-4  ltr:left-0 ltr:rounded-br-2xl rtl:right-0 rtl:rounded-bl-2xl md:top-2/3 md:w-[700px] md:rtl:right-0">
         <div
-          className={`text-center md:font-gilda font-barlow font-semibold text-bold leading-10 text-white text-opacity-95 md:text-5xl text-xl ltr:tracking-[4px]`}
+          className={`text-bold text-center font-barlow text-xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:font-gilda md:text-5xl`}
         >
          {subTitle ? subTitle : ''}
         </div>
@@ -126,7 +126,7 @@ export default function Hero({
       {showButton ? <ButtonRefactor text="Register Now" /> : <></>}
       <Image
         loading="lazy"
-        className="absolute bottom-0 mr-12 h-[365px] ml-24 md:ml-0 w-[300px] sm:h-[365px] sm:w-[500px] md:mr-0 md:h-[365px] md:w-[500px] xl:h-[560px] xl:w-[420px] ltr:-right-32 ltr:md:right-0 rtl:-left-32 md:rtl:left-0 md:rtl:right-auto "
+        className="absolute bottom-0 ml-24 mr-12 h-[365px] w-[300px] ltr:-right-32 rtl:-left-32 sm:h-[365px] sm:w-[500px] md:mx-0 md:h-[365px] md:w-[500px] ltr:md:right-0 md:rtl:left-0 md:rtl:right-auto xl:h-[560px] xl:w-[420px]"
         src="/static/images/Vector 58 (1).png"
         alt="Landa"
         width={500}

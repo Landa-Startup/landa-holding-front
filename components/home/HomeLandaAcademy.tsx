@@ -10,10 +10,10 @@ export default function HomeLandaAcademy() {
     const { t } = useTranslation(lang, 'mainPage');
 
   return (
-    <div className="flex justify-between p-10 md:p-20 gap-10">
+    <div className="flex justify-between gap-10 p-10 md:p-20">
       <div className="w-full font-barlow md:w-[45%]  ">
         {/* <p className="mb-2 ltr:tracking-[6px]">{t('Landaholding')}</p> */}
-        <h1 className=" font-gilda mb-2">{t('Landa')}</h1>
+        <h1 className=" mb-2 font-gilda">{t('Landa')}</h1>
         <h1 className="mb-8 font-gilda text-4xl font-bold">{t('Academy')}</h1>
         <p className="leading-8">
             {t('LandaAcademyInfo')}
@@ -30,7 +30,7 @@ export default function HomeLandaAcademy() {
 
 
       
-      <div className="relative w-[45%] justify-end flex gap-3">
+      <div className="hidden relative w-[45%] justify-end gap-3 md:flex">
         <div
           className={`relative h-[25rem] w-full max-w-xs md:mb-10 ltr:md:mt-10 `}
         >
