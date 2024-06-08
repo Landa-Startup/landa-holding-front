@@ -49,7 +49,7 @@ export default function HomeUpComingStartups() {
           <p className='md:pt-12 pb-3 font-gilda'>
           {t('upcomingStartups', { returnObjects: true }).landaHolding}
           </p>
-          <p className="w-[340px]  font-bold border-b border-black pb-12 font-gilda text-3xl text-black md:w-[540px] md:border-none md:text-4xl ">
+          <p className="w-[340px] font-bold border-b border-black pb-12 font-gilda text-2xl text-black md:w-[540px] md:border-none md:text-4xl ">
             {t('upcomingStartups', { returnObjects: true }).title}
           </p>
         </div>

@@ -41,17 +41,17 @@ export default async function Page({
         showButton={false}
       />
 
-      <section className='px-10  md:px-20 '>
+      <section className='px-5 md:px-20'>
         <HomeCardsContainer />
         <LandaHoldingBlack />
         <HomeUpComingStartups />
         <HomeLandaAcademy />
         <LatestStartups />
         <LandaHoldingPriority />
+        <Partners />
 
         {/* <HomeUpcomingEvents /> */}
         {/* <AerialViewBusinessTeam /> */}
-        <Partners />
       </section>
     </div>
   );

@@ -13,7 +13,7 @@ export default function LandaHoldingBlack() {
   return (
     <div className="relative flex flex-col items-center justify-evenly bg-[#ffffff] py-5 md:h-[590px] md:py-32 md:flex-row">
       <Lines />
-      <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
+      <div className="z-10 flex mb-36 h-[28rem] flex-col items-center justify-between rtl:mr-1 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
         <div className="flex flex-col items-center">
             <span className='font-gilda pt-8'>
               {t('LandaHolding')}

@@ -19,7 +19,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
   // console.log(lang);
 
   return (
-      <div className='w-full md:w-[30%]'>
+      <div className='w-full md:w-[30%] mb-16 md:mb-0'>
         <div className='flex h-full flex-col justify-start rounded-xl p-5 shadow-2xl md:gap-x-8'>
           <div className='relative m-auto bg-white md:w-full'>
             <Image

@@ -25,7 +25,7 @@ export default function LatestStartups() {
               {t('LandaHolding')}
               </p>
               <div
-                className={`ltr:tracking-0 md:tracking-0 font-gilda text-4xl font-bold text-black md:mt-3 md:text-[44px] ltr:tracking-[3.5px]`}
+                className={`ltr:tracking-0 md:tracking-0 font-gilda text-2xl md:text-4xl font-bold text-black md:mt-3 md:text-[44px] ltr:tracking-[3.5px]`}
               >
                 {t('LatestStartups')}
               </div>

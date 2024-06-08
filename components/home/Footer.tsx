@@ -118,6 +118,12 @@ export default async function Footer(
               {t('forms', { returnObjects: true }).text.entrepreneur}
             </Link>
             <Link
+              href={'/prtners'}
+              className="max-w-fit text-base font-normal text-black hover:text-primary"
+            >
+              {t('forms', { returnObjects: true }).text.prtners}
+            </Link>
+            <Link
               href={'/partner-membership'}
               className="max-w-fit text-base font-normal text-black hover:text-primary"
             >
