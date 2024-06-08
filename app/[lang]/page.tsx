@@ -41,16 +41,18 @@ export default async function Page({
         showButton={false}
       />
 
-      <HomeCardsContainer />
-      <LandaHoldingBlack />
-      <HomeUpComingStartups />
-      <HomeLandaAcademy />
-      <LatestStartups />
-      <LandaHoldingPriority />
+      <section className='px-5 md:px-20'>
+        <HomeCardsContainer />
+        <LandaHoldingBlack />
+        <HomeUpComingStartups />
+        <HomeLandaAcademy />
+        <LatestStartups />
+        <LandaHoldingPriority />
+        <Partners />
 
-      {/* <HomeUpcomingEvents /> */}
-      {/* <AerialViewBusinessTeam /> */}
-      <Partners />
+        {/* <HomeUpcomingEvents /> */}
+        {/* <AerialViewBusinessTeam /> */}
+      </section>
     </div>
   );
 }

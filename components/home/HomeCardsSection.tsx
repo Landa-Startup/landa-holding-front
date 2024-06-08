@@ -20,12 +20,12 @@ export default function HomeCardsSection({
     buttonText: string
 }) {
   return (
-    <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-x-10 items-center justify-between border-b-2 border-primary px-9 py-5 last:border-none md:px-28 md:py-0`}>
+    <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-x-10 items-center justify-between border-b-2 border-primary py-5 last:border-none md:py-0 md:pb-36`}>
       <div className="flex flex-col items-start justify-center md:w-1/2">
         <span className='font-gilda text-1xl md:pb-1 md:text-1xl'>
           {smallTitle}
         </span>
-        <span className="lrt:tracking-[6.5px] font-gilda text-4xl md:pb-14 md:text-5xl">
+        <span className="lrt:tracking-[6.5px] font-gilda font-bold text-4xl md:pb-14 md:text-5xl">
           {titles}
         </span>
         <p className="md:text-md pb-16 text-justify font-EBGaramond text-base leading-[30px] first:mb-0 md:w-full ">

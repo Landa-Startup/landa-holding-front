@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import LinkedIn from '../icons/about/LinkedIn';
 import Image from 'next/image';
 
 export default function PersonalTab({
@@ -27,23 +26,22 @@ export default function PersonalTab({
       />
 
       {/* Black Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-[rgba(0,0,0,0.2)] to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.32)] via-[rgba(0,0,0,0)] to-transparent"></div>
 
       {/* LinkedIn Link */}
       <div className="z-10 flex flex-col space-y-2 self-start p-4">
         <Link
           // TODO: why use / instead of #?
           href={linkedIn || '/'}
-          className="rounded-full bg-[#222] p-2 text-white opacity-75"
         >
-          <LinkedIn />
+          <span className='text-2xl text-white px-2 pb-1 font-bold rounded-full bg-[#222222e3]'>in</span>
         </Link>
       </div>
 
       {/* Text Content */}
       <div className="z-10 flex flex-col items-center px-3 pb-4 text-white">
         <span className=" font-barlow text-lg font-normal">{name}</span>
-        <div className="flex w-full items-center justify-center border-t-2 font-light">
+        <div className="flex w-[65%] items-center justify-center border-t-[2px] font-light">
           <span className="border-t-3 font-barlow font-light">{position}</span>
         </div>
       </div>
