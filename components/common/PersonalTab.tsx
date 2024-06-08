@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import LinkedIn from '../icons/about/LinkedIn';
 import Image from 'next/image';
 
 export default function PersonalTab({
