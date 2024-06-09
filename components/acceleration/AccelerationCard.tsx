@@ -10,7 +10,6 @@ type Props = {
   title: string;
   slogan: string;
   imageClass: string;
-  // imageSrc: string;
   textUp: string;
   textDown: string;
   secondImageSrc: string;
@@ -21,7 +20,6 @@ export default function AccelerationCard({
   addedClass,
   title,
   slogan,
-  // imageSrc,
   textUp,
   textDown,
   secondImageSrc,

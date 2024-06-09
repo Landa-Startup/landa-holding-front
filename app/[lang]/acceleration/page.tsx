@@ -68,7 +68,6 @@ export default async function Page({
           title={t('FORUGHACCELERATOR', { returnObjects: true })[0].title}
           slogan={t('FORUGHACCELERATOR', { returnObjects: true })[0].subTitle}
           imageClass={`rtl:text-right ltr:text-left top-11 pl-12 w-[92px] h-[44px] flex flex-row`}
-          imageSrc="/static/images/acceleration/forogh.png"
           textUp={t('FORUGHACCELERATOR', { returnObjects: true })[0].textUp}
           textDown={t('FORUGHACCELERATOR', { returnObjects: true })[0].textDown}
           secondImageSrc="/static/images/acceleration/forogh.png"
@@ -82,7 +81,6 @@ export default async function Page({
             t('FARAZAMANACCELERATOR', { returnObjects: true })[0].subTitle
           }
           imageClass={`rtl:right-1 ltr:left-1 top-8 `}
-          imageSrc="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
           textUp={t('FARAZAMANACCELERATOR', { returnObjects: true })[0].textUp}
           textDown={
             t('FARAZAMANACCELERATOR', { returnObjects: true })[0].textDown
