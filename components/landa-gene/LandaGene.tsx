@@ -105,9 +105,9 @@ export default function LandaGene() {
   return (
     <div className="my-20 flex flex-col items-start gap-24 font-barlow">
       <div className="mx-auto flex w-10/12 flex-col gap-x-8 md:flex-row md:justify-between">
-        <div className="basis-1/4">
+        <div className=" relative w-[305px] h-[194px]">
           <Image
-            src="/static/images/Home/upcomming-Sartup/2.png"
+            src="/static/images/preventigene-logo.png"
             alt="gene-logo"
             className="hidden w-3/5 md:block"
             width={100}
@@ -115,7 +115,7 @@ export default function LandaGene() {
           />
         </div>
         <div className="basis-3/4 ">
-          <p className="font-gilda leading-[36px] text-xl  text-black">
+          <p className="font-gilda leading-[36px] text-xl text-black">
             {t('textUp')}
           </p>
         </div>
@@ -131,6 +131,7 @@ export default function LandaGene() {
             height={100}
           />
         </div>
+        
         <div className="basis-4/5">
           <p className="w-full text-justify  text-[15px] leading-[36px] text-black md:leading-[48px] lg:text-[20px]">
             {t('textMid')}

@@ -28,6 +28,7 @@ export default async function Page({
         image="/static/images/group.png"  
         lang={lang}
       />
+      
       <AboutUsLandaHolding />
       <SubsidiaryCompanies />
       <StoryOfLanda />

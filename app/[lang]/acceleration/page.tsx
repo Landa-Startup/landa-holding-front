@@ -1,11 +1,8 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
-import AccelerationServices from '@/components/acceleration/AccelerationServices';
-import Hero from '@/components/acceleration/HeroAcceleration';
 import AccelerationCard from '@/components/acceleration/AccelerationCard';
-import Button from '@/components/common/Button';
-import Circle from '@/components/icons/CircleIcon';
+import Banner from '@/components/common/Banner';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Acceleration',
@@ -21,75 +18,70 @@ export default async function Page({
 
   return (
     <div>
-      <Hero
-        showLanda
-        backgroundImage="../public/static/images/acceleration/banner.png"
-        leftImage="Landa.svg"
-        showButton={true}
-        link="/StartupsForm"
-        lang={lang}
-      />
-      <div className="relative mt-6 hidden h-[284px] sm:block md:hidden md:w-[490px] ">
-        <Image
-          className="object-cover"
-          src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
-          alt="acceleration"
-          layout="fill"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          loading="lazy"
+      <div className='hidden md:inline'>
+        <Banner
+          image="/static/images/acceleration/accleration-hero.jpg"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
+      <div className='inline md:hidden'>
+        <Banner
+          image="/static/images/acceleration/accleration-heromob.jpg"
+          title={t('banner')}
+          lang={lang}
         />
       </div>
       
       {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
-      <div className="flex flex-col items-center py-6 text-left font-gilda md:px-28 md:py-16">
-        <span
-          className={`mb-2 md:ml-32 ml-5 mr-8 self-start text-3xl leading-tight text-[#55422A] md:text-5xl md:pr-28`}
-        >
-          {/* TODO: delete [0],[1] from translation */}
-          {t('LandaAccelerator', { returnObjects: true })[0].title}
-        </span>
-        <span
-          className={`md:ml-32 ml-5 mr-8 self-start text-xl leading-tight text-[#AA8453] md:text-4xl md:pr-28`}
-        >
-          {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
-        </span>
-        <div className={`mt-6 flex flex-col md:flex-row ltr:gap-2 rtl:gap-12`}>
-          <div className="relative hidden h-[284px] md:block md:w-[490px] lg:ml-6 xl:ml-4 xl:mr-10 ">
-            <Image
-              className=" object-cover"
-              src="/static/images/acceleration/17ab142108e84d95264d7c16216c1c25.jpg"
-              alt="acceleration"
-              layout="fill"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              loading="lazy"
-            />
-          </div>
-          <p
-            className={`w-[340px] text-justify font-barlow leading-8 md:h-[248px] md:w-[520px] lg:w-[680px] lg:pr-2  ltr:text-lg ltr:tracking-[1.6px] rtl:text-base rtl:mt-6 md:pt-10`}
-          >
+      <div className="flex font-gilda px-10 gap-8 md:px-28 md:py-16 justify-between mt-28">
+        <div className='w-[47%]'> 
+          <span className={` text-3xl leading-tight font-bold md:text-5xl`}>
+            {t('LandaAccelerator', { returnObjects: true })[0].title}
+          </span>
+          <span className={`text-xl leading-tight md:text-3xl block`} >
+            {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
+          </span>
+          <p className={`text-justify font-barlow leading-8 ltr:text-lg rtl:text-base pt-8`} >
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
         </div>
+        <div className="relative h-[320px] w-[45%] hidden md:inline">
+          <Image
+            className="object-cover rounded-lg"
+            src="/static/images/acceleration/acc-2.jpg"
+            alt="lamp"
+            layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+      </div>
+
+
+
+
+
+
         {/* TODO: make better names like ForughAccelerator */}
         <AccelerationCard
-          addedClass="md:h-[756px] mt-6 md:mt-16 pb-3"
+          addedClass=" py-28"
           title={t('FORUGHACCELERATOR', { returnObjects: true })[0].title}
           slogan={t('FORUGHACCELERATOR', { returnObjects: true })[0].subTitle}
-          imageClass={`absolute rtl:text-right ltr:text-left top-11 pl-12 w-[92px] h-[44px] flex flex-row`}
-          imageSrc="/static/images/acceleration/Rectangle 2978.png"
+          imageClass={`rtl:text-right ltr:text-left top-11 pl-12 w-[92px] h-[44px] flex flex-row`}
+          imageSrc="/static/images/acceleration/forogh.png"
           textUp={t('FORUGHACCELERATOR', { returnObjects: true })[0].textUp}
           textDown={t('FORUGHACCELERATOR', { returnObjects: true })[0].textDown}
-          secondImageSrc="/static/images/acceleration/87ac8df38c4ff428ee903bb8595ad970.png"
+          secondImageSrc="/static/images/acceleration/forogh.png"
           itemsList={t('FORUGHACCELERATOR', { returnObjects: true })[0].items}
           
         />
         <AccelerationCard
-          addedClass="md:h-[756px] mt-6 md:mt-16 pb-3"
+          addedClass=" pb-28"
           title={t('FARAZAMANACCELERATOR', { returnObjects: true })[0].title}
           slogan={
             t('FARAZAMANACCELERATOR', { returnObjects: true })[0].subTitle
           }
-          imageClass={`absolute rtl:right-1 ltr:left-1 top-8 w-[46px] h-[46px]`}
+          imageClass={`rtl:right-1 ltr:left-1 top-8 `}
           imageSrc="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
           textUp={t('FARAZAMANACCELERATOR', { returnObjects: true })[0].textUp}
           textDown={
@@ -98,7 +90,7 @@ export default async function Page({
           secondImageSrc="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
         />
 
-        <div className={`flex flex-col ${t('lng') === 'fa' && 'items-center'}`}>
+        {/* <div className={`flex flex-col ${t('lng') === 'fa' && 'items-center'}`}>
           <span className="mt-12 font-gilda text-3xl text-primary">
             {t('LandaAcceleratorServices', { returnObjects: true })[0].title}
           </span>
@@ -118,9 +110,9 @@ export default async function Page({
           text={t('Register')}
           bgColor="Primary"
           lang={lang}
-        />
+        /> */}
         {/* <ButtonRefactor text={t('Register')} href="/StartupsForm" /> */}
-      </div>
+
     </div>
   );
 }

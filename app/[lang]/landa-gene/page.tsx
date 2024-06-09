@@ -20,7 +20,7 @@ export default async function Page({
   return (
     <div>
       <Banner
-        image="/static/images/gene.jpg"
+        image="/static/images/gene-desctop.jpg"
         title={t('banner')}
         lang={lang}
       />

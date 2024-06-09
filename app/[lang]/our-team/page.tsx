@@ -19,11 +19,10 @@ export default async function TeamPage({
   return (
     <div>
       <Banner
-        image="/static/images/our-team/Header.jpg "
-        title={t('title')}
+        image="/static/images/our-team/Header.jpg"
+        title={t('OurTeam')}
         lang={lang}
       />
-      <span className=' absolute get-shadow text-5xl md:text-[90px] lowercase text-white font-gilda top-[40rem] md:top-60 left-10 md:left-28 '>{t('OurTeam')}</span>
       <TeamPersons />
     </div>
   );
