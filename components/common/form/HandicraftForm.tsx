@@ -9,7 +9,6 @@ import Input from './Input';
 import NotificationSendForm from './NotificationSendForm';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../ButtonRefactor';
-import Button from '../Button';
 import { useLang } from 'stores/langStore';
 import { submitHandiCraftApplicationForm } from 'pages/api/handiCrafts';
 import { useSubmit } from 'stores/dataStore';
@@ -92,10 +91,10 @@ export default function HandicraftForm() {
         });
     };
 
-    const errorsList = Object.entries(errors).map(([name, value]) => ({
-      name: name,
-      value: value
-    }));
+    // const errorsList = Object.entries(errors).map(([name, value]) => ({
+    //   name: name,
+    //   value: value
+    // }));
 
   return (
     

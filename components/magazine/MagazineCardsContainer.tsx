@@ -1,12 +1,8 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
 
-export default async function MagazineCardsContainer({
-  params: { lang }  
-} : {
-  params: { lang: string };
-}) {
+
+export default async function MagazineCardsContainer() {
 
   // const { t } = await useTranslation(lang, 'magazine');
 
