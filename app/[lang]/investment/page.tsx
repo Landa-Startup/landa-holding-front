@@ -19,6 +19,7 @@ export default async function Page({
 }: {
   params: { lang: string };
 }) {
+  
   const { t } = await useTranslation(lang, 'investment');
 
   return (

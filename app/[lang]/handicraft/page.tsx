@@ -1,4 +1,4 @@
-import BannerStartUp from '@/components/common/BannerStartup';
+import Banner from '@/components/common/Banner';
 import HandicraftForm from '@/components/common/form/HandicraftForm';
 import { useTranslation } from 'app/i18n';
 import { Metadata } from 'next';
@@ -19,20 +19,28 @@ export default async function Page({
 
   return (
     <div>
-      <BannerStartUp
-        image="/static/images/handicraftBanner.png"
-        title={t('bannerTitle')}
-        logo="/static/images/handicrafts.svg"
-        lang={lang}
-      />
+      <div className='hidden md:inline'>
+        <Banner
+          image="/static/images/handicraft/craft-banner.jpg"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
+      <div className='inline md:hidden'>
+        <Banner
+          image="/static/images/handicraft/craft-banner-mobile.jpg"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
       <div className="mx-8 my-14 flex flex-col justify-center gap-8 md:mx-24">
-        <div className="relative flex">
-          <div className="pr-6 md:pb-24">
+        <div className="relative flex items-center justify-between my-16">
+          <div className=" relative w-[20%]">
             <Image
               className="hidden md:block"
               src="/static/images/landacraft1.png"
               alt="handicraft"
-              width={800}
+              width={200}
               height={100}
             />
           </div>
@@ -42,25 +50,25 @@ export default async function Page({
             alt="handicraft"
             layout="fill"
           /> */}
-          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-20 md:pl-20">
+          <p className="leading-7 font-gilda w-[75%] text-base ">
             {t('paragraph1')}
           </p>
         </div>
-        <div className="relative flex flex-col-reverse justify-between gap-5 overflow-hidden md:flex-row">
-          <p className="mt-7 md:pt-20 text-justify font-barlow text-base font-normal leading-[45px] text-black md:mt-0 md:h-[480px] md:w-[652px]">
+        <div className="relative flex flex-col-reverse items-center justify-between gap-5 overflow-hidden md:flex-row">
+          <p className="leading-7 font-gilda text-base w-[47%]">
             {t('paragraph2')}
             <br />
             {/* {t('paragraph3')} */}
           </p>
-          <div className="absolute bottom-20 -right-7 h-[650px] w-screen md:hidden">
+          {/* <div className="absolute bottom-20 -right-7 h-[650px] w-screen md:hidden"> */}
             {/* <Image
               className=" object-cover opacity-20 md:hidden"
               src="/static/images/handicraftLogo.png"
               alt="handicraft"
               layout="fill"
             /> */}
-          </div>
-          <div className="relative h-[294px] w-full md:h-[360px] md:w-[765px]">
+          {/* </div> */}
+          <div className="relative w-[47%] h-80">
             <Image
               className="object-cover rounded-xl w-full"
               src="/static/images/handicrafts1.jpg"
@@ -69,8 +77,8 @@ export default async function Page({
             />
           </div>
         </div>
-        <div className='md:h-[380px] flex-col md:flex-row'>
-        <div className="relative h-[494px] w-full md:h-[360px] md:w-[935px]">
+        <div className='flex flex-col md:flex-row justify-between items-center mt-4 mb-16'>
+          <div className="relative w-[40%] h-64 ">
             <Image
               className="object-cover rounded-xl w-full"
               src="/static/images/landacraft4.png"
@@ -78,13 +86,13 @@ export default async function Page({
               layout="fill"
             />
           </div>
-        <p className="z-10 font-barlow  text-base font-normal leading-[48px] text-black md:mr-10 md:mt-20 md:pl-20 md:w-[850px]">
+          <p className="leading-7 font-gilda text-base w-[55%]">
             {t('paragraph3')}
           </p>
 
         </div>
-        <div className="flex w-full flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5">
-          <p className="font-openSans text-base font-bold leading-[210%] text-[#AA8453]">
+        <div className="flex w-full flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5 my-20">
+          <p className="font-gilda text-base leading-[210%] text-[#AA8453]">
             {t('formTitle')}
           </p>
           <HandicraftForm />

@@ -16,13 +16,19 @@ export default async function MagazinePage({
   params: { lang },
 }: {
   params: { lang: string };
-}) {
+}) { 
 
   return (
     <div className="relative">
-      <Banner image="/static/images/Magazine/hero.png" title="Magazine" lang={lang} />
+      <Banner
+        image="/static/images/Home/Magazine/magazine-hero.jpg"
+        title={`${lang == 'en' ? "MAGAZINE" : "مجله" }`}
+        lang={lang}
+      />
       <div className="mx-28 my-32 grid grid-cols-3 gap-20">
-        <MagazineCardsContainer />
+        <MagazineCardsContainer params={{
+          lang: lang
+        }} />
         <div className="col-span-1 flex flex-col gap-12">
           <SearchInput />
           <CategoriesContainer />

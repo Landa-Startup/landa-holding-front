@@ -33,7 +33,7 @@ export default function AccelerationCard({
     <>
       <div className={`relative flex items-center ${addedClass} px-10 md:mx-20 gap-20`}>
 
-      <div className='relative w-[25%]'>
+      <div className='relative w-[25%] hidden md:inline'>
         <Image
           className="w-full"
           src={secondImageSrc}
@@ -45,19 +45,19 @@ export default function AccelerationCard({
       </div>
 
 
-      <div className=' w-[75%]'>
+      <div className='w-full md:w-[75%]'>
         <div className='flex items-center justify-between md:flex-row'>
           <div className="flex flex-col md:flex-row">
-            <div className="flex">
+
               <div>
-                <span className="mx-2 font-bold font-gilda text-xs md:mx-2 md:text-3xl block">
+                <span className=" font-bold font-gilda text-md md:text-3xl block">
                   {title}
                 </span>
-                <span className="mx-2 font-bold font-gilda text-xs md:mx-2 md:text-3xl block">
+                <span className=" font-bold font-gilda text-md md:text-3xl block">
                   {slogan}
                 </span>
               </div>
-            </div>
+
 
           </div>
         </div>
@@ -68,10 +68,10 @@ export default function AccelerationCard({
 
 
         {itemsList && (
-          <div className="flex justify-between mt-8">
-            <div className='flex flex-col font-barlow text-xs  md:text-sm lg:text-sm xl:text-sm'>
-            <div className="flex justify-start">
-              {itemsList && (
+          <div className="flex justify-between flex-col md:flex-row mt-8">
+            <div className='flex flex-col font-barlow text-xs  md:text-sm lg:text-sm xl:text-sm  mb-8 md:mb-0'>
+              <div className="flex justify-start ">
+                {itemsList && (
                   <span
                     className={` font-gilda text-lg ltr:text-right xl:text-2xl`}
                   >

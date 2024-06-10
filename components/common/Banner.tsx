@@ -31,7 +31,7 @@ export default async function Banner({
             {/* <p className={`font-condensed text-xl font-normal text-neutral-50 ltr:tracking-[5.60px]`}>
               {(t('LandaHolding'))}
             </p> */}
-            <p className={`absolute get-shadow text-3xl md:text-[90px] text-white font-gilda top-[40rem] md:top-64 ${lang !== 'fa' ? 'left-[10%]' : 'right-[10%]' }`}>
+            <p className={`absolute get-shadow text-3xl md:text-[80px] text-white font-gilda top-[40rem] md:top-64 ${lang !== 'fa' ? 'left-[10%]' : 'right-[10%]' }`}>
               {title}
             </p>
           </div>

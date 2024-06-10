@@ -35,7 +35,7 @@ export default async function Page({
       
       {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
       <div className="flex font-gilda px-10 gap-8 md:px-28 md:py-16 justify-between mt-28">
-        <div className='w-[47%]'> 
+        <div className=' w-full  md:w-[47%]'> 
           <span className={` text-3xl leading-tight font-bold md:text-5xl`}>
             {t('LandaAccelerator', { returnObjects: true })[0].title}
           </span>

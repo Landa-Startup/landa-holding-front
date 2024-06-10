@@ -9,7 +9,7 @@ export default async function FeaturesCardsContainer() {
   const { t } = await useTranslation(lang, 'investment');
 
   return (
-    <div className="flex gap-8 mt-28 mb-12">
+    <div className="flex gap-8 flex-wrap md:flex-nowrap mt-28 mb-12">
       {t('featureCards', { returnObjects: true }).map(
         ({
           link,

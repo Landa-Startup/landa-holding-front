@@ -1,7 +1,7 @@
 {
   "firstName": "First Name *",
   "firstNameRequired": "First Name is Required.",
-  "firstNamePlaceholder": "Name",
+  "firstNamePlaceholder": "Yuor Name *",
 
   "lastName": "Last Name *",
   "lastNameRequired": "Last Name is Required.",
@@ -15,7 +15,7 @@
   "phoneNumber": "Phone Number *",
   "phoneNumberRequired": "Phone Number is Required.",
   "phoneNumberErrorMessage": "Enter a Valid Phone Number",
-  "phoneNumberPlaceholder": "Number",
+  "phoneNumberPlaceholder": "Yuor Number *",
 
   "birthDate": "Date of Birth *",
   "birthDateRequired": "Date of Birth is Required.",
@@ -97,7 +97,7 @@
 
     "email": "Email",
     "emailRequired": "Email is Required.",
-    "emailPlaceholder": "Enter your Email",
+    "emailPlaceholder": "Your Email",
 
     "cvFile": "CV File",
     "cvFileRequired": "cv file is Required.",
