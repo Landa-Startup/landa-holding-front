@@ -26,9 +26,7 @@ export default async function MagazinePage({
         lang={lang}
       />
       <div className="mx-28 my-32 grid grid-cols-3 gap-20">
-        <MagazineCardsContainer params={{
-          lang: lang
-        }} />
+        <MagazineCardsContainer/>
         <div className="col-span-1 flex flex-col gap-12">
           <SearchInput />
           <CategoriesContainer />
