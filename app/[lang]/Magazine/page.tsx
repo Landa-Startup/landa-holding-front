@@ -5,6 +5,7 @@ import TagsContainer from '@/components/magazine/TagsContainer';
 import Landa from '@/components/icons/magazine/Landa';
 import MagazineCardsContainer from '@/components/magazine/MagazineCardsContainer';
 import { Metadata } from 'next';
+// import { useTranslation } from 'react-i18next';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Magazine',
@@ -16,8 +17,12 @@ export default async function MagazinePage({
   params: { lang },
 }: {
   params: { lang: string };
-}) { 
+}) {
 
+  // const { t } = await useTranslation(lang, "aboutUs")
+
+  console.log();
+  
   return (
     <div className="relative">
       <Banner

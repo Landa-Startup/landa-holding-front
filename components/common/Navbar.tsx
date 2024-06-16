@@ -180,9 +180,9 @@ export default function Navbar({
             {/* new// */}
            
             <details className="">
-  <summary className="font-Barlow btn m-1 pt-2 font-condensed text-xl">{lang === 'en' ? 'FORMS' : 'فرم ها'}
-</summary>
-  <ul className="px-2">
+            <summary className="font-Barlow btn m-1 pt-2 font-condensed text-xl">{lang === 'en' ? 'FORMS' : 'فرم ها'}
+            </summary>
+          <ul className="px-2">
 
     
 {/* //item */}

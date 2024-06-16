@@ -34,10 +34,10 @@ export default async function Page({
         />
       </div>
       <div className="mx-8 my-14 flex flex-col justify-center gap-8 md:mx-24">
-        <div className="relative flex items-center justify-between my-16">
-          <div className=" relative w-[20%]">
+        <div className="relative flex flex-col md:flex-row items-center justify-between my-16">
+          <div className=" relative w-[50%] mb-6 md:mb-0 md:w-[20%]">
             <Image
-              className="hidden md:block"
+              className=""
               src="/static/images/landacraft1.png"
               alt="handicraft"
               width={200}
@@ -50,12 +50,12 @@ export default async function Page({
             alt="handicraft"
             layout="fill"
           /> */}
-          <p className="leading-7 font-gilda w-[75%] text-base ">
+          <p className="leading-7 font-gilda w-full md:w-[75%] text-base ">
             {t('paragraph1')}
           </p>
         </div>
-        <div className="relative flex flex-col-reverse items-center justify-between gap-5 overflow-hidden md:flex-row">
-          <p className="leading-7 font-gilda text-base w-[47%]">
+        <div className="relative flex flex-col-reverse  items-center justify-between gap-5 overflow-hidden md:flex-row">
+          <p className="leading-7 font-gilda text-base w-full md:w-[47%]">
             {t('paragraph2')}
             <br />
             {/* {t('paragraph3')} */}
@@ -68,7 +68,7 @@ export default async function Page({
               layout="fill"
             /> */}
           {/* </div> */}
-          <div className="relative w-[47%] h-80">
+          <div className="relative w-full h-48 md:w-[47%] md:h-80 ">
             <Image
               className="object-cover rounded-xl w-full"
               src="/static/images/handicrafts1.jpg"
@@ -77,8 +77,8 @@ export default async function Page({
             />
           </div>
         </div>
-        <div className='flex flex-col md:flex-row justify-between items-center mt-4 mb-16'>
-          <div className="relative w-[40%] h-64 ">
+        <div className='flex flex-col md:flex-row justify-between items-center gap-5 mt-4 mb-16'>
+          <div className="relative w-full md:w-[40%] h-40 md:h-64 ">
             <Image
               className="object-cover rounded-xl w-full"
               src="/static/images/landacraft4.png"
@@ -86,13 +86,13 @@ export default async function Page({
               layout="fill"
             />
           </div>
-          <p className="leading-7 font-gilda text-base w-[55%]">
+          <p className="leading-7 font-gilda text-base w-full md:w-[55%]">
             {t('paragraph3')}
           </p>
 
         </div>
         <div className="flex w-full flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5 my-20">
-          <p className="font-gilda text-base leading-[210%] text-[#AA8453]">
+          <p className="font-gilda text-sm md:text-base  text-[#AA8453]">
             {t('formTitle')}
           </p>
           <HandicraftForm />

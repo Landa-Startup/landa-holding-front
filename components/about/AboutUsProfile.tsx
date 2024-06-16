@@ -2,9 +2,9 @@
 import AboutusPersonalTabs from './AboutusPersonalTabs';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
-import Certificate from '@/components/investment/Certificate';
-import Link from '@/components/icons/Link';
-import ButtonRefactor from '@/components/common/ButtonRefactor';
+// import Certificate from '@/components/investment/Certificate';
+// import Link from '@/components/icons/Link';
+// import ButtonRefactor from '@/components/common/ButtonRefactor';
 //import FeaturesCardsContainer from '../investment/FeaturesCardsContainer';
 
 export default function AboutUsProfile() {
@@ -12,16 +12,17 @@ export default function AboutUsProfile() {
   const { t } = useTranslation(lang, 'aboutUs');
 
   return (
-    <div className="mb-10 flex w-full flex-col justify-center">
-      <div className="m-auto flex flex-col justify-center px-4 py-10 md:w-5/6">
-        <div className="flex flex-col justify-items-center py-5 text-black rtl:mr-10 ">
+    <div className="mb-32 flex w-full flex-col justify-center">
+      <div className="m-auto flex flex-col justify-center px-4 py-10">
+        {/* TITLE */}
+        {/* <div className="flex flex-col justify-items-center text-black ">
           <h2 className="tracking-0 font-condensed text-xl font-normal uppercase leading-normal md:text-2xl ltr:tracking-widest">
             {t('professionals')}
           </h2>
           <h1 className="rtl:tracking-0 font-gilda text-3xl  font-normal uppercase leading-normal md:text-4xl my-2">
             {t('boardOfDirectors')}
           </h1>
-        </div>
+        </div> */}
 
         <div className="mb-8 flex flex-col justify-between gap-24 md:flex-row md:gap-10">
           {/* TODO: complete this section */}
@@ -60,7 +61,7 @@ export default function AboutUsProfile() {
         </div>
 
       </div>
-      <div className="grid grid-cols-1 mt-10 items-center gap-6 px-12  py-10 md:grid-cols-2 md:gap-24 md:px-32  md:py-6 md:pt-20 bg-[#FAFAFA]">
+      {/* <div className="grid grid-cols-1 mt-10 items-center gap-6 px-12  py-10 md:grid-cols-2 md:gap-24 md:px-32  md:py-6 md:pt-20 bg-[#FAFAFA]">
         <div className="flex flex-col gap-6">
           <span className="font-gilda text-2xl w-[300px] md:w-[500px] text-primary md:text-4xl flex justify-center">
             {t('certificate')}
@@ -74,16 +75,16 @@ export default function AboutUsProfile() {
           <p className="text-justify font-barlow pb-12 ltr:leading-8 rtl:text-lg rtl:leading-10">
             {t('focusText')}
           </p>
-          {/* <Button
+          <Button
             goto="/"
             size="not"
             text={lang === "en" ? "Federal Canada Corporation Information" : "اطلاعات شرکت فدرال کانادا"}
             bgColor="Primary"
             lang={lang}
-          /> */}
+          />
           <ButtonRefactor text={t('buttonTitle')} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

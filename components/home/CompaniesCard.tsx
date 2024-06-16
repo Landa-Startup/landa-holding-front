@@ -12,11 +12,11 @@ export default function CompaniesCard({
 }) {
   return (
     <Link href={link} target="_blank">
-      <div className="flex h-[160px] w-[145px] flex-col items-center  justify-between bg-[#F7F3EE] md:h-[240px] md:w-[322px] rounded-xl">
-        <div className="relative h-[138px] w-[138px]">
+      <div className=" relative flex h-[160px] w-[160px] flex-col items-center group justify-center bg-[#F7F3EE] md:h-[322px] md:w-[322px] rounded-xl">
+        <div className="relative h-[120px] md:h-[138px] w-[120px] md:w-[138px]">
 
           <Image
-            className="object-contain md:pt-12"
+            className=" object-contain"
             src={`/static/images/About/companies/${logo}`}
             alt="Landa Companies"
             layout="fill"
@@ -24,7 +24,7 @@ export default function CompaniesCard({
           />
 
         </div>
-        <span className="w-full bg-neutral-500 py-2 text-center font-gilda text-sm leading-6 text-white md:text-lg rounded-md">
+        <span className="absolute flex items-center justify-center bottom-0 transition-all w-full bg-[#00000069] h-8 md:h-12 font-gilda text-sm text-white md:text-lg rounded-md group-hover:h-full">
           {name}
         </span>
       </div>

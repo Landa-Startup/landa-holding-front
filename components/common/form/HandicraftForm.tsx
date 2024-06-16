@@ -149,7 +149,7 @@ export default function HandicraftForm() {
 
     <div className="w-full text-center md:w-auto">
         <button
-          className='flex items-center px-6 py-3 font-barlow rounded-xl font-bold text-lg text-white bg-black hover:bg-primary transition-all'
+          className='flex items-center mx-auto px-6 py-3 font-barlow rounded-xl font-bold text-lg text-white bg-black hover:bg-primary transition-all'
         >
           {t('button')} 
 

@@ -23,11 +23,20 @@ export default async function Page({
 
   return (
     <div>
-      <Banner
-        title={t('banner')}
-        image="/static/images/group.png"  
-        lang={lang}
-      />
+      <div className='hidden md:inline'>
+        <Banner
+          image="/static/images/group.png"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
+      <div className='inline md:hidden'>
+        <Banner
+          image="/static/images/group-mobile.png"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
       
       <AboutUsLandaHolding />
       <SubsidiaryCompanies />
