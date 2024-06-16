@@ -13,7 +13,7 @@ export default function AboutUsProfile() {
 
   return (
     <div className="mb-32 flex w-full flex-col justify-center">
-      <div className="m-auto flex flex-col justify-center px-4 py-10">
+      <div className=" flex flex-col justify-center py-10">
         {/* TITLE */}
         {/* <div className="flex flex-col justify-items-center text-black ">
           <h2 className="tracking-0 font-condensed text-xl font-normal uppercase leading-normal md:text-2xl ltr:tracking-widest">

@@ -10,12 +10,12 @@ export default function StoryOfLanda() {
   const { t } = useTranslation(lang, 'aboutUs');
 
   return (
-    <div className="flex flex-col px-12 md:px-24 grid-cols-2 gap-12 pb-10 pt-0 md:pt-24">
+    <div className="flex flex-col  grid-cols-2 gap-12 pb-10 pt-24">
       {/* top */}
       <div className="flex flex-col justify-between gap-5 pb-14  text-black sm:py-14 lg:flex-row">
         <div className="flex flex-col w-full md:w-[48%] md:text-justify">
 
-          <span className="font-gilda text-4xl font-bold mb-10 text-black">
+          <span className="font-gilda text-2xl md:text-4xl font-bold mb-0 md:mb-10 text-black">
             {t('LANDAStartups', { returnObjects: true })[0].title}
           </span>
           <ul className="mt-5 flex flex-col space-y-3 font-barlow">
@@ -87,7 +87,7 @@ export default function StoryOfLanda() {
 
         
 
-      <div className='font-gilda text-3xl font-bold md:text-5xl pt-10'>
+      <div className='font-gilda text-2xl font-bold md:text-5xl pt-10'>
         {t('VISIONMission', { returnObjects: true }).title}
       </div>
 
@@ -101,7 +101,7 @@ export default function StoryOfLanda() {
           />
         </div>
         
-        <div className='text-lg w-[48%] text-justify'>
+        <div className='text-lg w-full md:w-[48%] text-justify'>
           {t('VISIONMission', { returnObjects: true }).text}
         </div>
       </div>

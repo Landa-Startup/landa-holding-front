@@ -11,11 +11,11 @@ export default function LandaHoldingBlack() {
   const { t } = useTranslation(lang, 'mainPage');
 
   return (
-    <div className="relative flex flex-col items-center justify-evenly bg-[#ffffff] py-5 md:h-[590px] md:py-32 md:flex-row">
+    <div className="relative flex flex-col items-center justify-evenly  md:gap-10 bg-[#ffffff]  md:h-[590px] md:py-24 md:flex-row ">
       <Lines />
-      <div className="z-10 flex mb-36 h-[28rem] flex-col items-center justify-between rtl:mr-1 md:shadow-xl md:w-[620px] md:h-[570px] md:mb-0  rounded-xl">
+      <div className="z-10 flex mb-10 h-[36rem] flex-col items-center md:justify-between gap-5 rtl:mr-1 get-shadow-g md:w-[620px] md:h-[570px] md:mb-0  rounded-xl">
         <div className="flex flex-col items-center">
-            <span className='font-gilda pt-8'>
+            <span className='font-gilda mt-12'>
               {t('LandaHolding')}
             </span>
             <span className="pb-3 font-gilda text-4xl font-bold pt-4">
@@ -30,7 +30,7 @@ export default function LandaHoldingBlack() {
           style3="pt-1"
         />
 
-        <div className="h-auto w-[224px] mt-6 p-2 md:pb-8">
+        <div className="h-auto w-[200px] md:w-[224px] mt-6 p-2 md:pb-8">
           <ButtonRefactor
             text={t('Register')}
             type="link"
@@ -40,13 +40,13 @@ export default function LandaHoldingBlack() {
         </div>
       </div>
  
-      <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1 md:pt-8 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
+      <div className="z-10 flex h-[37rem]  md:justify-between flex-col items-center gap-5 rtl:mr-1 get-shadow-g  md:pt-8  md:w-[620px] md:h-[570px] rounded-xl">
         <div className="flex flex-col w-full items-center self-start md:items-start">
           <div className="flex flex-col pt-4 md:pt-0 w-full">
-          <span className=' text-center font-gilda'>
+            <span className=' mt-5 text-center font-gilda'>
               {t('LandaHolding')}
             </span>
-            <span className="border-b border-black pb-3 pt-4 text-center md:text-center font-gilda text-3xl font-bold text-black md:border-none md:text-4xl md:pt-5">
+            <span className=" pb-3 pt-4 text-center md:text-center font-gilda text-3xl font-bold text-black md:text-4xl md:pt-5">
               {t('EntrepreneurCenter')}
             </span>
           </div>
@@ -54,12 +54,12 @@ export default function LandaHoldingBlack() {
         {/* TODO: Why pass 3 styles? */}
         <UlList
           list={t('landaHoldingBlackSecond', { returnObjects: true })}
-          style1={`w-[360px] md:w-[700px] md:pl-12 md:rtl:pr-16 rtl:pr-12`}
+          style1={`w-[360px] md:w-[600px]  md:rtl:pr-12 rtl:pr-12`}
           style2="space-y-2"
           style3="pt-1"
         />
 
-        <div className="h-auto w-[224px] mt-6 p-2 md:pb-8">
+        <div className="h-auto w-[200px] md:w-[224px] mt-6 p-2 md:pb-8">
           <ButtonRefactor
             text={t('Register')}
             type="link"

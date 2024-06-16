@@ -33,7 +33,7 @@ export default function HomeUpComingStartups() {
   };
 
   return (
-    <div className="mb-8 mt-20 min-h-[400px] md:mt-0 py-10">
+    <div className="mb-8 mt-10 min-h-[400px] md:mt-0">
       {/* <div className="relative h-[400px]">
         <Image
           loading="lazy"
@@ -44,16 +44,16 @@ export default function HomeUpComingStartups() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div> */}
-      <div className="my-4 flex flex-col items-center justify-start gap-6 md:items-start md:py-16 md:pt-24">
-        <div className="flex flex-col items-start justify-between pt-10 md:w-[400px]">
-          <p className='md:pt-12 pb-3 font-gilda'>
+      <div className="my-4 font-gilda flex flex-col justify-start gap-6 md:items-start md:py-16 md:pt-12">
+        <div className=" pt-10 ">
+          <p className='pt-12 pb-1 md:pb-3'>
           {t('upcomingStartups', { returnObjects: true }).landaHolding}
           </p>
-          <p className="w-[340px] font-bold border-b border-black pb-12 font-gilda text-2xl text-black md:w-[540px] md:border-none md:text-4xl ">
+          <p className=" font-bold pb-0 md:pb-12 text-2xl text-black md:text-5xl ">
             {t('upcomingStartups', { returnObjects: true }).title}
           </p>
         </div>
-        <div className="flex flex-col gap-8 md:flex-row justify-between">
+        <div className="flex flex-col md:gap-8 md:flex-row justify-between">
           {renderCards(t('upcomingStartups', { returnObjects: true }).cards)}
         </div>
       </div>

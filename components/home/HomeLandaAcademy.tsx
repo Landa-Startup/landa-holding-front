@@ -10,8 +10,8 @@ export default function HomeLandaAcademy() {
     const { t } = useTranslation(lang, 'mainPage');
 
   return (
-    <div className="flex justify-between py-10 md:py-20 gap-10">
-      <div className="w-full font-barlow md:w-[45%]  ">
+    <div className="flex flex-col md:flex-row justify-between py-10 md:py-20 gap-10 ">
+      <div className="w-full font-barlow md:w-[47%]  ">
         {/* <p className="mb-2 ltr:tracking-[6px]">{t('Landaholding')}</p> */}
         <h1 className=" font-gilda mb-2">{t('Landa')}</h1>
         <h1 className="mb-8 font-gilda text-4xl font-bold">{t('Academy')}</h1>
@@ -30,9 +30,9 @@ export default function HomeLandaAcademy() {
 
 
       
-      <div className="relative w-[45%] justify-end tooltip-success hidden gap-3 md:flex">
+      <div className="relative w-full md:w-[47%] justify-end tooltip-success gap-3 flex">
         <div
-          className={`relative h-[25rem] w-full max-w-xs md:mb-10 ltr:md:mt-10 `}
+          className={`relative h-72 md:h-[26rem] w-full max-w-xs md:mb-10 `}
         >
           <Image
             loading="lazy"
@@ -44,7 +44,7 @@ export default function HomeLandaAcademy() {
           />
         </div>
         <div
-          className={`relative h-[25rem] w-full max-w-xs md:mb-10 ltr:md:mt-10 `}
+          className={`relative  h-72 md:h-[26rem] w-full max-w-xs md:mb-10  `}
         >
           <Image
             loading="lazy"

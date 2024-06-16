@@ -18,9 +18,9 @@ export default function LatestStartupsCard({
 }) {
   return (
     <Link href={link} target={link}>
-      <div className="group relative h-[290px] w-[264px] border border-black hover:shadow-lg md:h-[488px] md:w-[440px] rounded-lg">
+      <div className="group relative h-[290px] w-[290px] border border-black hover:shadow-lg md:h-[488px] md:w-[410px] rounded-lg">
         {/* Image Container */}
-        <div className="absolute left-0 top-0 h-[254px] w-[264px] md:h-[468px] md:w-[350px]" />
+        <div className="absolute left-0 top-0 h-[254px] w-[300px] md:h-[468px] md:w-[350px]" />
 
         {/* Image */}
         <Image
@@ -33,7 +33,7 @@ export default function LatestStartupsCard({
         />
 
         {/* Decorative Lines */}
-        <div className={`h-[0px] w-[150px] md:w-[100%] ${lang === "en" ? "left-4" : "right-4"} ${lang === "en" ? "md:left-0" : "md:right-0"} absolute top-[160px] border border-neutral-800 md:top-[295px]`}></div>
+        <div className={`h-[0px] w-[100%]  ${lang === "en" ? "left-0" : "right-0"} absolute top-[160px] border border-neutral-800 md:top-[295px]`}></div>
 
         {/* Title */}
         <div className={`absolute font-gilda text-2xl font-normal text-neutral-800 ${lang === "en" ? "left-4 top-[130px] md:top-[250px]" : "right-5 top-[125px] md:top-[255px]"}`}>
@@ -46,7 +46,7 @@ export default function LatestStartupsCard({
         </div>
 
         {/* Link and Icon */}
-        <div className="absolute bottom-[15px] right-[15px] inline-flex h-6 w-6 items-start justify-start gap-2.5 bg-neutral-800 md:left-[378px] md:top-[441px] md:h-10 md:w-10 rounded-lg">
+        <div className="absolute bottom-[14px]  inline-flex h-8 w-8 items-start justify-start gap-2.5 bg-neutral-800 right-[12px] md:h-10 md:w-10 rounded-lg">
           <StartupsArrowLeft />
         </div>
       </div>

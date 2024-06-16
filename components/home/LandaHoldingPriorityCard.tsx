@@ -9,7 +9,7 @@ export default function LandaHoldingPriorityCard({
   image: string;
 }) {
   return (
-    <div className="relative flex h-24 w-[45%] justify-center overflow-hidden border border-primary md:h-40 md:w-[23%] rounded-lg">
+    <div className="relative flex h-24 w-[47%] justify-center overflow-hidden border border-primary md:h-40 md:w-[23%] rounded-lg">
       {/* Background Image */}
       <Image
         loading="lazy"

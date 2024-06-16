@@ -20,7 +20,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
 
   return (
       <div className='w-full md:w-[30%] mb-16 md:mb-0'>
-        <div className='flex h-full flex-col justify-start rounded-xl p-5 shadow-2xl md:gap-x-8'>
+        <div className='flex h-full flex-col justify-start rounded-xl px-5 md:pt-5 get-shadow-g shadow-2xl md:gap-x-8'>
           <div className='relative m-auto bg-white md:w-full'>
             <Image
               loading='lazy'
@@ -40,11 +40,11 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
             </div> */}
             <div className='flex h-full flex-col items-center justify-between gap-3 '>
               <div>
-                <p className='font-barlow text-[15px] leading-[30px] md:text-[16px]'>
+                <p className='text-[15px] md:text-[16px]'>
                   {text}
                 </p>
               </div>
-            <div className="mt-3 h-auto w-[224px] p-2">
+              <div className="mt-3 h-auto w-[224px] p-2">
                 <ButtonRefactor
                   text={buttonText}
                   type="link"

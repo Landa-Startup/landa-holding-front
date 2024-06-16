@@ -38,11 +38,13 @@ export default async function Page({
         />
       </div>
       
-      <AboutUsLandaHolding />
-      <SubsidiaryCompanies />
-      <StoryOfLanda />
-      <KeyDifferentiating />
-      <AboutUsProfile />
+      <div className='px-8 md:px-24'>
+        <AboutUsLandaHolding />
+        <SubsidiaryCompanies />
+        <StoryOfLanda />
+        <KeyDifferentiating />
+        <AboutUsProfile />
+      </div>
     </div>
   );
 }
