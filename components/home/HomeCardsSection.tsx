@@ -20,30 +20,30 @@ export default function HomeCardsSection({
     buttonText: string
 }) {
   return (
-    <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-x-10 items-center justify-between border-b-2 border-primary py-5 last:border-none md:py-0 md:pb-36`}>
+    <div className={`flex flex-col-reverse ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-x-10 items-center justify-between pt-5 pb-12 last:border-none md:pt-0 `}>
       <div className="flex flex-col items-start justify-center md:w-1/2">
         <span className='font-gilda text-1xl md:pb-1 md:text-1xl'>
           {smallTitle}
         </span>
-        <span className="lrt:tracking-[6.5px] font-gilda font-bold text-4xl md:pb-14 md:text-5xl">
+        <span className="lrt:tracking-[6.5px] font-gilda font-bold text-4xl pb-3 md:pb-14 md:text-5xl">
           {titles}
         </span>
-        <p className="md:text-md pb-16 text-justify font-EBGaramond text-base leading-[30px] first:mb-0 md:w-full ">
+        <p className="md:text-md pb-6 md:pb-16 text-justify font-EBGaramond text-base leading-[30px] first:mb-0 md:w-full ">
           {text}
         </p>
-        <div className='w-1/2 md:w-1/2'>
+        <div className='w-[45%] md:w-[35%] mb-10 md:mb-0'>
           <ButtonRefactor text={buttonText} type="link" href={link} />
         </div>
       </div>
-      <div className={`hidden ${reverse ? "justify-start" : "justify-end"}  space-x-4 pb-20 rtl:mt-11 rtl:space-x-reverse md:flex md:w-1/2 md:pb-0`}>
+      <div className={`${reverse ? "md:justify-start" : "md:justify-end"} space-x-4 rtl:mt-11 pb-5 rtl:space-x-reverse flex w-full md:w-1/2 md:pb-0`}>
         {images.map((image, index) => (
           <div
-            className={`relative h-[25rem] w-full max-w-xs md:mb-10 ltr:md:mt-10 `}
+            className={`relative h-72 md:h-[25rem] w-full max-w-xs md:mb-10 ltr:md:mt-10 `}
             key={index}
           >
             <Image
               loading="lazy"
-              className="rounded-lg"
+              className="rounded-lg object-cover"
               src={image.src}
               alt={image.alt}
               fill

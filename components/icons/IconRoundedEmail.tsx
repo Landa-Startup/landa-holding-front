@@ -2,11 +2,11 @@
 
 export default function IconRoundedEmail() {
   return (
-    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-black text-white opacity-50">
+    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-black mt-1 text-white opacity-70">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
+        width="28"
+        height="28"
         fill="currentColor"
         className="bi bi-envelope"
         viewBox="0 0 16 16"

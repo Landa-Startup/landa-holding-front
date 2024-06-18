@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { useTranslation } from 'app/i18n';
 import ContactUsForm from '@/components/common/form/ContactUsForm';
 import ContactUsDescription from '@/components/common/ContactUsDescription';
-import Banner from '@/components/common/Banner';
+import './contact.css'
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Contact',
@@ -20,17 +20,34 @@ export default async function ContactUsPage({
   // Renamed the component for better naming
   return (
     <div>
-      {/* Banner Component */}
-      <Banner
-        image="/static/images/Contact/contactbanner.png"
-        title={t('banner')}
-        lang={lang}
-      />
+      <div className="relative h-screen md:h-[520px]">
+        {/* Background Image with Blur and Overlay */}
+        <div
+          style={{
+            backgroundImage: `url(/static/images/Contact/contactbanner.png)`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}
+          className="absolute hidden inset-0 h-full md:h-[520px]  "
+        >
+        </div>
+        
+        <div
+          style={{
+            backgroundImage: `url(/static/images/Contact/mobile-baner.jpg)`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}
+          className="absolute inset-0 h-full md:h-[520px]  "
+        >
+            <span className='get-shadow absolute z-10 top-[40rem] md:top-60 left-[10%] text-4xl text-white md:text-8xl font-gilda  '>{t('banner')}</span>
+        </div>
+      </div>
 
       {/* Main Content Grid */}
       {/* ContactUsDescription Component */}
       {/* TODO: hardcode delete */}
-      <div className='container mx-auto grid grid-cols-1 gap-12 px-5 py-8 font-barlow text-black md:py-28 md:flex md:flex-row md:justify-between lg:px-28'>
+      <div className='container mx-auto grid grid-cols-1 gap-12 px-5 py-8 font-barlow text-black md:py-28 md:flex items-center md:flex-row md:justify-between lg:px-28'>
         <ContactUsDescription />
         <ContactUsForm />
       </div>

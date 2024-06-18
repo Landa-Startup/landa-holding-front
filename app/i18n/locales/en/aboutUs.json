@@ -10,8 +10,8 @@
 
   "aboutLandaHolding": [
     {
-      "title": "About Landa International Holding",
-      "text": "Landa International Holding is a group of 10 affiliated companies based in Canada and Iran, with active offices in Toronto, Vancouver, Tehran, and Isfahan. Landa's mission is to invest in creative entrepreneurs and support them from the ideation stage to the launch of an international startup. Landa's unique perspective sets it apart, enabling it to create opportunities for entrepreneurs to attract resources from international investors.",
+      "title": "About Landa Holding",
+      "text": "Landa International Holding is comprised of ten subsidiaries spread across Canada and Iran, with offices strategically located in Toronto, Vancouver, Tehran, and Isfahan. The primary aim of Landa is to invest in and support innovative entrepreneurs throughout their entire prosper, from the initial idea phase to launching their businesses on a global scale. What sets Landa apart from its competitors is its broad international perspective, empowering entrepreneurs to access resources from investors worldwide to stimulate the expansion of their businesses.",
       "reverse": true,
       "show": true,
       "index": 2,
@@ -31,7 +31,7 @@
   "TheStoryOfLanda": [
     {
       "title": "The story of Landa",
-      "text": "Landa International Holding started its activity in 2017 in Canada as a certified and verified company in the field of investment, resource collection, business development, and startup planning. In 2021, after years of glorious and successful performance, Landa Holding became a federal company known in Canada and Iran.",
+      "text": "Landa International Holding started its activity in Canada in 2017 as a company in the field of investment in startup planning, business planning, and collecting resources to develop pioneering startup businesses. After years of success and many successful projects, in 2021, Landa Holding was identified as a federal company, certified and verified in both Canada and Iran. This aim has been pursued since then even more thoroughly and passionately than ever.",
       "reverse": true,
       "show": true,
       "index": 2,
@@ -60,7 +60,7 @@
   ],
   "LANDAStartups": [
     {
-      "title": "LANDA Startups",
+      "title": "Landa Startups",
       "LandaTrip": "Landa Trip is an innovative company providing a platform for individuals to engage in diverse training courses worldwide, leveraging a skilled team and artificial intelligence. This intelligent platform serves as the ultimate choice for travel enthusiasts to connect and share their memorable experiences and courses with others, acting as a social network tailored to their interests.",
       "DiacoCenter": "The Diaco Center startup is an AI-driven platform serving as a bridge between technology seekers and providers. It aims to address industry and technological needs by utilizing an intelligent recommendation system, facilitating solutions to various challenges and requirements.",
       "VisionRaft": "With the rising growth and spread of technology in everyday life, it is time to teach children in new and innovative ways that will replace old approaches. The startup Vision Raft began working with the specific goal of integrating augmented reality with education to spark a revolution in this field.",
@@ -81,7 +81,7 @@
   ],
   "KeyDifferentiatingFactors": [
     {
-      "title": "Key Differentiating Factors",
+      "title": "Key Differentiating Factors :",
       "titleText": "First and foremost, it's essential to understand that the most critical aspect is the mental model and perspective behind these key differentiating factors. The way we perceive and approach a business can create various points of distinction.",
       "title2":"What sets us apart ",
       "text2":"1. Specialized Screening and Analysis of Startups: We specialize in screening and analyzing startups, creating opportunities for members to learn from each other.",
@@ -145,7 +145,7 @@
     {
       "image": "/static/images/our-team/Personals/mohandesj.png",
       "name": "Morteza Jafari",
-      "position": "Director Of Public Relations",
+      "position": "International Relations",
       "links": {
         "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
         "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
@@ -157,7 +157,7 @@
     {
       "image": "/static/images/our-team/Personals/drimage.jpg",      
       "name": "Rasoul Moradimehr",
-      "position": " Co Founder & CEO",
+      "position": "CEO",
       "links": {
         "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
         "whatsapp": "wa.me/+989134233863",
@@ -170,7 +170,7 @@
     {
       "image": "/static/images/our-team/Personals/dr2image.jpg",     
       "name": "Hadi Hasanpour",
-      "position": "Co Founder & COB",
+      "position": "COTB",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",

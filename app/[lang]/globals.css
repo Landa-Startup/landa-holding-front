@@ -140,3 +140,6 @@ img {
 .get-shadow{
   text-shadow: 0 0 15px #000000;
 }
+.get-shadow-g{
+  box-shadow: 0 0 15px #6e6e6e55;
+}

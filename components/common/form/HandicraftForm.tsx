@@ -9,10 +9,10 @@ import Input from './Input';
 import NotificationSendForm from './NotificationSendForm';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../ButtonRefactor';
-import Button from '../Button';
 import { useLang } from 'stores/langStore';
 import { submitHandiCraftApplicationForm } from 'pages/api/handiCrafts';
 import { useSubmit } from 'stores/dataStore';
+import ArrowRight from '@/components/icons/common/ArrowRight';
 
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
 export default function HandicraftForm() {
@@ -91,28 +91,29 @@ export default function HandicraftForm() {
         });
     };
 
-    const errorsList = Object.entries(errors).map(([name, value]) => ({
-      name: name,
-      value: value
-    }));
+    // const errorsList = Object.entries(errors).map(([name, value]) => ({
+    //   name: name,
+    //   value: value
+    // }));
 
   return (
     
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center font-barlow">
-    <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
+    <div className="mb-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
       <div className='grid w-full grid-cols-1 gap-x-3 md:grid-cols-2'>
       <PersonalInfoInput
         register={register}
         errors={errors}
         nameInputs={{
           firstName: 'first_name',
-          lastName: 'last_name',
+          lastName: '',
           email: '',
-          phoneNumber: ''
+          phoneNumber: 'phone-number'
         }}
         noLabel={true}
       />
+
       </div>
 
       <div className="col-span-1 w-full">
@@ -125,7 +126,7 @@ export default function HandicraftForm() {
           patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
           patternMessage={t('form', { returnObjects: true }).emailErrorMessage}
           placeholder={t('form', { returnObjects: true }).emailPlaceholder}
-          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
           containerClass="w-full"/>
       </div>
 
@@ -139,7 +140,7 @@ export default function HandicraftForm() {
           patternValue=""
           patternMessage=""
           placeholder={t('form', { returnObjects:true }).organizationPlaceholder}
-          className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
           containerClass="w-full"
           labelClass=""
         />
@@ -147,12 +148,14 @@ export default function HandicraftForm() {
     </div>
 
     <div className="w-full text-center md:w-auto">
-      <Button
-        type='submit'
-        bgColor="Primary"
-        disabled={errorsList[0] ? true : false}
-        lang={lang}
-      />
+        <button
+          className='flex items-center mx-auto px-6 py-3 font-barlow rounded-xl font-bold text-lg text-white bg-black hover:bg-primary transition-all'
+        >
+          {t('button')} 
+
+            <ArrowRight/>
+
+        </button>
       {/* <ButtonRefactor type="submit" text="Submit" /> */}
     </div>
     <NotificationSendForm />

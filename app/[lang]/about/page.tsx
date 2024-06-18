@@ -23,16 +23,28 @@ export default async function Page({
 
   return (
     <div>
-      <Banner
-        title={t('banner')}
-        image="/static/images/group.png"  
-        lang={lang}
-      />
-      <AboutUsLandaHolding />
-      <SubsidiaryCompanies />
-      <StoryOfLanda />
-      <KeyDifferentiating />
-      <AboutUsProfile />
+      <div className='hidden md:inline'>
+        <Banner
+          image="/static/images/group.png"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
+      <div className='inline md:hidden'>
+        <Banner
+          image="/static/images/group-mobile.png"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
+      
+      <div className='px-8 md:px-24'>
+        <AboutUsLandaHolding />
+        <SubsidiaryCompanies />
+        <StoryOfLanda />
+        <KeyDifferentiating />
+        <AboutUsProfile />
+      </div>
     </div>
   );
 }

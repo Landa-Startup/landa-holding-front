@@ -1,4 +1,3 @@
-import Hero from '@/components/investment/HeroInvestment';
 //import Link from '@/components/icons/Link';
 import Image from 'next/image';
 
@@ -6,6 +5,7 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 import FeaturesCardsContainer from '@/components/investment/FeaturesCardsContainer';
 import { useTranslation } from 'app/i18n';
+import Banner from '@/components/common/Banner';
 //import ButtonRefactor from '@/components/common/ButtonRefactor';
 
 export const metadata: Metadata = {
@@ -19,40 +19,51 @@ export default async function Page({
 }: {
   params: { lang: string };
 }) {
+  
   const { t } = await useTranslation(lang, 'investment');
 
   return (
-    <div dir={lang === 'en' ? 'ltr' : 'rtl'}>
+    <div 
+      dir={lang === 'en' ? 'ltr' : 'rtl'}
+      className='mb-20'
+    >
       {/* TODO: we have multiple hero with same styles. make one component for all */}
-      <Hero
-        backgroundImage="/static/images/investment/hero.png"
-        showLanda
-        leftImage="/static/images/investment/left.svg"
-        showButton
-        lang={lang}
-      />
+      <div className='hidden md:inline'>
+        <Banner
+          image="/static/images/investment/investment-hero.jpg"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
+      <div className='inline md:hidden'>
+        <Banner
+          image="/static/images/investment/mobile-hero.jpg"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
 
-      <div className="grid grid-cols-1 gap-6 bg-[#F7F3EE] px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
-        <div className="flex flex-col justify-center gap-6">
+
+      <div className=" flex justify-between mx-10 md:mx-28 my-28 gap-5 font-gilda ">
+        <div className="w-full md:w-[45%]">
           <div className="flex flex-col">
-            <span className="font-gilda text-2xl text-primary md:text-4xl">
+            <span className="text-2xl md:text-4xl mb-8 font-bold">
               {t('startUpInvestingTitle')}
             </span>
           </div>
-          <p className="text-justify font-barlow leading-8">
+          <p className="text-justify leading-8">
             {t('startUpInvestingText')}
           </p>
         </div>
-        <div>
-          <div className="relative h-[300px] w-[330px] md:h-[168p] md:w-[561px]">
-            <Image
-              className="object-cover"
-              src="/static/images/investment/Incorporation-page-001 1 (2).png"
-              alt="Coin"
-              layout="fill"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
+
+        <div className="relative h-[300px] w-[330px] md:h-[168p] md:w-[561px] hidden md:inline">
+          <Image
+            className="object-cover rounded-lg"
+            src="/static/images/investment/investment-startup.jpg"
+            alt="flawer"
+            layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       </div>
       {/* <div className="grid grid-cols-1 items-center gap-6 px-8 py-10 md:grid-cols-2 md:gap-24 md:px-28 md:py-16">
@@ -79,12 +90,24 @@ export default async function Page({
           {/* <ButtonRefactor text={t('buttonTitle')} />
         </div>
       </div> */}
-      <div className="bg-[#F7F3EE] px-8 py-10 md:px-28 md:py-16">
-        <div className="text-justify font-barlow leading-8">
-          <span className="font-gilda text-lg text-primary md:text-4xl ">
-            {t('investmentstrategy')}
-          </span>
-          <p>{t('objectiveText1')}</p>
+      <div className="px-8 py-10 md:px-28 font-gilda">
+        <div className='flex justify-between items-center gap-6'>
+          <div className="relative w-[27rem] h-[26rem] rtl:h-[22rem] hidden md:inline">
+            <Image
+              className="object-contain rounded-lg"
+              src="/static/images/investment/landa-vector.png"
+              alt="flawer"
+              layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+
+          <div className="text-justify leading-8 w-full md:w-[65%]">
+            <span className=" text-lg md:text-4xl font-bold">
+              {t('investmentstrategy')}
+            </span>
+            <p className=' leading-[25px] mt-6'>{t('objectiveText1')}</p>
+          </div>
         </div>
         <FeaturesCardsContainer />
       </div>

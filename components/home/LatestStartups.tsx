@@ -12,16 +12,16 @@ export default function LatestStartups() {
 
   return (
     <div>
-      <div className="flex flex-col py-16">
+      <div className="flex flex-col pt-28 md:pt-16">
         <div className="flex flex-col">
           <div className="flex-col items-start justify-start md:self-start">
-            <div className="mr-4 flex flex-col items-center md:mr-0 md:items-start mx-auto mb-12">
+            <div className=" flex flex-col items-center md:items-start mb-6 md:mb-12">
               <div
                 className={`ltr:tracking-0 md:tracking-0 ps-1 font-condensed text-xl font-normal text-neutral-800 md:text-base ltr:tracking-[3.5px]`}
               >
                 {/* {t('LandaHolding')} */}
               </div>
-              <p className='font-gilda'>
+              <p className='font-gilda '>
               {t('LandaHolding')}
               </p>
               <div

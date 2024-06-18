@@ -1,8 +1,7 @@
 'use client';
-// import ButtonRefactor from '../common/ButtonRefactor';
-import Button from '../common/Button';
+import './investment.css'
 import { useLang } from 'stores/langStore';
-import { useRouter } from 'next/navigation';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function FeaturesCards({
   title,
@@ -14,27 +13,21 @@ export default function FeaturesCards({
   link: string;
 }) {
   const lang = useLang((s) => s.lang);
-  const router = useRouter();
+  // const router = useRouter();
 
-  const handleOnClick = () => {
-    router.push(link);
-  }
+  // const handleOnClick = () => {
+  //   router.push(link);
+  // }
 
   return (
-    <div className="flex flex-col justify-between bg-white  p-8 md:w-[580px]">
+    <div  className="flex flex-col justify-between p-3 md:w-[580px] font-gilda get-box-shadow rounded-lg  ">
       <div className='flex flex-col'>
-      <span className="font-gilda text-2xl text-primary">{title}</span>
-      <p className="font-barlow text-base leading-7">{description}</p>
+        <span className=" text-lg mx-auto p-2 font-bold ">{title}</span>
+        <p className="text-[12px] md:text-[13px] ">{description}</p>
       </div>
-      <Button
-        goto={link}
-        size="visit"
-        text={lang === "en" ? "Register" : "ثبت نام"}
-        addedClass="self-end"
-        bgColor="Primary"
-        onClick={handleOnClick}
-        lang={lang}
-      />
+      <div className='mx-auto w-4/5 font-barlow text-md md:text-2xl mt-6'>
+        <ButtonRefactor text={lang === "en" ? "Register" : "ثبت نام"} type="link" href={link} />
+      </div>
       {/* <ButtonRefactor text={lang === 'en' ? 'Register' : 'ثبت نام'} /> */}
     </div>
   );

@@ -18,12 +18,20 @@ export default async function TeamPage({
   const { t } = await useTranslation(lang, 'mainPage');
   return (
     <div>
-      <Banner
-        image="/static/images/our-team/Header.jpg "
-        title={t('title')}
-        lang={lang}
-      />
-      <span className=' absolute get-shadow text-5xl md:text-[90px] lowercase text-white font-gilda top-[40rem] md:top-60 left-10 md:left-28 '>{t('OurTeam')}</span>
+      <div className='hidden md:inline'>
+        <Banner
+          image="/static/images/our-team/Header.jpg"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
+      <div className='inline md:hidden'>
+        <Banner
+          image="/static/images/our-team/Header-mobile.jpeg"
+          title={t('banner')}
+          lang={lang}
+        />
+      </div>
       <TeamPersons />
     </div>
   );
