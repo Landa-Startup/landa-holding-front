@@ -103,7 +103,7 @@
             "category": "طراحان"
         },
         {
-            "image": "/static/images/our-team/Personals/a34.png",
+            "image": "/static/images/our-team/Personals/faezeh.jpg",
             "position": "طراح گرافیک",
             "name": "فائزه خانی",
             "linkedIn": "",
@@ -163,7 +163,7 @@
             "position": "تولید محتوا",
             "name": "مهسا قربانی",
             "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
-            "category": "تولید کنندگان محتوا"
+            "category": "تحقیق و توسعه"
         },
         {
             "image": "/static/images/our-team/Personals/sama.png",
@@ -192,6 +192,13 @@
             "name": "شمیم بهشتی",
             "linkedIn": "",
             "category": "طراحان"
+          },
+          {
+            "image": "/static/images/our-team/Personals/alireza.jpg",
+            "position": "ادیتور",
+            "name": "علیرضا زمانی",
+            "linkedIn": "",
+            "category": "تولید کنندگان محتوا"
           }
 
 

@@ -103,7 +103,7 @@
           "category": "designers"
         },
         {
-          "image": "/static/images/our-team/Personals/a34.png",
+          "image": "/static/images/our-team/Personals/faezeh.jpg",
           "position": "Graphic Designer",
           "name": "Faezeh Khani",
           "linkedIn": "linkedin.com/in/faezeh-khani-4362b62a5",
@@ -148,7 +148,7 @@
         {
           "image": "/static/images/our-team/Personals/sobhan1.jpg",
           "position": "R&D Specialist",
-          "name": "sobhan mohammadi",
+          "name": "Sobhan Mohammadi",
           "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
           "category": "R&D Department"
       },
@@ -164,7 +164,7 @@
       "position": "Content Creator",
       "name": "Mahsa Ghorbani",
       "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
-      "category": "content creators"
+      "category": "R&D Department"
     },
     {
       "image": "/static/images/our-team/Personals/sama.png",
@@ -189,11 +189,18 @@
       "category": "programmers"
     },
     {
-      "image": "/static/images/our-team/Personals/shamim.jpg",
+      "image": "/static/images/our-team/Personals/shamim.JPG",
       "position": "Motion Graphic",
       "name": "Shamim Beheshti",
       "linkedIn": "",
       "category": "designers"
+    },
+    {
+      "image": "/static/images/our-team/Personals/alireza.jpg",
+      "position": "Editor",
+      "name": "Alireza Zamani",
+      "linkedIn": "",
+      "category": "content creators"
     }
 
   ],
