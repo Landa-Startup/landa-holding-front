@@ -103,7 +103,7 @@
           "category": "designers"
         },
         {
-          "image": "/static/images/our-team/Personals/faezeh.jpg",
+          "image": "/static/images/our-team/Personals/web.png",
           "position": "Graphic Designer",
           "name": "Faezeh Khani",
           "linkedIn": "linkedin.com/in/faezeh-khani-4362b62a5",
@@ -147,7 +147,7 @@
 
         {
           "image": "/static/images/our-team/Personals/sobhan1.jpg",
-          "position": "R&D Specialist",
+          "position": "Immigration Manager",
           "name": "Sobhan Mohammadi",
           "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
           "category": "R&D Department"
@@ -189,7 +189,7 @@
       "category": "programmers"
     },
     {
-      "image": "/static/images/our-team/Personals/shamim.JPG",
+      "image": "/static/images/our-team/Personals/1222.JPG",
       "position": "Motion Graphic",
       "name": "Shamim Beheshti",
       "linkedIn": "",
