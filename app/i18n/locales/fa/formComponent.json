@@ -14,6 +14,18 @@
   "phoneNumberErrorMessage": "شماره تماس را به درستی وارد کنید.",
   "phoneNumberPlaceholder": "لطفا شماره تماس خود را وارد کنید.",
 
+
+  "jobPosition": "نوع همکاری",
+  "jobPositionRequired": "نوع همکاری واجب است",
+  "jobPositionErrorMassage": "نوع همکاری را وارد کنید",
+  "jobPositionPlaceholder":"نوع همکاری را انتخاب کنید",
+
+  "application": "زمینه فعالیت",
+  "applicationRequired":"زمینه فعالیت اجباری است",
+  "applicationErrorMassage":"زمینه فعالیت را وارد کنید",
+  "applicationPlaceholder":"زمینه فعالیت را انتخاب کنید",
+
+
   "birthDate": "تاریخ تولد",
   "birthDateRequired": "تاریخ تولد الزامی است.",
   "birthDateErrorMessage": "(لطفا تاریخ تولد خود را به درستی وارد کنید(به شکل ۲۰۰۱/۰۲/۱۱",
@@ -34,6 +46,21 @@
   "investmentCeiling": "سقف سرمایه گذاری",
   "investmentCeilingRequired": "این بخش الزامی است.",
   "investmentCeilingPlaceholder": "لطفا سقف سرمایه گذاری خود را وارد کنید.",
+
+
+
+  "INTERN" : "کارآموز",
+  "EMPLOYEE" : "استخدام",
+
+
+
+  "Developer":"برنامه نویسی",
+  "Marketing":"مارکتینگ",
+  "Graphist":"گرافیست",
+  "Immigration":"مهاجرت",
+  "Accountant":"حساب دار",
+  "administrative":"اداری",
+
 
   "contactForm": {
     "title": "با ما تماس بگیرید",
