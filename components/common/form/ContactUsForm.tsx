@@ -109,7 +109,8 @@ export default function ContactUsForm() {
               firstName: 'name',
               lastName: '',
               email: 'email',
-              phoneNumber: 'number'
+              phoneNumber: 'number',
+              jobPosition:''
             }}
             noLabel={true}
           />
