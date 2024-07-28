@@ -99,7 +99,7 @@ export default function StoryOfLanda() {
               layout="fill"
             />
         </div>
-        <div className='font-gilda text-lg w-[300px] md:w-[800px] md:pt-10'>
+        <div className=' w-[300px] md:w-[800px] md:pt-10'>
         {t('VISIONMission', { returnObjects: true }).text}
         </div>
           <div>

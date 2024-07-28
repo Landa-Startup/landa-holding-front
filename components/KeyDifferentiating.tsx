@@ -26,7 +26,7 @@ export default function KeyDifferentiating() {
           {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title}
         </span>
         <div></div>
-<div className='md:pl-9 font-gilda'>
+<div className='md:pl-9'>
 {t('KeyDifferentiatingFactors', { returnObjects: true })[0].titleText}
 <div className='text-primary'>
 {t('KeyDifferentiatingFactors', { returnObjects: true })[0].title2}
