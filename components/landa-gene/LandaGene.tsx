@@ -115,7 +115,7 @@ export default function LandaGene() {
           />
         </div>
         <div className="basis-3/4 ">
-          <p className="font-gilda leading-[36px] text-xl  text-black">
+          <p className="font-barlow text-base font-normal leading-[48px] md:pt-12 px-2 text-justify">
             {t('textUp')}
           </p>
         </div>
@@ -132,7 +132,7 @@ export default function LandaGene() {
           />
         </div>
         <div className="basis-4/5">
-          <p className="w-full text-justify  text-[15px] leading-[36px] text-black md:leading-[48px] lg:text-[20px]">
+          <p className="font-barlow text-base font-normal leading-[48px] md:pt-12 px-10 text-justify">
             {t('textMid')}
           </p>
         </div>
@@ -148,8 +148,8 @@ export default function LandaGene() {
             height={100}
           />
         </div>
-        <div className="basis-3/5 ">
-          <p className="w-full text-justify  text-[15px] leading-[36px] text-black md:leading-[48px] lg:text-[20px]">
+        <div className="basis-3/5 md:pt-12">
+          <p className="font-barlow text-base font-normal leading-[48px] md:pt-12 px-10 text-justify">
             {t('textDown')}
           </p>
         </div>
