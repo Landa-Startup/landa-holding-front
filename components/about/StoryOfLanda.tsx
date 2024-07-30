@@ -61,7 +61,7 @@ export default function StoryOfLanda() {
           </ul>
         </div>
         {/* top - left */}
-        <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2 md:pl-48">
+        <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2 ltr:md:pl-48">
                   <div className="relative hidden md:block h-[310px] w-screen md:h-[640px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
                     <div className='h-[200px]'>            
                     <Image
