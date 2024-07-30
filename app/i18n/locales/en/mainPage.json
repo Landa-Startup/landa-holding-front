@@ -272,21 +272,22 @@
         "gene": false
       },
       {
-        "image": "/static/images/Home/upcomming-Sartup/2.png",
-        "subTitle": "PRIVENTY GENE",
-        "text": "PreventiGene, a startup that uses genetic testing to understand your genetic makeup and identify potential diseases like breast cancer, goes beyond just understanding your genes. It provides personalized plans to help you take action        ",
-        "goto": "/landa-gene",
-        "buttonText" : "Register",
-        "gene": true
-      },
-      {
         "image": "/static/images/Home/upcomming-Sartup/10.png",
         "subTitle": "LANDA GENE",
         "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
         "goto": "#",
         "buttonText" : "Register",
         "gene": true
+      },
+      {
+        "image": "/static/images/Home/upcomming-Sartup/2.png",
+        "subTitle": "PRIVENTY GENE",
+        "text": "PreventiGene, a startup that uses genetic testing to understand your genetic makeup and identify potential diseases like breast cancer, goes beyond just understanding your genes. It provides personalized plans to help you take action        ",
+        "goto": "/landa-gene",
+        "buttonText" : "Register",
+        "gene": true
       }
+
     ]
   },
   "upcomingEvents": {
