@@ -109,7 +109,8 @@ export default function HandicraftForm() {
           firstName: 'first_name',
           lastName: 'last_name',
           email: '',
-          phoneNumber: ''
+          phoneNumber: '',
+          jobPosition:''
         }}
         noLabel={true}
       />
