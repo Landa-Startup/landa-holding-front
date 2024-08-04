@@ -65,7 +65,7 @@ export default function AboutUsLandaHolding() {
             <span className="mb-5 mt-9 font-gilda text-4xl text-bold">
               {t('TheStoryOfLanda', { returnObjects: true })[0].title}
             </span>
-            <div className="flex flex-col space-y-4 font-barlow text-[#000] pt-24">
+            <div className="flex flex-col space-y-4 font-barlow text-[#000] pt-24 text-justify">
               <p>{t('TheStoryOfLanda', { returnObjects: true })[0].text}</p>
               <div className="flex flex-col"></div>
             </div>
