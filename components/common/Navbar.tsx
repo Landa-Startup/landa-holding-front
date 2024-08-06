@@ -154,7 +154,7 @@ export default function Navbar({
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         
-        <ul className="menu absolute h-full w-80 space-y-5 bg-white p-4 text-xl text-black ltr:left-[110px] md:hidden  divide-y divide-solid">
+        <ul className="menu absolute h-full w-80 space-y-5 bg-white p-4 text-xl text-black ltr:left-[70px] md:hidden  divide-y divide-solid">
         <Image
         className='mx-auto '
           src="static/images/Logo.svg"
