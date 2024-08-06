@@ -4,14 +4,14 @@
     "persons": [
         {
           "image": "/static/images/our-team/Personals/a1.png",
-          "position": "Founder and CEO",
+          "position": "COB",
           "name": "Dr.Rasoul Moradimehr",
           "linkedIn": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
           "category": "managers"
         },
         {
           "image": "/static/images/our-team/Personals/a2.png",
-          "position": "COTB", 
+          "position": "CEO", 
           "name": "Dr.Hadi Hasanpour",
           "linkedIn": "https://www.linkedin.com/in/hadi-hasanpour?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "category": "managers"

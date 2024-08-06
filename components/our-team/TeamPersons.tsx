@@ -45,7 +45,8 @@ export default function TeamPersons() {
       setFilteredPersons(filteredPersons);
     }
   }
-  console.log(filteredPersons);
+
+  
   return (
     <div>
       <div className="flex w-full justify-center">

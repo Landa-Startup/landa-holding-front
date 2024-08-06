@@ -2,25 +2,25 @@
   "menuItems": [
     {
       "label": "خانه",
-      "href": "/"
+      "href": "/en"
     },
     {
       "label": "درباره ما",
-      "href": "/about"
+      "href": "/en/about"
     },
     {
       "label": "تماس با ما",
-      "href": "/contact"
+      "href": "/en/contact"
     },
     {
       "label": "تیم ما",
-      "href": "/our-team"
+      "href": "/en/our-team"
     }
   ],
   "submenuItems": [
     {
       "label": "مرکز سرمایه گذاران",
-      "href": "/investor-registration"
+      "href": "/en/investor-registration"
     },
     {
       "label": "مرکز کارآفرینان",
