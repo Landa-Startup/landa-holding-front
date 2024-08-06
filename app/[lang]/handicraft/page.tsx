@@ -25,7 +25,7 @@ export default async function Page({
         logo="/static/images/handicrafts.svg"
         lang={lang}
       />
-      <div className="mx-8 my-14 flex flex-col justify-center gap-8 md:mx-24">
+      <div className=" my-14 flex flex-col justify-center gap-8 md:mx-24">
         <div className="relative flex">
           <div className="pr-6 md:pb-24">
             <Image
@@ -42,12 +42,12 @@ export default async function Page({
             alt="handicraft"
             layout="fill"
           /> */}
-          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-20 md:pl-20">
+          <p className="z-10 mx-8 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-20 md:pl-20">
             {t('paragraph1')}
           </p>
         </div>
         <div className="relative flex flex-col-reverse justify-between gap-5 overflow-hidden md:flex-row">
-          <p className="mt-7 md:pt-20 text-justify font-barlow text-base font-normal leading-[45px] text-black md:mt-0 md:h-[480px] md:w-[652px] rtl:pr-5 ltr:pl-5">
+          <p className="mt-7 mx-8 md:pt-20 text-justify font-barlow text-base font-normal leading-[45px] text-black md:mt-0 md:h-[480px] md:w-[652px] rtl:pr-5 ltr:pl-5">
             {t('paragraph2')}
             <br />
             {/* {t('paragraph3')} */}
@@ -72,7 +72,7 @@ export default async function Page({
         <div className="relative flex">
           <div className="pr-6 md:pt-">
             <Image
-              className="hidden md:block  md:w-[3500px] md:h-[350px]"
+              className="hidden md:block md:w-[3500px] md:h-[350px]"
               src="/static/images/landacraft4.png"
               alt="handicraft"
               width={800}
@@ -85,7 +85,7 @@ export default async function Page({
             alt="handicraft"
             layout="fill"
           /> */}
-          <p className="z-10 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-6 md:pl-20 rtl:md:w-[2800px] md:rtl:pt-12">
+          <p className="z-10 mx-8 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-6 md:pl-20 rtl:md:w-[2800px] md:rtl:pt-12">
             {t('paragraph3')}
           </p>
         </div>
