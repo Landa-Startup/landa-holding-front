@@ -111,7 +111,7 @@
         },
         {
             "image": "/static/images/our-team/Personals/a17.png",
-            "position": "Front end",
+            "position": "Front end Developer",
             "name": "فهیمه سجادی",
             "linkedIn": "https://www.linkedin.com/in/fahimeh-sajadi-50a399202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
             "category": "برنامه نویسان"
@@ -125,21 +125,21 @@
         },
         {
             "image": "/static/images/our-team/Personals/65.jpg",
-            "position": "Back end",
+            "position": "Back end Developer",
             "name": "متین نجات بخش",
             "linkedIn": "",
             "category": "برنامه نویسان"
         },
         {
             "image": "/static/images/our-team/Personals/barad1.jpg",
-            "position": "Front end",
+            "position":  "Front end Developer",
             "name": "باراد دهقانی",
             "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
             "category": "برنامه نویسان"
         },
         {
             "image": "/static/images/our-team/Personals/121.jpg",
-            "position": "Front end",
+            "position": "Front end Developer",
             "name": "امیر محمد اصفهانی زاده",
             "linkedIn": "",
             "category": "برنامه نویسان"
@@ -149,7 +149,7 @@
             "position": "مدیر مهاجرت",
             "name": "سبحان محمدی",
             "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
-            "category": "تحقیق و توسعه"
+            "category": "مهاجرت"
         },
         {
             "image": "/static/images/our-team/Personals/milad copy 2.jpg",
@@ -160,10 +160,10 @@
         },
         {
             "image": "/static/images/our-team/Personals/MAHSA.jpg",
-            "position": "تولید محتوا",
+            "position": "دستیار امور مهاجرت",
             "name": "مهسا قربانی",
             "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
-            "category": "تحقیق و توسعه"
+            "category": "مهاجرت"
         },
         {
             "image": "/static/images/our-team/Personals/sama.png",
@@ -188,7 +188,7 @@
         },
         {
             "image": "/static/images/our-team/Personals/shamim.jpg",
-            "position": "موشن گراف",
+            "position": "طراح گرافیک",
             "name": "شمیم بهشتی",
             "linkedIn": "",
             "category": "طراحان"
@@ -214,6 +214,7 @@
         "روابط عمومی",
         "بازاریاب دیجیتال",
         "دستیار مدیر",
-        "تحقیق و توسعه"
+        "تحقیق و توسعه",
+        "مهاجرت"
     ]
 }

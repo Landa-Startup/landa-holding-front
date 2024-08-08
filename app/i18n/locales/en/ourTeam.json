@@ -4,21 +4,21 @@
     "persons": [
         {
           "image": "/static/images/our-team/Personals/a1.png",
-          "position": "Founder and CEO",
+          "position": "COB",
           "name": "Dr.Rasoul Moradimehr",
           "linkedIn": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
           "category": "managers"
         },
         {
           "image": "/static/images/our-team/Personals/a2.png",
-          "position": "COTB", 
+          "position": "CEO", 
           "name": "Dr.Hadi Hasanpour",
           "linkedIn": "https://www.linkedin.com/in/hadi-hasanpour?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "category": "managers"
         },
         {
           "image": "/static/images/our-team/Personals/a11.png",
-          "position": "Case Manager",
+          "position": "Legal",
           "name": "Mahsa Esmaeili",
           "linkedIn": "https://www.linkedin.com/in/mahsa-esmaili",
           "category": "managers"
@@ -32,14 +32,14 @@
         },
         {
           "image": "/static/images/our-team/Personals/a4.png",
-          "position": "Public Relations Officer",
+          "position": "Public Relations",
           "name": "Kholoud Hariri",
           "linkedIn": "linkedin.com/in/kholoud-hariri-b83b96222",
           "category": "public relations officer"
         },
         {
           "image": "/static/images/our-team/Personals/a33.png",
-          "position": "Public Relations Officer",
+          "position": "Public Relations",
           "name": "Gelareh Bahrami",
           "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
           "category": " officer"
@@ -47,7 +47,7 @@
 
         {
           "image": "/static/images/our-team/Personals/a3.png",
-          "position": "Manager Assistant",
+          "position": "office Adminestrativ",
           "name": "Lida Parvizi",
           "linkedIn": "https://www.linkedin.com/in/lida-parvizi-ab7b8721a/",
           "category": "Manager Assistant"
@@ -55,21 +55,21 @@
 
         {
           "image": "/static/images/our-team/Personals/a35.jpg",
-          "position": "Director of Public Relations",
+          "position": "Public Relations Manager",
           "name": "Arash Aryanik",
           "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
           "category": "public relations officer"
         },
         {
           "image": "/static/images/our-team/Personals/saedi.png",
-          "position": "Full stack",
+          "position": "Poroduct Manager",
           "name": "Mahdi Saedi",
           "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
           "category": "mentors"
         },
         {
           "image": "/static/images/our-team/Personals/a7.png",
-          "position": "Full stack",
+          "position": "Project Manager",
           "name": "Sajjad Momeni",
           "linkedIn": "https://www.linkedin.com/in/sajjad-momeni-17ab4778/",
           "category": "mentors"
@@ -83,21 +83,21 @@
         },
         {
           "image": "/static/images/our-team/Personals/a9.png",
-          "position": "Digital Marketer",
+          "position": "Marketing Specialist",
           "name": "Ehsan Aliakbari",
           "linkedIn": "https://www.linkedin.com/in/ehsan-aliakbari",
           "category": "digital marketer"
         },
         {
           "image": "/static/images/our-team/Personals/a5.png",
-          "position": "Accountant",
+          "position": "Accounting Manager",
           "name": "Ali Soleimani",
           "linkedIn": "https://www.linkedin.com/in/ali-soleymani-b761b6223/",
           "category": "accountant"
         },
         {
           "image": "/static/images/our-team/Personals/a21.png",
-          "position": "Graphic Designer",
+          "position": "Graphic Designer Supervisor",
           "name": "Hoda Mahdi",
           "linkedIn": "https://www.linkedin.com/in/hoda-mahdi-896855269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "category": "designers"
@@ -111,7 +111,7 @@
         },
         {
           "image": "/static/images/our-team/Personals/a17.png",
-          "position": "Front-end",
+          "position": "Front-end Developer",
           "name": "Fahimeh Sajjadi",
           "linkedIn": "https://www.linkedin.com/in/fahimeh-sajadi-50a399202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
           "category": "programmers"
@@ -125,21 +125,21 @@
         },
         {
           "image": "/static/images/our-team/Personals/65.jpg",
-          "position": "Back-end",
+          "position": "Back-end Developer",
           "name": "Matin Nejatbakhsh",
           "linkedIn": "",
           "category": "programmers"
         },
         {
           "image": "/static/images/our-team/Personals/barad1.jpg",
-          "position": "Front-end",
+          "position": "Front-end Developer",
           "name": "Barad Dehghani",
           "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
           "category": "programmers"
         },
         {
           "image": "/static/images/our-team/Personals/121.jpg",
-          "position": "Front-end",
+          "position": "Front-end Developer",
           "name": "Amir Mohammad Esfahanizade",
           "linkedIn": "",
           "category": "programmers"
@@ -150,7 +150,7 @@
           "position": "Immigration Manager",
           "name": "Sobhan Mohammadi",
           "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
-          "category": "R&D Department"
+          "category": "Immigration"
       },
     {
       "image": "/static/images/our-team/Personals/milad copy 2.jpg",
@@ -161,10 +161,10 @@
     },
     {
       "image": "/static/images/our-team/Personals/MAHSA.jpg",
-      "position": "Content Creator",
+      "position": "Immigration Assistant",
       "name": "Mahsa Ghorbani",
       "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
-      "category": "R&D Department"
+      "category": "Immigration"
     },
     {
       "image": "/static/images/our-team/Personals/sama.png",
@@ -183,14 +183,14 @@
     },
     {
       "image": "/static/images/our-team/Personals/a32.png",
-      "position": "Front-end",
+      "position": "Front-end Developer",
       "name": "Matin Janghorbani",
       "linkedIn": "",
       "category": "programmers"
     },
     {
       "image": "/static/images/our-team/Personals/shamim.JPG",
-      "position": "Motion Graphic",
+      "position": "Graphic Designer",
       "name": "Shamim Beheshti",
       "linkedIn": "",
       "category": "designers"
@@ -215,6 +215,7 @@
     "Public Relations",
     "Digital Marketer",
     "Manager Assistant",
-    "R&D Department"
+    "R&D Department",
+    "Immigration"
   ]
 }
