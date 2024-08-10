@@ -2,19 +2,19 @@
   "menuItems": [
     {
       "label": "خانه",
-      "href": "/en"
+      "href": "/"
     },
     {
       "label": "درباره ما",
-      "href": "/en/about"
+      "href": "/about"
     },
     {
       "label": "تماس با ما",
-      "href": "/en/contact"
+      "href": "/contact"
     },
     {
       "label": "تیم ما",
-      "href": "/en/our-team"
+      "href": "/our-team"
     }
   ],
   "submenuItems": [

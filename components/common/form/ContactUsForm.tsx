@@ -39,6 +39,8 @@ export default function ContactUsForm() {
 
   const { t } = useTranslation(lang, 'formComponent');
 
+  const { send } = useSubmit();
+
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
@@ -159,6 +161,7 @@ export default function ContactUsForm() {
           <Button
             type="submit"
             bgColor="Primary"
+            text={send ? t("sendingButton") : t("sendButton")}
             disabled={errorsList[0] ? true : false}
           />
         </div>
