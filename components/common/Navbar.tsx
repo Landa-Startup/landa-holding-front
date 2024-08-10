@@ -2,8 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
-import LanguageSwitch from './LanguageSwitch';
+// import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
+import { setCookie } from 'cookies-next';
 // import IconDown from '../icons/IconDown';
 // import { useRouter } from 'next/navigation';
 // import { i18n } from 'next-i18next';
@@ -23,6 +24,8 @@ export default function Navbar({
   const submenuItems = t('submenuItems', { returnObjects: true });
 
   console.log(menuItems, submenuItems)
+
+  setCookie("i18next", lang);
 
   // const { setRendered } = useLang();
 
@@ -219,9 +222,9 @@ export default function Navbar({
 
           </li>
           <div className="absolute bottom-5 mx-auto w-72 rounded px-12">
-            <div className=" mx-auto rounded-lg bg-[#DCDCDC] py-2">
+            {/* <div className=" mx-auto rounded-lg bg-[#DCDCDC] py-2">
               <LanguageSwitch />
-            </div>
+            </div> */}
             {/* <div className="flex h items-center justify-between px-10 text-black md:hidden">
               
               <Link

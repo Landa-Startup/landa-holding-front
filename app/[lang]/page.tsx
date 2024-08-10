@@ -25,6 +25,7 @@ export default async function Page({
 }: {
   params: { lang: string };
 }) {
+  console.log(lang)
   const { t } = await useTranslation(lang, 'mainPage');
 
   return (
