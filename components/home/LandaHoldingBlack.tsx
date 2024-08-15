@@ -16,7 +16,7 @@ export default function LandaHoldingBlack() {
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
         <div className="flex flex-col items-center self-start md:items-start">
           <div className="flex flex-col">
-            <span className="w-[390px] border-b border-black pb-3 text-center font-gilda text-4xl font-bold text-black md:border-none md:text-start md:ltr:pl-48 md:w-[600px] md:pt-14 md:rtl:pr-16">
+            <span className="w-[390px] border-b border-black pb-3 text-center ltr:font-gilda rtl:font-EBGaramond text-4xl font-bold text-black md:border-none md:text-start md:ltr:pl-48 md:w-[600px] md:pt-14 md:rtl:pr-16">
               {t('InvestorCenter')}
               <br />
             </span>
@@ -43,7 +43,7 @@ export default function LandaHoldingBlack() {
       <div className="z-10 flex h-[28rem] flex-col items-center justify-between rtl:mr-1 md:pt-8 md:shadow-xl md:w-[620px] md:h-[570px] rounded-xl">
         <div className="flex flex-col w-full items-center self-start md:items-start">
           <div className="flex flex-col pt-4 md:pt-0 w-full">
-            <span className="border-b border-black pb-3 pt-4 text-center md:text-center font-gilda text-3xl font-bold text-black md:border-none md:text-4xl md:pt-5">
+            <span className="border-b border-black pb-3 pt-4 text-center md:text-center font-gilda rtl:font-EBGaramond text-3xl font-bold text-black md:border-none md:text-4xl md:pt-5">
               {t('EntrepreneurCenter')}
               <br />
             </span>

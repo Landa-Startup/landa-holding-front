@@ -22,7 +22,7 @@ export default function ContactUsDescription() {
         <h1 className="font-gilda text-4xl font-light md:text-5xl text-black">
           {t('LandaHolding')}
         </h1>
-        <p className="my-5 text-justify font-gilda">{t('text')}</p>
+        <p className="my-5 text-justify font-normal">{t('text')}</p>
       </div>
       {/* TODO: make code more modular with new components */}
       {/* TODO: avoid hardcode links and urls */}

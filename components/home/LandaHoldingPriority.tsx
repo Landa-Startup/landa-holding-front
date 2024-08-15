@@ -11,7 +11,7 @@ export default function LandaHoldingPriority() {
     <div className="relative inline-flex w-full flex-col items-center justify-start gap-9 bg-white py-10 xl:h-[613px] ">
       <div className="flex flex-col items-start">
         <div className="mb-4 flex flex-col items-start pt-4 md:pt-0 ltr:ml-4 rtl:mr-4">
-          <span className="mb-5 font-gilda  pl-10 md:pl-0  text-4xl  font-bold text-black ltr:tracking-widest rtl:tracking-normal">
+          <span className="mb-5 ltr:font-gilda rtl:font-EBGaramond  pl-10 md:pl-0  text-4xl  font-bold text-black ltr:tracking-widest rtl:tracking-normal">
             {t('Priorities')}
           </span>
         </div>

@@ -85,7 +85,7 @@ export default function Partners() {
 
   return (
     <div className="my-6 flex flex-col items-center gap-12">
-      <span className="text-3xl text-primary md:text-4xl font-condensed">
+      <span className="text-3xl text-primary rtl:font-EBGaramond ltr:font-gilda md:text-4xl font-condensed">
         {t('partners', { returnObjects: true }).title}
       </span>
       <div

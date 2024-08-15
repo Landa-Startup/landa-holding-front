@@ -32,7 +32,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
               height={100}
             />
           </div>
-          <div className='self-center p-2 font-gilda text-[24px] font-normal leading-normal'>
+          <div className='self-center p-2 ltr:font-gilda rtl:font-EBGaramond text-bold text-[24px] font-normal leading-normal'>
             {subTitle}
           </div>
           <div className='flex h-full flex-col gap-4'>

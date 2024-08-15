@@ -14,7 +14,7 @@ export default function HomeLandaAcademy() {
     <div className="flex justify-center p-10 md:p-32">
         <div className="w-full text-justify font-barlow md:w-[58%]">
             {/* <p className="mb-2 ltr:tracking-[6px]">{t('Landaholding')}</p> */}
-            <h1 className="mb-8 font-gilda text-4xl font-bold md:pt-12">{t('LandaAcademy')}</h1>
+            <h1 className="mb-8 ltr:font-gilda rtl:font-EBGaramond text-4xl font-bold md:pt-12">{t('LandaAcademy')}</h1>
             <p className="leading-8">
                 {t('LandaAcademyInfo')}
             </p>
