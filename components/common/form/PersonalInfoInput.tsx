@@ -33,20 +33,20 @@ const PersonalInfoInput = ({
   
   const { t } = useTranslation(lang, 'formComponent');
 
-  enum Type {
-    INTERN = t("INTERN"),
-    EMPLOYEE = t('EMPLOYEE'),
-  }
+  // enum Type {
+  //   INTERN = t("INTERN"),
+  //   EMPLOYEE = t('EMPLOYEE'),
+  // }
 
-  const Types = [
-    Type.INTERN,
-    Type.EMPLOYEE,
-  ];
+  // const Types = [
+  //   Type.INTERN,
+  //   Type.EMPLOYEE,
+  // ];
 
-  const typesData = Types.map((type: any) => ({
-    value: type,
-    label: type
-  }));
+  // const typesData = Types.map((type: any) => ({
+  //   value: type,
+  //   label: type
+  // }));
 
 
   enum Type {
