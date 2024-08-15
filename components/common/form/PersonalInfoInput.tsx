@@ -207,23 +207,21 @@ const PersonalInfoInput = ({
           }
         </div>)}
         {nameInputs?.jobPosition && (
-        <div 
-        className=' grod grid-cols-2'
-        >
-          <Select
-            register={register}
-            errors={errors}
-            nameInput="statusSelect"
-            label={t('jobPosition')}
-            required={t('jobPositionRequired')}
-            className="select select-bordered mt-4 w-[326px] md:w-[435px] shadow-lg pr-7"
-            labelClass="text-[#6b6b6b] dark:text-current"
-            placeholder={t('jobPositionPlaceholder')}
-              
-            options={typesData}
-            // handleChange={handleItemChange}
-            // selected={selectedRadio}
-          />
+
+            <div className="col-span-1">
+            <Input
+              register={register}
+              errors={errors}
+              nameInput="fieldOfProfessional"
+              type="text"
+              label={t('prosField')}
+              required={t('prosFieldRequired')}
+              placeholder={t('prosFieldPlaceholder')}
+              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+              labelClass="text-[#6b6b6b] dark:text-current"
+              patternValue={''}
+              patternMessage={''}
+            />
           </div>)}
           {nameInputs?.jobPosition && (
 <div>

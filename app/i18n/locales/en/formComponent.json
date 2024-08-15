@@ -317,9 +317,9 @@
   "websitePlaceholder": "Your Webstie",
   "websiteRequired": "This field is required!",
 
-  "prosField": "Field Of Professional *",
+  "prosField": "Type of Collaboration  *",
   "prosFieldRequired": "This field is required!",
-  "prosFieldPlaceholder": "field of professional",
+  "prosFieldPlaceholder": "employment / neophyte",
 
   "EntrepreneurTitle": "Entrepreneur Center Form",
   "PersonalInformation": "Personal Information"
