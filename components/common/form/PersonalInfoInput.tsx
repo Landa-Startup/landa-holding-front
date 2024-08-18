@@ -33,20 +33,20 @@ const PersonalInfoInput = ({
   
   const { t } = useTranslation(lang, 'formComponent');
 
-  // enum Type {
-  //   INTERN = t("INTERN"),
-  //   EMPLOYEE = t('EMPLOYEE'),
-  // }
+  enum Type {
+    INTERN = t("INTERN"),
+    EMPLOYEE = t('EMPLOYEE'),
+  }
 
-  // const Types = [
-  //   Type.INTERN,
-  //   Type.EMPLOYEE,
-  // ];
+  const Types = [
+    Type.INTERN,
+    Type.EMPLOYEE,
+  ];
 
-  // const typesData = Types.map((type: any) => ({
-  //   value: type,
-  //   label: type
-  // }));
+  const typesData = Types.map((type: any) => ({
+    value: type,
+    label: type
+  }));
 
 
   enum Type {
@@ -201,7 +201,7 @@ const PersonalInfoInput = ({
             patternValue="^[0-9]{11}$"
             patternMessage={t('phoneNumberErrorMessage')}
             placeholder={t('phoneNumberPlaceholder')}
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1  mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
           }
@@ -209,19 +209,23 @@ const PersonalInfoInput = ({
         {nameInputs?.jobPosition && (
 
             <div className="col-span-1">
-            <Input
-              register={register}
-              errors={errors}
-              nameInput="fieldOfProfessional"
-              type="text"
-              label={t('prosField')}
-              required={t('prosFieldRequired')}
-              placeholder={t('prosFieldPlaceholder')}
-              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
-              patternValue={''}
-              patternMessage={''}
-            />
+
+           <Select
+
+            register={register}
+            errors={errors}
+            nameInput="Application"
+            label={t('jobPosition')}
+            required={t('jobPositionRequired')}
+            className="select select-bordered w-[326px] md:w-[435px] mt-4 shadow-lg pr-7"
+            labelClass="text-[#6b6b6b] dark:text-current"
+            placeholder={t('jobPositionPlaceholder')}
+              
+            options={typesData}
+            // handleChange={handleItemChange}
+            // selected={selectedRadio}
+          />
+
           </div>)}
           {nameInputs?.jobPosition && (
 <div>
