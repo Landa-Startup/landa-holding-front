@@ -99,7 +99,7 @@ export default function ContactUsForm() {
 
   return (
     <div className="flex h-full flex-col items-center justify-between md:items-start">
-      <h2 className="flex w-full justify-center font-gilda text-4xl font-light ltr:tracking-[.em] md:text-5xl">
+      <h2 className="flex w-full justify-center font-gilda text-4xl mb-10 ltr:tracking-[.em] ">
         {t('contactForm', { returnObjects: true }).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>

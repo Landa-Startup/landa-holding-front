@@ -40,7 +40,7 @@ export default async function ContactUsPage({
           }}
           className="absolute inset-0 h-full md:h-[520px]  "
         >
-            <span className='get-shadow absolute z-10 top-[40rem] md:top-60 left-[10%] text-4xl text-white md:text-8xl font-gilda  '>{t('banner')}</span>
+            <span className='get-shadow absolute z-10 top-[40rem] md:top-[24rem] left-[10%] text-4xl text-white md:text-8xl font-gilda  '>{t('banner')}</span>
         </div>
       </div>
 

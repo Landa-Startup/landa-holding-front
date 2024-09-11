@@ -76,17 +76,18 @@ export default function Navbar({
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block h-8 w-8 stroke-current"
+                className="inline-block h-8 w-8 stroke-current text-white"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  // d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
+                  stroke="white"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+        </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
               <div className="flex flex-col items-center md:flex-row md:items-end">

@@ -21,7 +21,7 @@ export default function PartnersStartupCard({
         />
       </div>
       <div className="flex flex-col gap-8 mt-5">
-        <span className="font-gilda  text-md">{title}</span>
+        <span className="font-gilda font-bold text-center text-md">{title}</span>
         <p className="font-barlow leading-4 text-xs">
           {description}
         </p>

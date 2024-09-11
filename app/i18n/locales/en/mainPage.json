@@ -273,7 +273,7 @@
         "image": "/static/images/Home/upcomming-Sartup/handicraft.png",
         "subTitle": "LANDA CRAFT",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
-        "goto": "/handicraft",
+        "goto": "https://craft.landaholding.com/",
         "buttonText" : "Register",
         "gene": false
       },
@@ -281,15 +281,7 @@
         "image": "/static/images/Home/upcomming-Sartup/2.png",
         "subTitle": "PRIVENTY GENE",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build asafe communication bridge between makers and purchasers.",
-        "goto": "/landa-gene",
-        "buttonText" : "Register",
-        "gene": true
-      },
-      {
-        "image": "/static/images/Home/upcomming-Sartup/10.png",
-        "subTitle": "LANDA GENE",
-        "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
-        "goto": "#",
+        "goto": "http://preventigene.com/",
         "buttonText" : "Register",
         "gene": true
       }

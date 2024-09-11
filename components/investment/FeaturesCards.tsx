@@ -20,7 +20,7 @@ export default function FeaturesCards({
   // }
 
   return (
-    <div  className="flex flex-col justify-between p-3 md:w-[580px] font-gilda get-box-shadow rounded-lg  ">
+    <div  className="flex flex-col justify-between p-3 md:w-[580px] font-gilda shadow-xl rounded-lg  ">
       <div className='flex flex-col'>
         <span className=" text-lg mx-auto p-2 font-bold ">{title}</span>
         <p className="text-[12px] md:text-[13px] ">{description}</p>

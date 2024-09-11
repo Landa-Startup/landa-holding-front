@@ -53,7 +53,7 @@ export default function HomeUpComingStartups() {
             {t('upcomingStartups', { returnObjects: true }).title}
           </p>
         </div>
-        <div className="flex flex-col md:gap-8 md:flex-row justify-between">
+        <div className="flex flex-col md:gap-8 md:flex-row ">
           {renderCards(t('upcomingStartups', { returnObjects: true }).cards)}
         </div>
       </div>

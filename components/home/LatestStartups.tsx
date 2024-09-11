@@ -59,12 +59,7 @@ export default function LatestStartups() {
               )}
           </div>
           <div className="my-14 h-auto w-[224px] p-2 mx-auto">
-            <ButtonRefactor
-              text={t('SeeMore')}
-              type="link"
-              href="https://academy.landaholding.com/"
-              bgColor="black"
-            />
+
           </div>
         </div>
       </div>

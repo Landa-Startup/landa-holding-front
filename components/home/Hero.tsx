@@ -114,7 +114,7 @@ export default function Hero({
         >
           {currentTitle}
         </div> */}
-      <div className="absolute top-2/3 mt-20 flex items-center justify-center bg-[#DDCEBA] p-4  ltr:left-0 ltr:rounded-br-2xl rtl:right-0 rtl:rounded-bl-2xl md:top-2/3 md:w-[700px] md:rtl:right-0">
+      <div className="absolute top-2/3 mt-20 flex items-center justify-center bg-[#DDCEBA] p-4  ltr:left-0 ltr:rounded-br-2xl rtl:right-0 rtl:rounded-bl-2xl md:top-3/4 md:w-[700px] md:rtl:right-0">
         <div
           className={`text-bold text-center font-barlow text-xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:font-gilda md:text-5xl`}
         >
