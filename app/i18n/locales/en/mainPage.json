@@ -12,15 +12,15 @@
   "OurTeam": "OUR TEAM",
   "ourTeamText": "Our team of experts is comprised of professionals who are passionate about their work, and have an extensive background in a wide variety of applications, and are willing to help at any time",
   "Forms": "FORMS",
-  "InvestorCenter": "INVESTMENT",
-  "EntrepreneurCenter": "ENTREPRENEUR",
+  "InvestorCenter": "Investment",
+  "EntrepreneurCenter": "Entrepreneur",
   "BusinessPartners": "BUSINESS PARTNERS",
   "Startups Validation": "STARTUPS VALIDATION",
   "ApplyJob": "APPLY JOB",
   "Landa": "LANDA",
   "PartnersTitle": "Join Our Business Partners",
   "PartnersDescription": "At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape. To become an affiliate, please complete our free questionnaire for our confidential review.",
-  "LatestStartups": "LATEST STARTUPS",
+  "LatestStartups": "Latest Starups",
   "Priorities": "Investment Priorities",
   "businessTeamText": "What Our Cooperation Members Say",
   "visit": "Visit Now",
@@ -261,7 +261,7 @@
   "register": "Register",
   "upcomingStartups": {
     "landaHolding": "LANDA HOLDING",
-    "title": "UPCOMING STARTUPS",
+    "title": "Upcoming Startups",
     "cards": [
       {
         "image": "/static/images/Home/upcomming-Sartup/handicraft.png",
