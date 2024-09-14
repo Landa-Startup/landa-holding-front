@@ -1,5 +1,5 @@
 import {
-  HandicraftForm as HandicraftFormData,
+  HandicraftForm as HandicraftFormDataType,
   StartupsFormData,
   WorkWithUSFormData
 } from '../types/global';
@@ -138,7 +138,7 @@ const ContactFormData: ContactUSFormData = {
   message: ''
 };
 
-const HandicraftFormData: HandicraftFormData = {
+const HandicraftFormData: HandicraftFormDataType = {
   first_name: '',
   last_name: '',
   email: '',

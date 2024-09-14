@@ -5,7 +5,7 @@ import { PersonalInfoInput } from './PersonalInfoInput';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import { useForm } from 'react-hook-form';
 import { HandicraftFormData } from 'initials/initObjects';
-import { HandicraftForm } from '../../../types/global';
+import { HandicraftForm as HandicraftFormType} from '../../../types/global';
 import Input from './Input';
 import NotificationSendForm from './NotificationSendForm';
 import { useTranslation } from 'app/i18n/client';
@@ -36,7 +36,7 @@ export default function HandicraftForm() {
     handleSubmit,
     formState: { errors },
     reset
-  } = useForm<HandicraftForm>({
+  } = useForm<HandicraftFormType>({
     mode: 'onBlur',
     defaultValues: HandicraftFormData
   });
@@ -52,7 +52,7 @@ export default function HandicraftForm() {
     fetchCsrfToken();
   }, []);
 
-  const onSubmit = async (formData: HandicraftForm) => {
+  const onSubmit = async (formData: HandicraftFormType) => {
     // Set loading and sending states.
     handleSubmitingChange(true);
     handleSendChange(true);
