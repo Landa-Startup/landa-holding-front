@@ -32,7 +32,7 @@ export default function ContactUsDescription() {
           target="_blank"
         >
         <Image
-          src="/static/images/icons/instagram1.png"
+          src="/static/images/icons/instagram_second.png"
           alt="Landa Key Differentiating"
           width={30}
           height={741}
@@ -41,7 +41,7 @@ export default function ContactUsDescription() {
         </Link>
         <Link href={'https://wa.me/989120539563'} target="_blank">
         <Image
-          src="/static/images/icons/whatsapp1.png"
+          src="/static/images/icons/whatsapp_second.png"
           alt="Landa Key Differentiating"
           width={30}
           height={741}

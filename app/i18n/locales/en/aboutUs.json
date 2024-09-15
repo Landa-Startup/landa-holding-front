@@ -131,11 +131,6 @@
       "name": "FOROUGH",
       "logo": "9.png",
       "link": "https://landaholding.com/acceleration"
-    },
-    {
-      "name": "IRIMMIGRATION",
-      "logo": "2.png",
-      "link": "https://Irimmigration.ca"
     }
   ],
   "professionals": "professionals",
@@ -145,7 +140,7 @@
     {
       "image": "/static/images/our-team/Personals/mohandesj.png",
       "name": "Morteza Jafari",
-      "position": "International Relations",
+      "position": "COTB",
       "links": {
         "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
         "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
@@ -157,7 +152,7 @@
     {
       "image": "/static/images/our-team/Personals/drimage.jpg",      
       "name": "Rasoul Moradimehr",
-      "position": "CEO",
+      "position": "MOTB",
       "links": {
         "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
         "whatsapp": "wa.me/+989134233863",
@@ -170,7 +165,7 @@
     {
       "image": "/static/images/our-team/Personals/dr2image.jpg",     
       "name": "Hadi Hasanpour",
-      "position": "COTB",
+      "position": "CEO",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",

@@ -56,7 +56,6 @@ export default function ButtonRefactor({
             >
               <div className='z-10 flex items-center gap-2 rtl:flex-row-reverse text-sm'>
                 <span>{text}</span>
-                {/* <ChevronRightIcon className="h-5 w-5" /> */}
               </div>
             </button>
             <span

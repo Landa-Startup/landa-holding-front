@@ -124,11 +124,6 @@
       "name": "فروغ",
       "logo": "9.png",
       "link": "https://landaholding.com/acceleration"
-    },
-    {
-      "name": "IRimmigration",
-      "logo": "2.png",
-      "link": "https://Irimmigration.ca"
     }
   ],
   "professionals": "موسسین",
@@ -137,7 +132,7 @@
     {
       "image": "/static/images/our-team/Personals/mohandesj.png",
       "name": "مرتضی جعفری",
-      "position": "مدیر ارتباطات بین الملل",
+      "position": "رئیس هیئت مدیره",
       "links": {
         "linkedin": "https://www.linkedin.com/in/morteza-jafari-5b40b63a",
         "whatsapp": "https://api.whatsapp.com/send?phone=+14705199691",
@@ -149,7 +144,7 @@
     {
       "image": "/static/images/our-team/Personals/drimage.jpg",
       "name": "رسول مرادی مهر",
-      "position": " هم بنیانگذار و مدیرعامل",
+      "position": "عضو هیئت مدیره",
       "links": {
         "linkedin": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
         "whatsapp": "wa.me/+989134233863",
@@ -162,7 +157,7 @@
     {
       "image": "/static/images/our-team/Personals/dr2image.jpg",
       "name": "هادی حسن پور",
-      "position": "هم بنیانگذار و رئیس هیئت مدیره",
+      "position": "مدیرعامل",
       "links": {
         "linkedin": "https://www.linkedin.com/in/hadi-hasanpour",
         "whatsapp": "https://wa.me/+12892693933",
