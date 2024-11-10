@@ -64,7 +64,7 @@
           "image": "/static/images/our-team/Personals/saedi.png",
           "position": "Poroduct Manager",
           "name": "Mahdi Saedi",
-          "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
+          "linkedIn": "https://www.linkedin.com/in/mehdisaedi/",
           "category": "mentors"
         },
         {
@@ -76,7 +76,7 @@
         },
         {
           "image": "/static/images/our-team/Personals/arshia2.jpg",
-          "position": "UX/UI Designer",
+          "position": "Poroduct Designer",
           "name": "Arshia Nasiri",
           "linkedIn": "https://www.linkedin.com/in/marshian03",
           "category": "designers"
@@ -127,7 +127,7 @@
           "image": "/static/images/our-team/Personals/65.jpg",
           "position": "Back-end Developer",
           "name": "Matin Nejatbakhsh",
-          "linkedIn": "",
+          "linkedIn": "https://www.linkedin.com/in/matin-nejatbakhsh",
           "category": "programmers"
         },
         {
@@ -141,6 +141,13 @@
           "image": "/static/images/our-team/Personals/121.jpg",
           "position": "Front-end Developer",
           "name": "Amir Mohammad Esfahanizade",
+          "linkedIn": "",
+          "category": "programmers"
+        },
+        {
+          "image": "/static/images/our-team/Personals/Sadegh1.png",
+          "position": "Front-end Developer",
+          "name": "Sadegh Parvaresh",
           "linkedIn": "",
           "category": "programmers"
         },
@@ -167,6 +174,20 @@
       "category": "Immigration"
     },
     {
+      "image": "/static/images/our-team/Personals/parasto.JPG",
+      "position": "Immigration Assistant",
+      "name": "Parastoo Sanaifar",
+      "linkedIn": "https://www.linkedin.com/in/parastoo-sanaifar-2a71a12b8/",
+      "category": "Immigration"
+    },
+    {
+      "image": "/static/images/our-team/Personals/merisa2.jpg",
+      "position": "Immigration Assistant",
+      "name": "Merisa Moradkhan",
+      "linkedIn": "https://www.linkedin.com/in/merisa-moradkhan-a27178313/",
+      "category": "Immigration"
+    },
+    {
       "image": "/static/images/our-team/Personals/sama.png",
       "position": "Public Relations",
       "name": "Sama Alinaghian",
@@ -190,18 +211,20 @@
     },
     {
       "image": "/static/images/our-team/Personals/shamim.JPG",
-      "position": "Graphic Designer",
+      "position": "motion graphicst",
       "name": "Shamim Beheshti",
-      "linkedIn": "",
+      "linkedIn": "https://www.linkedin.com/in/shamim-beheshti-7525152b2/",
       "category": "designers"
     },
     {
       "image": "/static/images/our-team/Personals/alireza.jpg",
       "position": "Editor",
       "name": "Alireza Zamani",
-      "linkedIn": "",
+      "linkedIn": "https://www.linkedin.com/in/alireza-zamani-768066306/",
       "category": "content creators"
     }
+
+
 
   ],
   "roles": [

@@ -63,7 +63,7 @@
             "image": "/static/images/our-team/Personals/saedi.png",
             "position": "Full stack",
             "name": "مهدی ساعدی",
-            "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
+            "linkedIn": "https://www.linkedin.com/in/mehdisaedi/",
             "category": "مربیان"
           },
           {
@@ -127,7 +127,7 @@
             "image": "/static/images/our-team/Personals/65.jpg",
             "position": "Back end Developer",
             "name": "متین نجات بخش",
-            "linkedIn": "",
+            "linkedIn": "https://www.linkedin.com/in/matin-nejatbakhsh",
             "category": "برنامه نویسان"
         },
         {
@@ -144,6 +144,13 @@
             "linkedIn": "",
             "category": "برنامه نویسان"
         },
+        {
+            "image": "/static/images/our-team/Personals/Sadegh1.png",
+            "position": "Front end Developer",
+            "name": "صادق پرورش",
+            "linkedIn": "",
+            "category": "برنامه نویسان"
+          },
         {
             "image": "/static/images/our-team/Personals/sobhan1.jpg",
             "position": "مدیر مهاجرت",
@@ -165,6 +172,21 @@
             "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
             "category": "مهاجرت"
         },
+        {
+            "image": "/static/images/our-team/Personals/parasto.jpg",
+            "position": "دستیار امور مهاجرت",
+            "name": "پرستو ثنایی فر",
+            "linkedIn": "https://www.linkedin.com/in/parastoo-sanaifar-2a71a12b8/",
+            "category": "مهاجرت"
+        },
+        {
+            "image": "/static/images/our-team/Personals/merisa2.jpg",
+            "position": "Immigration Assistant",
+            "name": "مریسا مرادخان",
+            "linkedIn": "https://www.linkedin.com/in/merisa-moradkhan-a27178313/",
+            "category": "مهاجرت"
+          },
+        
         {
             "image": "/static/images/our-team/Personals/sama.png",
             "position": "روابط عمومی",
@@ -190,16 +212,17 @@
             "image": "/static/images/our-team/Personals/shamim.jpg",
             "position": "طراح گرافیک",
             "name": "شمیم بهشتی",
-            "linkedIn": "",
+            "linkedIn": "https://www.linkedin.com/in/shamim-beheshti-7525152b2/",
             "category": "طراحان"
           },
           {
             "image": "/static/images/our-team/Personals/alireza.jpg",
             "position": "ادیتور",
             "name": "علیرضا زمانی",
-            "linkedIn": "",
+            "linkedIn": "https://www.linkedin.com/in/alireza-zamani-768066306/",
             "category": "تولید کنندگان محتوا"
           }
+
 
 
     ],
