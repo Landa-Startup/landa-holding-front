@@ -272,10 +272,10 @@
         "gene": false
       },
       {
-        "image": "/static/images/Home/upcomming-Sartup/10.png",
-        "subTitle": "LANDA GENE",
-        "text": "Landa Gene is a creative, imaginative, and intelligent start-up that is beginning to operate by doing genetic testing in pursuit of a medical revolution and the prevention of hereditary disorders such as cancer.",
-        "goto": "/landa-gene",
+        "image": "/static/images/Home/upcomming-Sartup/otism.png",
+        "subTitle": "LANDA OTISM",
+        "text": "Otism is an art movement that highlights nature’s beauty and the human form through organic shapes, earthy tones, and fluid lines. Emerging in the 21st century, it evokes tranquility and connection, inviting viewers to reflect on their bond with the environment.",
+        "goto": "#",
         "buttonText" : "Register",
         "gene": true
       },
