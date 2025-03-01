@@ -67,6 +67,5 @@ export default function LandaHoldingBlack() {
         </div>
       </div>
     </div>
-    </div>
   );
 }
