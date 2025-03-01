@@ -10,8 +10,8 @@ async function submitWorkWithUsForm(
         'X-CSRFToken': csrfToken,
         'content-type': 'multipart/form-data'
       }
-    });
 
+    });
     return response;
   } catch (error) {
     console.error('Error sending form data:', error);

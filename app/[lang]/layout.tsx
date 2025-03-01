@@ -5,9 +5,8 @@ import { dir } from 'i18next'
 import { languages } from 'app/i18n/setting'
 import './globals.css';
 import { useLang } from 'stores/langStore';
-// import i18next from 'i18next';
+import { EB_Garamond } from 'next/font/google'
 
-// import Loading from './loading';
 
 export async function generateStaticParams() {
   return languages.map((lang) => ({ lang }));
@@ -40,7 +39,7 @@ export default function RootLayout({
       </head>
       <body>
         <Navbar lang={lang} >
-          <main>
+          <main className='max-w-[1600px] mx-auto'>
             {children}
           </main>
           <Footer lang={lang} />

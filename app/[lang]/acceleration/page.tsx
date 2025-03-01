@@ -34,21 +34,21 @@ export default async function Page({
       </div>
       
       {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
-      <div className="flex font-gilda px-10 gap-8 md:px-28 md:py-16 justify-between mt-28">
+      <div className="mt-28 flex justify-between gap-8 px-10 font-gilda md:px-28 md:py-16">
         <div className=' w-full  md:w-[47%]'> 
-          <span className={` text-3xl leading-tight font-bold md:text-5xl`}>
+          <span className={` text-3xl font-bold leading-tight md:text-5xl`}>
             {t('LandaAccelerator', { returnObjects: true })[0].title}
           </span>
-          <span className={`text-xl leading-tight md:text-3xl block`} >
+          <span className={`block text-xl leading-tight md:text-3xl`} >
             {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
           </span>
-          <p className={`text-justify font-barlow leading-8 ltr:text-lg rtl:text-base pt-8`} >
+          <p className={`pt-8 text-justify font-barlow leading-8 ltr:text-lg rtl:text-base`} >
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
         </div>
-        <div className="relative h-[320px] w-[45%] hidden md:inline">
+        <div className="relative hidden h-[320px] w-[45%] md:inline">
           <Image
-            className="object-cover rounded-lg"
+            className="rounded-lg object-cover"
             src="/static/images/acceleration/acc-2.jpg"
             alt="lamp"
             layout="fill"

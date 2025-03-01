@@ -173,6 +173,7 @@ export default function WorkWithUs() {
     handleSendChange(true);
 
     console.log(formData);
+    console.log('ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh');
 
     // Create a FormData object for form data.
     const sendFormData = new FormData();
@@ -221,6 +222,8 @@ export default function WorkWithUs() {
         }, 10000); // 10 seconds in milliseconds
       });
   };
+
+  // console.log('hajdfshfsjhdkjhf')
 
   // const errorsList = Object.entries(errors).map(([name, value]) => ({
   //   name: name,

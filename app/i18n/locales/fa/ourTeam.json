@@ -3,97 +3,95 @@
     "defaultRole": "همه",
     "persons": [
         {
-            "image": "/static/images/our-team/Personals/a1.png",
+            "image": "/static/images/our-team/Personals/a52.jpg",
+            "position": "عضو هیئت مدیره",
+            "name": "مرتضی جعفری",
+            "linkedIn": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
+            "category": "managers"
+        },
+        {
+            "image": "/static/images/our-team/Personals/rasoul.jpg",
             "position": "رییس هیئت مدیره",
-            "name": "دکتر رسول مرادی مهر",
+            "name": "رسول مرادی مهر",
             "linkedIn": "https://www.linkedin.com/in/rasoul-moradi-mehr/",
             "category": "مدیران"
         },
         {
-            "image": "/static/images/our-team/Personals/a2.png",
+            "image": "/static/images/our-team/Personals/hadi.png",
             "position": "مدیر عامل",
-            "name": "دکتر هادی حسن‌پور",
+            "name": "هادی حسن‌پور",
             "linkedIn": "https://www.linkedin.com/in/hadi-hasanpour?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
             "category": "مدیران"
         },
         {
-            "image": "/static/images/our-team/Personals/a11.png",
+            "image": "/static/images/our-team/Personals/mahsa-s.png",
             "position": "مدیر پرونده",
             "name": "مهسا اسماعیلی",
             "linkedIn": "https://www.linkedin.com/in/mahsa-esmaili",
             "category": "مدیران"
         },
         {
-            "image": "/static/images/our-team/Personals/a10.png",
+            "image": "/static/images/our-team/Personals/Mehrnoosh.jpg",
             "position": "مدیر",
             "name": "مهرنوش هیبتی",
             "linkedIn": "https://www.linkedin.com/in/mehrnoosh-heibati-62b117223/",
             "category": "مدیران"
         },
         {
+            "image": "/static/images/our-team/Personals/zhaleh.jpeg",
+            "position": "بازاریاب دیجیتال",
+            "name": "ژاله کلاهی",
+            "linkedIn": "https://www.linkedin.com/in/zhale",
+            "category": "مدیران"
+          },
+        {
             "image": "/static/images/our-team/Personals/a4.png",
-            "position": "روابط عمومی",
+            "position": "مسئول روابط عمومی",
             "name": "خلود حریری",
             "linkedIn": "linkedin.com/in/kholoud-hariri-b83b96222",
             "category": "روابط عمومی"
         },
         {
-            "image": "/static/images/our-team/Personals/a3.png",
+            "image": "/static/images/our-team/Personals/lida.png",
             "position": "دستیار مدیر",
             "name": "لیدا پرویزی",
             "linkedIn": "https://www.linkedin.com/in/lida-parvizi-ab7b8721a/",
             "category": "دستیار مدیر"
         },
         {
-            "image": "/static/images/our-team/Personals/a33.png",
+            "image": "/static/images/our-team/Personals/sara.jpeg",
+            "position": "مدیر منابع انسانی",
+            "name": "سارا رخشانی",
+            "linkedIn": "https://www.linkedin.com/in/lida-parvizi-ab7b8721a/",
+            "category": "مدیران"
+        },
+        {
+            "image": "/static/images/our-team/Personals/a33.JPG",
             "position": "مسئول روابط عمومی",
             "name": "گلاره بهرامی",
             "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
             "category": "مسئول روابط عمومی"
         },
-        
         {
-            "image": "/static/images/our-team/Personals/a35.jpg",
+            "image": "/static/images/our-team/Personals/arash.jpg",
             "position": "مدیر روابط عمومی",
             "name": "آرش آریانیک",
             "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
-            "category": "روابط عمومی"
+            "category": "مدیران"
         },
         {
-            "image": "/static/images/our-team/Personals/saedi.png",
-            "position": "Full stack",
+            "image": "/static/images/our-team/Personals/saedi.jpg",
+            "position": "مدیر ارشد فناوری",
             "name": "مهدی ساعدی",
             "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
-            "category": "مربیان"
+            "category": "مدیران"
           },
           {
-            "image": "/static/images/our-team/Personals/a7.png",
-            "position": "Full stack",
+            "image": "/static/images/our-team/Personals/sajad.jpg",
+            "position": "مدیر محصول",
             "name": "سجاد مومنی",
             "linkedIn": "https://www.linkedin.com/in/sajjad-momeni-17ab4778/",
             "category": "مربیان"
-        },
-
-        {
-            "image": "/static/images/our-team/Personals/a14.png",
-            "position": "طراح تجربه و رابط کاربری",
-            "name": "ارشیا نصیری",
-            "linkedIn": "https://www.linkedin.com/in/marshian03",
-            "category": "طراحان"
-        },
-        {
-            "image": "/static/images/our-team/Personals/a9.png",
-            "position": "بازاریاب دیجیتال",
-            "name": "احسان علی‌اکبری",
-            "linkedIn": "https://www.linkedin.com/in/ehsan-aliakbari",
-            "category": "بازاریاب دیجیتال"
-        },
-        {
-            "image": "/static/images/our-team/Personals/a5.png",
-            "position": "حسابدار",
-            "name": "علی سلیمانی",
-            "linkedIn": "https://www.linkedin.com/in/ali-soleymani-b761b6223/",
-            "category": "حسابدار"
         },
         {
             "image": "/static/images/our-team/Personals/a21.png",
@@ -103,53 +101,46 @@
             "category": "طراحان"
         },
         {
-            "image": "/static/images/our-team/Personals/a34.png",
+            "image": "/static/images/our-team/Personals/arshia.png",
+            "position": "طراح تجربه و رابط کاربری",
+            "name": "ارشیا نصیری",
+            "linkedIn": "https://www.linkedin.com/in/marshian03",
+            "category": "طراحان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/ehsan.JPG",
+            "position": "بازاریاب دیجیتال",
+            "name": "احسان علی‌اکبری",
+            "linkedIn": "https://www.linkedin.com/in/ehsan-aliakbari",
+            "category": "بازاریاب دیجیتال"
+        },
+        {
+            "image": "/static/images/our-team/Personals/ali.jpg",
+            "position": "حسابدار",
+            "name": "علی سلیمانی",
+            "linkedIn": "https://www.linkedin.com/in/ali-soleymani-b761b6223/",
+            "category": "حسابدار"
+        },
+        {
+            "image": "/static/images/our-team/Personals/faezeh.jpg",
             "position": "طراح گرافیک",
             "name": "فائزه خانی",
             "linkedIn": "",
             "category": "طراحان"
         },
         {
-            "image": "/static/images/our-team/Personals/a17.png",
-            "position": "Front end",
+            "image": "/static/images/our-team/Personals/fahimeh.png",
+            "position": "برنامه نویس فرانت اند",
             "name": "فهیمه سجادی",
             "linkedIn": "https://www.linkedin.com/in/fahimeh-sajadi-50a399202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
             "category": "برنامه نویسان"
         },
         {
-            "image": "/static/images/our-team/Personals/a20.png",
-            "position": "توسعه دهنده برنامه های کاربردی",
-            "name": "علی خاوری",
-            "linkedIn": "https://www.linkedin.com/in/ali-khavari-10b737191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "category": "برنامه نویسان"
-        },
-        {
-            "image": "/static/images/our-team/Personals/65.jpg",
-            "position": "Back end",
-            "name": "متین نجات بخش",
-            "linkedIn": "",
-            "category": "برنامه نویسان"
-        },
-        {
-            "image": "/static/images/our-team/Personals/barad1.jpg",
-            "position": "Front end",
-            "name": "باراد دهقانی",
-            "linkedIn": "https://www.linkedin.com/in/barad-dehghani-26b264296/",
-            "category": "برنامه نویسان"
-        },
-        {
             "image": "/static/images/our-team/Personals/121.jpg",
-            "position": "Front end",
+            "position": "برنامه نویس فرانت اند",
             "name": "امیر محمد اصفهانی زاده",
             "linkedIn": "",
             "category": "برنامه نویسان"
-        },
-        {
-            "image": "/static/images/our-team/Personals/sobhan1.jpg",
-            "position": "تحقیق و توسعه",
-            "name": "سبحان محمدی",
-            "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
-            "category": "تحقیق و توسعه"
         },
         {
             "image": "/static/images/our-team/Personals/milad copy 2.jpg",
@@ -159,42 +150,89 @@
             "category": "تحقیق و توسعه"
         },
         {
-            "image": "/static/images/our-team/Personals/MAHSA.jpg",
-            "position": "تولید محتوا",
+            "image": "/static/images/our-team/Personals/sobhan1.jpg",
+            "position": "تحقیق و توسعه",
+            "name": "سبحان محمدی",
+            "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
+            "category": "تحقیق و توسعه"
+        },
+        {
+            "image": "/static/images/our-team/Personals/mahsa-gh.JPG",
+            "position": "تحقیق و توسعه",
             "name": "مهسا قربانی",
             "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
-            "category": "تولید کنندگان محتوا"
+            "category": "تحقیق و توسعه"
         },
         {
-            "image": "/static/images/our-team/Personals/sama.png",
-            "position": "روابط عمومی",
-            "name": "سما علینقیان",
-            "linkedIn": "https://www.linkedin.com/in/gelareh-bahrami-baba59185",
-            "category": "روابط عمومی"
-          },
-        {
-            "image": "/static/images/our-team/Personals/a25.png",
+            "image": "/static/images/our-team/Personals/mahsa-gh.JPG",
             "position": "تولید محتوا",
-            "name": "تیام صفریان",
-            "linkedIn": "https://www.linkedin.com/in/tiam-safarian-616933230/",
+            "name": "فرناز ترکی",
+            "linkedIn": "",
             "category": "تولید کنندگان محتوا"
         },
         {
-            "image": "/static/images/our-team/Personals/a32.png",
-            "position": "Front end",
+          "image": "/static/images/our-team/Personals/mahsa-gh.JPG",
+          "position": "تولید محتوا",
+          "name": "علیرضا زمانی",
+          "linkedIn": "",
+          "category": "تولید کنندگان محتوا"
+        },
+        {
+            "image": "/static/images/our-team/Personals/matin.png",
+            "position": "برنامه نویس فرانت اند",
             "name": "متین جانقربانی",
             "linkedIn": "",
             "category": "برنامه نویسان"
         },
         {
             "image": "/static/images/our-team/Personals/shamim.jpg",
-            "position": "موشن گراف",
+            "position": "موشن گرافیک",
             "name": "شمیم بهشتی",
             "linkedIn": "",
             "category": "طراحان"
+        },
+        {
+          "image": "/static/images/our-team/Personals/sadeq.jpg",
+          "position": "برنامه نویس فرانت اند",
+          "name": "صادق پرورش",
+          "linkedIn": "",
+          "category": "برنامه نویسان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/hossein.jpeg",
+            "position": "موبایل اپلیکیشن دولوپر",
+            "name": "حسین محمدی",
+            "linkedIn": "",
+            "category": "برنامه نویسان"
+        },
+        {
+           "image": "/static/images/our-team/Personals/mohammad-reza.jpeg",
+           "position": "برنامه نویس فرانت اند",
+           "name": "محمدرضا حاجیان",
+           "linkedIn": "",
+           "category": "برنامه نویسان"
+        },
+        {
+           "image": "/static/images/our-team/Personals/narges.jpg",
+           "position": "طراح تجربه و رابط کاربری",
+           "name": "نرگس اروجی",
+           "linkedIn": "",
+           "category": "طراحان"
+        },
+        {
+            "image": "/static/images/our-team/Personals/parastoo.jpg",
+            "position": "تحقیق و توسعه",
+            "name": "پرستو ثنایی فر",
+            "linkedIn": "",
+            "category":  "تحقیق و توسعه"
+        },
+        {
+            "image": "/static/images/our-team/Personals/amitis.jpg",
+            "position": "برنامه نویس بک اند",
+            "name": "آمیتیس هاشمی",
+            "linkedIn": "",
+            "category":  "برنامه نویسان"
           }
-
-
     ],
     "roles": [
         "همه",

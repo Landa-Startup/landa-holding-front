@@ -4,5 +4,6 @@ import axios from "axios";
 const apiClient = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}`,
 });
+console.log("API Base URL:", process.env.NEXT_PUBLIC_DJANGO_HOST_URL);
 
 export default apiClient;

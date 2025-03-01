@@ -31,7 +31,7 @@ export default function LatestStartups() {
               </div>
             </div>
           </div>
-          <div className="mt-2 flex gap-3 flex-wrap  justify-center md:justify-between">
+          <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-8 flex-wrap grid-rows-1 items-stretch">
               {t('LatestStartupsList', { returnObjects: true }).map(
                 (
                   {

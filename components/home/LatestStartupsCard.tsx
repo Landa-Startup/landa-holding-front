@@ -17,36 +17,36 @@ export default function LatestStartupsCard({
   lang: string;
 }) {
   return (
-    <Link href={link} target={link}>
-      <div className="group relative h-[290px] w-[290px] border border-black hover:shadow-lg md:h-[488px] md:w-[410px] rounded-lg">
+    <Link href={link} target={link} >
+      <div className="group relative w-full h-full col-span-1 border transition-all border-black hover:shadow-lg rounded-lg">
         {/* Image Container */}
-        <div className="absolute left-0 top-0 h-[254px] w-[300px] md:h-[468px] md:w-[350px]" />
+        <div className="w-full " />
 
-        {/* Image */}
-        <Image
-          loading="lazy"
-          alt={image}
-          className="absolute left-[71px] top-2 h-[116px] w-[124px] object-contain transition-all group-hover:scale-110 md:left-[120px] md:top-[18px] md:h-[198px] md:w-[200px]"
-          src={image}
-          width={500}
-          height={500}
-        />
-
-        {/* Decorative Lines */}
-        <div className={`h-[0px] w-[100%]  ${lang === "en" ? "left-0" : "right-0"} absolute top-[160px] border border-neutral-800 md:top-[295px]`}></div>
+          {/* Image */}
+          <Image
+            className="w-[50%] h-44 mx-auto object-contain transition-all group-hover:scale-110 my-6 "
+            loading="lazy"
+            alt={image}
+            src={image}
+            width={500}
+            height={500}
+          />
 
         {/* Title */}
-        <div className={`absolute font-gilda text-2xl font-normal text-neutral-800 ${lang === "en" ? "left-4 top-[130px] md:top-[250px]" : "right-5 top-[125px] md:top-[255px]"}`}>
+        <div className={`p-3 font-gilda text-2xl font-normal text-neutral-800 `}>
           {title}
         </div>
 
+        {/* Decorative Lines */}
+        <div className={`border border-neutral-800`}></div>
+
         {/* Description */}
-        <div className={`absolute left-[16px] top-[170px] w-[225px] font-barlow text-sm font-normal leading-[15px] text-neutral-800 md:bottom-15 md:top-[310px] md:w-[320px] md:text-base ${lang === "en" ? "text-left right-auto" : "text-right right-5"}`}>
+        <div className={`font-barlow leading-5 font-normal p-3 mb-12 text-neutral-800 `}>
           {description}
         </div>
 
         {/* Link and Icon */}
-        <div className="absolute bottom-[14px]  inline-flex h-8 w-8 items-start justify-start gap-2.5 bg-neutral-800 right-[12px] md:h-10 md:w-10 rounded-lg">
+        <div className="absolute inline-flex ltr:right-2 bottom-2 size-9 mx-auto gap-2.5 bg-neutral-800 rounded-lg rtl:left-2 rtl:rotate-180">
           <StartupsArrowLeft />
         </div>
       </div>

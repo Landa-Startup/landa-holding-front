@@ -7,7 +7,6 @@ module.exports = {
         gilda: ['Gilda Display', 'Alexandria'],
         barlow: ['Barlow', 'IranYekan'],
         condensed: ['Condensed', 'Markazi'],
-        EBGaramond: ['condensed','Arshia']
       },
       colors: {
         primary: '#AA8453',

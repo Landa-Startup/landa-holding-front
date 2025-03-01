@@ -20,7 +20,7 @@ export default async function Banner({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className="absolute inset-0 h-full md:h-[520px]"
+        className="absolute inset-0 h-full md:h-[500px]"
       ></div>
 
       <div>
@@ -31,7 +31,7 @@ export default async function Banner({
             {/* <p className={`font-condensed text-xl font-normal text-neutral-50 ltr:tracking-[5.60px]`}>
               {(t('LandaHolding'))}
             </p> */}
-            <p className={`absolute get-shadow text-2xl md:text-[80px] text-white font-gilda font-bold bottom-[4rem] md:bottom-10 ${lang !== 'fa' ? 'left-[10%]' : 'right-[10%]' }`}>
+            <p className={`absolute  top-1/2 transform -translate-y-1/2 get-shadow text-2xl md:text-[60px] text-white font-gilda ${lang !== 'fa' ? 'left-14' : 'right-14' }`}>
               {title}
             </p>
           </div>

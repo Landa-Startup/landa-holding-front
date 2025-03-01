@@ -16,7 +16,6 @@ export default async function TeamPage({
   params: { lang: string };
 }) {
   const { t } = await useTranslation(lang, 'ourTeam');
-  console.log(t('title'));
   
   return (
     <div>

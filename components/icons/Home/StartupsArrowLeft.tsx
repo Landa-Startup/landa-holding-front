@@ -1,9 +1,7 @@
-
-
 export default function StartupsArrowLeft() {
   return (
     <svg
-      className="absolute cursor-pointer border rounded-lg border-white text-white transition-all duration-300 hover:border hover:border-black hover:bg-white hover:text-black"
+      className="absolute cursor-pointer border rounded-lg border-[#fff0] text-white transition-all duration-300 hover:border hover:border-black hover:bg-white hover:text-black"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
@@ -12,7 +10,26 @@ export default function StartupsArrowLeft() {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M5 12h14M12 5l7 7-7 7" />
+      <path
+        d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83"
+      ></path>
     </svg>
   );
 }
+
+// <svg
+//   xmlns="http://www.w3.org/2000/svg"
+//   width="32"
+//   height="32"
+//   viewBox="0 0 24 24"
+//   fill="none"
+// >
+//   <path
+//     stroke="#FF8A65"
+//     stroke-linecap="round"
+//     stroke-linejoin="round"
+//     stroke-miterlimit="10"
+//     stroke-width="1.5"
+//     d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83"
+//   ></path>
+// </svg>;
