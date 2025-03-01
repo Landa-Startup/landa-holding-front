@@ -31,11 +31,7 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
               height={100}
             />
           </div>
-<<<<<<< HEAD
-          <div className='self-center font-bold pt-8 font-gilda text-[20px] leading-normal'>
-=======
           <div className='self-center p-2 ltr:font-gilda rtl:font-EBGaramond text-bold text-[24px] font-normal leading-normal'>
->>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
             {subTitle}
           </div>
           <div className='flex h-full flex-col gap-4 my-8'>
