@@ -67,15 +67,14 @@ export default async function Page({
               alt="handicraft"
               layout="fill"
             /> */}
-          </div>
-          <div className="relative h-[294px] md:h-[360px] md:w-[765px]">
-            <Image
-              className="object-cover rounded-xl w-full"
-              src="/static/images/handicrafts1.jpg"
-              alt="handicraft"
-              layout="fill"
-            />
-          </div>
+        </div>
+        <div className="relative h-[294px] md:h-[360px] md:w-[765px]">
+          <Image
+            className="object-cover rounded-xl w-full"
+            src="/static/images/handicrafts1.jpg"
+            alt="handicraft"
+            layout="fill"
+          />
         </div>
         <div className="relative flex">
           <div className="pr-6 md:pt-">
@@ -87,12 +86,6 @@ export default async function Page({
               height={100}
             />
           </div>
-          {/* <Image
-            className="absolute top-1/4 object-cover opacity-20 md:hidden"
-            src="/static/images/handicraftLogo.png"
-            alt="handicraft"
-            layout="fill"
-          /> */}
           <p className="z-10 mx-8 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-6 md:pl-20 rtl:md:w-[2800px] md:rtl:pt-12">
             {t('paragraph3')}
           </p>

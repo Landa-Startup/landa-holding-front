@@ -7,7 +7,6 @@ export default function LatestStartupsCard({
   title,
   description,
   link,
-  lang,
 }: {
   // TODO: don't pass lang, use zustend
   image: string;

@@ -5,7 +5,7 @@ import { dir } from 'i18next'
 import { languages } from 'app/i18n/setting'
 import './globals.css';
 import { useLang } from 'stores/langStore';
-import { EB_Garamond } from 'next/font/google'
+// import { EB_Garamond } from 'next/font/google'
 
 
 export async function generateStaticParams() {
