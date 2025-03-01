@@ -44,9 +44,12 @@ export default function HomeUpComingStartups() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div> */}
-      <div className="mx-3 my-4 flex flex-col items-center justify-start gap-6 md:ml-6 md:mr-0 md:items-start md:p-[32px] md:pt-24">
-        <div className="flex flex-col items-start justify-between pt-10 md:w-[400px]">
-          <p className="tw-[340px] border-b border-black pb-3 rtl:font-EBGaramond ltr:font-gilda text-bold text-3xl font-normal text-black md:w-[540px] md:border-none md:pt-12 md:text-start md:text-4xl md:ltr:pl-24 md:rtl:pr-32">
+      <div className="my-4 font-gilda flex flex-col justify-start gap-6 md:items-start md:py-16 md:pt-12">
+        <div className=" pt-10 ">
+          <p className='pt-12 pb-1 md:pb-3'>
+          {t('upcomingStartups', { returnObjects: true }).landaHolding}
+          </p>
+          <p className=" font-bold pb-0 md:pb-12 text-2xl text-black md:text-5xl ">
             {t('upcomingStartups', { returnObjects: true }).title}
           </p>
         </div>
