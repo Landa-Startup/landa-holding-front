@@ -28,7 +28,7 @@ export default function Hero({
         backgroundPosition: 'center'
       }}
       data-bgset={`/static/images/Home/Hero/${backgroundImage} [(max-width: 640px)] | /static/images/Home/Hero/${backgroundImage}`}
-      className="relative h-[calc(100vh)] overflow-hidden md:h-[837px]"
+      className="relative h-[calc(100vh)] overflow-hidden"
     >
       <div
         className="absolute inset-0 opacity-70"

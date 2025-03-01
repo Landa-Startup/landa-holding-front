@@ -9,7 +9,6 @@ export default function HomeCards({
   text,
   images,
   reverse,
-  // addedClass,
   link,
   buttonText
 }: HomeCardsProps) {

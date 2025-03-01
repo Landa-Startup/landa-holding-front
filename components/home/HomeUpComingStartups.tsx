@@ -34,18 +34,8 @@ export default function HomeUpComingStartups() {
 
   return (
     <div className="mb-8 mt-10 min-h-[400px] md:mt-0">
-      {/* <div className="relative h-[400px]">
-        <Image
-          loading="lazy"
-          className="h-full object-cover"
-          src="/static/images/upComingStartUps.png"
-          alt="Upcoming Startups"
-          layout="fill"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div> */}
-      <div className="my-4 font-gilda flex flex-col justify-start gap-6 md:items-start md:py-16 md:pt-12">
-        <div className=" pt-10 ">
+      <div className="my-4 font-gilda flex flex-col justify-start gap-6 md:items-center md:py-16 md:pt-12">
+        <div className="pt-10 w-full px-6">
           <p className='pt-12 pb-1 md:pb-3'>
           {t('upcomingStartups', { returnObjects: true }).landaHolding}
           </p>
@@ -53,11 +43,10 @@ export default function HomeUpComingStartups() {
             {t('upcomingStartups', { returnObjects: true }).title}
           </p>
         </div>
-        <div className="flex flex-col md:gap-8 md:flex-row ">
+        <div className="flex flex-col justify-center md:gap-8 md:flex-row ">
           {renderCards(t('upcomingStartups', { returnObjects: true }).cards)}
         </div>
       </div>
-      {/* <UpcomingStartupsCard /> */}
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function HomeLandaAcademy() {
         <p className="leading-8">
             {t('LandaAcademyInfo')}
         </p>
-        <div className="mt-6 h-auto w-[224px] p-2">
+        <div className="mt-6 h-auto w-[224px]">
           <ButtonRefactor
             text={t('visit')}
             type="link"
@@ -32,7 +32,7 @@ export default function HomeLandaAcademy() {
       
       <div className="tooltip-success relative flex w-full justify-end gap-3 md:w-[47%]">
         <div
-          className={`relative h-72 w-full max-w-xs md:mb-10 md:h-[26rem] `}
+          className={`relative h-72 w-full max-w-xs md:h-[100%]`}
         >
           <Image
             loading="lazy"
@@ -44,7 +44,7 @@ export default function HomeLandaAcademy() {
           />
         </div>
         <div
-          className={`relative  h-72 w-full max-w-xs md:mb-10 md:h-[26rem]  `}
+          className={`relative  h-72 w-full max-w-xs md:h-full`}
         >
           <Image
             loading="lazy"
