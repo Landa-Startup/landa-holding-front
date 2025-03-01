@@ -15,7 +15,7 @@ export default function NatureOfStartups() {
           src={'/static/images/Startup/nature-of-startups.jpg'}
           alt='team image'
           width={300}
-          height={500}
+          height={300}
       />
       <div className='w-full md:w-[70%] flex flex-col justify-between gap-3 md:gap-5'>
           <h1 className='text-xl md:text-4xl font-semibold'>{t('nature-title')}</h1>
