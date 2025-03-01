@@ -24,7 +24,12 @@ export default function ButtonRefactor({
     case 'link':
       return (
         href && (
-          <Link href={href} className='group relative w-full overflow-hidden'>
+          <Link href={href} className="
+          
+          
+          
+          
+          ">
             <button
               disabled={disabled}
               className={`bg-${
