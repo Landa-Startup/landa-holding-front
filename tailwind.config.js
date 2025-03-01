@@ -12,7 +12,7 @@ module.exports = {
         primary: '#AA8453',
         whiteGold: '#F8F5F0',
         tableHeader: '#DDCEBA',
-        Secondary: '#A7A7A7',
+        blue: '#35427D'
       },
     },
   },

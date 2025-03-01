@@ -10,6 +10,7 @@ export default function HomeLandaAcademy() {
     const { t } = useTranslation(lang, 'mainPage');
 
   return (
+<<<<<<< HEAD
     <div className="flex flex-col justify-between gap-10 py-10 md:flex-row md:py-20 ">
       <div className="w-full font-barlow md:w-[47%]  ">
         {/* <p className="mb-2 ltr:tracking-[6px]">{t('Landaholding')}</p> */}
@@ -19,6 +20,16 @@ export default function HomeLandaAcademy() {
             {t('LandaAcademyInfo')}
         </p>
         <div className="mt-6 h-auto w-[224px] p-2">
+=======
+    <div className="flex justify-center p-10 md:p-32">
+        <div className="w-full text-justify font-barlow md:w-[58%]">
+            {/* <p className="mb-2 ltr:tracking-[6px]">{t('Landaholding')}</p> */}
+            <h1 className="mb-8 ltr:font-gilda rtl:font-EBGaramond text-4xl font-bold md:pt-12">{t('LandaAcademy')}</h1>
+            <p className="leading-8">
+                {t('LandaAcademyInfo')}
+            </p>
+            <div className="h-auto w-[224px] mt-6 p-2">
+>>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
           <ButtonRefactor
             text={t('visit')}
             type="link"

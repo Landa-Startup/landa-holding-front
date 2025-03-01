@@ -116,7 +116,8 @@ export default function PartnerMembershipForm() {
                   firstName: 'firstName',
                   lastName: 'lastName',
                   email: 'email',
-                  phoneNumber: 'phoneNumber'
+                  phoneNumber: 'phoneNumber',
+                  jobPosition: ''
                 }}
               />
 

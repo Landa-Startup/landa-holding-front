@@ -112,7 +112,8 @@ export default function InvestorRegistrationForm() {
                 firstName: 'firstName',
                 lastName: 'lastName',
                 email: 'email',
-                phoneNumber: 'phoneNumber'
+                phoneNumber: 'phoneNumber',
+                jobPosition: ''
               }}
             />
 

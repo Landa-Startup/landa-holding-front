@@ -84,8 +84,13 @@ export default function Partners() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="mb-40 mt-28 flex flex-col items-center gap-8 ">
       <span className="text-3xl text-black font-gilda md:text-4xl self-start  ">
+=======
+    <div className="my-6 flex flex-col items-center gap-12">
+      <span className="text-3xl text-primary rtl:font-EBGaramond ltr:font-gilda md:text-4xl font-condensed">
+>>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
         {t('partners', { returnObjects: true }).title}
       </span>
       <div

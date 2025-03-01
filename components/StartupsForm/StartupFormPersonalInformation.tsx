@@ -25,7 +25,8 @@ export default function StartupFormPersonalInformation({
             firstName: "firstName",
             lastName: "lastName",
             phoneNumber: "",
-            email: "email"
+            email: "email",
+            jobPosition: ''
           }}
         />
 

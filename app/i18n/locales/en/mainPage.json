@@ -14,7 +14,7 @@
   "ourTeamText": "Our team of experts is comprised of professionals who are passionate about their work, and have an extensive background in a wide variety of applications, and are willing to help at any time",
   "Forms": "FORMS",
   "InvestorCenter": "Investment",
-  "EntrepreneurCenter": "ENTREPRENEUR",
+  "EntrepreneurCenter": "Entrepreneur",
   "BusinessPartners": "BUSINESS PARTNERS",
   "Startups Validation": "STARTUPS VALIDATION",
   "SeeMore": "SEE MORE",
@@ -22,7 +22,7 @@
   "Landa": "Landa",
   "PartnersTitle": "Join Our Business Partners",
   "PartnersDescription": "At Landa Holding, we welcome strategic affiliations with international firms and qualified influencers alike. As an approved affiliate, you will receive co-branded support and future representations that wield substantial influence within the business landscape. To become an affiliate, please complete our free questionnaire for our confidential review.",
-  "LatestStartups": "LATEST STARTUPS",
+  "LatestStartups": "Latest Starups",
   "Priorities": "Investment Priorities",
   "businessTeamText": "What Our Cooperation Members Say",
   "visit": "Visit Now",
@@ -267,7 +267,7 @@
   "register": "Register",
   "upcomingStartups": {
     "landaHolding": "LANDA HOLDING",
-    "title": "UPCOMING STARTUPS",
+    "title": "Upcoming Startups",
     "cards": [
       {
         "image": "/static/images/Home/upcomming-Sartup/handicraft.png",
@@ -276,6 +276,14 @@
         "goto": "https://craft.landaholding.com/",
         "buttonText" : "Register",
         "gene": false
+      },
+      {
+        "image": "/static/images/Home/upcomming-Sartup/otism.png",
+        "subTitle": "LANDA OTISM",
+        "text": "Otism is an art movement that highlights nature’s beauty and the human form through organic shapes, earthy tones, and fluid lines. Emerging in the 21st century, it evokes tranquility and connection, inviting viewers to reflect on their bond with the environment.",
+        "goto": "#",
+        "buttonText" : "Register",
+        "gene": true
       },
       {
         "image": "/static/images/Home/upcomming-Sartup/2.png",

@@ -33,11 +33,11 @@ export default async function Page({
           lang={lang}
         />
       </div>
-      <div className="mx-8 my-14 flex flex-col justify-center gap-8 md:mx-24">
+      <div className=" my-14 flex flex-col justify-center gap-8 md:mx-24">
         <div className="relative flex flex-col md:flex-row items-center justify-between my-16">
           <div className=" relative w-[50%] mb-6 md:mb-0 md:w-[20%]">
             <Image
-              className=""
+              className="hidden md:block rtl:md:w-[300px]"
               src="/static/images/landacraft1.png"
               alt="handicraft"
               width={200}
@@ -50,12 +50,12 @@ export default async function Page({
             alt="handicraft"
             layout="fill"
           /> */}
-          <p className="leading-7 font-gilda w-full md:w-[75%] text-base ">
+          <p className="z-10 mx-8 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-20 md:pl-20">
             {t('paragraph1')}
           </p>
         </div>
-        <div className="relative flex flex-col-reverse  items-center justify-between gap-5 overflow-hidden md:flex-row">
-          <p className="leading-7 font-gilda text-base w-full md:w-[47%]">
+        <div className="relative flex flex-col-reverse justify-between gap-5 overflow-hidden md:flex-row">
+          <p className="mt-7 mx-8 md:pt-20 text-justify font-barlow text-base font-normal leading-[45px] text-black md:mt-0 md:h-[480px] md:w-[652px] rtl:pr-5 ltr:pl-5">
             {t('paragraph2')}
             <br />
             {/* {t('paragraph3')} */}
@@ -67,8 +67,8 @@ export default async function Page({
               alt="handicraft"
               layout="fill"
             /> */}
-          {/* </div> */}
-          <div className="relative w-full h-48 md:w-[47%] md:h-80 ">
+          </div>
+          <div className="relative h-[294px] md:h-[360px] md:w-[765px]">
             <Image
               className="object-cover rounded-xl w-full"
               src="/static/images/handicrafts1.jpg"
@@ -77,19 +77,25 @@ export default async function Page({
             />
           </div>
         </div>
-        <div className='flex flex-col md:flex-row justify-between items-center gap-5 mt-4 mb-16'>
-          <div className="relative w-full md:w-[40%] h-40 md:h-64 ">
+        <div className="relative flex">
+          <div className="pr-6 md:pt-">
             <Image
-              className="object-cover rounded-xl w-full"
+              className="hidden md:block md:w-[3500px] md:h-[350px]"
               src="/static/images/landacraft4.png"
               alt="handicraft"
-              layout="fill"
+              width={800}
+              height={100}
             />
           </div>
-          <p className="leading-7 font-gilda text-base w-full md:w-[55%]">
+          {/* <Image
+            className="absolute top-1/4 object-cover opacity-20 md:hidden"
+            src="/static/images/handicraftLogo.png"
+            alt="handicraft"
+            layout="fill"
+          /> */}
+          <p className="z-10 mx-8 text-justify font-barlow text-base font-normal leading-[48px] text-black md:mr-10 md:mt-6 md:pl-20 rtl:md:w-[2800px] md:rtl:pt-12">
             {t('paragraph3')}
           </p>
-
         </div>
         <div className="flex w-full flex-col items-center gap-11 rounded-sm bg-[#F7F3EE] px-8 py-5 my-20">
           <p className="font-gilda text-sm md:text-base  text-[#AA8453]">

@@ -39,7 +39,11 @@ export default function Hero({
         <div
           className={`${
             showLanda ? 'block w-fit' : 'hidden'
+<<<<<<< HEAD
           } get-shadow px-2 text-center font-gilda text-3xl font-bold text-white drop-shadow-2xl md:ml-6 md:px-0 md:text-center md:text-[90px]`}
+=======
+          } text-center md:text-center px-2 md:px-0 ltr: rtl:font-EBGaramond font-gilda text-3xl font-bold text-white md:text-6xl md:ml-6 md:tracking-[12px] rtl:tracking-normal`}
+>>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
         >
           {title}
         </div>
@@ -53,7 +57,11 @@ export default function Hero({
       </div>
       <div className="absolute top-2/3 mt-20 flex items-center justify-center bg-[#DDCEBA] p-4  ltr:left-0 ltr:rounded-br-2xl rtl:right-0 rtl:rounded-bl-2xl md:top-3/4 md:w-[700px] md:rtl:right-0">
         <div
+<<<<<<< HEAD
           className={`text-bold text-center font-barlow text-xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:font-gilda md:text-5xl`}
+=======
+          className={`text-center md:ltr:font-gilda md:rtl:font-EBGaramond font-barlow  font-semibold text-bold leading-10 text-white text-opacity-95 md:text-5xl text-xl ltr:tracking-[4px]`}
+>>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
         >
          {subTitle ? subTitle : ''}
         </div>

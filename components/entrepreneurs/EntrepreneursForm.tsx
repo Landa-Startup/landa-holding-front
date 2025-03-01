@@ -112,7 +112,8 @@ export default function EntrepreneursForm() {
                 firstName: 'first_name',
                 lastName: 'last_name',
                 email: 'email',
-                phoneNumber: 'phone'
+                phoneNumber: 'phone',
+                jobPosition:''
               }}
             />
 

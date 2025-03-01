@@ -101,6 +101,7 @@ export default function HandicraftForm() {
 
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center font-barlow">
+<<<<<<< HEAD
       <div className="mb-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
         <div className='grid w-full grid-cols-1 gap-x-3 md:grid-cols-2'>
           <PersonalInfoInput
@@ -146,6 +147,22 @@ export default function HandicraftForm() {
             labelClass=""
           />
         </div>
+=======
+    <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
+      <div className='grid w-full grid-cols-1 gap-x-3 md:grid-cols-2'>
+      <PersonalInfoInput
+        register={register}
+        errors={errors}
+        nameInputs={{
+          firstName: 'first_name',
+          lastName: 'last_name',
+          email: '',
+          phoneNumber: '',
+          jobPosition:''
+        }}
+        noLabel={true}
+      />
+>>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
       </div>
 
       <div className="w-full text-center md:w-auto">
