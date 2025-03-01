@@ -33,11 +33,9 @@ export default function LatestStartupsCard({
           />
 
         {/* Title */}
-<<<<<<< HEAD
+
         <div className={`p-3 font-gilda text-2xl font-normal text-neutral-800 `}>
-=======
-        <div className={`absolute ltr:font-gilda rtl:font-EBGaramond text-2xl font-normal text-neutral-800 ${lang === "en" ? "left-4 top-[130px] md:top-[250px]" : "right-5 top-[125px] md:top-[255px]"}`}>
->>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
+        {/* <div className={`absolute ltr:font-gilda rtl:font-EBGaramond text-2xl font-normal text-neutral-800 ${lang === "en" ? "left-4 top-[130px] md:top-[250px]" : "right-5 top-[125px] md:top-[255px]"}`}> */}
           {title}
         </div>
 
