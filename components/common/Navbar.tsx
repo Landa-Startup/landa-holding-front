@@ -2,15 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
-// import LanguageSwitch from './LanguageSwitch';
 import { useTranslation } from 'app/i18n/client';
 import { setCookie } from 'cookies-next';
 import LanguageSwitch from './LanguageSwitch';
-// import IconDown from '../icons/IconDown';
-// import { useRouter } from 'next/navigation';
-// import { i18n } from 'next-i18next';
-// import { getCookie } from 'cookies-next';
-// import { useLang } from 'stores/langStore';
+
 
 export default function Navbar({
   children,
@@ -24,28 +19,7 @@ export default function Navbar({
   const menuItems = t('menuItems', { returnObjects: true });
   const submenuItems = t('submenuItems', { returnObjects: true });
 
-  // console.log(menuItems, submenuItems)
-
   setCookie("i18next", lang);
-
-  // const { setRendered } = useLang();
-
-  // const { setLanguage } = useLang();
-
-
-  // const language = getCookie("i18next") ? getCookie("i18next") : "en";
-
-  // useEffect(() => {
-  //   i18n?.changeLanguage(language);
-  //   // setLanguage(language)
-  //   // setRendered(true);
-  // },[])
-
-  // const router = useRouter()
-
-  // useEffect(() => {
-  //   router.refresh();
-  // },[])
 
   const drawerRef = useRef<HTMLInputElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -110,7 +84,7 @@ export default function Navbar({
             <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl font-bold rtl:space-x-reverse md:mb-3 ">
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
-                  <li className="h-9 text-2xl" key={label}>
+                  <li className="h-9 text-2xl mt-2" key={label}>
                     
                     <Link href={href} className="text-white hover:bg-white">
                       {label}
@@ -119,37 +93,25 @@ export default function Navbar({
                 )
               )}
               <li className="h-9">
-                
-                <details className="dropdown mb-32">
-                  <summary
-                    className="hover:white text-2xl hover:bg-white"
-                    onClick={() => setIsMenuOpen(true)}
-                  >
+                <div className="relative group">
+                  <h2 className="text-2xl cursor-pointer transition-all p-2 group-hover:bg-white group-hover:text-black rounded-xl">
                     {lang === 'en' ? 'FORMS' : 'فرم ها'}
-                  </summary>
-                  <ul
-                    className={`menu dropdown-content rounded-box z-[1] w-64 space-y-0 bg-stone-100 p-2 shadow ${
-                      isMenuOpen ? '' : 'hidden'
-                    }`}
-                  >
-                    {submenuItems.map(
-                      ({ label, href }: { label: string; href: string }) => (
-                        <li
-                          className="max-h-fit text-xl"
-                          key={label}
-                          onClick={() => setIsMenuOpen(false)}
+                  </h2>
+
+                  {/* Desktop Forms */}
+                  <ul className="absolute -left-[80px] top-14 mt-2 w-64 space-y-0 rounded-box bg-stone-100 p-2 shadow opacity-0 invisible transition-all duration-200 group-hover:opacity-100 group-hover:visible">
+                    {submenuItems.map(({ label, href }: any) => (
+                      <li className="max-h-fit text-xl" key={label}>
+                        <Link
+                          href={href}
+                          className="block border p-5 font-bold text-black hover:bg-base-200 hover:text-primary"
                         >
-                          <Link
-                            href={href}
-                            className="border p-5 font-bold text-black hover:bg-base-200 hover:text-primary"
-                          >
-                            {label}{' '}
-                          </Link>
-                        </li>
-                      )
-                    )}
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
-                </details>
+                </div>
               </li>
             </ul>
           </div>
@@ -196,7 +158,7 @@ export default function Navbar({
           <ul className="px-2">
 
     
-{/* //item */}
+          {/* mobile forms */}
             <ul className=''>
               {submenuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
@@ -209,8 +171,8 @@ export default function Navbar({
               )}
             </ul>
 
-  </ul>
-</details>
+          </ul>
+        </details>
             
             {/* //item */}
 
