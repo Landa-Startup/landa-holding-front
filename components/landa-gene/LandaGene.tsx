@@ -115,11 +115,7 @@ export default function LandaGene() {
           />
         </div>
         <div className="basis-3/4 ">
-<<<<<<< HEAD
-          <p className="font-gilda leading-[36px] text-xl text-black">
-=======
           <p className="font-barlow text-base font-normal leading-[48px] md:pt-12 px-2 text-justify">
->>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
             {t('textUp')}
           </p>
         </div>

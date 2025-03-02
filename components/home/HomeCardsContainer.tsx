@@ -9,28 +9,27 @@ const HomeCardsContainer = () => {
   const { t } = useTranslation(lang, 'mainPage');
 
   const renderHomeCards = (cardData: CompanySectionsInterface[]) => {
-    return cardData.map(({smallTitle, title, text, reverse, index, link, addedClass, images, buttonText}) => (
-      <HomeCards
-        smallTitle={smallTitle}
-        key={index}
-        titles={title}
-        text={text}
-        images={images}
-        reverse={reverse}
-        addedClass={addedClass}
-        link={link}
-        buttonText={buttonText}
-      />
-    ));
+    return (
+      <div className='w-full h-auto flex flex-col gap-4 md:gap-20'>
+        {cardData.map(({smallTitle, title, text, reverse, index, link, addedClass, images, buttonText}) => (
+              <HomeCards
+                smallTitle={smallTitle}
+                key={index}
+                titles={title}
+                text={text}
+                images={images}
+                reverse={reverse}
+                addedClass={addedClass}
+                link={link}
+                buttonText={buttonText}
+              />
+        ))}
+      </div>
+    )
   };
-
-  // console.log(t('cards', { returnObjects: true }));
 
   return (
     <div className="relative text-black my-10 md:my-24" id="LandaHolding">
-      <div>
-        {/* <Lines /> */}
-      </div>
       {renderHomeCards(t('cards', { returnObjects: true }))}
     </div>
   );

@@ -15,11 +15,7 @@ export default function StoryOfLanda() {
       <div className="flex flex-col justify-between gap-5 pb-14  text-black sm:py-14 lg:flex-row">
         <div className="flex flex-col w-full md:w-[48%] md:text-justify">
 
-<<<<<<< HEAD
-          <span className="font-gilda text-2xl md:text-4xl font-bold mb-0 md:mb-10 text-black">
-=======
           <span className="ltr:font-gilda rtl:font-EBGaramond text-bold text-3xl mb-10">
->>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
             {t('LANDAStartups', { returnObjects: true })[0].title}
           </span>
           <ul className="mt-5 flex flex-col space-y-3 font-barlow">
@@ -65,22 +61,6 @@ export default function StoryOfLanda() {
           </ul>
         </div>
         {/* top - left */}
-<<<<<<< HEAD
-        <div className="flex flex-col text-justify w-full md:w-[48%]">
-          <div className="relative hidden md:block h-[310px] w-screen md:h-[740px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
-            <div className='h-[200px]'>            
-              <Image
-                className="h-[1200px] hidden md:block w-full"
-                src="/static/images/About/story/aboutus.png"
-                alt="story of landa"
-                layout="fill"
-                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-=======
         <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2 ltr:md:pl-48">
                   <div className="relative hidden md:block h-[310px] w-screen md:h-[640px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
                     <div className='h-[200px]'>            
@@ -95,7 +75,6 @@ export default function StoryOfLanda() {
   </div>
 
 
->>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
           {/* <div className="mt-4 order-first px-10 md:px-0 md:pl-0 md:order-last">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
               {t('TheStoryOfLanda', { returnObjects: true })[0].title}
@@ -122,11 +101,6 @@ export default function StoryOfLanda() {
           />
         </div>
         
-<<<<<<< HEAD
-        <div className='text-lg w-full md:w-[48%] text-justify'>
-          {t('VISIONMission', { returnObjects: true }).text}
-        </div>
-=======
       </div>
       <div className='ltr:font-gilda rtl:font-EBGaramond text-3xl pl-14 rtl:pr-14 md:text-4xl md:pl-32 md:rtl:pr-32 md:pt-12'>
       {t('VISIONMission', { returnObjects: true }).title}
@@ -147,7 +121,6 @@ export default function StoryOfLanda() {
             
           </div>
  
->>>>>>> 819fd83ed2c8524e7d61a233f9fb1783d4fc3b1d
       </div>
 
 
@@ -209,6 +182,8 @@ export default function StoryOfLanda() {
 
 
 
+    </div>
+    </div>
     </div>
   );
 }

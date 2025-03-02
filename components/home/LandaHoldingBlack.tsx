@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import Lines from '@/components/icons/LandaHoldingBlack/Lines';
 import UlList from '@/components/List/UlList';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';

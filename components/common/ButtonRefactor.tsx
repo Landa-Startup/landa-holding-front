@@ -32,7 +32,7 @@ export default function ButtonRefactor({
               } delay-50 flex h-[50px] w-full flex-wrap content-center justify-center rounded-xl p-2 text-white transition duration-150 ease-in-out hover:bg-primary`}
               // className='transition flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white ease-in-out delay-150 bg-black hover:bg-primary duration-300'
             >
-              <div className='z-10 flex items-center gap-2'>
+              <div className='z-10 flex flex-row rtl:flex-row-reverse items-center gap-2'>
                 <span className='text-md'>{text}</span>
                 <ChevronRightIcon className='h-5 w-5' />
               </div>
