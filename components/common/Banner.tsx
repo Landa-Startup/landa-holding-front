@@ -1,4 +1,4 @@
-// import { useTranslation } from 'app/i18n';
+'use client'
 
 export default async function Banner({
   image,
@@ -10,9 +10,8 @@ export default async function Banner({
   lang: string;
 }) {
 
-
   return (
-    <div className="relative h-screen md:h-[520px]">
+    <div className="relative h-screen md:h-[550px]">
       {/* Background Image with Blur and Overlay */}
       <div
         style={{
@@ -20,20 +19,12 @@ export default async function Banner({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className="absolute inset-0 h-full md:h-[500px]"
-      ></div>
-
-      <div>
-        {/* Content Overlay */}
-        <div className="">
-          <div className="">
-            {/* Text Content */}
-            {/* <p className={`font-condensed text-xl font-normal text-neutral-50 ltr:tracking-[5.60px]`}>
-              {(t('LandaHolding'))}
-            </p> */}
-            <p className={`absolute  top-1/2 transform -translate-y-1/2 get-shadow text-2xl md:text-[60px] text-white font-gilda ${lang !== 'fa' ? 'left-14' : 'right-14' }`}>
-              {title}
-            </p>
+        className="absolute inset-0 h-full flex items-center px-4 md:px-20"
+      >
+        <div className='h-auto w-full'>
+          <div className='h-auto w-full flex flex-col items-start gap-4'>
+            <p className='text-white font-medium font-gilda text-[16px]'>{lang == "en" ? "Landa Holding" : "هلدینگ لاندا"}</p>
+            <p className='text-white font-gilda font-medium text-[64px]'>{title}</p>
           </div>
         </div>
       </div>

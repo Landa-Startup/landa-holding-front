@@ -11,12 +11,12 @@ type ButtonProps = {
 };
 
 export default function ButtonRefactor({
-                                         text,
-                                         type = 'button',
-                                         href,
-                                         disabled,
-                                         bgColor
-                                       }: ButtonProps) {
+  text,
+  type = 'button',
+  href,
+  disabled,
+  bgColor
+}: ButtonProps) {
 
 
   switch (type) {
@@ -30,7 +30,6 @@ export default function ButtonRefactor({
               className={`bg-${
                 bgColor ? bgColor : 'black'
               } delay-50 flex h-[50px] w-full flex-wrap content-center justify-center rounded-xl p-2 text-white transition duration-150 ease-in-out hover:bg-primary`}
-              // className='transition flex h-[56px] w-full flex-wrap content-center justify-center rounded p-2 text-white ease-in-out delay-150 bg-black hover:bg-primary duration-300'
             >
               <div className='z-10 flex flex-row rtl:flex-row-reverse items-center gap-2'>
                 <span className='text-md'>{text}</span>
@@ -47,21 +46,20 @@ export default function ButtonRefactor({
     case 'submit':
     case 'reset':
       return (
-        <Link href='https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpDtls.html?corpId=12980266'>
-
-          <div className='group relative w-fit overflow-hidden order-first md:order-last mr-2'>
+        // <Link href='https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpDtls.html?corpId=12980266'>
+          <div className='group relative w-full overflow-hidden order-first md:order-last'>
             <button
               type={type}
-              className='flex h-[56px] w-[224px] md:w-[284px] flex-wrap content-center items-center justify-center rounded bg-[#AA8453] p-2  text-white'
+              className='flex h-12 md:h-[58px] w-full px-8 flex-wrap content-center items-center justify-center rounded bg-[#AA8453] text-white'
             >
-              <div className='z-10 flex items-center gap-2 rtl:flex-row-reverse text-sm'>
+              <div className='z-10 flex items-center gap-2 rtl:flex-row-reverse text-sm md:text-[28px] font-semibold'>
                 <span>{text}</span>
               </div>
             </button>
             <span
               className='absolute inset-0 -translate-x-full rounded bg-black transition-transform duration-500 group-hover:translate-x-0'></span>
           </div>
-        </Link>
+        // </Link>
       );
 
     // If the type is any other value

@@ -107,16 +107,3 @@ export default function StartupFormTrialProduct({
     </>
   );
 }
-
-{
-  /* <TextArea
-            title="Explain your idea in 5 lines?*"
-            register={register}
-            errors={errors}
-            placeholder="Description"
-            nameTextArea="ideaExplanation"
-            patternMessage=''
-            patternValue=''
-            required=''
-          />*/
-}

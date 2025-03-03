@@ -12,7 +12,10 @@ module.exports = {
         primary: '#AA8453',
         whiteGold: '#F8F5F0',
         tableHeader: '#DDCEBA',
-        blue: '#35427D'
+        blue: '#35427D',
+        grayCheckBox: '#939393',
+        grayLabel: "#636260",
+        grayDark: "#222222B2"
       },
     },
   },

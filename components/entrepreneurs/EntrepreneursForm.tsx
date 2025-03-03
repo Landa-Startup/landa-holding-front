@@ -3,19 +3,15 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
 import { Entrepreuneur } from '../../types/global';
-// import EntrepreneursTitle from './EntrepreneursTitle';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
 import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-// import ButtonRefactor from '../common/ButtonRefactor';
 import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
-import FormTitle from '../common/form/FormTitle';
-// import FormTitle from '../common/form/FormTitle';
 
 export default function EntrepreneursForm() {
   const {
@@ -100,10 +96,17 @@ export default function EntrepreneursForm() {
   return (
     <>
       <div className="container m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-        <div className="bg-[#F8F5F0]">
-          <FormTitle formName="entrepreneurForm" />
-        </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
+          <div className='w-full h-auto pt-8 bg-[#F8F5F0]'>
+            <div className='w-full h-auto flex flex-col gap-12'>
+              <div className='w-full h-auto flex flex-row justify-center'>
+                <p className='text-black font-gilda font-medium text-[64px] leading-[75px]'>{t('EntrepreneurTitle')}</p>
+              </div>
+              <div className='w-full h-auto flex flex-row justify-start px-6'>
+                <p className='text-black font-barlow font-medium text-[30px] leading-[42px]'>{t('PersonalInformation')}</p>
+              </div>
+            </div>
+          </div>
           <div className="mb-6 grid w-full grid-cols-1 gap-x-6 gap-y-4 bg-[#faf8f5] p-2 md:grid-cols-2 lg:grid-cols-3">
             <PersonalInfoInput
               register={register}
@@ -126,7 +129,7 @@ export default function EntrepreneursForm() {
                 label={t('companyName')}
                 required={t('companyNameRequired')}
                 placeholder={t('companyNamePlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 bg-whiteGold w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
                 patternMessage=""
@@ -142,7 +145,7 @@ export default function EntrepreneursForm() {
                 label={t('website')}
                 required={t('websiteRequired')}
                 placeholder={t('websitePlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 bg-whiteGold w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
                 patternMessage=""
@@ -158,7 +161,7 @@ export default function EntrepreneursForm() {
                 label={t('prosField')}
                 required={t('prosFieldRequired')}
                 placeholder={t('prosFieldPlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 bg-whiteGold w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
                 patternMessage={''}

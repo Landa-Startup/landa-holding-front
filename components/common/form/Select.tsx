@@ -12,7 +12,6 @@ export default function Select({
   labelClass,
   placeholder,
   handleChange,
-  selected
 }: {
   register: any;
   errors: any;
@@ -40,10 +39,11 @@ export default function Select({
           })}
           className={className + (errors[nameInput] ? ' border-red-500' : '')}
           onChange={handleChange}
+          value={placeholder}
         >
-          <option disabled selected value={''}>
+          {/* <option disabled selected value={placeholder}>
             {selected ? selected : placeholder}
-          </option>
+          </option> */}
           {options.map((option, index) => (
             <option key={index} value={option.value}>
               {option.label}

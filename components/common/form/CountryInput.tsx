@@ -40,7 +40,7 @@ export default function CountryInput({
         nameInput={nameInput}
         label={t('countryName')}
         required={t('countryNameRequired')}
-        className='input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
+        className='input input-bordered col-span-1 mb-1 mt-3 w-full bg-whiteGold placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]'
         labelClass='text-[#6b6b6b] dark:text-current'
         placeholder={t('countryNamePlaceholder')}
         options={countriesData}
@@ -59,7 +59,7 @@ export default function CountryInput({
           patternValue=""
           patternMessage=""
           placeholder={t('provinceOfResidencePlaceholder')}
-          className="input input-bordered col-span-1 mb-1 mt-2 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+          className="input input-bordered col-span-1 bg-whiteGold mb-1 mt-2 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
           labelClass="text-[#6b6b6b] dark:text-current"
         />
       </div>

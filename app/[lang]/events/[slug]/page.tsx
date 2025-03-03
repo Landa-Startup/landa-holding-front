@@ -125,7 +125,7 @@ export default function Page({
                       type="text"
                       placeholder="Number"
                     />
-                    <select className="h-[50px] w-[350px] rounded-md border border-[#E5E5E5] bg-[#FAFAFA] pl-5">
+                    {/* <select className="h-[50px] w-[350px] rounded-md border border-[#E5E5E5] bg-[#FAFAFA] pl-5">
                       <option value="Select a number" disabled defaultChecked>
                         Select a number
                       </option>
@@ -139,7 +139,7 @@ export default function Page({
                       <option value="8">8</option>
                       <option value="9">9</option>
                       <option value="10">10</option>
-                    </select>
+                    </select> */}
                   </div>
                   {/* <Button
                     size="visit"
