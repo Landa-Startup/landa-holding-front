@@ -11,8 +11,14 @@ export default function FormTitle(
   const { t } = useTranslation(lang, 'formComponent');
 
   return (
-    <div className='bg-[#F8F5F0]'>
-      <div className='text-center'>
+    <div className='w-full h-[300px] bg-black'>
+      <div className='w-full h-full flex justify-center items-center'>
+        <div className='w-full h-auto flex flex-col items-center'>
+          <p className='text-white font-gilda font-medium text-[64px]'>{t(formName,{ returnObjects: true }).formTitle}</p>
+          <p className='text-white font-gilda font-medium text-[32px]'>{t(formName,{ returnObjects: true }).formSubtitle}</p>
+        </div>
+      </div>
+      {/* <div className='text-center'>
         <p className='mb-20 pt-8 ltr:font-gilda rtl:font-EBGaramond text-4xl tracking-wide md:pt-8 md:text-5xl lg:text-6xl xl:text-7xl'>{t(formName,{ returnObjects: true }).formTitle}</p>
       </div>
       <div className='text-center'>
@@ -20,7 +26,7 @@ export default function FormTitle(
       </div>
       <div>
         <hr className="mx-3 border-[#000000]" />
-      </div>
+      </div> */}
     </div>
   )
 }

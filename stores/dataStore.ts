@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { MagazineData } from '@/types/global';
+import {produce} from 'immer';
 
 
 
@@ -14,6 +15,12 @@ type State = {
     cardData: MagazineData;
     categories: any[];
     tags: any[];
+    startupFormType: string
+    filesCounter: {
+        pitch: boolean
+        business: boolean
+        financial: boolean
+    }
 }
 
 type Action = {
@@ -27,6 +34,8 @@ type Action = {
     setCardData: (data: State["cardData"]) => void,
     setCategories: (category: State["categories"]) => void,
     setTags: (tags: State["tags"]) => void,
+    setStartUpFormType: (type: State["startupFormType"]) => void
+    handleFileCounterChange: (name: string) => void
     // handleChangeSuccess: () => void,
 }
 
@@ -49,6 +58,14 @@ const useSubmit = create<State & Action>((set) => {
         },
         categories: [],
         tags: [],
+        startupFormType: "",
+        filesCounter: {
+            pitch: false,
+            business: false,
+            financial: false
+        },
+
+
         handleSubmitingChange: (bool) => set(() => ({isSubmitting: bool})),
         handleSuccessChange: (bool) => set(() => ({isSuccess: bool})),
         handleSendChange: (bool) => set(() => ({send: bool})),
@@ -58,7 +75,11 @@ const useSubmit = create<State & Action>((set) => {
         setCardsData: (data) => set(() => ({cardsData: data})),
         setCategories: (categories) => set(() => ({categories: categories})),
         setTags: (tags) => set(() => ({tags: tags})),
-        setCardData: (cardData) => set(() => ({cardData: cardData}))
+        setCardData: (cardData) => set(() => ({cardData: cardData})),
+        setStartUpFormType: (type) => set(() => ({startupFormType: type})),
+        handleFileCounterChange: (name) => set(produce((state) => {
+            state.filesCounter[name] = !state.filesCounter[name]
+        }))
     };
 });
 

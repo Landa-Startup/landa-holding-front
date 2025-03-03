@@ -48,7 +48,7 @@ export default function Input({
           }
         })}
         placeholder={placeholder}
-        className={`text-sm ${
+        className={`text-sm w-full ${
           className + (errors[nameInput] ? ' border-red-500' : '')
         }`}
       />

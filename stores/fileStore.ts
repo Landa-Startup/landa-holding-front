@@ -9,9 +9,9 @@ type State = {
 
 type Action = {
     handleCvFileChange: (file: State['cvFileState']) => void,
-    handleBusinessFileChange: (file: State['filePostBussines']) => void,
-    handlePitchFileChange: (file: State['filePostPitch']) => void,
-    handleFinancialFileChange: (file: State['filePostFinancial']) => void,
+    handleBusinessFileChange: (file: any) => void,
+    handlePitchFileChange: (file: any) => void,
+    handleFinancialFileChange: (file: any) => void,
 }
 
 const useFile = create<State & Action>((set) => {

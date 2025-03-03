@@ -1,24 +1,28 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { StartupsFormData } from '../../types/global';
 import { initialStartupsFormData } from '../../initials/initObjects';
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
-import StartupFormMVP from './StartupFormMVP';
-import StartupFormFirstSale from './StartupFormFirstSale';
-import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
+// import StartupFormMVP from './StartupFormMVP';
+// import StartupFormFirstSale from './StartupFormFirstSale';
+// import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
-import Select from '../../components/common/form/Select';
+// import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useTranslation } from 'app/i18n/client';
-import Button from '../common/Button';
+// import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
 import { useFile } from 'stores/fileStore';
-import StartupFormTrialProduct from './StartupFormTrialProduct';
+// import StartupFormTrialProduct from './StartupFormTrialProduct';
 import FormTitle from '../common/form/FormTitle';
+import ButtonRefactor from '../common/ButtonRefactor';
+// import { LandaBgBig } from 'public/static/logos/LandaBgBig';
+import StartUpFormCheckbox from './StartUpFormCheckbox';
+import StartUpTrialRefactore from './StartUpTrialRefactore';
 // import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
@@ -27,26 +31,26 @@ export default function StartupFormForm() {
   const lang = useLang((s) => s.lang)
   const { t } = useTranslation(lang, 'formComponent');
 
-  enum Type {
-    IDEA = t("IDEA"),
-    MVP = t('MVP'),
-    TRIAL = t('TRIAL'),
-    FisrtSale = t('FisrtSale'), // Typo: Should be "FirstSale"
-    SaleDevelopment = t('SaleDevelopment')
-  }
+  // enum Type {
+  //   IDEA = t("IDEA"),
+  //   MVP = t('MVP'),
+  //   TRIAL = t('TRIAL'),
+  //   FisrtSale = t('FisrtSale'), // Typo: Should be "FirstSale"
+  //   SaleDevelopment = t('SaleDevelopment')
+  // }
 
-  const Types = [
-    Type.IDEA,
-    Type.MVP,
-    Type.TRIAL,
-    Type.FisrtSale,
-    Type.SaleDevelopment
-  ];
+  // const Types = [
+  //   Type.IDEA,
+  //   Type.MVP,
+  //   Type.TRIAL,
+  //   Type.FisrtSale,
+  //   Type.SaleDevelopment
+  // ];
 
-  const typesData = Types.map((type: any) => ({
-    value: type,
-    label: type
-  }));
+  // const typesData = Types.map((type: any) => ({
+  //   value: type,
+  //   label: type
+  // }));
 
   const {
     register,
@@ -58,7 +62,6 @@ export default function StartupFormForm() {
     defaultValues: initialStartupsFormData
   });
 
-  const [selectedRadio, setSelectedRadio] = useState('');
 
   const {
     csrfToken,
@@ -67,6 +70,10 @@ export default function StartupFormForm() {
     handleSendChange,
     handleNotifChange,
     handleSuccessChange,
+    startupFormType, 
+    setStartUpFormType,
+    filesCounter,
+    handleFileCounterChange
   } = useSubmit((s) => s)
 
   const {
@@ -77,11 +84,6 @@ export default function StartupFormForm() {
     handleFinancialFileChange,
     handlePitchFileChange,
   } = useFile((s) => s)
-
-
-  const handleItemChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedRadio(event.target.value);
-  };
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -96,6 +98,7 @@ export default function StartupFormForm() {
 
   const onSubmit = async (formData: StartupsFormData) => {
     // Set loading and sending states.
+    console.log(formData)
     handleSubmitingChange(true);
     handleSendChange(true);
 
@@ -150,7 +153,7 @@ export default function StartupFormForm() {
         handleNotifChange(true);
         handleSendChange(false);
         reset(initialStartupsFormData); // Country does not reset
-        setSelectedRadio('');
+        setStartUpFormType('');
 
 
 
@@ -175,26 +178,11 @@ export default function StartupFormForm() {
   }));
 
   return (
-    <div className="container m-[-1rem] mx-auto my-20 gap-y-0 font-barlow lg:p-20">
-      {/* <div className="container m-10 mx-auto px-5 pt-20 text-center lg:p-2">
-        <p className="pb-3 pt-0 font-condensed text-3xl tracking-wide text-black sm:mt-0 md:pt-0 md:text-5xl  lg:pt-10 lg:text-6xl xl:text-7xl ">
-          {t('startUp', { returnObjects: true }).formTitle}
-        </p>
-      </div>
-      <div>
-          <p className="mb-4 text-4xl">
-            {t('startUp', { returnObjects: true }).formSubtitle}
-          </p>
-        </div>
-
-        <div>
-          <hr className="mb-5 border-[#000000] dark:border-[#ffffff]" />
-        </div> */}
-      <div className='mx-5 bg-[#faf8f5]'>
+    <div className="container m-[-1rem] mx-auto my-12 gap-y-0 font-barlow px-2 md:px-12 relative">
+      <div className='mb-12'>
         <FormTitle formName='startUp'/>
       </div>
-      <div className="container mx-auto bg-[#faf8f5] px-5 lg:px-4 dark:bg-transparent">
-        {/* {t('startUp',{ returnObjects: true }).formTitle} */}
+      <div className="container mx-auto bg-[#faf8f5] dark:bg-transparent">
         <form onSubmit={handleSubmit(onSubmit)}>
           <StartupFormPersonalInformation
             register={register}
@@ -205,13 +193,42 @@ export default function StartupFormForm() {
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
                 <p className="mb-3 w-[310px] border-b px-10 py-5 text-2xl text-white md:w-[550px] md:text-3xl lg:w-[450px] lg:text-3xl xl:w-[650px]">
-                  {t('startUp', { returnObjects: true }).subTitle}
+                  {t('startUp', { returnObjects: true }).secondTitle}
                 </p>
                 <hr className=" mb-5 mt-0 dark:border-[#222222CC] " />
               </div>
             </div>
           </div>
-          <Select
+          <div className='w-full h-auto px-4'>
+            <div className='h-auto w-full flex flex-col gap-2'>
+              <StartUpFormCheckbox name={t("IDEA")} />
+              {((): any => {
+                if (startupFormType == "IDEA") {
+                  return <StartupFormIdea register={register} errors={errors} />
+                }
+              })()}
+              <StartUpFormCheckbox name={t("TRIAL")} />
+              {((): any => {
+                if (startupFormType == "TRIAL") {
+                  return (
+                    <StartUpTrialRefactore
+                      handleFileCounterChange={handleFileCounterChange}
+                      handlePitchFileChange={handlePitchFileChange}
+                      handleBusinessFileChange={handleBusinessFileChange}
+                      handleFinancialFileChange={handleFinancialFileChange}
+                      filesCounter={filesCounter}
+                      register={register}
+                      errors={errors}
+                    />
+                  )
+                }
+              })()}
+              <StartUpFormCheckbox name={t("MVP")} />
+              <StartUpFormCheckbox name={t("FisrtSale")} />
+              <StartUpFormCheckbox name={t("SaleDevelopment")} />
+            </div>
+          </div>
+          {/* <Select
             register={register}
             errors={errors}
             nameInput="statusSelect"
@@ -227,10 +244,10 @@ export default function StartupFormForm() {
             options={typesData}
             handleChange={handleItemChange}
             selected={selectedRadio}
-          />
+          /> */}
           <br />
 
-          {((): any => {
+          {/* {((): any => {
             switch (selectedRadio) {
               case t("IDEA"):
                 return <StartupFormIdea register={register} errors={errors} />;
@@ -282,15 +299,10 @@ export default function StartupFormForm() {
               default:
                 console.error('error');
             }
-          })()}
+          })()} */}
 
-          <div className="flex justify-center pb-4">
-            <Button
-              type='submit'
-              bgColor="Primary"
-              disabled={errorsList[0] ? true : false}
-            />
-            {/* <ButtonRefactor type="submit" text="Submit" disabled={errorsList[0] ? true : false}/> */}
+          <div className="flex justify-center w-1/6 mx-auto">
+            <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>
           </div>
           <NotificationSendForm />
         </form>

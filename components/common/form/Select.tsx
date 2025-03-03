@@ -41,7 +41,7 @@ export default function Select({
           className={className + (errors[nameInput] ? ' border-red-500' : '')}
           onChange={handleChange}
         >
-          <option disabled selected value={''}>
+          <option disabled selected value={placeholder}>
             {selected ? selected : placeholder}
           </option>
           {options.map((option, index) => (
