@@ -4,7 +4,7 @@ const UploadFile = () => {
   return (
     <div>
         <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg" href="http://www.w3.org/1999/xlink">
-            <rect x="0.5" width="27" height="27" fill="url(#pattern0_138_5516)" fill-opacity="0.6"/>
+            <rect x="0.5" width="27" height="27" fill="url(#pattern0_138_5516)" fillOpacity="0.6"/>
             <defs>
                 <pattern id="pattern0_138_5516" patternContentUnits="objectBoundingBox" width="1" height="1">
                     <use href="#image0_138_5516" transform="scale(0.0078125)"/>

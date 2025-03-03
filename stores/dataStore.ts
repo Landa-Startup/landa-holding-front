@@ -21,6 +21,7 @@ type State = {
         business: boolean
         financial: boolean
     }
+    solutionsLevel: number 
 }
 
 type Action = {
@@ -36,6 +37,8 @@ type Action = {
     setTags: (tags: State["tags"]) => void,
     setStartUpFormType: (type: State["startupFormType"]) => void
     handleFileCounterChange: (name: string) => void
+    handleSolutionsLevelChange: (index: number) => void
+
     // handleChangeSuccess: () => void,
 }
 
@@ -64,6 +67,7 @@ const useSubmit = create<State & Action>((set) => {
             business: false,
             financial: false
         },
+        solutionsLevel: 0,
 
 
         handleSubmitingChange: (bool) => set(() => ({isSubmitting: bool})),
@@ -79,6 +83,9 @@ const useSubmit = create<State & Action>((set) => {
         setStartUpFormType: (type) => set(() => ({startupFormType: type})),
         handleFileCounterChange: (name) => set(produce((state) => {
             state.filesCounter[name] = !state.filesCounter[name]
+        })),
+        handleSolutionsLevelChange: (index) => set(() => ({
+            solutionsLevel: index
         }))
     };
 });

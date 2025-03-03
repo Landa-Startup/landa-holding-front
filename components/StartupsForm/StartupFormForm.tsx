@@ -23,6 +23,7 @@ import ButtonRefactor from '../common/ButtonRefactor';
 // import { LandaBgBig } from 'public/static/logos/LandaBgBig';
 import StartUpFormCheckbox from './StartUpFormCheckbox';
 import StartUpTrialRefactore from './StartUpTrialRefactore';
+import StartUpMvpRefactore from './StartUpMvpRefactore';
 // import ButtonRefactor from '../common/ButtonRefactor';
 
 //TODO: add this enum in a file and import it to index.ts api file , global.d file
@@ -73,7 +74,9 @@ export default function StartupFormForm() {
     startupFormType, 
     setStartUpFormType,
     filesCounter,
-    handleFileCounterChange
+    handleFileCounterChange,
+    solutionsLevel,
+    handleSolutionsLevelChange
   } = useSubmit((s) => s)
 
   const {
@@ -218,12 +221,28 @@ export default function StartupFormForm() {
                       handleFinancialFileChange={handleFinancialFileChange}
                       filesCounter={filesCounter}
                       register={register}
-                      errors={errors}
-                    />
+                      errors={errors} 
+                      handleSolutionsLevelChange={handleSolutionsLevelChange} 
+                      solutionsLevel={solutionsLevel}                    />
                   )
                 }
               })()}
               <StartUpFormCheckbox name={t("MVP")} />
+              {((): any => {
+                if (startupFormType == "MVP") {
+                  return (
+                    <StartUpMvpRefactore
+                      handleFileCounterChange={handleFileCounterChange}
+                      handlePitchFileChange={handlePitchFileChange}
+                      handleBusinessFileChange={handleBusinessFileChange}
+                       filesCounter={filesCounter}
+                      register={register}
+                      errors={errors} 
+                      handleSolutionsLevelChange={handleSolutionsLevelChange} 
+                      solutionsLevel={solutionsLevel}                    />
+                  )
+                }
+              })()}
               <StartUpFormCheckbox name={t("FisrtSale")} />
               <StartUpFormCheckbox name={t("SaleDevelopment")} />
             </div>
@@ -301,7 +320,7 @@ export default function StartupFormForm() {
             }
           })()} */}
 
-          <div className="flex justify-center w-1/6 mx-auto">
+          <div className="flex justify-center w-1/3 md:w-1/4 lg:w-1/6 mx-auto">
             <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>
           </div>
           <NotificationSendForm />

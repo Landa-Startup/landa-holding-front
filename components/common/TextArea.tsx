@@ -29,7 +29,7 @@ export default function TextArea({
   return (
     <div className='flex flex-col items-start'>
       {/* Label for the textarea */}
-      {title && (<label className="px-2 text-lg text-[#6b6b6b] dark:text-current">{title}</label>)}
+      {title && (<label className="px-2 text-lg xl:text-xl text-[#6b6b6b] dark:text-current">{title}</label>)}
       <textarea
         rows={rows}
         cols={cols}
