@@ -424,19 +424,18 @@ const personsEN: personArrayInterface[] = [
     category: 'content creators'
   },
   {
-    "image": "/static/images/our-team/Personals/66nn.jpg",
-    "position": "Content Creator",
-    "name": "Mahsa Ghorbani",
-    "linkedIn": "",
-    "category": "content creators"
+    image: "/static/images/our-team/Personals/66nn.jpg",
+    position: "Content Creator",
+    name: "Mahsa Ghorbani",
+    linkedIn: "",
+    category: "content creators"
   },
-
   {
-    "image": "/static/images/our-team/Personals/milad.jpg",
-    "position": "Content Creator",
-    "name": "Milad Fatemi",
-    "linkedIn": "",
-    "category": "content creators"
+    image: "/static/images/our-team/Personals/milad.jpg",
+    position: "Content Creator",
+    name: "Milad Fatemi",
+    linkedIn: "",
+    category: "content creators"
   },
   {
     image: '/static/images/our-team/Personals/a27.png',
