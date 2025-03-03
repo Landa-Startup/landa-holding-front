@@ -25,6 +25,7 @@ export default function Navbar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLinkClick = () => {
+    console.log(isMenuOpen)
     setIsMenuOpen(false);
     if (!drawerRef.current) {
       return;
