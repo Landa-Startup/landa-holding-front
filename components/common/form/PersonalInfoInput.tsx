@@ -95,7 +95,7 @@ const PersonalInfoInput = ({
               patternValue=""
               patternMessage=""
               placeholder={t('firstNamePlaceholder')}
-              className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+              className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
             />
             :
             <Input
@@ -108,7 +108,7 @@ const PersonalInfoInput = ({
               patternValue=""
               patternMessage=""
               placeholder={t('firstNamePlaceholder')}
-              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
               labelClass="text-[#6b6b6b] dark:text-current"
             />
           }
@@ -126,7 +126,7 @@ const PersonalInfoInput = ({
             patternValue=""
             patternMessage=""
             placeholder={t('lastNamePlaceholder')}
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
           />
             :
           <Input
@@ -139,7 +139,7 @@ const PersonalInfoInput = ({
             patternValue=""
             patternMessage=""
             placeholder={t('lastNamePlaceholder')}
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
           }
@@ -157,7 +157,7 @@ const PersonalInfoInput = ({
             patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             patternMessage={t('emailErrorMessage')}
             placeholder={t('EmailPlaceholder')}
-            className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+            className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
           />
             :
           <Input
@@ -170,7 +170,7 @@ const PersonalInfoInput = ({
             patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             patternMessage={t('emailErrorMessage')}
             placeholder={t('EmailPlaceholder')}
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
           }
@@ -188,7 +188,7 @@ const PersonalInfoInput = ({
             patternValue="^[0-9]{11}$"
             patternMessage={t('phoneNumberErrorMessage')}
             placeholder={t('phoneNumberPlaceholder')}
-            className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+            className="input col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
           />
             :
           <Input
@@ -201,7 +201,7 @@ const PersonalInfoInput = ({
             patternValue="^[0-9]{11}$"
             patternMessage={t('phoneNumberErrorMessage')}
             placeholder={t('phoneNumberPlaceholder')}
-            className="input input-bordered col-span-1  mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
+            className="input input-bordered col-span-1  mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md bg-whiteGold dark:placeholder-[#9CA3AF]"
             labelClass="text-[#6b6b6b] dark:text-current"
           />
           }

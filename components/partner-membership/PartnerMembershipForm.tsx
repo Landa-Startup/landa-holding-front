@@ -2,22 +2,17 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
-// import PartnerMembershipTitle from './PartnerMembershipTitle';
 import { PartnerMembershipFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
 import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialPartnerMembershipFormData } from '../../initials/initObjects';
 import { submitPartnerMembershipForm } from '../../pages/api/partner-membership';
-
-// import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-// import ButtonRefactor from '../common/ButtonRefactor';
 import { useTranslation } from 'app/i18n/client';
-import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
-import FormTitle from '../common/form/FormTitle';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 
 export default function PartnerMembershipForm() {
@@ -46,7 +41,6 @@ export default function PartnerMembershipForm() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      console.log('csrfToken', process.env.NEXT_PUBLIC_DJANGO_HOST_URL);
       const token = await GetCsrfToken(
         `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
       );
@@ -96,18 +90,21 @@ export default function PartnerMembershipForm() {
       });
   };
 
-  const errorsList = Object.entries(errors).map(([name, value]) => ({
-    name: name,
-    value: value
-  }));
-
   return (
     <div>
       <div>
         <div className="container  m-[-1rem] mx-auto my-20 gap-y-0 px-5 font-barlow lg:p-20">
-          {/* <PartnerMembershipTitle /> */}
-          <FormTitle formName='partnerForm' />
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+            <div className='w-full h-auto pt-8 bg-[#F8F5F0]'>
+              <div className='w-full h-auto flex flex-col gap-12'>
+                <div className='w-full h-auto flex flex-row justify-center'>
+                  <p className='text-black font-gilda font-medium text-[64px] leading-[75px]'>{t('partnerForm', { returnObjects: true }).formTitle}</p>
+                </div>
+                <div className='w-full h-auto flex flex-row justify-start px-6'>
+                  <p className='text-black font-barlow font-medium text-[30px] leading-[42px]'>Personal Information</p>
+                </div>
+              </div>
+            </div>
             <div className="mb-6 grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
               <PersonalInfoInput
                 register={register}
@@ -121,28 +118,6 @@ export default function PartnerMembershipForm() {
                 }}
               />
 
-            {/*<div className="col-span-1">*/}
-            {/*  <Input*/}
-            {/*    register={register}*/}
-            {/*    errors={errors}*/}
-            {/*    nameInput="birthDate"*/}
-            {/*    type="date"*/}
-            {/*    label={t('birthDate')}*/}
-            {/*    required={t('birthDateRequired')}*/}
-            {/*    patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"*/}
-            {/*    patternMessage={t('birthDateErrorMessage')}*/}
-            {/*    placeholder={t('birthDatePlaceholder')}*/}
-            {/*    className="input input-bordered col-span-1 mb-1 mt-2 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"*/}
-            {/*    labelClass="text-[#6b6b6b] dark:text-current"*/}
-            {/*  />*/}
-            {/*</div>*/}
-
-              {/*<CountryInput*/}
-              {/*  register={register}*/}
-              {/*  errors={errors}*/}
-              {/*  nameInput="countryOfResidence"*/}
-              {/*/>*/}
-
             <div className="col-span-1">
               <Input
                 register={register}
@@ -152,7 +127,7 @@ export default function PartnerMembershipForm() {
                 label={t('companyName')}
                 required={t('companyNameRequired')}
                 placeholder={t('companyNamePlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 bg-whiteGold w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue=""
                 patternMessage=""
@@ -168,7 +143,7 @@ export default function PartnerMembershipForm() {
                 label={t('startUp', {returnObjects: true}).investmentCeiling}
                 required={t('startUp', {returnObjects: true}).investmentCeilingRequired} 
                 placeholder={t('startUp', {returnObjects: true}).investmentCeilingPlaceholder}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                className="input input-bordered col-span-1 mb-1 mt-3 bg-whiteGold w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
                 labelClass="text-[#6b6b6b] dark:text-current"
                 patternValue={''}
                 patternMessage={''}
@@ -189,11 +164,12 @@ export default function PartnerMembershipForm() {
             </div>
             </div>
             <div className="mx-auto w-full pb-4 text-center md:w-auto">
-              <Button
+              {/* <Button
                 type='submit'
                 bgColor="Primary"
                 disabled={errorsList[0] ? true : false}
-              />
+              /> */}
+              <ButtonRefactor text={t('submit')} />
             </div>
           </form>
           <NotificationSendForm />

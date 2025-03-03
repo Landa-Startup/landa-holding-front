@@ -5,28 +5,19 @@ import { StartupsFormData } from '../../types/global';
 import { initialStartupsFormData } from '../../initials/initObjects';
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
-// import StartupFormMVP from './StartupFormMVP';
-// import StartupFormFirstSale from './StartupFormFirstSale';
-// import StartupFormSaleDevelopment from './StartupFormSaleDevelopment';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import GetCsrfToken from '../../utils/get-csrf-token';
-// import Select from '../../components/common/form/Select';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useTranslation } from 'app/i18n/client';
-// import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
 import { useFile } from 'stores/fileStore';
-// import StartupFormTrialProduct from './StartupFormTrialProduct';
 import FormTitle from '../common/form/FormTitle';
 import ButtonRefactor from '../common/ButtonRefactor';
-// import { LandaBgBig } from 'public/static/logos/LandaBgBig';
 import StartUpFormCheckbox from './StartUpFormCheckbox';
 import StartUpTrialRefactore from './StartUpTrialRefactore';
 import StartUpMvpRefactore from './StartUpMvpRefactore';
-// import ButtonRefactor from '../common/ButtonRefactor';
 
-//TODO: add this enum in a file and import it to index.ts api file , global.d file
 
 export default function StartupFormForm() {
   const lang = useLang((s) => s.lang)
@@ -247,78 +238,6 @@ export default function StartupFormForm() {
               <StartUpFormCheckbox name={t("SaleDevelopment")} />
             </div>
           </div>
-          {/* <Select
-            register={register}
-            errors={errors}
-            nameInput="statusSelect"
-            label={t('startUp', { returnObjects: true }).statusSelect}
-            required={
-              t('startUp', { returnObjects: true }).statusSelectRequired
-            }
-            className="select select-bordered mt-4 w-full max-w-xs px-8"
-            labelClass="text-[#6b6b6b] dark:text-current"
-            placeholder={
-              t('startUp', { returnObjects: true }).statusSelectPlaceholder
-            }
-            options={typesData}
-            handleChange={handleItemChange}
-            selected={selectedRadio}
-          /> */}
-          <br />
-
-          {/* {((): any => {
-            switch (selectedRadio) {
-              case t("IDEA"):
-                return <StartupFormIdea register={register} errors={errors} />;
-                break;
-              case t('MVP'):
-                return (
-                  <StartupFormMVP
-                    register={register}
-                    errors={errors}
-                    handlePitchFileChange={handlePitchFileChange}
-                    handleBusinessFileChange={handleBusinessFileChange}
-                    handleFinancialFileChange={handleFinancialFileChange}
-                  />
-                );
-                break;
-              case t('TRIAL'):
-                return (
-                  <StartupFormTrialProduct
-                    register={register}
-                    errors={errors}
-                    handlePitchDeckFileChange={handlePitchFileChange}
-                    handleBusinessPlanFileChange={handleBusinessFileChange}
-                    handleFinancialFileChange={handleFinancialFileChange}
-                  />
-                );
-                break;
-              case t('FisrtSale'):
-                return (
-                  <StartupFormFirstSale
-                    register={register}
-                    errors={errors}
-                    handlePitchFileChange={handlePitchFileChange}
-                    handleBusinessFileChange={handleBusinessFileChange}
-                    handleFinancialFileChange={handleFinancialFileChange}
-                  />
-                );
-                break;
-              case t('SaleDevelopment'):
-                return (
-                  <StartupFormSaleDevelopment
-                    register={register}
-                    errors={errors}
-                    handlePitchFileChange={handlePitchFileChange}
-                    handleBusinessFileChange={handleBusinessFileChange}
-                    handleFinancialFileChange={handleFinancialFileChange}
-                  />
-                );
-                break;
-              default:
-                console.error('error');
-            }
-          })()} */}
 
           <div className="flex justify-center w-1/3 md:w-1/4 lg:w-1/6 mx-auto">
             <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>

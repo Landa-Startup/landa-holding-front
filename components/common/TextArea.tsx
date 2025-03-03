@@ -34,7 +34,7 @@ export default function TextArea({
         rows={rows}
         cols={cols}
         className={
-          'textarea textarea-lg w-full mt-3 mb-1 drop-shadow-md text-sm placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]' +
+          'textarea textarea-lg bg-whiteGold w-full mt-3 mb-1 drop-shadow-md text-sm placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]' +
           (errors[nameTextArea] ? ' border-red-500' : '')
         }
         {...register(nameTextArea, {
