@@ -3,6 +3,8 @@ import TextArea from '../common/TextArea'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import { StartupsFormData } from '@/types/global'
 import ChevDown from 'public/static/logos/ChevDown'
+import { useLang } from 'stores/langStore'
+import { useTranslation } from 'app/i18n/client'
 
 type Props = {
     register: UseFormRegister<StartupsFormData>
@@ -17,6 +19,8 @@ const TargetMarketDropDown = (props: Props) => {
   } = props;  
 
   const [targetMarketOpen, setTargetMarketOpen] = useState<boolean>(false);  
+  const lang = useLang((s) => s.lang);
+  const { t } = useTranslation(lang, 'formComponent')
 
   return (
     <div>
@@ -24,7 +28,7 @@ const TargetMarketDropDown = (props: Props) => {
           setTargetMarketOpen(!targetMarketOpen)
         }}>
           <div className='w-full h-auto flex justify-center items-center gap-2'>
-               <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>Target Market</p>
+               <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>{t('startUp',{ returnObjects: true }).trial.targetMarket}</p>
                <div className={`${targetMarketOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-out mt-2`}>
                  <ChevDown />
                </div>
@@ -34,50 +38,50 @@ const TargetMarketDropDown = (props: Props) => {
           <>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea 
-                  title={'Based on what characteristics do you decide who are your customers and who are not?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.targetCharacteristics}
                   register={register}
                   errors={errors} 
-                  required={"this fiels is required"} 
+                  required={t('startUp',{ returnObjects: true }).trial.targetCharacteristicsRequired}
                   nameTextArea={"businessModel"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                                        
+                  placeholder={t('startUp',{ returnObjects: true }).trial.targetCharacteristicsPlaceholder}
               />
             </div>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea 
-                  title={'Who are your current customers? How many customers have you had so far?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.targetCustomers}
                   register={register}
                   errors={errors} 
-                  required={"this fiels is required"} 
+                  required={t('startUp',{ returnObjects: true }).trial.targetCustomersRequired}
                   nameTextArea={"businessModel"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                                        
+                  placeholder={t('startUp',{ returnObjects: true }).trial.targetCustomersPlaceholder}
               />
             </div>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea 
-                  title={'How have you estimated the size of the market?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.targetEstimated}
                   register={register}
                   errors={errors} 
-                  required={"this fiels is required"} 
+                  required={t('startUp',{ returnObjects: true }).trial.targetEstimatedRequired}
                   nameTextArea={"businessModel"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                                        
+                  placeholder={t('startUp',{ returnObjects: true }).trial.targetEstimatedPlaceholder}
               />
             </div>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea
-                  title={'How much is the total (TAM market accessible serviceable) (SAM market accessible) (SOM market addressable)?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.targetTotal}
                   register={register}
                   errors={errors} 
-                  required={"this fiels is required"} 
+                  required={t('startUp',{ returnObjects: true }).trial.targetTotalRequired}
                   nameTextArea={"businessModel"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                                        
+                  placeholder={t('startUp',{ returnObjects: true }).trial.targetTotalPlaceholder}
               />
             </div>
           </>

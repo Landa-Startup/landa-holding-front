@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Input from '../common/form/Input';
-import CountryInput from '../common/form/CountryInput';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
@@ -44,10 +43,32 @@ export default function StartupFormPersonalInformation({
           labelClass=" dark:text-current"
         />
 
-        <CountryInput
+        <Input
           register={register}
           errors={errors}
-          nameInput='countrySelect'
+          nameInput="countryOfResidence"
+          type="text"
+          label={t('countryOfResidence')}
+          required={t('countryOfResidenceRequired')}
+          patternValue=""
+          patternMessage=""
+          placeholder={t('countryOfResidencePlaceholder')}
+          className="input  col-span-1 bg-whiteGold mb-1 mt-3 w-full"
+          labelClass=" dark:text-current"
+        />
+
+        <Input
+          register={register}
+          errors={errors}
+          nameInput="provinceOfResidence"
+          type="text"
+          label={t('provinceOfResidence')}
+          required={t('provinceOfResidenceRequired')}
+          patternValue=""
+          patternMessage=""
+          placeholder={t('provinceOfResidencePlaceholder')}
+          className="input  col-span-1 bg-whiteGold mb-1 mt-3 w-full"
+          labelClass=" dark:text-current"
         />
       </div>
     </>
