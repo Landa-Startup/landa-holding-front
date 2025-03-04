@@ -36,17 +36,38 @@
   "visitButton": "مشاهده کنید",
   "successMessage": "اطلاعات با موفقیت ارسال شد.",
   "failedMessage": "در ارسال اطلاعات مشکلی به وجود آمده! لطفا با پشتیبانی تماس بگیرید.",
+
   "companyName": "نام شرکت",
   "companyNameRequired": "نام شرکت الزامی است.",
   "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
+
+  "preferredAreas": "مناطق مورد علاقه برای سرمایه‌گذاری*",
+  "preferredAreasRequired": "پر کردن این قسمت الزامی است",
+  "preferredAreasPlaceholder": "مناطق",
+
+  "maximumInvestment": "حداکثر سرمایه‌گذاری *",
+  "maximumInvestmentRequired": "حداکثر سرمایه‌گذاری الزامی است",
+  "maximumInvestmentPlaceholder": "مثال: 100,000$",
+
   "howDidYouKnowUs": "نحوه آشنایی با ما *",
-  "howDidYouKnowUsPlaceholder": "توضیحات",
+  "howDidYouKnowUsPlaceholder": "مثلاً شبکه‌های اجتماعی و غیره",
   "howDidYouKnowUsRequired": "پر کردن این قسمت الزامی است",
+
+  "provinceOfResidence": "استان محل سکونت*",
+  "provinceOfResidencePlaceholder": "استان محل سکونت را وارد کنید",
+  "provinceOfResidenceRequired": "پر کردن استان محل سکونت الزامی است",
+
+  "countryOfResidence*": "کشور محل اقامت*",
+  "countryOfResidencePlaceholder": "ایران",
+  "countryOfResidenceRequired": "کشور محل اقامت الزامی است",
+
+  "cityOfResidence": "شهر محل اقامت*",
+  "cityOfResidencePlaceholder": "تهران",
+  "cityOfResidenceRequired": "شهر محل اقامت الزامی است",
 
   "investmentCeiling": "سقف سرمایه گذاری",
   "investmentCeilingRequired": "این بخش الزامی است.",
   "investmentCeilingPlaceholder": "لطفا سقف سرمایه گذاری خود را وارد کنید.",
-
 
 
   "INTERN" : "کارآموز",
@@ -138,10 +159,7 @@
     "formSubtitle": "اطلاعات شخصی",
     "interests": "علاقه مندی ها",
     "interestsRequired": "علاقه مندی ها الزامی است",
-    "interestsPlaceholder": "علاقه مندی های خود را وارد کنید",
-    "preferredAreas": "زمینه مورد نظر جهت سرمایه‌گذاری",
-    "preferredAreasRequired": "پر کردن این قسمت الزامی است",
-    "preferredAreasPlaceholder": "توضیحات"
+    "interestsPlaceholder": "علاقه مندی های خود را وارد کنید"
   },
   "startUp": {
     "lng": "fa",

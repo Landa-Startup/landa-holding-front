@@ -29,12 +29,12 @@ export default function TextArea({
   return (
     <div className='flex flex-col items-start'>
       {/* Label for the textarea */}
-      {title && (<label className="px-2 text-lg xl:text-xl text-[#6b6b6b] dark:text-current">{title}</label>)}
+      {title && (<label className="px-2 !text-[#6b6b6b] dark:text-current">{title}</label>)}
       <textarea
         rows={rows}
         cols={cols}
         className={
-          'textarea textarea-lg bg-whiteGold w-full mt-3 mb-1 drop-shadow-md text-sm placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]' +
+          'textarea textarea-lg resize-none rounded-sm bg-transparent w-full mt-3 mb-1 get-shadow-sm text-sm placeholder:text-[#939393B2] focus:outline-none' +
           (errors[nameTextArea] ? ' border-red-500' : '')
         }
         {...register(nameTextArea, {
@@ -47,7 +47,7 @@ export default function TextArea({
         placeholder={placeholder}
       />
       {errors[nameTextArea] && (
-        <span className="mt-4 text-sm text-red-500">
+        <span className="mt-2 text-sm text-red-500">
           {errors[nameTextArea].message}
         </span>
       )}

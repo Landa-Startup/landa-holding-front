@@ -133,8 +133,8 @@ export default function ContactUsForm() {
               placeholder={
                 t('contactForm', { returnObjects: true }).subjectPlaceholder
               }
-              className="input  col-span-1 mb-1 mt-3 w-full bg-whiteGold placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
+              className="input  col-span-1 mb-1 mt-3 w-full bg-whiteGold dark:placeholder-[#9CA3AF]"
+              labelClass=" dark:text-current"
               containerClass=""
             />
           </div>

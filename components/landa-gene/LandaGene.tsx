@@ -195,7 +195,7 @@ export default function LandaGene() {
                   patternValue="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                   patternMessage={t('emailErrorMessage')}
                   placeholder={t('emailPlaceholder')}
-                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                  className="input  col-span-1 mb-1 mt-3 w-full"
                   containerClass="w-full"
                   labelClass=""
                 />
@@ -211,7 +211,7 @@ export default function LandaGene() {
                   patternValue=""
                   patternMessage=""
                   placeholder={t('companyNamePlaceholder')}
-                  className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+                  className="input  col-span-1 mb-1 mt-3 w-full"
                   containerClass="w-full"
                   labelClass=""
                 />

@@ -32,7 +32,7 @@ export default function Input({
   return (
     <div className={`flex flex-col items-start ${containerClass}`}>
       {label && (
-        <label htmlFor={nameInput} className={`px-2 text-lg ${labelClass}`}>
+        <label htmlFor={nameInput} className={`px-2 !text-[#6B6B6B] ${labelClass}`}>
           {label}
         </label>
       )}
@@ -48,12 +48,12 @@ export default function Input({
           }
         })}
         placeholder={placeholder}
-        className={`text-sm w-full ${
+        className={`w-full !rounded-sm get-shadow-sm focus:outline-none bg-transparent placeholder:text-[#939393B2] ${
           className + (errors[nameInput] ? ' border-red-500' : '')
         }`}
       />
       {errors[nameInput] && (
-        <span className="mt-4 px-2 text-sm text-red-500">
+        <span className="mt-2 px-2 text-sm text-red-500 ">
           {errors[nameInput].message}
         </span>
       )}

@@ -28,12 +28,12 @@
   "applicationPlaceholder":"Select a Type of Application",
 
 
-  "birthDate": "Date of Birth *",
+  "birthDate": "Date of Birth",
   "birthDateRequired": "Date of Birth is Required.",
   "birthDateErrorMessage": "Please enter a valid Date of Birth(e.g., 2001/02/11)",
   "birthDatePlaceholder": "Date of Birth",
 
-  "sendButton": "Submit",
+  "sendButton": "Send",
   "sendingButton": "Submitting ....",
   "visitButton": "Visit Now",
 
@@ -44,9 +44,33 @@
   "companyNameRequired": "Company Name is Required.",
   "companyNamePlaceholder": "Enter your Company Name",
 
+  "maximumInvestment": "Maximum Investment * ",
+  "maximumInvestmentRequired": "Maximum Investment is Required",
+  "maximumInvestmentPlaceholder": "ex. 100,000$",
+
+  "preferredAreas": "Preferred Areas for Investment*",
+  "preferredAreasRequired": "This field is required",
+  "preferredAreasPlaceholder": "Areas",
+
   "howDidYouKnowUs": "How did you hear about us? *",
   "howDidYouKnowUsRequired": "This field is required",
-  "howDidYouKnowUsPlaceholder": "Description",
+  "howDidYouKnowUsPlaceholder": "e.g. social media, etc",
+
+  "provinceOfResidence": "Province Of Residence *",
+  "provinceOfResidencePlaceholder": "Province Of Residence is required",
+  "provinceOfResidenceRequired": "Province Of Residence is required",
+
+  "countryOfResidence": "Country of Residence*",
+  "countryOfResidencePlaceholder": "Iran",
+  "countryOfResidenceRequired": "Country of Residence is required",
+  
+  "cityOfResidence": "City of Residence*",
+  "cityOfResidencePlaceholder": "Tehran",
+  "cityOfResidenceRequired": "City Of Residence is required",
+
+  "investmentCeiling": "Investment Ceiling *",
+  "investmentCeilingRequired": "Investment Ceiling is required",
+  "investmentCeilingPlaceholder": "ex. 100,000$",
 
   "contactForm": {
     "title": "Reach us",
@@ -62,7 +86,7 @@
     "lng": "en",
     "dir": "ltr",
     "banner": "BUSINESS AFFILIATES",
-    "formTitle": "BUSINESS AFFILIATES",
+    "formTitle": "BUSINESS AFFILIATES FORM",
     "formSubtitle": "Personal Information"
   },
 
@@ -70,7 +94,7 @@
     "lng": "en",
     "banner": "ENTREPRENEUR CENTER",
     "LandaHolding": "Landa Holding",
-    "formTitle": "Entrepreneur Center",
+    "formTitle": "Entrepreneur Center FORM",
     "formSubtitle": "Personal Information"
   },
 
@@ -126,14 +150,11 @@
     "dir": "ltr",
     "banner": "INVESTOR CENTER",
     "LandaHolding": "Landa Holding",
-    "formTitle": "INVESTOR REGISTRATION",
+    "formTitle": "INVESTOR REGISTRATION FORM",
     "formSubtitle": "Personal Information",
     "interests": "Intrests",
     "interestsRequired": "Intrests is Required.",
-    "interestsPlaceholder": "Enter your Intrests.",
-    "preferredAreas": "Preferred Areas for Investment",
-    "preferredAreasRequired": "This field is required",
-    "preferredAreasPlaceholder": "Description"
+    "interestsPlaceholder": "Enter your Intrests."
   },
 
   "joinUsForm": {
@@ -193,10 +214,6 @@
 
     "cooperatedWithInvestors": "Have you previously cooperated with investors or accelerators?",
     "cooperatedWithInvestorsPlaceholder": "Description",
-
-    "investmentCeiling": "Investment Ceiling *",
-    "investmentCeilingRequired": "This field is required!",
-    "investmentCeilingPlaceholder": "Please Enter Investment Ceiling.",
 
     "solutions": {
       "title": "Solutions",
