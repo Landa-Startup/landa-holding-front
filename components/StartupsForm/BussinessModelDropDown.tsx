@@ -9,6 +9,7 @@ type Props = {
     register: UseFormRegister<StartupsFormData>
     errors: FieldErrors<StartupsFormData>
     handlePitchFileChange: (file: any) => void
+    handleFinancialModelFileChange: (file: any) => void
 }
 
 const BussinessModelDropDown = (props: Props) => {
@@ -16,7 +17,7 @@ const BussinessModelDropDown = (props: Props) => {
   const {
     register,
     errors,
-    handlePitchFileChange
+    handleFinancialModelFileChange
   } = props;    
 
   const [businessOpen, setBusinessOpen] = useState<boolean>(false);
@@ -41,7 +42,7 @@ const BussinessModelDropDown = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"MonetizationOfYourPlan"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        
@@ -53,18 +54,24 @@ const BussinessModelDropDown = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"structureOfYourSales"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        
                         />
                     </div>
+                    <div className='w-full h-auto flex justify-start items-center'>
+                        <p className='text-black font-medium text-[15px] leading-[18px]'>If your plan has a financial model, please upload it.</p>
+                    </div>
                     <div className='w-full md:w-1/3 h-auto bg-whiteGold drop-shadow-md flex justify-center relative overflow-hidden mt-2 mb-6'>
                         <label className="cursor-pointer relative w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200 transition">
                             <input
                                   type="file"
+                                  name='financialModelFile'
                                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                                  onChange={handlePitchFileChange}
+                                  onChange={(e) => {
+                                    handleFinancialModelFileChange(e.target.files ? e.target.files[0] : '')
+                                  }}
                             />
                             <p className='text-grayDark font-barlow font-medium text-[13px] leading-4'>Choose File</p>
                             <UploadFile />
@@ -76,7 +83,7 @@ const BussinessModelDropDown = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"cooperatedWithInvestors"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        
@@ -88,7 +95,7 @@ const BussinessModelDropDown = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"getToKnowUs"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        

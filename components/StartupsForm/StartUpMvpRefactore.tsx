@@ -2,12 +2,13 @@
 import UploadFile from 'public/static/logos/UploadFile'
 import React, { useState } from 'react'
 import Input from '../common/form/Input'
-import { FieldErrors, UseFormRegister } from 'react-hook-form'
+import { FieldErrors, UseFormRegister, UseFormSetValue } from 'react-hook-form'
 import { StartupsFormData } from '@/types/global'
 import { useLang } from 'stores/langStore'
 import { useTranslation } from 'app/i18n/client'
 import ChevDown from 'public/static/logos/ChevDown'
 import TextArea from '../common/TextArea'
+import SolutionLevel from './SolutionLevel'
 
 type Props = {
     handleFileCounterChange: (name: string) => void
@@ -22,6 +23,8 @@ type Props = {
     errors: FieldErrors<StartupsFormData>
     handleSolutionsLevelChange: (index: number) => void
     solutionsLevel: number
+    setValue: UseFormSetValue<StartupsFormData>
+    handleFinancialModelFileChange: (file: any) => void
 }
 
 const StartUpMvpRefactore = (props: Props) => {
@@ -34,14 +37,15 @@ const StartUpMvpRefactore = (props: Props) => {
     register,
     errors,
     solutionsLevel,
-    handleSolutionsLevelChange
+    handleSolutionsLevelChange,
+    setValue,
+    handleFinancialModelFileChange
   } = props;  
 
   const lang = useLang((s) => s.lang)
   const { t } = useTranslation(lang, 'formComponent');
 
   const [problemsOpen, setProblemsOpen] = useState<boolean>(false);
-  const [solutionsOpen, setSolutionsOpen] = useState<boolean>(false);
   const [businessOpen, setBusinessOpen] = useState<boolean>(false);
 
   return (
@@ -198,84 +202,20 @@ const StartUpMvpRefactore = (props: Props) => {
                  register={register}
                  errors={errors} 
                  required={"this fiels is required"} 
-                 nameTextArea={"problem"} 
+                 nameTextArea={"customerProblem"} 
                  patternValue={''} 
                  patternMessage={''} 
                  placeholder={'Description'}                                                  
                />
           </div>
         )}
-        <div className={`w-full h-auto cursor-pointer py-6 my-4 ${solutionsOpen ? "bg-grayCheckBox" : "bg-grayDark"}`} onClick={() => {
-          setSolutionsOpen(!solutionsOpen)
-        }}>
-          <div className='w-full h-auto flex justify-center items-center gap-2'>
-               <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>Solutions</p>
-               <div className={`${solutionsOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-out mt-2`}>
-                 <ChevDown />
-               </div>
-          </div>
-        </div>
-        {solutionsOpen && (
-          <>
-               <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
-                 <TextArea 
-                     title={'What is your unique value proposition (innovation)? What is new about what you do?*'}
-                     register={register}
-                     errors={errors} 
-                     required={"this fiels is required"} 
-                     nameTextArea={"solution&innovation"} 
-                     patternValue={''} 
-                     patternMessage={''} 
-                     placeholder={'Description'}                                                        
-                 />
-               </div>
-               <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
-                 <div className='w-full h-auto flex flex-col gap-4 items-start'>
-                    <div className='w-full h-auto'>
-                        <p className='px-2 text-lg text-[#6b6b6b] dark:text-current'>How much is level of your product and technology preparation?</p>
-                    </div>
-                    <div className='w-full h-auto flex flex-col gap-1 items-start px-2'>
-                        {[
-                            "The basic principle has been observed.",
-                            "The technology concept has been formulated.",
-                            "Experimental proof of concept.",
-                            "The confirmed technology in laboratory.",
-                            "The confirmed technology in the environmental conditions",
-                            "The presented technology in the environmental conditions",
-                            "Show the system prototype in the mvp operating environment.",
-                            "The proved realistic system in the operating environment.",
-                            "A complete and qualified system.",
-                        ].map((item: string, index: number) => (
-                            <div key={index} className='w-full flex flex-row gap-1 items-center'>
-                                <div className='w-auto h-auto flex flex-row items-center gap-2 cursor-pointer' onClick={() => handleSolutionsLevelChange(index)}>
-                                    <div className='border-2 rounded-full border-primary p-[1px]'>
-                                        <div
-                                            className={`w-2 h-2 rounded-full transition-all ${
-                                              solutionsLevel == index ? "bg-primary" : "bg-white"
-                                            }`}
-                                        />
-                                    </div>
-                                </div>
-                                <p className='text-black font-barlow font-medium text-[12px] xl:text-[14px] leading-[14px] mb-1'>{item}</p>
-                            </div>
-                        ))}
-                    </div>
-                 </div>
-               </div>
-               <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
-                 <TextArea 
-                     title={'What is your unique value proposition (innovation)? What is new about what you do?*'}
-                     register={register}
-                     errors={errors} 
-                     required={"this fiels is required"} 
-                     nameTextArea={"solution&innovation"} 
-                     patternValue={''} 
-                     patternMessage={''} 
-                     placeholder={'Description'}                                                        
-                 />
-               </div>
-          </>
-        )}
+        <SolutionLevel
+          handleSolutionsLevelChange={handleSolutionsLevelChange}
+          solutionsLevel={solutionsLevel}
+          register={register}
+          errors={errors}
+          setValue={setValue}
+        />
         <div className={`w-full h-auto cursor-pointer py-6 my-4 ${businessOpen ? "bg-grayCheckBox" : "bg-grayDark"}`} onClick={() => {
           setBusinessOpen(!businessOpen)
         }}>
@@ -294,7 +234,7 @@ const StartUpMvpRefactore = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"MonetizationOfYourPlan"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        
@@ -306,18 +246,24 @@ const StartUpMvpRefactore = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"structureOfYourSales"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        
                         />
                     </div>
+                    <div className='w-full h-auto flex justify-start items-center'>
+                        <p className='text-black font-medium text-[15px] leading-[18px]'>If your plan has a financial model, please upload it.</p>
+                    </div>
                     <div className='w-full md:w-1/3 h-auto bg-whiteGold drop-shadow-md flex justify-center relative overflow-hidden mt-2 mb-6'>
                         <label className="cursor-pointer relative w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200 transition">
                             <input
                                   type="file"
+                                  name='financialModelFile'
                                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                                  onChange={handlePitchFileChange}
+                                  onChange={(e) => {
+                                    handleFinancialModelFileChange(e.target.files ? e.target.files[0] : '')
+                                  }}
                             />
                             <p className='text-grayDark font-barlow font-medium text-[13px] leading-4'>Choose File</p>
                             <UploadFile />
@@ -329,7 +275,7 @@ const StartUpMvpRefactore = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"cooperatedWithInvestors"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        
@@ -341,7 +287,7 @@ const StartUpMvpRefactore = (props: Props) => {
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
-                            nameTextArea={"businessModel"} 
+                            nameTextArea={"getToKnowUs"} 
                             patternValue={''} 
                             patternMessage={''} 
                             placeholder={'Description'}                                                        

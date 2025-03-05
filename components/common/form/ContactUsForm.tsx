@@ -9,10 +9,10 @@ import { submitContactForm } from '../../../pages/api/contact-us';
 import { PersonalInfoInput } from './PersonalInfoInput';
 import Input from './Input';
 import TextArea from '../TextArea';
-import Button from '../Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
+import ButtonRefactor from '../ButtonRefactor';
 // import { Trans } from 'react-i18next';
 
 export default function ContactUsForm() {
@@ -159,9 +159,8 @@ export default function ContactUsForm() {
         </div>
 
         <div className="md:pl-44 md:rtl:pr-28">
-          <Button
-            type="submit"
-            bgColor="Primary"
+          <ButtonRefactor 
+            type='submit'
             text={send ? t("sendingButton") : t("sendButton")}
             disabled={errorsList[0] ? true : false}
           />

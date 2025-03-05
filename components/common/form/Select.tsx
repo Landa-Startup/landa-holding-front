@@ -39,7 +39,7 @@ export default function Select({
           })}
           className={className + (errors[nameInput] ? ' border-red-500' : '')}
           onChange={handleChange}
-          value={placeholder}
+          defaultValue={placeholder}
         >
           {/* <option disabled selected value={placeholder}>
             {selected ? selected : placeholder}

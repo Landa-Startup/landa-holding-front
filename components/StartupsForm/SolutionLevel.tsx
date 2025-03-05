@@ -1,14 +1,27 @@
 import React, { useState } from 'react'
 import TextArea from '../common/TextArea'
-import { FieldErrors, UseFormRegister } from 'react-hook-form'
+import { FieldErrors, UseFormRegister, UseFormSetValue } from 'react-hook-form'
 import { StartupsFormData } from '@/types/global'
 import ChevDown from 'public/static/logos/ChevDown'
+
+const productLevels: Array<string> = [
+  "The basic principle has been observed.",
+  "The technology concept has been formulated.",
+  "Experimental proof of concept.",
+  "The confirmed technology in laboratory.",
+  "The confirmed technology in the environmental conditions",
+  "The presented technology in the environmental conditions",
+  "Show the system prototype in the mvp operating environment.",
+  "The proved realistic system in the operating environment.",
+  "A complete and qualified system.",
+]
 
 type Props = {
     register: UseFormRegister<StartupsFormData>
     errors: FieldErrors<StartupsFormData>
     solutionsLevel: number
     handleSolutionsLevelChange: (index: number) => void
+    setValue: UseFormSetValue<StartupsFormData>
 }
 
 const SolutionLevel = (props: Props) => {
@@ -17,7 +30,8 @@ const SolutionLevel = (props: Props) => {
     register,
     errors,
     solutionsLevel,
-    handleSolutionsLevelChange
+    handleSolutionsLevelChange,
+    setValue
   } = props;     
   
   const [solutionsOpen, setSolutionsOpen] = useState<boolean>(false);
@@ -42,7 +56,7 @@ const SolutionLevel = (props: Props) => {
                      register={register}
                      errors={errors} 
                      required={"this fiels is required"} 
-                     nameTextArea={"solution&innovation"} 
+                     nameTextArea={"scalable"} 
                      patternValue={''} 
                      patternMessage={''} 
                      placeholder={'Description'}                                                        
@@ -54,25 +68,26 @@ const SolutionLevel = (props: Props) => {
                         <p className='px-2 text-lg text-[#6b6b6b] dark:text-current'>How much is level of your product and technology preparation?</p>
                     </div>
                     <div className='w-full h-auto flex flex-col gap-1 items-start px-2'>
-                        {[
-                            "The basic principle has been observed.",
-                            "The technology concept has been formulated.",
-                            "Experimental proof of concept.",
-                            "The confirmed technology in laboratory.",
-                            "The confirmed technology in the environmental conditions",
-                            "The presented technology in the environmental conditions",
-                            "Show the system prototype in the mvp operating environment.",
-                            "The proved realistic system in the operating environment.",
-                            "A complete and qualified system.",
-                        ].map((item: string, index: number) => (
+                        {productLevels.map((item: string, index: number) => (
                             <div key={index} className='w-full flex flex-row gap-1 items-center'>
-                                <div className='w-auto h-auto flex flex-row items-center gap-2 cursor-pointer' onClick={() => handleSolutionsLevelChange(index)}>
+                                <div className='w-auto h-auto flex flex-row items-center gap-2 cursor-pointer' onClick={() => {
+                                  handleSolutionsLevelChange(index)
+                                }}>
                                     <div className='border-2 rounded-full border-primary p-[1px]'>
                                         <div
                                             className={`w-2 h-2 rounded-full transition-all ${
                                               solutionsLevel == index ? "bg-primary" : "bg-white"
                                             }`}
-                                        />
+                                        >
+                                          <input 
+                                            type='checkbox'
+                                            value={item}
+                                            className='w-full h-full inset-0 opacity-0'
+                                            onChange={() => {
+                                              setValue("productLevel", item)
+                                            }}
+                                          />
+                                        </div>
                                     </div>
                                 </div>
                                 <p className='text-black font-barlow font-medium text-[12px] xl:text-[14px] leading-[14px] mb-1'>{item}</p>
@@ -87,7 +102,7 @@ const SolutionLevel = (props: Props) => {
                      register={register}
                      errors={errors} 
                      required={"this fiels is required"} 
-                     nameTextArea={"solution&innovation"} 
+                     nameTextArea={"solution"} 
                      patternValue={''} 
                      patternMessage={''} 
                      placeholder={'Description'}                                                        

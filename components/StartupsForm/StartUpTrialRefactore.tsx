@@ -2,7 +2,7 @@
 import UploadFile from 'public/static/logos/UploadFile'
 import React, { useState } from 'react'
 import Input from '../common/form/Input'
-import { FieldErrors, UseFormRegister } from 'react-hook-form'
+import { FieldErrors, UseFormRegister, UseFormSetValue } from 'react-hook-form'
 import { StartupsFormData } from '@/types/global'
 import { useLang } from 'stores/langStore'
 import { useTranslation } from 'app/i18n/client'
@@ -27,6 +27,8 @@ type Props = {
     errors: FieldErrors<StartupsFormData>
     handleSolutionsLevelChange: (index: number) => void
     solutionsLevel: number
+    setValue: UseFormSetValue<StartupsFormData>
+    handleFinancialModelFileChange: (file: any) => void
 }
 
 const StartUpTrialRefactore = (props: Props) => {
@@ -40,7 +42,9 @@ const StartUpTrialRefactore = (props: Props) => {
     register,
     errors,
     solutionsLevel,
-    handleSolutionsLevelChange
+    handleSolutionsLevelChange,
+    setValue,
+    handleFinancialModelFileChange
   } = props;  
 
   const lang = useLang((s) => s.lang)
@@ -93,8 +97,11 @@ const StartUpTrialRefactore = (props: Props) => {
                           <label className="cursor-pointer relative w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200 transition">
                             <input
                                   type="file"
+                                  name='pitchDeckFile'
                                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                                  onChange={handlePitchFileChange}
+                                  onChange={(e) => {
+                                    handlePitchFileChange(e.target.files ? e.target.files[0] : '')
+                                  }}
                             />
                             <UploadFile />
                           </label>
@@ -172,8 +179,11 @@ const StartUpTrialRefactore = (props: Props) => {
                           <label className="cursor-pointer relative w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200 transition">
                             <input
                                   type="file"
+                                  name='businessPlanFile'
                                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                                  onChange={handleBusinessFileChange}
+                                  onChange={(e) => {
+                                    handleBusinessFileChange(e.target.files ? e.target.files[0] : '')
+                                  }}
                             />
                             <UploadFile />
                           </label>
@@ -226,8 +236,11 @@ const StartUpTrialRefactore = (props: Props) => {
                           <label className="cursor-pointer relative w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200 transition">
                             <input
                                   type="file"
+                                  name='financialFile'
                                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                                  onChange={handleFinancialFileChange}
+                                  onChange={(e) => {
+                                    handleFinancialFileChange(e.target.files ? e.target.files[0] : '')
+                                  }}
                             />
                             <UploadFile />
                           </label>
@@ -256,7 +269,7 @@ const StartUpTrialRefactore = (props: Props) => {
                  register={register}
                  errors={errors} 
                  required={"this fiels is required"} 
-                 nameTextArea={"problem"} 
+                 nameTextArea={"customerProblem"} 
                  patternValue={''} 
                  patternMessage={''} 
                  placeholder={'Description'}                                                  
@@ -268,11 +281,13 @@ const StartUpTrialRefactore = (props: Props) => {
           solutionsLevel={solutionsLevel}
           register={register}
           errors={errors}
+          setValue={setValue}
         />
         <BussinessModelDropDown 
           register={register}
           errors={errors}
           handlePitchFileChange={handlePitchFileChange}
+          handleFinancialModelFileChange={handleFinancialModelFileChange}
         />
         <TargetMarketDropDown 
           register={register}

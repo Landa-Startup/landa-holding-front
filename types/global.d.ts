@@ -114,21 +114,18 @@ interface StartupsFormData {
   type: Type;
   ideaExplanation: string;
   getToKnowUs: string;
-  pitchDeck: boolean;
   pitchDeckFile?: File | '';
-  businessPlan: boolean;
   businessPlanFile?: File | '';
   productName: string;
   siteAddress: string;
   customerProblem: string;
   solution: string;
-  // productLevel: Level; // You might want to define "Level" enum here
+  productLevel: Level; // You might want to define "Level" enum here
   scalable: string;
   monetizationOfYourPlan: string;
   structureOfYourSales: string;
   financialModelFile?: File | '';
   cooperatedWithInvestors: string;
-  financial: boolean;
   financialFile?: File | '';
   customerCharacteristic: string;
   currentCustomers: string;
@@ -139,11 +136,6 @@ interface StartupsFormData {
   currentInterestRate: string;
   currentRaisedFunding: string;
   neededCapital: string;
-  MVP: boolean;
-  FirstSale: boolean;
-  TrialProduct: boolean;
-  SaleDevelopment: boolean;
-  Idea: boolean;
 }
 
 interface Entrepreuneur {

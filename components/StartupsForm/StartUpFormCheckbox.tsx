@@ -1,13 +1,16 @@
+import { StartupsFormData } from '@/types/global';
 import React, { useEffect, useState } from 'react'
+import { UseFormRegister } from 'react-hook-form';
 import { useSubmit } from 'stores/dataStore';
 
 type Props = {
     name: string
+    register: UseFormRegister<StartupsFormData>
 }
 
 const StartUpFormCheckbox = (props: Props) => {
 
-  const { name } = props;
+  const { name, register } = props;
   const {
     startupFormType, 
     setStartUpFormType
@@ -28,7 +31,16 @@ const StartUpFormCheckbox = (props: Props) => {
                     className={`w-4 h-4 rounded-full transition-all ${
                       checked ? "bg-primary" : "bg-whiteGold"
                     }`}
-                />
+                >
+                  <input 
+                    type='radio'
+                    className='w-full h-full inset-0 opacity-0'
+                    value={name}
+                    {...register("type", {
+                      required: true,
+                    })}
+                  />
+                </div>
             </div>
             <p id={name} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{name}</p>
         </div>

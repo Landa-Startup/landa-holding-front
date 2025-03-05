@@ -169,7 +169,7 @@ export default function PartnerMembershipForm() {
                 bgColor="Primary"
                 disabled={errorsList[0] ? true : false}
               /> */}
-              <ButtonRefactor text={t('submit')} />
+              <ButtonRefactor type='submit' text={t('submit')} />
             </div>
           </form>
           <NotificationSendForm />

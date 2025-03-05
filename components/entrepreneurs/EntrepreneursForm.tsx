@@ -8,10 +8,10 @@ import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
 import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
-import Button from '../common/Button';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
 import { useSubmit } from 'stores/dataStore';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function EntrepreneursForm() {
   const {
@@ -52,6 +52,7 @@ export default function EntrepreneursForm() {
 
   const onSubmit = async (formData: Entrepreuneur) => {
     // Set loading and sending states.
+    console.log(formData)
     handleSubmitingChange(true);
     handleSendChange(true);
 
@@ -88,10 +89,10 @@ export default function EntrepreneursForm() {
       });
   };
 
-  // const errorsList = Object.entries(errors).map(([name, value]) => ({
-  //   name: name,
-  //   value: value
-  // }))
+  const errorsList = Object.entries(errors).map(([name, value]) => ({
+    name: name,
+    value: value
+  }))
 
   return (
     <>
@@ -112,8 +113,8 @@ export default function EntrepreneursForm() {
               register={register}
               errors={errors}
               nameInputs={{
-                firstName: 'first_name',
-                lastName: 'last_name',
+                firstName: 'firstName',
+                lastName: 'lastName',
                 email: 'email',
                 phoneNumber: 'phone',
                 jobPosition:''
@@ -169,8 +170,7 @@ export default function EntrepreneursForm() {
             </div>
           </div>
           <div className="mx-auto w-full pb-4 md:w-auto">
-            {/* <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/> */}
-            <Button type="submit" bgColor="Primary" />
+            <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>
           </div>
         </form>
         <NotificationSendForm />

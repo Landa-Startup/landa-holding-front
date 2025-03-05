@@ -17,6 +17,8 @@ import ButtonRefactor from '../common/ButtonRefactor';
 import StartUpFormCheckbox from './StartUpFormCheckbox';
 import StartUpTrialRefactore from './StartUpTrialRefactore';
 import StartUpMvpRefactore from './StartUpMvpRefactore';
+import StartUpFirstSaleRefactor from './StartUpFirstSaleRefactor';
+import StartUpSaleDevelopRefactore from './StartUpSaleDevelopRefactore';
 
 
 export default function StartupFormForm() {
@@ -48,7 +50,8 @@ export default function StartupFormForm() {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
+    setValue
   } = useForm<StartupsFormData>({
     mode: 'onBlur',
     defaultValues: initialStartupsFormData
@@ -77,7 +80,9 @@ export default function StartupFormForm() {
     handleBusinessFileChange,
     handleFinancialFileChange,
     handlePitchFileChange,
+    handleFinancialModelFileChange
   } = useFile((s) => s)
+
 
   useEffect(() => {
     async function fetchCsrfToken() {
@@ -92,7 +97,6 @@ export default function StartupFormForm() {
 
   const onSubmit = async (formData: StartupsFormData) => {
     // Set loading and sending states.
-    console.log(formData)
     handleSubmitingChange(true);
     handleSendChange(true);
 
@@ -108,8 +112,12 @@ export default function StartupFormForm() {
       financialFile: filePostFinancial.financialFile
     };
 
+    // Convert file objects to Blob and append them.
     for (const [fieldName, file] of Object.entries(filePostMap)) {
       if (file) {
+        // console.log(fieldName, typeof(fieldName))
+        // console.log(file, typeof(file))
+        // console.log(file.name, typeof(file.name))
         sendFormData.append(fieldName, file, file.name);
       }
     }
@@ -120,25 +128,6 @@ export default function StartupFormForm() {
         sendFormData.append(fieldName, String(fieldValue));
       }
     });
-
-    // Convert file objects to Blob and append them.
-    if (formData.pitchDeckFile) {
-      sendFormData.append('pitchDeckFile', formData.pitchDeckFile as Blob);
-    }
-
-    if (formData.businessPlanFile) {
-      sendFormData.append(
-        'businessPlanFile',
-        formData.businessPlanFile as Blob
-      );
-    }
-
-    if (formData.financialModelFile) {
-      sendFormData.append(
-        'financialModelFile',
-        formData.financialModelFile as Blob
-      );
-    }
 
     // Send the form data to the API.
     submitStartupsForm(sendFormData, csrfToken)
@@ -195,13 +184,13 @@ export default function StartupFormForm() {
           </div>
           <div className='w-full h-auto px-4'>
             <div className='h-auto w-full flex flex-col gap-2'>
-              <StartUpFormCheckbox name={t("IDEA")} />
+              <StartUpFormCheckbox register={register} name={t("IDEA")} />
               {((): any => {
                 if (startupFormType == "IDEA") {
                   return <StartupFormIdea register={register} errors={errors} />
                 }
               })()}
-              <StartUpFormCheckbox name={t("TRIAL")} />
+              <StartUpFormCheckbox register={register} name={t("TRIAL")} />
               {((): any => {
                 if (startupFormType == "TRIAL") {
                   return (
@@ -214,11 +203,14 @@ export default function StartupFormForm() {
                       register={register}
                       errors={errors} 
                       handleSolutionsLevelChange={handleSolutionsLevelChange} 
-                      solutionsLevel={solutionsLevel}                    />
+                      solutionsLevel={solutionsLevel}    
+                      setValue={setValue}               
+                      handleFinancialModelFileChange={handleFinancialModelFileChange}
+                    />
                   )
                 }
               })()}
-              <StartUpFormCheckbox name={t("MVP")} />
+              <StartUpFormCheckbox register={register} name={t("MVP")} />
               {((): any => {
                 if (startupFormType == "MVP") {
                   return (
@@ -229,17 +221,58 @@ export default function StartupFormForm() {
                        filesCounter={filesCounter}
                       register={register}
                       errors={errors} 
+                      setValue={setValue} 
                       handleSolutionsLevelChange={handleSolutionsLevelChange} 
-                      solutionsLevel={solutionsLevel}                    />
+                      solutionsLevel={solutionsLevel}      
+                      handleFinancialModelFileChange={handleFinancialModelFileChange}
+                    />
                   )
                 }
               })()}
-              <StartUpFormCheckbox name={t("FisrtSale")} />
-              <StartUpFormCheckbox name={t("SaleDevelopment")} />
+              <StartUpFormCheckbox register={register} name={t("FisrtSale")} />
+              {((): any => {
+                if (startupFormType == t('FisrtSale')) {
+                  return (
+                    <StartUpFirstSaleRefactor 
+                      handleFileCounterChange={handleFileCounterChange}
+                      handlePitchFileChange={handlePitchFileChange}
+                      handleBusinessFileChange={handleBusinessFileChange}
+                      filesCounter={filesCounter}
+                      register={register}
+                      errors={errors}
+                      setValue={setValue}
+                      handleSolutionsLevelChange={handleSolutionsLevelChange}
+                      solutionsLevel={solutionsLevel}
+                      handleFinancialModelFileChange={handleFinancialModelFileChange} 
+                      handleFinancialFileChange={handleFinancialFileChange}                   
+                    />
+                  )
+                }
+              })()}
+              <StartUpFormCheckbox register={register} name={t("SaleDevelopment")} />
+              {((): any => {
+                if (startupFormType == t('SaleDevelopment')) {
+                  return (
+                    <StartUpSaleDevelopRefactore 
+                      handleFileCounterChange={handleFileCounterChange}
+                      handlePitchFileChange={handlePitchFileChange}
+                      handleBusinessFileChange={handleBusinessFileChange}
+                      filesCounter={filesCounter}
+                      register={register}
+                      errors={errors}
+                      setValue={setValue}
+                      handleSolutionsLevelChange={handleSolutionsLevelChange}
+                      solutionsLevel={solutionsLevel}
+                      handleFinancialModelFileChange={handleFinancialModelFileChange} 
+                      handleFinancialFileChange={handleFinancialFileChange}                   
+                    />
+                  )
+                }
+              })()}
             </div>
           </div>
 
-          <div className="flex justify-center w-1/3 md:w-1/4 lg:w-1/6 mx-auto">
+          <div className="flex justify-center w-1/3 md:w-1/4 lg:w-1/6 mx-auto mt-6">
             <ButtonRefactor type="submit" text={t('sendButton')} disabled={errorsList[0] ? true : false}/>
           </div>
           <NotificationSendForm />

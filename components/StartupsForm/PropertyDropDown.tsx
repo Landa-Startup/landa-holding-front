@@ -38,7 +38,7 @@ const PropertyDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"startupRevenue"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                            
@@ -50,7 +50,7 @@ const PropertyDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"monthlyIncome"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                            
@@ -62,7 +62,7 @@ const PropertyDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"currentInterestRate"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                            
@@ -74,7 +74,7 @@ const PropertyDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"currentRaisedFunding"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                            
@@ -86,7 +86,7 @@ const PropertyDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"neededCapital"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                            

@@ -38,7 +38,7 @@ const TargetMarketDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"customerCharacteristic"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                                        
@@ -50,7 +50,7 @@ const TargetMarketDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"currentCustomers"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                                        
@@ -62,7 +62,7 @@ const TargetMarketDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"estimatedMarketSize"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                                        
@@ -74,7 +74,7 @@ const TargetMarketDropDown = (props: Props) => {
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
-                  nameTextArea={"businessModel"} 
+                  nameTextArea={"totalTamSamSom"} 
                   patternValue={''} 
                   patternMessage={''} 
                   placeholder={'Description'}                                                        
