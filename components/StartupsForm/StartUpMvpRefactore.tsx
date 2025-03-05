@@ -48,12 +48,13 @@ const StartUpMvpRefactore = (props: Props) => {
   const [problemsOpen, setProblemsOpen] = useState<boolean>(false);
   const [businessOpen, setBusinessOpen] = useState<boolean>(false);
 
+
   return (
     <div className='w-full h-auto px-4 my-4'>
         <div className='w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20'>
           <div className='col-span-1 h-auto flex flex-col gap-2 items-center'>
                <div className='w-full h-auto flex flex-row justify-start items-center mt-2 mb-1'>
-                 <p className='text-black font-medium font-barlow text-[16px] leading-[19px]'>Do you have Pitch deck?*</p>
+                 <p className='text-black font-medium font-barlow text-[16px] leading-[19px]'>{t('startUp',{ returnObjects: true }).trial.pitchDeck}</p>
                </div>
                <div className='w-full h-auto bg-whiteGold drop-shadow-md px-2 py-4'>
                  <div className='w-full h-auto flex flex-row items-center justify-around cursor-pointer'>
@@ -67,7 +68,7 @@ const StartUpMvpRefactore = (props: Props) => {
                                          }`}
                                   />
                           </div>
-                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{'Yes'}</p>
+                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{t('yes')}</p>
                        </div>
                        <div className='w-auto h-auto flex flex-row gap-2 items-center' onClick={() => {
                           handleFileCounterChange("pitch")
@@ -79,7 +80,7 @@ const StartUpMvpRefactore = (props: Props) => {
                                          }`}
                                   />
                           </div>
-                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{'No'}</p>
+                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{t('no')}</p>
                        </div>
                  </div>
                </div> 
@@ -132,7 +133,7 @@ const StartUpMvpRefactore = (props: Props) => {
           </div>
           <div className='col-span-1 h-auto flex flex-col gap-2 items-center'>
                <div className='w-full h-auto flex flex-row justify-start items-center mt-2 mb-1'>
-                 <p className='text-black font-medium font-barlow text-[16px] leading-[19px]'>Do you have Business Plan?*</p>
+                 <p className='text-black font-medium font-barlow text-[16px] leading-[19px]'>{t('startUp',{ returnObjects: true }).trial.businessPlan}</p>
                </div>
                <div className='w-full h-auto bg-whiteGold drop-shadow-md px-2 py-4'>
                  <div className='w-full h-auto flex flex-row items-center justify-around cursor-pointer'>
@@ -146,7 +147,7 @@ const StartUpMvpRefactore = (props: Props) => {
                                          }`}
                                   />
                           </div>
-                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{'Yes'}</p>
+                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{t('yes')}</p>
                        </div>
                        <div className='w-auto h-auto flex flex-row gap-2 items-center' onClick={() => {
                           handleFileCounterChange("business")
@@ -158,7 +159,7 @@ const StartUpMvpRefactore = (props: Props) => {
                                          }`}
                                   />
                           </div>
-                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{'No'}</p>
+                          <p id={''} className='text-grayCheckBox font-barlow font-medium text-[15px] leading-[18px]'>{t('no')}</p>
                        </div>
                  </div>
                </div> 
@@ -189,7 +190,7 @@ const StartUpMvpRefactore = (props: Props) => {
           setProblemsOpen(!problemsOpen)
         }}>
           <div className='w-full h-auto flex justify-center items-center gap-2'>
-               <p className='font-barlow text-white font-semibold text-[24px] leading-[20px]'>Problems</p>
+               <p className='font-barlow text-white font-semibold text-[24px] leading-[20px]'>{t('startUp',{ returnObjects: true }).trial.problems}</p>
                <div className={`${problemsOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-out mt-2`}>
                  <ChevDown />
                </div>
@@ -198,14 +199,14 @@ const StartUpMvpRefactore = (props: Props) => {
         {problemsOpen && (
           <div className='w-full h-auto md:px-1'>
                <TextArea
-                 title={'Describe the customer problem you want to solve with your product or service. *'}
+                 title={t('startUp',{ returnObjects: true }).trial.problemsLabel}
                  register={register}
                  errors={errors} 
                  required={"this fiels is required"} 
                  nameTextArea={"customerProblem"} 
                  patternValue={''} 
                  patternMessage={''} 
-                 placeholder={'Description'}                                                  
+                 placeholder={t('startUp',{ returnObjects: true }).trial.problemsPlaceholder}
                />
           </div>
         )}
@@ -220,7 +221,7 @@ const StartUpMvpRefactore = (props: Props) => {
           setBusinessOpen(!businessOpen)
         }}>
             <div className='w-full h-auto flex justify-center items-center gap-2'>
-                 <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>Business Model</p>
+                 <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>{t('startUp',{ returnObjects: true }).trial.businessModel}</p>
                  <div className={`${businessOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-out mt-2`}>
                    <ChevDown />
                  </div>
@@ -230,26 +231,26 @@ const StartUpMvpRefactore = (props: Props) => {
                 <>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea 
-                            title={'Describe the method of monetization of your plan?*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessMonetization}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"MonetizationOfYourPlan"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessMonetizationPlaceholder}                                                 
                         />
                     </div>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea 
-                            title={'Please clearly mention the structure of your sales cycle from contact to delivery.*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessDelivery}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"structureOfYourSales"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessDeliveryPlaceholder}
                         />
                     </div>
                     <div className='w-full h-auto flex justify-start items-center'>
@@ -265,32 +266,32 @@ const StartUpMvpRefactore = (props: Props) => {
                                     handleFinancialModelFileChange(e.target.files ? e.target.files[0] : '')
                                   }}
                             />
-                            <p className='text-grayDark font-barlow font-medium text-[13px] leading-4'>Choose File</p>
+                            <p className='text-black font-barlow font-medium text-[13px] leading-4'>{t('startUp',{ returnObjects: true }).trial.choseFile}</p>
                             <UploadFile />
                         </label>
                     </div>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea 
-                            title={'Have you previously cooperated with investors or accelerators?*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessAccelerators}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"cooperatedWithInvestors"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessAcceleratorsPlaceholder}                                            
                         />
                     </div>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea 
-                            title={'How did you get to know us?*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessKnowUs}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"getToKnowUs"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessKnowUsPlaceholder}                                            
                         />
                     </div>
                 </>

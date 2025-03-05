@@ -143,3 +143,6 @@ img {
 .get-shadow-g{
   box-shadow: 0 0 15px #6e6e6e55;
 }
+.get-shadow-sm{
+  box-shadow: 0 0 15px #6e6e6e31;
+}

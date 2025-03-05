@@ -36,7 +36,7 @@ const LandaGeneInput = ({
               patternValue=""
               patternMessage=""
               placeholder={t('fullNamePlaceholder')}
-              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+              className="input  col-span-1 mb-1 mt-3 w-full"
             />
             :
             <Input
@@ -49,8 +49,8 @@ const LandaGeneInput = ({
               patternValue=""
               patternMessage=""
               placeholder={t('fullNamePlaceholder')}
-              className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-              labelClass="text-[#6b6b6b] dark:text-current"
+              className="input  col-span-1 mb-1 mt-3 w-full"
+              labelClass=" dark:text-current"
             />
           }
         </div>)
@@ -68,7 +68,7 @@ const LandaGeneInput = ({
             patternValue="^[0-9]{11}$"
             patternMessage={t('phoneNumberErrorMessage')}
             placeholder={t('phoneNumberPlaceholder')}
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
+            className="input  col-span-1 mb-1 mt-3 w-full"
           />
             :
           <Input
@@ -81,8 +81,8 @@ const LandaGeneInput = ({
             patternValue="^[0-9]{11}$"
             patternMessage={t('phoneNumberErrorMessage')}
             placeholder={t('phoneNumberPlaceholder')}
-            className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-            labelClass="text-[#6b6b6b] dark:text-current"
+            className="input  col-span-1 mb-1 mt-3 w-full"
+            labelClass=" dark:text-current"
           />
           }
         </div>)

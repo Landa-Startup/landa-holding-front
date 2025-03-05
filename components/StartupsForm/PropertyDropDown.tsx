@@ -3,6 +3,8 @@ import TextArea from '../common/TextArea';
 import ChevDown from 'public/static/logos/ChevDown';
 import { StartupsFormData } from '@/types/global';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { useLang } from 'stores/langStore';
+import { useTranslation } from 'app/i18n/client';
 
 type Props = {
     register: UseFormRegister<StartupsFormData>
@@ -17,6 +19,8 @@ const PropertyDropDown = (props: Props) => {
   } = props;
 
   const [propertyOpen, setPropertyOpen] = useState<boolean>(false);  
+  const lang = useLang((s) => s.lang);
+  const { t } = useTranslation(lang, 'formComponent');
 
   return (
     <div>
@@ -24,7 +28,7 @@ const PropertyDropDown = (props: Props) => {
           setPropertyOpen(!propertyOpen)
         }}>
           <div className='w-full h-auto flex justify-center items-center gap-2'>
-               <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>Property</p>
+               <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>{t('startUp',{ returnObjects: true }).trial.property}</p>
                <div className={`${propertyOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-out mt-2`}>
                  <ChevDown />
                </div>
@@ -34,62 +38,62 @@ const PropertyDropDown = (props: Props) => {
           <>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea
-                  title={'How much revenue has your startup made since its inception?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.propertyRevenue}
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
                   nameTextArea={"startupRevenue"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                            
+                  placeholder={t('startUp',{ returnObjects: true }).trial.propertyRevenuePlaceholder}
               />
             </div>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea 
-                  title={'How much is your monthly income?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.propertyMonthly}
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
                   nameTextArea={"monthlyIncome"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                            
+                  placeholder={t('startUp',{ returnObjects: true }).trial.propertyMonthlyPlaceholder}
               />
             </div>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea 
-                  title={'What is your current interest rate?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.propertyRate}
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
                   nameTextArea={"currentInterestRate"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                            
+                  placeholder={t('startUp',{ returnObjects: true }).trial.propertyRatePlaceholder}
               />
             </div>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea 
-                  title={'How much current funding did you raise before starting your business?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.propertyBusiness}
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
                   nameTextArea={"currentRaisedFunding"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                            
+                  placeholder={t('startUp',{ returnObjects: true }).trial.propertyBusinessPlaceholder}
               />
             </div>
             <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
               <TextArea 
-                  title={'How much capital do you need to start your project?*'}
+                  title={t('startUp',{ returnObjects: true }).trial.propertyCapital}
                   register={register}
                   errors={errors} 
                   required={"this fiels is required"} 
                   nameTextArea={"neededCapital"} 
                   patternValue={''} 
                   patternMessage={''} 
-                  placeholder={'Description'}                                            
+                  placeholder={t('startUp',{ returnObjects: true }).trial.propertyCapitalPlaceholder}
               />
             </div>
           </>

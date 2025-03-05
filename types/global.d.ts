@@ -48,8 +48,10 @@ interface InvestorRegistrationFormData {
   birthDate: Date;
   email: string;
   countryOfResidence: string;
+  cityOfResidence: string;
   provinceOfResidence: string;
   companyName: string;
+  maximumInvestment: string;
   phoneNumber: string;
   interests: string;
   positionInTeam: string;
@@ -78,12 +80,12 @@ interface PartnerMembershipFormData {
   lastName: string;
   birthDate: Date;
   email: string;
-  phoneNumber: string;
+  // phoneNumber: string;
   countryOfResidence: string;
-  provinceOfResidence: string;
+  cityOfResidence: string;
   companyName: string;
-  investmentCeiling: string;
-  preferredAreas: string;
+  maximumInvestment: string;
+  // preferredAreas: string;
   howDidYouKnowUs: string;
 }
 
@@ -142,10 +144,16 @@ interface Entrepreuneur {
   firstName: string;
   lastName: string;
   email: string;
+  birthDate: Date;
+  countryOfResidence: string;
+  cityOfResidence: string;
   companyName: string;
-  phone: string;
-  website: string;
-  fieldOfProfessional: string;
+  maximumInvestment: string;
+  preferredAreas: string;
+  howDidYouKnowUs: string;
+  // phone: string;
+  // website: string;
+  // fieldOfProfessional: string;
 }
 
 interface LoginFormData {

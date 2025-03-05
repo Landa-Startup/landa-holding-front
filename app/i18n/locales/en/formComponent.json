@@ -1,4 +1,7 @@
 {
+  "yes": "Yes",
+  "no": "No",
+
   "firstName": "First Name *",
   "firstNameRequired": "First Name is Required.",
   "firstNamePlaceholder": "Yuor Name *",
@@ -28,12 +31,12 @@
   "applicationPlaceholder":"Select a Type of Application",
 
 
-  "birthDate": "Date of Birth *",
+  "birthDate": "Date of Birth",
   "birthDateRequired": "Date of Birth is Required.",
   "birthDateErrorMessage": "Please enter a valid Date of Birth(e.g., 2001/02/11)",
   "birthDatePlaceholder": "Date of Birth",
 
-  "sendButton": "Submit",
+  "sendButton": "Send",
   "sendingButton": "Submitting ....",
   "visitButton": "Visit Now",
 
@@ -44,9 +47,33 @@
   "companyNameRequired": "Company Name is Required.",
   "companyNamePlaceholder": "Enter your Company Name",
 
+  "maximumInvestment": "Maximum Investment * ",
+  "maximumInvestmentRequired": "Maximum Investment is Required",
+  "maximumInvestmentPlaceholder": "ex. 100,000$",
+
+  "preferredAreas": "Preferred Areas for Investment*",
+  "preferredAreasRequired": "This field is required",
+  "preferredAreasPlaceholder": "Areas",
+
   "howDidYouKnowUs": "How did you hear about us? *",
   "howDidYouKnowUsRequired": "This field is required",
-  "howDidYouKnowUsPlaceholder": "Description",
+  "howDidYouKnowUsPlaceholder": "e.g. social media, etc",
+
+  "provinceOfResidence": "Province Of Residence *",
+  "provinceOfResidencePlaceholder": "Province Of Residence is required",
+  "provinceOfResidenceRequired": "Province Of Residence is required",
+
+  "countryOfResidence": "Country of Residence*",
+  "countryOfResidencePlaceholder": "Iran",
+  "countryOfResidenceRequired": "Country of Residence is required",
+  
+  "cityOfResidence": "City of Residence*",
+  "cityOfResidencePlaceholder": "Tehran",
+  "cityOfResidenceRequired": "City Of Residence is required",
+
+  "investmentCeiling": "Investment Ceiling *",
+  "investmentCeilingRequired": "Investment Ceiling is required",
+  "investmentCeilingPlaceholder": "ex. 100,000$",
 
   "contactForm": {
     "title": "Reach us",
@@ -62,7 +89,7 @@
     "lng": "en",
     "dir": "ltr",
     "banner": "BUSINESS AFFILIATES",
-    "formTitle": "BUSINESS AFFILIATES",
+    "formTitle": "BUSINESS AFFILIATES FORM",
     "formSubtitle": "Personal Information"
   },
 
@@ -70,7 +97,7 @@
     "lng": "en",
     "banner": "ENTREPRENEUR CENTER",
     "LandaHolding": "Landa Holding",
-    "formTitle": "Entrepreneur Center",
+    "formTitle": "Entrepreneur Center FORM",
     "formSubtitle": "Personal Information"
   },
 
@@ -126,14 +153,11 @@
     "dir": "ltr",
     "banner": "INVESTOR CENTER",
     "LandaHolding": "Landa Holding",
-    "formTitle": "INVESTOR REGISTRATION",
+    "formTitle": "INVESTOR REGISTRATION FORM",
     "formSubtitle": "Personal Information",
     "interests": "Intrests",
     "interestsRequired": "Intrests is Required.",
-    "interestsPlaceholder": "Enter your Intrests.",
-    "preferredAreas": "Preferred Areas for Investment",
-    "preferredAreasRequired": "This field is required",
-    "preferredAreasPlaceholder": "Description"
+    "interestsPlaceholder": "Enter your Intrests."
   },
 
   "joinUsForm": {
@@ -169,6 +193,97 @@
       "ideaExplanationPlaceholder": "Description",
       "ideaExplanationRequired": "This field is required"
     },
+    "trial": {
+      "pitchDeck" : "Do you have Pitch deck?*",
+      "businessPlan" : "Do you have Business Plan?*",
+      "financial" : "Do you have Financial?*",
+      "problems" : "Problems",
+
+      "problemsLabel" : "Describe the customer problem you want to solve with your product or service.*",
+      "problemsPlaceholder" : "Description",
+      "problemsRequired" : "This field is required",
+      
+      "solutions" : "Solutions",
+      "solutionsUniqueValue" : "What is your unique value proposition (innovation)? What is new about what you do?*",
+      "solutionsUniqueValueRequired" : "this fields is required",
+      "solutionsUniqueValuePlaceholder" : "Description",
+      
+      "solutionsLevel" : "How much is level of your product and technology preparation?",
+      "solutionsLevelList" : [
+        "The basic principle has been observed.",
+        "The technology concept has been formulated.",
+        "Experimental proof of concept.",
+        "The confirmed technology in laboratory.",
+        "The confirmed technology in the environmental conditions",
+        "The presented technology in the environmental conditions",
+        "Show the system prototype in the mvp operating environment.",
+        "The proved realistic system in the operating environment.",
+        "A complete and qualified system."
+      ],
+
+      "solutionsPosition" : "What is your unique value proposition (innovation)? What is new about what you do?*",
+      "solutionsPositionRequired" : "this fields is required",
+      "solutionsPositionPlaceholder" : "Description",
+
+
+      "businessModel": "Business model",
+      "businessMonetization": "Describe the method of monetization of your plan?*",
+      "businessMonetizationRequired": "This field is required",
+      "businessMonetizationPlaceholder": "Description",
+
+      "businessDelivery": "Please clearly mention the structure of your sales cycle from contact to delivery.*",
+      "businessDeliveryRequired": "This field is required",
+      "businessDeliveryPlaceholder": "Description",
+
+      "businessFinancial": "If your plan has a financial model, please upload it.",
+      "choseFile": "chose file",
+
+      "businessAccelerators": "Have you previously cooperated with investors or accelerators?*",
+      "businessAcceleratorsRequired": "This field is required",
+      "businessAcceleratorsPlaceholder": "Description",
+
+      "businessKnowUs": "How did you get to know us?*",
+      "businessKnowUsRequired": "This field is required",
+      "businessKnowUsPlaceholder": "Description",
+
+
+      "targetMarket": "Target Market",
+      "targetCharacteristics": "Based on what characteristics do you decide who are your customers and who are not?*",
+      "targetCharacteristicsRequired": "This field is required",
+      "targetCharacteristicsPlaceholder": "Description",
+
+      "targetCustomers": "Who are your current customers? How many customers have you had so far?*",
+      "targetCustomersRequired": "This field is required",
+      "targetCustomersPlaceholder": "Description",
+
+      "targetEstimated": "How have you estimated the size of the market?*",
+      "targetEstimatedRequired": "This field is required",
+      "targetEstimatedPlaceholder": "Description",
+
+
+      "property": "Property",
+      "propertyRevenue": "How much revenue has your startup made since its inception?*",
+      "propertyRevenueRequired": "This field is required",
+      "propertyRevenuePlaceholder": "Description",
+      
+      "propertyMonthly": "How much is your monthly income?*",
+      "propertyMonthlyRequired": "This field is required",
+      "propertyMonthlyPlaceholder": "Description",
+      
+      "propertyRate": "What is your current interest rate?*",
+      "propertyRateRequired": "This field is required",
+      "propertyRatePlaceholder": "Description",
+      
+      "propertyBusiness": "How much current funding did you raise before starting your business?*",
+      "propertyBusinessRequired": "This field is required",
+      "propertyBusinessPlaceholder": "Description",
+      
+      "propertyCapital": "How much capital do you need to start your project?*",
+      "propertyCapitalRequired": "This field is required",
+      "propertyCapitalPlaceholder": "Description"
+  
+    },
+
 
     "pitchDeck": "Do you have Pitch deck?",
     "pitchDeckRequired": "Please choose an option",
@@ -193,10 +308,6 @@
 
     "cooperatedWithInvestors": "Have you previously cooperated with investors or accelerators?",
     "cooperatedWithInvestorsPlaceholder": "Description",
-
-    "investmentCeiling": "Investment Ceiling *",
-    "investmentCeilingRequired": "This field is required!",
-    "investmentCeilingPlaceholder": "Please Enter Investment Ceiling.",
 
     "solutions": {
       "title": "Solutions",

@@ -138,20 +138,19 @@
         {
           "image": "/static/images/our-team/Personals/121.jpg",
           "position": "Front-end Developer",
-          "position": "Front-end Developer",
           "name": "Amir Mohammad Esfahanizade",
           "linkedIn": "",
           "category": "programmers"
         },
         {
-          "image": "/static/images/our-team/Personals/milad copy 2.jpg",
+          "image": "/static/images/our-team/Personals/milad.jpg",
           "position": "R&D Specialist",
           "name": "Milad Fatemi",
           "linkedIn": "https://www.linkedin.com/in/miladfatemi/",
           "category": "R&D Department"
         },
         {
-          "image": "/static/images/our-team/Personals/sobhan1.jpg",
+          "image": "/static/images/our-team/Personals/sobhan.jpg",
           "position": "Immigration Manager",
           "name": "Sobhan Mohammadi",
           "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",
@@ -165,17 +164,17 @@
           "category": "R&D Department"
         },
         {
-          "image": "/static/images/our-team/Personals/mahsa-gh.JPG",
+          "image": "/static/images/our-team/Personals/",
           "position": "Content Creator",
           "name": "Farnaz Torki",
-          "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
+          "linkedIn": "",
           "category": "Content Creators"
         },
         {
-          "image": "/static/images/our-team/Personals/mahsa-gh.JPG",
+          "image": "/static/images/our-team/Personals/Alireza.jpg",
           "position": "Content Creator",
           "name": "Alireza Zamani",
-          "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
+          "linkedIn": "",
           "category": "Content Creators"
         },
         {
@@ -246,7 +245,6 @@
     "Public Relations",
     "Digital Marketing",
     "Manager Assistant",
-    "R&D Department",
-    "Immigration"
+    "R&D Department"
   ]
 }

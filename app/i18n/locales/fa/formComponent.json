@@ -1,4 +1,7 @@
 {
+  "yes": "بله",
+  "no": "خیر",
+
   "firstName": "نام",
   "firstNameRequired": "نام اجباری است.",
   "firstNamePlaceholder": "لطفا نام خود را وارد کنید.",
@@ -36,17 +39,38 @@
   "visitButton": "مشاهده کنید",
   "successMessage": "اطلاعات با موفقیت ارسال شد.",
   "failedMessage": "در ارسال اطلاعات مشکلی به وجود آمده! لطفا با پشتیبانی تماس بگیرید.",
+
   "companyName": "نام شرکت",
   "companyNameRequired": "نام شرکت الزامی است.",
   "companyNamePlaceholder": "لطفا نام شرکت را وارد کنید.",
+
+  "preferredAreas": "مناطق مورد علاقه برای سرمایه‌گذاری*",
+  "preferredAreasRequired": "پر کردن این قسمت الزامی است",
+  "preferredAreasPlaceholder": "مناطق",
+
+  "maximumInvestment": "حداکثر سرمایه‌گذاری *",
+  "maximumInvestmentRequired": "حداکثر سرمایه‌گذاری الزامی است",
+  "maximumInvestmentPlaceholder": "مثال: 100,000$",
+
   "howDidYouKnowUs": "نحوه آشنایی با ما *",
-  "howDidYouKnowUsPlaceholder": "توضیحات",
+  "howDidYouKnowUsPlaceholder": "مثلاً شبکه‌های اجتماعی و ...",
   "howDidYouKnowUsRequired": "پر کردن این قسمت الزامی است",
+
+  "provinceOfResidence": "استان محل سکونت*",
+  "provinceOfResidencePlaceholder": "استان محل سکونت را وارد کنید",
+  "provinceOfResidenceRequired": "پر کردن استان محل سکونت الزامی است",
+
+  "countryOfResidence": "کشور محل اقامت *",
+  "countryOfResidencePlaceholder": "ایران",
+  "countryOfResidenceRequired": "وارد کردن کشور محل اقامت الزامی است",
+
+  "cityOfResidence": "شهر محل اقامت*",
+  "cityOfResidencePlaceholder": "تهران",
+  "cityOfResidenceRequired": "شهر محل اقامت الزامی است",
 
   "investmentCeiling": "سقف سرمایه گذاری",
   "investmentCeilingRequired": "این بخش الزامی است.",
   "investmentCeilingPlaceholder": "لطفا سقف سرمایه گذاری خود را وارد کنید.",
-
 
 
   "INTERN" : "کارآموز",
@@ -138,10 +162,7 @@
     "formSubtitle": "اطلاعات شخصی",
     "interests": "علاقه مندی ها",
     "interestsRequired": "علاقه مندی ها الزامی است",
-    "interestsPlaceholder": "علاقه مندی های خود را وارد کنید",
-    "preferredAreas": "زمینه مورد نظر جهت سرمایه‌گذاری",
-    "preferredAreasRequired": "پر کردن این قسمت الزامی است",
-    "preferredAreasPlaceholder": "توضیحات"
+    "interestsPlaceholder": "علاقه مندی های خود را وارد کنید"
   },
   "startUp": {
     "lng": "fa",
@@ -162,6 +183,95 @@
       "ideaExplanationPlaceholder": "توضیحات",
       "ideaExplanationRequired": "پر کردن این قسمت الزامی است."
     },
+"trial": {
+  "pitchDeck": "آیا دارای Pitch Deck هستید؟*",
+  "businessPlan": "آیا دارای طرح کسب‌وکار هستید؟*",
+  "financial": "آیا دارای اطلاعات مالی هستید؟*",
+  "problems": "مشکلات",
+
+  "problemsLabel": "مشکلی که قصد دارید با محصول یا خدمت خود حل کنید را توضیح دهید.*",
+  "problemsPlaceholder": "توضیحات",
+  "problemsRequired": "این فیلد الزامی است",
+
+  "solutions": "راه‌حل‌ها",
+  "solutionsUniqueValue": "چه چیزی در پیشنهاد ارزش منحصربه‌فرد شما (نوآوری) جدید است؟*",
+  "solutionsUniqueValueRequired": "این فیلد الزامی است",
+  "solutionsUniqueValuePlaceholder": "توضیحات",
+
+  "solutionsLevel": "سطح آمادگی محصول و فناوری شما چقدر است؟",
+  "solutionsLevelList": [
+    "اصل اساسی مشاهده شده است.",
+    "مفهوم فناوری تدوین شده است.",
+    "اثبات تجربی مفهوم.",
+    "فناوری در آزمایشگاه تأیید شده است.",
+    "فناوری در شرایط محیطی تأیید شده است.",
+    "فناوری در شرایط محیطی ارائه شده است.",
+    "نمونه اولیه سیستم در محیط عملیاتی MVP نمایش داده شده است.",
+    "سیستم واقعی در محیط عملیاتی اثبات شده است.",
+    "سیستم کامل و تأیید شده است."
+  ],
+
+  "solutionsPosition": "چه چیزی در پیشنهاد ارزش منحصربه‌فرد شما (نوآوری) جدید است؟*",
+  "solutionsPositionRequired": "این فیلد الزامی است",
+  "solutionsPositionPlaceholder": "توضیحات",
+
+  "businessModel": "مدل کسب‌وکار",
+  "businessMonetization": "روش درآمدزایی برنامه خود را توضیح دهید؟*",
+  "businessMonetizationRequired": "این فیلد الزامی است",
+  "businessMonetizationPlaceholder": "توضیحات",
+
+  "businessDelivery": "ساختار چرخه فروش خود را از ارتباط تا تحویل به وضوح ذکر کنید.*",
+  "businessDeliveryRequired": "این فیلد الزامی است",
+  "businessDeliveryPlaceholder": "توضیحات",
+
+  "businessFinancial": "اگر برنامه شما دارای مدل مالی است، لطفاً آن را بارگذاری کنید.",
+  "choseFile": "انتخاب فایل",
+
+  "businessAccelerators": "آیا قبلاً با سرمایه‌گذاران یا شتاب‌دهنده‌ها همکاری داشته‌اید؟*",
+  "businessAcceleratorsRequired": "این فیلد الزامی است",
+  "businessAcceleratorsPlaceholder": "توضیحات",
+
+  "businessKnowUs": "چگونه با ما آشنا شدید؟*",
+  "businessKnowUsRequired": "این فیلد الزامی است",
+  "businessKnowUsPlaceholder": "توضیحات",
+
+  "targetMarket": "بازار هدف",
+  "targetCharacteristics": "بر اساس چه ویژگی‌هایی تصمیم می‌گیرید که مشتریان شما چه کسانی هستند و چه کسانی نیستند؟*",
+  "targetCharacteristicsRequired": "این فیلد الزامی است",
+  "targetCharacteristicsPlaceholder": "توضیحات",
+
+  "targetCustomers": "مشتریان فعلی شما چه کسانی هستند؟ تاکنون چند مشتری داشته‌اید؟*",
+  "targetCustomersRequired": "این فیلد الزامی است",
+  "targetCustomersPlaceholder": "توضیحات",
+
+  "targetEstimated": "چگونه اندازه بازار را تخمین زده‌اید؟*",
+  "targetEstimatedRequired": "این فیلد الزامی است",
+  "targetEstimatedPlaceholder": "توضیحات",
+
+  "property": "دارایی",
+  "propertyRevenue": "استارتاپ شما از زمان آغاز تاکنون چقدر درآمد داشته است؟*",
+  "propertyRevenueRequired": "این فیلد الزامی است",
+  "propertyRevenuePlaceholder": "توضیحات",
+
+  "propertyMonthly": "درآمد ماهانه شما چقدر است؟*",
+  "propertyMonthlyRequired": "این فیلد الزامی است",
+  "propertyMonthlyPlaceholder": "توضیحات",
+
+  "propertyRate": "نرخ سود فعلی شما چقدر است؟*",
+  "propertyRateRequired": "این فیلد الزامی است",
+  "propertyRatePlaceholder": "توضیحات",
+
+  "propertyBusiness": "قبل از شروع کسب‌وکار خود چه میزان تأمین مالی داشته‌اید؟*",
+  "propertyBusinessRequired": "این فیلد الزامی است",
+  "propertyBusinessPlaceholder": "توضیحات",
+
+  "propertyCapital": "برای شروع پروژه خود به چه میزان سرمایه نیاز دارید؟*",
+  "propertyCapitalRequired": "این فیلد الزامی است",
+  "propertyCapitalPlaceholder": "توضیحات"
+},
+
+
+
     "pitchDeck": "آیا پیچ دک تهیه کرده‌اید؟",
     "pitchDeckRequired": "لطفا یکی از گزینه های زیر را انتخاب کنید.",
     "businessPlan": "آیا بیزینس پلن آماده کرده‌اید؟",

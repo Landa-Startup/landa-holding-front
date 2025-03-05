@@ -16,14 +16,14 @@ export default function SearchInput() {
         patternValue={''} 
         patternMessage='' 
         placeholder='Search...'
-        className='input input-bordered w-full'
+        className='input  w-full'
         containerClass=''
         labelClass=''      
       /> */}
       <input
         type="text"
         placeholder="Search..."
-        className="input input-bordered w-full"
+        className="input  w-full"
       />
     </div>
   );

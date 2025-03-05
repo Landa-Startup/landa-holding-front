@@ -171,7 +171,6 @@ export default function StartupFormForm() {
             register={register}
             errors={errors}
           />
-
           <div className="col-span-2">
             <div className="col-span-2">
               <div className="bg-[#222222CC]">
@@ -186,13 +185,13 @@ export default function StartupFormForm() {
             <div className='h-auto w-full flex flex-col gap-2'>
               <StartUpFormCheckbox register={register} name={t("IDEA")} />
               {((): any => {
-                if (startupFormType == "IDEA") {
+                if (startupFormType == t("IDEA")) {
                   return <StartupFormIdea register={register} errors={errors} />
                 }
               })()}
               <StartUpFormCheckbox register={register} name={t("TRIAL")} />
               {((): any => {
-                if (startupFormType == "TRIAL") {
+                if (startupFormType == t("TRIAL")) {
                   return (
                     <StartUpTrialRefactore
                       handleFileCounterChange={handleFileCounterChange}
@@ -212,7 +211,7 @@ export default function StartupFormForm() {
               })()}
               <StartUpFormCheckbox register={register} name={t("MVP")} />
               {((): any => {
-                if (startupFormType == "MVP") {
+                if (startupFormType == t("MVP")) {
                   return (
                     <StartUpMvpRefactore
                       handleFileCounterChange={handleFileCounterChange}

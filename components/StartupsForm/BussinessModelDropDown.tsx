@@ -4,6 +4,8 @@ import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import { StartupsFormData } from '@/types/global'
 import UploadFile from 'public/static/logos/UploadFile'
 import ChevDown from 'public/static/logos/ChevDown'
+import { useLang } from 'stores/langStore'
+import { useTranslation } from 'app/i18n/client'
 
 type Props = {
     register: UseFormRegister<StartupsFormData>
@@ -22,13 +24,16 @@ const BussinessModelDropDown = (props: Props) => {
 
   const [businessOpen, setBusinessOpen] = useState<boolean>(false);
 
+  const lang = useLang((s) => s.lang)
+  const { t } = useTranslation(lang, 'formComponent');
+
   return (
     <div>
         <div className={`w-full h-auto cursor-pointer py-6 my-4 ${businessOpen ? "bg-grayCheckBox" : "bg-grayDark"}`} onClick={() => {
           setBusinessOpen(!businessOpen)
         }}>
             <div className='w-full h-auto flex justify-center items-center gap-2'>
-                 <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>Business Model</p>
+                 <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>{t('startUp',{ returnObjects: true }).trial.businessModel}</p>
                  <div className={`${businessOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-out mt-2`}>
                    <ChevDown />
                  </div>
@@ -38,26 +43,26 @@ const BussinessModelDropDown = (props: Props) => {
                 <>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea 
-                            title={'Describe the method of monetization of your plan?*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessMonetization}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"MonetizationOfYourPlan"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessMonetizationPlaceholder}                                                 
                         />
                     </div>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea 
-                            title={'Please clearly mention the structure of your sales cycle from contact to delivery.*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessDelivery}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"structureOfYourSales"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessDeliveryPlaceholder}
                         />
                     </div>
                     <div className='w-full h-auto flex justify-start items-center'>
@@ -73,32 +78,32 @@ const BussinessModelDropDown = (props: Props) => {
                                     handleFinancialModelFileChange(e.target.files ? e.target.files[0] : '')
                                   }}
                             />
-                            <p className='text-grayDark font-barlow font-medium text-[13px] leading-4'>Choose File</p>
+                            <p className='text-black font-barlow font-medium text-[13px] leading-4'>{t('startUp',{ returnObjects: true }).trial.choseFile}</p>
                             <UploadFile />
                         </label>
                     </div>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea 
-                            title={'Have you previously cooperated with investors or accelerators?*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessAccelerators}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"cooperatedWithInvestors"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessAcceleratorsPlaceholder}                                            
                         />
                     </div>
                     <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                         <TextArea
-                            title={'How did you get to know us?*'}
+                            title={t('startUp',{ returnObjects: true }).trial.businessKnowUs}
                             register={register}
                             errors={errors} 
                             required={"this fiels is required"} 
                             nameTextArea={"getToKnowUs"} 
                             patternValue={''} 
                             patternMessage={''} 
-                            placeholder={'Description'}                                                        
+                            placeholder={t('startUp',{ returnObjects: true }).trial.businessKnowUsPlaceholder}                                            
                         />
                     </div>
                 </>

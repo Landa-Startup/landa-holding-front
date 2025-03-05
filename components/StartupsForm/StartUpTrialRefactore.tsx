@@ -32,7 +32,6 @@ type Props = {
 }
 
 const StartUpTrialRefactore = (props: Props) => {
-
   const {
     handleFileCounterChange,
     handlePitchFileChange,
@@ -47,7 +46,7 @@ const StartUpTrialRefactore = (props: Props) => {
     handleFinancialModelFileChange
   } = props;  
 
-  const lang = useLang((s) => s.lang)
+  const lang = useLang((s) => s.lang);
   const { t } = useTranslation(lang, 'formComponent');
 
   const [problemsOpen, setProblemsOpen] = useState<boolean>(false);
@@ -298,7 +297,7 @@ const StartUpTrialRefactore = (props: Props) => {
           errors={errors}
         />
     </div>
-  )
-}
+  );
+};
 
-export default StartUpTrialRefactore
+export default StartUpTrialRefactore;

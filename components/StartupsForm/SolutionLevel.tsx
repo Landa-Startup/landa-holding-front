@@ -3,6 +3,8 @@ import TextArea from '../common/TextArea'
 import { FieldErrors, UseFormRegister, UseFormSetValue } from 'react-hook-form'
 import { StartupsFormData } from '@/types/global'
 import ChevDown from 'public/static/logos/ChevDown'
+import { useTranslation } from 'app/i18n/client'
+import { useLang } from 'stores/langStore'
 
 const productLevels: Array<string> = [
   "The basic principle has been observed.",
@@ -33,8 +35,12 @@ const SolutionLevel = (props: Props) => {
     handleSolutionsLevelChange,
     setValue
   } = props;     
-  
+
+  const lang = useLang((s) => s.lang);
+  const { t } = useTranslation(lang, 'formComponent');
+
   const [solutionsOpen, setSolutionsOpen] = useState<boolean>(false);
+
 
   return (
     <div>
@@ -42,7 +48,7 @@ const SolutionLevel = (props: Props) => {
           setSolutionsOpen(!solutionsOpen)
         }}>
           <div className='w-full h-auto flex justify-center items-center gap-2'>
-               <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>Solutions</p>
+               <p className='font-barlow text-white font-medium text-[24px] leading-[20px]'>{t('startUp',{ returnObjects: true }).trial.solutions}</p>
                <div className={`${solutionsOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-out mt-2`}>
                  <ChevDown />
                </div>
@@ -52,20 +58,20 @@ const SolutionLevel = (props: Props) => {
           <>
                <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                  <TextArea 
-                     title={'What is your unique value proposition (innovation)? What is new about what you do?*'}
+                     title={t('startUp',{ returnObjects: true }).trial.solutionsUniqueValue}
                      register={register}
                      errors={errors} 
                      required={"this fiels is required"} 
                      nameTextArea={"scalable"} 
                      patternValue={''} 
                      patternMessage={''} 
-                     placeholder={'Description'}                                                        
+                     placeholder={t('startUp',{ returnObjects: true }).trial.solutionsUniqueValuePlaceholder }                                                 
                  />
                </div>
                <div className='w-full md:w-2/3 mb-8 h-auto md:px-1'>
                  <div className='w-full h-auto flex flex-col gap-4 items-start'>
                     <div className='w-full h-auto'>
-                        <p className='px-2 text-lg text-[#6b6b6b] dark:text-current'>How much is level of your product and technology preparation?</p>
+                        <p className='px-2 text-lg text-[#6b6b6b] dark:text-current'>{t('startUp',{ returnObjects: true }).trial.solutionsLevel}</p>
                     </div>
                     <div className='w-full h-auto flex flex-col gap-1 items-start px-2'>
                         {productLevels.map((item: string, index: number) => (

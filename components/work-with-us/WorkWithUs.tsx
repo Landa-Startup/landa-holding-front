@@ -250,18 +250,18 @@ export default function WorkWithUs() {
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full">
           <div className="grid grid-cols-1 gap-x-6 bg-[#F8F5F0] p-4 md:grid-cols-2 lg:grid-cols-3">
-            <Select register={register} errors={errors} nameInput="your_position" label={   t('workWithUS', { returnObjects: true }).PositionPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).PositionPlaceholder } options={PositionsData} handleChange={handleItemChange} selected={selectPosition}
+            <Select labelClass='' register={register} errors={errors} nameInput="your_position" label={   t('workWithUS', { returnObjects: true }).PositionPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8 dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).PositionPlaceholder } options={PositionsData} handleChange={handleItemChange} selected={selectPosition}
             />
 
             {selectPosition !== t('workWithUS.Professor') ? (
-              <Select register={register} errors={errors} nameInput="type_of_contract" label={   t('workWithUS', { returnObjects: true }).contractPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).contractPlaceholder } options={TypeOfContractWithStudentData} handleChange={handleContractWithStudentItemChange} selected={selectStudentContract}
+              <Select labelClass='' register={register} errors={errors} nameInput="type_of_contract" label={   t('workWithUS', { returnObjects: true }).contractPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8 dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).contractPlaceholder } options={TypeOfContractWithStudentData} handleChange={handleContractWithStudentItemChange} selected={selectStudentContract}
               />
             ) : (
-              <Select register={register} errors={errors} nameInput="type_of_contract" label={   t('workWithUS', { returnObjects: true }).contractPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).contractPlaceholder } options={TypeOfContractWithProfessorData} handleChange={handleContractWithProfessorItemChange} selected={selectProfessorContract}
+              <Select labelClass='' register={register} errors={errors} nameInput="type_of_contract" label={   t('workWithUS', { returnObjects: true }).contractPlaceholder } required="" className="select select-bordered mt-4 w-full max-w-xs px-8 dark:text-current" placeholder={   t('workWithUS', { returnObjects: true }).contractPlaceholder } options={TypeOfContractWithProfessorData} handleChange={handleContractWithProfessorItemChange} selected={selectProfessorContract}
               />
             )}
 
-            <Select register={register} errors={errors} nameInput="uni" label={unis.placeholder} required="" className="select select-bordered mt-4 w-full max-w-xs px-8" labelClass="text-[#6b6b6b] dark:text-current" placeholder={unis.placeholder} options={TypeOfUnis} handleChange={handleUniChange} selected={selectUni}
+            <Select labelClass='' register={register} errors={errors} nameInput="uni" label={unis.placeholder} required="" className="select select-bordered mt-4 w-full max-w-xs px-8 dark:text-current" placeholder={unis.placeholder} options={TypeOfUnis} handleChange={handleUniChange} selected={selectUni}
             />
           </div>
           {/* next line */}
@@ -280,8 +280,8 @@ export default function WorkWithUs() {
                 label={t('firstName')}
                 required={t('firstNameRequired')}
                 placeholder={t('firstNamePlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
+                className="input  col-span-1 mb-1 mt-3 w-full"
+                labelClass=" dark:text-current"
                 patternValue=""
                 patternMessage=""
               />
@@ -295,8 +295,8 @@ export default function WorkWithUs() {
                 label={t('lastName')}
                 required={t('lastNameRequired')}
                 placeholder={t('lastNamePlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
+                className="input  col-span-1 mb-1 mt-3 w-full"
+                labelClass=" dark:text-current"
                 patternValue=""
                 patternMessage=""
               />
@@ -316,8 +316,7 @@ export default function WorkWithUs() {
                 placeholder={
                   t('workWithUS', { returnObjects: true }).emailPlaceholder
                 }
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b]"
+                className="input  col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
               />
             </div>
             <div className="col-span-1">
@@ -331,8 +330,7 @@ export default function WorkWithUs() {
                 patternValue="^[0-9]{11}$"
                 patternMessage={t('phoneNumberErrorMessage')}
                 placeholder={t('phoneNumberPlaceholder')}
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b]"
+                className="input  col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-md dark:placeholder-[#9CA3AF]"
               />
             </div>
           </div>
@@ -356,8 +354,8 @@ export default function WorkWithUs() {
                 placeholder={
                   t('workWithUS', { returnObjects: true }).StudyFieldPlaceholder
                 }
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
+                className="input  col-span-1 mb-1 mt-3 w-full"
+                labelClass=" dark:text-current"
                 patternValue=""
                 patternMessage=""
               />
@@ -377,8 +375,8 @@ export default function WorkWithUs() {
                   t('workWithUS', { returnObjects: true })
                     .StudySubFieldPlaceholder
                 }
-                className="input input-bordered col-span-1 mb-1 mt-3 w-full placeholder-[#b2b1b0] drop-shadow-lg dark:placeholder-[#9CA3AF]"
-                labelClass="text-[#6b6b6b] dark:text-current"
+                className="input  col-span-1 mb-1 mt-3 w-full"
+                labelClass=" dark:text-current"
                 patternValue=""
                 patternMessage=""
               />
@@ -395,7 +393,7 @@ export default function WorkWithUs() {
             </div>
 
             <div className='col-span-1'>
-              <Select register={register} errors={errors} nameInput="langLevel" label={langLevel.placeholder} required="" className="select select-bordered mt-4 w-full px-8 shadow-sm" labelClass="text-[#6b6b6b] dark:text-current" placeholder={langLevel.placeholder} options={TypeOfSkillLevels} handleChange={handleUniChange} selected={langLevel.placeholder}
+              <Select labelClass='' register={register} errors={errors} nameInput="langLevel" label={langLevel.placeholder} required="" className="select select-bordered mt-4 w-full px-8 shadow-sm dark:text-current" placeholder={langLevel.placeholder} options={TypeOfSkillLevels} handleChange={handleUniChange} selected={langLevel.placeholder}
               />
             </div>
           </div>
