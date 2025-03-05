@@ -144,7 +144,7 @@ interface Entrepreuneur {
   firstName: string;
   lastName: string;
   email: string;
-  birthDate: Date;
+  birthDate: Date | undefined;
   countryOfResidence: string;
   cityOfResidence: string;
   companyName: string;

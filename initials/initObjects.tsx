@@ -117,9 +117,12 @@ const initialFormData: Entrepreuneur = {
   lastName: '',
   email: '',
   companyName: '',
-  phone: '',
-  website: '',
-  fieldOfProfessional: ''
+  birthDate: undefined,
+  countryOfResidence: '',
+  cityOfResidence: '',
+  maximumInvestment: '',
+  preferredAreas: '',
+  howDidYouKnowUs: ''
 };
 
 const ContactFormData: ContactUSFormData = {
