@@ -27,7 +27,7 @@ export default function Select({
 }) {
   return (
     <div className="flex flex-col items-start">
-      <label htmlFor={nameInput} className={`self-start px-4 ${labelClass}`}>
+      <label htmlFor={nameInput} className={`self-start px-4 !text-[#6B6B6B] ${labelClass}`}>
         {label}
       </label>
       {/* TO DO : select placeholder has a problem */}
@@ -37,7 +37,7 @@ export default function Select({
           {...register(nameInput, {
             required: required
           })}
-          className={className + (errors[nameInput] ? ' border-red-500' : '')}
+          className={`w-full mt-2 !rounded-sm get-shadow-sm active:outline-none  focus:outline-none appearance-none bg-transparent placeholder:text-[#939393B2] ${className + (errors[nameInput] ? ' border-red-500' : '')}`}
           onChange={handleChange}
           value={placeholder}
         >
