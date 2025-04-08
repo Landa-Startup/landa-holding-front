@@ -59,13 +59,6 @@
             "category": "دستیار مدیر"
         },
         {
-            "image": "/static/images/our-team/Personals/sara.jpeg",
-            "position": "مدیر منابع انسانی",
-            "name": "سارا رخشانی",
-            "linkedIn": "https://www.linkedin.com/in/lida-parvizi-ab7b8721a/",
-            "category": "مدیران"
-        },
-        {
             "image": "/static/images/our-team/Personals/a33.JPG",
             "position": "مسئول روابط عمومی",
             "name": "گلاره بهرامی",
@@ -73,17 +66,10 @@
             "category": "مسئول روابط عمومی"
         },
         {
-            "image": "/static/images/our-team/Personals/arash.jpg",
-            "position": "مدیر روابط عمومی",
-            "name": "آرش آریانیک",
-            "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
-            "category": "مدیران"
-        },
-        {
             "image": "/static/images/our-team/Personals/saedi.jpg",
             "position": "مدیر ارشد فناوری",
             "name": "مهدی ساعدی",
-            "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
+            "linkedIn": "",
             "category": "مدیران"
           },
           {
@@ -143,14 +129,14 @@
             "category": "برنامه نویسان"
         },
         {
-            "image": "/static/images/our-team/Personals/milad copy 2.jpg",
+            "image": "/static/images/our-team/Personals/milad.jpg",
             "position": "تحقیق و توسعه",
             "name": "میلاد فاطمی",
             "linkedIn": "https://www.linkedin.com/in/miladfatemi/",
             "category": "تحقیق و توسعه"
         },
         {
-            "image": "/static/images/our-team/Personals/sobhan1.jpg",
+            "image": "/static/images/our-team/Personals/sobhan.jpg",
             "position": "مدیر مهاجرت",
             "name": "سبحان محمدی",
             "linkedIn": "https://www.linkedin.com/in/sobhan-mohammadi-hfn/",

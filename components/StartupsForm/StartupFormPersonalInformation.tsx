@@ -3,6 +3,7 @@ import Input from '../common/form/Input';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
+import Select from '../common/form/Select';
 
 export default function StartupFormPersonalInformation({
   register,
@@ -11,20 +12,19 @@ export default function StartupFormPersonalInformation({
   register: any;
   errors: any;
 }) {
-  const { lang } = useLang((s) => s)
+  const { lang } = useLang((s) => s);
   const { t } = useTranslation(lang, 'formComponent');
   return (
     <>
       <div className="mb-12 grid grid-cols-1 gap-x-6 gap-y-4 bg-[#F8F5F0] p-3 md:grid-cols-2 lg:grid-cols-3">
-
         <PersonalInfoInput
           register={register}
           errors={errors}
           nameInputs={{
-            firstName: "firstName",
-            lastName: "lastName",
-            phoneNumber: "",
-            email: "email",
+            firstName: 'firstName',
+            lastName: 'lastName',
+            phoneNumber: '',
+            email: 'email',
             jobPosition: ''
           }}
         />
@@ -43,18 +43,16 @@ export default function StartupFormPersonalInformation({
           labelClass=" dark:text-current"
         />
 
-        <Input
+        <Select
           register={register}
           errors={errors}
           nameInput="countryOfResidence"
-          type="text"
           label={t('countryOfResidence')}
           required={t('countryOfResidenceRequired')}
-          patternValue=""
-          patternMessage=""
-          placeholder={t('countryOfResidencePlaceholder')}
-          className="input  col-span-1 bg-whiteGold mb-1 mt-3 w-full"
           labelClass=" dark:text-current"
+          className="input col-span-1 mb-1 mt-3 w-full bg-whiteGold dark:placeholder-[#9CA3AF]"
+          placeholder={t('countryOfResidencePlaceholder')}
+          options={t('countries', { returnObjects: true })}
         />
 
         <Input

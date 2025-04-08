@@ -66,24 +66,10 @@
           "category": "Manager Assistant"
         },
         {
-          "image": "/static/images/our-team/Personals/sara.jpeg",
-          "position": "Human Resource Manager",
-          "name": "Sara Rakhshani",
-          "linkedIn": "https://www.linkedin.com/in/lida-parvizi-ab7b8721a/",
-          "category": "managers"
-        },
-        {
-          "image": "/static/images/our-team/Personals/arash.jpg",
-          "position": "Director of Public Relations",
-          "name": "Arash Aryanik",
-          "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
-          "category": "managers"
-        },
-        {
           "image": "/static/images/our-team/Personals/saedi.jpg",
           "position": "CTO",
           "name": "Mahdi Saedi",
-          "linkedIn": "https://www.linkedin.com/in/arash-aryanik-58b97885/",
+          "linkedIn": "",
           "category": "managers"
         },
         {
