@@ -1,46 +1,64 @@
 {
-    "lng": "fa",
-    "dir": "rtl",
-    "banner": "استارتاپ چیست",
-    "button": "Startup Launch Stages" ,
+  "lng": "fa",
+  "dir": "rtl",
+  "banner": "استارتاپ چیست",
+  "button": "مراحل راه‌اندازی استارتاپ",
 
-    "differences-title" : "Key Differences Between Startups and Small Businesses",
-    "differences-detail" : "While all startups begin their journey as small businesses, their ultimate goals differ significantly. Their primary objective is to transcend their initial \"startup\" status and establish themselves as dominant players in their chosen markets. In contrast, many small businesses prioritize stability and profitability within a defined niche. They focus on organic growth, customer satisfaction, and sustainable operations. Their owners are often content with their current scale and may not actively seek aggressive expansion. Startups operate with a go big or go home\" mentality, while small businesses prioritize longevity and consistent returns",
-    "differences-list" :[
-        "Problem-solving ability",
-        "Scalability",
-        "Rapid growth potential",
-        "Creativity and innovation"
-    ],
+  "differences-title": "تفاوت‌های کلیدی بین استارتاپ‌ها و کسب‌وکارهای کوچک",
+  "differences-detail": "در حالی که همه استارتاپ‌ها فعالیت خود را به‌عنوان کسب‌وکارهای کوچک آغاز می‌کنند، اهداف نهایی آن‌ها تفاوت قابل‌توجهی با یکدیگر دارند. هدف اصلی استارتاپ‌ها، عبور از وضعیت اولیه و تبدیل شدن به بازیگران بزرگ در بازار هدف است. در مقابل، بسیاری از کسب‌وکارهای کوچک به دنبال ثبات و سودآوری در یک حوزه مشخص هستند. آن‌ها بیشتر بر رشد ارگانیک، رضایت مشتری و عملیات پایدار تمرکز دارند و مالکان این کسب‌وکارها اغلب از مقیاس فعلی خود راضی هستند و تمایلی به گسترش سریع ندارند. استارتاپ‌ها با ذهنیت یا بزرگ شو یا کنار برو فعالیت می‌کنند، در حالی که کسب‌وکارهای کوچک دوام و بازدهی مستمر را در اولویت قرار می‌دهند.,",
+  "differences-list": [
+    "توانایی حل مسئله",
+    "مقیاس‌پذیری",
+    "پتانسیل رشد سریع",
+    "خلاقیت و نوآوری"
+  ],
 
-    "nature-title" : "The Nature of Startups",
-    "nature-detail" : "Having an innovative idea is essential for the development of a startup. These businesses often aim to solve problems or introduce new services by identifying gaps in existing products or services and offering creative solutions. Landa International Holding, equipped with professionals, consultants, and international experts, stands ready to support aspiring entrepreneurs in launching their businesses and navigating any challenges they may encounter along the way.",
+  "nature-title": "ماهیت استارتاپ‌ها",
+  "nature-detail": "داشتن یک ایده نوآورانه، برای شکل‌گیری استارتاپ ضروری است. این نوع کسب‌وکارها اغلب به‌دنبال حل مشکلات یا ارائه خدمات جدید از طریق شناسایی خلأ در محصولات یا خدمات موجود و ارائه راه‌حل‌های خلاقانه هستند. هلدینگ بین‌المللی لاندا، با بهره‌گیری از تیمی متشکل از متخصصان، مشاوران و کارشناسان بین‌المللی، آماده است تا از کارآفرینان مشتاق برای راه‌اندازی کسب‌وکارشان و عبور از چالش‌های این مسیر حمایت کند.",
 
-    "gateway-title" : "Landa International Holding: Your Gateway to Success in Canada",
-    "gateway-detail" : "Landa International Holding provides comprehensive services to help early-stage startups that have recently entered Canada through the Startup Visa Program expand and grow their businesses in the country. By utilizing the consulting services of our expert team, you can overcome the challenges of launching and developing an international startup in areas such as marketing, human resources, finance, and legal matters.",
+  "gateway-title": "هلدینگ بین‌المللی لاندا: دروازه‌ای برای موفقیت در کانادا",
+  "gateway-detail": "هلدینگ بین‌المللی لاندا، خدمات جامع و تخصصی برای کمک به استارتاپ‌های نوپا که از طریق برنامه ویزای استارتاپ وارد کانادا شده‌اند، ارائه می‌دهد. با بهره‌گیری از خدمات مشاوره‌ای تیم مجرب ما، می‌توانید بر چالش‌های راه‌اندازی و توسعه استارتاپ بین‌المللی در حوزه‌های مختلفی ازجمله سلامت، ژننیک، آموزش و صنایع دستی غلبه کنید.",
 
-    "service-title" : "Landa Holding Services",
-    "service-list" : [
-        {
-            "icon" : "<MusicPlay/>",
-            "title" : "Mentorship and Consulting",
-            "description" : " One of the key advantages of Landa Holding's startup services is access to a team of international experts and consultants who specialize in startup registration and expansion on a global scale. "
-        },
-        {
-            "icon" : "<PresentionChart/>",
-            "title" : "Market Analysis",
-            "description" : " Our international team, with its deep knowledge of the Canadian market and its potential, offers personalized guidance on how to grow and develop your business in this country."
-        },
-        {
-            "icon" : "<Data/>",
-            "title" : "Networking",
-            "description" : " Through collaborations with international partners, Landa Holding assists you in building your brand and establishing effective business connections in Canada."
-        },
-        {
-            "icon" : "<MoneyRecive/>",
-            "title" : "Investment",
-            "description" : " The growth and expansion of a business in a new market with unknown potential requires adequate investment. At Landa Holding, we facilitate the growth and success of startups through investment."
-        }
-    ]
+  "service-title": "خدمات لاندا",
+  "service-list": [
+    {
+      "icon": "MusicPlay",
+      "title": "مشاوره و مربی‌گری",
+      "description": "یکی از مزایای اصلی خدمات استارتاپ هلدینگ لاندا، دسترسی به تیمی از مشاوران و متخصصان بین‌المللی است که در زمینه ثبت و توسعه استارتاپ‌ها در مقیاس جهانی تخصص دارند. "
+    },
+    {
+      "icon": "PresentionChart",
+      "title": "تحلیل بازار",
+      "description": "تیم بین‌المللی ما با دانش عمیق از بازار کانادا و ظرفیت‌های آن، راهنمایی‌های شخصی‌سازی‌شده‌ای برای توسعه کسب‌وکار شما در این کشور ارائه می‌دهد."
+    },
+    {
+      "icon": "Data",
+      "title": "شبکه‌سازی",
+      "description": "از طریق همکاری با شرکای تجاری بین‌المللی، هلدینگ لاندا به شما کمک می‌کند تا برند خود را بسازید و ارتباطات تجاری مؤثری در کانادا برقرار کنید."
+    },
+    {
+      "icon": "MoneyRecive",
+      "title": "سرمایه‌گذاری",
+      "description": "رشد و گسترش یک کسب‌وکار در بازاری جدید و ناشناخته، نیازمند سرمایه‌گذاری کافی است. ما با فراهم کردن بستر سرمایه‌گذاری، مسیر رشد و موفقیت استارتاپ‌ها را هموار می‌کنیم."
+    }
+  ],
 
+  "services-title": "خدمات لاندا برای استارتاپ‌های تازه‌وارد به بازار کانادا",
+  "services-list": [
+    "تدوین طرح تجاری تخصصی",
+    "ارائه مستندات استارتاپ به سازمان‌های مربوطه",
+    "کمک در توسعه ایده کسب‌وکار",
+    "شناسایی اولویت‌های اقتصادی در کانادا",
+    "ارزیابی سوابق مدیریتی و تحصیلات",
+    "بررسی اسناد مالی",
+    "دریافت نامه حمایت LOS",
+    "آماده‌سازی برای مصاحبه‌ها",
+    "بررسی مدارک و تکمیل فرم‌ها",
+    "مرور اسناد و پر کردن فرم‌ها",
+    "تأمین مالی استارتاپ",
+    "ثبت شرکت ",
+    "ارزیابی ارزش‌گذاری",
+    "مشاوره کسب‌وکار",
+    "بررسی فاکتورها"
+  ]
 }

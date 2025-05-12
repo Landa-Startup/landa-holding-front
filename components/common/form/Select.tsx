@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Select({
   register,
@@ -12,6 +12,7 @@ export default function Select({
   labelClass,
   placeholder,
   handleChange,
+  selected,
 }: {
   register: any;
   errors: any;
@@ -22,30 +23,28 @@ export default function Select({
   className: string;
   labelClass: string;
   placeholder: string;
-  handleChange?: any;
+  handleChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   selected?: string;
 }) {
   return (
     <div className="flex flex-col items-start">
-      <label htmlFor={nameInput} className={`px-2 !text-[#6B6B6B] ${labelClass}`}>
+      <label htmlFor={nameInput} className={`self-start px-4 !text-[#6B6B6B] ${labelClass}`}>
         {label}
       </label>
-      {/* TO DO : select placeholder has a problem */}
-      <div className='w-full'>
+
+      <div className="flex w-full flex-col items-start">
         <select
           id={nameInput}
           {...register(nameInput, {
             required: required
           })}
-          className={`w-full !rounded-sm get-shadow-sm focus:outline-none bg-transparent placeholder:text-[#939393B2] ${
-            className + (errors[nameInput] ? ' border-red-500' : '')
-          }`}
+          className={`w-full mt-2 !rounded-sm get-shadow-sm active:outline-none focus:outline-none appearance-none bg-transparent placeholder:text-[#939393B2] ${className} ${errors[nameInput] ? ' border-red-500' : ''}`}
           onChange={handleChange}
-          defaultValue={placeholder}
+          defaultValue=""
         >
-          {/* <option disabled selected value={placeholder}>
-            {selected ? selected : placeholder}
-          </option> */}
+          <option value="" disabled>
+            {placeholder}
+          </option>
           {options.map((option, index) => (
             <option key={index} value={option.value}>
               {option.label}

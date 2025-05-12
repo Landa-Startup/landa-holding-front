@@ -14,7 +14,7 @@ import { useSubmit } from 'stores/dataStore';
 import ButtonRefactor from '../common/ButtonRefactor';
 import Input from '../common/form/Input';
 import LandaLogo from '../icons/common/LandaLogo';
-import Select from '../common/form/Select';
+import CountryInput from '../common/form/CountryInput';
 
 
 export default function InvestorRegistrationForm() {
@@ -139,39 +139,15 @@ export default function InvestorRegistrationForm() {
                 patternValue="(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})"
                 patternMessage={t('birthDateErrorMessage')}
                 placeholder={t('birthDatePlaceholder')}
-                className="input col-span-1 mb-1 mt-3 w-full bg-whiteGold dark:placeholder-[#9CA3AF]"
+                className="input col-span-1 mb-1 mt-3 w-full "
                 labelClass="dark:text-current"
               />
 
-              <div className="col-span-1">
-                <Select
-                  register={register}
-                  errors={errors}
-                  nameInput="countryOfResidence"
-                  label={t('countryOfResidence')}
-                  required={t('countryOfResidenceRequired')}
-                  labelClass=" dark:text-current"
-                  className='input col-span-1 mb-1 mt-3 w-full bg-whiteGold dark:placeholder-[#9CA3AF]'
-                  placeholder={t('countryOfResidencePlaceholder')}
-                  options={t('countries', { returnObjects: true })}
-                />
-              </div>
-
-              <div className="col-span-1">
-                <Input
-                  register={register}
-                  errors={errors}
-                  nameInput="cityOfResidence"
-                  type="text"
-                  label={t('cityOfResidence')}
-                  required={t('cityOfResidenceRequired')}
-                  patternValue=""
-                  patternMessage=""
-                  placeholder={t('cityOfResidencePlaceholder')}
-                  className="input  col-span-1 bg-whiteGold mb-1 mt-3 w-full"
-                  labelClass=" dark:text-current"
-                />
-              </div>
+              <CountryInput
+                errors={errors}
+                nameInput="countryOfResidence"
+                register={register}
+              />
 
               <div className="col-span-1">
                 <Input
@@ -182,7 +158,7 @@ export default function InvestorRegistrationForm() {
                   label={t('companyName')}
                   required={t('companyNameRequired')}
                   placeholder={t('companyNamePlaceholder')}
-                  className="input col-span-1 mb-1 mt-3 bg-whiteGold w-full"
+                  className="input col-span-1 mb-1 mt-3 w-full"
                   labelClass="dark:text-current"
                   patternValue=""
                   patternMessage=""

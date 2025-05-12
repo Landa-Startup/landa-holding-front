@@ -201,7 +201,7 @@ const PersonalInfoInput = ({
         </div>
       )}
       {nameInputs?.jobPosition && (
-        <div className='w-full'>
+        <div className="col-span-1">
           <Select
             register={register}
             errors={errors}
@@ -216,7 +216,7 @@ const PersonalInfoInput = ({
         </div>
       )}
       {nameInputs?.jobPosition && (
-        <div className="w-full">
+        <div>
           <Select
             register={register}
             errors={errors}
