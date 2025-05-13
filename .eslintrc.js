@@ -7,7 +7,7 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    "plugin:@typescript-eslint/eslint-recommended",
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:tailwindcss/recommended',
     'eslint-config-prettier'
   ],
@@ -26,13 +26,14 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'tailwindcss/no-custom-classname': 'off',
-    "tailwindcss/migration-from-tailwind-2": 'off',
+    'tailwindcss/migration-from-tailwind-2': 'off',
+    'tailwindcss/classnames-order': 'off', // این خط اضافه شده
     '@typescript-eslint/no-explicit-any': 'off',
-    "max-lines": ["error", { "max": 350, "skipComments": true, "skipBlankLines": true }],
-    "components/icons/*": ["off"],
+    'max-lines': ['error', { max: 350, skipComments: true, skipBlankLines: true }],
+    'components/icons/*': ['off'],
   },
   settings: {
-    'tailwindcss': {
+    tailwindcss: {
       groupByResponsive: true,
       whitelist: [],
     },

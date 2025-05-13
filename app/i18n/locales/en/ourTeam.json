@@ -143,13 +143,6 @@
           "category": "R&D Department"
         },
         {
-          "image": "/static/images/our-team/Personals/mahsa-gh.JPG",
-          "position": "R&D Specialist",
-          "name": "Mahsa Ghorbani",
-          "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
-          "category": "R&D Department"
-        },
-        {
           "image": "/static/images/our-team/Personals/farnaz.JPG",
           "position": "Content Creator",
           "name": "Farnaz Torki",
@@ -169,13 +162,6 @@
           "name": "Matin Janghorbani",
           "linkedIn": "",
           "category": "programmers"
-        },
-        {
-          "image": "/static/images/our-team/Personals/shamim.jpg",
-          "position": "Motion Graphic",
-          "name": "Shamim Beheshti",
-          "linkedIn": "",
-          "category": "designers"
         },
         {
           "image": "/static/images/our-team/Personals/sadeq.jpg",
@@ -211,13 +197,6 @@
           "name": "Parastoo Sanaifar",
           "linkedIn": "",
           "category":  "R&D Department"
-        },
-        {
-          "image": "/static/images/our-team/Personals/amitis.jpg",
-          "position": "Back-end Developer",
-          "name": "Amitis Hashemi",
-          "linkedIn": "",
-          "category":  "Programmers"
         }
     ],
   "roles": [
