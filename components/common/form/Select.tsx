@@ -1,5 +1,4 @@
 'use client';
-import React, { useState } from 'react';
 
 export default function Select({
   register,
@@ -11,8 +10,7 @@ export default function Select({
   className,
   labelClass,
   placeholder,
-  handleChange,
-  selected,
+  handleChange
 }: {
   register: any;
   errors: any;
@@ -28,7 +26,10 @@ export default function Select({
 }) {
   return (
     <div className="flex flex-col items-start">
-      <label htmlFor={nameInput} className={`self-start px-4 !text-[#6B6B6B] ${labelClass}`}>
+      <label
+        htmlFor={nameInput}
+        className={`self-start px-4 !text-[#6B6B6B] ${labelClass}`}
+      >
         {label}
       </label>
 

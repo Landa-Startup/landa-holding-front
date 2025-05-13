@@ -19,14 +19,14 @@ export default async function Page({
 
   return (
     <div>
-      <div className='hidden md:inline'>
+      <div className="hidden md:inline">
         <Banner
           image="/static/images/handicraft/craft-banner.jpg"
           title={t('banner')}
           lang={lang}
         />
       </div>
-      <div className='inline md:hidden'>
+      <div className="inline md:hidden">
         <Banner
           image="/static/images/handicraft/craft-banner-mobile.jpg"
           title={t('banner')}
@@ -61,7 +61,7 @@ export default async function Page({
             {/* {t('paragraph3')} */}
           </p>
           {/* <div className="absolute bottom-20 -right-7 h-[650px] w-screen md:hidden"> */}
-            {/* <Image
+          {/* <Image
               className=" object-cover opacity-20 md:hidden"
               src="/static/images/handicraftLogo.png"
               alt="handicraft"

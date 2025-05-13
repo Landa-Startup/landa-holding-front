@@ -131,7 +131,7 @@ export default function LandaGene() {
             height={100}
           />
         </div>
-        
+
         <div className="basis-4/5">
           <p className="font-barlow text-base font-normal leading-[48px] md:pt-12 px-10 text-justify">
             {t('textMid')}
@@ -231,6 +231,5 @@ export default function LandaGene() {
         </div>
       </div>
     </div>
-
   );
 }

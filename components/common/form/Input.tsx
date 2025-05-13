@@ -32,7 +32,10 @@ export default function Input({
   return (
     <div className={`flex flex-col items-start ${containerClass}`}>
       {label && (
-        <label htmlFor={nameInput} className={`px-2 !text-[#6B6B6B] ${labelClass}`}>
+        <label
+          htmlFor={nameInput}
+          className={`px-2 !text-[#6B6B6B] ${labelClass}`}
+        >
           {label}
         </label>
       )}

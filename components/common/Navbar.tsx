@@ -6,7 +6,6 @@ import { useTranslation } from 'app/i18n/client';
 import { setCookie } from 'cookies-next';
 import LanguageSwitch from './LanguageSwitch';
 
-
 export default function Navbar({
   children,
   lang
@@ -19,13 +18,13 @@ export default function Navbar({
   const menuItems = t('menuItems', { returnObjects: true });
   const submenuItems = t('submenuItems', { returnObjects: true });
 
-  setCookie("i18next", lang);
+  setCookie('i18next', lang);
 
   const drawerRef = useRef<HTMLInputElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLinkClick = () => {
-    console.log(isMenuOpen)
+    console.log(isMenuOpen);
     setIsMenuOpen(false);
     if (!drawerRef.current) {
       return;
@@ -59,11 +58,11 @@ export default function Navbar({
                   strokeLinejoin="round"
                   strokeWidth="2"
                   stroke="white"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </label>
-        </div>
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
+          </div>
           <div className="m-2 flex h-full items-center justify-start px-2 text-left ">
             <Link href="/">
               <div className="flex flex-col items-center md:flex-row md:items-end">
@@ -86,7 +85,6 @@ export default function Navbar({
               {menuItems.map(
                 ({ label, href }: { label: string; href: string }) => (
                   <li className="h-9 text-2xl mt-2" key={label}>
-                    
                     <Link href={href} className="text-white hover:bg-white">
                       {label}
                     </Link>
@@ -124,22 +122,19 @@ export default function Navbar({
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        
 
         <ul className="menu absolute h-full w-80 space-y-0 divide-y divide-solid bg-white p-4 text-xl text-black  ltr:left-[110px] md:hidden">
+          {/* <ul className="menu absolute h-full w-80 space-y-5 bg-white p-4 text-xl text-black ltr:left-[70px] md:hidden  divide-y divide-solid"> */}
 
-        {/* <ul className="menu absolute h-full w-80 space-y-5 bg-white p-4 text-xl text-black ltr:left-[70px] md:hidden  divide-y divide-solid"> */}
-
-        <Image
-          className='mx-auto mb-2'
-          src="static/images/Logo.svg"
-          alt="Landa Key Differentiating"
-          width={96}
-          height={4}
-          loading="lazy"
-        />
+          <Image
+            className="mx-auto mb-2"
+            src="static/images/Logo.svg"
+            alt="Landa Key Differentiating"
+            width={96}
+            height={4}
+            loading="lazy"
+          />
           {menuItems.map(({ label, href }: { label: string; href: string }) => (
-            
             <li
               className="font-Barlow flex items-center font-condensed pb-1"
               key={label}
@@ -152,43 +147,38 @@ export default function Navbar({
           ))}
           <li>
             {/* new// */}
-           
+
             <details className="">
-            <summary className="font-Barlow btn m-1 pt-2 font-condensed text-xl">{lang === 'en' ? 'FORMS' : 'فرم ها'}
-            </summary>
-          <ul className="px-2">
+              <summary className="font-Barlow btn m-1 pt-2 font-condensed text-xl">
+                {lang === 'en' ? 'FORMS' : 'فرم ها'}
+              </summary>
+              <ul className="px-2">
+                {/* mobile forms */}
+                <ul className="">
+                  {submenuItems.map(
+                    ({ label, href }: { label: string; href: string }) => (
+                      <li key={label} onClick={() => handleLinkClick()}>
+                        <Link href={href} className="font-condensed">
+                          {label}
+                        </Link>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </ul>
+            </details>
 
-    
-          {/* mobile forms */}
-            <ul className=''>
-              {submenuItems.map(
-                ({ label, href }: { label: string; href: string }) => (
-                  <li key={label} onClick={() => handleLinkClick()}>
-                    <Link href={href} className="font-condensed">
-                      {label}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-
-          </ul>
-        </details>
-            
             {/* //item */}
 
+            {/* new// */}
 
-{/* new// */}
-
-{/* 
+            {/* 
             <div className="mx-auto pl-8">
               <Link className="font-condensed font-bold" href={'#'}>
                 {lang === 'en' ? 'FORMS' : 'فرم ها'}
               </Link>
               <IconDown/>
             </div> */}
-
-
           </li>
           {/* <div className="absolute bottom-5 mx-auto w-72 rounded px-12">
             <div className=" mx-auto rounded-lg bg-[#DCDCDC] py-2">
@@ -258,7 +248,6 @@ export default function Navbar({
             </div>
           </div> */}
         </ul>
-        
       </div>
       <style>{`
         .children {

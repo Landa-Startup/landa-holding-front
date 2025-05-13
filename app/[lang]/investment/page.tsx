@@ -19,30 +19,25 @@ export default async function Page({
 }: {
   params: { lang: string };
 }) {
-  
   const { t } = await useTranslation(lang, 'investment');
 
   return (
-    <div 
-      dir={lang === 'en' ? 'ltr' : 'rtl'}
-      className='mb-20'
-    >
+    <div dir={lang === 'en' ? 'ltr' : 'rtl'} className="mb-20">
       {/* TODO: we have multiple hero with same styles. make one component for all */}
-      <div className='hidden md:inline'>
+      <div className="hidden md:inline">
         <Banner
           image="/static/images/investment/investment-hero.jpg"
           title={t('banner')}
           lang={lang}
         />
       </div>
-      <div className='inline md:hidden'>
+      <div className="inline md:hidden">
         <Banner
           image="/static/images/investment/mobile-hero.jpg"
           title={t('banner')}
           lang={lang}
         />
       </div>
-
 
       <div className=" flex justify-between mx-10 md:mx-28 my-28 gap-5 font-gilda ">
         <div className="w-full md:w-[45%]">
@@ -51,9 +46,7 @@ export default async function Page({
               {t('startUpInvestingTitle')}
             </span>
           </div>
-          <p className="text-justify leading-8">
-            {t('startUpInvestingText')}
-          </p>
+          <p className="text-justify leading-8">{t('startUpInvestingText')}</p>
         </div>
 
         <div className="relative h-[300px] w-[330px] md:h-[168p] md:w-[561px] hidden md:inline">
@@ -80,18 +73,18 @@ export default async function Page({
           <p className="text-justify font-barlow tracking-[1px] ltr:leading-8 rtl:text-lg rtl:leading-10">
             {t('focusText')}
           </p> */}
-          {/* <Button
+      {/* <Button
             goto="/"
             size="not"
             text={lang === "en" ? "Federal Canada Corporation Information" : "اطلاعات شرکت فدرال کانادا"}
             bgColor="Primary"
             lang={lang}
           /> */}
-          {/* <ButtonRefactor text={t('buttonTitle')} />
+      {/* <ButtonRefactor text={t('buttonTitle')} />
         </div>
       </div> */}
       <div className="px-8 py-10 md:px-28 font-gilda">
-        <div className='flex justify-between items-center gap-6'>
+        <div className="flex justify-between items-center gap-6">
           <div className="relative w-[27rem] h-[26rem] rtl:h-[22rem] hidden md:inline">
             <Image
               className="object-contain rounded-lg"
@@ -106,7 +99,7 @@ export default async function Page({
             <span className=" text-lg md:text-4xl font-bold">
               {t('investmentstrategy')}
             </span>
-            <p className=' leading-[25px] mt-6'>{t('objectiveText1')}</p>
+            <p className=" leading-[25px] mt-6">{t('objectiveText1')}</p>
           </div>
         </div>
         <FeaturesCardsContainer />

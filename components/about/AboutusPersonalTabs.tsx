@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 // import IconLinkedin from '../icons/IconLinkedin';
 import IconRoundedEmail from '../icons/IconRoundedEmail';
@@ -36,7 +35,9 @@ export default function AboutusPersonalTabs({
       <div className="z-10 my-2 ml-2 flex flex-col gap-2 rtl:mr-2">
         <div>
           <Link href={linkedIn} target="_blank">
-            <span className='text-white bg-black opacity-70 px-[8px] pb-[4px] text-3xl font-bold rounded-full'>in</span>
+            <span className="text-white bg-black opacity-70 px-[8px] pb-[4px] text-3xl font-bold rounded-full">
+              in
+            </span>
           </Link>
         </div>
 

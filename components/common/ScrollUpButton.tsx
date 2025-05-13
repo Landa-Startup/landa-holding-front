@@ -25,7 +25,7 @@ const ScrollUpButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   };
 
@@ -45,7 +45,7 @@ const ScrollUpButton = () => {
       style={{
         background: showButton
           ? `conic-gradient(from 90deg, #f5e9da 0% ${scrollProgress}%, transparent ${scrollProgress}% 100%)`
-          : '',
+          : ''
       }}
     >
       <FeatherArrowUp />

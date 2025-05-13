@@ -1,4 +1,4 @@
-'use client'
+'use client';
 // import Phone from '../icons/IconPhone';
 // import Email from '../icons/IconEmail';
 // import Location from '../icons/IconLocation';
@@ -31,32 +31,32 @@ export default function ContactUsDescription() {
           href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
           target="_blank"
         >
-        <Image
-          src="/static/images/Icons/instagram_second.png"
-          alt="Landa Key Differentiating"
-          width={30}
-          height={741}
-          loading="lazy"
-        />
+          <Image
+            src="/static/images/Icons/instagram_second.png"
+            alt="Landa Key Differentiating"
+            width={30}
+            height={741}
+            loading="lazy"
+          />
         </Link>
         <Link href={'https://wa.me/989120539563'} target="_blank">
-        <Image
-          src="/static/images/Icons/whatsapp_second.png"
-          alt="Landa Key Differentiating"
-          width={30}
-          height={741}
-          loading="lazy"
-        />
+          <Image
+            src="/static/images/Icons/whatsapp_second.png"
+            alt="Landa Key Differentiating"
+            width={30}
+            height={741}
+            loading="lazy"
+          />
         </Link>
         <Link href={'mailto:info@landaholding.com'}>
-        <Image
-        className=''
-          src="/static/images/Icons/sms.png"
-          alt="Landa Key Differentiating"
-          width={30}
-          height={741}
-          loading="lazy"
-        />
+          <Image
+            className=""
+            src="/static/images/Icons/sms.png"
+            alt="Landa Key Differentiating"
+            width={30}
+            height={741}
+            loading="lazy"
+          />
         </Link>
         <Link
           href={'https://www.linkedin.com/company/landa-startup-inc'}
@@ -78,16 +78,16 @@ export default function ContactUsDescription() {
           {/* <div className="mb-5 flex flex-col ltr:text-left rtl:text-right">
             <span className="font-semibold">{t('phone')}</span>
             <ul className="gap-1"> */}
-              {/* TODO: create component for below icons */}
-              {/* <li> */}
-                {/* <Link href="tel:+14165577622"> */}
-                  {/* <span>{lang === 'en' ? 'Toronto: ' : 'تورنتو: '}</span>
+          {/* TODO: create component for below icons */}
+          {/* <li> */}
+          {/* <Link href="tel:+14165577622"> */}
+          {/* <span>{lang === 'en' ? 'Toronto: ' : 'تورنتو: '}</span>
                   <span dir="ltr" className="text-[#AA8453]">
                     {t('addresses', { returnObjects: true }).cNumber}
                   </span> */}
-                {/* </Link> */}
-              {/* </li> */}
-              {/* <li>
+          {/* </Link> */}
+          {/* </li> */}
+          {/* <li>
                 <Link href="tel:+14165577622">
                   <span>{lang === 'en' ? 'Tehran: ' : 'تهران: '}</span>
                   <span dir="ltr" className="text-[#AA8453]">
@@ -95,19 +95,19 @@ export default function ContactUsDescription() {
                   </span>
                 </Link>
               </li> */}
-              {/* <li> */}
-                {/* <Link href="tel:+14165577622">
+          {/* <li> */}
+          {/* <Link href="tel:+14165577622">
                   <span>{lang === 'en' ? 'Isfahan: ' : 'اصفهان: '}</span>
                   <span dir="ltr" className="text-[#AA8453]">
                     {t('addresses', { returnObjects: true }).iNumber}
                   </span>
                 </Link> */}
-              {/* </li> */}
-            {/* </ul> */}
-          </div>
+          {/* </li> */}
+          {/* </ul> */}
         </div>
-        {/* TODO: Separate component for email information */}
-        {/* <div className="flex gap-5">
+      </div>
+      {/* TODO: Separate component for email information */}
+      {/* <div className="flex gap-5">
           <Email />
           <ul>
             <li className="font-semibold ltr:text-left rtl:text-right">
@@ -123,8 +123,8 @@ export default function ContactUsDescription() {
             </li>
           </ul>
         </div> */}
-        {/* TODO: Separate component for location information */}
-        {/* <div className="flex gap-5">
+      {/* TODO: Separate component for location information */}
+      {/* <div className="flex gap-5">
           <Location />
           <div className="ml-2 flex flex-col ltr:text-left rtl:text-right">
             <span className="font-semibold">{t('address')}</span>
@@ -135,7 +135,7 @@ export default function ContactUsDescription() {
             </ul>
           </div>
         </div> */}
-      </div>
+    </div>
     // </div>
   );
 }

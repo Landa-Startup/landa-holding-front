@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from 'next/image';
 
 import { useTranslation } from 'app/i18n/client';
@@ -14,7 +14,6 @@ export default function StoryOfLanda() {
       {/* top */}
       <div className="flex flex-col justify-between gap-5 pb-14  text-black sm:py-14 lg:flex-row">
         <div className="flex flex-col w-full md:w-[48%] md:text-justify">
-
           <span className="ltr:font-gilda rtl:font-EBGaramond text-bold text-3xl mb-10">
             {t('LANDAStartups', { returnObjects: true })[0].title}
           </span>
@@ -62,18 +61,17 @@ export default function StoryOfLanda() {
         </div>
         {/* top - left */}
         <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2 ltr:md:pl-48">
-                  <div className="relative hidden md:block h-[310px] w-screen md:h-[640px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
-                    <div className='h-[200px]'>            
-                    <Image
-                    className="h-[1200px] hidden md:block w-full md:pr-16"
-                    src="/static/images/About/story/aboutus.png"
-                    alt="story of landa"
-                    layout="fill"
-  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  />
-  </div>
-  </div>
-
+          <div className="relative hidden md:block h-[310px] w-screen md:h-[640px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
+            <div className="h-[200px]">
+              <Image
+                className="h-[1200px] hidden md:block w-full md:pr-16"
+                src="/static/images/About/story/aboutus.png"
+                alt="story of landa"
+                layout="fill"
+                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          </div>
 
           {/* <div className="mt-4 order-first px-10 md:px-0 md:pl-0 md:order-last">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
@@ -85,48 +83,39 @@ export default function StoryOfLanda() {
             </div>
           </div> */}
 
-        
-
-      <div className='font-gilda text-2xl font-bold md:text-5xl pt-10'>
-        {t('VISIONMission', { returnObjects: true }).title}
-      </div>
-
-      <div className=' flex justify-between gap-8 '>
-        <div className='relative hidden md:block h-[310px] w-screen md:h-[310px] md:w-[48%]'>
-          <Image
-            className="hidden md:block object-cover w-full rounded-xl"
-            src="/static/images/About/story/1.png"
-            alt="story of landa"
-            layout="fill"
-          />
-        </div>
-        
-      </div>
-      <div className='ltr:font-gilda rtl:font-EBGaramond text-3xl pl-14 rtl:pr-14 md:text-4xl md:pl-32 md:rtl:pr-32 md:pt-12'>
-      {t('VISIONMission', { returnObjects: true }).title}
-      </div>
-      <div className='md:px-32 px-14 grid grid-cols-2 md:pb-12'>
-      <div className='relative hidden md:block h-[310px] w-screen md:h-[310px] md:w-[661px]'>
-        <Image
-              className="hidden md:block object-cover w-full rounded-xl"
-              src="/static/images/About/story/1.png"
-              alt="story of landa"
-              layout="fill"
-            />
-        </div>
-        <div className=' w-[300px] md:w-[800px] md:pt-10 text-justify'>
-        {t('VISIONMission', { returnObjects: true }).text}
-        </div>
-          <div>
-            
+          <div className="font-gilda text-2xl font-bold md:text-5xl pt-10">
+            {t('VISIONMission', { returnObjects: true }).title}
           </div>
- 
-      </div>
 
+          <div className=" flex justify-between gap-8 ">
+            <div className="relative hidden md:block h-[310px] w-screen md:h-[310px] md:w-[48%]">
+              <Image
+                className="hidden md:block object-cover w-full rounded-xl"
+                src="/static/images/About/story/1.png"
+                alt="story of landa"
+                layout="fill"
+              />
+            </div>
+          </div>
+          <div className="ltr:font-gilda rtl:font-EBGaramond text-3xl pl-14 rtl:pr-14 md:text-4xl md:pl-32 md:rtl:pr-32 md:pt-12">
+            {t('VISIONMission', { returnObjects: true }).title}
+          </div>
+          <div className="md:px-32 px-14 grid grid-cols-2 md:pb-12">
+            <div className="relative hidden md:block h-[310px] w-screen md:h-[310px] md:w-[661px]">
+              <Image
+                className="hidden md:block object-cover w-full rounded-xl"
+                src="/static/images/About/story/1.png"
+                alt="story of landa"
+                layout="fill"
+              />
+            </div>
+            <div className=" w-[300px] md:w-[800px] md:pt-10 text-justify">
+              {t('VISIONMission', { returnObjects: true }).text}
+            </div>
+            <div></div>
+          </div>
 
-
-
-      {/* <div className='md:px-32'>
+          {/* <div className='md:px-32'>
        <div className='md:text-4xl font-gilda md:mb-16 gri'>
   {t('VISIONMission', { returnObjects: true }).title}
    </div>
@@ -144,18 +133,17 @@ export default function StoryOfLanda() {
    </div>
       </div> */}
 
+          {/* top - left */}
+          {/* TODO: make a for loop for this section instead of duplicate code */}
+          {/* TODO: Why use [0],[1] for all translations? */}
+          {/* top - right */}
 
-        {/* top - left */}
-        {/* TODO: make a for loop for this section instead of duplicate code */}
-        {/* TODO: Why use [0],[1] for all translations? */}
-        {/* top - right */}
+          {/* top - right */}
 
-        {/* top - right */}
+          {/* top */}
 
-      {/* top */}
-
-      {/* down */}
-      {/* <div className="flex w-full flex-col gap-12 text-[#000] md:flex-col md:px-32 lg:flex-row xl:flex-col">
+          {/* down */}
+          {/* <div className="flex w-full flex-col gap-12 text-[#000] md:flex-col md:px-32 lg:flex-row xl:flex-col">
         <div className="flex flex-col px-10 font-barlow sm:px-0 md:w-full">
           <span className="font-gilda text-3xl text-primary">
             {t('VisionOfTheLanaHolding', { returnObjects: true })[0].title}
@@ -177,13 +165,9 @@ export default function StoryOfLanda() {
           </div>
         </div>
       </div> */}
-      {/* down */}
-
-
-
-
-    </div>
-    </div>
+          {/* down */}
+        </div>
+      </div>
     </div>
   );
 }

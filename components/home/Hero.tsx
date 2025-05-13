@@ -19,7 +19,6 @@ export default function Hero({
   lang: string;
   title: string;
 }) {
-
   return (
     <div
       style={{
@@ -46,7 +45,10 @@ export default function Hero({
         </div>
         <ul className="mx-12 flex list-disc flex-col gap-4 font-gilda text-xl tracking-wider text-[#FAFAFA] rtl:tracking-normal md:pt-24 md:text-4xl md:tracking-[3.6px]">
           {titles.map((title: string, index: number) => (
-            <li key={index} className={`get-shadow marker:text-white ${index === 1 && 'ml-10'} ${index === 2 && 'ml-20'}`}>
+            <li
+              key={index}
+              className={`get-shadow marker:text-white ${index === 1 && 'ml-10'} ${index === 2 && 'ml-20'}`}
+            >
               {title}
             </li>
           ))}
@@ -57,9 +59,8 @@ export default function Hero({
           className={`text-bold text-center font-barlow text-xl font-semibold leading-10 text-white text-opacity-95 ltr:tracking-[4px] md:font-gilda md:text-5xl`}
 
           // className={`text-center md:ltr:font-gilda md:rtl:font-EBGaramond font-barlow  font-semibold text-bold leading-10 text-white text-opacity-95 md:text-5xl text-xl ltr:tracking-[4px]`}
-
         >
-         {subTitle ? subTitle : ''}
+          {subTitle ? subTitle : ''}
         </div>
       </div>
       {showButton ? <ButtonRefactor text="Register Now" /> : <></>}

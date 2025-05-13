@@ -34,7 +34,9 @@ export default function PersonalTab({
           // TODO: why use / instead of #?
           href={linkedIn || '/'}
         >
-          <span className='text-2xl text-white px-2 pb-1 font-bold rounded-full bg-[#222222e3]'>in</span>
+          <span className="text-2xl text-white px-2 pb-1 font-bold rounded-full bg-[#222222e3]">
+            in
+          </span>
         </Link>
       </div>
 

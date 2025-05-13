@@ -112,7 +112,7 @@ export default function ContactUsForm() {
               lastName: '',
               email: 'email',
               phoneNumber: 'number',
-              jobPosition:''
+              jobPosition: ''
             }}
             noLabel={true}
           />
@@ -159,9 +159,9 @@ export default function ContactUsForm() {
         </div>
 
         <div className="md:pl-44 md:rtl:pr-28">
-          <ButtonRefactor 
-            type='submit'
-            text={send ? t("sendingButton") : t("sendButton")}
+          <ButtonRefactor
+            type="submit"
+            text={send ? t('sendingButton') : t('sendButton')}
             disabled={errorsList[0] ? true : false}
           />
         </div>

@@ -25,11 +25,11 @@ i18next
   )
   .init({
     backend: {
-      loadPath: './locales/{lng}/{ns}.json' 
+      loadPath: './locales/{lng}/{ns}.json'
     },
     cache: {
       enabled: true,
-      prefix: 'i18n',
+      prefix: 'i18n'
     },
     ...getOptions(),
     lng: undefined, // let detect the language on client side

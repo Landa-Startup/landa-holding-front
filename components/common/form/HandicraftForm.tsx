@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
 import React, { useEffect } from 'react';
 import { PersonalInfoInput } from './PersonalInfoInput';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import { useForm } from 'react-hook-form';
 import { HandicraftFormData } from 'initials/initObjects';
-import { HandicraftForm as HandicraftFormType} from '../../../types/global';
+import { HandicraftForm as HandicraftFormType } from '../../../types/global';
 import NotificationSendForm from './NotificationSendForm';
 import { useTranslation } from 'app/i18n/client';
 // import ButtonRefactor from '../ButtonRefactor';
@@ -16,17 +16,16 @@ import ArrowRight from '@/components/icons/common/ArrowRight';
 
 // import { HandicraftForm, HandicraftForm } from '@/types/global';
 export default function HandicraftForm() {
-
   const {
     csrfToken,
     handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
-    handleSuccessChange,
-  } = useSubmit((s) => s)
+    handleSuccessChange
+  } = useSubmit((s) => s);
 
-  const lang = useLang((s) => s.lang)
+  const lang = useLang((s) => s.lang);
 
   const { t } = useTranslation(lang, 'handicraft');
 
@@ -97,38 +96,36 @@ export default function HandicraftForm() {
   // }));
 
   return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex w-full flex-col items-center font-barlow"
+    >
+      <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
+        <div className="grid w-full grid-cols-1 gap-x-3 md:grid-cols-2">
+          <PersonalInfoInput
+            register={register}
+            errors={errors}
+            nameInputs={{
+              firstName: 'first_name',
+              lastName: 'last_name',
+              email: '',
+              phoneNumber: '',
+              jobPosition: ''
+            }}
+            noLabel={true}
+          />
+        </div>
 
+        <div className="w-full text-center md:w-auto">
+          <button className="flex items-center mx-auto px-6 py-3 font-barlow rounded-xl font-bold text-lg text-white bg-black hover:bg-primary transition-all">
+            {t('button')}
 
-    <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col items-center font-barlow">
-    <div className="my-4 grid w-full grid-cols-1 md:flex md:w-2/5 md:flex-col md:items-center lg:w-2/5">
-      <div className='grid w-full grid-cols-1 gap-x-3 md:grid-cols-2'>
-      <PersonalInfoInput
-        register={register}
-        errors={errors}
-        nameInputs={{
-          firstName: 'first_name',
-          lastName: 'last_name',
-          email: '',
-          phoneNumber: '',
-          jobPosition:''
-        }}
-        noLabel={true}
-      />
+            <ArrowRight />
+          </button>
+          {/* <ButtonRefactor type="submit" text="Submit" /> */}
+        </div>
+        <NotificationSendForm />
       </div>
-
-      <div className="w-full text-center md:w-auto">
-        <button
-          className='flex items-center mx-auto px-6 py-3 font-barlow rounded-xl font-bold text-lg text-white bg-black hover:bg-primary transition-all'
-        >
-          {t('button')}
-
-          <ArrowRight/>
-
-        </button>
-        {/* <ButtonRefactor type="submit" text="Submit" /> */}
-      </div>
-      <NotificationSendForm />
-    </div>
     </form>
   );
 }
