@@ -30,25 +30,25 @@ export default function AboutUsLandaHolding() {
     //   objectFit="cover"
     // />
     // </div>
-    <div className='flex-col w-full'>
-    <div className="flex flex-col items-start justify-between md:px-28 md:py-10 md:flex-row md:gap-8">
-      <div className="space-y-4 p-10 md:pt-8 text-black md:px-0">
-        <p className="rtl:font-EBGaramond ltr:font-gilda text-2xl md:text-4xl text-black md:w-[600px]">
+    <div className='flex-col w-full mt-24 '>
+    <div className="flex flex-col-reverse items-center justify-between md:flex-row md:gap-8">
+      <div className="md:pt-5 font-gilda text-black md:px-0 md:w-[50%]">
+        <p className=" text-2xl md:text-4xl font-bold text-black ">
           {t('aboutLandaHolding', { returnObjects: true })[0].title}
         </p>
-        <p className="mb-20 ml-0 mt-4 text-justify font-barlow text-medium tracking-wide md:pt-28 lg:w-[500px]">
+        <p className="mb-20 mt-4 text-[16px] md:text-lg text-justify md:pt-20 ">
           {t('aboutLandaHolding', { returnObjects: true })[0].text}
         </p>
       </div>
-      <div className='relative object-contain mx-auto rounded-md h-48 w-96  md:w-[761px] md:h-[419px] md:mt-8 rtl:md:mr-32 md:ltr:ml-32'>
-      <Image
-        className="brightness-95 contrast-[1.15] drop-shadow-md md:rounded-xl"
-        loading="lazy"
-        layout='fill'
-        src="/static/images/About/team.jpg"
-        alt="Landa Team"
-        objectFit="cover"
-      />
+      <div className='relative object-contain mx-auto h-48 w-full md:w-[46%] md:h-[340px] mb-6 md:mb-0'>
+        <Image
+          className="md:rounded-xl"
+          loading="lazy"
+          layout='fill'
+          src="/static/images/About/team.jpg"
+          alt="Landa Team"
+          objectFit="cover"
+        />
       </div>
     </div>
     <div className='flex flex-col md:flex-row items-start justify-between pb-24 md:mt-16'>
@@ -69,17 +69,8 @@ export default function AboutUsLandaHolding() {
             <p>{t('TheStoryOfLanda', { returnObjects: true })[0].text}</p>
             <div className="flex flex-col"></div>
           </div>
-          <div className="mt-10 order-first px-10 md:px-0 md:ltr:pl-12 md:rtl:pr-12 md:order-last md:w-[600px] md:pt-0">
-            <span className="mb-5 mt-9 font-gilda text-4xl text-bold">
-              {t('TheStoryOfLanda', { returnObjects: true })[0].title}
-            </span>
-            <div className="flex flex-col space-y-4 font-barlow text-[#000] pt-24 text-justify">
-              <p>{t('TheStoryOfLanda', { returnObjects: true })[0].text}</p>
-              <div className="flex flex-col"></div>
-            </div>
-          </div>
-    </div>
-    </div>
+        </div>
+      </div>
     </div>
   );
 }

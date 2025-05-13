@@ -131,6 +131,11 @@
       "name": "FOROUGH",
       "logo": "9.png",
       "link": "https://landaholding.com/acceleration"
+    },
+    {
+      "name": "IR IMMIGRATION",
+      "logo": "2.png",
+      "link": "https://irimmigration.ca/"
     }
   ],
   "professionals": "professionals",
@@ -138,7 +143,7 @@
   "boardMemebers": [
 
     {
-      "image": "/static/images/our-team/Personals/mohandesj.png",
+      "image": "/static/images/our-team/Personals/a52.jpg",
       "name": "Morteza Jafari",
       "position": "MOB",
       "links": {
@@ -150,7 +155,7 @@
       }
     },
     {
-      "image": "/static/images/our-team/Personals/drimage.jpg",      
+      "image": "/static/images/our-team/Personals/rasoul.jpg",      
       "name": "Rasoul Moradimehr",
       "position": " Co Founder & COB",
       "links": {
@@ -163,7 +168,7 @@
     },
 
     {
-      "image": "/static/images/our-team/Personals/dr2image.jpg",     
+      "image": "/static/images/our-team/Personals/hadi.png",     
       "name": "Hadi Hasanpour",
       "position": "Co Founder & CEO",
       "links": {
