@@ -143,13 +143,6 @@
             "category": "مهاجرت"
         },
         {
-            "image": "/static/images/our-team/Personals/mahsa-gh.JPG",
-            "position": "تحقیق و توسعه",
-            "name": "مهسا قربانی",
-            "linkedIn": "https://www.linkedin.com/in/mahsa-ghorbani-b2b8b075/",
-            "category": "تحقیق و توسعه"
-        },
-        {
             "image": "/static/images/our-team/Personals/farnaz.JPG",
             "position": "تولید محتوا",
             "name": "فرناز ترکی",
@@ -169,13 +162,6 @@
             "name": "متین جانقربانی",
             "linkedIn": "",
             "category": "برنامه نویسان"
-        },
-        {
-            "image": "/static/images/our-team/Personals/shamim.jpg",
-            "position": "موشن گرافیک",
-            "name": "شمیم بهشتی",
-            "linkedIn": "https://www.linkedin.com/in/shamim-beheshti-7525152b2/",
-            "category": "طراحان"
         },
         {
           "image": "/static/images/our-team/Personals/sadeq.jpg",
@@ -211,14 +197,7 @@
             "name": "پرستو ثنایی فر",
             "linkedIn": "",
             "category":  "تحقیق و توسعه"
-        },
-        {
-            "image": "/static/images/our-team/Personals/amitis.jpg",
-            "position": "برنامه نویس بک اند",
-            "name": "آمیتیس هاشمی",
-            "linkedIn": "",
-            "category":  "برنامه نویسان"
-          }
+        }
     ],
     "roles": [
         "همه",

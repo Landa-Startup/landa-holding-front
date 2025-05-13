@@ -130,13 +130,18 @@
       "name": "فروغ",
       "logo": "9.png",
       "link": "https://landaholding.com/acceleration"
+    },
+    {
+      "name": "آی آر ایمیگریشن",
+      "logo": "2.png",
+      "link": "https://irimmigration.ca/"
     }
   ],
   "professionals": "موسسین",
   "boardOfDirectors": "هیئت مدیره",
   "boardMemebers": [
     {
-      "image": "/static/images/our-team/Personals/mohandesj.png",
+      "image": "/static/images/our-team/Personals/a52.jpg",
       "name": "مرتضی جعفری",
       "position": "رئیس هیئت مدیره",
       "links": {
@@ -148,7 +153,7 @@
       }
     },
     {
-      "image": "/static/images/our-team/Personals/drimage.jpg",
+      "image": "/static/images/our-team/Personals/rasoul.jpg",
       "name": "رسول مرادی مهر",
       "position": "عضو هیئت مدیره",
       "links": {
@@ -161,7 +166,7 @@
     },
  
     {
-      "image": "/static/images/our-team/Personals/dr2image.jpg",
+      "image": "/static/images/our-team/Personals/hadi.png",
       "name": "هادی حسن پور",
       "position": "مدیرعامل",
       "links": {

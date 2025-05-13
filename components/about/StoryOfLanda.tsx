@@ -14,7 +14,8 @@ export default function StoryOfLanda() {
       {/* top */}
       <div className="flex flex-col justify-between gap-5 pb-14  text-black sm:py-14 lg:flex-row">
         <div className="flex flex-col w-full md:w-[48%] md:text-justify">
-          <span className="ltr:font-gilda rtl:font-EBGaramond text-bold text-3xl mb-10">
+
+          <span className="font-gilda text-2xl md:text-4xl font-bold mb-0 md:mb-10 text-black">
             {t('LANDAStartups', { returnObjects: true })[0].title}
           </span>
           <ul className="mt-5 flex flex-col space-y-3 font-barlow">
@@ -60,11 +61,11 @@ export default function StoryOfLanda() {
           </ul>
         </div>
         {/* top - left */}
-        <div className="flex flex-col text-justify md:w-full lg:w-1/2 xl:w-1/2 ltr:md:pl-48">
-          <div className="relative hidden md:block h-[310px] w-screen md:h-[640px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
-            <div className="h-[200px]">
+        <div className="flex flex-col text-justify w-full md:w-[48%]">
+          <div className="relative hidden md:block h-[310px] w-screen md:h-[740px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
+            <div className='h-[200px]'>            
               <Image
-                className="h-[1200px] hidden md:block w-full md:pr-16"
+                className="h-[1200px] hidden md:block w-full"
                 src="/static/images/About/story/aboutus.png"
                 alt="story of landa"
                 layout="fill"
@@ -72,7 +73,8 @@ export default function StoryOfLanda() {
               />
             </div>
           </div>
-
+        </div>
+      </div>
           {/* <div className="mt-4 order-first px-10 md:px-0 md:pl-0 md:order-last">
             <span className="mb-5 mt-9 font-gilda text-3xl text-primary">
               {t('TheStoryOfLanda', { returnObjects: true })[0].title}
@@ -87,33 +89,23 @@ export default function StoryOfLanda() {
             {t('VISIONMission', { returnObjects: true }).title}
           </div>
 
-          <div className=" flex justify-between gap-8 ">
-            <div className="relative hidden md:block h-[310px] w-screen md:h-[310px] md:w-[48%]">
-              <Image
-                className="hidden md:block object-cover w-full rounded-xl"
-                src="/static/images/About/story/1.png"
-                alt="story of landa"
-                layout="fill"
-              />
-            </div>
-          </div>
-          <div className="ltr:font-gilda rtl:font-EBGaramond text-3xl pl-14 rtl:pr-14 md:text-4xl md:pl-32 md:rtl:pr-32 md:pt-12">
-            {t('VISIONMission', { returnObjects: true }).title}
-          </div>
-          <div className="md:px-32 px-14 grid grid-cols-2 md:pb-12">
-            <div className="relative hidden md:block h-[310px] w-screen md:h-[310px] md:w-[661px]">
-              <Image
-                className="hidden md:block object-cover w-full rounded-xl"
-                src="/static/images/About/story/1.png"
-                alt="story of landa"
-                layout="fill"
-              />
-            </div>
-            <div className=" w-[300px] md:w-[800px] md:pt-10 text-justify">
-              {t('VISIONMission', { returnObjects: true }).text}
-            </div>
-            <div></div>
-          </div>
+      <div className=' flex justify-between gap-8 '>
+        <div className='relative hidden md:block h-[310px] w-screen md:h-[310px] md:w-[48%]'>
+          <Image
+            className="hidden md:block object-cover w-full rounded-xl"
+            src="/static/images/About/story/1.png"
+            alt="story of landa"
+            layout="fill"
+          />
+        </div>
+        
+        <div className='text-lg w-full md:w-[48%] text-justify'>
+          {t('VISIONMission', { returnObjects: true }).text}
+        </div>
+      </div>
+
+
+
 
           {/* <div className='md:px-32'>
        <div className='md:text-4xl font-gilda md:mb-16 gri'>
@@ -165,9 +157,11 @@ export default function StoryOfLanda() {
           </div>
         </div>
       </div> */}
-          {/* down */}
-        </div>
-      </div>
+      {/* down */}
+
+
+
+
     </div>
   );
 }
