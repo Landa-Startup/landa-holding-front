@@ -45,7 +45,7 @@ export default function AboutUsLandaHolding() {
           className="md:rounded-xl"
           loading="lazy"
           layout='fill'
-          src="/static/images/About/team.jpg"
+          src="/static/images/About/team.webp"
           alt="Landa Team"
           objectFit="cover"
         />
@@ -55,7 +55,7 @@ export default function AboutUsLandaHolding() {
       <div className="relative h-48 w-full md:h-[340px] md:w-[46%]"> 
         <Image
           className="object-cover w-full rounded-xl"
-          src="/static/images/About/story/1.png"
+          src="/static/images/About/story/1.webp"
           alt="story of landa"
           layout="fill"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

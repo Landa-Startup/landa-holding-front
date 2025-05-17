@@ -36,20 +36,20 @@
     
       "cardData2": [
         {
-          "image": "/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png",
+          "image": "/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.webp",
           "title": "Benefits of Spa Treatments",
           "type": "Acceleration",
           "date": "apr 27"
         },
         {
           "title": "Fitness Center",
-          "image": "/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png",
+          "image": "/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.webp",
           "type": "Investment",
           "date": "apr 27"
         },
         {
           "title": "Benefits of Spa Treatments",
-          "image": "/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png",
+          "image": "/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.webp",
           "type": "Investment",
           "date": "apr 27"
         }
@@ -131,7 +131,7 @@
     "cardsData":
     [
       {
-        "image": "/static/images/our-team/Personals/a1.png",
+        "image": "/static/images/our-team/Personals/a1.webp",
         "name": "Rasoul Moradimehr",
         "position": "Founder and CEO",
         "links": {
@@ -143,7 +143,7 @@
         }
       },
       {
-        "image": "/static/images/about/mjafari.jpg",
+        "image": "/static/images/about/mjafari.webp",
         "name": "MORTEZA JAFARI",
         "position": "Director Of Public Relations",
         "links": {
@@ -155,7 +155,7 @@
         }
       },
       {
-        "image": "/static/images/our-team/Personals/a2.png",
+        "image": "/static/images/our-team/Personals/a2.webp",
         "name": "Hadi Hasanpour",
         "position": "COTB",
         "links": {

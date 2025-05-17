@@ -9,21 +9,21 @@ const cardData2: SportsInterface[] = [
   {
     title: 'Benefits of Spa Treatments',
     image:
-      '/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png',
+      '/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.webp',
     type: 'Acceleration',
     date: 'apr 27'
   },
   {
     title: 'Fitness Center',
     image:
-      '/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png',
+      '/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.webp',
     type: 'Investment',
     date: 'apr 27'
   },
   {
     title: 'Benefits of Spa Treatments',
     image:
-      '/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png',
+      '/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.webp',
     type: 'Investment',
     date: 'apr 27'
   }

@@ -5,7 +5,7 @@ export default function PromotionalVideo() {
     <div
       style={{
         backgroundImage:
-          "url('/static/images/Home/Promotional-Video/blurred-co-working.png')",
+          "url('/static/images/Home/Promotional-Video/blurred-co-working.webp')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         filter: 'brightness(0.8)',

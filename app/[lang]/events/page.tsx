@@ -15,7 +15,7 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
 
   return (
     <div>
-      <Banner image="/static/images/EventsBanner.png" title={t('banner')} lang={lang} />
+      <Banner image="/static/images/EventsBanner.webp" title={t('banner')} lang={lang} />
       <EventCardsContainer />
     </div>
   );

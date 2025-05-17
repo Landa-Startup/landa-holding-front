@@ -35,20 +35,20 @@
   ],
   "cardData2": [
     {
-      "image": "/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.png",
+      "image": "/static/images/Home/Magazine/annie-spratt-hWJsOnaWTqs-unsplash 1.webp",
       "title": "فواید درمان‌های اسپا",
       "type": "شتابدهنده",
       "date": "آوریل ۲۷"
     },
     {
       "title": "مرکز تناسب اندام",
-      "image": "/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.png",
+      "image": "/static/images/Home/Magazine/remy_loz-3S0INpfREQc-unsplash (1) 1.webp",
       "type": "سرمایه‌گذاری",
       "date": "آوریل ۲۷"
     },
     {
       "title": "فواید درمان‌های اسپا",
-      "image": "/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.png",
+      "image": "/static/images/Home/Magazine/emile-perron-xrVDYZRGdw4-unsplash 1.webp",
       "type": "سرمایه‌گذاری",
       "date": "آوریل ۲۷"
     }
@@ -125,7 +125,7 @@
   ],
   "cardData": [
     {
-      "image": "/static/images/our-team/Personals/a1.png",
+      "image": "/static/images/our-team/Personals/a1.webp",
       "name": "رسول مرادی مهر",
       "position": " موسس و مدیر عامل",
       "links": {
@@ -149,7 +149,7 @@
       }
     },
     {
-      "image": "/static/images/our-team/Personals/a2.png",
+      "image": "/static/images/our-team/Personals/a2.webp",
       "name": "هادی حسن پور",
       "position": "رئیس هیئت مدیره",
       "links": {

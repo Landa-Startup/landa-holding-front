@@ -17,14 +17,14 @@ export default async function StartUp({
     <div>
       <div className='hidden md:inline'>
         <Banner
-          image="/static/images/Startup/startup-banner.jpg"
+          image="/static/images/Startup/startup-banner.webp"
           title={t('banner')}
           lang={lang}
         />
       </div>
       <div className='inline md:hidden'>
         <Banner
-          image="/static/images/Startup/startup-banner.jpg"
+          image="/static/images/Startup/startup-banner.webp"
           title={t('banner')}
           lang={lang}
         />

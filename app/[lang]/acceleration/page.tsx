@@ -20,7 +20,7 @@ export default async function Page({
     <div>
       <div className='hidden md:inline'>
         <Banner
-          image="/static/images/acceleration/accleration-hero.jpg"
+          image="/static/images/acceleration/accleration-hero.webp"
           title={t('banner')}
           lang={lang}
         />

@@ -37,7 +37,7 @@ export default function HomeLandaAcademy() {
           <Image
             loading="lazy"
             className="rounded-lg object-cover"
-            src={"/static/images/Home/Academy/academy2.png"}
+            src={"/static/images/Home/Academy/academy2.webp"}
             alt={"Academy"}
             fill
             sizes="(max-width: 768px) 110vw, (max-width: 1200px) 100vw, 33vw"
@@ -49,7 +49,7 @@ export default function HomeLandaAcademy() {
           <Image
             loading="lazy"
             className="rounded-lg object-cover"
-            src={"/static/images/Home main/6.jpg"}
+            src={"/static/images/Home main/6.webp"}
             alt={"Academy"}
             fill
             sizes="(max-width: 768px) 110vw, (max-width: 1200px) 100vw, 33vw"

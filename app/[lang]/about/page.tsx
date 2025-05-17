@@ -25,14 +25,14 @@ export default async function Page({
     <div>
       <div className='hidden md:inline'>
         <Banner
-          image="/static/images/group.png"
+          image="/static/images/group.webp"
           title={t('banner')}
           lang={lang}
         />
       </div>
       <div className='inline md:hidden'>
         <Banner
-          image="/static/images/group-mobile.png"
+          image="/static/images/group-mobile.webp"
           title={t('banner')}
           lang={lang}
         />
