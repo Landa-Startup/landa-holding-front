@@ -36,7 +36,7 @@ export default async function Page({
         titles={[t('Investment'), t('Acceleration'), t('Academy')]}
         title={t('LandaHolding')}
         subTitle={t('HeroSubtitle')}
-        backgroundImage="Hero.png"
+        backgroundImage="Hero.webp"
         // leftImage="Landa.svg"
         showButton={false}
       />

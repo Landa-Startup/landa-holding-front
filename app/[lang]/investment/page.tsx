@@ -30,7 +30,7 @@ export default async function Page({
       {/* TODO: we have multiple hero with same styles. make one component for all */}
       <div className='hidden md:inline'>
         <Banner
-          image="/static/images/investment/investment-hero.jpg"
+          image="/static/images/investment/investment-hero.webp"
           title={t('banner')}
           lang={lang}
         />

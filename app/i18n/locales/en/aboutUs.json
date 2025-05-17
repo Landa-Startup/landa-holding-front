@@ -143,7 +143,7 @@
   "boardMemebers": [
 
     {
-      "image": "/static/images/our-team/Personals/a52.jpg",
+      "image": "/static/images/our-team/Personals/a52.webp",
       "name": "Morteza Jafari",
       "position": "MOB",
       "links": {
@@ -155,7 +155,7 @@
       }
     },
     {
-      "image": "/static/images/our-team/Personals/rasoul.jpg",      
+      "image": "/static/images/our-team/Personals/rasoul.webp",      
       "name": "Rasoul Moradimehr",
       "position": " Co Founder & COB",
       "links": {
@@ -168,7 +168,7 @@
     },
 
     {
-      "image": "/static/images/our-team/Personals/hadi.png",     
+      "image": "/static/images/our-team/Personals/hadi.webp",     
       "name": "Hadi Hasanpour",
       "position": "Co Founder & CEO",
       "links": {

@@ -71,7 +71,7 @@ export default async function Page({
         <div className="relative h-[294px] md:h-[360px] md:w-[765px]">
           <Image
             className="object-cover rounded-xl w-full"
-            src="/static/images/handicrafts1.jpg"
+            src="/static/images/handicrafts1.webp"
             alt="handicraft"
             layout="fill"
           />
