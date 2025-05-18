@@ -23,7 +23,9 @@ export default async function ApplyFormPage({
         title={t('workWithUS', { returnObjects: true })['BannerTitle']}
         lang={lang}
       />
-      <WorkWithUs />
+      <div className="max-w-[1600px] mx-auto">
+        <WorkWithUs />
+      </div>
     </div>
   );
 }

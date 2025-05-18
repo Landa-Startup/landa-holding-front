@@ -46,7 +46,7 @@ export default function Profile({ slug }: { slug: string }) {
   console.log(data);
 
   return (
-    <div className="flex h-screen justify-center w-full py-24 md:px-40">
+    <div className="max-w-[1600px] mx-auto flex h-screen justify-center w-full py-24 md:px-40">
       <section className="flex flex-col items-center justify-between w-full px-4 md:w-[60%]">
         {/* top */}
         <div className="flex flex-col items-center">
@@ -68,7 +68,7 @@ export default function Profile({ slug }: { slug: string }) {
         {/* middle */}
         <div className="w-full">
           <ul className="w-full">
-            {data?.websites.map((website: any, index: number) => {
+            {data?.websites?.map((website: any, index: number) => {
               return (
                 <Link
                   key={index}

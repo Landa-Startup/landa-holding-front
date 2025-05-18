@@ -158,7 +158,7 @@ export default function ContactUsForm() {
           </div>
         </div>
 
-        <div className="md:pl-44 md:rtl:pr-28">
+        <div className="w-60 mx-auto mt-6">
           <ButtonRefactor 
             type='submit'
             text={send ? t("sendingButton") : t("sendButton")}

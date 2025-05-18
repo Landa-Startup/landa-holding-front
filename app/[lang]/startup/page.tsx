@@ -29,7 +29,7 @@ export default async function StartUp({
           lang={lang}
         />
       </div>
-      <div className='px-8 md:px-24 font-gilda'>
+      <div className='max-w-[1600px] mx-auto px-8 md:px-24 font-gilda'>
         <Differences />
         <NatureOfStartups />
         <Gateway />
