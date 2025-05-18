@@ -26,10 +26,10 @@ export default function StartupsArrowLeft() {
 // >
 //   <path
 //     stroke="#FF8A65"
-//     stroke-linecap="round"
-//     stroke-linejoin="round"
+//     strokeLinecap="round"
+//     strokeLinejoin="round"
 //     stroke-miterlimit="10"
-//     stroke-width="1.5"
+//     strokeWidth="1.5"
 //     d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83"
 //   ></path>
 // </svg>;
