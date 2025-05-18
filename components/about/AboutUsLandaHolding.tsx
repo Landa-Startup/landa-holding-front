@@ -30,44 +30,43 @@ export default function AboutUsLandaHolding() {
     //   objectFit="cover"
     // />
     // </div>
-    <div className='flex-col w-full mt-24 '>
-    <div className="flex flex-col-reverse items-center justify-between md:flex-row md:gap-8">
-      <div className="md:pt-5 font-gilda text-black md:px-0 md:w-[50%]">
-        <p className=" text-2xl md:text-4xl font-bold text-black ">
-          {t('aboutLandaHolding', { returnObjects: true })[0].title}
-        </p>
-        <p className="mb-20 mt-4 text-[16px] md:text-lg text-justify md:pt-20 ">
-          {t('aboutLandaHolding', { returnObjects: true })[0].text}
-        </p>
+    <div className="flex-col w-full mt-24 mb-20">
+      <div className="flex flex-col-reverse items-stretch justify-between md:flex-row md:gap-8 mb-10 md:mb-0">
+        <div className=" flex flex-col justify-between font-gilda text-black md:px-0 md:w-[50%]">
+          <p className=" text-2xl md:text-4xl font-bold text-black mb-2 md:mb-0">
+            {t('aboutLandaHolding', { returnObjects: true })[0].title}
+          </p>
+          <p className="text-[16px] md:text-lg text-justify">
+            {t('aboutLandaHolding', { returnObjects: true })[0].text}
+          </p>
+        </div>
+        <div className="relative object-contain mx-auto h-48 w-full md:w-[46%] md:h-[340px] mb-6 md:mb-0">
+          <Image
+            className="rounded-xl"
+            loading="lazy"
+            layout="fill"
+            src="/static/images/About/team.webp"
+            alt="Landa Team"
+            objectFit="cover"
+          />
+        </div>
       </div>
-      <div className='relative object-contain mx-auto h-48 w-full md:w-[46%] md:h-[340px] mb-6 md:mb-0'>
-        <Image
-          className="md:rounded-xl"
-          loading="lazy"
-          layout='fill'
-          src="/static/images/About/team.webp"
-          alt="Landa Team"
-          objectFit="cover"
-        />
-      </div>
-    </div>
-    <div className='flex flex-col md:flex-row items-start justify-between pb-24 md:mt-16'>
-      <div className="relative h-48 w-full md:h-[340px] md:w-[46%]"> 
-        <Image
-          className="object-cover w-full rounded-xl"
-          src="/static/images/About/story/1.webp"
-          alt="story of landa"
-          layout="fill"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
-      <div className="mt-10 font-gilda md:px-0 md:rtl:pr-12 md:order-last md:w-[50%] md:pt-0">
-          <span className="mb-5 mt-9 text-2xl md:text-4xl font-bold ">
+      <div className="flex flex-col md:flex-row items-stretch justify-between md:my-16">
+        <div className="relative h-48 w-full md:h-[340px] md:w-[46%] mb-6 md:mb-0">
+          <Image
+            className="object-cover w-full rounded-xl"
+            src="/static/images/About/story/1.webp"
+            alt="story of landa"
+            layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        <div className="flex flex-col justify-between font-gilda md:px-0 md:rtl:pr-12 md:order-last md:w-[50%] md:pt-0">
+          <span className=" text-2xl md:text-4xl font-bold mb-2 md:mb-0">
             {t('TheStoryOfLanda', { returnObjects: true })[0].title}
           </span>
-          <div className="flex flex-col text-lg space-y-4 text-justify text-[#000] md:pt-24">
+          <div className="flex flex-col text-[16px] md:text-lg text-justify text-[#000]">
             <p>{t('TheStoryOfLanda', { returnObjects: true })[0].text}</p>
-            <div className="flex flex-col"></div>
           </div>
         </div>
       </div>

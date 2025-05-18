@@ -25,7 +25,10 @@ export default async function InvestorRegistrationPage({
         title={t('banner')}
         lang={lang}
       />
+      <div className='max-w-[1600px] mx-auto'>
+
       <InvestorRegistrationForm />
+      </div>
     </div>
   );
 }

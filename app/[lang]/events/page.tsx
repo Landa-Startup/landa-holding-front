@@ -6,17 +6,26 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Landa Holding | Events',
   description:
-    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.',
+    'Welcome to Landa Holding, where innovation meets excellence. Explore our diverse portfolio, discover our commitment to sustainable growth, and join us on a journey towards a brighter future.'
 };
 
-export default async function Page({ params: { lang } }: { params: { lang: string } }) {
-
-  const { t } = await useTranslation(lang, "events")
+export default async function Page({
+  params: { lang }
+}: {
+  params: { lang: string };
+}) {
+  const { t } = await useTranslation(lang, 'events');
 
   return (
     <div>
-      <Banner image="/static/images/EventsBanner.webp" title={t('banner')} lang={lang} />
-      <EventCardsContainer />
+      <Banner
+        image="/static/images/EventsBanner.webp"
+        title={t('banner')}
+        lang={lang}
+      />
+      <div className="max-w-[1600px] mx-auto">
+        <EventCardsContainer />
+      </div>
     </div>
   );
 }

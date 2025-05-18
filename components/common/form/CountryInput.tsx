@@ -27,6 +27,8 @@ export default function CountryInput({
   const [selectedCountry, setSelectedCountry] = useState('');
 
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    console.log(event.target.value);
+    
     setSelectedCountry(event.target.value);
   };
 

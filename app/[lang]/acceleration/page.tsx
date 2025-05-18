@@ -18,31 +18,33 @@ export default async function Page({
 
   return (
     <div>
-      <div className='hidden md:inline'>
+      <div className="hidden md:inline">
         <Banner
           image="/static/images/acceleration/accleration-hero.webp"
           title={t('banner')}
           lang={lang}
         />
       </div>
-      <div className='inline md:hidden'>
+      <div className="inline md:hidden">
         <Banner
           image="/static/images/acceleration/accleration-heromob.jpg"
           title={t('banner')}
           lang={lang}
         />
       </div>
-      
+
       {/* TODO: Is it better to use i18n in components instead of pass it as props? */}
-      <div className="mt-28 flex justify-between gap-8 px-10 font-gilda md:px-28 md:py-16">
-        <div className=' w-full  md:w-[47%]'> 
+      <div className="max-w-[1600px] mx-auto mt-28 flex justify-between gap-8 px-10 font-gilda md:px-28 md:py-16">
+        <div className=" w-full  md:w-[47%]">
           <span className={` text-3xl font-bold leading-tight md:text-5xl`}>
             {t('LandaAccelerator', { returnObjects: true })[0].title}
           </span>
-          <span className={`block text-xl leading-tight md:text-3xl`} >
+          <span className={`block text-xl leading-tight md:text-3xl`}>
             {t('LandaAccelerator', { returnObjects: true })[0].subTitle}
           </span>
-          <p className={`pt-8 text-justify font-barlow leading-8 ltr:text-lg rtl:text-base`} >
+          <p
+            className={`pt-8 text-justify font-barlow leading-8 ltr:text-lg rtl:text-base`}
+          >
             {t('LandaAccelerator', { returnObjects: true })[0].text}
           </p>
         </div>
@@ -57,14 +59,10 @@ export default async function Page({
         </div>
       </div>
 
-
-
-
-
-
+      <div className="max-w-[1600px] mx-auto">
         {/* TODO: make better names like ForughAccelerator */}
         <AccelerationCard
-          addedClass=" py-28"
+          addedClass="py-28"
           title={t('FORUGHACCELERATOR', { returnObjects: true })[0].title}
           slogan={t('FORUGHACCELERATOR', { returnObjects: true })[0].subTitle}
           imageClass={`rtl:text-right ltr:text-left top-11 pl-12 w-[92px] h-[44px] flex flex-row`}
@@ -72,7 +70,6 @@ export default async function Page({
           textDown={t('FORUGHACCELERATOR', { returnObjects: true })[0].textDown}
           secondImageSrc="/static/images/acceleration/forogh.png"
           itemsList={t('FORUGHACCELERATOR', { returnObjects: true })[0].items}
-          
         />
         <AccelerationCard
           addedClass=" pb-28"
@@ -87,8 +84,9 @@ export default async function Page({
           }
           secondImageSrc="/static/images/acceleration/40972929a38710f62895f472ac8a9d67.png"
         />
+      </div>
 
-        {/* <div className={`flex flex-col ${t('lng') === 'fa' && 'items-center'}`}>
+      {/* <div className={`flex flex-col ${t('lng') === 'fa' && 'items-center'}`}>
           <span className="mt-12 font-gilda text-3xl text-primary">
             {t('LandaAcceleratorServices', { returnObjects: true })[0].title}
           </span>
@@ -109,8 +107,7 @@ export default async function Page({
           bgColor="Primary"
           lang={lang}
         /> */}
-        {/* <ButtonRefactor text={t('Register')} href="/StartupsForm" /> */}
-
+      {/* <ButtonRefactor text={t('Register')} href="/StartupsForm" /> */}
     </div>
   );
 }

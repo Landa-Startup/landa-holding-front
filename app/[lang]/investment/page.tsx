@@ -39,7 +39,8 @@ export default async function Page({
         />
       </div>
 
-      <div className=" flex justify-between mx-10 md:mx-28 my-28 gap-5 font-gilda ">
+
+      <div className="max-w-[1600px] mx-auto flex justify-between my-28 gap-5 font-gilda ">
         <div className="w-full md:w-[45%]">
           <div className="flex flex-col">
             <span className="text-2xl md:text-4xl mb-8 font-bold">
@@ -83,8 +84,8 @@ export default async function Page({
       {/* <ButtonRefactor text={t('buttonTitle')} />
         </div>
       </div> */}
-      <div className="px-8 py-10 md:px-28 font-gilda">
-        <div className="flex justify-between items-center gap-6">
+      <div className="max-w-[1600px] mx-auto py-10 font-gilda">
+        <div className='flex justify-between items-center gap-6'>
           <div className="relative w-[27rem] h-[26rem] rtl:h-[22rem] hidden md:inline">
             <Image
               className="object-contain rounded-lg"

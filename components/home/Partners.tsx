@@ -4,6 +4,7 @@ import PartnersStartupCard from './PartnersStartupCard';
 import { useTranslation } from 'app/i18n/client';
 import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
+import ButtonRefactor from '../common/ButtonRefactor';
 
 export default function Partners() {
 
@@ -84,8 +85,8 @@ export default function Partners() {
   };
 
   return (
-    <div className="my-6 flex flex-col items-center gap-12">
-      <span className="text-3xl text-primary rtl:font-EBGaramond ltr:font-gilda md:text-4xl font-condensed">
+    <div className="my-14 flex flex-col items-center ">
+      <span className="text-3xl text-primary rtl:font-EBGaramond ltr:font-gilda md:text-4xl font-condensed mb-12">
         {t('partners', { returnObjects: true }).title}
       </span>
       <div
@@ -106,12 +107,14 @@ export default function Partners() {
           />
         ))}
       </div>
-      {/* <ButtonRefactor text="Join Us" type="link" href="/partner-membership" /> */}
-      <Button
+      <div className='w-60 mt-8'>
+        <ButtonRefactor text="Join Us" type="link" href="/partner-membership" />
+      </div>
+      {/* <Button
         goto="/partner-membership"
         size="visit"
         bgColor="Primary"
-      />
+      /> */}
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default async function Page({
           lang={lang}
         />
       </div>
-      <div className=" my-14 flex flex-col justify-center gap-8 md:mx-24">
+      <div className="my-14 flex flex-col justify-center gap-8 md:mx-24">
         <div className="relative flex flex-col md:flex-row items-center justify-between my-16">
           <div className=" relative w-[50%] mb-6 md:mb-0 md:w-[20%]">
             <Image

@@ -41,7 +41,7 @@ export default async function Page({
         showButton={false}
       />
 
-      <section className='px-5 md:px-20'>
+      <section className='max-w-[1600px] mx-auto px-5 md:px-20'>
         <HomeCardsContainer />
         <LandaHoldingBlack />
         <HomeUpComingStartups />

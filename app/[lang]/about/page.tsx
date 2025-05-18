@@ -38,8 +38,8 @@ export default async function Page({
         />
       </div>
       
-      <div className='px-8 md:px-24'>
-        <AboutUsLandaHolding />
+      <div className='px-8 md:px-24 max-w-[1600px] mx-auto'>
+        <AboutUsLandaHolding   />
         <SubsidiaryCompanies />
         <StoryOfLanda />
         <KeyDifferentiating />

@@ -23,7 +23,9 @@ export default async function EntrepreneursPage({
         title={t('banner')}
         lang={lang}
       />
-      <EntrepreneursForm />
+      <div className="max-w-[1600px] mx-auto">
+        <EntrepreneursForm />
+      </div>
     </div>
   );
 }

@@ -65,7 +65,7 @@ export default function StoryOfLanda() {
           <div className="relative hidden md:block h-[310px] w-screen md:h-[740px] md:w-[300px] lg:w-[449px] xl:w-[589px] ">
             <div className='h-[200px]'>            
               <Image
-                className="h-[1200px] hidden md:block w-full"
+                className="h-[1200px] hidden md:block w-full object-cover rounded-xl"
                 src="/static/images/About/story/aboutus.webp"
                 alt="story of landa"
                 layout="fill"

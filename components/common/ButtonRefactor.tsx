@@ -45,16 +45,18 @@ export default function ButtonRefactor({
     case 'reset':
       return (
         // <Link href='https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpDtls.html?corpId=12980266'>
-        <div className="group relative w-full overflow-hidden order-first md:order-last">
+        <div className="group relative w-full overflow-hidden">
           <button
             type={type}
-            className="flex h-12 md:h-[58px] w-full px-8 flex-wrap content-center items-center justify-center bg-[#AA8453] text-white"
+            className={`bg-${
+              bgColor ? bgColor : 'black'
+            } delay-50 flex h-[50px] w-full flex-wrap content-center justify-center rounded-xl p-2 text-white transition duration-150 ease-in-out hover:bg-primary`}
           >
-            <div className="z-10 flex items-center gap-2 rtl:flex-row-reverse text-base md:text-2xl font-semibold">
+            <div className="z-10 flex flex-row rtl:flex-row-reverse items-center gap-2">
               <span>{text}</span>
             </div>
           </button>
-          <span className="absolute inset-0 -translate-x-full rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span>
+          <span className="text-md"></span>
         </div>
         // </Link>
       );
