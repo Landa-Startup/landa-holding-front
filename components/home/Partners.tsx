@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from 'react';
 import PartnersStartupCard from './PartnersStartupCard';
 import { useTranslation } from 'app/i18n/client';
-import Button from '../common/Button';
 import { useLang } from 'stores/langStore';
 import ButtonRefactor from '../common/ButtonRefactor';
 
