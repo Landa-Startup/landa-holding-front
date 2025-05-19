@@ -271,15 +271,15 @@
     "cards": [
       {
         "image": "/static/images/Home/upcomming-Sartup/handicraft.png",
-        "subTitle": "LANDA CRAFT",
+        "subTitle": "HANDI CRAFT",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build a safe communication bridge between makers and purchasers.",
         "goto": "https://craft.landaholding.com/",
         "buttonText" : "Register",
         "gene": false
       },
       {
-        "image": "/static/images/Home/upcomming-Sartup/otism.png",
-        "subTitle": "LANDA OTISM",
+        "image": "/static/images/Home/upcomming-Sartup/Autilab-logo.png",
+        "subTitle": "AUTILAB",
         "text": "Otism is an art movement that highlights nature’s beauty and the human form through organic shapes, earthy tones, and fluid lines. Emerging in the 21st century, it evokes tranquility and connection, inviting viewers to reflect on their bond with the environment.",
         "goto": "#",
         "buttonText" : "Register",
@@ -287,7 +287,7 @@
       },
       {
         "image": "/static/images/Home/upcomming-Sartup/2.png",
-        "subTitle": "PRIVENTY GENE",
+        "subTitle": "PREVENTI GENE",
         "text": "Using Artificial Intelligence, Augmented Reality, and NFT, Landa Handicrafts aims to build asafe communication bridge between makers and purchasers.",
         "goto": "http://preventigene.com/",
         "buttonText" : "Register",

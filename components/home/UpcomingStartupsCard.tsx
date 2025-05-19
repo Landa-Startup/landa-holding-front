@@ -24,11 +24,11 @@ export default function UpcomingStartupsCard({ image, subTitle, text, goto, butt
           <div className='relative m-auto bg-white md:w-full'>
             <Image
               loading='lazy'
-              className='m-auto h-[170px] w-auto pt-5'
+              className='m-auto h-[170px] w-60 object-contain pt-5'
               src={image}
               alt={subTitle}
-              width={100}
-              height={100}
+              width={500}
+              height={500}
             />
           </div>
           <div className='self-center p-2 ltr:font-gilda rtl:font-EBGaramond text-bold text-[24px] font-normal leading-normal'>

@@ -29,9 +29,9 @@ export default function ButtonRefactor({
                 bgColor ? bgColor : 'black'
               } delay-50 flex h-[50px] w-full flex-wrap content-center justify-center rounded-xl p-2 text-white transition duration-150 ease-in-out hover:bg-primary`}
             >
-              <div className="z-10 flex flex-row rtl:flex-row-reverse items-center gap-2">
+              <div className="z-10 flex flex-row-reverse items-center gap-2">
+                <ChevronRightIcon className="h-5 w-5 rtl:rotate-180" />
                 <span className="text-md">{text}</span>
-                <ChevronRightIcon className="h-5 w-5" />
               </div>
             </button>
             {/* <span className="absolute inset-0 rounded bg-black transition-transform duration-500 group-hover:translate-x-0"></span> */}
