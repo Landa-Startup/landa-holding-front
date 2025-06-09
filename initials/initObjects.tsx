@@ -58,11 +58,10 @@ const initialPartnerMembershipFormData: PartnerMembershipFormData = {
   lastName: '',
   birthDate: new Date(),
   email: '',
-  countryOfResidence: '',
   companyName: '',
   howDidYouKnowUs: '',
-  cityOfResidence: '',
-  maximumInvestment: ''
+  provinceOfResidence: '',
+  investmentCeiling: ''
 };
 
 const initialJobFormData: JobFormData = {
@@ -88,13 +87,9 @@ const initialInvestorRegistrationFormData: InvestorRegistrationFormData = {
   countryOfResidence: '',
   provinceOfResidence: '',
   companyName: '',
-  phoneNumber: '',
-  interests: '',
-  positionInTeam: '',
   preferredAreas: '',
   howDidYouKnowUs: '',
-  cityOfResidence: '',
-  maximumInvestment: ''
+  investmentCeiling: ''
 };
 
 const initialWorkWithUSFormData: WorkWithUSFormData = {

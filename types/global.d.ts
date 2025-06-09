@@ -48,13 +48,9 @@ interface InvestorRegistrationFormData {
   birthDate: Date;
   email: string;
   countryOfResidence: string;
-  cityOfResidence: string;
   provinceOfResidence: string;
   companyName: string;
-  maximumInvestment: string;
-  phoneNumber: string;
-  interests: string;
-  positionInTeam: string;
+  investmentCeiling: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
 }
@@ -80,12 +76,9 @@ interface PartnerMembershipFormData {
   lastName: string;
   birthDate: Date;
   email: string;
-  // phoneNumber: string;
-  countryOfResidence: string;
-  cityOfResidence: string;
+  provinceOfResidence: string;
   companyName: string;
-  maximumInvestment: string;
-  // preferredAreas: string;
+  investmentCeiling: string;
   howDidYouKnowUs: string;
 }
 

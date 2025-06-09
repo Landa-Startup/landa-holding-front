@@ -2,7 +2,6 @@ import apiClient from '../../../utils/api';
 
 async function submitInvestorRegistrationForm(
   sendFormData: FormData,
-  csrfToken: string,
 ) {
   try {
     const response = await apiClient.post(
@@ -10,7 +9,6 @@ async function submitInvestorRegistrationForm(
       sendFormData,
       {
         headers: {
-          'X-CSRFToken': csrfToken,
           'content-type': 'multipart/form-data',
         },
       }
