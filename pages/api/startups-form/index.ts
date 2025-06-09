@@ -2,7 +2,6 @@ import apiClient from '@/utils/api';
 
 async function submitStartupsForm(
   sendFormData: FormData,
-  csrfToken: string,
 ) {
 
   try {
@@ -11,7 +10,6 @@ async function submitStartupsForm(
       sendFormData,
       {
         headers: {
-          'X-CSRFToken': csrfToken,
           'Content-Type': 'multipart/form-data',
         },
       }
