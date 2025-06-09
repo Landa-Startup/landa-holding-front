@@ -1,10 +1,9 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { InvestorRegistrationFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
-import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialInvestorRegistrationFormData } from '../../initials/initObjects';
 import { submitInvestorRegistrationForm } from '../../pages/api/investor-registration';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
@@ -29,7 +28,7 @@ export default function InvestorRegistrationForm() {
 
   const {
     // csrfToken,
-    handleTokenChange,
+    // handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
