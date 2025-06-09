@@ -172,7 +172,7 @@ export default function EntrepreneursForm() {
                 <Input
                   register={register}
                   errors={errors}
-                  nameInput="maximumInvestment"
+                  nameInput="investmentCeiling"
                   type="text"
                   label={t('maximumInvestment')}
                   required={t('maximumInvestmentRequired')}
