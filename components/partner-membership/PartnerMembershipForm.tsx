@@ -1,11 +1,11 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
 import { PartnerMembershipFormData } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
 import TextArea from '../common/TextArea';
-import GetCsrfToken from '../../utils/get-csrf-token';
+// import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialPartnerMembershipFormData } from '../../initials/initObjects';
 import { submitPartnerMembershipForm } from '../../pages/api/partner-membership';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
@@ -28,8 +28,8 @@ export default function PartnerMembershipForm() {
   });
 
   const {
-    csrfToken,
-    handleTokenChange,
+    // csrfToken,
+    // handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
@@ -40,16 +40,16 @@ export default function PartnerMembershipForm() {
 
   const { t } = useTranslation(lang, 'formComponent');
 
-  useEffect(() => {
-    async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
-      );
-      handleTokenChange(token);
-    }
+  // useEffect(() => {
+  //   async function fetchCsrfToken() {
+  //     const token = await GetCsrfToken(
+  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+  //     );
+  //     handleTokenChange(token);
+  //   }
 
-    fetchCsrfToken();
-  }, []);
+  //   fetchCsrfToken();
+  // }, []);
 
   const onSubmit = async (formData: PartnerMembershipFormData) => {
     // Set loading and sending states.
@@ -67,7 +67,7 @@ export default function PartnerMembershipForm() {
     });
 
     // Send the form data to the API.
-    submitPartnerMembershipForm(sendFormData, csrfToken)
+    submitPartnerMembershipForm(sendFormData)
       .then((response) => {
         handleSuccessChange(true);
         handleNotifChange(true);

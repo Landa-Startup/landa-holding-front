@@ -2,7 +2,6 @@ import apiClient from '../../../utils/api';
 
 async function submitPartnerMembershipForm(
   sendFormData: FormData,
-  csrfToken: string,
 ) {
   try {
     const response = await apiClient.post(
@@ -11,7 +10,6 @@ async function submitPartnerMembershipForm(
       {
         headers: {
           'content-type': 'multipart/form-data',
-          'X-CSRFToken': csrfToken,
         },
       }
     );
