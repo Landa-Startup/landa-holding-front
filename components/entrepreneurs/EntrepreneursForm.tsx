@@ -1,10 +1,9 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '../common/form/Input';
 import { Entrepreuneur } from '../../types/global';
 import NotificationSendForm from '../common/form/NotificationSendForm';
-import GetCsrfToken from '../../utils/get-csrf-token';
 import { initialFormData } from '../../initials/initObjects';
 import { submitEntrepreneurForm } from '../../pages/api/entrepreneurs';
 import { PersonalInfoInput } from '../common/form/PersonalInfoInput';
@@ -28,8 +27,8 @@ export default function EntrepreneursForm() {
   });
 
   const {
-    csrfToken,
-    handleTokenChange,
+    // csrfToken,
+    // handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
@@ -40,17 +39,17 @@ export default function EntrepreneursForm() {
 
   const { t } = useTranslation(lang, 'formComponent');
 
-  useEffect(() => {
-    async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        // TODO: avoid hardcoding the URL.
-        'https://landa-back.landaholding.com/get-csrf-token'
-      );
-      handleTokenChange(token);
-    }
+  // useEffect(() => {
+  //   async function fetchCsrfToken() {
+  //     const token = await GetCsrfToken(
+  //       // TODO: avoid hardcoding the URL.
+  //       'https://landa-back.landaholding.com/get-csrf-token'
+  //     );
+  //     handleTokenChange(token);
+  //   }
 
-    fetchCsrfToken();
-  }, []);
+  //   fetchCsrfToken();
+  // }, []);
 
   const onSubmit = async (formData: Entrepreuneur) => {
     // Set loading and sending states.
@@ -69,7 +68,7 @@ export default function EntrepreneursForm() {
     });
 
     // Send the form data to the API.
-    submitEntrepreneurForm(sendFormData, csrfToken)
+    submitEntrepreneurForm(sendFormData)
       .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);

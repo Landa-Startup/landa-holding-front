@@ -114,8 +114,8 @@ const initialFormData: Entrepreuneur = {
   companyName: '',
   birthDate: undefined,
   countryOfResidence: '',
-  cityOfResidence: '',
-  maximumInvestment: '',
+  provinceOfResidence: '',
+  investmentCeiling: '',
   preferredAreas: '',
   howDidYouKnowUs: ''
 };

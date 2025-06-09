@@ -139,9 +139,9 @@ interface Entrepreuneur {
   email: string;
   birthDate: Date | undefined;
   countryOfResidence: string;
-  cityOfResidence: string;
+  provinceOfResidence: string;
   companyName: string;
-  maximumInvestment: string;
+  investmentCeiling: string;
   preferredAreas: string;
   howDidYouKnowUs: string;
   // phone: string;
