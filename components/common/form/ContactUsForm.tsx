@@ -1,8 +1,8 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { ContactUSFormData } from '../../../types/global';
-import GetCsrfToken from '../../../utils/get-csrf-token';
+// import GetCsrfToken from '../../../utils/get-csrf-token';
 import NotificationSendForm from './NotificationSendForm';
 import { ContactFormData } from '../../../initials/initObjects';
 import { submitContactForm } from '../../../pages/api/contact-us';
@@ -27,8 +27,8 @@ export default function ContactUsForm() {
   });
 
   const {
-    csrfToken,
-    handleTokenChange,
+    // csrfToken,
+    // handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
@@ -41,16 +41,16 @@ export default function ContactUsForm() {
 
   const { send } = useSubmit();
 
-  useEffect(() => {
-    async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
-      );
-      handleTokenChange(token);
-    }
+  // useEffect(() => {
+  //   async function fetchCsrfToken() {
+  //     const token = await GetCsrfToken(
+  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+  //     );
+  //     handleTokenChange(token);
+  //   }
 
-    fetchCsrfToken();
-  }, []);
+  //   fetchCsrfToken();
+  // }, []);
 
   const onSubmit = async (formData: ContactUSFormData) => {
     // Set loading and sending states.
@@ -68,7 +68,7 @@ export default function ContactUsForm() {
     });
 
     // Send the form data to the API.
-    submitContactForm(sendFormData, csrfToken)
+    submitContactForm(sendFormData)
       .then((response) => {
         console.log(response);
 
