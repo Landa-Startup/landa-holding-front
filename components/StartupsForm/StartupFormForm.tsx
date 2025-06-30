@@ -1,12 +1,12 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { StartupsFormData } from '../../types/global';
 import { initialStartupsFormData } from '../../initials/initObjects';
 import StartupFormPersonalInformation from './StartupFormPersonalInformation';
 import StartupFormIdea from './StartupFormIdea';
 import NotificationSendForm from '../common/form/NotificationSendForm';
-import GetCsrfToken from '../../utils/get-csrf-token';
+// import GetCsrfToken from '../../utils/get-csrf-token';
 import { submitStartupsForm } from '../../pages/api/startups-form';
 import { useTranslation } from 'app/i18n/client';
 import { useLang } from 'stores/langStore';
@@ -25,27 +25,6 @@ export default function StartupFormForm() {
   const lang = useLang((s) => s.lang)
   const { t } = useTranslation(lang, 'formComponent');
 
-  // enum Type {
-  //   IDEA = t("IDEA"),
-  //   MVP = t('MVP'),
-  //   TRIAL = t('TRIAL'),
-  //   FisrtSale = t('FisrtSale'), // Typo: Should be "FirstSale"
-  //   SaleDevelopment = t('SaleDevelopment')
-  // }
-
-  // const Types = [
-  //   Type.IDEA,
-  //   Type.MVP,
-  //   Type.TRIAL,
-  //   Type.FisrtSale,
-  //   Type.SaleDevelopment
-  // ];
-
-  // const typesData = Types.map((type: any) => ({
-  //   value: type,
-  //   label: type
-  // }));
-
   const {
     register,
     handleSubmit,
@@ -59,8 +38,8 @@ export default function StartupFormForm() {
 
 
   const {
-    csrfToken,
-    handleTokenChange,
+    // csrfToken,
+    // handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
     handleNotifChange,
@@ -84,16 +63,16 @@ export default function StartupFormForm() {
   } = useFile((s) => s)
 
 
-  useEffect(() => {
-    async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
-      );
-      handleTokenChange(token);
-    }
+  // useEffect(() => {
+  //   async function fetchCsrfToken() {
+  //     const token = await GetCsrfToken(
+  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+  //     );
+  //     handleTokenChange(token);
+  //   }
 
-    fetchCsrfToken();
-  }, []);
+  //   fetchCsrfToken();
+  // }, []);
 
   const onSubmit = async (formData: StartupsFormData) => {
     // Set loading and sending states.
@@ -130,7 +109,7 @@ export default function StartupFormForm() {
     });
 
     // Send the form data to the API.
-    submitStartupsForm(sendFormData, csrfToken)
+    submitStartupsForm(sendFormData)
       .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);

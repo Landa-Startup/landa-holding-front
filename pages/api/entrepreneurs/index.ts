@@ -2,7 +2,6 @@ import apiClient from '../../../utils/api';
 
 async function submitEntrepreneurForm(
   sendFormData: FormData,
-  csrfToken: string,
 ) {
 
 
@@ -13,7 +12,6 @@ async function submitEntrepreneurForm(
       sendFormData,
       {
         headers: {
-          'X-CSRFToken': csrfToken,
           'content-type': 'multipart/form-data',
         },
       }
