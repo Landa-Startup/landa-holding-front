@@ -103,7 +103,7 @@ export default function ContactUsForm() {
         {t('contactForm', { returnObjects: true }).title}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-2 gap-2 md:w-[524px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:w-[524px]">
           <PersonalInfoInput
             register={register}
             errors={errors}
@@ -139,7 +139,7 @@ export default function ContactUsForm() {
             />
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-1 md:col-span-2">
             <TextArea
               register={register}
               errors={errors}

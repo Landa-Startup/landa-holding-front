@@ -48,7 +48,7 @@ export default async function Footer(
             </Link>
             <Link
               aria-label="Whatsapp"
-              href={'https://wa.me/989120539563'}
+              href={'https://wa.me/02126917419'}
               className="hover:text-primary"
               target="_blank"
             >

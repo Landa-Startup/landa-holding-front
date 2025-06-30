@@ -106,7 +106,7 @@ export default function InvestorRegistrationForm() {
             <div className="w-full h-auto pt-8 ">
               <div className="w-10/12 mx-auto h-auto flex flex-col gap-12">
                 <div className="w-full h-auto flex flex-row justify-center">
-                  <p className="text-black font-gilda font-medium text-[64px] leading-[75px]">
+                  <p className="text-black font-gilda font-medium text-xl md:text-[64px] md:leading-[75px]">
                     {t('investorForm', { returnObjects: true }).formTitle}
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export default function InvestorRegistrationForm() {
                 </div>
               </div>
             </div>
-            <div className="w-10/12 mx-auto mb-6 grid grid-cols-1 gap-x-6 mt-20  md:grid-cols-2 lg:grid-cols-3">
+            <div className="w-10/12 mx-auto mb-6 grid grid-cols-1 gap-x-6 mt-20 md:grid-cols-2 lg:grid-cols-3">
               <PersonalInfoInput
                 register={register}
                 errors={errors}
@@ -181,7 +181,7 @@ export default function InvestorRegistrationForm() {
                 />
               </div>
 
-              <div className="flex flex-col col-span-3 gap-6">
+              <div className="flex flex-col col-span-1 md:col-span-3 gap-6">
                 <TextArea
                   title={t('preferredAreas')}
                   register={register}

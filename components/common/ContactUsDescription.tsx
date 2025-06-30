@@ -39,7 +39,7 @@ export default function ContactUsDescription() {
           loading="lazy"
         />
         </Link>
-        <Link href={'https://wa.me/989120539563'} target="_blank">
+        <Link href={'https://wa.me/02126917419'} target="_blank">
         <Image
           src="/static/images/Icons/whatsapp_second.png"
           alt="Landa Key Differentiating"

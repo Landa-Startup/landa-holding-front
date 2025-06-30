@@ -102,11 +102,11 @@ export default function PartnerMembershipForm() {
         <LandaLogo />
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex flex-col bg-[#F8F5F0B2] pb-32">
+        <div className="flex flex-col bg-[#F8F5F0B2] pb-32 mx-auto">
           <div className="w-full h-auto pt-8 ">
             <div className="w-10/12 mx-auto h-auto flex flex-col gap-12">
               <div className="w-full h-auto flex flex-row justify-center">
-                <p className="text-black font-gilda font-medium text-[64px] leading-[75px]">
+                <p className="text-black font-gilda font-medium text-xl md:text-[64px] md:leading-[75px]">
                   {t('partnerForm', { returnObjects: true }).formTitle}
                 </p>
               </div>
@@ -181,7 +181,7 @@ export default function PartnerMembershipForm() {
               />
             </div>
 
-            <div className="flex flex-col col-span-3 gap-6">
+            <div className="flex flex-col col-span-1 md:col-span-3 gap-6">
               <TextArea
                 title={t('howDidYouKnowUs')}
                 register={register}
