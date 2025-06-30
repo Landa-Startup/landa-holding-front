@@ -39,6 +39,7 @@ export default function ContactUsDescription() {
             loading="lazy"
           />
         </Link>
+<<<<<<< HEAD
         <Link href={'https://wa.me/989120539563'} target="_blank">
           <Image
             src="/static/images/Icons/whatsapp_second.png"
@@ -47,6 +48,16 @@ export default function ContactUsDescription() {
             height={741}
             loading="lazy"
           />
+=======
+        <Link href={'https://wa.me/02126917419'} target="_blank">
+        <Image
+          src="/static/images/Icons/whatsapp_second.png"
+          alt="Landa Key Differentiating"
+          width={30}
+          height={741}
+          loading="lazy"
+        />
+>>>>>>> develop
         </Link>
         <Link href={'mailto:info@landaholding.com'}>
           <Image

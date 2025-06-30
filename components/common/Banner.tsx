@@ -20,6 +20,7 @@ export default async function Banner({
         }}
         className="absolute inset-0 h-full flex items-center px-4 md:px-20"
       >
+<<<<<<< HEAD
         <div className="h-auto w-full">
           <div className="h-auto w-full flex flex-col items-start gap-4">
             <p className="text-white font-medium font-gilda text-[16px]">
@@ -28,6 +29,12 @@ export default async function Banner({
             <p className="text-white font-gilda font-medium text-[64px]">
               {title}
             </p>
+=======
+        <div className='h-auto w-full'>
+          <div className='h-auto w-full flex flex-col items-start gap-4'>
+            <p className='text-white font-medium font-gilda text-[16px]'>{lang == "en" ? "Landa Holding" : "هلدینگ لاندا"}</p>
+            <p className='text-white font-gilda font-medium text-3xl md:text-[64px]'>{title}</p>
+>>>>>>> develop
           </div>
         </div>
       </div>
