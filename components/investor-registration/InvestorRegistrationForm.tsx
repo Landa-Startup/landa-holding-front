@@ -29,7 +29,7 @@ export default function InvestorRegistrationForm() {
   });
 
   const {
-    csrfToken,
+    // csrfToken,
     handleTokenChange,
     handleSubmitingChange,
     handleSendChange,
@@ -41,16 +41,16 @@ export default function InvestorRegistrationForm() {
 
   const { t } = useTranslation(lang, 'formComponent');
 
-  useEffect(() => {
-    async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
-      );
-      handleTokenChange(token);
-    }
+  // useEffect(() => {
+  //   async function fetchCsrfToken() {
+  //     const token = await GetCsrfToken(
+  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+  //     );
+  //     handleTokenChange(token);
+  //   }
 
-    fetchCsrfToken();
-  }, []);
+  //   fetchCsrfToken();
+  // }, []);
 
   const onSubmit = async (formData: InvestorRegistrationFormData) => {
     // Set loading and sending states.
@@ -68,7 +68,7 @@ export default function InvestorRegistrationForm() {
     });
 
     // Send the form data to the API.
-    submitInvestorRegistrationForm(sendFormData, csrfToken)
+    submitInvestorRegistrationForm(sendFormData)
       .then(() => {
         handleSuccessChange(true);
         handleNotifChange(true);
@@ -169,7 +169,7 @@ export default function InvestorRegistrationForm() {
                 <Input
                   register={register}
                   errors={errors}
-                  nameInput="maximumInvestment"
+                  nameInput="investmentCeiling"
                   type="text"
                   label={t('maximumInvestment')}
                   required={t('maximumInvestmentRequired')}
