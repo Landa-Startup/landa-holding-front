@@ -114,13 +114,7 @@
           "linkedIn": "linkedin.com/in/faezeh-khani-4362b62a5",
           "category": "designers"
         },
-        {
-          "image": "/static/images/our-team/Personals/fahimeh.webp",
-          "position": "Front-end Developer",
-          "name": "Fahimeh Sajjadi",
-          "linkedIn": "https://www.linkedin.com/in/fahimeh-sajadi-50a399202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-          "category": "programmers"
-        },
+
         {
           "image": "/static/images/our-team/Personals/121.webp",
           "position": "Front-end Developer",
